@@ -1,18 +1,18 @@
 docker:
   image: yegor256/java8
-  
+
 env:
   JAVA_OPTS: -XX:MaxPermSize=256m -Xmx1g
-  
+
 architect:
 - neonailol
 
 merge:
   script: |-
     ./gradlew clean build check test
-    
+
 release:
   script: |-
     [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
-    git commit -am "${tag}"
+    git tag -am "${tag}"
     ./gradlew clean build check test
