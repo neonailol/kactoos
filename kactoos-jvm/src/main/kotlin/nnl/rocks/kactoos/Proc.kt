@@ -25,4 +25,3 @@ actual interface Proc<in X : Any> {
     @Throws(Exception::class)
     actual fun exec(input: X)
 }
-
