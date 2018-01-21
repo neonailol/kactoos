@@ -19,6 +19,12 @@ internal typealias KProc<X> = (X) -> Unit
 internal typealias KText = () -> String
 
     /**
+     * Alias for [BiFunc]
+     * @since 0.2
+     */
+internal typealias KBiFunc<X, Y, Z> = (X, Y) -> Z
+
+    /**
      * Alias for [Func]
      * @since 0.2
      */
