@@ -9,13 +9,11 @@ class ProcTest {
     fun okForNoNulls() {
         var counter = 0L
 
-        val proc = object : Proc<Long> {
+        object : Proc<Long> {
             override fun exec(input: Long) {
-                counter += 1
+                counter += input
             }
-        }
-
-        proc.exec(counter)
+        }.exec(1L)
 
         assertEquals(
             counter,
