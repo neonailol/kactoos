@@ -45,5 +45,5 @@ subprojects {
 }
 
 project(':cactoos:') {
-    apply from: "../build.cactoos.gradle"
+    apply from: "$rootProject.projectDir/build.cactoos.gradle"
 }
