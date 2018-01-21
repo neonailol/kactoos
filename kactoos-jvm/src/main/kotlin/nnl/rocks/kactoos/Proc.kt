@@ -15,7 +15,7 @@ package nnl.rocks.kactoos
  * @since 0.1
  */
 @FunctionalInterface
-interface Proc<in X : Any> {
+actual interface Proc<in X : Any> {
 
     /**
      * Execute it.
@@ -23,7 +23,5 @@ interface Proc<in X : Any> {
      * @throws Exception If fails
      */
     @Throws(Exception::class)
-    fun exec(input: X)
+    actual fun exec(input: X)
 }
-
-internal typealias KProc<X> = (X) -> Unit
