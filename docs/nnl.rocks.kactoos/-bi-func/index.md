@@ -2,27 +2,7 @@
 
 # BiFunc
 
-`@FunctionalInterface interface BiFunc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Z : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/BiFunc.kt#L19)
-
-Function that accepts two arguments.
-
-If you don't want to have any checked exceptions being thrown
-out of your BiFunc, you can use
-[nnl.rocks.kactoos.func.UncheckedBiFunc](../../nnl.rocks.kactoos.func/-unchecked-bi-func/index.md) decorator. Also
-you may try [nnl.rocks.kactoos.func.IoCheckedBiFunc](../../nnl.rocks.kactoos.func/-io-checked-bi-func/index.md).
-
-There is no thread-safety guarantee.
-
-### Parameters
-
-`X` - Type of input
-
-`Y` - Type of input
-
-`Z` - Type of output
-
-**Since**
-0.9
+`interface BiFunc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Z : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
 
 ### Functions
 

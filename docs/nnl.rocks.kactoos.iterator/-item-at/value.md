@@ -8,10 +8,6 @@ Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 
 Convert it to the value.
 
-### Exceptions
-
-`Exception` - If fails
-
 **Return**
 The value
 

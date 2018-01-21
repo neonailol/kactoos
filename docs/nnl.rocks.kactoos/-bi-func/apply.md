@@ -2,7 +2,7 @@
 
 # apply
 
-`abstract fun apply(first: X, second: Y): Z` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/BiFunc.kt#L29)
+`abstract fun apply(first: X, second: Y): Z`
 
 Apply it.
 
@@ -18,4 +18,7 @@ Apply it.
 
 **Return**
 The result [Z](#)
+
+**Since**
+0.2
 
