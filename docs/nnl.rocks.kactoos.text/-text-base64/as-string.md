@@ -11,3 +11,6 @@ Convert it to the string.
 **Return**
 The string.
 
+**Since**
+0.2
+

@@ -12,6 +12,6 @@ Execute it.
 
 `second` - The second argument
 
-### Exceptions
+**Since**
+0.2
 
-`Exception` - If fails

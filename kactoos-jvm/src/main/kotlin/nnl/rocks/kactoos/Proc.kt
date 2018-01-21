@@ -12,7 +12,7 @@ package nnl.rocks.kactoos
  * @param X Type of input
  * @see nnl.rocks.kactoos.func.ProcOf
  *
- * @since 0.1
+ * @since 0.2
  */
 @FunctionalInterface
 actual interface Proc<in X : Any> {
@@ -21,6 +21,7 @@ actual interface Proc<in X : Any> {
      * Execute it.
      * @param input The argument
      * @throws Exception If fails
+     * @since 0.2
      */
     @Throws(Exception::class)
     actual fun exec(input: X)

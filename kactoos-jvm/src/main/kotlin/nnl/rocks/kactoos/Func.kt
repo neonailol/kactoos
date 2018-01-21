@@ -19,7 +19,6 @@ package nnl.rocks.kactoos
  * @see nnl.rocks.kactoos.func.StickyFunc
  * @see nnl.rocks.kactoos.func.UncheckedFunc
  * @see nnl.rocks.kactoos.func.IoCheckedFunc
- *
  * @since 0.2
  */
 @FunctionalInterface
@@ -30,6 +29,7 @@ actual interface Func<in X : Any, out Y : Any> {
      * @param input The argument
      * @return The result of type [Y]
      * @throws Exception If fails
+     * @since 0.2
      */
     @Throws(Exception::class)
     actual fun apply(input: X): Y

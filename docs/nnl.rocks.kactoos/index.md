@@ -9,8 +9,8 @@ Top level package
 | Name | Summary |
 |---|---|
 | [BiFunc](-bi-func/index.md) | `interface BiFunc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Z : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>` |
-| [BiProc](-bi-proc/index.md) | `interface BiProc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Proc that accepts two arguments. |
-| [Bytes](-bytes/index.md) | `interface Bytes`<br>Bytes. |
+| [BiProc](-bi-proc/index.md) | `interface BiProc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>` |
+| [Bytes](-bytes/index.md) | `interface Bytes` |
 | [Func](-func/index.md) | `interface Func<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>` |
 | [Input](-input/index.md) | `interface Input`<br>Input. |
 | [Output](-output/index.md) | `interface Output`<br>Output. |
