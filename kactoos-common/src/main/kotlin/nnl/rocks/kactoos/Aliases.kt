@@ -17,3 +17,9 @@ internal typealias KProc<X> = (X) -> Unit
      * @since 0.2
      */
 internal typealias KText = () -> String
+
+    /**
+     * Alias for [Func]
+     * @since 0.2
+     */
+internal typealias KFunc<X, Y> = (X) -> Y
