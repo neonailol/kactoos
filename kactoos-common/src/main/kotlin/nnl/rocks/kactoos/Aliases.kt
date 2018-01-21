@@ -29,3 +29,9 @@ internal typealias KBiFunc<X, Y, Z> = (X, Y) -> Z
      * @since 0.2
      */
 internal typealias KFunc<X, Y> = (X) -> Y
+
+    /**
+     * Alias for [BiProc]
+     * @since 0.2
+     */
+internal typealias KBiProc<X, Y> = (X, Y) -> Unit

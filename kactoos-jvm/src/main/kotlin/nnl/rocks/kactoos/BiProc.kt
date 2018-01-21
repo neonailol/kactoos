@@ -12,22 +12,21 @@ package nnl.rocks.kactoos
  *
  * @param X Type of input
  * @param Y Type of input
- * @since 0.20
+ * @since 0.2
  */
 @FunctionalInterface
-interface BiProc<in X : Any, in Y : Any> {
+actual interface BiProc<in X : Any, in Y : Any> {
 
     /**
      * Execute it.
      * @param first The first argument
      * @param second The second argument
      * @throws Exception If fails
+     * @since 0.2
      */
     @Throws(Exception::class)
-    fun exec(
+    actual fun exec(
         first: X,
         second: Y
     )
 }
-
-internal typealias KBiProc<X, Y> = (X, Y) -> Unit
