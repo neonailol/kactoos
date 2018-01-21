@@ -1,0 +1,49 @@
+//
+
+allprojects {
+    group 'nnl.rocks.kactoos'
+    version '1.0-SNAPSHOT'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4.1'
+    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+buildscript {
+    ext.kotlinVersion = '1.2.20'
+
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+ext {
+    kotlin_common_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion"
+    kotlin_common_annotations = "org.jetbrains.kotlin:kotlin-test-annotations-common:$kotlinVersion"
+    kotlin_common_test = "org.jetbrains.kotlin:kotlin-test-common:$kotlinVersion"
+
+    kotlin_jvm_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    kotlin_jvm_junit = "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
+    kotlin_jvm_test = "org.jetbrains.kotlin:kotlin-test:$kotlinVersion"
+
+    kotlin_js_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlinVersion"
+    kotlin_js_test = "org.jetbrains.kotlin:kotlin-test-js:$kotlinVersion"
+}
+
+subprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+project(':cactoos:') {
+    apply from: "../build.cactoos.gradle"
+}

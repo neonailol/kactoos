@@ -1,0 +1,16 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+
+nnl.rocks.kactoos
+nnl.rocks.kactoos.bytes
+nnl.rocks.kactoos.collection
+nnl.rocks.kactoos.func
+nnl.rocks.kactoos.io
+nnl.rocks.kactoos.iterable
+nnl.rocks.kactoos.iterator
+nnl.rocks.kactoos.list
+nnl.rocks.kactoos.map
+nnl.rocks.kactoos.scalar
+nnl.rocks.kactoos.test
+nnl.rocks.kactoos.text
+nnl.rocks.kactoos.time

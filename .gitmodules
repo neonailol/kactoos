@@ -1,0 +1,4 @@
+[submodule "cactoos"]
+	path = cactoos
+	url = https://github.com/yegor256/cactoos.git
+	branch = master

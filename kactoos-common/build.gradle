@@ -1,0 +1,16 @@
+apply plugin: 'kotlin-platform-common'
+
+dependencies {
+    compile kotlin_common_stdlib
+    testCompile kotlin_common_annotations
+    testCompile kotlin_common_test
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.kotlin
+}
+
+artifacts {
+    archives sourcesJar
+}

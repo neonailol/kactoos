@@ -1,0 +1,3 @@
+rootProject.name = 'kactoos'
+
+include 'cactoos', 'kactoos-common', 'kactoos-jvm', 'kactoos-js', 'kactoos-native','compatibility-tests'

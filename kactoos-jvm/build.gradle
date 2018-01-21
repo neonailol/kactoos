@@ -1,0 +1,134 @@
+
+buildscript {
+    ext.kotlin_version = '1.2.20'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+
+    dependencies {
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.15"
+        classpath "gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.0.RC6-2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-platform-jvm'
+apply plugin: 'org.jetbrains.dokka'
+apply plugin: 'io.gitlab.arturbosch.detekt'
+apply plugin: 'maven'
+apply plugin: 'java'
+
+dokka {
+    jdkVersion = 8
+    outputFormat = 'gfm'
+    includes = ['src/dokka/extra.md', 'src/dokka/packages.md']
+    linkMapping {
+        dir = "$project.projectDir"
+        url = "https://github.com/neonailol/kactoos/blob/master/kactoos-jvm"
+        suffix = "#L"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+configurations {
+    ktlint
+}
+
+dependencies {
+    expectedBy project(":kactoos-common")
+
+    compile kotlin_jvm_stdlib
+    testCompile kotlin_jvm_test
+    testCompile kotlin_jvm_junit
+
+    testCompile "junit:junit:4.12"
+    testCompile "org.takes:takes:1.8"
+
+    compileOnly "org.hamcrest:hamcrest-core:1.3"
+    testCompile "org.hamcrest:hamcrest-library:1.3"
+
+    ktlint "com.github.shyiko:ktlint:0.14.0"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+task moveDocs {
+    copy {
+        from "build/dokka/kactoos-jvm"
+        into "../docs"
+    }
+}
+
+dokka.finalizedBy moveDocs
+
+detekt {
+    version = "1.0.0.RC6-2"
+    profile("main") {
+        input = "$projectDir/src/main/kotlin"
+        config = "$projectDir/detekt.yml"
+        filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+    }
+}
+
+task ktlint(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style."
+    classpath = configurations.ktlint
+    main = "com.github.shyiko.ktlint.Main"
+    args "src/**/*.kt"
+}
+
+check.dependsOn ktlint
+
+task ktlintFormat(type: JavaExec, group: "formatting") {
+    description = "Fix Kotlin code style deviations."
+    classpath = configurations.ktlint
+    main = "com.github.shyiko.ktlint.Main"
+    args "-F", "src/**/*.kt"
+}
+
+test {
+
+    def testsOut = new File("$projectDir/../compatibility-tests/src/test/resources/tests-kactoos.txt")
+    testsOut.delete()
+    testsOut.createNewFile()
+
+    beforeTest { descriptor ->
+        testsOut.append("$descriptor\n")
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
