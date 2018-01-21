@@ -9,8 +9,8 @@ actual interface Text : Comparable<Text> {
 
     /**
      * Convert it to the string.
-     *
      * @return The string
+     * @since 0.2
      */
     actual fun asString(): String
 }

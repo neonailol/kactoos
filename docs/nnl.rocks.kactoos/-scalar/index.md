@@ -2,37 +2,7 @@
 
 # Scalar
 
-`@FunctionalInterface interface Scalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Scalar.kt#L27)
-
-Scalar.
-
-If you don't want to have any checked exceptions being
-thrown out of your Scalar, you can use [UncheckedScalar](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)
-decorator. Also you may try [IoCheckedScalar](../../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md).
-
-If you want to cache the result of the Scalar and make
-sure it doesn't calculate anything twice, you can use [StickyScalar](../../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md) decorator.
-
-There is no thread-safety guarantee.
-
-``` kotlin
-//Unresolved: samples.scalar
-```
-
-### Parameters
-
-`T` - Type of result
-
-**See Also**
-
-[StickyScalar](../../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md)
-
-[UncheckedScalar](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)
-
-[IoCheckedScalar](../../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md)
-
-**Since**
-0.1
+`interface Scalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
 
 ### Functions
 

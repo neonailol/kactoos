@@ -2,21 +2,7 @@
 
 # Text
 
-`@FunctionalInterface interface Text : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<Text>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Text.kt#L18)
-
-Text.
-
-If you don't want to have any checked exceptions being
-thrown out of your Text, you can use [UncheckedText](../../nnl.rocks.kactoos.text/-unchecked-text/index.md) decorator.
-
-There is no thread-safety guarantee.
-
-**See Also**
-
-[nnl.rocks.kactoos.text.TextOf](../../nnl.rocks.kactoos.text/-text-of/index.md)
-
-**Since**
-0.1
+`interface Text : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<Text>`
 
 ### Functions
 

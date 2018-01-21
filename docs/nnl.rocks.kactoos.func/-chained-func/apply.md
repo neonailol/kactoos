@@ -10,10 +10,9 @@ Apply it.
 
 `input` - The argument
 
-### Exceptions
-
-`Exception` - If fails
-
 **Return**
-The result
+The result of type [Y](#)
+
+**Since**
+0.2
 

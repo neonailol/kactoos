@@ -9,7 +9,3 @@ Execute it.
 ### Parameters
 
 `input` - The argument
-
-### Exceptions
-
-`Exception` - If fails

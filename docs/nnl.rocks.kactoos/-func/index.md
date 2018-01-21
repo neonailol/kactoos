@@ -2,37 +2,7 @@
 
 # Func
 
-`@FunctionalInterface interface Func<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Func.kt#L26)
-
-Function.
-
-If you don't want to have any checked exceptions being thrown
-out of your Func, you can use
-[nnl.rocks.kactoos.func.UncheckedFunc](../../nnl.rocks.kactoos.func/-unchecked-func/index.md) decorator. Also
-you may try [nnl.rocks.kactoos.func.IoCheckedFunc](../../nnl.rocks.kactoos.func/-io-checked-func/index.md).
-
-If you want to cache the result of the Func and
-make sure it doesn't calculate anything twice, you can use
-[nnl.rocks.kactoos.func.StickyFunc](../../nnl.rocks.kactoos.func/-sticky-func/index.md) decorator.
-
-There is no thread-safety guarantee.
-
-### Parameters
-
-`X` - Type of input
-
-`Y` - Type of output
-
-**See Also**
-
-[nnl.rocks.kactoos.func.StickyFunc](../../nnl.rocks.kactoos.func/-sticky-func/index.md)
-
-[nnl.rocks.kactoos.func.UncheckedFunc](../../nnl.rocks.kactoos.func/-unchecked-func/index.md)
-
-[nnl.rocks.kactoos.func.IoCheckedFunc](../../nnl.rocks.kactoos.func/-io-checked-func/index.md)
-
-**Since**
-0.1
+`interface Func<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
 
 ### Functions
 

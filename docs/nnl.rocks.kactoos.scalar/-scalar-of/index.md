@@ -2,7 +2,7 @@
 
 # ScalarOf
 
-`class ScalarOf<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/ScalarOf.kt#L13)
+`class ScalarOf<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>`
 
 Creates scalar out of [T](#)
 
@@ -11,7 +11,7 @@ Creates scalar out of [T](#)
 `T` - Type of scalar
 
 **Since**
-0.24
+0.2
 
 ### Constructors
 
