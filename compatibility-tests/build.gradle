@@ -23,11 +23,12 @@ compileTestKotlin {
 
 repositories {
     maven { url "http://repo.maven.apache.org/maven2" }
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
-    compile project(':cactoos')
     compile project(':kactoos-jvm')
+    compile "com.github.yegor256:cactoos:master-SNAPSHOT"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
     compile "org.reflections:reflections:0.9.11"
