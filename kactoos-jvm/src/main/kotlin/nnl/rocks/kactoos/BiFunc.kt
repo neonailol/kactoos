@@ -16,7 +16,7 @@ package nnl.rocks.kactoos
  * @since 0.9
  */
 @FunctionalInterface
-interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
+actual interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
 
     /**
      * Apply it.
@@ -26,10 +26,8 @@ interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
      * @throws Exception If fails
      */
     @Throws(Exception::class)
-    fun apply(
+    actual fun apply(
         first: X,
         second: Y
     ): Z
 }
-
-internal typealias KBiFunc<X, Y, Z> = (X, Y) -> Z
