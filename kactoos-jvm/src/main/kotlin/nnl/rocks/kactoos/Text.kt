@@ -15,7 +15,7 @@ import java.io.IOException
  * @since 0.1
  */
 @FunctionalInterface
-interface Text : Comparable<Text> {
+actual interface Text : Comparable<Text> {
 
     /**
      * Convert it to the string.
@@ -23,7 +23,5 @@ interface Text : Comparable<Text> {
      * @throws IOException If fails
      */
     @Throws(IOException::class)
-    fun asString(): String
+    actual fun asString(): String
 }
-
-internal typealias KText = () -> String
