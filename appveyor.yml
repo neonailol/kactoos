@@ -5,4 +5,4 @@ cache:
   - C:\Users\appveyor\.konan
 
 build_script:
-  - gradlew.bat clean build check test
+  - gradlew.bat assemble
