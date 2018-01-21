@@ -23,3 +23,9 @@ internal typealias KText = () -> String
      * @since 0.2
      */
 internal typealias KBiFunc<X, Y, Z> = (X, Y) -> Z
+
+    /**
+     * Alias for [Func]
+     * @since 0.2
+     */
+internal typealias KFunc<X, Y> = (X) -> Y
