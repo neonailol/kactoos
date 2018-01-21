@@ -1,9 +1,9 @@
 package nnl.rocks.kactoos
 
-/**
- * Alias for [Scalar]
- * @since 0.2
- */
+    /**
+     * Alias for [Scalar]
+     * @since 0.2
+     */
 internal typealias KScalar<T> = () -> T
 
     /**
@@ -11,3 +11,9 @@ internal typealias KScalar<T> = () -> T
      * @since 0.2
      */
 internal typealias KProc<X> = (X) -> Unit
+
+    /**
+     * Alias for [Text]
+     * @since 0.2
+     */
+internal typealias KText = () -> String

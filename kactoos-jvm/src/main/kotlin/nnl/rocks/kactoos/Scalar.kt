@@ -16,10 +16,11 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  *
  * There is no thread-safety guarantee.
  *
- * @param T Type of result
+ * @param T Type of value
  * @see StickyScalar
  * @see UncheckedScalar
  * @see IoCheckedScalar
+ * @see nnl.rocks.kactoos.scalar.ScalarOf
  * @since 0.1
  */
 @FunctionalInterface
