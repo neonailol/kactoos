@@ -2,7 +2,7 @@
 
 # exec
 
-`abstract fun exec(first: X, second: Y): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/BiProc.kt#L27)
+`abstract fun exec(first: X, second: Y): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Execute it.
 
@@ -12,6 +12,6 @@ Execute it.
 
 `second` - The second argument
 
-### Exceptions
+**Since**
+0.2
 
-`Exception` - If fails

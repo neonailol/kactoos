@@ -9,3 +9,6 @@ Convert it to the value.
 **Return**
 The value
 
+**Since**
+0.2
+

@@ -2,18 +2,7 @@
 
 # Bytes
 
-`@FunctionalInterface interface Bytes` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Bytes.kt#L14)
-
-Bytes.
-
-There is no thread-safety guarantee.
-
-**See Also**
-
-[nnl.rocks.kactoos.io.BytesOf](../../nnl.rocks.kactoos.io/-bytes-of/index.md)
-
-**Since**
-0.1
+`interface Bytes`
 
 ### Functions
 

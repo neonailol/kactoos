@@ -21,7 +21,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  * @see UncheckedScalar
  * @see IoCheckedScalar
  * @see nnl.rocks.kactoos.scalar.ScalarOf
- * @since 0.1
+ * @since 0.2
  */
 @FunctionalInterface
 actual interface Scalar<out T : Any> {
@@ -30,6 +30,7 @@ actual interface Scalar<out T : Any> {
      * Convert it to the value.
      * @return The value
      * @throws Exception If fails
+     * @since 0.2
      */
     @Throws(Exception::class)
     actual fun value(): T

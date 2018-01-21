@@ -13,7 +13,7 @@ package nnl.rocks.kactoos
  * @param X Type of input
  * @param Y Type of input
  * @param Z Type of output
- * @since 0.9
+ * @since 0.2
  */
 @FunctionalInterface
 actual interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
@@ -24,6 +24,7 @@ actual interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
      * @param second The second argument
      * @return The result [Z]
      * @throws Exception If fails
+     * @since 0.2
      */
     @Throws(Exception::class)
     actual fun apply(

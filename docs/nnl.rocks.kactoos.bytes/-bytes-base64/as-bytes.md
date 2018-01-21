@@ -8,10 +8,9 @@ Overrides [Bytes.asBytes](../../nnl.rocks.kactoos/-bytes/as-bytes.md)
 
 Convert it to the byte array.
 
-### Exceptions
-
-`IOException` - If fails
-
 **Return**
 The byte array
+
+**Since**
+0.2
 

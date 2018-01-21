@@ -12,7 +12,7 @@ import java.io.IOException
  * There is no thread-safety guarantee.
  *
  * @see nnl.rocks.kactoos.text.TextOf
- * @since 0.1
+ * @since 0.2
  */
 @FunctionalInterface
 actual interface Text : Comparable<Text> {
@@ -21,6 +21,7 @@ actual interface Text : Comparable<Text> {
      * Convert it to the string.
      * @return The string
      * @throws IOException If fails
+     * @since 0.2
      */
     @Throws(IOException::class)
     actual fun asString(): String

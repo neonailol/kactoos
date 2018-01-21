@@ -10,8 +10,8 @@ actual interface Proc<in X : Any> {
 
     /**
      * Execute it.
-     *
      * @param input The argument
+     * @since 0.2
      */
     actual fun exec(input: X)
 }

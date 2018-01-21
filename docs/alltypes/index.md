@@ -18,10 +18,10 @@ Kactoos.
 | [nnl.rocks.kactoos.text.Base64Text](../nnl.rocks.kactoos.text/-base64-text/index.md) | Decodes the origin text using the Base64 encoding scheme. |
 | [nnl.rocks.kactoos.BiFunc](../nnl.rocks.kactoos/-bi-func/index.md) |  |
 | [nnl.rocks.kactoos.func.BiFuncOf](../nnl.rocks.kactoos.func/-bi-func-of/index.md) | Represents many possible inputs as [BiFunc](../nnl.rocks.kactoos/-bi-func/index.md). |
-| [nnl.rocks.kactoos.BiProc](../nnl.rocks.kactoos/-bi-proc/index.md) | Proc that accepts two arguments. |
+| [nnl.rocks.kactoos.BiProc](../nnl.rocks.kactoos/-bi-proc/index.md) |  |
 | [nnl.rocks.kactoos.func.BiProcOf](../nnl.rocks.kactoos.func/-bi-proc-of/index.md) | Func as BiProc. |
 | [nnl.rocks.kactoos.scalar.BoolOf](../nnl.rocks.kactoos.scalar/-bool-of/index.md) | Text as [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html). |
-| [nnl.rocks.kactoos.Bytes](../nnl.rocks.kactoos/-bytes/index.md) | Bytes. |
+| [nnl.rocks.kactoos.Bytes](../nnl.rocks.kactoos/-bytes/index.md) |  |
 | [nnl.rocks.kactoos.bytes.BytesBase64](../nnl.rocks.kactoos.bytes/-bytes-base64/index.md) | Encodes all origin bytes using the Base64 encoding scheme. |
 | [nnl.rocks.kactoos.io.BytesOf](../nnl.rocks.kactoos.io/-bytes-of/index.md) | A [Bytes](../nnl.rocks.kactoos/-bytes/index.md) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.func.CallableOf](../nnl.rocks.kactoos.func/-callable-of/index.md) | Func as [Callable](#). |

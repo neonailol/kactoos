@@ -10,8 +10,8 @@ expect interface Proc<in X : Any> {
 
     /**
      * Execute it.
-     *
      * @param input The argument
+     * @since 0.2
      */
     fun exec(input: X)
 }
