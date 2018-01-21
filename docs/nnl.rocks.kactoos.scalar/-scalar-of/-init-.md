@@ -11,5 +11,5 @@ Creates scalar out of [T](#)
 `T` - Type of scalar
 
 **Since**
-0.24
+0.2
 

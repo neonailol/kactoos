@@ -16,7 +16,7 @@ Kactoos.
 | [nnl.rocks.kactoos.scalar.AvgOf](../nnl.rocks.kactoos.scalar/-avg-of/index.md) | Average of numbers. |
 | [nnl.rocks.kactoos.bytes.Base64Bytes](../nnl.rocks.kactoos.bytes/-base64-bytes/index.md) | Decodes all origin bytes using the Base64 encoding scheme. |
 | [nnl.rocks.kactoos.text.Base64Text](../nnl.rocks.kactoos.text/-base64-text/index.md) | Decodes the origin text using the Base64 encoding scheme. |
-| [nnl.rocks.kactoos.BiFunc](../nnl.rocks.kactoos/-bi-func/index.md) | Function that accepts two arguments. |
+| [nnl.rocks.kactoos.BiFunc](../nnl.rocks.kactoos/-bi-func/index.md) |  |
 | [nnl.rocks.kactoos.func.BiFuncOf](../nnl.rocks.kactoos.func/-bi-func-of/index.md) | Represents many possible inputs as [BiFunc](../nnl.rocks.kactoos/-bi-func/index.md). |
 | [nnl.rocks.kactoos.BiProc](../nnl.rocks.kactoos/-bi-proc/index.md) | Proc that accepts two arguments. |
 | [nnl.rocks.kactoos.func.BiProcOf](../nnl.rocks.kactoos.func/-bi-proc-of/index.md) | Func as BiProc. |
@@ -48,7 +48,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.Filtered](../nnl.rocks.kactoos.iterable/-filtered/index.md) | Filtered iterable. |
 | [nnl.rocks.kactoos.iterator.Filtered](../nnl.rocks.kactoos.iterator/-filtered/index.md) | Filtered iterator. |
 | [nnl.rocks.kactoos.text.FormattedText](../nnl.rocks.kactoos.text/-formatted-text/index.md) | Text in Sprinf format. |
-| [nnl.rocks.kactoos.Func](../nnl.rocks.kactoos/-func/index.md) | Function. |
+| [nnl.rocks.kactoos.Func](../nnl.rocks.kactoos/-func/index.md) |  |
 | [nnl.rocks.kactoos.test.FuncApplies](../nnl.rocks.kactoos.test/-func-applies/index.md) | Matcher for the value. |
 | [nnl.rocks.kactoos.func.FuncOf](../nnl.rocks.kactoos.func/-func-of/index.md) | Represents many possible inputs as [Func](../nnl.rocks.kactoos/-func/index.md). |
 | [nnl.rocks.kactoos.func.FuncWithFallback](../nnl.rocks.kactoos.func/-func-with-fallback/index.md) | Func with a fallback plan. |
@@ -111,7 +111,7 @@ Kactoos.
 | [nnl.rocks.kactoos.io.OutputTo](../nnl.rocks.kactoos.io/-output-to/index.md) | An [Output](../nnl.rocks.kactoos/-output/index.md) that encapsulates other destination for the data. |
 | [nnl.rocks.kactoos.iterable.Partitioned](../nnl.rocks.kactoos.iterable/-partitioned/index.md) | Iterable implementation for partitioning functionality. |
 | [nnl.rocks.kactoos.iterator.Partitioned](../nnl.rocks.kactoos.iterator/-partitioned/index.md) | Iterator implementation for [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) partitioning. |
-| [nnl.rocks.kactoos.Proc](../nnl.rocks.kactoos/-proc/index.md) | Procedure. |
+| [nnl.rocks.kactoos.Proc](../nnl.rocks.kactoos/-proc/index.md) |  |
 | [nnl.rocks.kactoos.func.ProcOf](../nnl.rocks.kactoos.func/-proc-of/index.md) | Func as Proc. |
 | [nnl.rocks.kactoos.iterable.PropertiesOf](../nnl.rocks.kactoos.iterable/-properties-of/index.md) | Map as [java.util.Properties](#). |
 | [nnl.rocks.kactoos.iterable.RangeOf](../nnl.rocks.kactoos.iterable/-range-of/index.md) | Iterable implementation to model range functionality. |
@@ -130,7 +130,7 @@ Kactoos.
 | [nnl.rocks.kactoos.text.ReversedText](../nnl.rocks.kactoos.text/-reversed-text/index.md) | Reverse the Text. |
 | [nnl.rocks.kactoos.text.RotatedText](../nnl.rocks.kactoos.text/-rotated-text/index.md) | Rotate (circular shift) a String of shift characters. |
 | [nnl.rocks.kactoos.func.RunnableOf](../nnl.rocks.kactoos.func/-runnable-of/index.md) | Func as Runnable. |
-| [nnl.rocks.kactoos.Scalar](../nnl.rocks.kactoos/-scalar/index.md) | Scalar. |
+| [nnl.rocks.kactoos.Scalar](../nnl.rocks.kactoos/-scalar/index.md) |  |
 | [nnl.rocks.kactoos.test.ScalarHasValue](../nnl.rocks.kactoos.test/-scalar-has-value/index.md) | Matcher for the value. |
 | [nnl.rocks.kactoos.scalar.ScalarOf](../nnl.rocks.kactoos.scalar/-scalar-of/index.md) | Creates scalar out of [T](#) |
 | [nnl.rocks.kactoos.collection.Shuffled](../nnl.rocks.kactoos.collection/-shuffled/index.md) | Sorted collection. |
@@ -182,7 +182,7 @@ Kactoos.
 | [nnl.rocks.kactoos.io.TeeOutputStream](../nnl.rocks.kactoos.io/-tee-output-stream/index.md) | Stream that copies output to output. |
 | [nnl.rocks.kactoos.io.TeeReader](../nnl.rocks.kactoos.io/-tee-reader/index.md) | Input to Output copying reader. |
 | [nnl.rocks.kactoos.scalar.Ternary](../nnl.rocks.kactoos.scalar/-ternary/index.md) | Ternary operation. |
-| [nnl.rocks.kactoos.Text](../nnl.rocks.kactoos/-text/index.md) | Text. |
+| [nnl.rocks.kactoos.Text](../nnl.rocks.kactoos/-text/index.md) |  |
 | [nnl.rocks.kactoos.text.TextBase64](../nnl.rocks.kactoos.text/-text-base64/index.md) | Encodes the origin text using the Base64 encoding scheme. |
 | [nnl.rocks.kactoos.test.TextHasString](../nnl.rocks.kactoos.test/-text-has-string/index.md) | Matcher for the content. |
 | [nnl.rocks.kactoos.text.TextOf](../nnl.rocks.kactoos.text/-text-of/index.md) | TextOf |
