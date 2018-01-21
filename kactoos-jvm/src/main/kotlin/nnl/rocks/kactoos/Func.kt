@@ -20,19 +20,17 @@ package nnl.rocks.kactoos
  * @see nnl.rocks.kactoos.func.UncheckedFunc
  * @see nnl.rocks.kactoos.func.IoCheckedFunc
  *
- * @since 0.1
+ * @since 0.2
  */
 @FunctionalInterface
-interface Func<in X : Any, out Y : Any> {
+actual interface Func<in X : Any, out Y : Any> {
 
     /**
      * Apply it.
      * @param input The argument
-     * @return The result
+     * @return The result of type [Y]
      * @throws Exception If fails
      */
     @Throws(Exception::class)
-    fun apply(input: X): Y
+    actual fun apply(input: X): Y
 }
-
-internal typealias KFunc<X, Y> = (X) -> Y
