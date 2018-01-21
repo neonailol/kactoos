@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Developement-kactoos.iml" filepath="$PROJECT_DIR$/.idea/modules/Developement-kactoos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdeaProjects-kactoos.iml" filepath="$PROJECT_DIR$/.idea/modules/IdeaProjects-kactoos.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cactoos/cactoos.iml" filepath="$PROJECT_DIR$/.idea/modules/cactoos/cactoos.iml" group="cactoos" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cactoos/cactoos_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cactoos/cactoos_main.iml" group="cactoos" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cactoos/cactoos_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cactoos/cactoos_test.iml" group="cactoos" />
