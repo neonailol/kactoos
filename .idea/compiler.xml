@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cactoos" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cactoos" target="1.8" />
+      <module name="cactoos_main" target="1.8" />
+      <module name="cactoos_test" target="1.8" />
+      <module name="compatibility-tests_main" target="1.8" />
+      <module name="compatibility-tests_test" target="1.8" />
+      <module name="kactoos-common_main" target="1.8" />
+      <module name="kactoos-common_test" target="1.8" />
+      <module name="kactoos-js_main" target="1.8" />
+      <module name="kactoos-js_test" target="1.8" />
+      <module name="kactoos-jvm_main" target="1.8" />
+      <module name="kactoos-jvm_test" target="1.8" />
+      <module name="kactoos-native_main" target="1.8" />
+      <module name="kactoos-native_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Developement-kactoos.iml" filepath="$PROJECT_DIR$/.idea/modules/Developement-kactoos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cactoos/cactoos.iml" filepath="$PROJECT_DIR$/.idea/modules/cactoos/cactoos.iml" group="cactoos" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cactoos/cactoos_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cactoos/cactoos_main.iml" group="cactoos" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cactoos/cactoos_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cactoos/cactoos_test.iml" group="cactoos" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/compatibility-tests/compatibility-tests.iml" filepath="$PROJECT_DIR$/.idea/modules/compatibility-tests/compatibility-tests.iml" group="compatibility-tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/compatibility-tests/compatibility-tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/compatibility-tests/compatibility-tests_main.iml" group="compatibility-tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/compatibility-tests/compatibility-tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/compatibility-tests/compatibility-tests_test.iml" group="compatibility-tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cactoos/kactoos-cactoos.iml" filepath="$PROJECT_DIR$/.idea/modules/cactoos/kactoos-cactoos.iml" group="cactoos" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-common/kactoos-common.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-common/kactoos-common.iml" group="kactoos-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-common/kactoos-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-common/kactoos-common_main.iml" group="kactoos-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-common/kactoos-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-common/kactoos-common_test.iml" group="kactoos-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-js/kactoos-js.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-js/kactoos-js.iml" group="kactoos-js" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-js/kactoos-js_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-js/kactoos-js_main.iml" group="kactoos-js" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-js/kactoos-js_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-js/kactoos-js_test.iml" group="kactoos-js" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-jvm/kactoos-jvm.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-jvm/kactoos-jvm.iml" group="kactoos-jvm" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-jvm/kactoos-jvm_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-jvm/kactoos-jvm_main.iml" group="kactoos-jvm" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-jvm/kactoos-jvm_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-jvm/kactoos-jvm_test.iml" group="kactoos-jvm" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-native/kactoos-native.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-native/kactoos-native.iml" group="kactoos-native" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-native/kactoos-native_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-native/kactoos-native_main.iml" group="kactoos-native" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kactoos-native/kactoos-native_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kactoos-native/kactoos-native_test.iml" group="kactoos-native" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+
+* text=auto
+*.kt text
+*.java text
+*.md text
+*.xml text
+*.png binary
+*.bat eol=crlf

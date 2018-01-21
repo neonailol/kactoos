@@ -1,0 +1,29 @@
+package nnl.rocks.kactoos.func
+
+import nnl.rocks.kactoos.BiFunc
+import nnl.rocks.kactoos.scalar.IoCheckedScalar
+import nnl.rocks.kactoos.scalar.ScalarOf
+
+import java.io.IOException
+
+/**
+ * Func that doesn't throw checked [Exception], but throws [IOException] instead.
+ *
+ * There is no thread-safety guarantee.
+ *
+ * @param func Encapsulated func
+ * @param X Type of input
+ * @param Y Type of input
+ * @param Z Type of output
+ * @since 0.13
+ */
+class IoCheckedBiFunc<in X : Any, in Y : Any, out Z : Any>(
+    private val func: BiFunc<X, Y, Z>
+) : BiFunc<X, Y, Z> {
+
+    @Throws(IOException::class)
+    override fun apply(
+        first: X,
+        second: Y
+    ): Z = IoCheckedScalar(ScalarOf { this.func.apply(first, second) }).value()
+}

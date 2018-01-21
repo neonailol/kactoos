@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="org.cactoos" externalSystemModuleVersion="1.0-SNAPSHOT" linkedProjectId=":cactoos" linkedProjectPath="$MODULE_DIR$/../../../cactoos" rootProjectPath="$MODULE_DIR$/../../.." />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../cactoos">
+      <excludeFolder url="file://$MODULE_DIR$/../../../cactoos/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../cactoos/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../cactoos/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
