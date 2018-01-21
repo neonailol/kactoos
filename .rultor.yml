@@ -14,5 +14,5 @@ merge:
 release:
   script: |-
     [[ "${tag}" =~ ^[0-9]+(\.[0-9]+)*$ ]] || exit -1
-    git tag -am "${tag}"
+    git tag "${tag}"
     ./gradlew clean build check test
