@@ -37,8 +37,8 @@
     <orderEntry type="module" module-name="kactoos-common_test" />
     <orderEntry type="module" module-name="kactoos-common_main" />
     <orderEntry type="module" module-name="compatibility-tests_main" />
+    <orderEntry type="module" module-name="cactoos_main" />
     <orderEntry type="module" module-name="kactoos-jvm_main" />
-    <orderEntry type="library" name="Gradle: com.github.yegor256:cactoos:master-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.20" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.20" level="project" />
     <orderEntry type="library" name="Gradle: org.reflections:reflections:0.9.11" level="project" />
