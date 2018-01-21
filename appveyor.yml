@@ -1,0 +1,8 @@
+
+cache:
+  - C:\Users\appveyor\.m2
+  - C:\Users\appveyor\.gradle
+  - C:\Users\appveyor\.konan
+
+build_script:
+  - gradlew.bat clean build check test
