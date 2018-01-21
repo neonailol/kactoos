@@ -35,3 +35,9 @@ internal typealias KFunc<X, Y> = (X) -> Y
      * @since 0.2
      */
 internal typealias KBiProc<X, Y> = (X, Y) -> Unit
+
+    /**
+     * Alias for [Bytes]
+     * @since 0.2
+     */
+internal typealias KBytes = () -> ByteArray
