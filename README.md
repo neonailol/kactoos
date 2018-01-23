@@ -3,11 +3,11 @@
 [![Build Status](https://travis-ci.org/neonailol/kactoos.svg?branch=master)](https://travis-ci.org/neonailol/kactoos)
 [![Build status](https://ci.appveyor.com/api/projects/status/github/neonailol/kactoos?branch=master&svg=true)](https://ci.appveyor.com/project/neonailol/kactoos)
 [![Jitpack](https://jitpack.io/v/neonailol/kactoos.svg)](https://jitpack.io/#neonailol/kactoos)
-[![Active Contributors](https://api.gitential.com/accounts/444/projects/510/badges/active-contributors.svg)](https://gitential.com/accounts/444/projects/510/share?uuid=ae2a4c19-7845-4099-99b7-e3c99d126749&utm_source=shield&utm_medium=shield&utm_campaign=510)
-[![Code Volume](https://api.gitential.com/accounts/444/projects/510/badges/code-volume.svg)](https://gitential.com/accounts/444/projects/510/share?uuid=ae2a4c19-7845-4099-99b7-e3c99d126749&utm_source=shield&utm_medium=shield&utm_campaign=510)
-[![Coding Hours](https://api.gitential.com/accounts/444/projects/510/badges/coding-hours.svg)](https://gitential.com/accounts/444/projects/510/share?uuid=ae2a4c19-7845-4099-99b7-e3c99d126749&utm_source=shield&utm_medium=shield&utm_campaign=510)
-[![Efficiency](https://api.gitential.com/accounts/444/projects/510/badges/efficiency.svg)](https://gitential.com/accounts/444/projects/510/share?uuid=ae2a4c19-7845-4099-99b7-e3c99d126749&utm_source=shield&utm_medium=shield&utm_campaign=510)
-[![Utilization](https://api.gitential.com/accounts/444/projects/510/badges/utilization.svg)](https://gitential.com/accounts/444/projects/510/share?uuid=ae2a4c19-7845-4099-99b7-e3c99d126749&utm_source=shield&utm_medium=shield&utm_campaign=510)
+[![Active Contributors](https://api.gitential.com/accounts/444/projects/511/badges/active-contributors.svg)](https://gitential.com/accounts/444/projects/511/share?uuid=5d5264cf-c89c-4168-8eee-9ab8f75a8802&utm_source=shield&utm_medium=shield&utm_campaign=511)
+[![Code Volume](https://api.gitential.com/accounts/444/projects/511/badges/code-volume.svg)](https://gitential.com/accounts/444/projects/511/share?uuid=5d5264cf-c89c-4168-8eee-9ab8f75a8802&utm_source=shield&utm_medium=shield&utm_campaign=511)
+[![Coding Hours](https://api.gitential.com/accounts/444/projects/511/badges/coding-hours.svg)](https://gitential.com/accounts/444/projects/511/share?uuid=5d5264cf-c89c-4168-8eee-9ab8f75a8802&utm_source=shield&utm_medium=shield&utm_campaign=511)
+[![Efficiency](https://api.gitential.com/accounts/444/projects/511/badges/efficiency.svg)](https://gitential.com/accounts/444/projects/511/share?uuid=5d5264cf-c89c-4168-8eee-9ab8f75a8802&utm_source=shield&utm_medium=shield&utm_campaign=511)
+[![Utilization](https://api.gitential.com/accounts/444/projects/511/badges/utilization.svg)](https://gitential.com/accounts/444/projects/511/share?uuid=5d5264cf-c89c-4168-8eee-9ab8f75a8802&utm_source=shield&utm_medium=shield&utm_campaign=511)
 
 Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 
