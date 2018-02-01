@@ -82,7 +82,7 @@ class LoggingOutputTest {
         val path = temp.resolve("x/y/z/file.txt")
         LengthOf(
                 TeeInput(
-                        ResourceOf("org/cactoos/large-text.txt"),
+                        ResourceOf("org/kactoos/large-text.txt"),
                         LoggingOutput(
                                 OutputTo(path),
                                 "text file",
@@ -113,7 +113,7 @@ class LoggingOutputTest {
         val path = temp.resolve("a/b/c/file.txt")
         LengthOf(
                 TeeInput(
-                        ResourceOf("org/cactoos/large-text.txt"),
+                        ResourceOf("org/kactoos/large-text.txt"),
                         LoggingOutput(
                                 OutputTo(path),
                                 "text file",

@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
 
@@ -16,7 +17,7 @@ import nnl.rocks.kactoos.iterable.Mapped
 class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
 
     constructor(
-        fnc: Func<X, Y>,
+        fnc: KFunc<X, Y>,
         src: Collection<X>
     ) : super(
         { CollectionOf<Y>(Mapped<X, Y>(fnc, src)) }
@@ -29,7 +30,7 @@ class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
      */
     @SafeVarargs
     constructor(
-        fnc: Func<X, Y>,
+        fnc: KFunc<X, Y>,
         vararg src: X
     ) : this(fnc, IterableOf<X>(src.iterator()))
 
@@ -39,7 +40,7 @@ class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
      * @since 0.23
      */
     constructor(
-        fnc: Func<X, Y>,
+        fnc: KFunc<X, Y>,
         src: Iterator<X>
     ) : this(fnc, IterableOf<X>(src))
 
@@ -48,7 +49,7 @@ class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
      * @param fnc Func
      */
     constructor(
-        fnc: Func<X, Y>,
+        fnc: KFunc<X, Y>,
         src: Iterable<X>
     ) : this(fnc, CollectionOf<X>(src))
 }

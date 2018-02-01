@@ -97,9 +97,9 @@ class FormattedTextTest {
                 "Can't format a string with text",
                 FormattedText(
                         "Format with text: %s",
-                        TextOf("Cactoos")
+                        TextOf("kactoos")
                 ),
-                TextHasString("Format with text: Cactoos")
+                TextHasString("Format with text: kactoos")
         )
     }
 }

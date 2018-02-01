@@ -52,7 +52,7 @@ class InputOfTest {
     @Test
     @Throws(IOException::class)
     fun readsSimpleFileContent() {
-        val temp = Files.createTempFile("cactoos-1", "txt-1")
+        val temp = Files.createTempFile("kactoos-1", "txt-1")
         val content = "Hello, товарищ!"
         Files.write(temp, content.toByteArray(StandardCharsets.UTF_8))
         MatcherAssert.assertThat(
@@ -99,7 +99,7 @@ class InputOfTest {
             BytesOf(
                 InputOf(
                     this.javaClass.getResource(
-                        "/org/cactoos/io/InputOf.class"
+                        "/org/kactoos/io/InputOf.class"
                     )
                 )
             ).asBytes().size,
@@ -136,7 +136,7 @@ class InputOfTest {
                     InputOf(
                         URL(
                             // @checkstyle LineLength (1 line)
-                            "file:src/test/resources/org/cactoos/large-text.txt"
+                            "file:src/test/resources/org/kactoos/large-text.txt"
                         )
                     )
                 )

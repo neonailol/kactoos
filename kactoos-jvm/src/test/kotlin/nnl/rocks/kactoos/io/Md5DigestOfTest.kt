@@ -59,7 +59,7 @@ class Md5DigestOfTest {
                         Md5DigestOf(
                                 InputOf(
                                         ResourceOf(
-                                                "org/cactoos/io/DigestEnvelope.class"
+                                                "org/kactoos/io/DigestEnvelope.class"
                                         ).stream()
                                 )
                         )

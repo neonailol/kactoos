@@ -24,12 +24,12 @@ class OutputStreamToTest {
     @Test
     @Throws(IOException::class)
     fun writesLargeContentToFile() {
-        val temp = Files.createTempFile("cactoos-1", "txt-1")
+        val temp = Files.createTempFile("kactoos-1", "txt-1")
         MatcherAssert.assertThat(
                 "Can't copy Input to Output and return Input",
                 TextOf(
                         TeeInput(
-                                ResourceOf("org/cactoos/large-text.txt"),
+                                ResourceOf("org/kactoos/large-text.txt"),
                                 OutputTo(OutputStreamTo(temp))
                         )
                 ),

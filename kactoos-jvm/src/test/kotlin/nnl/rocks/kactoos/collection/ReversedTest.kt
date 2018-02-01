@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
@@ -6,8 +5,6 @@ import nnl.rocks.kactoos.list.ListOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
-
-import java.util.ArrayList
 
 /**
  * Test case for [nnl.rocks.kactoos.collection.Reversed].
@@ -24,13 +21,13 @@ class ReversedTest {
     @Throws(Exception::class)
     fun behavesAsCollection() {
         MatcherAssert.assertThat(
-                "Can't behave as a collection",
-                CollectionNoNulls(
-                        Reversed(
-                                IterableOf(0, - 1, 2)
-                        )
-                ),
-                BehavesAsCollection(0)
+            "Can't behave as a collection",
+            CollectionNoNulls(
+                Reversed(
+                    IterableOf(0, - 1, 2)
+                )
+            ),
+            BehavesAsCollection(0)
         )
     }
 
@@ -39,12 +36,12 @@ class ReversedTest {
     fun reverseList() {
         val last = "last"
         MatcherAssert.assertThat(
-                Reversed(
-                        IterableOf(
-                                "item", last
-                        )
-                ).iterator().next(),
-                Matchers.equalTo(last)
+            Reversed(
+                IterableOf(
+                    "item", last
+                )
+            ).iterator().next(),
+            Matchers.equalTo(last)
         )
     }
 
@@ -52,10 +49,10 @@ class ReversedTest {
     @Throws(Exception::class)
     fun reverseEmptyList() {
         MatcherAssert.assertThat(
-                Reversed(
-                        emptyList()
-                ),
-                Matchers.emptyIterable<Any>()
+            Reversed(
+                emptyList()
+            ),
+            Matchers.emptyIterable<Any>()
         )
     }
 
@@ -63,12 +60,12 @@ class ReversedTest {
     @Throws(Exception::class)
     fun size() {
         MatcherAssert.assertThat(
-                Reversed(
-                        IterableOf(
-                                "0", "1", "2"
-                        )
-                ).size,
-                Matchers.equalTo(3)
+            Reversed(
+                IterableOf(
+                    "0", "1", "2"
+                )
+            ).size,
+            Matchers.equalTo(3)
         )
     }
 
@@ -76,12 +73,12 @@ class ReversedTest {
     @Throws(Exception::class)
     fun isEmpty() {
         MatcherAssert.assertThat(
-                Reversed(
-                        IterableOf(
-                                6, 16
-                        )
-                ).isEmpty(),
-                Matchers.equalTo(false)
+            Reversed(
+                IterableOf(
+                    6, 16
+                )
+            ).isEmpty(),
+            Matchers.equalTo(false)
         )
     }
 
@@ -90,85 +87,25 @@ class ReversedTest {
     fun contains() {
         val word = "objects"
         MatcherAssert.assertThat(
-                Reversed(
-                        IterableOf(
-                                "hello", "elegant", word
-                        )
-                ).contains(word),
-                Matchers.equalTo(true)
+            Reversed(
+                IterableOf(
+                    "hello", "elegant", word
+                )
+            ).contains(word),
+            Matchers.equalTo(true)
         )
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testAdd() {
-        Reversed(
-                IterableOf(
-                        1, 2, 3, 4
-                )
-        ).add(6)
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testRemove() {
-        Reversed(
-                IterableOf(
-                        1, 2, 3, 4
-                )
-        ).remove(1)
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testAddAll() {
-        Reversed(
-                IterableOf(
-                        1, 2, 3, 4
-                )
-        ).addAll(ArrayList<Int>(6))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testRemoveAll() {
-        Reversed(
-                IterableOf(
-                        1, 2, 3, 4
-                )
-        ).removeAll(ArrayList<Any>(2))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testRetainAll() {
-        Reversed(
-                IterableOf(
-                        1, 2, 3, 4
-                )
-        ).retainAll(ArrayList<Any>(2))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testClear() {
-        Reversed(
-                IterableOf(
-                        1, 2, 3, 4
-                )
-        ).clear()
     }
 
     @Test
     @Throws(Exception::class)
     fun toArray() {
-        MatcherAssert.assertThat<Array<Any>>(
-                Reversed(
-                        IterableOf(
-                                1, 2, 3, 4
-                        )
-                ).toTypedArray(),
-                Matchers.arrayContaining<Any>(4, 3, 2, 1)
+        MatcherAssert.assertThat(
+            Reversed(
+                IterableOf(
+                    1, 2, 3, 4
+                )
+            ).toTypedArray(),
+            Matchers.arrayContaining(4, 3, 2, 1)
         )
     }
 
@@ -176,12 +113,12 @@ class ReversedTest {
     @Throws(Exception::class)
     fun toArrayWithArray() {
         MatcherAssert.assertThat(
-                Reversed(
-                        IterableOf(
-                                1, 2, 3, 4, 5
-                        )
-                ).toTypedArray(),
-                Matchers.arrayContaining(5, 4, 3, 2, 1)
+            Reversed(
+                IterableOf(
+                    1, 2, 3, 4, 5
+                )
+            ).toTypedArray(),
+            Matchers.arrayContaining(5, 4, 3, 2, 1)
         )
     }
 
@@ -191,12 +128,12 @@ class ReversedTest {
         val first = "first"
         val second = "second"
         MatcherAssert.assertThat(
-                Reversed(
-                        IterableOf(
-                                first, second, "third"
-                        )
-                ).containsAll(ListOf(first, second)),
-                Matchers.equalTo(true)
+            Reversed(
+                IterableOf(
+                    first, second, "third"
+                )
+            ).containsAll(ListOf(first, second)),
+            Matchers.equalTo(true)
         )
     }
 }

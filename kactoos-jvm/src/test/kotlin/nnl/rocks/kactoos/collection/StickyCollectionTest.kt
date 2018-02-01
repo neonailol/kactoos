@@ -34,8 +34,8 @@ class StickyCollectionTest {
     @Throws(Exception::class)
     fun ignoresChangesInIterable() {
         val size = AtomicInteger(2)
-        val list = StickyCollection<Int>(
-                ListOf<Int>(
+        val list = StickyCollection(
+                ListOf(
                         { Collections.nCopies(size.incrementAndGet(), 0).iterator() }
                 )
         )

@@ -30,7 +30,7 @@ class StickyInputTest {
                 "Can't read bytes from a file",
                 StickyInput(
                         ResourceOf(
-                                "org/cactoos/large-text.txt"
+                                "org/kactoos/large-text.txt"
                         )
                 ),
                 MatcherOf(
@@ -57,7 +57,7 @@ class StickyInputTest {
                                 InputOf(
                                         URL(
                                                 // @checkstyle LineLength (1 line)
-                                                "file:src/test/resources/org/cactoos/large-text.txt"
+                                                "file:src/test/resources/org/kactoos/large-text.txt"
                                         )
                                 )
                         )

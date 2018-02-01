@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.io.InputOf
@@ -18,56 +17,51 @@ import java.util.concurrent.atomic.AtomicInteger
 
 /**
  * Test case for [PropertiesOf].
- *
- * @author Yegor Bugayenko (yegor256@gmail.com)
- * @version $Id: 07eaa9d5042954717be1272970fbefb765f40945 $
- * @since 0.7
- * @checkstyle JavadocMethodCheck (500 lines)
- * @checkstyle ClassDataAbstractionCouplingCheck (500 lines)
+ * @since 0.3
  */
 class PropertiesOfTest {
 
     @Test
     fun readsStringContent() {
         MatcherAssert.assertThat(
-                "Can't read properties from an input string",
-                PropertiesOf(
-                        "foo=Hello, world!\nbar=works fine?\n"
-                ),
-                ScalarHasValue(
-                        MatcherOf<Properties> { props -> "Hello, world!" == props.getProperty("foo") }
-                )
+            "Can't read properties from an input string",
+            PropertiesOf(
+                "foo=Hello, world!\nbar=works fine?\n"
+            ),
+            ScalarHasValue(
+                MatcherOf<Properties> { props -> "Hello, world!" == props.getProperty("foo") }
+            )
         )
     }
 
     @Test
     fun readsInputContent() {
         MatcherAssert.assertThat(
-                "Can't read properties from an input",
-                PropertiesOf(
-                        InputOf("greet=Hello, inner world!\nask=works fine?\n")
-                ),
-                ScalarHasValue(
-                        MatcherOf<Properties> { props -> "Hello, inner world!" == props.getProperty("greet") }
-                )
+            "Can't read properties from an input",
+            PropertiesOf(
+                InputOf("greet=Hello, inner world!\nask=works fine?\n")
+            ),
+            ScalarHasValue(
+                MatcherOf<Properties> { props -> "Hello, inner world!" == props.getProperty("greet") }
+            )
         )
     }
 
     @Test
     fun convertsMapToProperties() {
         MatcherAssert.assertThat(
-                "Can't convert map to properties",
-                PropertiesOf(
-                        StickyMap(
-                                MapOf<Int, String>(
-                                        MapEntry(0, "hello, world"),
-                                        MapEntry(1, "how are you?")
-                                )
-                        )
-                ),
-                ScalarHasValue(
-                        MatcherOf<Properties> { props -> props.getProperty("0").endsWith(", world") }
+            "Can't convert map to properties",
+            PropertiesOf(
+                StickyMap<Any, Any, Any>(
+                    MapOf<Any, Any, Any>(
+                        MapEntry(0, "hello, world"),
+                        MapEntry(1, "how are you?")
+                    )
                 )
+            ),
+            ScalarHasValue(
+                MatcherOf<Properties> { props -> props.getProperty("0").endsWith(", world") }
+            )
         )
     }
 
@@ -76,23 +70,21 @@ class PropertiesOfTest {
     fun sensesChangesInMap() {
         val size = AtomicInteger(2)
         val props = PropertiesOf(
-                MapOf<Int, Int, Any>(
-                        {
-                            Repeated<Entry<out Int, out Int>>(
-                                    size.incrementAndGet(), {
-                                MapEntry(
-                                        SecureRandom().nextInt(),
-                                        1
-                                )
-                            }
-                            )
-                        }
+            MapOf<Int, Int, Any>(
+                Repeated<Map.Entry<Int, Int>>(
+                    size.incrementAndGet(), UncheckedScalar {
+                    MapEntry(
+                        SecureRandom().nextInt(),
+                        1
+                    )
+                }
                 )
+            )
         )
         MatcherAssert.assertThat(
-                "Can't sense the changes in the underlying map",
-                props.value().size,
-                Matchers.not(Matchers.equalTo<Int>(props.value().size))
+            "Can't sense the changes in the underlying map",
+            props.value().size,
+            Matchers.not(Matchers.equalTo<Int>(props.value().size))
         )
     }
 }

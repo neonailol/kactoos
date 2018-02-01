@@ -25,7 +25,7 @@ class InputStreamOfTest {
     @Test
     @Throws(IOException::class)
     fun readsSimpleFileContent() {
-        val temp = Files.createTempFile("cactoos-1", "txt-1")
+        val temp = Files.createTempFile("kactoos-1", "txt-1")
         val content = "Hello, товарищ!"
         Files.write(temp, content.toByteArray(StandardCharsets.UTF_8))
         MatcherAssert.assertThat(

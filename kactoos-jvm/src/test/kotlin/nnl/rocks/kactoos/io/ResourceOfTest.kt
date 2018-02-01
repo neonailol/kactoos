@@ -28,7 +28,7 @@ class ResourceOfTest {
                 Arrays.copyOfRange(
                         BytesOf(
                                 ResourceOf(
-                                        "org/cactoos/io/ResourceOfTest.class"
+                                        "org/kactoos/io/ResourceOfTest.class"
                                 )
                         ).asBytes(),
                         // @checkstyle MagicNumber (2 lines)
@@ -51,7 +51,7 @@ class ResourceOfTest {
                 "Can't read a text resource from classpath",
                 TextOf(
                         ResourceOf(
-                                "org/cactoos/large-text.txt"
+                                "org/kactoos/large-text.txt"
                         )
                 ).asString(),
                 Matchers.endsWith("est laborum.\n")
@@ -91,7 +91,7 @@ class ResourceOfTest {
         MatcherAssert.assertThat(
                 TextOf(
                         ResourceOf(
-                                TextOf("org/cactoos/small-text.txt")
+                                TextOf("org/kactoos/small-text.txt")
                         )
                 ).asString(),
                 Matchers.endsWith("ex ea commodo")

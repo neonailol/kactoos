@@ -30,11 +30,11 @@ class RetryScalar<T : Any>(
      * @param attempts Maximum number of attempts
      */
     constructor(
-        scalar: Scalar<T>,
+        scalar: KScalar<T>,
         attempts: Int
-    ) : this({ scalar.value() }, { attempt -> attempt >= attempts })
+    ) : this({ scalar.invoke() }, { attempt -> attempt >= attempts })
 
-    constructor(scalar: Scalar<T>) : this(scalar, 3)
+    constructor(scalar: Scalar<T>) : this({ scalar.value() }, 3)
 
     @Throws(Exception::class)
     override fun value(): T {

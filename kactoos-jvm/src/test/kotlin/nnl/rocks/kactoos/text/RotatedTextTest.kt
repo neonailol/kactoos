@@ -39,7 +39,7 @@ class RotatedTextTest {
 
     @Test
     fun noRotateWhenShiftZero() {
-        val nonrotate = "Cactoos!"
+        val nonrotate = "kactoos!"
         MatcherAssert.assertThat(
                 "Rotate text shift zero",
                 RotatedText(

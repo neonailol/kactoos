@@ -61,7 +61,7 @@ class Sha256DigestOfTest {
                         Sha256DigestOf(
                                 InputOf(
                                         ResourceOf(
-                                                "org/cactoos/io/DigestEnvelope.class"
+                                                "org/kactoos/io/DigestEnvelope.class"
                                         ).stream()
                                 )
                         )

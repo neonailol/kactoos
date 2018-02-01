@@ -80,7 +80,7 @@ class AbbreviatedTextTest {
 
     @Test
     fun abbreviatesTextWithWidthBiggerThanLength() {
-        val msg = "cactoos framework"
+        val msg = "kactoos framework"
         MatcherAssert.assertThat(
                 "Can't abbreviate a text with width bigger than length",
                 // @checkstyle MagicNumber (1 line)

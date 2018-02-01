@@ -47,7 +47,7 @@ class TeeInputTest {
     @Test
     @Throws(IOException::class)
     fun copiesToFile() {
-        val temp = Files.createTempFile("cactoos", "txt")
+        val temp = Files.createTempFile("kactoos", "txt")
         MatcherAssert.assertThat(
                 "Can't copy Input to File and return content",
                 TextOf(

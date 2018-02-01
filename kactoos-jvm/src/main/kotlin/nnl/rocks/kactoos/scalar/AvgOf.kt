@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.iterable.IterableOf
 
@@ -21,10 +22,7 @@ import nnl.rocks.kactoos.iterable.IterableOf
  *
  * There is no thread-safety guarantee.
  *
- *
- *
- *
- * @since 0.24
+ * @since 0.3
  */
 class AvgOf : NumberEnvelope {
 
@@ -104,18 +102,18 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     @SafeVarargs
-    constructor(vararg src: Scalar<Number>) : this(IterableOf<Scalar<Number>>(src.iterator()))
+    constructor(vararg src: KScalar<Number>) : this(IterableOf<KScalar<Number>>(src.iterator()))
 
     /**
      * @param src The iterable
      */
-    constructor(src: Iterable<Scalar<Number>>) : super(
+    constructor(src: Iterable<KScalar<Number>>) : super(
         {
             val numbers = src.iterator()
             var sum = 0.0
             var total = 0.0
             while (numbers.hasNext()) {
-                val next = numbers.next().value()
+                val next = numbers.next().invoke()
                 sum += next.toDouble()
                 total += 1.0
             }

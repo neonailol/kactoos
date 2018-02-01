@@ -46,10 +46,10 @@ class SplitTextTest {
         MatcherAssert.assertThat<Text>(
                 "Can't split an string with text regex",
                 SplitText(
-                        "Cactoos OOP!",
+                        "kactoos OOP!",
                         TextOf("\\s")
                 ).iterator().next(),
-                TextHasString("Cactoos")
+                TextHasString("kactoos")
         )
     }
 

@@ -78,7 +78,7 @@ class LoggingInputTest {
         val logger = FakeLogger()
         LengthOf(
                 LoggingInput(
-                        ResourceOf("org/cactoos/large-text.txt"),
+                        ResourceOf("org/kactoos/large-text.txt"),
                         "text file",
                         logger
                 )
@@ -102,7 +102,7 @@ class LoggingInputTest {
         val logger = FakeLogger(Level.WARNING)
         LengthOf(
                 LoggingInput(
-                        ResourceOf("org/cactoos/large-text.txt"),
+                        ResourceOf("org/kactoos/large-text.txt"),
                         "text file",
                         logger
                 )
@@ -126,7 +126,7 @@ class LoggingInputTest {
     fun logSkipFromLargeTextFile() {
         val logger = FakeLogger()
         LoggingInput(
-                ResourceOf("org/cactoos/large-text.txt"),
+                ResourceOf("org/kactoos/large-text.txt"),
                 "text file",
                 logger
                 // @checkstyle MagicNumber (1 line)
@@ -143,7 +143,7 @@ class LoggingInputTest {
     fun logAvailableFromLargeTextFile() {
         val logger = FakeLogger()
         LoggingInput(
-                ResourceOf("org/cactoos/large-text.txt"),
+                ResourceOf("org/kactoos/large-text.txt"),
                 "text file",
                 logger
         ).stream().available()
@@ -161,7 +161,7 @@ class LoggingInputTest {
     fun logResetFromLargeTextFile() {
         val logger = FakeLogger()
         val input = LoggingInput(
-                ResourceOf("org/cactoos/large-text.txt"),
+                ResourceOf("org/kactoos/large-text.txt"),
                 "text file",
                 logger
         ).stream()
@@ -183,7 +183,7 @@ class LoggingInputTest {
     fun logMarkSupportedFromLargeTextFile() {
         val logger = FakeLogger()
         LoggingInput(
-                ResourceOf("org/cactoos/large-text.txt"),
+                ResourceOf("org/kactoos/large-text.txt"),
                 "text file",
                 logger
         ).stream().markSupported()

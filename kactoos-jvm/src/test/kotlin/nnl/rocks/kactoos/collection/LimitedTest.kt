@@ -85,46 +85,4 @@ class LimitedTest {
                 Matchers.equalTo(true)
         )
     }
-
-    @Test(expected = UnsupportedOperationException::class)
-    fun testAdd() {
-        Limited(
-                2, IterableOf(1, 2, 3, 4)
-        ).add(6)
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    fun testRemove() {
-        Limited(
-                2, IterableOf(1, 2, 3, 4)
-        ).remove(1)
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    fun testAddAll() {
-        Limited(
-                2, IterableOf(1, 2, 3, 4)
-        ).addAll(ArrayList<Int>(6))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    fun testRemoveAll() {
-        Limited(
-                2, IterableOf(1, 2, 3, 4)
-        ).removeAll(ArrayList<Int>(2))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    fun testRetainAll() {
-        Limited(
-                2, IterableOf(1, 2, 3, 4)
-        ).retainAll(ArrayList<Any>(2))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    fun testClear() {
-        Limited(
-                2, IterableOf(1, 2, 3, 4)
-        ).clear()
-    }
 }

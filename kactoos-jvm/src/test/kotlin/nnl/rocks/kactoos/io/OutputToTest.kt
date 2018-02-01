@@ -22,7 +22,7 @@ class OutputToTest {
     @Test
     @Throws(IOException::class)
     fun writesSimplePathContent() {
-        val temp = Files.createTempDirectory("cactoos-1")
+        val temp = Files.createTempDirectory("kactoos-1")
         val path = temp.resolve("one/two/three/file.txt")
         val content = "Hello, товарищ!"
         LengthOf(TeeInput(content, OutputTo(path))).toInt()
@@ -36,7 +36,7 @@ class OutputToTest {
     @Test
     @Throws(IOException::class)
     fun writesSimpleFileContent() {
-        val temp = Files.createTempDirectory("cactoos-2")
+        val temp = Files.createTempDirectory("kactoos-2")
         val path = temp.resolve("a/b/c/file.txt")
         val txt = "Hello, друг!"
         LengthOf(
