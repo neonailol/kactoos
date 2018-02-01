@@ -38,7 +38,7 @@ class MaxOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Int) : super(
-        ScalarOf {
+        {
             var max = java.lang.Double.MIN_VALUE
             for (`val` in src) {
                 if (`val`.toDouble() > max) {
@@ -53,7 +53,7 @@ class MaxOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Long) : super(
-        ScalarOf {
+        {
             var max = java.lang.Double.MIN_VALUE
             for (`val` in src) {
                 if (`val`.toDouble() > max) {
@@ -68,7 +68,7 @@ class MaxOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Double) : super(
-        ScalarOf {
+        {
             var max = java.lang.Double.MIN_VALUE
             for (`val` in src) {
                 if (`val` > max) {
@@ -83,7 +83,7 @@ class MaxOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Float) : super(
-        ScalarOf {
+        {
             var max = java.lang.Double.MIN_VALUE
             for (`val` in src) {
                 if (`val`.toDouble() > max) {
@@ -98,7 +98,7 @@ class MaxOf : NumberEnvelope {
      * @param src The iterable
      */
     constructor(src: Iterable<Number>) : super(
-        ScalarOf {
+        {
             val numbers = src.iterator()
             var max = java.lang.Double.MIN_VALUE
             while (numbers.hasNext()) {

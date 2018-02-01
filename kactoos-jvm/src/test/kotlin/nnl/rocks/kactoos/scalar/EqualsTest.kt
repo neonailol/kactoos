@@ -1,3 +1,4 @@
+
 package nnl.rocks.kactoos.scalar
 
 import org.hamcrest.MatcherAssert
@@ -7,10 +8,10 @@ import org.junit.Test
 /**
  * Test case for [Equals].
  *
- *
- *
+ * @author Fabricio Cabral (fabriciofx@gmail.com)
+ * @version $Id: 45a0c68d3edf690f14d2a8e795bc5f2c307ad366 $
  * @since 0.9
- *
+ * @checkstyle JavadocMethodCheck (500 lines)
  */
 class EqualsTest {
 
@@ -18,12 +19,12 @@ class EqualsTest {
     @Throws(Exception::class)
     fun compareEquals() {
         MatcherAssert.assertThat(
-            "Can't compare if two integers are equals",
-            Equals(
-                ScalarOf { 1 },
-                ScalarOf { 1 }
-            ).value(),
-            Matchers.equalTo(true)
+                "Can't compare if two integers are equals",
+                Equals<Int>(
+                        { 1 },
+                        { 1 }
+                ).value(),
+                Matchers.equalTo(true)
         )
     }
 
@@ -31,12 +32,12 @@ class EqualsTest {
     @Throws(Exception::class)
     fun compareNotEquals() {
         MatcherAssert.assertThat(
-            "Can't compare if two integers are not equals",
-            Equals(
-                ScalarOf { 1 },
-                ScalarOf { 2 }
-            ).value(),
-            Matchers.equalTo(false)
+                "Can't compare if two integers are not equals",
+                Equals<Int>(
+                        { 1 },
+                        { 2 }
+                ).value(),
+                Matchers.equalTo(false)
         )
     }
 
@@ -45,12 +46,12 @@ class EqualsTest {
     fun compareEqualsText() {
         val str = "hello"
         MatcherAssert.assertThat(
-            "Can't compare if two strings are equals",
-            Equals(
-                ScalarOf { str },
-                ScalarOf { str }
-            ).value(),
-            Matchers.equalTo(true)
+                "Can't compare if two strings are equals",
+                Equals<String>(
+                        { str },
+                        { str }
+                ).value(),
+                Matchers.equalTo(true)
         )
     }
 
@@ -58,12 +59,12 @@ class EqualsTest {
     @Throws(Exception::class)
     fun compareNotEqualsText() {
         MatcherAssert.assertThat(
-            "Can't compare if two strings are not equals",
-            Equals(
-                ScalarOf { "world" },
-                ScalarOf { "worle" }
-            ).value(),
-            Matchers.equalTo(false)
+                "Can't compare if two strings are not equals",
+                Equals<String>(
+                        { "world" },
+                        { "worle" }
+                ).value(),
+                Matchers.equalTo(false)
         )
     }
 }

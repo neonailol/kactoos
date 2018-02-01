@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Input
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.IoCheckedFunc
@@ -27,7 +28,7 @@ import java.io.InputStream
  */
 class ResourceOf @JvmOverloads constructor(
     private val path: Text,
-    private val fallback: Func<Text, Input>,
+    private val fallback: KFunc<Text, Input>,
     private val loader: ClassLoader = Thread.currentThread().contextClassLoader
 ) : Input {
 
@@ -51,7 +52,7 @@ class ResourceOf @JvmOverloads constructor(
         res: CharSequence,
         fbk: Func<CharSequence, Input>,
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
-    ) : this(TextOf(res), FuncOf { input -> fbk.apply(input.asString()) }, ldr)
+    ) : this(TextOf(res), { input -> fbk.apply(input.asString()) }, ldr)
 
     /**
      * New resource input with current context [ClassLoader].
@@ -83,7 +84,7 @@ class ResourceOf @JvmOverloads constructor(
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
     ) : this(
         res,
-        FuncOf { input ->
+        { input ->
             throw IOException(
                 FormattedText(
                     "Resource \"%s\" was not found",
@@ -102,7 +103,7 @@ class ResourceOf @JvmOverloads constructor(
     constructor(
         res: Text,
         fbk: Text
-    ) : this(res, FuncOf { input -> InputOf(BytesOf(fbk.asString())) })
+    ) : this(res, { input -> InputOf(BytesOf(fbk.asString())) })
 
     /**
      * New resource input with current context [ClassLoader].
@@ -112,7 +113,7 @@ class ResourceOf @JvmOverloads constructor(
     constructor(
         res: Text,
         fbk: Input
-    ) : this(res, FuncOf { input -> fbk })
+    ) : this(res, { input -> fbk })
 
     @Throws(IOException::class)
     override fun stream(): InputStream {

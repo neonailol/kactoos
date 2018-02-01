@@ -1,8 +1,8 @@
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
 import java.io.IOException
 
 /**
@@ -17,8 +17,8 @@ import java.io.IOException
  * @param Y Type of output
  * @since 0.4
  */
-class IoCheckedFunc<in X : Any, out Y : Any>(private val func: Func<X, Y>) : Func<X, Y> {
+class IoCheckedFunc<in X : Any, out Y : Any>(private val func: KFunc<X, Y>) : Func<X, Y> {
 
     @Throws(IOException::class)
-    override fun apply(input: X): Y = IoCheckedScalar(ScalarOf { this.func.apply(input) }).value()
+    override fun apply(input: X): Y = IoCheckedScalar({ this.func.invoke(input) }).value()
 }

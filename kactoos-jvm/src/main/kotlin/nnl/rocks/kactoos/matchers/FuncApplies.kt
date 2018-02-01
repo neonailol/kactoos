@@ -1,4 +1,4 @@
-package nnl.rocks.kactoos.test
+package nnl.rocks.kactoos.matchers
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.func.UncheckedFunc

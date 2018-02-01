@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.func
 
+import nnl.rocks.kactoos.KProc
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.scalar.True
-
 import java.io.IOException
 
 /**
@@ -16,10 +15,10 @@ import java.io.IOException
  * @param X Type of input
  * @since 0.4
  */
-class IoCheckedProc<in X : Any>(private val proc: Proc<X>) : Proc<X> {
+class IoCheckedProc<in X : Any>(private val proc: KProc<X>) : Proc<X> {
 
     @Throws(IOException::class)
     override fun exec(input: X) {
-        IoCheckedFunc(FuncOf(this.proc, True())).apply(input)
+        IoCheckedFunc({ _: Any -> this.proc }).apply(input)
     }
 }

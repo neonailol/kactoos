@@ -76,7 +76,7 @@ class TempFile private constructor(
         suffix: Text
     ) : this(
         StickyScalar<Path>(
-            ScalarOf {
+            {
                 Files.createTempFile(
                     dir.value(),
                     prefix.asString(),

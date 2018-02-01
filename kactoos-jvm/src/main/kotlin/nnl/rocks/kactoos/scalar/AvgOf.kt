@@ -32,7 +32,7 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Int) : super(
-        ScalarOf {
+        {
             var sum = 0.0
             var total = 0.0
             for (`val` in src) {
@@ -50,7 +50,7 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Long) : super(
-        ScalarOf {
+        {
             var sum = 0.0
             var total = 0.0
             for (`val` in src) {
@@ -68,7 +68,7 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Double) : super(
-        ScalarOf {
+        {
             var sum = 0.0
             var total = 0.0
             for (`val` in src) {
@@ -86,7 +86,7 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Float) : super(
-        ScalarOf {
+        {
             var sum = 0.0
             var total = 0.0
             for (`val` in src) {
@@ -110,7 +110,7 @@ class AvgOf : NumberEnvelope {
      * @param src The iterable
      */
     constructor(src: Iterable<Scalar<Number>>) : super(
-        ScalarOf {
+        {
             val numbers = src.iterator()
             var sum = 0.0
             var total = 0.0

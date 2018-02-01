@@ -1,18 +1,20 @@
+
 package nnl.rocks.kactoos.func
 
-import nnl.rocks.kactoos.test.FuncApplies
+import nnl.rocks.kactoos.matchers.FuncApplies
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
+
 import java.io.IOException
 
 /**
  * Test case for [FuncWithFallback].
  *
- *
- *
+ * @author Yegor Bugayenko (yegor256@gmail.com)
+ * @version $Id: 7e0aafabf29801151b485a24cce64dea812260e7 $
  * @since 0.2
- *
+ * @checkstyle JavadocMethodCheck (500 lines)
  */
 class FuncWithFallbackTest {
 
@@ -20,12 +22,12 @@ class FuncWithFallbackTest {
     @Throws(Exception::class)
     fun usesMainFunc() {
         MatcherAssert.assertThat(
-            "Can't use the main function if no exception",
-            FuncWithFallback(
-                (FuncOf<Any, String> { input -> "It's success" }),
-                (FuncOf { ex -> "In case of failure..." })
-            ),
-            FuncApplies(1, Matchers.containsString("success"))
+                "Can't use the main function if no exception",
+                FuncWithFallback<Any, Any>(
+                        { input -> "It's success" },
+                        { ex -> "In case of failure..." }
+                ),
+                FuncApplies(1, Matchers.containsString("success"))
         )
     }
 
@@ -33,12 +35,12 @@ class FuncWithFallbackTest {
     @Throws(Exception::class)
     fun usesFallback() {
         MatcherAssert.assertThat(
-            "Can't use the callback in case of exception",
-            FuncWithFallback(
-                (FuncOf<Any, String> { input -> throw IOException("Failure") }),
-                (FuncOf<Any, String> { ex -> "Never mind" })
-            ),
-            FuncApplies(1, Matchers.containsString("Never"))
+                "Can't use the callback in case of exception",
+                FuncWithFallback<Any, Any>(
+                        { input -> throw IOException("Failure") },
+                        { ex -> "Never mind" }
+                ),
+                FuncApplies(1, Matchers.containsString("Never"))
         )
     }
 
@@ -46,13 +48,13 @@ class FuncWithFallbackTest {
     @Throws(Exception::class)
     fun usesFollowUp() {
         MatcherAssert.assertThat(
-            "Can't use the follow-up func",
-            FuncWithFallback(
-                FuncOf<Any, String> { input -> "works fine" },
-                FuncOf<Any, String> { ex -> "won't happen" },
-                FuncOf<Any, String> { input -> "follow up" }
-            ),
-            FuncApplies(1, Matchers.containsString("follow"))
+                "Can't use the follow-up func",
+                FuncWithFallback<Any, Any>(
+                        { input -> "works fine" },
+                        { ex -> "won't happen" },
+                        { input -> "follow up" }
+                ),
+                FuncApplies(1, Matchers.containsString("follow"))
         )
     }
 }

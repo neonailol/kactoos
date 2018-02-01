@@ -1,9 +1,8 @@
 package nnl.rocks.kactoos.io
 
-import nnl.rocks.kactoos.func.FuncOf
-import nnl.rocks.kactoos.test.InputHasContent
-import nnl.rocks.kactoos.test.MatcherOf
-import nnl.rocks.kactoos.test.TextHasString
+import nnl.rocks.kactoos.matchers.InputHasContent
+import nnl.rocks.kactoos.matchers.MatcherOf
+import nnl.rocks.kactoos.matchers.TextHasString
 import nnl.rocks.kactoos.text.TextOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
@@ -23,13 +22,13 @@ import java.util.concurrent.atomic.AtomicBoolean
 /**
  * Test case for [InputOf].
  *
- *
- *
- *
- *
+ * @author Yegor Bugayenko (yegor256@gmail.com)
+ * @author Kirill (g4s8.public@gmail.com)
+ * @author Ix (ixmanuel@yahoo.com)
+ * @version $Id: ae68a5790bb68cd7b66191edbdc72a43c85c7c18 $
  * @since 0.1
- *
- *
+ * @checkstyle JavadocMethodCheck (500 lines)
+ * @checkstyle ClassDataAbstractionCouplingCheck (500 lines)
  */
 class InputOfTest {
 
@@ -53,7 +52,7 @@ class InputOfTest {
     @Test
     @Throws(IOException::class)
     fun readsSimpleFileContent() {
-        val temp = Files.createTempFile("kactoos-1", "txt-1")
+        val temp = Files.createTempFile("cactoos-1", "txt-1")
         val content = "Hello, товарищ!"
         Files.write(temp, content.toByteArray(StandardCharsets.UTF_8))
         MatcherAssert.assertThat(
@@ -88,7 +87,7 @@ class InputOfTest {
                     }
                 )
             ).asString(),
-            MatcherOf(FuncOf { text -> closed.get() })
+            MatcherOf { text -> closed.get() }
         )
     }
 
@@ -100,7 +99,7 @@ class InputOfTest {
             BytesOf(
                 InputOf(
                     this.javaClass.getResource(
-                        "/nnl/rocks/kactoos/io/InputOf.class"
+                        "/org/cactoos/io/InputOf.class"
                     )
                 )
             ).asBytes().size,
@@ -118,7 +117,7 @@ class InputOfTest {
                     InputOf(home)
                 ),
                 TextHasString(
-                    Matchers.allOf(
+                    Matchers.allOf<T>(
                         Matchers.startsWith("<html"),
                         Matchers.endsWith("html>")
                     )
@@ -136,7 +135,8 @@ class InputOfTest {
                 BytesOf(
                     InputOf(
                         URL(
-                            "file:src/test/resources/nnl/rocks/kactoos/large-text.txt"
+                            // @checkstyle LineLength (1 line)
+                            "file:src/test/resources/org/cactoos/large-text.txt"
                         )
                     )
                 )
@@ -235,7 +235,10 @@ class InputOfTest {
             String(
                 BytesOf(
                     InputOf(
-                        charArrayOf('O', ' ', 'q', 'u', 'e', ' ', 's', 'e', 'r', 'a', ' ', 'q', 'u', 'e', ' ', 's', 'e', 'r', 'a'),
+                        charArrayOf(
+                            'O', ' ', 'q', 'u', 'e', ' ', 's', 'e', 'r', 'a', ' ', 'q', 'u', 'e', ' ', 's', 'e', 'r',
+                            'a'
+                        ),
                         StandardCharsets.UTF_8
                     )
                 ).asBytes(),

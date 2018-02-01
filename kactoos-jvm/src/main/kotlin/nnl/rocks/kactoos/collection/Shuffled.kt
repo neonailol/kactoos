@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.collection
 
-import nnl.rocks.kactoos.scalar.ScalarOf
 import java.util.ArrayList
 import java.util.Collections
 
@@ -25,7 +24,7 @@ import java.util.Collections
 class Shuffled<T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Collection<T>) : super(
-        ScalarOf {
+        {
             val items = ArrayList<T>(src.size)
             items.addAll(src)
             Collections.shuffle(items)

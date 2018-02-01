@@ -4,7 +4,6 @@ import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
-import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import java.util.Collections
 import java.util.HashMap
@@ -22,7 +21,7 @@ class StickyMap<X : Any, Y : Any, Z : Any> : MapEnvelope<X, Y> {
 
     constructor(map: Map<X, Y>) : super(
         StickyScalar<Map<X, Y>>(
-            ScalarOf {
+            {
                 val temp = HashMap<X, Y>(0)
                 temp.putAll(map)
                 Collections.unmodifiableMap<X, Y>(temp)

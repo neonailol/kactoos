@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.Scalar
 
 /**
@@ -46,6 +47,17 @@ class Ternary<T : Any, X : Any>(
         ScalarOf { cnd.apply(input) },
         ScalarOf { cons.apply(input) },
         ScalarOf { alter.apply(input) }
+    )
+
+    constructor(
+        input: X,
+        cnd: KFunc<X, Boolean>,
+        cons: KFunc<X, T>,
+        alter: KFunc<X, T>
+    ) : this(
+        ScalarOf { cnd.invoke(input) },
+        ScalarOf { cons.invoke(input) },
+        ScalarOf { alter.invoke(input) }
     )
 
     /**

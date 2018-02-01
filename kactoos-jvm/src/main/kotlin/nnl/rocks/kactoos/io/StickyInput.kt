@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 
 import java.io.ByteArrayInputStream
@@ -31,7 +30,7 @@ class StickyInput(
 
     constructor(input: Input) : this(
         StickyScalar<ByteArray>(
-            ScalarOf {
+            {
                 val baos = ByteArrayOutputStream()
                 LengthOf(
                     TeeInput(input, OutputTo(baos))

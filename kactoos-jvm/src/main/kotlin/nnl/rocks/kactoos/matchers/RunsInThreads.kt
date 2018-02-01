@@ -1,7 +1,8 @@
-package nnl.rocks.kactoos
+package nnl.rocks.kactoos.matchers
 
+import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.func.FuncOf
-import nnl.rocks.kactoos.scalar.AndFunc
+import nnl.rocks.kactoos.scalar.And
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import org.hamcrest.Description
 import org.hamcrest.TypeSafeMatcher
@@ -14,17 +15,15 @@ import java.util.concurrent.Future
  * Matcher for [Func] that must run in multiple threads.
  *
  * @param input Input object
- * @param total Total cid of threads to run.
- * @param <T> Type of input
- * @since 0.24
- *
+ * @param T Type of input
+ * @since 0.3
  */
-class RunsInThreads<T : Any>(
-    private val input: T,
+class RunsInThreads<T : Any> @JvmOverloads constructor(
+    private val input: T? = null,
     private val total: Int = Runtime.getRuntime().availableProcessors() shl 4
-) : TypeSafeMatcher<FuncOf<T, Boolean>>() {
+) : TypeSafeMatcher<Func<T, Boolean>>() {
 
-    public override fun matchesSafely(func: FuncOf<T, Boolean>): Boolean {
+    public override fun matchesSafely(func: Func<T, Boolean>): Boolean {
         val service = Executors.newFixedThreadPool(
             this.total
         )
@@ -32,15 +31,15 @@ class RunsInThreads<T : Any>(
         val futures = ArrayList<Future<Boolean>>(this.total)
         val task = {
             latch.await()
-            func.apply(this.input)
+            func.apply(this.input !!)
         }
         for (thread in 0 until this.total) {
             futures.add(service.submit(task))
         }
         latch.countDown()
         val matches = UncheckedScalar(
-            AndFunc(
-                FuncOf<Future<Boolean>, Boolean> { it.get() },
+            And(
+                FuncOf<Future<Boolean>, Boolean> { it.get() } as Func<Future<Boolean>, Boolean>,
                 futures
             )
         ).value()

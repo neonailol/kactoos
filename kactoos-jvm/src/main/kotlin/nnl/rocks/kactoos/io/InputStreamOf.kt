@@ -2,9 +2,8 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.File
@@ -29,7 +28,7 @@ import java.nio.file.Path
  */
 class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStream() {
 
-    constructor(src: Scalar<InputStream>) : this(UncheckedScalar(StickyScalar(src)))
+    constructor(src: KScalar<InputStream>) : this(UncheckedScalar(StickyScalar(src)))
 
     /**
      * @param path The path
@@ -161,7 +160,7 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     /**
      * @param input The input
      */
-    constructor(input: Input) : this(ScalarOf<InputStream> { input.stream() })
+    constructor(input: Input) : this({ input.stream() })
 
     @Throws(IOException::class)
     override fun read(): Int {

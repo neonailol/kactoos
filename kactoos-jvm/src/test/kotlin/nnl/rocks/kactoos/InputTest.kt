@@ -1,25 +1,11 @@
+
 package nnl.rocks.kactoos
 
-import nnl.rocks.kactoos.io.DeadInput
-import nnl.rocks.kactoos.io.InputOf
-import org.junit.Test
-import java.io.IOException
-
 /**
- * Test case for [Input].
+ * Test case for [Input.NoNulls].
+ * @author Fabricio Cabral (fabriciofx@gmail.com)
+ * @version $Id: 4f720a10054fd629b3ae63829285ce26e2aa4c11 $
  * @since 0.10
+ * @checkstyle JavadocMethodCheck (500 lines)
  */
-class InputTest {
-
-    @Test
-    @Throws(IOException::class)
-    fun failForNullStream() {
-        InputOf { dummy() }.stream()
-    }
-
-    @Test
-    @Throws(IOException::class)
-    fun okForNoNullInput() {
-        InputOf(DeadInput()).stream()
-    }
-}
+class InputTest

@@ -1,4 +1,4 @@
-package nnl.rocks.kactoos.test
+package nnl.rocks.kactoos.matchers
 
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.text.TextOf

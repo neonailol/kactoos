@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 
 /**
@@ -8,27 +9,24 @@ import nnl.rocks.kactoos.Scalar
  * There is no thread-safety guarantee.
  *
  * @param dnum Double scalar
- *
- *
- *
- * @since 0.26
+ * @since 0.3
  */
-open class NumberEnvelope(private val dnum: Scalar<Double>) : Number(), Scalar<Double> {
+open class NumberEnvelope(private val dnum: KScalar<Double>) : Number(), Scalar<Double> {
 
     @Throws(Exception::class)
-    override fun value(): Double = this.dnum.value()
+    override fun value(): Double = this.dnum.invoke()
 
     override fun toDouble(): Double = UncheckedScalar(this.dnum).value()
 
-    override fun toByte(): Byte = UncheckedScalar(ScalarOf(this.dnum.value().toByte())).value()
+    override fun toByte(): Byte = UncheckedScalar({ this.dnum.invoke().toByte() }).value()
 
-    override fun toChar(): Char = UncheckedScalar(ScalarOf(this.dnum.value().toChar())).value()
+    override fun toChar(): Char = UncheckedScalar({ this.dnum.invoke().toChar() }).value()
 
-    override fun toFloat(): Float = UncheckedScalar(ScalarOf(this.dnum.value().toFloat())).value()
+    override fun toFloat(): Float = UncheckedScalar({ this.dnum.invoke().toFloat() }).value()
 
-    override fun toInt(): Int = UncheckedScalar(ScalarOf(this.dnum.value().toInt())).value()
+    override fun toInt(): Int = UncheckedScalar({ this.dnum.invoke().toInt() }).value()
 
-    override fun toLong(): Long = UncheckedScalar(ScalarOf(this.dnum.value().toLong())).value()
+    override fun toLong(): Long = UncheckedScalar({ this.dnum.invoke().toLong() }).value()
 
-    override fun toShort(): Short = UncheckedScalar(ScalarOf(this.dnum.value().toShort())).value()
+    override fun toShort(): Short = UncheckedScalar({ this.dnum.invoke().toShort() }).value()
 }

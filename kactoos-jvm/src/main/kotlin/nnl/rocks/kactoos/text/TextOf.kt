@@ -2,14 +2,13 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.BytesOf
 import nnl.rocks.kactoos.io.InputOf
 import nnl.rocks.kactoos.iterable.Mapped
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
@@ -30,7 +29,7 @@ import java.nio.file.Path
  * @since 0.3
  */
 class TextOf private constructor(
-    private val origin: Scalar<String>
+    private val origin: KScalar<String>
 ) : Text {
 
     /**
@@ -212,7 +211,7 @@ class TextOf private constructor(
     @JvmOverloads constructor(
         bytes: Bytes,
         cset: Charset = StandardCharsets.UTF_8
-    ) : this(ScalarOf { String(bytes.asBytes(), cset) })
+    ) : this({ String(bytes.asBytes(), cset) })
 
     /**
      * @param bytes The Bytes
@@ -221,7 +220,7 @@ class TextOf private constructor(
     constructor(
         bytes: Bytes,
         cset: String
-    ) : this(ScalarOf { String(bytes.asBytes(), Charset.forName(cset)) })
+    ) : this({ String(bytes.asBytes(), Charset.forName(cset)) })
 
     /**
      * @param input The String
@@ -230,14 +229,14 @@ class TextOf private constructor(
     @JvmOverloads constructor(
         input: String,
         cset: Charset = StandardCharsets.UTF_8
-    ) : this(ScalarOf { String(input.toByteArray(cset), cset) })
+    ) : this({ String(input.toByteArray(cset), cset) })
 
     /**
      * @param iterable The iterable to convert to string
      * @since 0.21
      */
     constructor(iterable: Iterable<Any>) : this(
-        ScalarOf {
+        {
             JoinedText(
                 ", ",
                 Mapped<Any, String>(

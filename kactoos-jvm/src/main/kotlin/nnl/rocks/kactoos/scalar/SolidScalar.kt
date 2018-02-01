@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.SolidFunc
@@ -20,7 +21,7 @@ import nnl.rocks.kactoos.func.SolidFunc
  */
 class SolidScalar<out T : Any>(private val func: Func<Boolean, T>) : Scalar<T> {
 
-    constructor(scalar: Scalar<T>) : this(SolidFunc(FuncOf { input -> scalar.value() }))
+    constructor(scalar: KScalar<T>) : this(SolidFunc(FuncOf { input -> scalar.invoke() }))
 
     @Throws(Exception::class)
     override fun value(): T = this.func.apply(true)

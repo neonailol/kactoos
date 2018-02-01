@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.text.TextOf
@@ -21,7 +22,9 @@ import java.lang.Double.parseDouble
  *
  * @since 0.2
  */
-class NumberOf(dnum: Scalar<Double>) : NumberEnvelope(dnum), Scalar<Double> {
+class NumberOf(dnum: KScalar<Double>) : NumberEnvelope(dnum), Scalar<Double> {
+
+    constructor(scalar: Scalar<Double>) : this({ scalar.value() })
 
     /**
      * @param txt Number-string
@@ -31,5 +34,5 @@ class NumberOf(dnum: Scalar<Double>) : NumberEnvelope(dnum), Scalar<Double> {
     /**
      * @param txt Number-string
      */
-    constructor(txt: Text) : this(StickyScalar(ScalarOf { parseDouble(txt.asString()) }))
+    constructor(txt: Text) : this(StickyScalar({ parseDouble(txt.asString()) }))
 }

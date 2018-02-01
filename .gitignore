@@ -12,6 +12,7 @@ compatibility-tests/src/test/resources/tests-kactoos.txt
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
+.idea/
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/

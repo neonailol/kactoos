@@ -1,18 +1,19 @@
+
 package nnl.rocks.kactoos.func
 
-import nnl.rocks.kactoos.Scalar
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
+
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**
  * Test case for [FuncOf].
  *
- *
- *
+ * @author Yegor Bugayenko (yegor256@gmail.com)
+ * @version $Id: 2f95852a9f8364fcebde018f88171b0a06003fdd $
  * @since 0.20
- *
+ * @checkstyle JavadocMethodCheck (500 lines)
  */
 class FuncOfTest {
 
@@ -21,11 +22,11 @@ class FuncOfTest {
     fun convertsProcIntoFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat(
-            FuncOf(
-                ProcOf(FuncOf<String, Unit> { input -> done.set(true) }),
-                true
-            ).apply("hello world"),
-            Matchers.equalTo(done.get())
+                FuncOf<String, Boolean>(
+                        { input -> done.set(true) },
+                        true
+                ).apply("hello world"),
+                Matchers.equalTo(done.get())
         )
     }
 
@@ -34,8 +35,8 @@ class FuncOfTest {
     fun convertsProcWithNoResultIntoFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat(
-            FuncOf<String, Scalar<Boolean>>(ProcOf({ done.set(true) })).apply("hello you"),
-            Matchers.nullValue()
+                FuncOf<String, Boolean> { input -> done.set(true) }.apply("hello you"),
+                Matchers.nullValue()
         )
     }
 
@@ -44,8 +45,8 @@ class FuncOfTest {
     fun convertsRunnableIntoFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat(
-            FuncOf<String, Boolean> { done.set(true); true }.apply("hello, world"),
-            Matchers.equalTo(true)
+                FuncOf<String, Boolean> { done.set(true) }.apply("hello, world"),
+                Matchers.nullValue()
         )
     }
 
@@ -53,10 +54,10 @@ class FuncOfTest {
     @Throws(Exception::class)
     fun convertsValueIntoFunc() {
         MatcherAssert.assertThat(
-            FuncOf<String, Boolean>(
-                true
-            ).apply("hello, dude!"),
-            Matchers.equalTo(true)
+                FuncOf<String, Boolean>(
+                        true
+                ).apply("hello, dude!"),
+                Matchers.equalTo(true)
         )
     }
 }

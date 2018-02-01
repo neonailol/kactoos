@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.list
 
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import java.util.Collections
 import java.util.LinkedList
@@ -22,7 +21,7 @@ import java.util.LinkedList
  */
 class StickyList<X : Any>(list: Collection<X>) : ListEnvelope<X>(
     StickyScalar<List<X>>(
-        ScalarOf {
+        {
             val temp = LinkedList<X>()
             temp.addAll(list)
             Collections.unmodifiableList<X>(temp)

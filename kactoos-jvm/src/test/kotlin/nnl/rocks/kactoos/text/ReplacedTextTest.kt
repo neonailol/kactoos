@@ -1,10 +1,11 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.func.FuncOf
+import nnl.rocks.kactoos.matchers.TextHasString
 import nnl.rocks.kactoos.scalar.ScalarOf
-import nnl.rocks.kactoos.test.TextHasString
 import org.hamcrest.MatcherAssert
 import org.junit.Test
+
 import java.io.IOException
 import java.nio.charset.StandardCharsets
 import java.util.regex.Pattern
@@ -12,7 +13,11 @@ import java.util.regex.PatternSyntaxException
 
 /**
  * Test case for [ReplacedText].
+ *
+ * @author Mehmet Yildirim (memoyil@gmail.com)
+ * @version $Id: d69343a69198571f3bdac71b743c2bf7ee415587 $
  * @since 0.2
+ * @checkstyle JavadocMethodCheck (500 lines)
  */
 class ReplacedTextTest {
 

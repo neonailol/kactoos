@@ -1,19 +1,21 @@
+
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.iterator.StickyIterator
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
+
 import java.security.SecureRandom
 
 /**
  * Test case for [RepeatedFunc].
  *
- *
- *
+ * @author Yegor Bugayenko (yegor256@gmail.com)
+ * @version $Id: caf7c7d7276f00dbe23ab28cad09cbb9cf7db62d $
  * @since 0.13.1
- *
- *
+ * @checkstyle JavadocMethodCheck (500 lines)
+ * @checkstyle MagicNumberCheck (500 line)
  */
 class RepeatedFuncTest {
 
@@ -22,12 +24,12 @@ class RepeatedFuncTest {
     fun runsFuncMultipleTimes() {
         val iter = StickyIterator(1, 2, 5, 6)
         val func = RepeatedFunc<Boolean, Int>(
-            FuncOf { input -> iter.next() },
-            3
+                { input -> iter.next() },
+                3
         )
         MatcherAssert.assertThat(
-            func.apply(true),
-            Matchers.equalTo(5)
+                func.apply(true),
+                Matchers.equalTo(5)
         )
     }
 
@@ -35,12 +37,12 @@ class RepeatedFuncTest {
     @Throws(Exception::class)
     fun repeatsNullsResults() {
         val func = RepeatedFunc<Boolean, Int>(
-            FuncOf { 0 },
-            2
+                { input -> null },
+                2
         )
         MatcherAssert.assertThat(
-            func.apply(true),
-            Matchers.equalTo(0)
+                func.apply(true),
+                Matchers.equalTo<Int>(null)
         )
     }
 
@@ -48,12 +50,12 @@ class RepeatedFuncTest {
     @Throws(Exception::class)
     fun doesntRepeatAny() {
         val func = RepeatedFunc<Boolean, Int>(
-            FuncOf { input -> SecureRandom().nextInt() },
-            0
+                { input -> SecureRandom().nextInt() },
+                0
         )
         MatcherAssert.assertThat(
-            func.apply(true),
-            Matchers.equalTo(func.apply(true))
+                func.apply(true),
+                Matchers.equalTo<Int>(func.apply(true))
         )
     }
 }

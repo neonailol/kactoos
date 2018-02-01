@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KText
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.UncheckedFunc
@@ -23,6 +24,8 @@ class UncheckedText(
 ) : Text {
 
     constructor(text: Text) : this(text, FuncOf { error -> throw UncheckedIOException(error) })
+
+    constructor(text: KText) : this(text as Text, FuncOf { error -> throw UncheckedIOException(error) })
 
     /**
      * Ctor.

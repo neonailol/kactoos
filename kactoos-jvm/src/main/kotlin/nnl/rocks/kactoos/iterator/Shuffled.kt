@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.util.Collections
@@ -23,7 +22,7 @@ class Shuffled<out T>(iterator: Iterator<T>) : Iterator<T> {
     init {
         this.scalar = UncheckedScalar(
             StickyScalar<Iterator<T>>(
-                ScalarOf {
+                {
                     val items = LinkedList<T>()
                     while (iterator.hasNext()) {
                         items.add(iterator.next())
