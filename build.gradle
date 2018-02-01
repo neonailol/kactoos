@@ -6,12 +6,12 @@ allprojects {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.4.1'
+    gradleVersion = '4.5'
     distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
 }
 
 buildscript {
-    ext.kotlinVersion = '1.2.20'
+    ext.kotlinVersion = '1.2.21'
 
     repositories {
         jcenter()
@@ -21,8 +21,11 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
     }
 }
+
+apply plugin: 'com.github.ben-manes.versions'
 
 ext {
     kotlin_common_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlinVersion"

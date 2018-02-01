@@ -24,15 +24,14 @@ import java.nio.file.Path
 /**
  * TextOf
  *
- * @param origin The Scalar of String
- *
  * There is no thread-safety guarantee.
  *
- *
- *
- * @since 0.12
+ * @param scalar The Scalar of String
+ * @since 0.3
  */
-class TextOf private constructor(private val origin: Scalar<String>) : Text {
+class TextOf private constructor(
+    private val origin: Scalar<String>
+) : Text {
 
     /**
      * @param input The Input
@@ -41,29 +40,30 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
 
     /**
      * @param url The URL
-     * @since 0.16
+     * @since 0.3
      */
     constructor(url: URL) : this(InputOf(url))
 
     /**
+     * Ctor.
      * @param uri The URI
-     * @since 0.16
+     * @since 0.3
      */
     constructor(uri: URI) : this(InputOf(uri))
 
     /**
+     * Ctor.
      * @param path The Input
-     * @since 0.13
+     * @since 0.3
      */
     constructor(path: Path) : this(InputOf(path))
 
     /**
+     * Ctor.
      * @param file The Input
-     * @since 0.13
+     * @since 0.3
      */
     constructor(file: File) : this(InputOf(file))
-
-    constructor(input: InputStream) : this(InputOf(InputStreamReader(input)))
 
     /**
      * @param input The Input
@@ -88,16 +88,11 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
      * @param max Max length of the buffer for reading
      * @param cset The Charset
      */
-    constructor(
+    @JvmOverloads constructor(
         input: Input,
         max: Int,
-        cset: Charset
+        cset: Charset = StandardCharsets.UTF_8
     ) : this(BytesOf(input, max), cset)
-
-    constructor(
-        input: Input,
-        max: Int
-    ) : this(BytesOf(input, max), StandardCharsets.UTF_8)
 
     /**
      * @param rdr Reader
@@ -130,6 +125,8 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     constructor(builder: CharSequence) : this(BytesOf(builder))
 
     /**
+     * Ctor.
+     *
      * @param builder The String builder
      * @param cset The Charset
      */
@@ -141,7 +138,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     /**
      * @param chars The chars
      */
-    constructor(vararg chars: Char) : this(BytesOf(chars, StandardCharsets.UTF_8))
+    constructor(vararg chars: Char) : this(BytesOf(*chars))
 
     /**
      * @param chars The chars
@@ -158,22 +155,64 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     constructor(error: Throwable) : this(BytesOf(error))
 
     /**
+     * @param error The exception to serialize
+     * @param charset Charset
+     * @since 0.3
+     */
+    constructor(
+        error: Throwable,
+        charset: Charset
+    ) : this(BytesOf(error, charset))
+
+    /**
+     * @param error The exception to serialize
+     * @param charset Charset
+     * @since 0.3
+     */
+    constructor(
+        error: Throwable,
+        charset: CharSequence
+    ) : this(BytesOf(error, charset))
+
+    /**
+     * @param strace The stacktrace to serialize
+     * @since 0.3
+     */
+    constructor(strace: Array<StackTraceElement>) : this(BytesOf(strace))
+
+    /**
+     * @param strace The stacktrace to serialize
+     * @param charset Charset
+     * @since 0.3
+     */
+    constructor(
+        strace: Array<StackTraceElement>,
+        charset: Charset
+    ) : this(BytesOf(strace, charset))
+
+    /**
+     * @param strace The stacktrace to serialize
+     * @param charset Charset
+     * @since 0.3
+     */
+    constructor(
+        strace: Array<StackTraceElement>,
+        charset: CharSequence
+    ) : this(BytesOf(strace, charset))
+
+    /**
      * @param bytes The array of bytes
      */
-    constructor(vararg bytes: Byte) : this(BytesOf { bytes })
+    constructor(vararg bytes: Byte) : this(BytesOf(*bytes))
 
     /**
      * @param bytes The Bytes
      * @param cset The Charset
      */
-    constructor(
+    @JvmOverloads constructor(
         bytes: Bytes,
-        cset: Charset
-    ) : this(String(bytes.asBytes(), cset))
-
-    constructor(
-        bytes: Bytes
-    ) : this(String(bytes.asBytes(), StandardCharsets.UTF_8))
+        cset: Charset = StandardCharsets.UTF_8
+    ) : this(ScalarOf { String(bytes.asBytes(), cset) })
 
     /**
      * @param bytes The Bytes
@@ -182,39 +221,45 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     constructor(
         bytes: Bytes,
         cset: String
-    ) : this(String(bytes.asBytes(), Charset.forName(cset)))
+    ) : this(ScalarOf { String(bytes.asBytes(), Charset.forName(cset)) })
 
     /**
      * @param input The String
      * @param cset The Charset
      */
-    constructor(
+    @JvmOverloads constructor(
         input: String,
-        cset: Charset
+        cset: Charset = StandardCharsets.UTF_8
     ) : this(ScalarOf { String(input.toByteArray(cset), cset) })
-
-    constructor(
-        input: String
-    ) : this(input, StandardCharsets.UTF_8)
 
     /**
      * @param iterable The iterable to convert to string
      * @since 0.21
      */
     constructor(iterable: Iterable<Any>) : this(
-        JoinedText(
-            ", ",
-            Mapped(
-                fnc = FuncOf { it.toString() },
-                src = iterable
-            )
-        ).asString()
+        ScalarOf {
+            JoinedText(
+                ", ",
+                Mapped<Any, String>(
+                    fnc = FuncOf<Any, String> { it.toString() },
+                    src = iterable
+                )
+            ).asString()
+        }
     )
 
+    /**
+     * @param input The InputStream where the text is read from
+     * @since 0.3
+     */
+    constructor(input: InputStream) : this(InputOf(InputStreamReader(input)))
+
     @Throws(IOException::class)
-    override fun asString(): String = IoCheckedScalar(this.origin).value()
+    override fun asString(): String {
+        return IoCheckedScalar(this.origin).value()
+    }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
-
-    override fun toString(): String = UncheckedText(this).asString()
+    override fun toString(): String {
+        return UncheckedText(this).asString()
+    }
 }

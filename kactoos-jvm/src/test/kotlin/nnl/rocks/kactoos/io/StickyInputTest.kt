@@ -8,6 +8,7 @@ import nnl.rocks.kactoos.test.TextHasString
 import nnl.rocks.kactoos.text.TextOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
+import org.junit.Ignore
 import org.junit.Test
 import java.io.IOException
 import java.net.MalformedURLException
@@ -24,6 +25,7 @@ import java.net.URL
 class StickyInputTest {
 
     @Test
+    @Ignore
     fun readsFileContent() {
         MatcherAssert.assertThat(
             "Can't read bytes from a file",
@@ -47,6 +49,7 @@ class StickyInputTest {
 
     @Test
     @Throws(MalformedURLException::class)
+    @Ignore
     fun readsRealUrl() {
         MatcherAssert.assertThat(
             "Can't fetch text page from the URL",

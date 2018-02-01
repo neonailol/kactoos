@@ -2,9 +2,12 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Input
+import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.IoCheckedFunc
 import nnl.rocks.kactoos.text.FormattedText
+import nnl.rocks.kactoos.text.TextOf
+
 import java.io.IOException
 import java.io.InputStream
 
@@ -16,23 +19,39 @@ import java.io.InputStream
  * if you want to load a text file from `/com/example/Test.txt`,
  * you must provide this name: `"com/example/Test.txt"`.
  *
+ * @param path Resource name
+ * @param fallback Resource class loader
+ * @param loader Fallback
  * @see ClassLoader.getResource
- * @since 0.1
+ * @since 0.3
  */
-class ResourceOf(
-    private val path: CharSequence,
-    private val fallback: Func<CharSequence, Input>,
-    private val loader: ClassLoader
+class ResourceOf @JvmOverloads constructor(
+    private val path: Text,
+    private val fallback: Func<Text, Input>,
+    private val loader: ClassLoader = Thread.currentThread().contextClassLoader
 ) : Input {
 
-    constructor(
-        path: CharSequence,
-        fallback: Func<CharSequence, Input>
-    ) : this(
-        path,
-        fallback,
-        Thread.currentThread().contextClassLoader
-    )
+    /**
+     * New resource input with specified [ClassLoader].
+     * @param res Resource name
+     * @param ldr Resource class loader
+     */
+    @JvmOverloads constructor(
+        res: CharSequence,
+        ldr: ClassLoader = Thread.currentThread().contextClassLoader
+    ) : this(TextOf(res), ldr)
+
+    /**
+     * New resource input with specified [ClassLoader].
+     * @param res Resource name
+     * @param ldr Resource class loader
+     * @param fbk Fallback
+     */
+    @JvmOverloads constructor(
+        res: CharSequence,
+        fbk: Func<CharSequence, Input>,
+        ldr: ClassLoader = Thread.currentThread().contextClassLoader
+    ) : this(TextOf(res), FuncOf { input -> fbk.apply(input.asString()) }, ldr)
 
     /**
      * New resource input with current context [ClassLoader].
@@ -59,28 +78,46 @@ class ResourceOf(
      * @param res Resource name
      * @param ldr Resource class loader
      */
-    constructor(
-        res: CharSequence,
-        ldr: ClassLoader
+    @JvmOverloads constructor(
+        res: Text,
+        ldr: ClassLoader = Thread.currentThread().contextClassLoader
     ) : this(
         res,
         FuncOf { input ->
             throw IOException(
                 FormattedText(
                     "Resource \"%s\" was not found",
-                    input
+                    input.asString()
                 ).asString()
             )
         },
         ldr
     )
 
-    constructor(res: CharSequence) : this(res, Thread.currentThread().contextClassLoader)
+    /**
+     * New resource input with current context [ClassLoader].
+     * @param res Resource name
+     * @param fbk Fallback
+     */
+    constructor(
+        res: Text,
+        fbk: Text
+    ) : this(res, FuncOf { input -> InputOf(BytesOf(fbk.asString())) })
+
+    /**
+     * New resource input with current context [ClassLoader].
+     * @param res Resource name
+     * @param fbk Fallback
+     */
+    constructor(
+        res: Text,
+        fbk: Input
+    ) : this(res, FuncOf { input -> fbk })
 
     @Throws(IOException::class)
     override fun stream(): InputStream {
         var input: InputStream? = this.loader.getResourceAsStream(
-            this.path.toString()
+            this.path.asString()
         )
         if (input == null) {
             input = IoCheckedFunc(this.fallback)

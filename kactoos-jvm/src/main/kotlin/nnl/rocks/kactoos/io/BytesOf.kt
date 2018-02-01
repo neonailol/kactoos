@@ -217,6 +217,46 @@ class BytesOf(
      */
     constructor(vararg bytes: Byte) : this({ bytes })
 
+    /**
+     * @param strace The stack trace
+     * @since 0.3
+     */
+    constructor(strace: Array<StackTraceElement>) : this(strace, StandardCharsets.UTF_8)
+
+    /**
+     * @param strace The stack trace
+     * @param charset Charset
+     * @since 0.3
+     */
+    constructor(
+        strace: Array<StackTraceElement>,
+        charset: Charset
+    ) : this(strace, charset.name())
+
+    /**
+     * @param strace The stack trace
+     * @param charset Charset
+     * @since 0.3
+     */
+    constructor(
+        strace: Array<StackTraceElement>,
+        charset: CharSequence
+    ) : this(
+        {
+            ByteArrayOutputStream().use { baos ->
+                PrintStream(
+                    baos, true, charset.toString()
+                ).use { stream ->
+                    for (element in strace) {
+                        stream.append(element.toString())
+                        stream.append("\n")
+                    }
+                    baos.toByteArray()
+                }
+            }
+        }
+    )
+
     @Throws(IOException::class)
     override fun asBytes(): ByteArray {
         return this.origin()

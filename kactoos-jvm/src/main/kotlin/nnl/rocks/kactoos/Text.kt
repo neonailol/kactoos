@@ -25,4 +25,6 @@ actual interface Text : Comparable<Text> {
      */
     @Throws(IOException::class)
     actual fun asString(): String
+
+    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter
  * [LocalDateTime] instances.
  *
  * @param parsed The parsed date.
- * @since 0.27
+ * @since 0.3
  */
 class LocalDateTimeOf(
     private val parsed: UncheckedScalar<LocalDateTime>

@@ -1,14 +1,14 @@
-package nnl.rocks.kactoos.iterable
+package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.InputOf
+import nnl.rocks.kactoos.iterable.IterableOf
+import nnl.rocks.kactoos.iterable.Mapped
 import nnl.rocks.kactoos.map.MapEntry
 import nnl.rocks.kactoos.map.MapOf
-import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.text.TextOf
 import java.io.IOException
 import java.util.Properties
@@ -19,10 +19,7 @@ import java.util.Properties
  *
  * There is no thread-safety guarantee.
  *
- *
- *
- *
- * @since 0.12
+ * @since 0.3
  */
 class PropertiesOf(
     private val scalar: IoCheckedScalar<Properties>

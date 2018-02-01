@@ -6,7 +6,7 @@
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/../../../kactoos-common/build/classes/kotlin/test" />
-          <option name="classpath" value="$MODULE_DIR$/../../../kactoos-common/build/classes/java/main;C:/Users/User/IdeaProjects/kactoos/kactoos-common/build/classes/kotlin/main;C:/Users/User/IdeaProjects/kactoos/kactoos-common/build/resources/main;C:/Users/User/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-annotations-common/1.2.20/8c5cf504f12880580b1d80284de042ddf6d1f1c3/kotlin-test-annotations-common-1.2.20.jar;C:/Users/User/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-common/1.2.20/7ee2c35d6a0551cc5fbd30e19e7fea54adc6095e/kotlin-test-common-1.2.20.jar;C:/Users/User/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.20/70f59aa9ada31530ae7125fe6a692c5d8b8c0130/kotlin-stdlib-common-1.2.20.jar;C:/Users/User/IdeaProjects/kactoos/kactoos-common/build/classes/kotlin/main" />
+          <option name="classpath" value="$MODULE_DIR$/../../../kactoos-common/build/classes/java/main;C:/Development/kactoos/kactoos-common/build/classes/kotlin/main;C:/Development/kactoos/kactoos-common/build/resources/main;C:/Users/NNL/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-annotations-common/1.2.21/d4bed4e77e736042ad9e8fc14acdf9ed0a6b9104/kotlin-test-annotations-common-1.2.21.jar;C:/Users/NNL/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-common/1.2.21/5415a114560817910250c371fd511b18e94a35fb/kotlin-test-common-1.2.21.jar;C:/Users/NNL/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.21/dc734061367ee9d41d7d6b54d5ecc8dc92aafbbf/kotlin-stdlib-common-1.2.21.jar;C:/Development/kactoos/kactoos-common/build/classes/kotlin/main" />
           <option name="languageVersion" value="1.2" />
           <option name="apiVersion" value="1.2" />
           <option name="pluginOptions">
@@ -29,9 +29,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="kactoos-common_main" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.2.20" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-common:1.2.20" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.2.20" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.2.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-common:1.2.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.2.21" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="kactoos-common_main" />
 </module>

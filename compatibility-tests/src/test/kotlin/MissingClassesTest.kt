@@ -1,6 +1,7 @@
 import org.junit.Test
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
+import java.util.concurrent.atomic.AtomicInteger
 import kotlin.test.assertTrue
 
 class MissingClassesTest {
@@ -33,9 +34,17 @@ class MissingClassesTest {
             it.endsWith("Kt")
         }
 
+        val count = AtomicInteger(0)
+
         cactoosTypes.forEach {
-            assertTrue("Missing $it") { kactoosTypes.contains(it) }
+            if (! kactoosTypes.contains(it)) {
+                println(it)
+                count.incrementAndGet()
+            }
+
         }
+
+        assertTrue("Missing $count classes") { count.get() == 0 }
     }
 
 }

@@ -3,6 +3,7 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.text.TextOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
+import org.junit.Ignore
 import org.junit.Test
 import java.io.IOException
 import java.util.Arrays
@@ -41,6 +42,7 @@ class ResourceOfTest {
 
     @Test
     @Throws(Exception::class)
+    @Ignore
     fun readsTextResource() {
         MatcherAssert.assertThat(
             "Can't read a text resource from classpath",

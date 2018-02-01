@@ -1,11 +1,10 @@
-package nnl.rocks.kactoos.iterable
+package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.io.InputOf
+import nnl.rocks.kactoos.iterable.Repeated
 import nnl.rocks.kactoos.map.MapEntry
 import nnl.rocks.kactoos.map.MapOf
 import nnl.rocks.kactoos.map.StickyMap
-import nnl.rocks.kactoos.scalar.ScalarOf
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import nnl.rocks.kactoos.test.MatcherOf
 import nnl.rocks.kactoos.test.ScalarHasValue
 import org.hamcrest.MatcherAssert
@@ -17,12 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger
 
 /**
  * Test case for [PropertiesOf].
- *
- *
- *
- * @since 0.7
- *
- *
+ * @since 0.3
  */
 class PropertiesOfTest {
 
