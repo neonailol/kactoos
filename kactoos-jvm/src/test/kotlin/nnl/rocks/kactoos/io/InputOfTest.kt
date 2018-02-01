@@ -117,7 +117,7 @@ class InputOfTest {
                     InputOf(home)
                 ),
                 TextHasString(
-                    Matchers.allOf<T>(
+                    Matchers.allOf(
                         Matchers.startsWith("<html"),
                         Matchers.endsWith("html>")
                     )

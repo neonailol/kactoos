@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.iterable.IterableOf
@@ -19,17 +18,18 @@ class ShuffledTest {
     @Throws(Exception::class)
     fun shuffleIterable() {
         MatcherAssert.assertThat(
-                "Can't shuffle elements in iterator",
-                {
-                    Shuffled(
-                            IterableOf(
-                                    "a", "b"
-                            ).iterator()
-                    )
-                },
-                Matchers.containsInAnyOrder(
+            "Can't shuffle elements in iterator",
+            IterableOf(
+                Shuffled(
+                    IterableOf(
                         "a", "b"
+                    ).iterator()
                 )
+            )
+            ,
+            Matchers.containsInAnyOrder(
+                "a", "b"
+            )
         )
     }
 }

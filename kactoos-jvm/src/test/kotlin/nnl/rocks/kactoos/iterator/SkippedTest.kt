@@ -22,14 +22,14 @@ class SkippedTest {
     fun skipIterator() {
         MatcherAssert.assertThat(
                 "Can't skip elements in iterator",
-                {
+                IterableOf(
                     Skipped(
                             2,
                             IterableOf(
                                     "one", "two", "three", "four"
                             ).iterator()
                     )
-                },
+                ),
                 Matchers.contains(
                         "three",
                         "four"

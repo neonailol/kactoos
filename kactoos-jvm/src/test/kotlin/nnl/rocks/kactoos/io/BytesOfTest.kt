@@ -166,7 +166,7 @@ class BytesOfTest {
                         )
                 ),
                 TextHasString(
-                        Matchers.allOf<T>(
+                        Matchers.allOf(
                                 Matchers.containsString("java.io.IOException"),
                                 Matchers.containsString("doesn't work at all"),
                                 Matchers.containsString(

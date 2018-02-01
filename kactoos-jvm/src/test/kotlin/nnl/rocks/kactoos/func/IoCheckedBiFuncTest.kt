@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.func
 
 import org.hamcrest.MatcherAssert
@@ -21,11 +20,11 @@ class IoCheckedBiFuncTest {
         val exception = IOException("intended")
         try {
             IoCheckedBiFunc<Any, Any, Any>(
-                    { fst, scd -> throw exception }
+                BiFuncOf { fst, scd -> throw exception }
             ).apply(1, 2)
         } catch (ex: IOException) {
             MatcherAssert.assertThat(
-                    ex, Matchers.`is`(exception)
+                ex, Matchers.`is`(exception)
             )
         }
     }
@@ -34,7 +33,7 @@ class IoCheckedBiFuncTest {
     @Throws(Exception::class)
     fun rethrowsCheckedToIoException() {
         IoCheckedBiFunc<Any, Any, Any>(
-                { fst, scd -> throw Exception("intended to fail") }
+            BiFuncOf { fst, scd -> throw Exception("intended to fail") }
         ).apply(1, 2)
     }
 
@@ -42,7 +41,7 @@ class IoCheckedBiFuncTest {
     @Throws(IOException::class)
     fun runtimeExceptionGoesOut() {
         IoCheckedBiFunc<Any, Any, Any>(
-                { fst, scd -> throw IllegalStateException("intended to fail here") }
+            BiFuncOf{ fst, scd -> throw IllegalStateException("intended to fail here") }
         ).apply(1, 2)
     }
 }

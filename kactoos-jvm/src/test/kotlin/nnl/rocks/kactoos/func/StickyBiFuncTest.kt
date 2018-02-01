@@ -20,7 +20,7 @@ class StickyBiFuncTest {
     @Throws(Exception::class)
     fun cachesFuncResults() {
         val func = StickyBiFunc<Boolean, Boolean, Int>(
-                { first, second -> SecureRandom().nextInt() }
+                BiFuncOf{ first, second -> SecureRandom().nextInt() }
         )
         MatcherAssert.assertThat(
                 func.apply(true, true) + func.apply(true, true),

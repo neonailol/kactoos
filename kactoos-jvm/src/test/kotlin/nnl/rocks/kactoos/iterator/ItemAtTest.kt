@@ -68,7 +68,7 @@ class ItemAtTest {
         MatcherAssert.assertThat(
                 "Can't fallback to default value",
                 ItemAt<String>(
-                        Collections.emptyIterator<Any>(),
+                        Collections.emptyIterator<String>(),
                         fallback
                 ),
                 ScalarHasValue(fallback)

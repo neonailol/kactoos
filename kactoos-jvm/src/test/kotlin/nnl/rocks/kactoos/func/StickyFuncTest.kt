@@ -21,7 +21,7 @@ class StickyFuncTest {
     @Throws(Exception::class)
     fun cachesFuncResults() {
         val func = StickyFunc<Boolean, Int>(
-                { input -> SecureRandom().nextInt() }
+                FuncOf{ input -> SecureRandom().nextInt() }
         )
         MatcherAssert.assertThat(
                 func.apply(true) + func.apply(true),
@@ -33,7 +33,7 @@ class StickyFuncTest {
     @Throws(Exception::class)
     fun cachesWithLimitedBuffer() {
         val func = StickyFunc<Int, Int>(
-                { input -> SecureRandom().nextInt() }, 2
+            FuncOf{ input -> SecureRandom().nextInt() }, 2
         )
         val first = func.apply(0)
         val second = func.apply(1)
@@ -52,7 +52,7 @@ class StickyFuncTest {
     @Throws(Exception::class)
     fun cachesWithZeroBuffer() {
         val func = StickyFunc<Boolean, Int>(
-                { input -> SecureRandom().nextInt() }, 0
+            FuncOf{ input -> SecureRandom().nextInt() }, 0
         )
         MatcherAssert.assertThat(
                 func.apply(true) + func.apply(true),

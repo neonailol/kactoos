@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.func
 
 import org.junit.Test
@@ -19,14 +18,14 @@ class UncheckedProcTest {
     @Test(expected = UncheckedIOException::class)
     fun rethrowsCheckedToUncheckedException() {
         UncheckedProc<Any>(
-                { input -> throw IOException("intended") }
+            ProcOf { input -> throw IOException("intended") }
         ).exec(1)
     }
 
     @Test(expected = IllegalStateException::class)
     fun runtimeExceptionGoesOut() {
         UncheckedProc<Any>(
-                { i -> throw IllegalStateException("intended to fail") }
+            ProcOf { i -> throw IllegalStateException("intended to fail") }
         ).exec(1)
     }
 }

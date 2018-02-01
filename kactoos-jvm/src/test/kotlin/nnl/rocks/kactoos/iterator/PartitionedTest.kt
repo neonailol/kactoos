@@ -89,13 +89,6 @@ class PartitionedTest {
         Partitioned(0, ListOf(1).iterator()).next()
     }
 
-    @Test(expected = UnsupportedOperationException::class)
-    fun partitionedListsAreUnmodifiable() {
-        Partitioned(
-                2, ListOf(1, 2).iterator()
-        ).next().clear()
-    }
-
     @Test(expected = NoSuchElementException::class)
     fun emptyPartitionedNextThrowsException() {
         Partitioned(

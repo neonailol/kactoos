@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
@@ -20,14 +19,14 @@ class UncheckedFuncTest {
     @Test(expected = UncheckedIOException::class)
     fun rethrowsCheckedToUncheckedException() {
         UncheckedFunc(
-                { i -> throw IOException("intended") } as Func<Int, String>
+            FuncOf<Int, String> { i -> throw IOException("intended") } as Func<Int, String>
         ).apply(1)
     }
 
     @Test(expected = IllegalStateException::class)
     fun runtimeExceptionGoesOut() {
         UncheckedFunc<Any, Any>(
-                { i -> throw IllegalStateException("intended to fail") }
+            { i -> throw IllegalStateException("intended to fail") }
         ).apply(1)
     }
 }

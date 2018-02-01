@@ -36,7 +36,7 @@ class FilteredTest {
             "Can't calculate the length of an empty iterable",
             LengthOf(
                 Filtered<String>(
-                    { input -> input.length > 1 },
+                    FuncOf{ input -> input.length > 1 },
                     IterableOf<String>()
                 )
             ).toInt(),
@@ -47,7 +47,7 @@ class FilteredTest {
     @Test
     fun filtersIterablesWithSize() {
         val list = Filtered<Int>(
-            { i -> i > 0 },
+            FuncOf{ i -> i > 0 },
             IterableOf(1, 2, - 1, 0, 1)
         )
         MatcherAssert.assertThat(

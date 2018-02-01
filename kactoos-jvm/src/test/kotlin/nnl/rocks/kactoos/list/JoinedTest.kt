@@ -81,25 +81,13 @@ class JoinedTest {
     @Test
     @Throws(Exception::class)
     fun toArray() {
-        MatcherAssert.assertThat<Array<Any>>(
+        MatcherAssert.assertThat(
                 Joined(
                         ListOf(11, 12),
                         ListOf(13, 14)
                 ).toTypedArray(),
-                Matchers.equalTo<Array<Any>>(ListOf(11, 12, 13, 14).toTypedArray())
+                Matchers.equalTo(ListOf(11, 12, 13, 14).toTypedArray())
         )
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun add() {
-        Joined(ListOf("add0")).add("new add0")
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun remove() {
-        Joined(ListOf("remove")).remove("new remove")
     }
 
     @Test
@@ -116,42 +104,6 @@ class JoinedTest {
         )
     }
 
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun addAll() {
-        Joined(
-                ListOf("addAll")
-        ).addAll(ListOf("new addAll"))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun addAllSecond() {
-        Joined(
-                ListOf("addAll1")
-        ).addAll(22, ListOf("new addAll1"))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun removeAll() {
-        Joined(
-                ListOf("removeAll")
-        ).removeAll(ListOf("new removeAll"))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun retainAll() {
-        Joined<String>().retainAll(ListOf("retain", "All"))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun clear() {
-        Joined(ListOf("clear")).clear()
-    }
-
     @Test
     @Throws(Exception::class)
     fun get() {
@@ -163,24 +115,6 @@ class JoinedTest {
                 )[1],
                 Matchers.equalTo(element)
         )
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun set() {
-        Joined(ListOf("set")).set(33, "new set")
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun addSecond() {
-        Joined(ListOf("add")).add(44, "new add")
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun removeSecond() {
-        Joined<String>().removeAt(55)
     }
 
     @Test(expected = IndexOutOfBoundsException::class)

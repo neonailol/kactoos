@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.func
 
 import org.hamcrest.MatcherAssert
@@ -22,11 +21,11 @@ class FuncOfTest {
     fun convertsProcIntoFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat(
-                FuncOf<String, Boolean>(
-                        { input -> done.set(true) },
-                        true
-                ).apply("hello world"),
-                Matchers.equalTo(done.get())
+            FuncOf<String, Boolean>(
+                ProcOf { input -> done.set(true) },
+                true
+            ).apply("hello world"),
+            Matchers.equalTo(done.get())
         )
     }
 
@@ -35,8 +34,8 @@ class FuncOfTest {
     fun convertsProcWithNoResultIntoFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat(
-                FuncOf<String, Boolean> { input -> done.set(true) }.apply("hello you"),
-                Matchers.nullValue()
+            FuncOf<String, Boolean> { input -> done.set(true); true }.apply("hello you"),
+            Matchers.nullValue()
         )
     }
 
@@ -45,8 +44,8 @@ class FuncOfTest {
     fun convertsRunnableIntoFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat(
-                FuncOf<String, Boolean> { done.set(true) }.apply("hello, world"),
-                Matchers.nullValue()
+            FuncOf<String, Boolean> { done.set(true);true }.apply("hello, world"),
+            Matchers.nullValue()
         )
     }
 
@@ -54,10 +53,10 @@ class FuncOfTest {
     @Throws(Exception::class)
     fun convertsValueIntoFunc() {
         MatcherAssert.assertThat(
-                FuncOf<String, Boolean>(
-                        true
-                ).apply("hello, dude!"),
-                Matchers.equalTo(true)
+            FuncOf<String, Boolean>(
+                true
+            ).apply("hello, dude!"),
+            Matchers.equalTo(true)
         )
     }
 }

@@ -2,6 +2,7 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Input
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.RepeatedFunc
 import nnl.rocks.kactoos.matchers.MatcherOf
 import nnl.rocks.kactoos.matchers.TextHasString
@@ -35,7 +36,7 @@ class StickyInputTest {
                 ),
                 MatcherOf(
                         RepeatedFunc<Input, Boolean>(
-                                { input ->
+                                FuncOf{ input ->
                                     BytesOf(
                                             TeeInput(input, DeadOutput())
                                             // @checkstyle MagicNumber (2 lines)

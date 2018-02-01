@@ -1,6 +1,7 @@
 
 package nnl.rocks.kactoos.func
 
+import nnl.rocks.kactoos.dummy
 import nnl.rocks.kactoos.iterator.StickyIterator
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
@@ -24,8 +25,8 @@ class RepeatedFuncTest {
     fun runsFuncMultipleTimes() {
         val iter = StickyIterator(1, 2, 5, 6)
         val func = RepeatedFunc<Boolean, Int>(
-                { input -> iter.next() },
-                3
+            FuncOf{ input -> iter.next() },
+            3
         )
         MatcherAssert.assertThat(
                 func.apply(true),
@@ -37,7 +38,7 @@ class RepeatedFuncTest {
     @Throws(Exception::class)
     fun repeatsNullsResults() {
         val func = RepeatedFunc<Boolean, Int>(
-                { input -> null },
+            FuncOf { input -> dummy() },
                 2
         )
         MatcherAssert.assertThat(
@@ -50,7 +51,7 @@ class RepeatedFuncTest {
     @Throws(Exception::class)
     fun doesntRepeatAny() {
         val func = RepeatedFunc<Boolean, Int>(
-                { input -> SecureRandom().nextInt() },
+            FuncOf { input -> SecureRandom().nextInt() },
                 0
         )
         MatcherAssert.assertThat(

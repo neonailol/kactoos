@@ -37,11 +37,6 @@ class MapEntryTest {
         )
     }
 
-    @Test(expected = UnsupportedOperationException::class)
-    fun cantSetValue() {
-        MapEntry("one", "two").setValue("three")
-    }
-
     @Test
     fun equalsTo() {
         val key = "eo"

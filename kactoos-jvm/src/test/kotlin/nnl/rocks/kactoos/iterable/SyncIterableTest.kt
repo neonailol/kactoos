@@ -1,6 +1,6 @@
-
 package nnl.rocks.kactoos.iterable
 
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.matchers.RunsInThreads
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
@@ -19,15 +19,15 @@ class SyncIterableTest {
     @Test
     fun worksInThreads() {
         MatcherAssert.assertThat(
-                "Can't behave as an iterable in multiple threads",
-                { list ->
-                    MatcherAssert.assertThat(
-                            list.iterator().next(),
-                            Matchers.equalTo(list.iterator().next())
-                    )
-                    true
-                },
-                RunsInThreads(SyncIterable<X>(1, 0, - 1, - 1, 2))
+            "Can't behave as an iterable in multiple threads",
+            FuncOf { list ->
+                MatcherAssert.assertThat(
+                    list.iterator().next(),
+                    Matchers.equalTo(list.iterator().next())
+                )
+                true
+            },
+            RunsInThreads(SyncIterable(1, 0, - 1, - 1, 2))
         )
     }
 }

@@ -85,7 +85,7 @@ class ListOfTest {
     fun sensesChangesInIterable() {
         val size = AtomicInteger(2)
         val list = ListOf<Int>(
-                { Collections.nCopies(size.incrementAndGet(), 0).iterator() }
+                Collections.nCopies(size.incrementAndGet(), 0).iterator()
         )
         MatcherAssert.assertThat(
                 "Can't sense the changes in the underlying iterable",
@@ -99,8 +99,8 @@ class ListOfTest {
     fun makesListFromMappedIterable() {
         val list = ListOf<Int>(
                 Mapped<Int, Int>(
-                        { i -> i !! + 1 },
-                        IterableOf(1, - 1, 0, 1)
+                    { i -> i + 1 },
+                    IterableOf(1, - 1, 0, 1)
                 )
         )
         MatcherAssert.assertThat<List<Int>>(

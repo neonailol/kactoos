@@ -1,8 +1,10 @@
-
 package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.func.FuncOf
+import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.matchers.TextHasString
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.text.FormattedText
 import nnl.rocks.kactoos.text.JoinedText
 import org.hamcrest.MatcherAssert
@@ -26,24 +28,24 @@ class StickyTest {
     fun ignoresChangesInIterable() {
         val count = AtomicInteger(2)
         val text = FormattedText(
-                "%s",
-                JoinedText(
-                        ", ",
-                        {
-                            Mapped<Int, String>(
-                                    Func<Int, String> { it.toString() }, StickyIterator(
-                                    Limited(
-                                            2, Endless(Scalar<Int> { count.incrementAndGet() })
-                                    )
-                            )
-                            )
-                        }
+            "%s",
+            JoinedText(
+                ", ",
+                IterableOf(
+                    Mapped<Int, String>(
+                        FuncOf<Int, String> { it.toString() }, StickyIterator(
+                        Limited(
+                            2, Endless(ScalarOf<Int> { count.incrementAndGet() })
+                        )
+                    )
+                    )
                 )
+            )
         )
         MatcherAssert.assertThat<Text>(
-                "Can't ignore the changes in the underlying iterator",
-                text,
-                TextHasString(text.asString())
+            "Can't ignore the changes in the underlying iterator",
+            text,
+            TextHasString(text.asString())
         )
     }
 }

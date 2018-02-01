@@ -25,7 +25,7 @@ class StickyIterableTest {
         val size = AtomicInteger(2)
         val list = StickyIterable<Int>(
                 ListOf<Int>(
-                        { Collections.nCopies(size.incrementAndGet(), 0).iterator() }
+                        Collections.nCopies(size.incrementAndGet(), 0).iterator()
                 )
         )
         MatcherAssert.assertThat(

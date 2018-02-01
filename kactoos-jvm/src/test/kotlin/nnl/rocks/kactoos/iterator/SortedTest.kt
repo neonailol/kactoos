@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.iterable.IterableOf
@@ -19,17 +18,17 @@ class SortedTest {
     @Throws(Exception::class)
     fun sortsIterable() {
         MatcherAssert.assertThat(
-                "Can't sort elements in iterator",
-                {
-                    Sorted(
-                            IterableOf(
-                                    "one", "two", "three", "four"
-                            ).iterator()
-                    )
-                },
-                Matchers.contains(
-                        "four", "one", "three", "two"
+            "Can't sort elements in iterator",
+            IterableOf(
+                Sorted(
+                    IterableOf(
+                        "one", "two", "three", "four"
+                    ).iterator()
                 )
+            ),
+            Matchers.contains(
+                "four", "one", "three", "two"
+            )
         )
     }
 }

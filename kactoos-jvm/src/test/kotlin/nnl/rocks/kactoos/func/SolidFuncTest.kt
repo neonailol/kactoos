@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.list.ListOf
@@ -23,28 +22,28 @@ class SolidFuncTest {
     @Throws(Exception::class)
     fun cachesFuncResults() {
         val func = SolidFunc<Boolean, Int>(
-                { input -> SecureRandom().nextInt() }
+            FuncOf { input -> SecureRandom().nextInt() }
         )
         MatcherAssert.assertThat(
-                func.apply(true) + func.apply(true),
-                Matchers.equalTo(func.apply(true) + func.apply(true))
+            func.apply(true) + func.apply(true),
+            Matchers.equalTo(func.apply(true) + func.apply(true))
         )
     }
 
     @Test
     fun worksInThreads() {
         MatcherAssert.assertThat(
-                "Can't work well in multiple threads",
-                { func ->
-                    MatcherAssert.assertThat(
-                            func.apply(true),
-                            Matchers.equalTo(func.apply(true))
-                    )
-                    true
-                },
-                RunsInThreads(
-                        SolidFunc<X, Y>({ x -> ListOf(1, 2) })
+            "Can't work well in multiple threads",
+            FuncOf { func ->
+                MatcherAssert.assertThat(
+                    func.apply(true),
+                    Matchers.equalTo(func.apply(true))
                 )
+                true
+            },
+            RunsInThreads(
+                SolidFunc(FuncOf { x: Boolean -> ListOf(1, 2) })
+            )
         )
     }
 }

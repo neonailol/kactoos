@@ -1,6 +1,6 @@
-
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.func.FuncOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
@@ -17,18 +17,18 @@ class JoinedTest {
     @Test
     fun joinsIterators() {
         MatcherAssert.assertThat(
-                "Can't concatenate mapped iterators together",
-                LengthOf(
-                        IteratorNoNulls(
-                                Joined(
-                                        Mapped<String, Iterator<String>>(
-                                                { input -> setOf<String>(input).iterator() },
-                                                setOf("x").iterator()
-                                        )
-                                )
+            "Can't concatenate mapped iterators together",
+            LengthOf(
+                IteratorNoNulls(
+                    Joined(
+                        Mapped<String, Iterator<String>>(
+                            FuncOf { input -> setOf<String>(input).iterator() },
+                            setOf("x").iterator()
                         )
-                ).toInt(),
-                Matchers.equalTo(1)
+                    )
+                )
+            ).toInt(),
+            Matchers.equalTo(1)
         )
     }
 }

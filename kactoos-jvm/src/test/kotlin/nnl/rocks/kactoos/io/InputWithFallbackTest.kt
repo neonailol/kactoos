@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.matchers.TextHasString
@@ -6,7 +5,6 @@ import nnl.rocks.kactoos.text.TextOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
-
 import java.io.File
 import java.io.IOException
 
@@ -23,30 +21,30 @@ class InputWithFallbackTest {
     @Test
     fun readsAlternativeInput() {
         MatcherAssert.assertThat(
-                "Can't read alternative source",
-                TextOf(
-                        InputWithFallback(
-                                InputOf(
-                                        File("/this-file-is-absent-for-sure.txt")
-                                ),
-                                InputOf("hello, world!")
-                        )
-                ),
-                TextHasString(Matchers.endsWith("world!"))
+            "Can't read alternative source",
+            TextOf(
+                InputWithFallback(
+                    InputOf(
+                        File("/this-file-is-absent-for-sure.txt")
+                    ),
+                    InputOf("hello, world!")
+                )
+            ),
+            TextHasString(Matchers.endsWith("world!"))
         )
     }
 
     @Test
     fun readsAlternativeInputUri() {
         MatcherAssert.assertThat<TextOf>(
-                "Can't read alternative source from URI",
-                TextOf(
-                        InputWithFallback(
-                                { throw IOException("Always fails!") },
-                                InputOf("it works!")
-                        )
-                ),
-                TextHasString(Matchers.endsWith("works!"))
+            "Can't read alternative source from URI",
+            TextOf(
+                InputWithFallback(
+                    InputOf("it works!"),
+                    { throw IOException("Always fails!") }
+                )
+            ),
+            TextHasString(Matchers.endsWith("works!"))
         )
     }
 }

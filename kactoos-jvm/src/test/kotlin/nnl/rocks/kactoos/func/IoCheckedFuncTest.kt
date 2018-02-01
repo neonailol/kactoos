@@ -1,11 +1,8 @@
-
 package nnl.rocks.kactoos.func
 
-import nnl.rocks.kactoos.Func
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
-
 import java.io.IOException
 
 /**
@@ -22,12 +19,12 @@ class IoCheckedFuncTest {
     fun rethrowsIoException() {
         val exception = IOException("intended")
         try {
-            IoCheckedFunc(
-                    { i -> throw exception } as Func<Int, String>
+            IoCheckedFunc<Int, String>(
+                { i -> throw exception }
             ).apply(1)
         } catch (ex: IOException) {
             MatcherAssert.assertThat(
-                    ex, Matchers.`is`(exception)
+                ex, Matchers.`is`(exception)
             )
         }
     }
@@ -36,7 +33,7 @@ class IoCheckedFuncTest {
     @Throws(Exception::class)
     fun rethrowsCheckedToIoException() {
         IoCheckedFunc<Any, Any>(
-                { i -> throw Exception("intended to fail") }
+            { i -> throw Exception("intended to fail") }
         ).apply(1)
     }
 
@@ -44,7 +41,7 @@ class IoCheckedFuncTest {
     @Throws(IOException::class)
     fun runtimeExceptionGoesOut() {
         IoCheckedFunc<Any, Any>(
-                { i -> throw IllegalStateException("intended to fail here") }
+            { i -> throw IllegalStateException("intended to fail here") }
         ).apply(1)
     }
 }

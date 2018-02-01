@@ -56,7 +56,7 @@ class ItemAtTest {
         MatcherAssert.assertThat(
                 "Can't fallback to default value",
                 ItemAt<String>(
-                        fallback, emptyList<Any>()
+                        fallback, emptyList<String>()
                 ),
                 ScalarHasValue(fallback)
         )

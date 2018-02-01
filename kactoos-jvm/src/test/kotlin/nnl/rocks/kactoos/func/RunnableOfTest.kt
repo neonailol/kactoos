@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.matchers.MatcherOf
@@ -22,17 +21,17 @@ class RunnableOfTest {
     fun convertsFuncIntoRunnable() {
         val done = AtomicBoolean()
         MatcherAssert.assertThat<RunnableOf<Any>>(
-                "Can't execute Runnable",
-                RunnableOf<Any>(
-                        { input ->
-                            done.set(true)
-                            1
-                        }
-                ),
-                MatcherOf<Runnable> { input ->
-                    input.run()
-                    done.get()
+            "Can't execute Runnable",
+            RunnableOf<Any>(
+                FuncOf { input ->
+                    done.set(true)
+                    1
                 }
+            ),
+            MatcherOf<Runnable> { input ->
+                input.run()
+                done.get()
+            }
         )
     }
 }

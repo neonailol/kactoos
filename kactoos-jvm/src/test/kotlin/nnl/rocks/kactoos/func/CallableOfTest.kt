@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.func
 
 import org.hamcrest.MatcherAssert
@@ -19,10 +18,10 @@ class CallableOfTest {
     @Throws(Exception::class)
     fun convertsFuncIntoCallable() {
         MatcherAssert.assertThat(
-                CallableOf<Any, Int>(
-                        { input -> 1 }
-                ).call(),
-                Matchers.equalTo(1)
+            CallableOf<Any, Int>(
+                FuncOf { input -> 1 }
+            ).call(),
+            Matchers.equalTo(1)
         )
     }
 }

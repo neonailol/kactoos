@@ -2,6 +2,7 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.func.FuncOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
@@ -37,8 +38,8 @@ class JoinedTest {
                 "Can't concatenate mapped iterables together",
                 Joined(
                         Mapped(
-                                Func<String, Iterable<String>> { IterableOf(it) } as Func<String, Iterable<String>>,
-                                IterableOf("x")
+                            FuncOf<String, Iterable<String>> { IterableOf(it) } as Func<String, Iterable<String>>,
+                            IterableOf("x")
                         )
                 ),
                 Matchers.iterableWithSize(1)

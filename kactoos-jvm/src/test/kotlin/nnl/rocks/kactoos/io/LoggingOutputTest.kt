@@ -29,9 +29,9 @@ class LoggingOutputTest {
                 TeeInput(
                         InputOf(""),
                         LoggingOutput(
-                                { ByteArrayOutputStream() },
-                                "memory",
-                                logger
+                            OutputTo{ ByteArrayOutputStream() },
+                            "memory",
+                            logger
                         )
                 )
         ).toInt()
@@ -47,7 +47,7 @@ class LoggingOutputTest {
     fun logWriteOneByte() {
         val logger = FakeLogger()
         LoggingOutput(
-                { ByteArrayOutputStream() },
+            OutputTo{ ByteArrayOutputStream() },
                 "memory",
                 logger
         ).stream().use { out -> out.write(BytesOf("a").asBytes()) }
@@ -63,7 +63,7 @@ class LoggingOutputTest {
     fun logWriteText() {
         val logger = FakeLogger()
         LoggingOutput(
-                { ByteArrayOutputStream() },
+            OutputTo{ ByteArrayOutputStream() },
                 "memory",
                 logger
         ).stream().use { out -> out.write(BytesOf("Hello, товарищ!").asBytes()) }

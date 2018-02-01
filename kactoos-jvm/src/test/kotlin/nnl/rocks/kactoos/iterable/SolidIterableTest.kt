@@ -2,6 +2,7 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.matchers.RunsInThreads
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
@@ -21,8 +22,8 @@ class SolidIterableTest {
     fun makesListFromMappedIterable() {
         val list = SolidIterable<Int>(
                 nnl.rocks.kactoos.list.Mapped<Int, Int>(
-                        { i -> i !! + 1 },
-                        IterableOf(1, - 1, 0, 1)
+                    { i -> i + 1 },
+                    IterableOf(1, - 1, 0, 1)
                 )
         )
         MatcherAssert.assertThat<Iterable<Int>>(
@@ -60,14 +61,14 @@ class SolidIterableTest {
     fun worksInThreads() {
         MatcherAssert.assertThat(
                 "Can't behave as an iterable in multiple threads",
-                { list ->
+                FuncOf{ list ->
                     MatcherAssert.assertThat(
                             list.iterator().next(),
                             Matchers.equalTo(list.iterator().next())
                     )
                     true
                 },
-                RunsInThreads(SolidIterable<X>(1, 0, - 1, - 1, 2))
+                RunsInThreads(SolidIterable(1, 0, - 1, - 1, 2))
         )
     }
 }

@@ -1,11 +1,8 @@
-
 package nnl.rocks.kactoos.func
 
-import nnl.rocks.kactoos.Proc
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
-
 import java.io.IOException
 
 /**
@@ -23,11 +20,11 @@ class IoCheckedProcTest {
         val exception = IOException("intended")
         try {
             IoCheckedProc(
-                    { i -> throw exception } as Proc<Int>
+                { i: Int -> throw exception }
             ).exec(1)
         } catch (ex: IOException) {
             MatcherAssert.assertThat(
-                    ex, Matchers.`is`(exception)
+                ex, Matchers.`is`(exception)
             )
         }
     }
@@ -36,7 +33,7 @@ class IoCheckedProcTest {
     @Throws(Exception::class)
     fun rethrowsCheckedToIoException() {
         IoCheckedProc<Any>(
-                { i -> throw Exception("intended to fail") }
+            { i -> throw Exception("intended to fail") }
         ).exec(1)
     }
 
@@ -44,7 +41,7 @@ class IoCheckedProcTest {
     @Throws(IOException::class)
     fun runtimeExceptionGoesOut() {
         IoCheckedProc<Any>(
-                { i -> throw IllegalStateException("intended to fail here") }
+            { i -> throw IllegalStateException("intended to fail here") }
         ).exec(1)
     }
 }
