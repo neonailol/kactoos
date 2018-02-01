@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
@@ -22,33 +21,33 @@ class FilteredTest {
     @Throws(Exception::class)
     fun behavesAsCollection() {
         MatcherAssert.assertThat(
-                "Can't behave as a collection",
-                Filtered({ i -> i < 2 }, 1, 2, 0, - 1),
-                BehavesAsCollection(- 1)
+            "Can't behave as a collection",
+            Filtered({ i -> i < 2 }, 1, 2, 0, - 1),
+            BehavesAsCollection(- 1)
         )
     }
 
     @Test
     fun filterList() {
         MatcherAssert.assertThat(
-                LengthOf(
-                        Filtered<String>(
-                                { input -> input.length > 4 },
-                                IterableOf("hello", "world", "друг")
-                        )
-                ).toInt(),
-                Matchers.equalTo(2)
+            LengthOf(
+                Filtered<String>(
+                    { input -> input.length > 4 },
+                    IterableOf("hello", "world", "друг")
+                )
+            ).toInt(),
+            Matchers.equalTo(2)
         )
     }
 
     @Test
     fun filterEmptyList() {
         MatcherAssert.assertThat<Filtered<String>>(
-                Filtered<String>(
-                        { input -> input.length > 4 },
-                        emptyList<String>()
-                ),
-                Matchers.emptyIterable()
+            Filtered<String>(
+                { input -> input.length > 4 },
+                emptyList<String>()
+            ),
+            Matchers.emptyIterable()
         )
     }
 
@@ -56,11 +55,11 @@ class FilteredTest {
     @Throws(Exception::class)
     fun size() {
         MatcherAssert.assertThat(
-                Filtered<String>(
-                        { input -> input.length >= 4 },
-                        IterableOf("some", "text", "yes")
-                ).size,
-                Matchers.equalTo(2)
+            Filtered<String>(
+                { input -> input.length >= 4 },
+                IterableOf("some", "text", "yes")
+            ).size,
+            Matchers.equalTo(2)
         )
     }
 
@@ -68,11 +67,11 @@ class FilteredTest {
     @Throws(Exception::class)
     fun withItemsNotEmpty() {
         MatcherAssert.assertThat(
-                Filtered<String>(
-                        { input -> input.length > 4 },
-                        IterableOf("first", "second")
-                ).isEmpty(),
-                Matchers.equalTo(false)
+            Filtered<String>(
+                { input -> input.length > 4 },
+                IterableOf("first", "second")
+            ).isEmpty(),
+            Matchers.equalTo(false)
         )
     }
 
@@ -80,11 +79,11 @@ class FilteredTest {
     @Throws(Exception::class)
     fun withoutItemsIsEmpty() {
         MatcherAssert.assertThat(
-                Filtered<String>(
-                        { input -> input.length > 16 },
-                        IterableOf("third", "fourth")
-                ).isEmpty(),
-                Matchers.equalTo(true)
+            Filtered<String>(
+                { input -> input.length > 16 },
+                IterableOf("third", "fourth")
+            ).isEmpty(),
+            Matchers.equalTo(true)
         )
     }
 }

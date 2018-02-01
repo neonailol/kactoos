@@ -23,7 +23,6 @@ class RetryScalarTest {
         MatcherAssert.assertThat(
                 RetryScalar<Int>(
                         {
-                            // @checkstyle MagicNumberCheck (1 line)
                             if (SecureRandom().nextDouble() > 0.3) {
                                 throw IllegalArgumentException("May happen")
                             }

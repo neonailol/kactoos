@@ -36,7 +36,7 @@ class Filtered<X : Any> : CollectionEnvelope<X> {
      */
     @SafeVarargs
     constructor(
-        func: Func<X, Boolean>,
+        func: KFunc<X, Boolean>,
         vararg src: X
     ) : this(func, IterableOf<X>(src.iterator()))
 

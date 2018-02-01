@@ -21,25 +21,25 @@ class MaxOfTest {
     fun withIntegerCollection() {
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1, 2, 3, 4).toTypedArray<T>()
+                        ListOf(1, 2, 3, 4)
                 ).toInt(),
                 Matchers.equalTo(4)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1, 2, 3, 4).toTypedArray<T>()
+                        ListOf(1, 2, 3, 4)
                 ).toLong(),
                 Matchers.equalTo(4L)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1, 2, 3, 4).toTypedArray<T>()
+                        ListOf(1, 2, 3, 4)
                 ).toDouble(),
                 Matchers.equalTo(4.0)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1, 2, 3, 4).toTypedArray<T>()
+                        ListOf(1, 2, 3, 4)
                 ).toFloat(),
                 Matchers.equalTo(4.0f)
         )
@@ -49,25 +49,25 @@ class MaxOfTest {
     fun withLongCollection() {
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1L, 2L, 3L, 4L).toTypedArray<T>()
+                        ListOf(1L, 2L, 3L, 4L)
                 ).toInt(),
                 Matchers.equalTo(4)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1L, 2L, 3L, 4L).toTypedArray<T>()
+                        ListOf(1L, 2L, 3L, 4L)
                 ).toLong(),
                 Matchers.equalTo(4L)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1L, 2L, 3L, 4L).toTypedArray<T>()
+                        ListOf(1L, 2L, 3L, 4L)
                 ).toDouble(),
                 Matchers.equalTo(4.0)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1L, 2L, 3L, 4L).toTypedArray<T>()
+                        ListOf(1L, 2L, 3L, 4L)
                 ).toFloat(),
                 Matchers.equalTo(4.0f)
         )
@@ -77,25 +77,25 @@ class MaxOfTest {
     fun withDoubleCollection() {
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1.0, 2.0, 3.0, 4.0).toTypedArray<T>()
+                        ListOf(1.0, 2.0, 3.0, 4.0)
                 ).toInt(),
                 Matchers.equalTo(4)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1.0, 2.0, 3.0, 4.0).toTypedArray<T>()
+                        ListOf(1.0, 2.0, 3.0, 4.0)
                 ).toLong(),
                 Matchers.equalTo(4L)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1.0, 2.0, 3.0, 4.0).toTypedArray<T>()
+                        ListOf(1.0, 2.0, 3.0, 4.0)
                 ).toDouble(),
                 Matchers.equalTo(4.0)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1.0, 2.0, 3.0, 4.0).toTypedArray<T>()
+                        ListOf(1.0, 2.0, 3.0, 4.0)
                 ).toFloat(),
                 Matchers.equalTo(4.0f)
         )
@@ -105,25 +105,25 @@ class MaxOfTest {
     fun withFloatCollection() {
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1.0f, 2.0f, 3.0f, 4.0f).toTypedArray<T>()
+                        ListOf(1.0f, 2.0f, 3.0f, 4.0f)
                 ).toInt(),
                 Matchers.equalTo(4)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1.0f, 2.0f, 3.0f, 4.0f).toTypedArray<T>()
+                        ListOf(1.0f, 2.0f, 3.0f, 4.0f)
                 ).toLong(),
                 Matchers.equalTo(4L)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1.0f, 2.0f, 3.0f, 4.0f).toTypedArray<T>()
+                        ListOf(1.0f, 2.0f, 3.0f, 4.0f)
                 ).toDouble(),
                 Matchers.equalTo(4.0)
         )
         MatcherAssert.assertThat(
                 MaxOf(
-                        ListOf(1.0f, 2.0f, 3.0f, 4.0f).toTypedArray<T>()
+                        ListOf(1.0f, 2.0f, 3.0f, 4.0f)
                 ).toFloat(),
                 Matchers.equalTo(4.0f)
         )

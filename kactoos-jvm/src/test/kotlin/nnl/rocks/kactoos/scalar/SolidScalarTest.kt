@@ -1,6 +1,6 @@
-
 package nnl.rocks.kactoos.scalar
 
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.list.ListOf
 import nnl.rocks.kactoos.matchers.RunsInThreads
 import org.hamcrest.MatcherAssert
@@ -22,31 +22,31 @@ class SolidScalarTest {
     @Test
     @Throws(Exception::class)
     fun cachesScalarResults() {
-        val scalar = SolidScalar<Int>(
-                { SecureRandom().nextInt() }
+        val scalar = SolidScalar(
+            { SecureRandom().nextInt() }
         )
         MatcherAssert.assertThat(
-                scalar.value() + scalar.value(),
-                Matchers.equalTo<Int>(scalar.value() + scalar.value())
+            scalar.value() + scalar.value(),
+            Matchers.equalTo<Int>(scalar.value() + scalar.value())
         )
     }
 
     @Test
     fun worksInThreads() {
         MatcherAssert.assertThat(
-                "Can't work well in multiple threads",
-                { scalar ->
-                    MatcherAssert.assertThat(
-                            scalar.value(),
-                            Matchers.equalTo(scalar.value())
-                    )
-                    true
-                },
-                RunsInThreads(
-                        UncheckedScalar<T>(
-                                SolidScalar<ListOf<Int>>({ ListOf(1, 2) })
-                        )
+            "Can't work well in multiple threads",
+            FuncOf { scalar ->
+                MatcherAssert.assertThat(
+                    scalar.value(),
+                    Matchers.equalTo(scalar.value())
                 )
+                true
+            },
+            RunsInThreads(
+                UncheckedScalar(
+                    SolidScalar({ ListOf(1, 2) })
+                )
+            )
         )
     }
 }

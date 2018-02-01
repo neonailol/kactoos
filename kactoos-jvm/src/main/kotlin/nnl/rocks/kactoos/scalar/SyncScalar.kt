@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 
 /**
@@ -19,19 +20,21 @@ import nnl.rocks.kactoos.Scalar
  * @since 0.3
  */
 class SyncScalar<T : Any>(
-    private val origin: Scalar<T>,
+    private val origin: KScalar<T>,
     private val mutex: Any
 ) : Scalar<T> {
 
     /**
      * @param src The Scalar to cache
      */
-    constructor(src: Scalar<T>) : this(src, src)
+    constructor(src: Scalar<T>) : this({ src.value() }, src)
+
+    constructor(src: KScalar<T>) : this(src, src)
 
     @Throws(Exception::class)
     override fun value(): T {
         synchronized(this.mutex) {
-            return this.origin.value()
+            return this.origin.invoke()
         }
     }
 }
