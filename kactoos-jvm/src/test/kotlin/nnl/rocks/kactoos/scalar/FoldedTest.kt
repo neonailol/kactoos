@@ -1,12 +1,11 @@
-
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.func.BiFuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
-
 import java.util.NoSuchElementException
 
 /**
@@ -23,10 +22,10 @@ class FoldedTest {
     @Throws(Exception::class)
     fun failsForEmptyIterable() {
         Folded(
-                { first, last -> first },
-                emptyList()
+            BiFuncOf { first, last -> first },
+            emptyList()
         )
-                .value()
+            .value()
     }
 
     @Test
@@ -34,12 +33,12 @@ class FoldedTest {
     fun singleAtSingleIterable() {
         val single = 10
         MatcherAssert.assertThat(
-                "Can't find the single",
-                Folded<Int>(
-                        { first, last -> first },
-                        IterableOf<Scalar<Int>>({ single })
-                ).value(),
-                Matchers.equalTo(single)
+            "Can't find the single",
+            Folded<Int>(
+                BiFuncOf { first, last -> first },
+                IterableOf<Scalar<Int>>(ScalarOf { single })
+            ).value(),
+            Matchers.equalTo(single)
         )
     }
 
@@ -50,16 +49,16 @@ class FoldedTest {
         val two = "Banana"
         val three = "Orange"
         MatcherAssert.assertThat(
-                "Can't find the first",
-                Folded(
-                        { first, last -> first },
-                        IterableOf<Scalar<String>>(
-                                { one },
-                                { two },
-                                { three }
-                        )
-                ).value(),
-                Matchers.equalTo(one)
+            "Can't find the first",
+            Folded(
+                BiFuncOf { first, last -> first },
+                IterableOf<Scalar<String>>(
+                    ScalarOf { one },
+                    ScalarOf { two },
+                    ScalarOf { three }
+                )
+            ).value(),
+            Matchers.equalTo(one)
         )
     }
 
@@ -70,16 +69,16 @@ class FoldedTest {
         val two = 'B'
         val three = 'O'
         MatcherAssert.assertThat(
-                "Can't find the last",
-                Folded(
-                        { first, last -> last },
-                        IterableOf<Scalar<Char>>(
-                                { one },
-                                { two },
-                                { three }
-                        )
-                ).value(),
-                Matchers.equalTo(three)
+            "Can't find the last",
+            Folded(
+                BiFuncOf { first, last -> last },
+                IterableOf<Scalar<Char>>(
+                    ScalarOf { one },
+                    ScalarOf { two },
+                    ScalarOf { three }
+                )
+            ).value(),
+            Matchers.equalTo(three)
         )
     }
 }

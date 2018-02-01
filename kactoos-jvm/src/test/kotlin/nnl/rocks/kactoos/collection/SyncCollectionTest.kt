@@ -1,6 +1,6 @@
-
 package nnl.rocks.kactoos.collection
 
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.matchers.RunsInThreads
 import org.hamcrest.MatcherAssert
 import org.junit.Test
@@ -18,21 +18,21 @@ class SyncCollectionTest {
     @Throws(Exception::class)
     fun behavesAsCollection() {
         MatcherAssert.assertThat(
-                "Can't behave as a collection",
-                SyncCollection(1, 2, 0, - 1),
-                BehavesAsCollection(- 1)
+            "Can't behave as a collection",
+            SyncCollection(1, 2, 0, - 1),
+            BehavesAsCollection(- 1)
         )
     }
 
     @Test
     fun worksInThreads() {
         MatcherAssert.assertThat(
-                "Can't behave as a collection in multiple threads",
-                { list ->
-                    MatcherAssert.assertThat<T>(list, BehavesAsCollection(0))
-                    true
-                },
-                RunsInThreads(SyncCollection<T>(1, 0, - 1, - 1, 2))
+            "Can't behave as a collection in multiple threads",
+            FuncOf { list ->
+                MatcherAssert.assertThat(list, BehavesAsCollection(0))
+                true
+            },
+            RunsInThreads(SyncCollection(1, 0, - 1, - 1, 2))
         )
     }
 }

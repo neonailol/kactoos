@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.iterable.Limited
@@ -22,15 +21,15 @@ class ReducedTest {
     @Throws(Exception::class)
     fun skipIterable() {
         MatcherAssert.assertThat(
-                "Can't reduce elements in iterable",
-                Reduced(
-                        0L, { first, second -> first !! + second !! },
-                        Limited(
-                                10,
-                                RangeOf(0L, java.lang.Long.MAX_VALUE, { value -> ++ value })
-                        )
-                ).value(),
-                Matchers.equalTo(45L)
+            "Can't reduce elements in iterable",
+            Reduced(
+                0L, { first, second -> first + second },
+                Limited(
+                    10,
+                    RangeOf(0L, java.lang.Long.MAX_VALUE, { value -> value + 1 })
+                )
+            ).value(),
+            Matchers.equalTo(45L)
         )
     }
 }

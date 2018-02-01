@@ -1,7 +1,7 @@
-
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.func.BiFuncOf
+import nnl.rocks.kactoos.func.BiProcOf
 import nnl.rocks.kactoos.matchers.MatcherOf
 import nnl.rocks.kactoos.matchers.ScalarHasValue
 import org.hamcrest.MatcherAssert
@@ -25,20 +25,20 @@ class AndWithIndexTest {
     fun iteratesListWithIndex() {
         val list = LinkedList<String>()
         MatcherAssert.assertThat(
-                "Can't iterate a list with a procedure",
-                AndWithIndex(
-                        BiFuncOf<Any, Any, Boolean>(
-                                { text, index -> list.add(index.toInt(), text) },
-                                true
-                        ),
-                        "hello", "world"
+            "Can't iterate a list with a procedure",
+            AndWithIndex(
+                BiFuncOf(
+                    BiProcOf { text, index -> list.add(index, text) },
+                    true
                 ),
-                ScalarHasValue(
-                        Matchers.allOf(
-                                Matchers.equalTo<T>(true),
-                                MatcherOf { value -> list.size == 2 }
-                        )
+                "hello", "world"
+            ),
+            ScalarHasValue(
+                Matchers.allOf(
+                    Matchers.equalTo(true),
+                    MatcherOf { value -> list.size == 2 }
                 )
+            )
         )
     }
 }

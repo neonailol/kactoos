@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 
@@ -15,7 +16,9 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  * @param Y Type of output
  * @since 0.2
  */
-class UncheckedFunc<in X : Any, out Y : Any>(private val func: Func<X, Y>) : Func<X, Y> {
+class UncheckedFunc<in X : Any, out Y : Any>(private val func: KFunc<X, Y>) : Func<X, Y> {
 
-    override fun apply(input: X): Y = UncheckedScalar(ScalarOf { this.func.apply(input) }).value()
+    constructor(func: Func<X, Y>) : this({ ipt -> func.apply(ipt) })
+
+    override fun apply(input: X): Y = UncheckedScalar(ScalarOf { this.func.invoke(input) }).value()
 }

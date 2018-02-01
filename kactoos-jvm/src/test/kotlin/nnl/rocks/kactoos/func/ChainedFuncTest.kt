@@ -1,7 +1,5 @@
-
 package nnl.rocks.kactoos.func
 
-import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.iterable.Filtered
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.LengthOf
@@ -25,17 +23,17 @@ class ChainedFuncTest {
     @Throws(Exception::class)
     fun withoutIterable() {
         MatcherAssert.assertThat(
-                LengthOf(
-                        Filtered<String>(
-                                { input -> input.endsWith("12") }, Mapped(
-                                ChainedFunc<String, String, String>(
-                                        { input -> input + "1" },
-                                        { input -> input + "2" }
-                                ), IterableOf("public", "final", "class")
-                        )
-                        )
-                ).toInt(),
-                Matchers.equalTo(3)
+            LengthOf(
+                Filtered<String>(
+                    FuncOf { input -> input.endsWith("12") }, Mapped(
+                    ChainedFunc<String, String, String>(
+                        FuncOf { input -> input + "1" },
+                        FuncOf { input -> input + "2" }
+                    ), IterableOf("public", "final", "class")
+                )
+                )
+            ).toInt(),
+            Matchers.equalTo(3)
         )
     }
 
@@ -43,21 +41,21 @@ class ChainedFuncTest {
     @Throws(Exception::class)
     fun withIterable() {
         MatcherAssert.assertThat(
-                LengthOf(
-                        Filtered<String>(
-                                { input -> ! input.startsWith("st") }, Mapped(
-                                ChainedFunc<String, String, String>(
-                                        { input -> input + "1" },
-                                        IterableOf(
-                                                { input -> input + "2" },
-                                                { input -> input.replace("a".toRegex(), "b") }
-                                        ),
-                                        Func<String, String> { it.trim({ it <= ' ' }) }
-                                ), IterableOf("private", "static", "String")
-                        )
-                        )
-                ).toInt(),
-                Matchers.equalTo(2)
+            LengthOf(
+                Filtered<String>(
+                    FuncOf { input -> ! input.startsWith("st") }, Mapped(
+                    ChainedFunc<String, String, String>(
+                        FuncOf { input -> input + "1" },
+                        IterableOf(
+                            FuncOf { input -> input + "2" },
+                            FuncOf { input -> input.replace("a".toRegex(), "b") }
+                        ),
+                        FuncOf<String, String> { it.trim({ it <= ' ' }) }
+                    ), IterableOf("private", "static", "String")
+                )
+                )
+            ).toInt(),
+            Matchers.equalTo(2)
         )
     }
 }

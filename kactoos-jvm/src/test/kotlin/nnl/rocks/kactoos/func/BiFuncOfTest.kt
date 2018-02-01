@@ -1,4 +1,3 @@
-
 package nnl.rocks.kactoos.func
 
 import org.hamcrest.MatcherAssert
@@ -21,8 +20,8 @@ class BiFuncOfTest {
     @Throws(Exception::class)
     fun convertsFuncIntoBiFunc() {
         MatcherAssert.assertThat(
-                BiFuncOf<Any, Any, Int> { input -> 1 }.apply(1, 2),
-                Matchers.equalTo(1)
+            BiFuncOf { any: Any, any1: Any -> 1 }.apply(1, 2),
+            Matchers.equalTo(1)
         )
     }
 
@@ -31,11 +30,11 @@ class BiFuncOfTest {
     fun convertsProcIntoBiFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat(
-                BiFuncOf<String, Int, Boolean>(
-                        { input -> done.set(true) },
-                        true
-                ).apply("hello world", 1),
-                Matchers.equalTo(done.get())
+            BiFuncOf(
+                BiProcOf { s: String, i: Int -> done.set(true) },
+                true
+            ).apply("hello world", 1),
+            Matchers.equalTo(done.get())
         )
     }
 
@@ -44,8 +43,8 @@ class BiFuncOfTest {
     fun convertsProcWithNoResultIntoBiFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat<Boolean>(
-                BiFuncOf<String, Int, Boolean> { input -> done.set(true) }.apply("hello you", 1),
-                Matchers.nullValue()
+            BiFuncOf { s: String, i: Int -> done.set(true); true }.apply("hello you", 1),
+            Matchers.nullValue()
         )
     }
 
@@ -54,8 +53,8 @@ class BiFuncOfTest {
     fun convertsRunnableIntoBiFunc() {
         val done = AtomicBoolean(false)
         MatcherAssert.assertThat(
-                BiFuncOf<String, Int, Boolean> { done.set(true) }.apply("hello, world", 1),
-                Matchers.nullValue()
+            BiFuncOf { s: String, i: Int -> done.set(true); true }.apply("hello, world", 1),
+            Matchers.nullValue()
         )
     }
 
@@ -63,10 +62,10 @@ class BiFuncOfTest {
     @Throws(Exception::class)
     fun convertsValueIntoBiFunc() {
         MatcherAssert.assertThat(
-                BiFuncOf<String, Int, Boolean>(
-                        true
-                ).apply("hello, dude!", 1),
-                Matchers.equalTo(true)
+            BiFuncOf<String, Int, Boolean>(
+                true
+            ).apply("hello, dude!", 1),
+            Matchers.equalTo(true)
         )
     }
 }

@@ -74,7 +74,7 @@ class StickyCollectionTest {
 
     @Test
     fun testToArray() {
-        MatcherAssert.assertThat<Array<Any>>(
+        MatcherAssert.assertThat(
                 StickyCollection(1, 2).toTypedArray(),
                 Matchers.arrayContaining<Any>(1, 2)
         )
@@ -95,41 +95,5 @@ class StickyCollectionTest {
                 StickyCollection(1, 2).containsAll(Arrays.asList(1, 2)),
                 Matchers.equalTo(true)
         )
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testAdd() {
-        StickyCollection(1, 2).add(1)
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testRemove() {
-        StickyCollection(1, 2).remove(1)
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testAddAll() {
-        StickyCollection(1, 2).addAll(ArrayList<Int>(2))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testRemoveAll() {
-        StickyCollection(1, 2).removeAll(ArrayList<Any>(2))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testRetainAll() {
-        StickyCollection(1, 2).retainAll(ArrayList<Any>(2))
-    }
-
-    @Test(expected = UnsupportedOperationException::class)
-    @Throws(Exception::class)
-    fun testClear() {
-        StickyCollection(1, 2).clear()
     }
 }
