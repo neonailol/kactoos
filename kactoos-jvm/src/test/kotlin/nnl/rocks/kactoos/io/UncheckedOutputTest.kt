@@ -18,7 +18,7 @@ class UncheckedOutputTest {
     @Test(expected = RuntimeException::class)
     fun rethrowsCheckedToUncheckedException() {
         UncheckedOutput(
-                { throw IOException("intended") }
+                OutputTo{ throw IOException("intended") }
         ).stream()
     }
 }

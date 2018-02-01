@@ -29,7 +29,7 @@ class TeeOutputStreamTest {
         val content = "Hello, товарищ!"
         MatcherAssert.assertThat(
                 "Can't copy OutputStream to OutputStream byte by byte",
-                TeeOutputStreamTest.asString(
+                asString(
                         TeeInputStream(
                                 ByteArrayInputStream(
                                         content.toByteArray(StandardCharsets.UTF_8)

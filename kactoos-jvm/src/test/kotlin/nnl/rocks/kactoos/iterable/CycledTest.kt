@@ -44,7 +44,7 @@ class CycledTest {
                 "Can't generate an empty iterable",
                 LengthOf(
                         Cycled(
-                                Iterable { Collections.emptyIterator() }
+                                Iterable { Collections.emptyIterator<Any>() }
                         )
                 ).toInt(),
                 Matchers.equalTo(0)

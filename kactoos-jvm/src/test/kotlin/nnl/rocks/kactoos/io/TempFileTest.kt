@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.matchers.MatcherOf
+import nnl.rocks.kactoos.scalar.ScalarOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
@@ -34,13 +35,13 @@ class TempFileTest {
     @Throws(Exception::class)
     fun createFileInCustomPath() {
         val custom = Paths.get(System.getProperty("user.home"))
-        TempFile({ custom }, "", "").use({ file ->
+        TempFile(ScalarOf{ custom }, "", "").use({ file ->
                                              MatcherAssert.assertThat(
                                                  "Cannot create a temp file at a custom path",
                                                  file,
                                                  Matchers.allOf(
                                                      MatcherOf { tmp -> Files.exists(tmp.value()) },
-                                                     MatcherOf { tmp -> tmp.value().getParent().equals(custom) }
+                                                     MatcherOf { tmp -> tmp.value().parent.equals(custom) }
                                                  )
                                              )
                                          })

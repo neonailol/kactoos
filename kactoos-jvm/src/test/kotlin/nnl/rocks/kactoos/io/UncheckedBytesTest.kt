@@ -18,7 +18,7 @@ class UncheckedBytesTest {
     @Test(expected = RuntimeException::class)
     fun rethrowsCheckedToUncheckedException() {
         UncheckedBytes(
-                { throw IOException("intended") }
+                BytesOf{ throw IOException("intended") }
         ).asBytes()
     }
 }
