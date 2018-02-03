@@ -33,4 +33,10 @@ actual interface Func<in X : Any, out Y : Any> {
      */
     @Throws(Exception::class)
     actual fun apply(input: X): Y
+
+    class NoNulls<in X : Any, out Y : Any>(private val func: Func<X, Y>) : Func<X, Y> {
+
+        @Throws(Exception::class)
+        override fun apply(input: X): Y = func.apply(input)
+    }
 }

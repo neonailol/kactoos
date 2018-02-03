@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.KText
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.UncheckedFunc
@@ -25,8 +24,6 @@ class UncheckedText(
 
     constructor(text: Text) : this(text, FuncOf { error -> throw UncheckedIOException(error) })
 
-    constructor(text: KText) : this(text as Text, FuncOf { error -> throw UncheckedIOException(error) })
-
     /**
      * Ctor.
      * @param txt Encapsulated text
@@ -40,5 +37,4 @@ class UncheckedText(
         UncheckedFunc(fallback).apply(ex)
     }
 
-    override fun compareTo(other: Text): Int = this.asString().compareTo(UncheckedText(other).asString())
 }

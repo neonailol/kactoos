@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.StickyFunc
@@ -32,7 +31,7 @@ import nnl.rocks.kactoos.func.StickyFunc
  */
 class StickyScalar<T : Any>(private val func: Func<Boolean, T>) : Scalar<T> {
 
-    constructor(scalar: KScalar<T>) : this(StickyFunc(FuncOf { input -> scalar.invoke() }))
+    constructor(scalar: Scalar<T>) : this(StickyFunc(FuncOf { input -> scalar.value() }))
 
     @Throws(Exception::class)
     override fun value(): T = this.func.apply(true)

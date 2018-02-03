@@ -23,5 +23,4 @@ class LowerText(
     @Throws(IOException::class)
     override fun asString(): String = this.origin.asString().toLowerCase(this.locale)
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

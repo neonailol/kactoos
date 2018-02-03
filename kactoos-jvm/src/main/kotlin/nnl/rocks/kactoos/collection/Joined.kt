@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.Joined
+import nnl.rocks.kactoos.scalar.ScalarOf
 
 /**
  * Joined collection.
@@ -13,7 +14,7 @@ import nnl.rocks.kactoos.iterable.Joined
 class Joined<X : Any> : CollectionEnvelope<X> {
 
     constructor(list: Iterable<Iterable<X>>) : super(
-        { CollectionOf<X>(Joined<X>(list)) }
+        ScalarOf { CollectionOf<X>(Joined<X>(list)) }
     )
 
     /**

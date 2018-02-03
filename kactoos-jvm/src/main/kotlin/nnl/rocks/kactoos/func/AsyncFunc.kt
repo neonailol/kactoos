@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.Proc
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -52,8 +51,6 @@ class AsyncFunc<X : Any, Y : Any> constructor(
     ) : this(fnc, Executors.newSingleThreadExecutor(fct))
 
     constructor(fnc: Func<X, Y>) : this(fnc, Executors.defaultThreadFactory())
-
-    constructor(fnc: KFunc<X, Y>) : this(FuncOf { i: X -> fnc.invoke(i) }, Executors.defaultThreadFactory())
 
     constructor(
         proc: Proc<X>,

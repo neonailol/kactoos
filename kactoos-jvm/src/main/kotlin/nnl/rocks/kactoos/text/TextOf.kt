@@ -2,13 +2,14 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.BytesOf
 import nnl.rocks.kactoos.io.InputOf
 import nnl.rocks.kactoos.iterable.Mapped
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
+import nnl.rocks.kactoos.scalar.ScalarOf
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
@@ -25,46 +26,49 @@ import java.nio.file.Path
  *
  * There is no thread-safety guarantee.
  *
- * @param scalar The Scalar of String
+ * @param origin The Scalar of String
  * @since 0.3
  */
-class TextOf private constructor(
-    private val origin: KScalar<String>
-) : Text {
+class TextOf private constructor(private val origin: Scalar<String>) : Text {
 
     /**
+     * Ctor.
+     *
      * @param input The Input
      */
     constructor(input: Input) : this(BytesOf(input))
 
     /**
+     * Ctor.
      * @param url The URL
-     * @since 0.3
+     * @since 0.16
      */
     constructor(url: URL) : this(InputOf(url))
 
     /**
      * Ctor.
      * @param uri The URI
-     * @since 0.3
+     * @since 0.16
      */
     constructor(uri: URI) : this(InputOf(uri))
 
     /**
      * Ctor.
      * @param path The Input
-     * @since 0.3
+     * @since 0.13
      */
     constructor(path: Path) : this(InputOf(path))
 
     /**
      * Ctor.
      * @param file The Input
-     * @since 0.3
+     * @since 0.13
      */
     constructor(file: File) : this(InputOf(file))
 
     /**
+     * Ctor.
+     *
      * @param input The Input
      * @param cset The Charset
      */
@@ -74,6 +78,8 @@ class TextOf private constructor(
     ) : this(BytesOf(input), cset)
 
     /**
+     * Ctor.
+     *
      * @param input The Input
      * @param cset The Charset
      */
@@ -83,6 +89,8 @@ class TextOf private constructor(
     ) : this(BytesOf(input), cset)
 
     /**
+     * Ctor.
+     *
      * @param input The input
      * @param max Max length of the buffer for reading
      * @param cset The Charset
@@ -94,11 +102,14 @@ class TextOf private constructor(
     ) : this(BytesOf(input, max), cset)
 
     /**
+     * Ctor.
+     *
      * @param rdr Reader
      */
     constructor(rdr: Reader) : this(BytesOf(rdr))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param cset Charset
      */
@@ -108,6 +119,7 @@ class TextOf private constructor(
     ) : this(BytesOf(rdr, cset))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param cset Charset
      * @param max Buffer size
@@ -119,6 +131,8 @@ class TextOf private constructor(
     ) : this(BytesOf(rdr, cset, max))
 
     /**
+     * Ctor.
+     *
      * @param builder The String builder
      */
     constructor(builder: CharSequence) : this(BytesOf(builder))
@@ -135,11 +149,15 @@ class TextOf private constructor(
     ) : this(BytesOf(builder, cset), cset)
 
     /**
+     * Ctor.
+     *
      * @param chars The chars
      */
     constructor(vararg chars: Char) : this(BytesOf(*chars))
 
     /**
+     * Ctor.
+     *
      * @param chars The chars
      * @param cset The charset
      */
@@ -149,14 +167,16 @@ class TextOf private constructor(
     ) : this(BytesOf(chars, cset))
 
     /**
+     * Ctor.
      * @param error The exception to serialize
      */
     constructor(error: Throwable) : this(BytesOf(error))
 
     /**
+     * Ctor.
      * @param error The exception to serialize
      * @param charset Charset
-     * @since 0.3
+     * @since 0.29
      */
     constructor(
         error: Throwable,
@@ -164,9 +184,10 @@ class TextOf private constructor(
     ) : this(BytesOf(error, charset))
 
     /**
+     * Ctor.
      * @param error The exception to serialize
      * @param charset Charset
-     * @since 0.3
+     * @since 0.29
      */
     constructor(
         error: Throwable,
@@ -174,15 +195,17 @@ class TextOf private constructor(
     ) : this(BytesOf(error, charset))
 
     /**
+     * Ctor.
      * @param strace The stacktrace to serialize
-     * @since 0.3
+     * @since 0.29
      */
-    constructor(strace: Array<StackTraceElement>) : this(BytesOf(strace))
+    constructor(vararg strace: StackTraceElement) : this(BytesOf(*strace))
 
     /**
+     * Ctor.
      * @param strace The stacktrace to serialize
      * @param charset Charset
-     * @since 0.3
+     * @since 0.29
      */
     constructor(
         strace: Array<StackTraceElement>,
@@ -190,9 +213,10 @@ class TextOf private constructor(
     ) : this(BytesOf(strace, charset))
 
     /**
+     * Ctor.
      * @param strace The stacktrace to serialize
      * @param charset Charset
-     * @since 0.3
+     * @since 0.29
      */
     constructor(
         strace: Array<StackTraceElement>,
@@ -200,56 +224,66 @@ class TextOf private constructor(
     ) : this(BytesOf(strace, charset))
 
     /**
+     * Ctor.
+     *
      * @param bytes The array of bytes
      */
     constructor(vararg bytes: Byte) : this(BytesOf(*bytes))
 
     /**
+     * Ctor.
+     *
      * @param bytes The Bytes
      * @param cset The Charset
      */
     @JvmOverloads constructor(
         bytes: Bytes,
         cset: Charset = StandardCharsets.UTF_8
-    ) : this({ String(bytes.asBytes(), cset) })
+    ) : this(ScalarOf { String(bytes.asBytes(), cset) })
 
     /**
+     * Ctor.
+     *
      * @param bytes The Bytes
      * @param cset The Charset
      */
     constructor(
         bytes: Bytes,
         cset: String
-    ) : this({ String(bytes.asBytes(), Charset.forName(cset)) })
+    ) : this(ScalarOf { String(bytes.asBytes(), Charset.forName(cset)) })
 
     /**
+     * Ctor.
+     *
      * @param input The String
      * @param cset The Charset
      */
     @JvmOverloads constructor(
         input: String,
         cset: Charset = StandardCharsets.UTF_8
-    ) : this({ String(input.toByteArray(cset), cset) })
+    ) : this(ScalarOf { String(input.toByteArray(cset), cset) })
 
     /**
+     * Ctor.
      * @param iterable The iterable to convert to string
      * @since 0.21
      */
-    constructor(iterable: Iterable<Any>) : this(
-        {
+    constructor(iterable: Iterable<*>) : this(
+        ScalarOf {
             JoinedText(
                 ", ",
                 Mapped<Any, String>(
-                    fnc = FuncOf<Any, String> { it.toString() },
-                    src = iterable
+                    FuncOf { it.toString() },
+                    iterable
                 )
             ).asString()
         }
     )
 
     /**
+     * Ctor.
      * @param input The InputStream where the text is read from
-     * @since 0.3
+     * @since 0.21
      */
     constructor(input: InputStream) : this(InputOf(InputStreamReader(input)))
 
@@ -261,4 +295,5 @@ class TextOf private constructor(
     override fun toString(): String {
         return UncheckedText(this).asString()
     }
+
 }

@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.scalar.NumberEnvelope
+import nnl.rocks.kactoos.scalar.ScalarOf
 
 /**
  * Length of [Input].
@@ -17,7 +18,7 @@ class LengthOf(
     input: Input,
     max: Int
 ) : NumberEnvelope(
-    {
+    ScalarOf {
         input.stream().use { stream ->
             val buf = ByteArray(max)
             var length = 0L

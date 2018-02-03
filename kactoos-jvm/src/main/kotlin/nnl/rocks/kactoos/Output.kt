@@ -43,6 +43,12 @@ interface Output {
      */
     @Throws(IOException::class)
     fun stream(): OutputStream
+
+    class NoNulls(private val origin: Output) : Output {
+
+        @Throws(IOException::class)
+        override fun stream(): OutputStream = this.origin.stream()
+    }
 }
 
 internal typealias KOutput = () -> OutputStream

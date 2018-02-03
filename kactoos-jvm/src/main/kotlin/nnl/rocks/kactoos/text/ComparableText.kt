@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.IOException
 
@@ -25,7 +26,7 @@ import java.io.IOException
 class ComparableText(private val text: Text) : Text, Comparable<Text> {
 
     override fun compareTo(other: Text): Int = UncheckedScalar(
-        { this.text.asString().compareTo(other.asString()) }
+        ScalarOf { this.text.asString().compareTo(other.asString()) }
     ).value()
 
     @Throws(IOException::class)

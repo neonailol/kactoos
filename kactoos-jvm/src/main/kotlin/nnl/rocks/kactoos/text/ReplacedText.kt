@@ -1,10 +1,12 @@
 package nnl.rocks.kactoos.text
 
-import nnl.rocks.kactoos.KFunc
-import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.IoCheckedFunc
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
+import nnl.rocks.kactoos.scalar.ScalarOf
 import java.io.IOException
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -38,8 +40,8 @@ import java.util.regex.PatternSyntaxException
  */
 class ReplacedText(
     private val origin: Text,
-    private val regex: KScalar<Pattern>,
-    private val replacement: KFunc<Matcher, String>
+    private val regex: Scalar<Pattern>,
+    private val replacement: Func<Matcher, String>
 ) : Text {
 
     /**
@@ -53,7 +55,7 @@ class ReplacedText(
         text: Text,
         find: String,
         replace: String
-    ) : this(text, { Pattern.compile(find) }, { matcher -> replace })
+    ) : this(text, ScalarOf { Pattern.compile(find) }, FuncOf { matcher -> replace })
 
     @Throws(IOException::class)
     override fun asString(): String {
@@ -72,5 +74,4 @@ class ReplacedText(
         return buffer.toString()
     }
 
-    override fun compareTo(other: Text): Int = origin.compareTo(other)
 }

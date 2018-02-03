@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
 import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
@@ -76,7 +77,7 @@ class TempFile private constructor(
         suffix: Text
     ) : this(
         StickyScalar<Path>(
-            {
+            FuncOf {
                 Files.createTempFile(
                     dir.value(),
                     prefix.asString(),

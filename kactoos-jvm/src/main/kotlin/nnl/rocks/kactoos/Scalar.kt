@@ -34,4 +34,11 @@ actual interface Scalar<out T : Any> {
      */
     @Throws(Exception::class)
     actual fun value(): T
+
+    class NoNulls<out T : Any>(private val origin: Scalar<T>) : Scalar<T> {
+
+        @Throws(Exception::class)
+        override fun value(): T = origin.value()
+    }
+
 }

@@ -25,4 +25,10 @@ actual interface Proc<in X : Any> {
      */
     @Throws(Exception::class)
     actual fun exec(input: X)
+
+    class NoNulls<in X : Any>(private val origin: Proc<X>) : Proc<X> {
+
+        @Throws(Exception::class)
+        override fun exec(input: X) = this.origin.exec(input)
+    }
 }

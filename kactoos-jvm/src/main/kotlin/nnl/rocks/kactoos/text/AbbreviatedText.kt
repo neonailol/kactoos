@@ -18,8 +18,6 @@ class AbbreviatedText @JvmOverloads constructor(
     private val width: Int = AbbreviatedText.MAX_WIDTH
 ) : Text {
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
-
     /**
      *  By default, the max line width is 80 characters.
      * @param text The Text

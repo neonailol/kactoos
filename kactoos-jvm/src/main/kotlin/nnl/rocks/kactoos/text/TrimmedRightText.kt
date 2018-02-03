@@ -27,5 +27,4 @@ class TrimmedRightText(private val origin: Text) : Text {
         return text.substring(0, cursor + 1)
     }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

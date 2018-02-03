@@ -129,5 +129,4 @@ class FormattedText(
         return out.toString()
     }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

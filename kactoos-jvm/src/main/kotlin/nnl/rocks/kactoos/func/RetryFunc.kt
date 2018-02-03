@@ -1,24 +1,25 @@
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.dummy
 
 /**
  * Func that will try a few times before throwing an exception.
  *
+ *
  * There is no thread-safety guarantee.
+ *
+ *
  *
  * @param func Func original
  * @param exit Exit condition, returns TRUE if there is no more reason to try
  * @param X Type of input
  * @param Y Type of output
- * @since 0.3
+ * @since 0.8
  */
 class RetryFunc<X : Any, Y : Any>(
-    private val func: KFunc<X, Y>,
-    private val exit: KFunc<Int, Boolean>
+    private val func: Func<X, Y>,
+    private val exit: Func<Int, Boolean>
 ) : Func<X, Y> {
 
     /**
@@ -50,7 +51,7 @@ class RetryFunc<X : Any, Y : Any>(
         proc: Proc<X>,
         result: Y,
         ext: Func<Int, Boolean>
-    ) : this({ input: X -> proc.exec(input); result }, { input -> ext.apply(input) })
+    ) : this(FuncOf { input -> proc.exec(input); result }, ext)
 
     /**
      * @param fnc Func original
@@ -59,7 +60,7 @@ class RetryFunc<X : Any, Y : Any>(
     constructor(
         fnc: Func<X, Y>,
         attempts: Int
-    ) : this({ input -> fnc.apply(input) }, { attempt: Int -> attempt >= attempts })
+    ) : this(fnc, FuncOf { attempt -> attempt >= attempts })
 
     constructor(func: Func<X, Y>) : this(func, 3)
 
@@ -73,7 +74,7 @@ class RetryFunc<X : Any, Y : Any>(
     constructor(
         proc: Proc<X>,
         func: Func<Int, Boolean>
-    ) : this({ input: X -> proc.exec(input); dummy() }, { input: Int -> func.apply(input) })
+    ) : this(FuncOf(proc), func)
 
     @Throws(Exception::class)
     @Suppress("TooGenericExceptionCaught")
@@ -82,9 +83,9 @@ class RetryFunc<X : Any, Y : Any>(
         var error: Exception = IllegalArgumentException(
             "An immediate exit, didn't have a chance to try at least once"
         )
-        while (! this.exit.invoke(attempt)) {
+        while (! this.exit.apply(attempt)) {
             try {
-                return this.func.invoke(input)
+                return this.func.apply(input)
             } catch (ex: InterruptedException) {
                 Thread.currentThread().interrupt()
                 error = ex

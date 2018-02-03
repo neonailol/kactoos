@@ -21,4 +21,10 @@ actual interface Bytes {
      */
     @Throws(IOException::class)
     actual fun asBytes(): ByteArray
+
+    class NoNulls(private val origin: Bytes) : Bytes {
+
+        @Throws(IOException::class)
+        override fun asBytes(): ByteArray = origin.asBytes()
+    }
 }

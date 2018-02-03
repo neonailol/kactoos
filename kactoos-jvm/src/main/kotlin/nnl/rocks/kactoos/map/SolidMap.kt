@@ -4,6 +4,7 @@ import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.SolidScalar
 
 /**
@@ -18,10 +19,10 @@ import nnl.rocks.kactoos.scalar.SolidScalar
  * @param Y Type of value
  * @since 0.24
  */
-class SolidMap<X : Any, Y : Any, Z : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
+class SolidMap<X : Any, Y : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
     SolidScalar<Map<X, Y>>(
-        {
-            SyncMap<X, Y, Z>(StickyMap<X, Y, Z>(map))
+        ScalarOf {
+            SyncMap<X, Y>(StickyMap<X, Y>(map))
         }
     )
 ) {
@@ -43,74 +44,9 @@ class SolidMap<X : Any, Y : Any, Z : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
     ) : this(map, IterableOf<Map.Entry<X, Y>>(list.iterator()))
 
     /**
-     * @param map The map to extend
-     * @param list List of items
-     * @param key Func to create key
-     * @param value Func to create value
-     * @param Z Type of items in the list
-     *
-    </Z> */
-    constructor(
-        key: Func<Z, X>,
-        value: Func<Z, Y>,
-        map: Map<X, Y>,
-        list: Iterable<Z>
-    ) : this(
-        FuncOf { item -> MapEntry<X, Y>(key.apply(item), value.apply(item)) },
-        map, list
-    )
-
-    /**
-     * @param list List of items
-     * @param key Func to create key
-     * @param value Func to create value
-     * @param Z Type of items in the list
-     */
-    constructor(
-        key: Func<Z, X>,
-        value: Func<Z, Y>,
-        list: Iterable<Z>
-    ) : this(
-        FuncOf { item -> MapEntry<X, Y>(key.apply(item), value.apply(item)) }, list
-    )
-
-    /**
-     * @param list List of items
-     * @param entry Func to create entry
-     * @param Z Type of items in the list
-     */
-    @SafeVarargs
-    constructor(
-        entry: Func<Z, Map.Entry<X, Y>>,
-        vararg list: Z
-    ) : this(Mapped<Z, Map.Entry<X, Y>>(entry, IterableOf<Z>(list.iterator())))
-
-    /**
-     * @param list List of items
-     * @param entry Func to create entry
-     * @param Z Type of items in the list
-     */
-    constructor(
-        entry: Func<Z, Map.Entry<X, Y>>,
-        list: Iterable<Z>
-    ) : this(Mapped<Z, Map.Entry<X, Y>>(entry, list))
-
-    /**
-     * @param map The map to extend
-     * @param list List of items
-     * @param entry Func to create entry
-     * @param Z Type of items in the list
-     */
-    constructor(
-        entry: Func<Z, Map.Entry<X, Y>>,
-        map: Map<X, Y>,
-        list: Iterable<Z>
-    ) : this(map, Mapped<Z, Map.Entry<X, Y>>(entry, list))
-
-    /**
      * @param list Entries for the entries
      */
-    constructor(list: Iterable<Map.Entry<X, Y>>) : this(MapOf<X, Y, Any>(list))
+    constructor(list: Iterable<Map.Entry<X, Y>>) : this(MapOf<X, Y>(list))
 
     /**
      * @param list Entries for the entries
@@ -124,5 +60,86 @@ class SolidMap<X : Any, Y : Any, Z : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
     constructor(
         map: Map<X, Y>,
         list: Iterable<Map.Entry<X, Y>>
-    ) : this(MapOf<X, Y, Any>(map, list))
+    ) : this(MapOf<X, Y>(map, list))
+
+    companion object {
+
+        /**
+         * @param map The map to extend
+         * @param list List of items
+         * @param key Func to create key
+         * @param value Func to create value
+         * @param Z Type of items in the list
+         *
+         */
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            key: Func<Z, X>,
+            value: Func<Z, Y>,
+            map: Map<X, Y>,
+            list: Iterable<Z>
+        ): SolidMap<X, Y> {
+            return SolidMap(
+                entry = FuncOf { item: Z -> MapEntry(key.apply(item), value.apply(item)) },
+                map = map,
+                list = list
+            )
+        }
+
+        /**
+         * @param list List of items
+         * @param key Func to create key
+         * @param value Func to create value
+         * @param Z Type of items in the list
+         */
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            list: Iterable<Z>,
+            key: Func<Z, X>,
+            value: Func<Z, Y>
+        ): SolidMap<X, Y> {
+            return SolidMap(
+                entry = FuncOf<Z, MapEntry<X, Y>> { item -> MapEntry(key.apply(item), value.apply(item)) },
+                list = list
+            )
+        }
+
+        /**
+         * @param list List of items
+         * @param entry Func to create entry
+         * @param Z Type of items in the list
+         */
+        @SafeVarargs
+        @Suppress("SpreadOperator")
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            entry: Func<Z, Map.Entry<X, Y>>,
+            vararg args: Z
+        ): SolidMap<X, Y> {
+            return SolidMap(Mapped(entry, IterableOf(*args)))
+        }
+
+        /**
+         * @param list List of items
+         * @param entry Func to create entry
+         * @param Z Type of items in the list
+         */
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            entry: Func<Z, Map.Entry<X, Y>>,
+            list: Iterable<Z>
+        ): SolidMap<X, Y> {
+            return SolidMap(Mapped(entry, list))
+        }
+
+        /**
+         * @param map The map to extend
+         * @param list List of items
+         * @param entry Func to create entry
+         * @param Z Type of items in the list
+         */
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            entry: Func<Z, Map.Entry<X, Y>>,
+            map: Map<X, Y>,
+            list: Iterable<Z>
+        ): SolidMap<X, Y> {
+            return SolidMap(map, Mapped(entry, list))
+        }
+    }
 }

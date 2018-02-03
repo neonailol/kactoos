@@ -2,8 +2,9 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.File
@@ -19,59 +20,65 @@ import java.nio.file.Path
 /**
  * An [InputStream] that encapsulates other sources of data.
  *
- *
  * There is no thread-safety guarantee.
  *
- *
- *
- * @since 0.13
+ * @since 0.3
  */
-class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStream() {
-
-    constructor(src: KScalar<InputStream>) : this(UncheckedScalar(StickyScalar(src)))
+class InputStreamOf private constructor(src: Scalar<InputStream>) : InputStream() {
 
     /**
+     * The source.
+     */
+    private val source: UncheckedScalar<InputStream> = UncheckedScalar(StickyScalar(src))
+
+    /**
+     * Ctor.
      * @param path The path
      */
     constructor(path: Path) : this(InputOf(path))
 
     /**
+     * Ctor.
      * @param file The file
      */
     constructor(file: File) : this(InputOf(file))
 
     /**
+     * Ctor.
      * @param url The URL
      */
     constructor(url: URL) : this(InputOf(url))
 
     /**
+     * Ctor.
      * @param uri The URI
      */
     constructor(uri: URI) : this(InputOf(uri))
 
     /**
+     * Ctor.
      * @param bytes The text
      */
     constructor(bytes: Bytes) : this(InputOf(bytes))
 
     /**
+     * Ctor.
      * @param bytes The text
      */
     constructor(bytes: ByteArray) : this(InputOf(bytes))
 
     /**
+     * Ctor.
      * @param text The text
      * @param charset Charset
      */
-    constructor(
+    @JvmOverloads constructor(
         text: Text,
-        charset: Charset
+        charset: Charset = StandardCharsets.UTF_8
     ) : this(InputOf(text, charset))
 
-    constructor(text: Text) : this(text, StandardCharsets.UTF_8)
-
     /**
+     * Ctor.
      * @param text The text
      * @param charset Charset
      */
@@ -81,11 +88,13 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     ) : this(InputOf(text, charset))
 
     /**
+     * Ctor.
      * @param text The text
      */
     constructor(text: CharSequence) : this(InputOf(text))
 
     /**
+     * Ctor.
      * @param text The text
      * @param charset Charset
      */
@@ -95,6 +104,7 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     ) : this(InputOf(text, charset))
 
     /**
+     * Ctor.
      * @param text The text
      * @param charset Charset
      */
@@ -104,16 +114,18 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     ) : this(InputOf(text, charset))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param charset Charset
      * @since 0.13.2
      */
-    constructor(
+    @JvmOverloads constructor(
         rdr: Reader,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(InputOf(rdr, charset))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param charset Charset
      * @since 0.13.2
@@ -124,6 +136,7 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     ) : this(InputOf(rdr, charset))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param cset Charset
      * @param max Buffer size
@@ -136,6 +149,7 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     ) : this(InputOf(rdr, cset, max))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param max Buffer size
      * @since 0.13.2
@@ -146,6 +160,7 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     ) : this(InputOf(rdr, StandardCharsets.UTF_8, max))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param charset Charset
      * @param max Buffer size
@@ -158,9 +173,10 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     ) : this(InputOf(rdr, charset, max))
 
     /**
+     * Ctor.
      * @param input The input
      */
-    constructor(input: Input) : this({ input.stream() })
+    constructor(input: Input) : this(ScalarOf<InputStream> { input.stream() } as Scalar<InputStream>)
 
     @Throws(IOException::class)
     override fun read(): Int {
@@ -208,4 +224,5 @@ class InputStreamOf(private val source: UncheckedScalar<InputStream>) : InputStr
     override fun markSupported(): Boolean {
         return this.source.value().markSupported()
     }
+
 }

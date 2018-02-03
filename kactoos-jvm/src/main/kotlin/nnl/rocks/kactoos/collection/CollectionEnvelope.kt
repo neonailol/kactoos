@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.collection
 
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 
@@ -18,6 +17,4 @@ open class CollectionEnvelope<X : Any>(
 ) : Collection<X> by col.value() {
 
     constructor(slr: Scalar<Collection<X>>) : this(UncheckedScalar(slr))
-
-    constructor(slr: KScalar<Collection<X>>) : this(UncheckedScalar(slr))
 }

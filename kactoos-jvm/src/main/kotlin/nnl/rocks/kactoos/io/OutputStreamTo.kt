@@ -1,7 +1,8 @@
 package nnl.rocks.kactoos.io
 
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Output
+import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 
@@ -28,7 +29,7 @@ class OutputStreamTo(
     private val target: UncheckedScalar<OutputStream>
 ) : OutputStream() {
 
-    constructor(tgt: KScalar<OutputStream>) : this(UncheckedScalar(StickyScalar(tgt)))
+    constructor(tgt: Scalar<OutputStream>) : this(UncheckedScalar(StickyScalar(tgt)))
 
     /**
      * @param path The path
@@ -101,7 +102,7 @@ class OutputStreamTo(
     /**
      * @param output The input
      */
-    constructor(output: Output) : this({ output.stream() })
+    constructor(output: Output) : this(ScalarOf<OutputStream> { output.stream() })
 
     @Throws(IOException::class)
     override fun write(data: Int) {

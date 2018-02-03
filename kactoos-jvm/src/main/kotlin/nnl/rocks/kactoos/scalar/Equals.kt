@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 
 /**
@@ -16,20 +15,15 @@ import nnl.rocks.kactoos.Scalar
  * @param first The first scalar to compare.
  * @param second The second scalar to compare.
  * @param T Type of object to compare
- * @since 0.3
+ *
+ *
+ *
+ * @since 0.9
  */
 class Equals<in T : Comparable<T>>(
     private val first: Scalar<T>,
     private val second: Scalar<T>
 ) : Scalar<Boolean> {
-
-    constructor(
-        fst: KScalar<T>,
-        scd: KScalar<T>
-    ) : this(
-        ScalarOf { fst.invoke() },
-        ScalarOf { scd.invoke() }
-    )
 
     @Throws(Exception::class)
     override fun value(): Boolean = this.first.value().compareTo(this.second.value()) == 0

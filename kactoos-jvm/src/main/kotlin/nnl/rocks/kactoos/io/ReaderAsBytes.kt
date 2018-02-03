@@ -10,35 +10,36 @@ import java.nio.charset.StandardCharsets
 /**
  * Reader as [Bytes].
  *
- *
  * This class is for internal use only. Use [BytesOf] instead.
- *
  *
  * There is no thread-safety guarantee.
  *
- *
- *
- *
- * @since 0.12
+ * @param reader Reader
+ * @param charset Charset
+ * @param size Buffer size
+ * @since 0.3
  */
-internal class ReaderAsBytes constructor(
+internal class ReaderAsBytes @JvmOverloads constructor(
     private val reader: Reader,
     private val charset: CharSequence,
     private val size: Int = 16 shl 10
 ) : Bytes {
 
     /**
+     * Ctor.
+     *
      * @param rdr Reader
      * @param cset Charset
      * @param max Buffer size
      */
-    constructor(
+    @JvmOverloads constructor(
         rdr: Reader,
         cset: Charset = StandardCharsets.UTF_8,
         max: Int = 16 shl 10
     ) : this(rdr, cset.name(), max)
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param max Buffer size
      * @since 0.13.3

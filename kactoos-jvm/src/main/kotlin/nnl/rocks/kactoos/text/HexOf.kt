@@ -30,7 +30,6 @@ class HexOf(private val bytes: Bytes) : Text {
         return String(hex)
     }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 
     companion object {
 

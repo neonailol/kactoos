@@ -18,35 +18,34 @@ import java.nio.file.Path
  *
  * There is no thread-safety guarantee.
  *
- * @since 0.12
+ * @since 0.3
  */
-class BytesOf(
-    private val origin: KBytes
-) : Bytes {
+class BytesOf constructor(private val origin: KBytes) : Bytes {
 
-    /**
-     * @param bytes The input
-     */
     constructor(bytes: Bytes) : this({ bytes.asBytes() })
 
     /**
+     * Ctor.
      * @param input The input
      */
     constructor(input: Input) : this(InputAsBytes(input))
 
     /**
+     * Ctor.
      * @param file The input
      * @since 0.13
      */
     constructor(file: File) : this(InputOf(file))
 
     /**
+     * Ctor.
      * @param path The input
      * @since 0.13
      */
     constructor(path: Path) : this(InputOf(path))
 
     /**
+     * Ctor.
      * @param input The input
      * @param max Max length of the buffer for reading
      */
@@ -56,11 +55,13 @@ class BytesOf(
     ) : this(InputAsBytes(input, max))
 
     /**
+     * Ctor.
      * @param rdr Reader
      */
     constructor(rdr: Reader) : this(ReaderAsBytes(rdr))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param charset Charset
      */
@@ -70,6 +71,7 @@ class BytesOf(
     ) : this(ReaderAsBytes(rdr, charset))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param charset Charset
      */
@@ -79,6 +81,7 @@ class BytesOf(
     ) : this(ReaderAsBytes(rdr, charset))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param charset Charset
      * @param max Buffer size
@@ -90,6 +93,7 @@ class BytesOf(
     ) : this(ReaderAsBytes(rdr, charset, max))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param max Buffer size
      * @since 0.13.3
@@ -100,6 +104,7 @@ class BytesOf(
     ) : this(ReaderAsBytes(rdr, max))
 
     /**
+     * Ctor.
      * @param rdr Reader
      * @param charset Charset
      * @param max Buffer size
@@ -111,24 +116,19 @@ class BytesOf(
     ) : this(ReaderAsBytes(rdr, charset, max))
 
     /**
+     * Ctor.
+     *
      * @param input The source
      * @param charset The charset
      */
-    constructor(
+    @JvmOverloads constructor(
         input: CharSequence,
-        charset: Charset
-    ) : this(
-        { input.toString().toByteArray(charset) }
-    )
+        charset: Charset = StandardCharsets.UTF_8
+    ) : this({ input.toString().toByteArray(charset) })
 
     /**
-     * @param input The source
-     */
-    constructor(input: CharSequence) : this(
-        input, StandardCharsets.UTF_8
-    )
-
-    /**
+     * Ctor.
+     *
      * @param input The source
      * @param charset The charset
      */
@@ -138,12 +138,15 @@ class BytesOf(
     ) : this({ input.toString().toByteArray(charset(charset.toString())) })
 
     /**
+     * Ctor.
+     *
      * @param chars The chars
      */
-    @SafeVarargs
     constructor(vararg chars: Char) : this(chars, StandardCharsets.UTF_8)
 
     /**
+     * Ctor.
+     *
      * @param chars The chars
      * @param charset The charset
      */
@@ -153,6 +156,8 @@ class BytesOf(
     ) : this(String(chars), charset)
 
     /**
+     * Ctor.
+     *
      * @param chars The chars
      * @param charset The charset
      */
@@ -162,19 +167,17 @@ class BytesOf(
     ) : this(String(chars), charset)
 
     /**
+     * Ctor.
      * @param text The source
      * @param charset The charset
      */
-    constructor(
+    @JvmOverloads constructor(
         text: Text,
-        charset: Charset
+        charset: Charset = StandardCharsets.UTF_8
     ) : this({ text.asString().toByteArray(charset) })
 
-    constructor(
-        text: Text
-    ) : this(text, StandardCharsets.UTF_8)
-
     /**
+     * Ctor.
      * @param text The source
      * @param charset The charset
      */
@@ -184,17 +187,17 @@ class BytesOf(
     ) : this({ text.asString().toByteArray(charset(charset.toString())) })
 
     /**
+     * Ctor.
      * @param error The exception to serialize
      * @param charset Charset
      */
-    constructor(
+    @JvmOverloads constructor(
         error: Throwable,
-        charset: Charset
+        charset: Charset = StandardCharsets.UTF_8
     ) : this(error, charset.name())
 
-    constructor(error: Throwable) : this(error, StandardCharsets.UTF_8)
-
     /**
+     * Ctor.
      * @param error The exception to serialize
      * @param charset Charset
      */
@@ -213,20 +216,17 @@ class BytesOf(
     )
 
     /**
-     * @param bytes Bytes to encapsulate
-     */
-    constructor(vararg bytes: Byte) : this({ bytes })
-
-    /**
+     * Ctor.
      * @param strace The stack trace
-     * @since 0.3
+     * @since 0.29
      */
-    constructor(strace: Array<StackTraceElement>) : this(strace, StandardCharsets.UTF_8)
+    constructor(vararg strace: StackTraceElement) : this(arrayOf(*strace), StandardCharsets.UTF_8)
 
     /**
+     * Ctor.
      * @param strace The stack trace
      * @param charset Charset
-     * @since 0.3
+     * @since 0.29
      */
     constructor(
         strace: Array<StackTraceElement>,
@@ -234,31 +234,40 @@ class BytesOf(
     ) : this(strace, charset.name())
 
     /**
+     * Ctor.
      * @param strace The stack trace
      * @param charset Charset
-     * @since 0.3
+     * @since 0.29
      */
     constructor(
         strace: Array<StackTraceElement>,
         charset: CharSequence
     ) : this(
-        {
-            ByteArrayOutputStream().use { baos ->
-                PrintStream(
-                    baos, true, charset.toString()
-                ).use { stream ->
-                    for (element in strace) {
-                        stream.append(element.toString())
-                        stream.append("\n")
+        object : Bytes {
+            override fun asBytes(): ByteArray {
+                return ByteArrayOutputStream().use { baos ->
+                    PrintStream(
+                        baos, true, charset.toString()
+                    ).use { stream ->
+                        for (element in strace) {
+                            stream.append(element.toString())
+                            stream.append("\n")
+                        }
+                        baos.toByteArray()
                     }
-                    baos.toByteArray()
                 }
             }
         }
+
     )
+
+    /**
+     * @param bytes Bytes to encapsulate
+     */
+    constructor(vararg bytes: Byte) : this({ bytes })
 
     @Throws(IOException::class)
     override fun asBytes(): ByteArray {
-        return this.origin()
+        return this.origin.invoke()
     }
 }

@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.time
 
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 
 import java.time.ZonedDateTime
@@ -22,7 +23,7 @@ class ZonedDateTimeAsText @JvmOverloads constructor(
      * Scalar carrying the formatted date.
      */
     private val formatted: UncheckedScalar<String> = UncheckedScalar(
-        { formatter.format(date) }
+        ScalarOf { formatter.format(date) }
     )
 
     /**

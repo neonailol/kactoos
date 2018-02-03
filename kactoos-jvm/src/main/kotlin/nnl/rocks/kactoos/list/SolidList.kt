@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.list
 
 import nnl.rocks.kactoos.collection.CollectionOf
 import nnl.rocks.kactoos.iterable.IterableOf
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.SolidScalar
 
 /**
@@ -16,7 +17,7 @@ import nnl.rocks.kactoos.scalar.SolidScalar
  * @since 0.24
  */
 class SolidList<X : Any>(list: Collection<X>) : ListEnvelope<X>(
-    SolidScalar<List<X>>({ SyncList<X>(StickyList<X>(list)) })
+    SolidScalar<List<X>>(ScalarOf { SyncList<X>(StickyList<X>(list)) })
 ) {
 
     /**

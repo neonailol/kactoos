@@ -1,7 +1,8 @@
 package nnl.rocks.kactoos.io
 
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Output
+import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.File
@@ -28,7 +29,7 @@ class WriterTo(
     private val target: UncheckedScalar<Writer>
 ) : Writer() {
 
-    constructor(tgt: KScalar<Writer>) : this(UncheckedScalar(StickyScalar(tgt)))
+    constructor(tgt: Scalar<Writer>) : this(UncheckedScalar(StickyScalar(tgt)))
 
     /**
      * @param path The path
@@ -53,7 +54,7 @@ class WriterTo(
         output: Output,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(
-        { OutputStreamWriter(output.stream(), charset) }
+        ScalarOf { OutputStreamWriter(output.stream(), charset) }
     )
 
     /**
@@ -63,7 +64,7 @@ class WriterTo(
     constructor(
         output: Output,
         charset: CharSequence
-    ) : this({ OutputStreamWriter(output.stream(), charset.toString()) })
+    ) : this(ScalarOf { OutputStreamWriter(output.stream(), charset.toString()) })
 
     /**
      * @param output The input
@@ -73,7 +74,7 @@ class WriterTo(
     constructor(
         output: Output,
         encoder: CharsetEncoder
-    ) : this({ OutputStreamWriter(output.stream(), encoder) })
+    ) : this(ScalarOf { OutputStreamWriter(output.stream(), encoder) })
 
     @Throws(IOException::class)
     override fun write(

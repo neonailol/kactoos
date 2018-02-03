@@ -22,5 +22,4 @@ class TrimmedText(private val origin: Text) : Text {
         return this.origin.asString().trim { it <= ' ' }
     }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

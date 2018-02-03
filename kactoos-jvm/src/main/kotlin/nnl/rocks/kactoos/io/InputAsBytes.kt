@@ -16,8 +16,10 @@ import java.io.IOException
  */
 internal class InputAsBytes(
     private val source: Input,
-    private val size: Int = 16 shl 10
+    private val size: Int
 ) : Bytes {
+
+    constructor(source: Input) : this(source, 16 shl 10)
 
     @Throws(IOException::class)
     @Suppress("NestedBlockDepth")

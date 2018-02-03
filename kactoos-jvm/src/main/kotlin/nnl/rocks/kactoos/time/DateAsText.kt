@@ -1,51 +1,48 @@
 package nnl.rocks.kactoos.time
 
 import nnl.rocks.kactoos.Text
-
+import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.time.Instant
 import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
+import java.time.temporal.TemporalAccessor
 import java.util.Date
 import java.util.Locale
 
 /**
- * Formatter for [Date] instances.
+ * Formatter for date instances.
+ * Formats the date using the provided formatter.
  *
- * @param date The date to format.
- * @param formatter The formatter to use.
- * @since 0.3
+ * @param formatted The formatted date.
+ * @since 0.27
  */
 class DateAsText(
-    private val text: ZonedDateTimeAsText
+    private val formatted: UncheckedScalar<String>
 ) : Text {
 
-    constructor(date: ZonedDateTime) : this(
-        ZonedDateTimeAsText(
-            date
-        )
-    )
+    constructor(
+        date: TemporalAccessor,
+        formatter: DateTimeFormatter
+    ) : this(UncheckedScalar(ScalarOf { formatter.format(date) }))
 
     constructor(
-        date: Date,
-        formatter: DateTimeFormatter
-    ) : this(
-        ZonedDateTimeAsText(
-            ZonedDateTime.ofInstant(date.toInstant(), ZoneId.of("UTC")),
-            formatter
-        )
-    )
-
-    constructor(date: Date) : this(date, Iso().get())
+        date: TemporalAccessor
+    ) : this(UncheckedScalar(ScalarOf { Iso().get().format(date) }))
 
     /**
      * Formats the milliseconds using the ISO format.
      * @param milliseconds Milliseconds to format.
      */
-    @JvmOverloads constructor(milliseconds: Long = System.currentTimeMillis()) : this(
-        Date.from(Instant.ofEpochMilli(milliseconds)),
+    constructor(milliseconds: Long) : this(
+        ZonedDateTime.ofInstant(
+            Instant.ofEpochMilli(milliseconds), ZoneId.of("UTC")
+        ),
         Iso().get()
     )
+
+    constructor() : this(System.currentTimeMillis())
 
     /**
      * Formats the milliseconds using the format and the default locale.
@@ -56,7 +53,10 @@ class DateAsText(
         milliseconds: Long,
         format: String
     ) : this(
-        Date.from(Instant.ofEpochMilli(milliseconds)), format,
+        ZonedDateTime.ofInstant(
+            Instant.ofEpochMilli(milliseconds), ZoneId.of("UTC")
+        ),
+        format,
         Locale.getDefault(Locale.Category.FORMAT)
     )
 
@@ -71,26 +71,35 @@ class DateAsText(
         format: String,
         locale: Locale
     ) : this(
-        Date.from(Instant.ofEpochMilli(milliseconds)),
+        ZonedDateTime.ofInstant(
+            Instant.ofEpochMilli(milliseconds), ZoneId.of("UTC")
+        ),
         DateTimeFormatter.ofPattern(format, locale)
     )
 
-    constructor(
-        date: ZonedDateTime,
-        format: String,
-        locale: Locale
-    ) : this(
-        date,
-        DateTimeFormatter.ofPattern(format, locale)
+    /**
+     * Formats the date with ISO format using the system zone.
+     * @param date The date to format.
+     */
+    constructor(date: Date) : this(
+        ZonedDateTime.ofInstant(date.toInstant(), ZoneId.of("UTC")),
+        Iso().get()
     )
 
+    /**
+     * Formats the date with to format using the default locale and the system
+     * zone.
+     * @param date The date to format.
+     * @param format The format to use.
+     */
     constructor(
-        date: ZonedDateTime,
-        formatter: DateTimeFormatter
+        date: Date,
+        format: String
     ) : this(
-        ZonedDateTimeAsText(
-            date,
-            formatter
+        ZonedDateTime.ofInstant(date.toInstant(), ZoneId.of("UTC")),
+        DateTimeFormatter.ofPattern(
+            format,
+            Locale.getDefault(Locale.Category.FORMAT)
         )
     )
 
@@ -101,18 +110,37 @@ class DateAsText(
      * @param format The format to use.
      * @param locale The locale to use.
      */
-    @JvmOverloads constructor(
+    constructor(
         date: Date,
         format: String,
-        locale: Locale = Locale.getDefault(Locale.Category.FORMAT)
-    ) : this(date, DateTimeFormatter.ofPattern(format, locale))
+        locale: Locale
+    ) : this(
+        ZonedDateTime.ofInstant(date.toInstant(), ZoneId.of("UTC")),
+        DateTimeFormatter.ofPattern(format, locale)
+    )
 
-    override fun asString(): String {
-        return this.text.asString()
-    }
+    /**
+     * Formats the date using the provided format string using the provided
+     * locale.
+     * @param date The date to format.
+     * @param format The format string to use.
+     * @param locale The locale to use.
+     */
+    constructor(
+        date: TemporalAccessor,
+        format: String,
+        locale: Locale
+    ) : this(
+        date, DateTimeFormatter.ofPattern(format, locale)
+    )
 
     constructor(
-        date: ZonedDateTime,
+        date: TemporalAccessor,
         format: String
-    ) : this(date, format, Locale.getDefault(Locale.Category.FORMAT))
+    ) : this(
+        date, DateTimeFormatter.ofPattern(format, Locale.getDefault(Locale.Category.FORMAT))
+    )
+
+    override fun asString(): String = this.formatted.value()
+
 }

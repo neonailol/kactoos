@@ -1,7 +1,8 @@
 package nnl.rocks.kactoos.text
 
-import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.IOException
 
@@ -51,7 +52,7 @@ class SubText(
     constructor(
         text: Text,
         strt: Int
-    ) : this(text, { strt }, { text.asString().length })
+    ) : this(text, ScalarOf { strt }, ScalarOf { text.asString().length })
 
     /**
      * @param text The Text
@@ -62,7 +63,7 @@ class SubText(
         text: Text,
         strt: Int,
         finish: Int
-    ) : this(text, { strt }, { finish })
+    ) : this(text, ScalarOf { strt }, ScalarOf { finish })
 
     /**
      * @param text The Text
@@ -71,8 +72,8 @@ class SubText(
      */
     constructor(
         text: Text,
-        strt: KScalar<Int>,
-        finish: KScalar<Int>
+        strt: Scalar<Int>,
+        finish: Scalar<Int>
     ) : this(text, UncheckedScalar<Int>(strt), UncheckedScalar<Int>(finish))
 
     @Throws(IOException::class)
@@ -89,5 +90,4 @@ class SubText(
         return text.substring(begin, finish)
     }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

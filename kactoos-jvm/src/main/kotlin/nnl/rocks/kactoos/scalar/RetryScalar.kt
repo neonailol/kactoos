@@ -1,8 +1,8 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.KFunc
-import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.RetryFunc
 
 /**
@@ -18,11 +18,11 @@ import nnl.rocks.kactoos.func.RetryFunc
  * @param T Type of output
  * @param origin Func original
  * @param func Exit condition, returns TRUE if there is no reason to try
- * @since 0.3
+ * @since 0.9
  */
 class RetryScalar<T : Any>(
-    private val origin: KScalar<T>,
-    private val func: KFunc<Int, Boolean>
+    private val origin: Scalar<T>,
+    private val func: Func<Int, Boolean>
 ) : Scalar<T> {
 
     /**
@@ -30,16 +30,16 @@ class RetryScalar<T : Any>(
      * @param attempts Maximum number of attempts
      */
     constructor(
-        scalar: KScalar<T>,
+        scalar: Scalar<T>,
         attempts: Int
-    ) : this({ scalar.invoke() }, { attempt -> attempt >= attempts })
+    ) : this(scalar, FuncOf { attempt -> attempt >= attempts })
 
-    constructor(scalar: Scalar<T>) : this({ scalar.value() }, 3)
+    constructor(scalar: Scalar<T>) : this(scalar, 3)
 
     @Throws(Exception::class)
     override fun value(): T {
         return RetryFunc(
-            { _: Boolean -> this.origin.invoke() },
+            FuncOf<Boolean, T> { input -> this.origin.value() },
             this.func
         ).apply(true)
     }

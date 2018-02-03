@@ -2,13 +2,11 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.IoCheckedFunc
 import nnl.rocks.kactoos.text.FormattedText
 import nnl.rocks.kactoos.text.TextOf
-
 import java.io.IOException
 import java.io.InputStream
 
@@ -20,15 +18,16 @@ import java.io.InputStream
  * if you want to load a text file from `/com/example/Test.txt`,
  * you must provide this name: `"com/example/Test.txt"`.
  *
+ * @see ClassLoader.getResource
  * @param path Resource name
  * @param fallback Resource class loader
  * @param loader Fallback
- * @see ClassLoader.getResource
- * @since 0.3
+ * @since 0.1
  */
-class ResourceOf @JvmOverloads constructor(
+class ResourceOf
+@JvmOverloads constructor(
     private val path: Text,
-    private val fallback: KFunc<Text, Input>,
+    private val fallback: Func<Text, Input>,
     private val loader: ClassLoader = Thread.currentThread().contextClassLoader
 ) : Input {
 
@@ -52,7 +51,7 @@ class ResourceOf @JvmOverloads constructor(
         res: CharSequence,
         fbk: Func<CharSequence, Input>,
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
-    ) : this(TextOf(res), { input -> fbk.apply(input.asString()) }, ldr)
+    ) : this(TextOf(res), FuncOf { input -> fbk.apply(input.asString()) }, ldr)
 
     /**
      * New resource input with current context [ClassLoader].
@@ -84,7 +83,7 @@ class ResourceOf @JvmOverloads constructor(
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
     ) : this(
         res,
-        { input ->
+        FuncOf { input ->
             throw IOException(
                 FormattedText(
                     "Resource \"%s\" was not found",
@@ -103,7 +102,7 @@ class ResourceOf @JvmOverloads constructor(
     constructor(
         res: Text,
         fbk: Text
-    ) : this(res, { input -> InputOf(BytesOf(fbk.asString())) })
+    ) : this(res, FuncOf { input -> InputOf(BytesOf(fbk.asString())) })
 
     /**
      * New resource input with current context [ClassLoader].
@@ -113,7 +112,7 @@ class ResourceOf @JvmOverloads constructor(
     constructor(
         res: Text,
         fbk: Input
-    ) : this(res, { input -> fbk })
+    ) : this(res, FuncOf { input -> fbk })
 
     @Throws(IOException::class)
     override fun stream(): InputStream {

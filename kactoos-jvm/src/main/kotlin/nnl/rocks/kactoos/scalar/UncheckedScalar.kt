@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 
 import java.io.IOException
@@ -17,9 +16,7 @@ import java.io.UncheckedIOException
  * @param origin Encapsulated origin
  * @since 0.3
  */
-class UncheckedScalar<out T : Any>(private val origin: KScalar<T>) : Scalar<T> {
-
-    constructor(scalar: Scalar<T>) : this({ scalar.value() })
+class UncheckedScalar<out T : Any>(private val origin: Scalar<T>) : Scalar<T> {
 
     override fun value(): T = try {
         IoCheckedScalar(this.origin).value()

@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.func.UncheckedFunc
 import nnl.rocks.kactoos.scalar.ScalarOf
 import java.util.NoSuchElementException
@@ -16,7 +15,7 @@ import java.util.NoSuchElementException
 class RangeOf<T : Comparable<T>>(
     min: T,
     max: T,
-    incrementor: KFunc<T, T>
+    incrementor: Func<T, T>
 ) : IterableEnvelope<T>(
     ScalarOf {
         IterableOf<T>(

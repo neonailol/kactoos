@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.time
 
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -11,7 +12,7 @@ import java.time.format.DateTimeFormatter
  * [LocalDateTime] instances.
  *
  * @param parsed The parsed date.
- * @since 0.3
+ * @since 0.27
  */
 class LocalDateTimeOf(
     private val parsed: UncheckedScalar<LocalDateTime>
@@ -19,12 +20,12 @@ class LocalDateTimeOf(
 
     constructor(
         date: CharSequence
-    ) : this(UncheckedScalar({ LocalDateTime.from(Iso().get().parse(date)) }))
+    ) : this(UncheckedScalar(ScalarOf { LocalDateTime.from(Iso().get().parse(date)) }))
 
     constructor(
         date: CharSequence,
         formatter: DateTimeFormatter
-    ) : this(UncheckedScalar({ LocalDateTime.from(formatter.parse(date)) }))
+    ) : this(UncheckedScalar(ScalarOf { LocalDateTime.from(formatter.parse(date)) }))
 
     /**
      * Parses date using the provided format to create

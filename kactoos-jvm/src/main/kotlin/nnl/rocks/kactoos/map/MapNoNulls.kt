@@ -9,7 +9,7 @@ package nnl.rocks.kactoos.map
  * @param V Type of value
  * @since 0.27
  */
-class MapNoNulls<K : Any, V : Any>(private val map: MutableMap<K, V>) : MutableMap<K, V> by map {
+class MapNoNulls<K : Any, V : Any> private constructor(private val map: MutableMap<K, V>) : MutableMap<K, V> by map {
 
     constructor(map: MapEnvelope<K, V>) : this(
         {

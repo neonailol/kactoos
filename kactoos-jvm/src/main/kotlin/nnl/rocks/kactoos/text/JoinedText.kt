@@ -66,5 +66,4 @@ class JoinedText(
         return joint.toString()
     }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

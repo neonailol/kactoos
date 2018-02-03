@@ -37,5 +37,4 @@ class RotatedText(
         return text
     }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

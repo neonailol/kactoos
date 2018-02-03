@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.UncheckedScalar
+import nnl.rocks.kactoos.scalar.ScalarOf
 
 /**
  * Iterable as [Collection].
@@ -21,7 +21,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  */
 class CollectionOf<T : Any> : CollectionEnvelope<T> {
 
-    constructor(src: Iterable<T>) : super(UncheckedScalar { src.toList() })
+    constructor(src: Iterable<T>) : super(ScalarOf { src.toList() })
 
     /**
      * @param array An array of some elements

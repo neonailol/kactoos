@@ -14,10 +14,7 @@ import org.hamcrest.TypeSafeMatcher
  *
  * @param func The func.
  * @param T Type of object to match.
- *
- *
- *
- * @since 0.12
+ * @since 0.3
  */
 class MatcherOf<T : Any>(private val func: Func<T, Boolean>) : TypeSafeMatcher<T>() {
 
@@ -25,8 +22,6 @@ class MatcherOf<T : Any>(private val func: Func<T, Boolean>) : TypeSafeMatcher<T
      * @param proc The func
      */
     constructor(proc: Proc<T>) : this(FuncOf<T, Boolean>(proc, true))
-
-    constructor(func: (T) -> Boolean) : this(FuncOf { input -> func.invoke(input) })
 
     public override fun matchesSafely(item: T): Boolean = UncheckedFunc(this.func).apply(item)
 

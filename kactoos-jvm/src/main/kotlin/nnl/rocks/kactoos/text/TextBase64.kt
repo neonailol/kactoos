@@ -24,5 +24,4 @@ class TextBase64(private val origin: Text) : Text {
     @Throws(IOException::class)
     override fun asString(): String = TextOf(BytesBase64(BytesOf(this.origin))).asString()
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.iterable.IterableOf
 
@@ -22,7 +21,10 @@ import nnl.rocks.kactoos.iterable.IterableOf
  *
  * There is no thread-safety guarantee.
  *
- * @since 0.3
+ *
+ *
+ *
+ * @since 0.24
  */
 class AvgOf : NumberEnvelope {
 
@@ -30,7 +32,7 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Int) : super(
-        {
+        ScalarOf {
             var sum = 0.0
             var total = 0.0
             for (`val` in src) {
@@ -48,7 +50,7 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Long) : super(
-        {
+        ScalarOf {
             var sum = 0.0
             var total = 0.0
             for (`val` in src) {
@@ -66,7 +68,7 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Double) : super(
-        {
+        ScalarOf {
             var sum = 0.0
             var total = 0.0
             for (`val` in src) {
@@ -84,7 +86,7 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Float) : super(
-        {
+        ScalarOf {
             var sum = 0.0
             var total = 0.0
             for (`val` in src) {
@@ -102,18 +104,18 @@ class AvgOf : NumberEnvelope {
      * @param src Numbers
      */
     @SafeVarargs
-    constructor(vararg src: KScalar<Number>) : this(IterableOf<KScalar<Number>>(src.iterator()))
+    constructor(vararg src: Scalar<Number>) : this(IterableOf<Scalar<Number>>(src.iterator()))
 
     /**
      * @param src The iterable
      */
-    constructor(src: Iterable<KScalar<Number>>) : super(
-        {
+    constructor(src: Iterable<Scalar<Number>>) : super(
+        ScalarOf {
             val numbers = src.iterator()
             var sum = 0.0
             var total = 0.0
             while (numbers.hasNext()) {
-                val next = numbers.next().invoke()
+                val next = numbers.next().value()
                 sum += next.toDouble()
                 total += 1.0
             }

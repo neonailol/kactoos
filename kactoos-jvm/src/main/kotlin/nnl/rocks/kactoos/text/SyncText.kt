@@ -25,7 +25,4 @@ class SyncText(
         return this.origin.asString()
     }
 
-    override fun compareTo(other: Text): Int = synchronized(this.lock) {
-        return UncheckedText(this).compareTo(other)
-    }
 }

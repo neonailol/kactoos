@@ -1,7 +1,8 @@
 package nnl.rocks.kactoos.io
 
+import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.KFunc
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.IoCheckedFunc
 
 import java.io.IOException
@@ -30,7 +31,7 @@ class InputWithFallback(
     constructor(
         input: Input,
         alt: Input
-    ) : this(input, { alt })
+    ) : this(input, FuncOf { alt })
 
     constructor(
         input: Input
@@ -42,7 +43,7 @@ class InputWithFallback(
      */
     constructor(
         input: Input,
-        alt: KFunc<IOException, Input>
+        alt: Func<IOException, Input>
     ) : this(input, IoCheckedFunc<IOException, Input>(alt))
 
     @Throws(IOException::class)

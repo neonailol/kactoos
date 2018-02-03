@@ -35,6 +35,12 @@ interface Input {
      */
     @Throws(IOException::class)
     fun stream(): InputStream
+
+    class NoNulls(private val origin: Input) : Input {
+
+        @Throws(IOException::class)
+        override fun stream(): InputStream = origin.stream()
+    }
 }
 
 internal typealias KInput = () -> InputStream

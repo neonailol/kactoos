@@ -1,5 +1,8 @@
 package nnl.rocks.kactoos.iterable
 
+import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.SyncScalar
+
 /**
  * Synchronized iterable.
  *
@@ -14,23 +17,23 @@ package nnl.rocks.kactoos.iterable
  *
  * Objects of this class are thread-safe.
  *
+ *
+ *
  * @param X Type of item
- * @since 0.3
+ * @since 0.24
  */
-class SyncIterable<X : Any> @JvmOverloads constructor(
-    private val origin: Iterable<X>,
-    private val lock: Any = Any()
-) : Iterable<X> {
+class SyncIterable<X : Any>(iterable: Iterable<X>) : IterableEnvelope<X>(
+    SyncScalar<Iterable<X>>(
+        ScalarOf {
+            iterable
+        }
+    )
+) {
 
     /**
      * @param src The underlying iterable
      */
     @SafeVarargs
+    @Suppress("SpreadOperator")
     constructor(vararg src: X) : this(IterableOf<X>(*src))
-
-    override fun iterator(): Iterator<X> {
-        synchronized(this.lock) {
-            return this.origin.iterator()
-        }
-    }
 }

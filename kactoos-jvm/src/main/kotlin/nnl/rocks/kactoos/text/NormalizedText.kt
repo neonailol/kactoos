@@ -23,5 +23,4 @@ class NormalizedText(private val origin: Text) : Text {
     @Throws(IOException::class)
     override fun asString(): String = TrimmedText(this.origin).asString().replace("\\s+".toRegex(), " ")
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

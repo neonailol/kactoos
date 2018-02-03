@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import java.io.IOException
 
@@ -21,14 +20,12 @@ import java.io.IOException
  * @param origin Encapsulated scalar
  * @since 0.4
  */
-class IoCheckedScalar<out T : Any>(private val origin: KScalar<T>) : Scalar<T> {
-
-    constructor(scalar: Scalar<T>) : this({ scalar.value() })
+class IoCheckedScalar<out T : Any>(private val origin: Scalar<T>) : Scalar<T> {
 
     @Throws(IOException::class)
     @Suppress("TooGenericExceptionCaught")
     override fun value(): T = try {
-        this.origin.invoke()
+        this.origin.value()
     } catch (ex: IOException) {
         throw ex
     } catch (ex: RuntimeException) {

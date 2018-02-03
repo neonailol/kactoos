@@ -2,8 +2,9 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.File
@@ -33,7 +34,7 @@ class ReaderOf(
     private val source: UncheckedScalar<Reader>
 ) : Reader() {
 
-    private constructor(src: KScalar<Reader>) : this(UncheckedScalar(StickyScalar(src)))
+    private constructor(src: Scalar<Reader>) : this(UncheckedScalar(StickyScalar(src)))
 
     /**
      * @param chars Chars
@@ -161,7 +162,7 @@ class ReaderOf(
         input: Input,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(
-        { InputStreamReader(input.stream(), charset) }
+        ScalarOf { InputStreamReader(input.stream(), charset) }
     )
 
     /**
@@ -171,7 +172,7 @@ class ReaderOf(
     constructor(
         input: Input,
         charset: CharSequence
-    ) : this({ InputStreamReader(input.stream(), charset.toString()) })
+    ) : this(ScalarOf { InputStreamReader(input.stream(), charset.toString()) })
 
     /**
      * @param input The input
@@ -181,7 +182,7 @@ class ReaderOf(
     constructor(
         input: Input,
         decoder: CharsetDecoder
-    ) : this({ InputStreamReader(input.stream(), decoder) })
+    ) : this(ScalarOf { InputStreamReader(input.stream(), decoder) })
 
     /**
      * @param stream The stream
@@ -216,7 +217,7 @@ class ReaderOf(
     /**
      * @param rdr The reader
      */
-    private constructor(rdr: Reader) : this({ rdr })
+    private constructor(rdr: Reader) : this(ScalarOf { rdr })
 
     @Throws(IOException::class)
     override fun read(

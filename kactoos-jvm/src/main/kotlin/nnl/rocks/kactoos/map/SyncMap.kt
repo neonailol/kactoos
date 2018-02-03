@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap
  * @param Y Type of value
  * @since 0.24
  */
-class SyncMap<X : Any, Y : Any, Z : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
+class SyncMap<X : Any, Y : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
     SyncScalar<Map<X, Y>>(ScalarOf { val temp = ConcurrentHashMap<X, Y>(0); temp.putAll(map); temp })
 ) {
 
@@ -46,80 +46,14 @@ class SyncMap<X : Any, Y : Any, Z : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
     ) : this(map, IterableOf<Map.Entry<X, Y>>(*list))
 
     /**
-     * @param map The map to extend
-     * @param list List of items
-     * @param key Func to create key
-     * @param value Func to create value
-     * @param Z Type of items in the list
-     *
+     * @param list Entries for the entries
      */
-    constructor(
-        key: Func<Z, X>,
-        value: Func<Z, Y>,
-        map: Map<X, Y>,
-        list: Iterable<Z>
-    ) : this(
-        FuncOf { item -> MapEntry<X, Y>(key.apply(item), value.apply(item)) },
-        map, list
-    )
-
-    /**
-     * @param list List of items
-     * @param key Func to create key
-     * @param value Func to create value
-     * @param Z Type of items in the list
-     */
-    constructor(
-        list: Iterable<Z>,
-        key: Func<Z, X>,
-        value: Func<Z, Y>
-    ) : this(
-        FuncOf { item -> MapEntry<X, Y>(key.apply(item), value.apply(item)) }, list
-    )
-
-    /**
-     * @param list List of items
-     * @param entry Func to create entry
-     * @param Z Type of items in the list
-     */
-    @SafeVarargs
-    @Suppress("SpreadOperator")
-    constructor(
-        entry: Func<Z, Map.Entry<X, Y>>,
-        vararg list: Z
-    ) : this(Mapped<Z, Map.Entry<X, Y>>(entry, IterableOf<Z>(*list)))
-
-    /**
-     * @param list List of items
-     * @param entry Func to create entry
-     * @param Z Type of items in the list
-     */
-    constructor(
-        entry: Func<Z, Map.Entry<X, Y>>,
-        list: Iterable<Z>
-    ) : this(Mapped<Z, Map.Entry<X, Y>>(entry, list))
-
-    /**
-     * @param map The map to extend
-     * @param list List of items
-     * @param entry Func to create entry
-     * @param Z Type of items in the list
-     */
-    constructor(
-        entry: Func<Z, Map.Entry<X, Y>>,
-        map: Map<X, Y>,
-        list: Iterable<Z>
-    ) : this(map, Mapped<Z, Map.Entry<X, Y>>(entry, list))
+    constructor(list: Iterable<Map.Entry<X, Y>>) : this(MapOf<X, Y>(list))
 
     /**
      * @param list Entries for the entries
      */
-    constructor(list: Iterable<Map.Entry<X, Y>>) : this(MapOf<X, Y, Z>(list))
-
-    /**
-     * @param list Entries for the entries
-     */
-    constructor(list: Iterator<Map.Entry<X, Y>>) : this(MapOf<X, Y, Z>(list))
+    constructor(list: Iterator<Map.Entry<X, Y>>) : this(MapOf<X, Y>(list))
 
     /**
      * Ctor.
@@ -129,5 +63,86 @@ class SyncMap<X : Any, Y : Any, Z : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
     constructor(
         map: Map<X, Y>,
         list: Iterable<Map.Entry<X, Y>>
-    ) : this(MapOf<X, Y, Z>(map, list))
+    ) : this(MapOf<X, Y>(map, list))
+
+    companion object {
+
+        /**
+         * @param map The map to extend
+         * @param list List of items
+         * @param key Func to create key
+         * @param value Func to create value
+         * @param Z Type of items in the list
+         *
+         */
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            key: Func<Z, X>,
+            value: Func<Z, Y>,
+            map: Map<X, Y>,
+            list: Iterable<Z>
+        ): SyncMap<X, Y> {
+            return SyncMap(
+                entry = FuncOf { item -> MapEntry(key.apply(item), value.apply(item)) },
+                map = map,
+                list = list
+            )
+        }
+
+        /**
+         * @param list List of items
+         * @param key Func to create key
+         * @param value Func to create value
+         * @param Z Type of items in the list
+         */
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            list: Iterable<Z>,
+            key: Func<Z, X>,
+            value: Func<Z, Y>
+        ): SyncMap<X, Y> {
+            return SyncMap(
+                entry = FuncOf<Z, MapEntry<X, Y>> { item -> MapEntry(key.apply(item), value.apply(item)) },
+                list = list
+            )
+        }
+
+        /**
+         * @param list List of items
+         * @param entry Func to create entry
+         * @param Z Type of items in the list
+         */
+        @SafeVarargs
+        @Suppress("SpreadOperator")
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            entry: Func<Z, Map.Entry<X, Y>>,
+            vararg args: Z
+        ): SyncMap<X, Y> {
+            return SyncMap(Mapped(entry, IterableOf(*args)))
+        }
+
+        /**
+         * @param list List of items
+         * @param entry Func to create entry
+         * @param Z Type of items in the list
+         */
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            entry: Func<Z, Map.Entry<X, Y>>,
+            list: Iterable<Z>
+        ): SyncMap<X, Y> {
+            return SyncMap(Mapped(entry, list))
+        }
+
+        /**
+         * @param map The map to extend
+         * @param list List of items
+         * @param entry Func to create entry
+         * @param Z Type of items in the list
+         */
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            entry: Func<Z, Map.Entry<X, Y>>,
+            map: Map<X, Y>,
+            list: Iterable<Z>
+        ): SyncMap<X, Y> {
+            return SyncMap(map, Mapped(entry, list))
+        }
+    }
 }

@@ -15,7 +15,7 @@ import java.io.IOException
  * @since 0.2
  */
 @FunctionalInterface
-actual interface Text : Comparable<Text> {
+actual interface Text {
 
     /**
      * Convert it to the string.
@@ -26,5 +26,9 @@ actual interface Text : Comparable<Text> {
     @Throws(IOException::class)
     actual fun asString(): String
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
+    class NoNulls(private val origin: Text) : Text {
+
+        @Throws(IOException::class)
+        override fun asString(): String = origin.asString()
+    }
 }

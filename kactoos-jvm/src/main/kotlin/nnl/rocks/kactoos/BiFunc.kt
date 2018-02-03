@@ -31,4 +31,13 @@ actual interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
         first: X,
         second: Y
     ): Z
+
+    class NoNulls<in X : Any, in Y : Any, out Z : Any>(private val origin: BiFunc<X, Y, Z>) : BiFunc<X, Y, Z> {
+
+        @Throws(Exception::class)
+        override fun apply(
+            first: X,
+            second: Y
+        ): Z = origin.apply(first, second)
+    }
 }

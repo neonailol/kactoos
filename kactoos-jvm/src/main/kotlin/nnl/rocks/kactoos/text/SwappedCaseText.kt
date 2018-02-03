@@ -32,5 +32,4 @@ class SwappedCaseText(private val origin: Text) : Text {
         return String(chars)
     }
 
-    override fun compareTo(other: Text): Int = UncheckedText(this).compareTo(other)
 }

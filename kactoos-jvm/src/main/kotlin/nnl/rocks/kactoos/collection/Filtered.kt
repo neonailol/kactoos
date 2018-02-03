@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.collection
 
-import nnl.rocks.kactoos.KFunc
+import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.iterable.Filtered
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.scalar.ScalarOf
 
@@ -10,15 +11,15 @@ import nnl.rocks.kactoos.scalar.ScalarOf
  * There is no thread-safety guarantee.
  *
  * @param X Type of source item.
- * @since 0.3
+ * @since 1.16
  */
 class Filtered<X : Any> : CollectionEnvelope<X> {
 
     constructor(
-        func: KFunc<X, Boolean>,
+        func: Func<X, Boolean>,
         src: Iterable<X>
     ) : super(
-        ScalarOf { CollectionOf<X>(nnl.rocks.kactoos.iterable.Filtered<X>(func, src)) }
+        ScalarOf { CollectionOf<X>(Filtered<X>(func, src)) }
     )
 
     /**
@@ -28,7 +29,7 @@ class Filtered<X : Any> : CollectionEnvelope<X> {
      */
     @SafeVarargs
     constructor(
-        func: KFunc<X, Boolean>,
+        func: Func<X, Boolean>,
         vararg src: X
     ) : this(func, IterableOf<X>(src.iterator()))
 
@@ -39,7 +40,7 @@ class Filtered<X : Any> : CollectionEnvelope<X> {
      * @since 0.23
      */
     constructor(
-        func: KFunc<X, Boolean>,
+        func: Func<X, Boolean>,
         src: Iterator<X>
     ) : this(func, IterableOf<X>(src))
 }

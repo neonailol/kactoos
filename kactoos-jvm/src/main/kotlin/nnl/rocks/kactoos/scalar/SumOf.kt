@@ -28,7 +28,7 @@ import nnl.rocks.kactoos.Scalar
 class SumOf : NumberEnvelope {
 
     constructor(vararg src: Int) : super(
-        {
+        ScalarOf {
             var sum = 0.0
             for (`val` in src) {
                 sum += `val`.toDouble()
@@ -42,7 +42,7 @@ class SumOf : NumberEnvelope {
      * @since 0.22
      */
     constructor(vararg src: Long) : super(
-        {
+        ScalarOf {
             var sum = 0.0
             for (`val` in src) {
                 sum += `val`.toDouble()
@@ -56,7 +56,7 @@ class SumOf : NumberEnvelope {
      * @since 0.22
      */
     constructor(vararg src: Double) : super(
-        {
+        ScalarOf {
             var sum = 0.0
             for (`val` in src) {
                 sum += `val`
@@ -70,7 +70,7 @@ class SumOf : NumberEnvelope {
      * @since 0.22
      */
     constructor(vararg src: Float) : super(
-        {
+        ScalarOf {
             var sum = 0.0
             for (`val` in src) {
                 sum += `val`.toDouble()
@@ -83,7 +83,7 @@ class SumOf : NumberEnvelope {
      * @param src The iterable
      */
     constructor(src: Iterable<Number>) : super(
-        {
+        ScalarOf {
             val numbers = src.iterator()
             var sum = 0.0
             while (numbers.hasNext()) {

@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Proc
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
@@ -30,7 +29,6 @@ class Or(
      */
     @SafeVarargs
     constructor(vararg scalar: Scalar<Boolean>) : this(IterableOf<Scalar<Boolean>>(scalar.iterator()))
-
 
     /**
      * @param iterable The iterable.

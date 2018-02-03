@@ -5,7 +5,7 @@ package nnl.rocks.kactoos
  *
  * @since 0.2
  */
-expect interface Text : Comparable<Text> {
+expect interface Text {
 
     /**
      * Convert it to the string.
