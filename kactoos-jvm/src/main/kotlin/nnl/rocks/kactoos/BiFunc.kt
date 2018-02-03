@@ -34,10 +34,11 @@ actual interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
 
     class NoNulls<in X : Any, in Y : Any, out Z : Any>(private val origin: BiFunc<X, Y, Z>) : BiFunc<X, Y, Z> {
 
+        @Suppress("USELESS_ELVIS")
         @Throws(Exception::class)
         override fun apply(
             first: X,
             second: Y
-        ): Z = origin.apply(first, second)
+        ): Z = origin.apply(first, second) ?: throw IllegalStateException("NULL instead of a valid result")
     }
 }

@@ -60,7 +60,7 @@ public final class FuncOfTest {
                     done.set(true);
                 }
             ).apply("hello you"),
-            Matchers.nullValue()
+            Matchers.notNullValue()
         );
     }
 
@@ -71,7 +71,7 @@ public final class FuncOfTest {
             new FuncOf<String, Boolean>(
                 () -> done.set(true)
             ).apply("hello, world"),
-            Matchers.nullValue()
+            Matchers.notNullValue()
         );
     }
 

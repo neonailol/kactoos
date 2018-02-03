@@ -97,6 +97,6 @@ class TempFile private constructor(
      */
     @Throws(IOException::class)
     override fun close() {
-        Files.delete(IoCheckedScalar(this).value())
+        Files.delete(IoCheckedScalar(this.file).value())
     }
 }

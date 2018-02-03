@@ -37,8 +37,9 @@ actual interface Scalar<out T : Any> {
 
     class NoNulls<out T : Any>(private val origin: Scalar<T>) : Scalar<T> {
 
+        @Suppress("USELESS_ELVIS")
         @Throws(Exception::class)
-        override fun value(): T = origin.value()
+        override fun value(): T = origin.value() ?: throw IllegalStateException("NULL instead of a valid result")
     }
 
 }

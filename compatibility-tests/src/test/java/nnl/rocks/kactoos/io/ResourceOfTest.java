@@ -49,7 +49,7 @@ public final class ResourceOfTest {
             Arrays.copyOfRange(
                 new BytesOf(
                     new ResourceOf(
-                        "org/cactoos/io/ResourceOfTest.class"
+                        "nnl/rocks/kactoos/io/ResourceOfTest.class"
                     )
                 ).asBytes(),
                 // @checkstyle MagicNumber (2 lines)

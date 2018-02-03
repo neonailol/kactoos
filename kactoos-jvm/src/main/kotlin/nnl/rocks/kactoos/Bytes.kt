@@ -24,7 +24,8 @@ actual interface Bytes {
 
     class NoNulls(private val origin: Bytes) : Bytes {
 
+        @Suppress("USELESS_ELVIS")
         @Throws(IOException::class)
-        override fun asBytes(): ByteArray = origin.asBytes()
+        override fun asBytes(): ByteArray = origin.asBytes() ?: throw IllegalStateException("NULL instead of a valid result")
     }
 }

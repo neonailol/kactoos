@@ -70,7 +70,7 @@ public final class BiFuncOfTest {
                     done.set(true);
                 }
             ).apply("hello you", 1),
-            Matchers.nullValue()
+            Matchers.notNullValue()
         );
     }
 
@@ -81,7 +81,7 @@ public final class BiFuncOfTest {
             new BiFuncOf<String, Integer, Boolean>(
                 () -> done.set(true)
             ).apply("hello, world", 1),
-            Matchers.nullValue()
+            Matchers.notNullValue()
         );
     }
 

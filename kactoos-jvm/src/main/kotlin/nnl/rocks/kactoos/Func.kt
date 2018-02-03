@@ -1,5 +1,7 @@
 package nnl.rocks.kactoos
 
+import java.io.IOException
+
 /**
  * Function.
  *
@@ -36,7 +38,8 @@ actual interface Func<in X : Any, out Y : Any> {
 
     class NoNulls<in X : Any, out Y : Any>(private val func: Func<X, Y>) : Func<X, Y> {
 
+        @Suppress("USELESS_ELVIS")
         @Throws(Exception::class)
-        override fun apply(input: X): Y = func.apply(input)
+        override fun apply(input: X): Y = func.apply(input) ?: throw IOException("NULL instead of a valid result")
     }
 }

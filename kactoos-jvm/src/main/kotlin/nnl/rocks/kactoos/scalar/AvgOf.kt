@@ -1,7 +1,13 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.func.BiFuncOf
+import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
+import nnl.rocks.kactoos.iterable.LengthOf
+import nnl.rocks.kactoos.iterable.Mapped
+import java.math.BigDecimal
+import java.math.MathContext
 
 /**
  * Average of numbers.
@@ -21,108 +27,81 @@ import nnl.rocks.kactoos.iterable.IterableOf
  *
  * There is no thread-safety guarantee.
  *
- *
- *
- *
+ * @param src The iterable
  * @since 0.24
  */
-class AvgOf : NumberEnvelope {
+class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
+    LengthOf(src).toLong(),
+    FuncOf { len -> len > 0 },
+    FuncOf { len ->
+        Reduced<BigDecimal, BigDecimal>(
+            BigDecimal.ZERO,
+            BiFuncOf { sum, value -> sum.add(value, MathContext.DECIMAL128) },
+            Mapped<Scalar<Number>, BigDecimal>(
+                FuncOf { number ->
+                    BigDecimal.valueOf(
+                        number.value().toDouble()
+                    )
+                },
+                src
+            )
+        ).value().divide(
+            BigDecimal.valueOf(len),
+            MathContext.DECIMAL128
+        ).toDouble()
+    },
+    FuncOf { len -> 0.0 }
+)) {
 
     /**
+     * Ctor.
      * @param src Numbers
      */
-    constructor(vararg src: Int) : super(
-        ScalarOf {
-            var sum = 0.0
-            var total = 0.0
-            for (`val` in src) {
-                sum += `val`.toDouble()
-                total += 1.0
-            }
-            if (total == 0.0) {
-                total = 1.0
-            }
-            sum / total
-        }
+    constructor(vararg src: Int) : this(
+        Mapped<Int, Scalar<Number>>(
+            FuncOf<Int, Scalar<Number>> { number -> ScalarOf { number } },
+            Iterable { src.iterator() }
+        )
     )
 
     /**
+     * Ctor.
      * @param src Numbers
      */
-    constructor(vararg src: Long) : super(
-        ScalarOf {
-            var sum = 0.0
-            var total = 0.0
-            for (`val` in src) {
-                sum += `val`.toDouble()
-                total += 1.0
-            }
-            if (total == 0.0) {
-                total = 1.0
-            }
-            sum / total
-        }
+    constructor(vararg src: Long) : this(
+        Mapped<Long, Scalar<Number>>(
+            FuncOf { number -> ScalarOf { number } },
+            Iterable { src.iterator() }
+        )
     )
 
     /**
+     * Ctor.
      * @param src Numbers
      */
-    constructor(vararg src: Double) : super(
-        ScalarOf {
-            var sum = 0.0
-            var total = 0.0
-            for (`val` in src) {
-                sum += `val`
-                total += 1.0
-            }
-            if (total == 0.0) {
-                total = 1.0
-            }
-            sum / total
-        }
+    constructor(vararg src: Double) : this(
+        Mapped<Double, Scalar<Number>>(
+            FuncOf { number -> ScalarOf { number } },
+            Iterable { src.iterator() }
+        )
     )
 
     /**
+     * Ctor.
      * @param src Numbers
      */
-    constructor(vararg src: Float) : super(
-        ScalarOf {
-            var sum = 0.0
-            var total = 0.0
-            for (`val` in src) {
-                sum += `val`.toDouble()
-                total += 1.0
-            }
-            if (total == 0.0) {
-                total = 1.0
-            }
-            sum / total
-        }
+    constructor(vararg src: Float) : this(
+        Mapped<Float, Scalar<Number>>(
+            FuncOf { number -> ScalarOf { number } },
+            Iterable { src.iterator() }
+        )
     )
 
     /**
+     * Ctor.
      * @param src Numbers
      */
     @SafeVarargs
-    constructor(vararg src: Scalar<Number>) : this(IterableOf<Scalar<Number>>(src.iterator()))
+    constructor(vararg src: Scalar<Number>) : this(IterableOf<Scalar<Number>>(*src))
 
-    /**
-     * @param src The iterable
-     */
-    constructor(src: Iterable<Scalar<Number>>) : super(
-        ScalarOf {
-            val numbers = src.iterator()
-            var sum = 0.0
-            var total = 0.0
-            while (numbers.hasNext()) {
-                val next = numbers.next().value()
-                sum += next.toDouble()
-                total += 1.0
-            }
-            if (total == 0.0) {
-                total = 1.0
-            }
-            sum / total
-        }
-    )
 }

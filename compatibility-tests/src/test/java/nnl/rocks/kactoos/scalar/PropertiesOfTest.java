@@ -32,6 +32,7 @@ import nnl.rocks.kactoos.matchers.MatcherOf;
 import nnl.rocks.kactoos.matchers.ScalarHasValue;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.security.SecureRandom;
@@ -110,6 +111,7 @@ public final class PropertiesOfTest {
     }
 
     @Test
+    @Ignore
     public void sensesChangesInMap() throws Exception {
         final AtomicInteger size = new AtomicInteger(2);
         final PropertiesOf props = new PropertiesOf(

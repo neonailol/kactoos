@@ -28,7 +28,8 @@ actual interface Text {
 
     class NoNulls(private val origin: Text) : Text {
 
+        @Suppress("USELESS_ELVIS")
         @Throws(IOException::class)
-        override fun asString(): String = origin.asString()
+        override fun asString(): String = origin.asString() ?: throw IllegalStateException("NULL instead of a valid result")
     }
 }

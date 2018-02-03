@@ -37,7 +37,7 @@ import java.io.IOException;
  */
 public final class InputTest {
 
-    @Test(expected = IOException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void failForNullInput() throws IOException {
         new Input.NoNulls(null).stream();
     }

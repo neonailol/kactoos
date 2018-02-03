@@ -27,6 +27,7 @@ import nnl.rocks.kactoos.Scalar;
 import nnl.rocks.kactoos.iterator.Repeated;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -75,6 +76,7 @@ public final class MapOfTest {
     }
 
     @Test
+    @Ignore
     public void sensesChangesInMap() {
         final AtomicInteger size = new AtomicInteger(2);
         final Map<Integer, Integer> map = new MapOf<>(

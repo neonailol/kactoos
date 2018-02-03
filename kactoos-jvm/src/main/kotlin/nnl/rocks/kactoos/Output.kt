@@ -46,8 +46,9 @@ interface Output {
 
     class NoNulls(private val origin: Output) : Output {
 
+        @Suppress("USELESS_ELVIS")
         @Throws(IOException::class)
-        override fun stream(): OutputStream = this.origin.stream()
+        override fun stream(): OutputStream = this.origin.stream() ?: throw IOException("NULL instead of a valid result")
     }
 }
 

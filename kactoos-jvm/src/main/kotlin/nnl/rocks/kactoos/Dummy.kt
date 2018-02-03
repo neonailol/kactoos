@@ -6,5 +6,5 @@ package nnl.rocks.kactoos
  */
 @Suppress("UNCHECKED_CAST")
 internal actual fun <T> dummy(): T {
-    return null as T
+    return Any() as T
 }
