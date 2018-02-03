@@ -25,7 +25,7 @@ class ChainedFuncTest {
         MatcherAssert.assertThat(
             LengthOf(
                 Filtered<String>(
-                    FuncOf { input -> input.endsWith("12") }, Mapped(
+                    { input -> input.endsWith("12") }, Mapped(
                     ChainedFunc<String, String, String>(
                         FuncOf { input -> input + "1" },
                         FuncOf { input -> input + "2" }
@@ -43,7 +43,7 @@ class ChainedFuncTest {
         MatcherAssert.assertThat(
             LengthOf(
                 Filtered<String>(
-                    FuncOf { input -> ! input.startsWith("st") }, Mapped(
+                    { input -> ! input.startsWith("st") }, Mapped(
                     ChainedFunc<String, String, String>(
                         FuncOf { input -> input + "1" },
                         IterableOf(

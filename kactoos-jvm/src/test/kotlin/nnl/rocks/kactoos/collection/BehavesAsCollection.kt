@@ -18,8 +18,6 @@ class BehavesAsCollection<E : Any>(private val sample: E) : TypeSafeMatcher<Coll
         MatcherAssert.assertThat(col, Matchers.not(Matchers.emptyIterable()))
         MatcherAssert.assertThat(col, Matchers.hasSize(Matchers.greaterThan(0)))
         MatcherAssert.assertThat(ListOf(col), Matchers.hasItem(this.sample))
-        val array = arrayOfNulls<Any>(col.size)
-        MatcherAssert.assertThat(ListOf(array), Matchers.hasItem(this.sample))
         MatcherAssert.assertThat(col.containsAll(ListOf(this.sample)), Matchers.`is`(true))
         return true
     }

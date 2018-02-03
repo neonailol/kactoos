@@ -1,7 +1,6 @@
 
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.func.FuncOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
@@ -26,7 +25,7 @@ class RepeatedTest {
                 "Can't generate an iterable with fixed size",
                 LengthOf(
                         Filtered<Int>(
-                            FuncOf{ input -> input == element },
+                            { input -> input == element },
                             Repeated(size, element)
                         )
                 ).toInt(),

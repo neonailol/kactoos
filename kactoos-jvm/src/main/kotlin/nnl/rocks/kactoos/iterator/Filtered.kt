@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.func.UncheckedFunc
 import java.util.LinkedList
 import java.util.NoSuchElementException
@@ -30,13 +30,13 @@ import java.util.Queue
  * @since 0.1
  */
 class Filtered<out X : Any>(
-    private val func: Func<X, Boolean>,
+    private val func: KFunc<X, Boolean>,
     private val iterator: Iterator<X>,
     private val buffer: Queue<X>
 ) : Iterator<X> {
 
     constructor(
-        func: Func<X, Boolean>,
+        func: KFunc<X, Boolean>,
         iterator: Iterator<X>
     ) : this(func, iterator, LinkedList())
 

@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.iterator.Filtered
 import nnl.rocks.kactoos.scalar.ScalarOf
 import java.util.LinkedList
@@ -31,7 +31,7 @@ import java.util.LinkedList
  * @since 0.1
  */
 class Filtered<X : Any>(
-    fnc: Func<X, Boolean>,
+    fnc: KFunc<X, Boolean>,
     src: Iterable<X>
 ) : IterableEnvelope<X>(
     ScalarOf {
@@ -50,7 +50,7 @@ class Filtered<X : Any>(
      */
     @SafeVarargs
     constructor(
-        fnc: Func<X, Boolean>,
+        fnc: KFunc<X, Boolean>,
         vararg src: X
     ) : this(fnc, IterableOf<X>(src.iterator()))
 
@@ -60,7 +60,7 @@ class Filtered<X : Any>(
      * @since 0.21
      */
     constructor(
-        fnc: Func<X, Boolean>,
+        fnc: KFunc<X, Boolean>,
         src: Iterator<X>
     ) : this(fnc, IterableOf<X>(src))
 }

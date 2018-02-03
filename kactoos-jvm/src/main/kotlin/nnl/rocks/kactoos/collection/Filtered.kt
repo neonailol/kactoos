@@ -1,9 +1,8 @@
 package nnl.rocks.kactoos.collection
 
-import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KFunc
-import nnl.rocks.kactoos.iterable.Filtered
 import nnl.rocks.kactoos.iterable.IterableOf
+import nnl.rocks.kactoos.scalar.ScalarOf
 
 /**
  * Filtered collection.
@@ -19,14 +18,7 @@ class Filtered<X : Any> : CollectionEnvelope<X> {
         func: KFunc<X, Boolean>,
         src: Iterable<X>
     ) : super(
-        { CollectionOf<X>(Filtered<X>(func, src)) }
-    )
-
-    constructor(
-        func: Func<X, Boolean>,
-        src: Iterable<X>
-    ) : super(
-        { CollectionOf<X>(Filtered<X>(func, src)) }
+        ScalarOf { CollectionOf<X>(nnl.rocks.kactoos.iterable.Filtered<X>(func, src)) }
     )
 
     /**
@@ -47,7 +39,7 @@ class Filtered<X : Any> : CollectionEnvelope<X> {
      * @since 0.23
      */
     constructor(
-        func: Func<X, Boolean>,
+        func: KFunc<X, Boolean>,
         src: Iterator<X>
     ) : this(func, IterableOf<X>(src))
 }

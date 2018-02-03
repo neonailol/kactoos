@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.func.FuncOf
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
 import org.junit.Test
@@ -21,7 +20,7 @@ class FilteredTest {
             "Can't calculate the length of an iterable",
             LengthOf(
                 Filtered<String>(
-                    FuncOf { input -> input.length > 4 }, IterableOf(
+                    { input -> input.length > 4 }, IterableOf(
                     "hello", "world", "друг"
                 )
                 )
@@ -36,7 +35,7 @@ class FilteredTest {
             "Can't calculate the length of an empty iterable",
             LengthOf(
                 Filtered<String>(
-                    FuncOf{ input -> input.length > 1 },
+                    { input -> input.length > 1 },
                     IterableOf<String>()
                 )
             ).toInt(),
@@ -47,7 +46,7 @@ class FilteredTest {
     @Test
     fun filtersIterablesWithSize() {
         val list = Filtered<Int>(
-            FuncOf{ i -> i > 0 },
+            { i -> i > 0 },
             IterableOf(1, 2, - 1, 0, 1)
         )
         MatcherAssert.assertThat(
