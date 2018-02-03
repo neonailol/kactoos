@@ -41,5 +41,4 @@ actual interface Scalar<out T : Any> {
         @Throws(Exception::class)
         override fun value(): T = origin.value() ?: throw IllegalStateException("NULL instead of a valid result")
     }
-
 }

@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.scalar
 
-
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text

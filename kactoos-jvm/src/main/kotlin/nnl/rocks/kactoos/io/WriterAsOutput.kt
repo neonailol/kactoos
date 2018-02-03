@@ -41,5 +41,4 @@ internal class WriterAsOutput(
     override fun stream(): OutputStream {
         return WriterAsOutputStream(this.writer, this.decoder, this.size)
     }
-
 }

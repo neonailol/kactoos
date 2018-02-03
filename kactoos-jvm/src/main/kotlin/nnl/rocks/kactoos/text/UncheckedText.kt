@@ -36,5 +36,4 @@ class UncheckedText(
     } catch (ex: IOException) {
         UncheckedFunc(fallback).apply(ex)
     }
-
 }

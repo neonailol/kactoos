@@ -21,5 +21,4 @@ class TrimmedText(private val origin: Text) : Text {
     override fun asString(): String {
         return this.origin.asString().trim { it <= ' ' }
     }
-
 }

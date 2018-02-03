@@ -224,5 +224,4 @@ class InputStreamOf private constructor(src: Scalar<InputStream>) : InputStream(
     override fun markSupported(): Boolean {
         return this.source.value().markSupported()
     }
-
 }

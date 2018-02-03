@@ -30,7 +30,6 @@ class HexOf(private val bytes: Bytes) : Text {
         return String(hex)
     }
 
-
     companion object {
 
         /**

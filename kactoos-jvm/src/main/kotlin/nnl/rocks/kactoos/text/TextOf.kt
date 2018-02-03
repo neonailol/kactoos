@@ -295,5 +295,4 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     override fun toString(): String {
         return UncheckedText(this).asString()
     }
-
 }

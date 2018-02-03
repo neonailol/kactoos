@@ -24,5 +24,4 @@ class SyncText(
     override fun asString(): String = synchronized(this.lock) {
         return this.origin.asString()
     }
-
 }

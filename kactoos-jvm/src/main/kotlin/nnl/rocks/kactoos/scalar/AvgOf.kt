@@ -103,5 +103,4 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      */
     @SafeVarargs
     constructor(vararg src: Scalar<Number>) : this(IterableOf<Scalar<Number>>(*src))
-
 }

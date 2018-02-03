@@ -23,5 +23,4 @@ class UpperText(
 
     @Throws(IOException::class)
     override fun asString(): String = this.origin.asString().toUpperCase(this.locale)
-
 }

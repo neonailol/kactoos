@@ -37,5 +37,4 @@ class RepeatedText(
         }
         toString()
     }
-
 }

@@ -128,5 +128,4 @@ class FormattedText(
         }
         return out.toString()
     }
-
 }

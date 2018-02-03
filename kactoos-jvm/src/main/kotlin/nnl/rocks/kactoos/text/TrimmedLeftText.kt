@@ -26,5 +26,4 @@ class TrimmedLeftText(private val origin: Text) : Text {
         }
         return text.substring(cursor)
     }
-
 }

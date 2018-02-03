@@ -65,5 +65,4 @@ class JoinedText(
         }
         return joint.toString()
     }
-
 }

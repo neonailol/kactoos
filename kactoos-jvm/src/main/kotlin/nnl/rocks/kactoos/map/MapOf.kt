@@ -136,6 +136,5 @@ class MapOf<X : Any, Y : Any>(entries: Iterable<Map.Entry<X, Y>>) : MapEnvelope<
         ): MapOf<X, Y> {
             return MapOf(src, Mapped(entry, list))
         }
-
     }
 }

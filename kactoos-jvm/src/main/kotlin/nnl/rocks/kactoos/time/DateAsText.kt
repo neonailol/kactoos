@@ -142,5 +142,4 @@ class DateAsText(
     )
 
     override fun asString(): String = this.formatted.value()
-
 }

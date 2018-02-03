@@ -89,5 +89,4 @@ class SubText(
         }
         return text.substring(begin, finish)
     }
-
 }

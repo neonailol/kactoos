@@ -73,5 +73,4 @@ class ReplacedText(
         matcher.appendTail(buffer)
         return buffer.toString()
     }
-
 }

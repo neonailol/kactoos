@@ -31,5 +31,4 @@ class SwappedCaseText(private val origin: Text) : Text {
         }
         return String(chars)
     }
-
 }

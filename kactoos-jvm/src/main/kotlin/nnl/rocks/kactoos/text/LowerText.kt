@@ -22,5 +22,4 @@ class LowerText(
 
     @Throws(IOException::class)
     override fun asString(): String = this.origin.asString().toLowerCase(this.locale)
-
 }

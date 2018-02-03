@@ -21,5 +21,4 @@ class Base64Text(private val origin: Text) : Text {
 
     @Throws(IOException::class)
     override fun asString(): String = TextOf(Base64Bytes(BytesOf(this.origin))).asString()
-
 }
