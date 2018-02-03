@@ -20,24 +20,26 @@ Kactoos intended to be used as drop-in replacement for Cactoos, this statement b
 Write to file, read it contents, and compare it with original
 
 ```kotlin
-val temp = Files.createTempFile("kactoos-1", "txt-1")
-Equals(
-    ScalarOf(
-        TextOf(
-            TeeInput(
-                InputOf(
-                    BytesOf(
-                        TextOf("Hello, world!")
+fun sample() {
+    val temp = Files.createTempFile("kactoos-1", "txt-1")
+    Equals(
+        ScalarOf(
+            TextOf(
+                TeeInput(
+                    InputOf(
+                        BytesOf(
+                            TextOf("Hello, world!")
+                        )
+                    ),
+                    WriterAsOutput(
+                        WriterTo(temp)
                     )
-                ),
-                WriterAsOutput(
-                    WriterTo(temp)
                 )
-            )
-        ).asString()
-    ),
-    ScalarOf("Hello, world!")
-)
+            ).asString()
+        ),
+        ScalarOf("Hello, world!")
+    )
+}
 ```
 
 ## Purpose

@@ -16,9 +16,9 @@ Time.
 
 Text.
 
-# Package nnl.rocks.kactoos.test
+# Package nnl.rocks.kactoos.matchers
 
-Test.
+Matchers.
 
 # Package nnl.rocks.kactoos.scalar
 
