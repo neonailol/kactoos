@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.collection](../index.md) / [SyncCollection](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.collection](../index.md) / [SyncCollection](./index.md)
 
 # SyncCollection
 
-`class SyncCollection<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](../-collection-envelope/index.md)`<T>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/collection/SyncCollection.kt#L26)
+`class SyncCollection<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](../-collection-envelope/index.md)`<`[`T`](index.md#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/collection/SyncCollection.kt#L26)
 
 Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html).
 
@@ -30,4 +30,4 @@ Objects of this class are thread-safe.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `SyncCollection(src: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<T>)`<br>`SyncCollection(vararg array: T)`<br>`SyncCollection(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<T>)`<br>`SyncCollection(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<T>)` |
+| [&lt;init&gt;](-init-.md) | `SyncCollection(src: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`T`](index.md#T)`>)`<br>`SyncCollection(vararg array: `[`T`](index.md#T)`)`<br>`SyncCollection(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)`<br>`SyncCollection(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)` |

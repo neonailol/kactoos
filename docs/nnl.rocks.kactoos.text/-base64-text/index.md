@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [Base64Text](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [Base64Text](./index.md)
 
 # Base64Text
 
@@ -24,4 +24,3 @@ Decodes the origin text using the Base64 encoding scheme.
 | Name | Summary |
 |---|---|
 | [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
-| [compareTo](compare-to.md) | `fun compareTo(other: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |

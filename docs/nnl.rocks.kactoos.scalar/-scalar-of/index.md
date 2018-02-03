@@ -1,10 +1,10 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [ScalarOf](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [ScalarOf](./index.md)
 
 # ScalarOf
 
-`class ScalarOf<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>`
+`class ScalarOf<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>`
 
-Creates scalar out of [T](#)
+Creates scalar out of [T](index.md#T)
 
 ### Parameters
 
@@ -17,10 +17,10 @@ Creates scalar out of [T](#)
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ScalarOf(origin: T)``ScalarOf(origin: KScalar<T>)`<br>Creates scalar out of [T](#) |
+| [&lt;init&gt;](-init-.md) | `ScalarOf(origin: `[`T`](index.md#T)`)``ScalarOf(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`<br>Creates scalar out of [T](index.md#T) |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `fun value(): T`<br>Convert it to the value. |
+| [value](value.md) | `fun value(): `[`T`](index.md#T)<br>Convert it to the value. |

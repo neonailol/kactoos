@@ -1,14 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [FuncApplies](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [FuncApplies](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`FuncApplies(input: X, result: Y)`
+`FuncApplies(input: `[`X`](index.md#X)`, result: `[`Y`](index.md#Y)`)`
 
 ### Parameters
 
 `result` - The result expected
 
-`input` - Input for the function`FuncApplies(input: X, matcher: Matcher<Y>)`
+`input` - Input for the function`FuncApplies(input: `[`X`](index.md#X)`, matcher: Matcher<`[`Y`](index.md#Y)`>)`
 
 Matcher for the value.
 

@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Scalar](index.md) / [value](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Scalar](index.md) / [value](./value.md)
 
 # value
 
-`abstract fun value(): T`
+`abstract fun value(): `[`T`](index.md#T)
 
 Convert it to the value.
 

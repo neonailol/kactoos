@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ReplacedText](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ReplacedText](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -13,14 +13,14 @@ with `replace`.
 
 `find` - The regular expression
 
-`replace` - The replacement string`ReplacedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, regex: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<Pattern>, replacement: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<Matcher, `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
+`replace` - The replacement string`ReplacedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, regex: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Pattern`](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)`>, replacement: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Matcher`](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html)`, `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
 
 Replace the Text.
 
-The given [regex](#) is used to produce a
-[matcher](#) that will be
+The given [regex](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) is used to produce a
+[matcher](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matcher(java.lang.CharSequence)) that will be
 transformed by `func` into a replacement string to replace each
-[matching](#) substring.
+[matching](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html#find()) substring.
 
 Example usage:
 
@@ -32,7 +32,7 @@ matcher -> String.valueOf(matcher.group().length())
 ).asString();  //will return the string "3 3 THREE 4 FIVE 3"
 ```
 
-Note: a [PatternSyntaxException](#) will be thrown if the
+Note: a [PatternSyntaxException](http://docs.oracle.com/javase/8/docs/api/java/util/regex/PatternSyntaxException.html) will be thrown if the
 regular expression's syntax is invalid.
 
 ### Parameters
@@ -42,7 +42,7 @@ regular expression's syntax is invalid.
 `regex` - The regular expression
 
 `replacement` - Transforms the resulting matcher object into a replacement
-string. Any exceptions will be wrapped in an [IOException](#).
+string. Any exceptions will be wrapped in an [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html).
 
 **Since**
 0.2

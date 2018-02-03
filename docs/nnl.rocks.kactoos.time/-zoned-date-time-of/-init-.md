@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.time](../index.md) / [ZonedDateTimeOf](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.time](../index.md) / [ZonedDateTimeOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`ZonedDateTimeOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, formatter: DateTimeFormatter)`
+`ZonedDateTimeOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, formatter: `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)`)`
 
 ### Parameters
 
@@ -12,9 +12,9 @@
 
 ### Parameters
 
-`date` - The date to parse.`ZonedDateTimeOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, format: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, zone: ZoneId)`
+`date` - The date to parse.`ZonedDateTimeOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, format: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, zone: `[`ZoneId`](http://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html)`)`
 
-Parses date using the provided format to create [ZonedDateTime](#) instances.
+Parses date using the provided format to create [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances.
 
 ### Parameters
 
@@ -22,11 +22,11 @@ Parses date using the provided format to create [ZonedDateTime](#) instances.
 
 `format` - The format to use.
 
-`zone` - The zone to use.`ZonedDateTimeOf(parsed: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<ZonedDateTime>)`
+`zone` - The zone to use.`ZonedDateTimeOf(parsed: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)`>)`
 
-Parser for [ZonedDateTime](#) instances.
+Parser for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances.
 
-Parses the date using the formatter to create [ZonedDateTime](#) instances.
+Parses the date using the formatter to create [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances.
 
 ### Parameters
 

@@ -1,20 +1,20 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Endless](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Endless](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`Endless(element: T)`
+`Endless(element: `[`T`](index.md#T)`)`
 
 Ctor.
 
 ### Parameters
 
-`element` - Element to repeat`Endless(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>)`
+`element` - Element to repeat`Endless(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`
 
 Ctor.
 
 ### Parameters
 
-`scalar` - Scalar to repeat`Endless(origin: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<T>)`
+`scalar` - Scalar to repeat`Endless(origin: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`T`](index.md#T)`>)`
 
 Iterator that never ends.
 

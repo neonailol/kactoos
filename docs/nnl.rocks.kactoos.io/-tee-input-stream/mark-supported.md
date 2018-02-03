@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeInputStream](index.md) / [markSupported](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeInputStream](index.md) / [markSupported](./mark-supported.md)
 
 # markSupported
 

@@ -1,10 +1,10 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputStreamTo](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputStreamTo](./index.md)
 
 # OutputStreamTo
 
-`class OutputStreamTo : OutputStream` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/OutputStreamTo.kt#L28)
+`class OutputStreamTo : `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/OutputStreamTo.kt#L28)
 
-An [OutputStream](#) that encapsulates other destination for the data.
+An [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) that encapsulates other destination for the data.
 
 There is no thread-safety guarantee.
 
@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `OutputStreamTo(tgt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<OutputStream>)`<br>`OutputStreamTo(path: Path)`<br>`OutputStreamTo(file: File)`<br>`OutputStreamTo(wtr: Writer, charset: Charset)`<br>`OutputStreamTo(wtr: Writer)`<br>`OutputStreamTo(wtr: Writer, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`<br>`OutputStreamTo(wtr: Writer, charset: Charset, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>`OutputStreamTo(wtr: Writer, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>`OutputStreamTo(wtr: Writer, ddr: CharsetDecoder, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>`OutputStreamTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)``OutputStreamTo(target: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<OutputStream>)`<br>An [OutputStream](#) that encapsulates other destination for the data. |
+| [&lt;init&gt;](-init-.md) | `OutputStreamTo(tgt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`<br>`OutputStreamTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`<br>`OutputStreamTo(file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`<br>`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`<br>`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)`<br>`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`<br>`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, ddr: `[`CharsetDecoder`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/CharsetDecoder.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>`OutputStreamTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)``OutputStreamTo(target: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`<br>An [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) that encapsulates other destination for the data. |
 
 ### Functions
 

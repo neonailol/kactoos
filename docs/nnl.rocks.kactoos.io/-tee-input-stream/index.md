@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeInputStream](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeInputStream](./index.md)
 
 # TeeInputStream
 
-`class TeeInputStream : InputStream` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TeeInputStream.kt#L17)
+`class TeeInputStream : `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TeeInputStream.kt#L17)
 
 Stream that copies input to output.
 
@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `TeeInputStream(input: InputStream, output: OutputStream)`<br>Stream that copies input to output. |
+| [&lt;init&gt;](-init-.md) | `TeeInputStream(input: `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`, output: `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`)`<br>Stream that copies input to output. |
 
 ### Functions
 

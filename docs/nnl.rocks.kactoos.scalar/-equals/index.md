@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Equals](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Equals](./index.md)
 
 # Equals
 
-`class Equals<in T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<T>> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/Equals.kt#L23)
+`class Equals<in T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](index.md#T)`>> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/Equals.kt#L23)
 
 Equals.
 
@@ -28,7 +28,7 @@ use [UncheckedScalar](../-unchecked-scalar/index.md) or [IoCheckedScalar](../-io
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Equals(first: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>, second: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>)`<br>Equals. |
+| [&lt;init&gt;](-init-.md) | `Equals(first: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>, second: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`<br>Equals. |
 
 ### Functions
 

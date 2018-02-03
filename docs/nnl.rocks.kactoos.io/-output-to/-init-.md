@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputTo](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputTo](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -11,7 +11,7 @@
 **Since**
 0.15
 
-`OutputTo(file: File, mkdirs: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)`
+`OutputTo(file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, mkdirs: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)`
 
 ### Parameters
 
@@ -22,8 +22,8 @@
 **Since**
 0.15
 
-`OutputTo(file: File)`
-`OutputTo(path: Path)``OutputTo(path: Path, mkdirs: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)`
+`OutputTo(file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
+`OutputTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)``OutputTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, mkdirs: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)`
 
 Ctor.
 
@@ -36,13 +36,13 @@ Ctor.
 **Since**
 0.15
 
-`OutputTo(writer: Writer)`
+`OutputTo(writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)`
 
 Ctor.
 
 ### Parameters
 
-`writer` - The writer`OutputTo(stream: OutputStream)`
+`writer` - The writer`OutputTo(stream: `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`)`
 
 Ctor.
 

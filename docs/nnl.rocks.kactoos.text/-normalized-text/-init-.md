@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [NormalizedText](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [NormalizedText](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 

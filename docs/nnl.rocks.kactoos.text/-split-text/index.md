@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [SplitText](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [SplitText](./index.md)
 
 # SplitText
 

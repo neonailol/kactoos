@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [NumberEnvelope](index.md) / [toInt](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [NumberEnvelope](index.md) / [toInt](./to-int.md)
 
 # toInt
 

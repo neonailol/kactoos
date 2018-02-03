@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ComparableText](index.md) / [compareTo](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ComparableText](index.md) / [compareTo](./compare-to.md)
 
 # compareTo
 

@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.bytes](../index.md) / [Base64Bytes](index.md) / [asBytes](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.bytes](../index.md) / [Base64Bytes](index.md) / [asBytes](./as-bytes.md)
 
 # asBytes
 
@@ -7,6 +7,10 @@
 Overrides [Bytes.asBytes](../../nnl.rocks.kactoos/-bytes/as-bytes.md)
 
 Convert it to the byte array.
+
+### Exceptions
+
+`IOException` - If fails
 
 **Return**
 The byte array

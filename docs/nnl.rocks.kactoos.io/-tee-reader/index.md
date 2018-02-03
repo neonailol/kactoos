@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeReader](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeReader](./index.md)
 
 # TeeReader
 
-`class TeeReader : Reader` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TeeReader.kt#L16)
+`class TeeReader : `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TeeReader.kt#L16)
 
 Input to Output copying reader.
 
@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `TeeReader(source: Reader, destination: Writer)`<br>Input to Output copying reader. |
+| [&lt;init&gt;](-init-.md) | `TeeReader(source: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, destination: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)`<br>Input to Output copying reader. |
 
 ### Functions
 

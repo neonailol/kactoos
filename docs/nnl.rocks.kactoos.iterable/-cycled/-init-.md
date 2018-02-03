@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [Cycled](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [Cycled](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`Cycled(vararg itr: T)`
+`Cycled(vararg itr: `[`T`](index.md#T)`)`
 
 ### Parameters
 
@@ -11,7 +11,7 @@
 **Since**
 0.23
 
-`Cycled(itr: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<T>)`
+`Cycled(itr: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)`
 
 ### Parameters
 
@@ -20,7 +20,7 @@
 **Since**
 0.21
 
-`Cycled(itr: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<T>)`
+`Cycled(itr: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
 
 Cycled Iterable.
 

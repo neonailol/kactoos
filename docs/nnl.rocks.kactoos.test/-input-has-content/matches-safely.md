@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [InputHasContent](index.md) / [matchesSafely](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [InputHasContent](index.md) / [matchesSafely](./matches-safely.md)
 
 # matchesSafely
 

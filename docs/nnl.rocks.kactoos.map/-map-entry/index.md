@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](./index.md)
 
 # MapEntry
 
-`class MapEntry<out K, out V> : `[`Entry`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html)`<K, V>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/map/MapEntry.kt#L16)
+`class MapEntry<out K, out V> : `[`Entry`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html)`<`[`K`](index.md#K)`, `[`V`](index.md#V)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/map/MapEntry.kt#L16)
 
 MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html).
 
@@ -25,14 +25,14 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `MapEntry(src: K, trgt: V)`<br>MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html). |
+| [&lt;init&gt;](-init-.md) | `MapEntry(src: `[`K`](index.md#K)`, trgt: `[`V`](index.md#V)`)`<br>MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html). |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [key](key.md) | `val key: K` |
-| [value](value.md) | `val value: V` |
+| [key](key.md) | `val key: `[`K`](index.md#K) |
+| [value](value.md) | `val value: `[`V`](index.md#V) |
 
 ### Functions
 

@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Equals](index.md) / [value](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Equals](index.md) / [value](./value.md)
 
 # value
 
@@ -7,6 +7,10 @@
 Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 
 Convert it to the value.
+
+### Exceptions
+
+`Exception` - If fails
 
 **Return**
 The value

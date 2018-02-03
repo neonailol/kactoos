@@ -1,11 +1,11 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [IoCheckedScalar](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [IoCheckedScalar](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`IoCheckedScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>)`
+`IoCheckedScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`
 
 Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws
-[IOException](#) instead.
+[IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead.
 
 There is no thread-safety guarantee.
 

@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeOutput](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeOutput](./index.md)
 
 # TeeOutput
 
@@ -15,10 +15,10 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: Writer, charset: Charset)`<br>`TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: Writer)`<br>`TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: Path)`<br>`TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: File)`<br>`TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: OutputStream)``TeeOutput(target: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, copy: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`<br>Output to Output copying pipe. |
+| [&lt;init&gt;](-init-.md) | `TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`<br>`TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)`<br>`TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`<br>`TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`<br>`TeeOutput(tgt: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, cpy: `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`)``TeeOutput(target: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, copy: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`<br>Output to Output copying pipe. |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [stream](stream.md) | `fun stream(): OutputStream`<br>Get write access to it. |
+| [stream](stream.md) | `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)<br>Get write access to it. |

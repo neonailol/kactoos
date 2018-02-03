@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [Reversed](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [Reversed](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`Reversed(vararg src: X)`
+`Reversed(vararg src: `[`X`](index.md#X)`)`
 
 Ctor.
 
@@ -13,7 +13,7 @@ Ctor.
 **Since**
 0.23
 
-`Reversed(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<X>)`
+`Reversed(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
 
 Reverse iterator.
 

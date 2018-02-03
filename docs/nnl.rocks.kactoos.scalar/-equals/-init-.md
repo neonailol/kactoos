@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Equals](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Equals](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`Equals(first: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>, second: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>)`
+`Equals(first: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>, second: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`
 
 Equals.
 

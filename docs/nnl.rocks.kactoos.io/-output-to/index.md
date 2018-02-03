@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputTo](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputTo](./index.md)
 
 # OutputTo
 
@@ -15,10 +15,10 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `OutputTo(out: KOutput)`<br>`OutputTo(file: File, mkdirs: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)`<br>`OutputTo(file: File)`<br>`OutputTo(path: Path)``OutputTo(path: Path, mkdirs: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)`<br>`OutputTo(writer: Writer)`<br>`OutputTo(stream: OutputStream)`<br>Ctor.`OutputTo(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`<br>An [Output](../../nnl.rocks.kactoos/-output/index.md) that encapsulates other destination for the data. |
+| [&lt;init&gt;](-init-.md) | `OutputTo(out: KOutput)`<br>`OutputTo(file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, mkdirs: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)`<br>`OutputTo(file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`<br>`OutputTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)``OutputTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, mkdirs: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)`<br>`OutputTo(writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)`<br>`OutputTo(stream: `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`)`<br>Ctor.`OutputTo(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`<br>An [Output](../../nnl.rocks.kactoos/-output/index.md) that encapsulates other destination for the data. |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [stream](stream.md) | `fun stream(): OutputStream`<br>Get write access to it. |
+| [stream](stream.md) | `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)<br>Get write access to it. |

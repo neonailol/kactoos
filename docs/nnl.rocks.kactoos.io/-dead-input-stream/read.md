@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [DeadInputStream](index.md) / [read](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [DeadInputStream](index.md) / [read](./read.md)
 
 # read
 

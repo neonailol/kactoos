@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [Endless](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [Endless](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`Endless(item: T)`
+`Endless(item: `[`T`](index.md#T)`)`
 
 Endless iterable.
 

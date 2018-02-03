@@ -1,12 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [SyncIterable](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [SyncIterable](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`SyncIterable(vararg src: X)`
+`SyncIterable(vararg src: `[`X`](index.md#X)`)`
 
 ### Parameters
 
-`src` - The underlying iterable`SyncIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<X>)`
+`src` - The underlying iterable`SyncIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
 
 Synchronized iterable.
 

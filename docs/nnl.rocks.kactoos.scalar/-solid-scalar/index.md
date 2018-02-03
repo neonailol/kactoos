@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SolidScalar](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SolidScalar](./index.md)
 
 # SolidScalar
 
-`class SolidScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SolidScalar.kt#L21)
+`class SolidScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SolidScalar.kt#L21)
 
 Cached and synchronized version of a Scalar.
 
@@ -27,10 +27,10 @@ Objects of this class are thread safe.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `SolidScalar(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>)``SolidScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, T>)`<br>Cached and synchronized version of a Scalar. |
+| [&lt;init&gt;](-init-.md) | `SolidScalar(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)``SolidScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, `[`T`](index.md#T)`>)`<br>Cached and synchronized version of a Scalar. |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `fun value(): T`<br>Convert it to the value. |
+| [value](value.md) | `fun value(): `[`T`](index.md#T)<br>Convert it to the value. |

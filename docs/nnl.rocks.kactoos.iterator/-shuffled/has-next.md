@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Shuffled](index.md) / [hasNext](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Shuffled](index.md) / [hasNext](./has-next.md)
 
 # hasNext
 

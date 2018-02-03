@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SyncScalar](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SyncScalar](./index.md)
 
 # SyncScalar
 
-`class SyncScalar<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SyncScalar.kt#L21)
+`class SyncScalar<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SyncScalar.kt#L21)
 
 Scalar that is thread-safe.
 
@@ -26,10 +26,10 @@ use [UncheckedScalar](../-unchecked-scalar/index.md) or [IoCheckedScalar](../-io
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `SyncScalar(src: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>)``SyncScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<T>, mutex: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`<br>Scalar that is thread-safe. |
+| [&lt;init&gt;](-init-.md) | `SyncScalar(src: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)``SyncScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>, mutex: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`<br>Scalar that is thread-safe. |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `fun value(): T`<br>Convert it to the value. |
+| [value](value.md) | `fun value(): `[`T`](index.md#T)<br>Convert it to the value. |

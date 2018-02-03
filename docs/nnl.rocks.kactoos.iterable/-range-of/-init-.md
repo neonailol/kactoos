@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [RangeOf](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [RangeOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`RangeOf(min: T, max: T, incrementor: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<T, T>)`
+`RangeOf(min: `[`T`](index.md#T)`, max: `[`T`](index.md#T)`, incrementor: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`>)`
 
 Iterable implementation to model range functionality.
 

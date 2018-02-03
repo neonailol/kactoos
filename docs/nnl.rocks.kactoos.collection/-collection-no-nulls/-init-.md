@@ -1,9 +1,9 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.collection](../index.md) / [CollectionNoNulls](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.collection](../index.md) / [CollectionNoNulls](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`CollectionNoNulls(col: `[`CollectionEnvelope`](../-collection-envelope/index.md)`<X>)`
-`CollectionNoNulls(col: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<X>)``CollectionNoNulls(col: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`MutableCollection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html)`<X>>)`
+`CollectionNoNulls(col: `[`CollectionEnvelope`](../-collection-envelope/index.md)`<`[`X`](index.md#X)`>)`
+`CollectionNoNulls(col: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)``CollectionNoNulls(col: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`MutableCollection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html)`<`[`X`](index.md#X)`>>)`
 
 A decorator of [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that tolerates no NULLs.
 

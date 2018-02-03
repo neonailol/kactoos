@@ -1,24 +1,24 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [ProcOf](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [ProcOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`ProcOf(runnable: Runnable)`
+`ProcOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`)`
 
 ### Parameters
 
-`runnable` - The runnable`ProcOf(callable: Callable<X>)`
+`runnable` - The runnable`ProcOf(callable: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`X`](index.md#X)`>)`
 
 ### Parameters
 
-`callable` - The callable`ProcOf(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<X, *>)`
+`callable` - The callable`ProcOf(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, *>)`
 
 ### Parameters
 
-`fnc` - The func`ProcOf(proc: KProc<X>)`
+`fnc` - The func`ProcOf(proc: `[`KProc`](../../nnl.rocks.kactoos/-k-proc.md)`<`[`X`](index.md#X)`>)`
 
 ### Parameters
 
-`proc` - The proc`ProcOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<X>)`
+`proc` - The proc`ProcOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>)`
 
 Func as Proc.
 

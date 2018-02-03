@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](index.md) / [toString](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](index.md) / [toString](./to-string.md)
 
 # toString
 

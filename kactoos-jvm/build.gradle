@@ -6,10 +6,11 @@ buildscript {
         mavenCentral()
         jcenter()
         maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://dl.bintray.com/kotlin/kotlin-eap" }
     }
 
     dependencies {
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.15"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.16-eap-3"
         classpath "gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.0.RC6-2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }

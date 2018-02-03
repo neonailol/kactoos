@@ -1,10 +1,10 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [WriterTo](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [WriterTo](./index.md)
 
 # WriterTo
 
-`class WriterTo : Writer` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/WriterTo.kt#L28)
+`class WriterTo : `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/WriterTo.kt#L28)
 
-A [Writer](#) that encapsulates other destination for the data.
+A [Writer](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html) that encapsulates other destination for the data.
 
 There is no thread-safety guarantee.
 
@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `WriterTo(tgt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<Writer>)`<br>`WriterTo(path: Path)`<br>`WriterTo(file: File)`<br>`WriterTo(stream: OutputStream)`<br>`WriterTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: Charset = StandardCharsets.UTF_8)`<br>`WriterTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`<br>`WriterTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, encoder: CharsetEncoder)``WriterTo(target: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<Writer>)`<br>A [Writer](#) that encapsulates other destination for the data. |
+| [&lt;init&gt;](-init-.md) | `WriterTo(tgt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`>)`<br>`WriterTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`<br>`WriterTo(file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`<br>`WriterTo(stream: `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`)`<br>`WriterTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`<br>`WriterTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`<br>`WriterTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, encoder: `[`CharsetEncoder`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/CharsetEncoder.html)`)``WriterTo(target: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`>)`<br>A [Writer](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html) that encapsulates other destination for the data. |
 
 ### Functions
 

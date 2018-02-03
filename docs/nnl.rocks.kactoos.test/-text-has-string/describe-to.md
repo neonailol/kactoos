@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [TextHasString](index.md) / [describeTo](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [TextHasString](index.md) / [describeTo](./describe-to.md)
 
 # describeTo
 

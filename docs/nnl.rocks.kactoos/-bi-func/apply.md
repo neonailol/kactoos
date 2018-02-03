@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [BiFunc](index.md) / [apply](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [BiFunc](index.md) / [apply](./apply.md)
 
 # apply
 
-`abstract fun apply(first: X, second: Y): Z`
+`abstract fun apply(first: `[`X`](index.md#X)`, second: `[`Y`](index.md#Y)`): `[`Z`](index.md#Z)
 
 Apply it.
 
@@ -17,7 +17,7 @@ Apply it.
 `Exception` - If fails
 
 **Return**
-The result [Z](#)
+The result [Z](index.md#Z)
 
 **Since**
 0.2

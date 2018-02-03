@@ -1,8 +1,10 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [SyncFunc](index.md) / [apply](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [SyncFunc](index.md) / [apply](./apply.md)
 
 # apply
 
-`fun apply(input: X): Y` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SyncFunc.kt#L62)
+`fun apply(input: `[`X`](index.md#X)`): `[`Y`](index.md#Y) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SyncFunc.kt#L62)
+
+Overrides [Func.apply](../../nnl.rocks.kactoos/-func/apply.md)
 
 Apply it.
 
@@ -10,8 +12,12 @@ Apply it.
 
 `input` - The argument
 
+### Exceptions
+
+`Exception` - If fails
+
 **Return**
-The result of type [Y](#)
+The result of type [Y](index.md#Y)
 
 **Since**
 0.2

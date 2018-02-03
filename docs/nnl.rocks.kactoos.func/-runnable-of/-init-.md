@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [RunnableOf](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [RunnableOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`RunnableOf(proc: Callable<X>, input: X)`
+`RunnableOf(proc: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`X`](index.md#X)`>, input: `[`X`](index.md#X)`)`
 
 ### Parameters
 
@@ -11,13 +11,13 @@
 **Since**
 0.11
 
-`RunnableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<X>, input: X)`
+`RunnableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, input: `[`X`](index.md#X)`)`
 
 ### Parameters
 
-`proc` - Encapsulated proc`RunnableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<X, X>)`
-`RunnableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<X>)`
-`RunnableOf(callable: Callable<X>)``RunnableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<X, X>, input: X)`
+`proc` - Encapsulated proc`RunnableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`X`](index.md#X)`>)`
+`RunnableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>)`
+`RunnableOf(callable: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`X`](index.md#X)`>)``RunnableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`X`](index.md#X)`>, input: `[`X`](index.md#X)`)`
 
 Func as Runnable.
 

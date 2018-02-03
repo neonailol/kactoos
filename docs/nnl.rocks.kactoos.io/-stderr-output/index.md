@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [StderrOutput](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [StderrOutput](./index.md)
 
 # StderrOutput
 
@@ -21,4 +21,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [stream](stream.md) | `fun stream(): OutputStream`<br>Get write access to it. |
+| [stream](stream.md) | `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)<br>Get write access to it. |

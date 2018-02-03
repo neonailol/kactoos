@@ -1,14 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [ChainedFunc](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [ChainedFunc](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`ChainedFunc(bfr: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<X, Y>, atr: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<Y, Z>)`
+`ChainedFunc(bfr: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, atr: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`
 
 ### Parameters
 
 `bfr` - Before function
 
-`atr` - After function`ChainedFunc(before: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<X, Y>, functions: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<Y, Y>>, after: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<Y, Z>)`
+`atr` - After function`ChainedFunc(before: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, functions: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Y`](index.md#Y)`, `[`Y`](index.md#Y)`>>, after: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`
 
 Composed function.
 

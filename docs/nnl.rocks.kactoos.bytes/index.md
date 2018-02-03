@@ -1,6 +1,7 @@
-[kactoos-jvm](../index.md) / [nnl.rocks.kactoos.bytes](.)
+[kactoos-jvm](../index.md) / [nnl.rocks.kactoos.bytes](./index.md)
 
 ## Package nnl.rocks.kactoos.bytes
+
 
 Bytes.
 

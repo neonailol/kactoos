@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputTo](index.md) / [stream](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputTo](index.md) / [stream](./stream.md)
 
 # stream
 
-`fun stream(): OutputStream` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/OutputTo.kt#L157)
+`fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/OutputTo.kt#L157)
 
 Overrides [Output.stream](../../nnl.rocks.kactoos/-output/stream.md)
 

@@ -1,8 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`MapEntry(src: K, trgt: V)`
+`MapEntry(src: `[`K`](index.md#K)`, trgt: `[`V`](index.md#V)`)`
 
 MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html).
 

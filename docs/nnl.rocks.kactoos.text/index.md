@@ -1,6 +1,7 @@
-[kactoos-jvm](../index.md) / [nnl.rocks.kactoos.text](.)
+[kactoos-jvm](../index.md) / [nnl.rocks.kactoos.text](./index.md)
 
 ## Package nnl.rocks.kactoos.text
+
 
 Text.
 
@@ -8,6 +9,7 @@ Text.
 
 | Name | Summary |
 |---|---|
+| [AbbreviatedText](-abbreviated-text/index.md) | `class AbbreviatedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Abbreviates a Text using ellipses. |
 | [Base64Text](-base64-text/index.md) | `class Base64Text : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Decodes the origin text using the Base64 encoding scheme. |
 | [ComparableText](-comparable-text/index.md) | `class ComparableText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)`, `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`Text`](../nnl.rocks.kactoos/-text/index.md)`>`<br>Text implementing Comparable. |
 | [FormattedText](-formatted-text/index.md) | `class FormattedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Text in Sprinf format. |

@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.bytes](../index.md) / [Base64Bytes](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.bytes](../index.md) / [Base64Bytes](./index.md)
 
 # Base64Bytes
 
@@ -10,7 +10,7 @@ Decodes all origin bytes using the Base64 encoding scheme.
 
 `origin` - Origin bytes.
 
-`decoder` - Which [Base64.Decoder](#) to use.
+`decoder` - Which [Base64.Decoder](http://docs.oracle.com/javase/8/docs/api/java/util/Base64/Decoder.html) to use.
 
 **Since**
 0.20.2
@@ -19,7 +19,7 @@ Decodes all origin bytes using the Base64 encoding scheme.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Base64Bytes(origin: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)`<br>Uses [Base64.getDecoder](#) as [decoder](#)`Base64Bytes(origin: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`, decoder: Decoder)`<br>Decodes all origin bytes using the Base64 encoding scheme. |
+| [&lt;init&gt;](-init-.md) | `Base64Bytes(origin: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)`<br>Uses [Base64.getDecoder](http://docs.oracle.com/javase/8/docs/api/java/util/Base64.html#getDecoder()) as [decoder](#)`Base64Bytes(origin: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`, decoder: `[`Decoder`](http://docs.oracle.com/javase/8/docs/api/java/util/Base64/Decoder.html)`)`<br>Decodes all origin bytes using the Base64 encoding scheme. |
 
 ### Functions
 

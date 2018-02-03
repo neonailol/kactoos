@@ -1,12 +1,16 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [ScalarOf](index.md) / [value](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [ScalarOf](index.md) / [value](./value.md)
 
 # value
 
-`fun value(): T`
+`fun value(): `[`T`](index.md#T)
 
 Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 
 Convert it to the value.
+
+### Exceptions
+
+`Exception` - If fails
 
 **Return**
 The value

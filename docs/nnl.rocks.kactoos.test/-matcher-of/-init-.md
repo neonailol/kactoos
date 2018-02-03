@@ -1,12 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [MatcherOf](index.md) / [&lt;init&gt;](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [MatcherOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`MatcherOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<T>)`
+`MatcherOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`T`](index.md#T)`>)`
 
 ### Parameters
 
-`proc` - The func`MatcherOf(func: (T) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)``MatcherOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<T, `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>)`
+`proc` - The func`MatcherOf(func: (`[`T`](index.md#T)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`)``MatcherOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`T`](index.md#T)`, `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>)`
 
 Func as Matcher.
 

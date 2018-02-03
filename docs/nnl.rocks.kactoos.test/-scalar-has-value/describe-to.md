@@ -1,4 +1,4 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [ScalarHasValue](index.md) / [describeTo](.)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.test](../index.md) / [ScalarHasValue](index.md) / [describeTo](./describe-to.md)
 
 # describeTo
 
