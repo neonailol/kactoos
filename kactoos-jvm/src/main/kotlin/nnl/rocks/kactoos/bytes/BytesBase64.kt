@@ -9,7 +9,7 @@ import java.util.Base64
  *
  * @param origin Origin bytes.
  * @param encoder Which [Base64.Encoder] to use
- * @since 0.20.2
+ * @since 0.3
  */
 class BytesBase64(
     private val origin: Bytes,

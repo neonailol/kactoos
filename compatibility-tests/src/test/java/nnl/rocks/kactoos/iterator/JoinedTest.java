@@ -45,7 +45,7 @@ public final class JoinedTest {
             "Can't concatenate mapped iterators together",
             new LengthOf(
                 new IteratorNoNulls<>(
-                    new Joined<Iterator<String>>(
+                    new Joined<>(
                         new Mapped<>(
                             input -> Collections.singleton(input).iterator(),
                             Collections.singleton("x").iterator()

@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicLong
  * There is no thread-safety guarantee.
  *
  * @param X Element type
- * @since 0.27
+ * @since 0.3
  */
 class CollectionNoNulls<X : Any>(
     private val col: Scalar<MutableCollection<X>>

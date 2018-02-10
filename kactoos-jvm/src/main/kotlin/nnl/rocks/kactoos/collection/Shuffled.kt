@@ -7,20 +7,16 @@ import java.util.Collections
 /**
  * Sorted collection.
  *
- *
  * Pay attention that sorting will happen on each operation
  * with the collection. Every time you touch it, it will fetch the
  * entire collection from the encapsulated object and shuffle it. If you
  * want to avoid that "side-effect", decorate it with
  * [StickyCollection].
  *
- *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @param T Element type
- * @since 0.23
+ * @since 0.3
  */
 class Shuffled<T : Any> : CollectionEnvelope<T> {
 

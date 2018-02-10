@@ -1,9 +1,12 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.iterable.IterableOf
+import java.math.BigDecimal
+import java.math.MathContext
 
 /**
- * Int total of numbers.
+ * Represents total sum of given numbers.
  *
  * Here is how you can use it to summarize numbers:
  *
@@ -20,76 +23,45 @@ import nnl.rocks.kactoos.Scalar
  *
  * There is no thread-safety guarantee.
  *
- *
- *
- *
- * @since 0.9
+ * @since 0.3
  */
 class SumOf : NumberEnvelope {
 
-    constructor(vararg src: Int) : super(
-        ScalarOf {
-            var sum = 0.0
-            for (`val` in src) {
-                sum += `val`.toDouble()
-            }
-            sum
-        }
-    )
-
     /**
-     * @param src Numbers
-     * @since 0.22
+     * @param src Integers
+     * @since 0.3
      */
-    constructor(vararg src: Long) : super(
-        ScalarOf {
-            var sum = 0.0
-            for (`val` in src) {
-                sum += `val`.toDouble()
-            }
-            sum
-        }
-    )
+    constructor(vararg src: Int) : this(IterableOf(src.iterator()))
 
     /**
-     * @param src Numbers
-     * @since 0.22
+     * @param src Longs
+     * @since 0.3
      */
-    constructor(vararg src: Double) : super(
-        ScalarOf {
-            var sum = 0.0
-            for (`val` in src) {
-                sum += `val`
-            }
-            sum
-        }
-    )
+    constructor(vararg src: Long) : this(IterableOf(src.iterator()))
 
     /**
-     * @param src Numbers
-     * @since 0.22
+     * @param src Doubles
+     * @since 0.3
      */
-    constructor(vararg src: Float) : super(
-        ScalarOf {
-            var sum = 0.0
-            for (`val` in src) {
-                sum += `val`.toDouble()
-            }
-            sum
-        }
-    )
+    constructor(vararg src: Double) : this(IterableOf(src.iterator()))
 
     /**
-     * @param src The iterable
+     * @param src Floats
+     * @since 0.3
+     */
+    constructor(vararg src: Float) : this(IterableOf(src.iterator()))
+
+    /**
+     * @param src Iterable of numbers
+     * @since 0.3
      */
     constructor(src: Iterable<Number>) : super(
         ScalarOf {
-            val numbers = src.iterator()
-            var sum = 0.0
-            while (numbers.hasNext()) {
-                sum += numbers.next().toDouble()
-            }
-            sum
+            1.0F.toBigDecimal()
+            src.fold(
+                BigDecimal.ZERO,
+                { acc, number -> acc.add(BigDecimal.valueOf(number.toDouble()), MathContext.UNLIMITED) }
+            ).toDouble()
         }
     )
 }

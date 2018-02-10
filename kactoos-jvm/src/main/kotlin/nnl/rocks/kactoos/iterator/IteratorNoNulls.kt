@@ -10,11 +10,11 @@ import java.util.concurrent.atomic.AtomicLong
  * @param X Type of item.
  * @param iterator Encapsulated iterator.
  * @param pos Position counter.
- * @since 0.27
+ * @since 0.3
  */
 class IteratorNoNulls<out X : Any>(
     private val iterator: MutableIterator<X>,
-    private val pos: AtomicLong = AtomicLong()
+    private val pos: AtomicLong
 ) : MutableIterator<X> by iterator {
 
     constructor(iterator: Iterator<X>) : this(
@@ -22,7 +22,8 @@ class IteratorNoNulls<out X : Any>(
             val mutableList = mutableListOf<X>()
             iterator.forEach { mutableList.add(it) }
             mutableList.iterator()
-        }.invoke()
+        }.invoke(),
+        AtomicLong()
     )
 
     override fun next(): X = with(pos.incrementAndGet()) {

@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  *
  * @param X Element type.
  * @param col Encapsulated collection.
- * @since 0.23
+ * @since 0.3
  */
 open class CollectionEnvelope<X : Any>(
     private val col: UncheckedScalar<Collection<X>>
