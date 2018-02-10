@@ -12,10 +12,10 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * a collection, just like [java.util.stream.Stream.forEach] works:
  *
  * ```
- * new And(
- *   new IterableOf("Mary", "John", "William", "Napkin"),
- *   name -> System.out.printf("The name: %s\n", name)
- * ).value();
+ * And<String>(
+ *     ProcOf { println(it) },
+ *     IterableOf("Mary", "John", "William", "Napkin")
+ * ).value()
  * ```
  *
  * This class implements [Scalar], which throws a checked
@@ -28,32 +28,30 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * @param iterable The encapsulated iterable
  * @see UncheckedScalar
  * @see IoCheckedScalar
- * @since 0.8
+ * @since 0.3
  */
 class And(private val iterable: Iterable<Scalar<Boolean>>) : Scalar<Boolean> {
 
+    init {
+
+    }
+
     /**
-     * @param src The iterable
+     * @param src Iterable
+     * @since 0.3
      */
     @SafeVarargs
     constructor(vararg src: Scalar<Boolean>) : this(IterableOf(src.iterator()))
 
     /**
-     * @param src The iterable
-     * @since 0.24
+     * @param src Iterator
+     * @since 0.3
      */
     constructor(src: Iterator<Scalar<Boolean>>) : this(IterableOf(src))
 
     @Throws(Exception::class)
     override fun value(): Boolean {
-        var result = true
-        for (item in this.iterable) {
-            if (! item.value()) {
-                result = false
-                break
-            }
-        }
-        return result
+        return iterable.all { it.value() }
     }
 
     companion object {
