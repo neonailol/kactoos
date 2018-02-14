@@ -1,36 +1,26 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
-        }
-    }
-
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.6-dev-822"
-    }
-}
-
 apply plugin: 'konan'
-apply plugin: 'kotlin-platform-jvm'
 
 konan.targets = ['mingw']
-
-dependencies {
-    expectedBy project(":kactoos-common")
-
-    compile kotlin_common_stdlib
-    testCompile kotlin_jvm_junit
-    testCompile kotlin_jvm_test
-}
 
 konanArtifacts {
 
     library('kactoos-native') {
-        srcDir "src/main/kotlin"
-//        srcDir "../kactoos-common/src/main/kotlin"
+        enableMultiplatform true
+        srcDir 'src/main/kotlin'
+    }
 
-        extraOpts("-Xmulti-platform")
+    program('kactoos-native-test') {
+        srcDir 'src/test/kotlin'
+        commonSourceSet 'test'
+        libraries {
+            artifact 'kactoos-native'
+        }
+        extraOpts '-tr'
     }
 }
 
+dependencies {
+    expectedBy project(":kactoos-common")
+}
+
+task test(dependsOn: run)

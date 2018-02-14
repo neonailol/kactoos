@@ -19,27 +19,18 @@ class ScalarOfTest {
     }
 
     @Test
+    @Ignore
     fun failForNullArgument() {
-        assertFailsWith(
-            Throwable::class,
-            {
-                ScalarOf(
-                    dummy()
-                ).value().hashCode()
-            }
-        )
+        assertFailsWith(Throwable::class) {
+            ScalarOf(dummy()).value().hashCode()
+        }
     }
 
     @Test
     @Ignore
     fun failForNullResult() {
-        assertFailsWith(
-            Throwable::class,
-            {
-                ScalarOf<Any>(
-                    { dummy() }
-                ).value().toString()
-            }
-        )
+        assertFailsWith(Throwable::class) {
+            ScalarOf<Any>({ dummy() }).value().toString()
+        }
     }
 }

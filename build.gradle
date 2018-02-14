@@ -7,7 +7,7 @@ allprojects {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.5'
-    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+    distributionType = "ALL"
 }
 
 buildscript {
@@ -17,11 +17,14 @@ buildscript {
         jcenter()
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "http://kotlin.bintray.com/kotlinx" }
+        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
     }
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.6"
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.17.0"
     }
 }
 
@@ -44,6 +47,14 @@ subprojects {
     repositories {
         jcenter()
         mavenCentral()
+        maven { url "http://kotlin.bintray.com/kotlinx" }
+    }
+
+    tasks.withType(Test) {
+        testLogging {
+            showStandardStreams = true
+            events "passed", "failed"
+        }
     }
 }
 
