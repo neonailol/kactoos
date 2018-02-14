@@ -51,6 +51,7 @@ There is no thread-safety guarantee.
 | Name | Summary |
 |---|---|
 | [DeadOutput](../../nnl.rocks.kactoos.io/-dead-output/index.md) | `class DeadOutput : `[`Output`](./index.md)<br>Output that accepts anything. |
+| [GzipOutput](../../nnl.rocks.kactoos.io/-gzip-output/index.md) | `class GzipOutput : `[`Output`](./index.md)<br>Output that writes compressed data in the GZIP file format. |
 | [LoggingOutput](../../nnl.rocks.kactoos.io/-logging-output/index.md) | `class LoggingOutput : `[`Output`](./index.md)<br>Logged output. |
 | [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Output`](./index.md) |
 | [OutputTo](../../nnl.rocks.kactoos.io/-output-to/index.md) | `class OutputTo : `[`Output`](./index.md)<br>An [Output](./index.md) that encapsulates other destination for the data. |

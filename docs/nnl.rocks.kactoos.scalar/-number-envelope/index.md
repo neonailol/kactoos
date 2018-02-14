@@ -45,4 +45,4 @@ There is no thread-safety guarantee.
 | [MaxOf](../-max-of/index.md) | `class MaxOf : `[`NumberEnvelope`](./index.md)<br>Find the greater among items. |
 | [MinOf](../-min-of/index.md) | `class MinOf : `[`NumberEnvelope`](./index.md)<br>Find the smaller among items. |
 | [NumberOf](../-number-of/index.md) | `class NumberOf : `[`NumberEnvelope`](./index.md)`, `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`<br>Text as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html). |
-| [SumOf](../-sum-of/index.md) | `class SumOf : `[`NumberEnvelope`](./index.md)<br>Int total of numbers. |
+| [SumOf](../-sum-of/index.md) | `class SumOf : `[`NumberEnvelope`](./index.md)<br>Represents total sum of given numbers. |

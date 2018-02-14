@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos.io
 
-
 Input/Output.
 
 ### Types
@@ -17,6 +16,8 @@ Input/Output.
 | [DigestEnvelope](-digest-envelope/index.md) | `abstract class DigestEnvelope : `[`Bytes`](../nnl.rocks.kactoos/-bytes/index.md)<br>Digest Envelope. |
 | [Directory](-directory/index.md) | `class Directory : `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>`<br>Files in a directory. |
 | [EmptyBytes](-empty-bytes/index.md) | `class EmptyBytes : `[`Bytes`](../nnl.rocks.kactoos/-bytes/index.md)<br>Bytes with no data. |
+| [GzipInput](-gzip-input/index.md) | `class GzipInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input that reads compressed data from the GZIP file format. |
+| [GzipOutput](-gzip-output/index.md) | `class GzipOutput : `[`Output`](../nnl.rocks.kactoos/-output/index.md)<br>Output that writes compressed data in the GZIP file format. |
 | [InputOf](-input-of/index.md) | `class InputOf : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
 | [InputStreamOf](-input-stream-of/index.md) | `class InputStreamOf : `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)<br>An [InputStream](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) that encapsulates other sources of data. |
 | [InputWithFallback](-input-with-fallback/index.md) | `class InputWithFallback : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input that returns an alternative input if the main one throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html). |

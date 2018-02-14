@@ -2,7 +2,7 @@
 
 # TempFile
 
-`class TempFile : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, `[`Closeable`](http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TempFile.kt#L35)
+`class TempFile : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, `[`Closeable`](http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TempFile.kt#L34)
 
 A temporary file.
 

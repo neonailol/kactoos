@@ -2,7 +2,7 @@
 
 # value
 
-`fun value(): `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TempFile.kt#L91)
+`fun value(): `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TempFile.kt#L90)
 
 Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 

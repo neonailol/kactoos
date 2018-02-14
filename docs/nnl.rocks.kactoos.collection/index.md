@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos.collection
 
-
 Collections.
 
 ### Types
@@ -18,6 +17,7 @@ Collections.
 | [Mapped](-mapped/index.md) | `class Mapped<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](-collection-envelope/index.md)`<`[`Y`](-mapped/index.md#Y)`>`<br>Mapped collection. |
 | [Reversed](-reversed/index.md) | `class Reversed<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](-collection-envelope/index.md)`<`[`X`](-reversed/index.md#X)`>`<br>Reversed collection. |
 | [Shuffled](-shuffled/index.md) | `class Shuffled<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](-collection-envelope/index.md)`<`[`T`](-shuffled/index.md#T)`>`<br>Sorted collection. |
+| [Skipped](-skipped/index.md) | `class Skipped<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](-collection-envelope/index.md)`<`[`T`](-skipped/index.md#T)`>`<br>Skipped collection. |
 | [SolidCollection](-solid-collection/index.md) | `class SolidCollection<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](-collection-envelope/index.md)`<`[`T`](-solid-collection/index.md#T)`>`<br>A [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that is both synchronized and sticky. |
 | [Sorted](-sorted/index.md) | `class Sorted<T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](-sorted/index.md#T)`>> : `[`CollectionEnvelope`](-collection-envelope/index.md)`<`[`T`](-sorted/index.md#T)`>`<br>Sorted collection. |
 | [StickyCollection](-sticky-collection/index.md) | `class StickyCollection<E : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](-collection-envelope/index.md)`<`[`E`](-sticky-collection/index.md#E)`>`<br>Collection decorator that goes through the list only once. |

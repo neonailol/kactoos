@@ -1,9 +1,6 @@
 
 
-
 Kactoos.
-
-Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 
 ### All Types
 
@@ -34,6 +31,7 @@ Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 | [nnl.rocks.kactoos.collection.CollectionNoNulls](../nnl.rocks.kactoos.collection/-collection-no-nulls/index.md) | A decorator of [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that tolerates no NULLs. |
 | [nnl.rocks.kactoos.collection.CollectionOf](../nnl.rocks.kactoos.collection/-collection-of/index.md) | Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |
 | [nnl.rocks.kactoos.text.ComparableText](../nnl.rocks.kactoos.text/-comparable-text/index.md) | Text implementing Comparable. |
+| [nnl.rocks.kactoos.scalar.Constant](../nnl.rocks.kactoos.scalar/-constant/index.md) | Constant value that never changes. |
 | [nnl.rocks.kactoos.iterable.Cycled](../nnl.rocks.kactoos.iterable/-cycled/index.md) | Cycled Iterable. |
 | [nnl.rocks.kactoos.iterator.Cycled](../nnl.rocks.kactoos.iterator/-cycled/index.md) | Cycled Iterator. |
 | [nnl.rocks.kactoos.time.DateAsText](../nnl.rocks.kactoos.time/-date-as-text/index.md) | Formatter for date instances. Formats the date using the provided formatter. |
@@ -56,13 +54,13 @@ Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 | [nnl.rocks.kactoos.text.FormattedText](../nnl.rocks.kactoos.text/-formatted-text/index.md) | Text in Sprinf format. |
 | [nnl.rocks.kactoos.Func](../nnl.rocks.kactoos/-func/index.md) | Function. |
 | [nnl.rocks.kactoos.matchers.FuncApplies](../nnl.rocks.kactoos.matchers/-func-applies/index.md) | Matcher for the value. |
-| [nnl.rocks.kactoos.test.FuncApplies](../nnl.rocks.kactoos.test/-func-applies/index.md) | Matcher for the value. |
 | [nnl.rocks.kactoos.func.FuncOf](../nnl.rocks.kactoos.func/-func-of/index.md) | Represents many possible inputs as [Func](../nnl.rocks.kactoos/-func/index.md). |
 | [nnl.rocks.kactoos.func.FuncWithFallback](../nnl.rocks.kactoos.func/-func-with-fallback/index.md) | Func with a fallback plan. |
+| [nnl.rocks.kactoos.io.GzipInput](../nnl.rocks.kactoos.io/-gzip-input/index.md) | Input that reads compressed data from the GZIP file format. |
+| [nnl.rocks.kactoos.io.GzipOutput](../nnl.rocks.kactoos.io/-gzip-output/index.md) | Output that writes compressed data in the GZIP file format. |
 | [nnl.rocks.kactoos.text.HexOf](../nnl.rocks.kactoos.text/-hex-of/index.md) | Hexadecimal representation of Bytes. |
 | [nnl.rocks.kactoos.Input](../nnl.rocks.kactoos/-input/index.md) | Input. |
 | [nnl.rocks.kactoos.matchers.InputHasContent](../nnl.rocks.kactoos.matchers/-input-has-content/index.md) | Matcher for the input. |
-| [nnl.rocks.kactoos.test.InputHasContent](../nnl.rocks.kactoos.test/-input-has-content/index.md) | Matcher for the input. |
 | [nnl.rocks.kactoos.io.InputOf](../nnl.rocks.kactoos.io/-input-of/index.md) | An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.io.InputStreamOf](../nnl.rocks.kactoos.io/-input-stream-of/index.md) | An [InputStream](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.io.InputWithFallback](../nnl.rocks.kactoos.io/-input-with-fallback/index.md) | Input that returns an alternative input if the main one throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html). |
@@ -73,8 +71,7 @@ Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 | [nnl.rocks.kactoos.scalar.IoCheckedScalar](../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md) | Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
 | [nnl.rocks.kactoos.text.IsBlank](../nnl.rocks.kactoos.text/-is-blank/index.md) | Determines if text is blank (consists of spaces) or no. |
 | [nnl.rocks.kactoos.time.Iso](../nnl.rocks.kactoos.time/-iso/index.md) | Default formatter |
-| [nnl.rocks.kactoos.iterable.ItemAt](../nnl.rocks.kactoos.iterable/-item-at/index.md) | Element from position in [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) or fallback value if iterable hasn't this position. |
-| [nnl.rocks.kactoos.iterator.ItemAt](../nnl.rocks.kactoos.iterator/-item-at/index.md) | Element from position in [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) or fallback value if iterator hasn't this position. |
+| [nnl.rocks.kactoos.scalar.ItemAt](../nnl.rocks.kactoos.scalar/-item-at/index.md) | Element from position in [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) or fallback value if iterator hasn't this position. |
 | [nnl.rocks.kactoos.iterable.IterableEnvelope](../nnl.rocks.kactoos.iterable/-iterable-envelope/index.md) | Iterable envelope. |
 | [nnl.rocks.kactoos.iterable.IterableNoNulls](../nnl.rocks.kactoos.iterable/-iterable-no-nulls/index.md) | A decorator for [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) that doesn't allow any NULL. |
 | [nnl.rocks.kactoos.iterable.IterableOf](../nnl.rocks.kactoos.iterable/-iterable-of/index.md) | Array as iterable. |
@@ -118,7 +115,6 @@ Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 | [nnl.rocks.kactoos.iterator.Mapped](../nnl.rocks.kactoos.iterator/-mapped/index.md) | Mapped iterator. |
 | [nnl.rocks.kactoos.list.Mapped](../nnl.rocks.kactoos.list/-mapped/index.md) | Mapped list. |
 | [nnl.rocks.kactoos.matchers.MatcherOf](../nnl.rocks.kactoos.matchers/-matcher-of/index.md) | Func as Matcher. |
-| [nnl.rocks.kactoos.test.MatcherOf](../nnl.rocks.kactoos.test/-matcher-of/index.md) | Func as Matcher. |
 | [nnl.rocks.kactoos.scalar.MaxOf](../nnl.rocks.kactoos.scalar/-max-of/index.md) | Find the greater among items. |
 | [nnl.rocks.kactoos.io.Md5DigestOf](../nnl.rocks.kactoos.io/-md5-digest-of/index.md) | MD5 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.scalar.MinOf](../nnl.rocks.kactoos.scalar/-min-of/index.md) | Find the smaller among items. |
@@ -157,14 +153,13 @@ Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 | [nnl.rocks.kactoos.matchers.RunsInThreads](../nnl.rocks.kactoos.matchers/-runs-in-threads/index.md) | Matcher for [Func](../nnl.rocks.kactoos/-func/index.md) that must run in multiple threads. |
 | [nnl.rocks.kactoos.Scalar](../nnl.rocks.kactoos/-scalar/index.md) | Scalar. |
 | [nnl.rocks.kactoos.matchers.ScalarHasValue](../nnl.rocks.kactoos.matchers/-scalar-has-value/index.md) | Matcher for the value. |
-| [nnl.rocks.kactoos.test.ScalarHasValue](../nnl.rocks.kactoos.test/-scalar-has-value/index.md) | Matcher for the value. |
-| [nnl.rocks.kactoos.scalar.ScalarOf](../nnl.rocks.kactoos.scalar/-scalar-of/index.md) | Creates scalar out of [T](../nnl.rocks.kactoos.scalar/-scalar-of/index.md#T) |
 | [nnl.rocks.kactoos.io.Sha1DigestOf](../nnl.rocks.kactoos.io/-sha1-digest-of/index.md) | SHA-1 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.io.Sha256DigestOf](../nnl.rocks.kactoos.io/-sha256-digest-of/index.md) | SHA-256 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.collection.Shuffled](../nnl.rocks.kactoos.collection/-shuffled/index.md) | Sorted collection. |
 | [nnl.rocks.kactoos.iterable.Shuffled](../nnl.rocks.kactoos.iterable/-shuffled/index.md) | Shuffled iterable. |
 | [nnl.rocks.kactoos.iterator.Shuffled](../nnl.rocks.kactoos.iterator/-shuffled/index.md) | Shuffled iterator. |
 | [nnl.rocks.kactoos.list.Shuffled](../nnl.rocks.kactoos.list/-shuffled/index.md) | Shuffled list. |
+| [nnl.rocks.kactoos.collection.Skipped](../nnl.rocks.kactoos.collection/-skipped/index.md) | Skipped collection. |
 | [nnl.rocks.kactoos.iterable.Skipped](../nnl.rocks.kactoos.iterable/-skipped/index.md) | Skipped iterable. |
 | [nnl.rocks.kactoos.iterator.Skipped](../nnl.rocks.kactoos.iterator/-skipped/index.md) | Skipped iterator. |
 | [nnl.rocks.kactoos.func.SolidBiFunc](../nnl.rocks.kactoos.func/-solid-bi-func/index.md) | BiFunc that is thread-safe and sticky. |
@@ -192,7 +187,7 @@ Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 | [nnl.rocks.kactoos.map.StickyMap](../nnl.rocks.kactoos.map/-sticky-map/index.md) | Read-only [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) decorator that goes through the map only once. |
 | [nnl.rocks.kactoos.scalar.StickyScalar](../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md) | Cached version of a Scalar. |
 | [nnl.rocks.kactoos.text.SubText](../nnl.rocks.kactoos.text/-sub-text/index.md) | Extract a substring from a Text. |
-| [nnl.rocks.kactoos.scalar.SumOf](../nnl.rocks.kactoos.scalar/-sum-of/index.md) | Int total of numbers. |
+| [nnl.rocks.kactoos.scalar.SumOf](../nnl.rocks.kactoos.scalar/-sum-of/index.md) | Represents total sum of given numbers. |
 | [nnl.rocks.kactoos.text.SwappedCaseText](../nnl.rocks.kactoos.text/-swapped-case-text/index.md) | Swaps the case of a Text changing upper and title case to lower case, and lower case to upper case. |
 | [nnl.rocks.kactoos.func.SyncBiFunc](../nnl.rocks.kactoos.func/-sync-bi-func/index.md) | BiFunc that is thread-safe. |
 | [nnl.rocks.kactoos.collection.SyncCollection](../nnl.rocks.kactoos.collection/-sync-collection/index.md) | Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |
@@ -215,7 +210,6 @@ Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 | [nnl.rocks.kactoos.Text](../nnl.rocks.kactoos/-text/index.md) | Text. |
 | [nnl.rocks.kactoos.text.TextBase64](../nnl.rocks.kactoos.text/-text-base64/index.md) | Encodes the origin text using the Base64 encoding scheme. |
 | [nnl.rocks.kactoos.matchers.TextHasString](../nnl.rocks.kactoos.matchers/-text-has-string/index.md) | Matcher for the content. |
-| [nnl.rocks.kactoos.test.TextHasString](../nnl.rocks.kactoos.test/-text-has-string/index.md) | Matcher for the content. |
 | [nnl.rocks.kactoos.text.TextOf](../nnl.rocks.kactoos.text/-text-of/index.md) | TextOf |
 | [nnl.rocks.kactoos.text.TrimmedLeftText](../nnl.rocks.kactoos.text/-trimmed-left-text/index.md) | Text without control characters (char &amp;lt;= 32) only from left. |
 | [nnl.rocks.kactoos.text.TrimmedRightText](../nnl.rocks.kactoos.text/-trimmed-right-text/index.md) | Text without control characters (char &amp;lt;= 32) only from right. |

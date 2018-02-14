@@ -15,5 +15,5 @@ There is no thread-safety guarantee.
 `col` - Encapsulated collection.
 
 **Since**
-0.23
+0.3
 

@@ -4,7 +4,7 @@
 
 `class SumOf : `[`NumberEnvelope`](../-number-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SumOf.kt#L28)
 
-Int total of numbers.
+Represents total sum of given numbers.
 
 Here is how you can use it to summarize numbers:
 
@@ -22,7 +22,7 @@ use [UncheckedScalar](../-unchecked-scalar/index.md) or [IoCheckedScalar](../-io
 There is no thread-safety guarantee.
 
 **Since**
-0.9
+0.3
 
 ### Constructors
 

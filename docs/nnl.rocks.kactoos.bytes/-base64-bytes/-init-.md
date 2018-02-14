@@ -19,5 +19,5 @@ Decodes all origin bytes using the Base64 encoding scheme.
 `decoder` - Which [Base64.Decoder](http://docs.oracle.com/javase/8/docs/api/java/util/Base64/Decoder.html) to use.
 
 **Since**
-0.20.2
+0.3
 

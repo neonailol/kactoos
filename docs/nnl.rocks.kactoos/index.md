@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos
 
-
 Top level package
 
 ### Types

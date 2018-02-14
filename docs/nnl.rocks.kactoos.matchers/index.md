@@ -2,6 +2,8 @@
 
 ## Package nnl.rocks.kactoos.matchers
 
+Matchers.
+
 ### Types
 
 | Name | Summary |

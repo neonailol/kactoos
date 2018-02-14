@@ -46,6 +46,7 @@ There is no thread-safety guarantee.
 | Name | Summary |
 |---|---|
 | [DeadInput](../../nnl.rocks.kactoos.io/-dead-input/index.md) | `class DeadInput : `[`Input`](./index.md)<br>Input with no data. |
+| [GzipInput](../../nnl.rocks.kactoos.io/-gzip-input/index.md) | `class GzipInput : `[`Input`](./index.md)<br>Input that reads compressed data from the GZIP file format. |
 | [InputOf](../../nnl.rocks.kactoos.io/-input-of/index.md) | `class InputOf : `[`Input`](./index.md)<br>An [Input](./index.md) that encapsulates other sources of data. |
 | [InputWithFallback](../../nnl.rocks.kactoos.io/-input-with-fallback/index.md) | `class InputWithFallback : `[`Input`](./index.md)<br>Input that returns an alternative input if the main one throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html). |
 | [LoggingInput](../../nnl.rocks.kactoos.io/-logging-input/index.md) | `class LoggingInput : `[`Input`](./index.md)<br>Logged input. |

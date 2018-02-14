@@ -10,10 +10,10 @@ This class can be effectively used to iterate through
 a collection, just like [java.util.stream.Stream.forEach](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#forEach(java.util.function.Consumer<? super T>)) works:
 
 ```
-new And(
-  new IterableOf("Mary", "John", "William", "Napkin"),
-  name -> System.out.printf("The name: %s\n", name)
-).value();
+And<String>(
+    ProcOf { println(it) },
+    IterableOf("Mary", "John", "William", "Napkin")
+).value()
 ```
 
 This class implements [Scalar](../../nnl.rocks.kactoos/-scalar/index.md), which throws a checked
@@ -34,7 +34,7 @@ There is no thread-safety guarantee.
 [IoCheckedScalar](../-io-checked-scalar/index.md)
 
 **Since**
-0.8
+0.3
 
 ### Constructors
 

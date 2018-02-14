@@ -9,5 +9,5 @@ Logical truth.
 There is no thread-safety guarantee.
 
 **Since**
-0.7
+0.3
 

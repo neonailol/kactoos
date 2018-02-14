@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos.iterator
 
-
 Iterators.
 
 ### Types
@@ -12,7 +11,6 @@ Iterators.
 | [Cycled](-cycled/index.md) | `class Cycled<out T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](-cycled/index.md#T)`>`<br>Cycled Iterator. |
 | [Endless](-endless/index.md) | `class Endless<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](-endless/index.md#T)`>`<br>Iterator that never ends. |
 | [Filtered](-filtered/index.md) | `class Filtered<out X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](-filtered/index.md#X)`>`<br>Filtered iterator. |
-| [ItemAt](-item-at/index.md) | `class ItemAt<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-item-at/index.md#T)`>`<br>Element from position in [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) or fallback value if iterator hasn't this position. |
 | [IteratorNoNulls](-iterator-no-nulls/index.md) | `class IteratorNoNulls<out X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`MutableIterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-iterator/index.html)`<`[`X`](-iterator-no-nulls/index.md#X)`>`<br>A decorator of an [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns no NULL. |
 | [Joined](-joined/index.md) | `class Joined<T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](-joined/index.md#T)`>`<br>A few Iterators joined together. |
 | [LengthOf](-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](../nnl.rocks.kactoos.scalar/-number-envelope/index.md)<br>Length of iterator. |

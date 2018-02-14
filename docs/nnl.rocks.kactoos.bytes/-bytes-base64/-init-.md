@@ -19,5 +19,5 @@ Encodes all origin bytes using the Base64 encoding scheme.
 `encoder` - Which [Base64.Encoder](http://docs.oracle.com/javase/8/docs/api/java/util/Base64/Encoder.html) to use
 
 **Since**
-0.20.2
+0.3
 

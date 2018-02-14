@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos.scalar
 
-
 Scalars.
 
 ### Types
@@ -17,10 +16,12 @@ Scalars.
 | [AndWithIndexFunc](-and-with-index-func/index.md) | `class AndWithIndexFunc<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Logical conjunction, with index. |
 | [AvgOf](-avg-of/index.md) | `class AvgOf : `[`NumberEnvelope`](-number-envelope/index.md)<br>Average of numbers. |
 | [BoolOf](-bool-of/index.md) | `class BoolOf : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Text as [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html). |
+| [Constant](-constant/index.md) | `class Constant<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-constant/index.md#T)`>`<br>Constant value that never changes. |
 | [Equals](-equals/index.md) | `class Equals<in T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](-equals/index.md#T)`>> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Equals. |
 | [False](-false/index.md) | `class False : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Logical false. |
 | [Folded](-folded/index.md) | `class Folded<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-folded/index.md#T)`>`<br>Folds iterable via BiFunc. |
 | [IoCheckedScalar](-io-checked-scalar/index.md) | `class IoCheckedScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-io-checked-scalar/index.md#T)`>`<br>Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
+| [ItemAt](-item-at/index.md) | `class ItemAt<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-item-at/index.md#T)`>`<br>Element from position in [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) or fallback value if iterator hasn't this position. |
 | [MaxOf](-max-of/index.md) | `class MaxOf : `[`NumberEnvelope`](-number-envelope/index.md)<br>Find the greater among items. |
 | [MinOf](-min-of/index.md) | `class MinOf : `[`NumberEnvelope`](-number-envelope/index.md)<br>Find the smaller among items. |
 | [Not](-not/index.md) | `class Not : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Logical negative. |
@@ -31,10 +32,9 @@ Scalars.
 | [PropertiesOf](-properties-of/index.md) | `class PropertiesOf : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)`>`<br>Map as [java.util.Properties](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html). |
 | [Reduced](-reduced/index.md) | `class Reduced<out X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`X`](-reduced/index.md#X)`>`<br>Iterable, which elements are "reduced" through the func. |
 | [RetryScalar](-retry-scalar/index.md) | `class RetryScalar<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-retry-scalar/index.md#T)`>`<br>Func that will try a few times before throwing an exception. |
-| [ScalarOf](-scalar-of/index.md) | `class ScalarOf<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-scalar-of/index.md#T)`>`<br>Creates scalar out of [T](-scalar-of/index.md#T) |
 | [SolidScalar](-solid-scalar/index.md) | `class SolidScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-solid-scalar/index.md#T)`>`<br>Cached and synchronized version of a Scalar. |
 | [StickyScalar](-sticky-scalar/index.md) | `class StickyScalar<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-sticky-scalar/index.md#T)`>`<br>Cached version of a Scalar. |
-| [SumOf](-sum-of/index.md) | `class SumOf : `[`NumberEnvelope`](-number-envelope/index.md)<br>Int total of numbers. |
+| [SumOf](-sum-of/index.md) | `class SumOf : `[`NumberEnvelope`](-number-envelope/index.md)<br>Represents total sum of given numbers. |
 | [SyncScalar](-sync-scalar/index.md) | `class SyncScalar<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-sync-scalar/index.md#T)`>`<br>Scalar that is thread-safe. |
 | [Ternary](-ternary/index.md) | `class Ternary<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-ternary/index.md#T)`>`<br>Ternary operation. |
 | [True](-true/index.md) | `class True : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Logical truth. |

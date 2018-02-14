@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos.iterable
 
-
 Iterables.
 
 ### Types
@@ -12,7 +11,6 @@ Iterables.
 | [Cycled](-cycled/index.md) | `class Cycled<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](-iterable-envelope/index.md)`<`[`T`](-cycled/index.md#T)`>`<br>Cycled Iterable. |
 | [Endless](-endless/index.md) | `class Endless<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](-iterable-envelope/index.md)`<`[`T`](-endless/index.md#T)`>`<br>Endless iterable. |
 | [Filtered](-filtered/index.md) | `class Filtered<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](-iterable-envelope/index.md)`<`[`X`](-filtered/index.md#X)`>`<br>Filtered iterable. |
-| [ItemAt](-item-at/index.md) | `class ItemAt<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](-item-at/index.md#T)`>`<br>Element from position in [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) or fallback value if iterable hasn't this position. |
 | [IterableEnvelope](-iterable-envelope/index.md) | `open class IterableEnvelope<out X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](-iterable-envelope/index.md#X)`>`<br>Iterable envelope. |
 | [IterableNoNulls](-iterable-no-nulls/index.md) | `class IterableNoNulls<out X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`MutableIterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-iterable/index.html)`<`[`X`](-iterable-no-nulls/index.md#X)`>`<br>A decorator for [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) that doesn't allow any NULL. |
 | [IterableOf](-iterable-of/index.md) | `class IterableOf<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](-iterable-envelope/index.md)`<`[`X`](-iterable-of/index.md#X)`>`<br>Array as iterable. |
