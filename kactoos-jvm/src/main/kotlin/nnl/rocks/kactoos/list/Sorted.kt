@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.list
 
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import java.util.ArrayList
 import java.util.Collections
 import java.util.Comparator
@@ -26,7 +26,7 @@ class Sorted<T : Comparable<T>> : ListEnvelope<T> {
         cmp: Comparator<T>,
         src: Collection<T>
     ) : super(
-        ScalarOf {
+        Constant {
             val items = ArrayList<T>(src.size)
             items.addAll(src); items.sortWith(cmp)
             Collections.unmodifiableList<T>(items)

@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.list
 
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Iterable as [List].
@@ -21,7 +21,7 @@ import nnl.rocks.kactoos.scalar.ScalarOf
  */
 class ListOf<T : Any> : ListEnvelope<T> {
 
-    constructor(src: Iterable<T>) : super(ScalarOf { src.toList() })
+    constructor(src: Iterable<T>) : super(Constant { src.toList() })
 
     /**
      * @param array An array of some elements

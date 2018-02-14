@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import java.util.ArrayList
 import java.util.Collections
@@ -18,7 +18,7 @@ class StickyCollection<E : Any> : CollectionEnvelope<E> {
 
     constructor(list: Collection<E>) : super(
         StickyScalar<Collection<E>>(
-            ScalarOf {
+            Constant {
                 val temp = ArrayList<E>(list.size)
                 temp.addAll(list)
                 Collections.unmodifiableCollection<E>(temp)

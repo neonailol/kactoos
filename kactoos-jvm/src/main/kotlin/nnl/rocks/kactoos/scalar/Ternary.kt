@@ -43,9 +43,9 @@ class Ternary<T : Any, X : Any>(
         cons: Func<X, T>,
         alter: Func<X, T>
     ) : this(
-        ScalarOf { cnd.apply(input) },
-        ScalarOf { cons.apply(input) },
-        ScalarOf { alter.apply(input) }
+        Constant { cnd.apply(input) },
+        Constant { cons.apply(input) },
+        Constant { alter.apply(input) }
     )
 
     /**
@@ -58,7 +58,7 @@ class Ternary<T : Any, X : Any>(
         cnd: Boolean,
         cons: T,
         alter: T
-    ) : this(ScalarOf { cnd }, cons, alter)
+    ) : this(Constant { cnd }, cons, alter)
 
     /**
      * @param cnd The condition
@@ -69,7 +69,7 @@ class Ternary<T : Any, X : Any>(
         cnd: Scalar<Boolean>,
         cons: T,
         alter: T
-    ) : this(cnd, ScalarOf { cons }, ScalarOf { alter })
+    ) : this(cnd, Constant { cons }, Constant { alter })
 
     @Throws(Exception::class)
     override fun value(): T {

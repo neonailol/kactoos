@@ -2,7 +2,7 @@ package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 
 /**
@@ -21,7 +21,7 @@ class Endless<T : Any>(private val origin: UncheckedScalar<T>) : Iterator<T> {
      * Ctor.
      * @param element Element to repeat
      */
-    constructor(element: T) : this(ScalarOf { element })
+    constructor(element: T) : this(Constant { element })
 
     /**
      * Ctor.

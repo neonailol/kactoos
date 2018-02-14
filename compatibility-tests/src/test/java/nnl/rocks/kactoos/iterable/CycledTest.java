@@ -23,12 +23,12 @@
  */
 package nnl.rocks.kactoos.iterable;
 
+import java.util.Collections;
 import nnl.rocks.kactoos.matchers.ScalarHasValue;
+import nnl.rocks.kactoos.scalar.ItemAt;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Collections;
 
 /**
  * Test Case for {@link Cycled}.

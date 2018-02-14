@@ -3,11 +3,10 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.text.TextOf
-
 import java.io.Closeable
 import java.io.IOException
 import java.nio.file.Files
@@ -46,7 +45,7 @@ class TempFile private constructor(
         prefix: String = "",
         suffix: String = ""
     ) : this(
-        ScalarOf { Paths.get(System.getProperty("java.io.tmpdir")) },
+        Constant { Paths.get(System.getProperty("java.io.tmpdir")) },
         prefix,
         suffix
     )

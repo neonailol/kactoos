@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import java.util.Collections
 import java.util.LinkedList
 
@@ -22,7 +22,7 @@ import java.util.LinkedList
 class Reversed<X : Any> : CollectionEnvelope<X> {
 
     constructor(src: Collection<X>) : super(
-        ScalarOf {
+        Constant {
             val items = LinkedList<X>()
             items.addAll(src)
             Collections.reverse(items)

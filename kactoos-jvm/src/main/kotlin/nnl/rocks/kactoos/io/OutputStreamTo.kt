@@ -2,7 +2,7 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Output
 import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 
@@ -102,7 +102,7 @@ class OutputStreamTo(
     /**
      * @param output The input
      */
-    constructor(output: Output) : this(ScalarOf<OutputStream> { output.stream() })
+    constructor(output: Output) : this(Constant<OutputStream> { output.stream() })
 
     @Throws(IOException::class)
     override fun write(data: Int) {

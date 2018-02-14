@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.util.Comparator
@@ -39,7 +39,7 @@ class Sorted<T : Comparable<T>>(
     init {
         this.scalar = UncheckedScalar(
             StickyScalar<Iterator<T>>(
-                ScalarOf {
+                Constant {
                     val items = LinkedList<T>()
                     while (iterator.hasNext()) {
                         items.add(iterator.next())

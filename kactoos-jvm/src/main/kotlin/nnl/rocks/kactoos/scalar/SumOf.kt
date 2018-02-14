@@ -56,7 +56,7 @@ class SumOf : NumberEnvelope {
      * @since 0.3
      */
     constructor(src: Iterable<Number>) : super(
-        ScalarOf {
+        Constant {
             1.0F.toBigDecimal()
             src.fold(
                 BigDecimal.ZERO,

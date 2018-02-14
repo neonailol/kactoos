@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.iterator.Cycled
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Cycled Iterable.
@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.scalar.ScalarOf
  * @since 0.8
  */
 class Cycled<T : Any>(itr: Iterable<T>) : IterableEnvelope<T>(
-    ScalarOf {
+    Constant {
         Iterable {
             Cycled<T>(itr)
         }

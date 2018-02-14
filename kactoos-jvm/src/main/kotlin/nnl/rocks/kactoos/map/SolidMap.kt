@@ -4,7 +4,7 @@ import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.SolidScalar
 
 /**
@@ -21,7 +21,7 @@ import nnl.rocks.kactoos.scalar.SolidScalar
  */
 class SolidMap<X : Any, Y : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
     SolidScalar<Map<X, Y>>(
-        ScalarOf {
+        Constant {
             SyncMap<X, Y>(StickyMap<X, Y>(map))
         }
     )

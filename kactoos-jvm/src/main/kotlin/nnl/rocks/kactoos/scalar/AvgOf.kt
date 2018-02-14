@@ -59,7 +59,7 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      */
     constructor(vararg src: Int) : this(
         Mapped<Int, Scalar<Number>>(
-            FuncOf<Int, Scalar<Number>> { number -> ScalarOf { number } },
+            FuncOf<Int, Scalar<Number>> { number -> Constant { number } },
             Iterable { src.iterator() }
         )
     )
@@ -70,7 +70,7 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      */
     constructor(vararg src: Long) : this(
         Mapped<Long, Scalar<Number>>(
-            FuncOf { number -> ScalarOf { number } },
+            FuncOf { number -> Constant { number } },
             Iterable { src.iterator() }
         )
     )
@@ -81,7 +81,7 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      */
     constructor(vararg src: Double) : this(
         Mapped<Double, Scalar<Number>>(
-            FuncOf { number -> ScalarOf { number } },
+            FuncOf { number -> Constant { number } },
             Iterable { src.iterator() }
         )
     )
@@ -92,7 +92,7 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      */
     constructor(vararg src: Float) : this(
         Mapped<Float, Scalar<Number>>(
-            FuncOf { number -> ScalarOf { number } },
+            FuncOf { number -> Constant { number } },
             Iterable { src.iterator() }
         )
     )

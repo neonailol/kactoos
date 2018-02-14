@@ -7,10 +7,8 @@ import java.util.NoSuchElementException
  *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @param T Type of item
- * @since 0.8
+ * @since 0.3
  */
 class Cycled<out T>(private val origin: Iterable<T>) : Iterator<T> {
 

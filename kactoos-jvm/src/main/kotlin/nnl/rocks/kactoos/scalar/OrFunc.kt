@@ -89,7 +89,7 @@ class OrFunc<X : Any>(
         src: Iterable<X>
     ) : this(
         Mapped<X, Scalar<Boolean>>(
-            FuncOf { item -> ScalarOf(func.apply(item)) }, src
+            FuncOf { item -> Constant(func.apply(item)) }, src
         )
     )
 

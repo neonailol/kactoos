@@ -2,7 +2,7 @@ package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.iterator.Mapped
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Mapped iterable.
@@ -24,7 +24,7 @@ class Mapped<X : Any, Y : Any> : IterableEnvelope<Y> {
         fnc: Func<X, Y>,
         src: Iterable<X>
     ) : super(
-        ScalarOf { Iterable { Mapped<X, Y>(fnc, src.iterator()) } }
+        Constant { Iterable { Mapped<X, Y>(fnc, src.iterator()) } }
     )
 
     /**

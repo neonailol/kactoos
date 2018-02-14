@@ -3,7 +3,7 @@ package nnl.rocks.kactoos.collection
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.iterable.Filtered
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Filtered collection.
@@ -19,7 +19,7 @@ class Filtered<X : Any> : CollectionEnvelope<X> {
         func: Func<X, Boolean>,
         src: Iterable<X>
     ) : super(
-        ScalarOf { CollectionOf<X>(Filtered<X>(func, src)) }
+        Constant { CollectionOf<X>(Filtered<X>(func, src)) }
     )
 
     /**

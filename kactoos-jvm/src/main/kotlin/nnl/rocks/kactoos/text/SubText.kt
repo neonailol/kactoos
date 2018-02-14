@@ -2,7 +2,7 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.IOException
 
@@ -52,7 +52,7 @@ class SubText(
     constructor(
         text: Text,
         strt: Int
-    ) : this(text, ScalarOf { strt }, ScalarOf { text.asString().length })
+    ) : this(text, Constant { strt }, Constant { text.asString().length })
 
     /**
      * @param text The Text
@@ -63,7 +63,7 @@ class SubText(
         text: Text,
         strt: Int,
         finish: Int
-    ) : this(text, ScalarOf { strt }, ScalarOf { finish })
+    ) : this(text, Constant { strt }, Constant { finish })
 
     /**
      * @param text The Text

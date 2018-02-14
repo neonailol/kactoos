@@ -1,4 +1,4 @@
-package nnl.rocks.kactoos.iterator
+package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Scalar

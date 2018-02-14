@@ -4,7 +4,7 @@ import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.SyncScalar
 import java.util.concurrent.ConcurrentHashMap
 
@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentHashMap
  * @since 0.24
  */
 class SyncMap<X : Any, Y : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
-    SyncScalar<Map<X, Y>>(ScalarOf { val temp = ConcurrentHashMap<X, Y>(0); temp.putAll(map); temp })
+    SyncScalar<Map<X, Y>>(Constant { val temp = ConcurrentHashMap<X, Y>(0); temp.putAll(map); temp })
 ) {
 
     /**

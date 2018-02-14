@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.SyncScalar
 
 /**
@@ -24,7 +24,7 @@ import nnl.rocks.kactoos.scalar.SyncScalar
  */
 class SyncIterable<X : Any>(iterable: Iterable<X>) : IterableEnvelope<X>(
     SyncScalar<Iterable<X>>(
-        ScalarOf {
+        Constant {
             iterable
         }
     )

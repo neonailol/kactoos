@@ -4,12 +4,12 @@ import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 
 /**
- * Creates scalar out of [T]
+ * Constant value that never changes.
  *
  * @param T Type of scalar
- * @since 0.2
+ * @since 0.3
  */
-class ScalarOf<out T : Any>(
+class Constant<out T : Any>(
     private val origin: KScalar<T>
 ) : Scalar<T> {
 

@@ -23,7 +23,7 @@
  */
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Iterable implementation for partitioning functionality.
@@ -40,7 +40,7 @@ class Partitioned<T : Any> : IterableEnvelope<List<T>> {
     constructor(
         size: Int,
         iterable: Iterable<T>
-    ) : super(ScalarOf {
+    ) : super(Constant {
         Iterable {
             nnl.rocks.kactoos.iterator.Partitioned<T>(
                 size, iterable.iterator()

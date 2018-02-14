@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.time
 
 import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -20,12 +20,12 @@ class LocalDateTimeOf(
 
     constructor(
         date: CharSequence
-    ) : this(UncheckedScalar(ScalarOf { LocalDateTime.from(Iso().get().parse(date)) }))
+    ) : this(UncheckedScalar(Constant { LocalDateTime.from(Iso().get().parse(date)) }))
 
     constructor(
         date: CharSequence,
         formatter: DateTimeFormatter
-    ) : this(UncheckedScalar(ScalarOf { LocalDateTime.from(formatter.parse(date)) }))
+    ) : this(UncheckedScalar(Constant { LocalDateTime.from(formatter.parse(date)) }))
 
     /**
      * Parses date using the provided format to create

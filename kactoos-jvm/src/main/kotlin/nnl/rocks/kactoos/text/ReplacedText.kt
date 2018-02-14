@@ -5,8 +5,8 @@ import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.IoCheckedFunc
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
 import java.io.IOException
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -55,7 +55,7 @@ class ReplacedText(
         text: Text,
         find: String,
         replace: String
-    ) : this(text, ScalarOf { Pattern.compile(find) }, FuncOf { matcher -> replace })
+    ) : this(text, Constant { Pattern.compile(find) }, FuncOf { matcher -> replace })
 
     @Throws(IOException::class)
     override fun asString(): String {

@@ -127,7 +127,7 @@ class Or(
             return Or(
                 OrFunc<X>(
                     Mapped<X, Scalar<Boolean>>(
-                        FuncOf { item -> ScalarOf(func.apply(item)) }, src
+                        FuncOf { item -> Constant(func.apply(item)) }, src
                     )
                 )
             )

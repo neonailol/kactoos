@@ -3,7 +3,7 @@ package nnl.rocks.kactoos.collection
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Mapped collection.
@@ -20,7 +20,7 @@ class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
         fnc: Func<X, Y>,
         src: Collection<X>
     ) : super(
-        ScalarOf { CollectionOf<Y>(Mapped<X, Y>(fnc, src)) }
+        Constant { CollectionOf<Y>(Mapped<X, Y>(fnc, src)) }
     )
 
     /**

@@ -4,7 +4,7 @@ import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.File
@@ -162,7 +162,7 @@ class ReaderOf(
         input: Input,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(
-        ScalarOf { InputStreamReader(input.stream(), charset) }
+        Constant { InputStreamReader(input.stream(), charset) }
     )
 
     /**
@@ -172,7 +172,7 @@ class ReaderOf(
     constructor(
         input: Input,
         charset: CharSequence
-    ) : this(ScalarOf { InputStreamReader(input.stream(), charset.toString()) })
+    ) : this(Constant { InputStreamReader(input.stream(), charset.toString()) })
 
     /**
      * @param input The input
@@ -182,7 +182,7 @@ class ReaderOf(
     constructor(
         input: Input,
         decoder: CharsetDecoder
-    ) : this(ScalarOf { InputStreamReader(input.stream(), decoder) })
+    ) : this(Constant { InputStreamReader(input.stream(), decoder) })
 
     /**
      * @param stream The stream
@@ -217,7 +217,7 @@ class ReaderOf(
     /**
      * @param rdr The reader
      */
-    private constructor(rdr: Reader) : this(ScalarOf { rdr })
+    private constructor(rdr: Reader) : this(Constant { rdr })
 
     @Throws(IOException::class)
     override fun read(

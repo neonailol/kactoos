@@ -4,7 +4,7 @@ import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.File
@@ -176,7 +176,7 @@ class InputStreamOf private constructor(src: Scalar<InputStream>) : InputStream(
      * Ctor.
      * @param input The input
      */
-    constructor(input: Input) : this(ScalarOf<InputStream> { input.stream() } as Scalar<InputStream>)
+    constructor(input: Input) : this(Constant<InputStream> { input.stream() } as Scalar<InputStream>)
 
     @Throws(IOException::class)
     override fun read(): Int {

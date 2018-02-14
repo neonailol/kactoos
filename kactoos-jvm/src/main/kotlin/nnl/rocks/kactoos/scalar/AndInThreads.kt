@@ -201,7 +201,7 @@ class AndInThreads(
             return AndInThreads(
                 AndInThreadsFunc<X>(
                     Mapped<X, Scalar<Boolean>>(
-                        FuncOf { item -> ScalarOf(func.apply(item)) }, src
+                        FuncOf { item -> Constant(func.apply(item)) }, src
                     )
                 )
             )
@@ -299,7 +299,7 @@ class AndInThreads(
                 AndInThreadsFunc<X>(
                     svc,
                     Mapped<X, Scalar<Boolean>>(
-                        FuncOf { item -> ScalarOf { func.apply(item) } },
+                        FuncOf { item -> Constant { func.apply(item) } },
                         src
                     )
                 )

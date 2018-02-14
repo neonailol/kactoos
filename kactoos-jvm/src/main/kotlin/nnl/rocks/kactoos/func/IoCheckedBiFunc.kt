@@ -1,9 +1,8 @@
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.BiFunc
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
-
 import java.io.IOException
 
 /**
@@ -25,5 +24,5 @@ class IoCheckedBiFunc<in X : Any, in Y : Any, out Z : Any>(
     override fun apply(
         first: X,
         second: Y
-    ): Z = IoCheckedScalar(ScalarOf { this.func.apply(first, second) }).value()
+    ): Z = IoCheckedScalar(Constant { this.func.apply(first, second) }).value()
 }

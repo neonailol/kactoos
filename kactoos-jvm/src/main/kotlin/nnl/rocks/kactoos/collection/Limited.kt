@@ -2,7 +2,7 @@ package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Limited
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Limited collection.
@@ -18,7 +18,7 @@ class Limited<X : Any> : CollectionEnvelope<X> {
         lmt: Int,
         src: Collection<X>
     ) : super(
-        ScalarOf { CollectionOf<X>(Limited<X>(lmt, src)) }
+        Constant { CollectionOf<X>(Limited<X>(lmt, src)) }
     )
 
     /**

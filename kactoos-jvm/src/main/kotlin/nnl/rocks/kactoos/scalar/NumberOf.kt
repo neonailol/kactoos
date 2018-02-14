@@ -31,5 +31,5 @@ class NumberOf(dnum: Scalar<Double>) : NumberEnvelope(dnum), Scalar<Double> {
     /**
      * @param txt Number-string
      */
-    constructor(txt: Text) : this(StickyScalar(ScalarOf { parseDouble(txt.asString()) }))
+    constructor(txt: Text) : this(StickyScalar(Constant { parseDouble(txt.asString()) }))
 }

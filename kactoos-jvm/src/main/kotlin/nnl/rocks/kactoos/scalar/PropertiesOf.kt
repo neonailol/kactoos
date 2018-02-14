@@ -40,7 +40,7 @@ class PropertiesOf(
      * @param input Input
      */
     constructor(input: Input) : this(
-        ScalarOf {
+        Constant {
             val props = Properties()
             input.stream().use { stream -> props.load(stream) }
             props
@@ -73,7 +73,7 @@ class PropertiesOf(
      * @param map The map with properties
      */
     constructor(map: Map<*, *>) : this(
-        ScalarOf {
+        Constant {
             val props = Properties()
             for ((key, value) in map) {
                 props.setProperty(

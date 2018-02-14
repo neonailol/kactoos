@@ -20,7 +20,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  * @see StickyScalar
  * @see UncheckedScalar
  * @see IoCheckedScalar
- * @see nnl.rocks.kactoos.scalar.ScalarOf
+ * @see nnl.rocks.kactoos.scalar.Constant
  * @since 0.2
  */
 @FunctionalInterface

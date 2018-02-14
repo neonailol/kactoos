@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.list
 
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Joined list.
@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.scalar.ScalarOf
  */
 class Joined<X : Any> : ListEnvelope<X> {
 
-    constructor(src: Iterable<List<X>>) : super(ScalarOf { src.flatMap { it } })
+    constructor(src: Iterable<List<X>>) : super(Constant { src.flatMap { it } })
 
     @SafeVarargs
     constructor(vararg src: List<X>) : this(ListOf<List<X>>(src.iterator()))

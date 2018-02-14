@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 
 /**
@@ -17,23 +17,23 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
 class IterableOf<X : Any> : IterableEnvelope<X> {
 
     constructor(sclr: Scalar<Iterator<X>>) : super(
-        ScalarOf { Iterable { UncheckedScalar(sclr).value() } }
+        Constant { Iterable { UncheckedScalar(sclr).value() } }
     )
 
     /**
      * @param items The array
      */
     @SafeVarargs
-    constructor(vararg items: X) : this(ScalarOf { items.iterator() })
+    constructor(vararg items: X) : this(Constant { items.iterator() })
 
     /**
      * @param list The list
      */
-    constructor(list: List<X>) : this(ScalarOf<Iterator<X>> { list.iterator() })
+    constructor(list: List<X>) : this(Constant<Iterator<X>> { list.iterator() })
 
     /**
      * @param list The list
      * @since 0.21
      */
-    constructor(list: Iterator<X>) : this(ScalarOf { list })
+    constructor(list: Iterator<X>) : this(Constant { list })
 }

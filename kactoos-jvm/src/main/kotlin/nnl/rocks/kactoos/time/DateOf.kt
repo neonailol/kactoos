@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.time
 
 import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.time.LocalDateTime
 import java.time.ZoneOffset
@@ -23,7 +23,7 @@ class DateOf(
         date: CharSequence,
         formatter: DateTimeFormatter
     ) : this(
-        UncheckedScalar(ScalarOf { Date.from(LocalDateTime.from(formatter.parse(date)).toInstant(ZoneOffset.UTC)) })
+        UncheckedScalar(Constant { Date.from(LocalDateTime.from(formatter.parse(date)).toInstant(ZoneOffset.UTC)) })
     )
 
     constructor (

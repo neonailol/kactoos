@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import java.util.LinkedList
 
@@ -17,7 +17,7 @@ import java.util.LinkedList
  */
 class StickyIterable<X : Any>(iterable: Iterable<X>) : IterableEnvelope<X>(
     StickyScalar<Iterable<X>>(
-        ScalarOf {
+        Constant {
             val temp = LinkedList<X>()
             for (item in iterable) {
                 temp.add(item)

@@ -5,8 +5,8 @@ import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.KInput
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.ByteArrayInputStream
 import java.io.File
@@ -41,7 +41,7 @@ class InputOf(private val origin: Input) : Input {
     constructor(file: File) : this(
         {
             FileInputStream(
-                UncheckedScalar(ScalarOf { file }).value()
+                UncheckedScalar(Constant { file }).value()
             )
         }
     )
@@ -54,12 +54,12 @@ class InputOf(private val origin: Input) : Input {
     /**
      * @param uri The URI
      */
-    constructor(uri: URI) : this(ScalarOf { uri.toURL() })
+    constructor(uri: URI) : this(Constant { uri.toURL() })
 
     /**
      * @param url The URL
      */
-    constructor(url: URL) : this(ScalarOf { url })
+    constructor(url: URL) : this(Constant { url })
 
     /**
      * @param scalar The url
@@ -223,7 +223,7 @@ class InputOf(private val origin: Input) : Input {
      */
     constructor(src: Bytes) : this(
         IoCheckedScalar<InputStream>(
-            ScalarOf { ByteArrayInputStream(src.asBytes()) }
+            Constant { ByteArrayInputStream(src.asBytes()) }
         ).value()
     )
 

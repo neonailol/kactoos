@@ -23,14 +23,14 @@
  */
 package nnl.rocks.kactoos.iterator;
 
+import java.util.Collections;
+import java.util.NoSuchElementException;
 import nnl.rocks.kactoos.iterable.IterableNoNulls;
 import nnl.rocks.kactoos.iterable.IterableOf;
 import nnl.rocks.kactoos.matchers.ScalarHasValue;
+import nnl.rocks.kactoos.scalar.ItemAt;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
-
-import java.util.Collections;
-import java.util.NoSuchElementException;
 
 /**
  * Test Case for {@link Cycled}.

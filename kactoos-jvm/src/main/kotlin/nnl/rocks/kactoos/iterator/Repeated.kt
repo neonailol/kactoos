@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.util.NoSuchElementException
 
@@ -28,7 +28,7 @@ class Repeated<T : Any>(
     constructor(
         max: Int,
         element: T
-    ) : this(max, ScalarOf { element })
+    ) : this(max, Constant { element })
 
     /**
      * Ctor.

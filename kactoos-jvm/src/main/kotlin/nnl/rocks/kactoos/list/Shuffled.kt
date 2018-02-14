@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.list
 
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import java.util.Collections
 import java.util.LinkedList
 
@@ -23,7 +23,7 @@ import java.util.LinkedList
  */
 class Shuffled<T : Any>
 (src: Collection<T>) : ListEnvelope<T>(
-    ScalarOf {
+    Constant {
         val items = LinkedList<T>()
         items.addAll(src)
         Collections.shuffle(items)

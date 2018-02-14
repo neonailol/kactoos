@@ -8,8 +8,8 @@ import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.BytesOf
 import nnl.rocks.kactoos.io.InputOf
 import nnl.rocks.kactoos.iterable.Mapped
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.ScalarOf
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
@@ -239,7 +239,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     @JvmOverloads constructor(
         bytes: Bytes,
         cset: Charset = StandardCharsets.UTF_8
-    ) : this(ScalarOf { String(bytes.asBytes(), cset) })
+    ) : this(Constant { String(bytes.asBytes(), cset) })
 
     /**
      * Ctor.
@@ -250,7 +250,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     constructor(
         bytes: Bytes,
         cset: String
-    ) : this(ScalarOf { String(bytes.asBytes(), Charset.forName(cset)) })
+    ) : this(Constant { String(bytes.asBytes(), Charset.forName(cset)) })
 
     /**
      * Ctor.
@@ -261,7 +261,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     @JvmOverloads constructor(
         input: String,
         cset: Charset = StandardCharsets.UTF_8
-    ) : this(ScalarOf { String(input.toByteArray(cset), cset) })
+    ) : this(Constant { String(input.toByteArray(cset), cset) })
 
     /**
      * Ctor.
@@ -269,7 +269,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
      * @since 0.21
      */
     constructor(iterable: Iterable<*>) : this(
-        ScalarOf {
+        Constant {
             JoinedText(
                 ", ",
                 Mapped<Any, String>(

@@ -2,7 +2,7 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Output
 import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.File
@@ -54,7 +54,7 @@ class WriterTo(
         output: Output,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(
-        ScalarOf { OutputStreamWriter(output.stream(), charset) }
+        Constant { OutputStreamWriter(output.stream(), charset) }
     )
 
     /**
@@ -64,7 +64,7 @@ class WriterTo(
     constructor(
         output: Output,
         charset: CharSequence
-    ) : this(ScalarOf { OutputStreamWriter(output.stream(), charset.toString()) })
+    ) : this(Constant { OutputStreamWriter(output.stream(), charset.toString()) })
 
     /**
      * @param output The input
@@ -74,7 +74,7 @@ class WriterTo(
     constructor(
         output: Output,
         encoder: CharsetEncoder
-    ) : this(ScalarOf { OutputStreamWriter(output.stream(), encoder) })
+    ) : this(Constant { OutputStreamWriter(output.stream(), encoder) })
 
     @Throws(IOException::class)
     override fun write(

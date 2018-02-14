@@ -12,7 +12,7 @@ class ScalarOfTest {
     fun okForNoNulls() {
         assertEquals(
             "Hello",
-            ScalarOf(
+            Constant(
                 "Hello"
             ).value()
         )
@@ -22,7 +22,7 @@ class ScalarOfTest {
     @Ignore
     fun failForNullArgument() {
         assertFailsWith(Throwable::class) {
-            ScalarOf(dummy()).value().hashCode()
+            Constant(dummy()).value().hashCode()
         }
     }
 
@@ -30,7 +30,7 @@ class ScalarOfTest {
     @Ignore
     fun failForNullResult() {
         assertFailsWith(Throwable::class) {
-            ScalarOf<Any>({ dummy() }).value().toString()
+            Constant<Any>({ dummy() }).value().toString()
         }
     }
 }

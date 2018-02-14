@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.ScalarOf
+import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.SolidScalar
 
 /**
@@ -16,7 +16,7 @@ import nnl.rocks.kactoos.scalar.SolidScalar
 class SolidCollection<T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Collection<T>) : super(
-        SolidScalar<Collection<T>>(ScalarOf { SyncCollection<T>(StickyCollection<T>(src)) })
+        SolidScalar<Collection<T>>(Constant { SyncCollection<T>(StickyCollection<T>(src)) })
     )
 
     /**
