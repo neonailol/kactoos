@@ -24,7 +24,7 @@ import java.nio.charset.StandardCharsets
  *
  * @since 0.13
  */
-internal class WriterAsOutputStream
+class WriterAsOutputStream
 (
     private val writer: Writer,
     private val decoder: CharsetDecoder,
@@ -81,6 +81,10 @@ internal class WriterAsOutputStream
             .onUnmappableCharacter(CodingErrorAction.REPORT),
         size
     )
+
+    override fun close() {
+        this.writer.close()
+    }
 
     @Throws(IOException::class)
     override fun write(data: Int) {

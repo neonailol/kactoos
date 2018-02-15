@@ -60,6 +60,7 @@ class ReaderAsBytes @JvmOverloads constructor(
             }
             builder.append(buffer, 0, done)
         }
+        this.reader.close()
         return builder.toString().toByteArray(charset(this.charset.toString()))
     }
 }
