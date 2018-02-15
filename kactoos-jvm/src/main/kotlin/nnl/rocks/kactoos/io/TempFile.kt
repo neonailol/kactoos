@@ -2,13 +2,11 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.text.TextOf
 import java.io.Closeable
-import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -76,7 +74,7 @@ class TempFile private constructor(
         suffix: Text
     ) : this(
         StickyScalar<Path>(
-            FuncOf {
+            Constant {
                 Files.createTempFile(
                     dir.value(),
                     prefix.asString(),
@@ -94,7 +92,6 @@ class TempFile private constructor(
     /**
      * Deletes the file from the filesystem.
      */
-    @Throws(IOException::class)
     override fun close() {
         Files.delete(IoCheckedScalar(this.file).value())
     }
