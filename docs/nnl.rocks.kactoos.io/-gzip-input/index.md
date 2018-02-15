@@ -19,7 +19,7 @@ Input that reads compressed data from the GZIP file format.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `GzipInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = 16 shl 10)`<br>Input that reads compressed data from the GZIP file format. |
+| [&lt;init&gt;](-init-.md) | `GzipInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)``GzipInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Input that reads compressed data from the GZIP file format. |
 
 ### Functions
 

@@ -89,7 +89,7 @@ Ctor.
 
 `stream` - The stream
 
-`charset` - The charset`ReaderOf(stream: `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`charset` - The charset`ReaderOf(stream: `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`)``ReaderOf(stream: `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 

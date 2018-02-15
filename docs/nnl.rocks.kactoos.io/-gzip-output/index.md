@@ -19,7 +19,7 @@ Output that writes compressed data in the GZIP file format.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = 16 shl 10)`<br>Output that writes compressed data in the GZIP file format. |
+| [&lt;init&gt;](-init-.md) | `GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)``GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Output that writes compressed data in the GZIP file format. |
 
 ### Functions
 

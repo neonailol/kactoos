@@ -135,6 +135,7 @@ Kactoos.
 | [nnl.rocks.kactoos.func.ProcOf](../nnl.rocks.kactoos.func/-proc-of/index.md) | Func as Proc. |
 | [nnl.rocks.kactoos.scalar.PropertiesOf](../nnl.rocks.kactoos.scalar/-properties-of/index.md) | Map as [java.util.Properties](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html). |
 | [nnl.rocks.kactoos.iterable.RangeOf](../nnl.rocks.kactoos.iterable/-range-of/index.md) | Iterable implementation to model range functionality. |
+| [nnl.rocks.kactoos.io.ReaderAsBytes](../nnl.rocks.kactoos.io/-reader-as-bytes/index.md) | Reader as [Bytes](../nnl.rocks.kactoos/-bytes/index.md). |
 | [nnl.rocks.kactoos.io.ReaderOf](../nnl.rocks.kactoos.io/-reader-of/index.md) | A [Reader](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.scalar.Reduced](../nnl.rocks.kactoos.scalar/-reduced/index.md) | Iterable, which elements are "reduced" through the func. |
 | [nnl.rocks.kactoos.iterable.Repeated](../nnl.rocks.kactoos.iterable/-repeated/index.md) | Repeat an element. |
@@ -225,6 +226,7 @@ Kactoos.
 | [nnl.rocks.kactoos.scalar.UncheckedScalar](../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md) | Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [nnl.rocks.kactoos.text.UncheckedText](../nnl.rocks.kactoos.text/-unchecked-text/index.md) | Text that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [nnl.rocks.kactoos.text.UpperText](../nnl.rocks.kactoos.text/-upper-text/index.md) | Text in upper case. |
+| [nnl.rocks.kactoos.io.WriterAsOutputStream](../nnl.rocks.kactoos.io/-writer-as-output-stream/index.md) | Writer as [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html). |
 | [nnl.rocks.kactoos.io.WriterTo](../nnl.rocks.kactoos.io/-writer-to/index.md) | A [Writer](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html) that encapsulates other destination for the data. |
 | [nnl.rocks.kactoos.time.ZonedDateTimeAsText](../nnl.rocks.kactoos.time/-zoned-date-time-as-text/index.md) | Formatter for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances. |
 | [nnl.rocks.kactoos.time.ZonedDateTimeOf](../nnl.rocks.kactoos.time/-zoned-date-time-of/index.md) | Parser for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances. |
