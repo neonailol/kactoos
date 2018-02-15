@@ -42,5 +42,4 @@ class Skipped<T : Any>(
         skip: Int,
         src: Iterable<T>
     ) : this(skip, CollectionOf<T>(src))
-
 }

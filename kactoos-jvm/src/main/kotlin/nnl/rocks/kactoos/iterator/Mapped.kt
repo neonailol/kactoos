@@ -28,5 +28,4 @@ class Mapped<X : Any, out Y : Any>(
     override fun toString(): String {
         return TextOf(Iterable { this }).asString()
     }
-
 }

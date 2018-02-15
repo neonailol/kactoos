@@ -33,7 +33,6 @@ import nnl.rocks.kactoos.iterable.IterableOf
 class And(private val iterable: Iterable<Scalar<Boolean>>) : Scalar<Boolean> {
 
     init {
-
     }
 
     /**
