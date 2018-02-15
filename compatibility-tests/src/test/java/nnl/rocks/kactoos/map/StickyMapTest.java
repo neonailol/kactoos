@@ -23,16 +23,15 @@
  */
 package nnl.rocks.kactoos.map;
 
+import java.security.SecureRandom;
+import java.util.Locale;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import nnl.rocks.kactoos.iterable.IterableOf;
 import nnl.rocks.kactoos.iterator.Repeated;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.security.SecureRandom;
-import java.util.Locale;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Test case for {@link StickyMap}.

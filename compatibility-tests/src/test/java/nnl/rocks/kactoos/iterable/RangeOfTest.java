@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.iterable;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import nnl.rocks.kactoos.Func;
 import nnl.rocks.kactoos.collection.CollectionOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 /**
  * Test of range implementation.

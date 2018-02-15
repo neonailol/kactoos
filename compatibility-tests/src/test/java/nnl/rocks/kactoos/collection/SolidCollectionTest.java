@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.collection;
 
+import java.util.Collection;
 import nnl.rocks.kactoos.Scalar;
 import nnl.rocks.kactoos.iterable.IterableOf;
 import nnl.rocks.kactoos.matchers.RunsInThreads;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Collection;
 
 /**
  * Test Case for {@link SolidCollection}.

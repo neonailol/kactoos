@@ -23,12 +23,6 @@
  */
 package nnl.rocks.kactoos.io;
 
-import nnl.rocks.kactoos.matchers.MatcherOf;
-import nnl.rocks.kactoos.matchers.TextHasString;
-import nnl.rocks.kactoos.text.TextOf;
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -36,16 +30,23 @@ import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import nnl.rocks.kactoos.matchers.MatcherOf;
+import nnl.rocks.kactoos.matchers.ScalarHasValue;
+import nnl.rocks.kactoos.matchers.TextHasString;
+import nnl.rocks.kactoos.text.TextOf;
+import org.hamcrest.MatcherAssert;
+import org.junit.Test;
 
 /**
  * Test case for {@link WriterAsOutputStream}.
  *
  * @author Yegor Bugayenko (yegor256@gmail.com)
- * @version $Id: 3f68699a21f1f09712e10531cc0c4f146bdb2be2 $
+ * @version $Id: b7415e1d84342534d7743949f35482772f50aa8f $
  * @since 0.13
  * @checkstyle JavadocMethodCheck (500 lines)
  * @checkstyle ClassDataAbstractionCouplingCheck (500 lines)
  */
+@SuppressWarnings("PMD.AvoidDuplicateLiterals")
 public final class WriterAsOutputStreamTest {
 
     @Test
@@ -58,7 +59,7 @@ public final class WriterAsOutputStreamTest {
                 new TeeInput(
                     new InputOf(content),
                     new OutputTo(
-                        new WriterAsOutputStream(
+                        new nnl.rocks.kactoos.io.WriterAsOutputStream(
                             new OutputStreamWriter(
                                 baos, StandardCharsets.UTF_8
                             ),
@@ -90,7 +91,7 @@ public final class WriterAsOutputStreamTest {
                 new TeeInput(
                     new ResourceOf("org/cactoos/large-text.txt"),
                     new OutputTo(
-                        new WriterAsOutputStream(
+                        new nnl.rocks.kactoos.io.WriterAsOutputStream(
                             new OutputStreamWriter(
                                 new FileOutputStream(temp.toFile()),
                                 StandardCharsets.UTF_8
@@ -112,4 +113,30 @@ public final class WriterAsOutputStreamTest {
         );
     }
 
+    @Test
+    public void writesToFileAndRemovesIt() throws Exception {
+        final Path temp = new TempFile().value();
+        final String content = "Hello, товарищ! How are you?";
+        new LengthOf(
+            new TeeInput(
+                new InputOf(content),
+                new OutputTo(
+                    new nnl.rocks.kactoos.io.WriterAsOutputStream(
+                        new OutputStreamWriter(
+                            new FileOutputStream(temp.toFile()),
+                            StandardCharsets.UTF_8
+                        ),
+                        StandardCharsets.UTF_8,
+                        // @checkstyle MagicNumber (1 line)
+                        345
+                    )
+                )
+            )
+        ).value();
+        Files.delete(temp);
+        MatcherAssert.assertThat(
+            () -> Files.exists(temp),
+            new ScalarHasValue<>(new MatcherOf<Boolean>(value -> !value))
+        );
+    }
 }

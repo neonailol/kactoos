@@ -23,6 +23,12 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringReader;
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.atomic.AtomicBoolean;
 import nnl.rocks.kactoos.Text;
 import nnl.rocks.kactoos.iterable.Endless;
 import nnl.rocks.kactoos.iterable.Limited;
@@ -33,13 +39,6 @@ import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.nio.charset.StandardCharsets;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Test case for {@link BytesOf}.

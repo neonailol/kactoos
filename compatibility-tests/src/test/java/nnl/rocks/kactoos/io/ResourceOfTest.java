@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.IOException;
+import java.util.Arrays;
 import nnl.rocks.kactoos.text.FormattedText;
 import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * Test case for {@link ResourceOf}.

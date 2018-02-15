@@ -35,4 +35,4 @@
  * @version $Id: ec9fea7f17ff08d09d63a0642bb4e2f9b4cbb027 $
  * @since 0.1
  */
-package nnl.rocks.text;
+package nnl.rocks.kactoos.text;

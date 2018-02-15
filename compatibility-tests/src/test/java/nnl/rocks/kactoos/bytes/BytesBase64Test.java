@@ -24,13 +24,12 @@
 
 package nnl.rocks.kactoos.bytes;
 
+import java.io.IOException;
+import java.util.Base64;
 import nnl.rocks.kactoos.io.BytesOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.util.Base64;
 
 /**
  * Test case for {@link BytesBase64}.

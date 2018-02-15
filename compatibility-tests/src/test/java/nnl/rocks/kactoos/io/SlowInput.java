@@ -23,11 +23,10 @@
  */
 package nnl.rocks.kactoos.io;
 
-import nnl.rocks.kactoos.Input;
-
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import nnl.rocks.kactoos.Input;
 
 /**
  * Input that returns content in small portions.

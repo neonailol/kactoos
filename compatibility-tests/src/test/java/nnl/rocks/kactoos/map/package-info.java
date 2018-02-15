@@ -35,4 +35,4 @@
  * @version $Id: 6da1d0b7ddfd9860ec996b9fe6cd70426ac9a663 $
  * @since 0.14
  */
-package nnl.rocks.map;
+package nnl.rocks.kactoos.map;

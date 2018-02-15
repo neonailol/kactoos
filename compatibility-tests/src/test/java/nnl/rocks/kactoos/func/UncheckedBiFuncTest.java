@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.func;
 
+import java.io.IOException;
+import java.io.UncheckedIOException;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.io.UncheckedIOException;
 
 /**
  * Test case for {@link UncheckedBiFunc}.

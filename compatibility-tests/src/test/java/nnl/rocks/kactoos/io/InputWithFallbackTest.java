@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.File;
+import java.io.IOException;
 import nnl.rocks.kactoos.matchers.TextHasString;
 import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.File;
-import java.io.IOException;
 
 /**
  * Test case for {@link InputWithFallback}.

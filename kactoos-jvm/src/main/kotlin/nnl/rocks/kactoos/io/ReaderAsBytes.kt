@@ -19,7 +19,7 @@ import java.nio.charset.StandardCharsets
  * @param size Buffer size
  * @since 0.3
  */
-internal class ReaderAsBytes @JvmOverloads constructor(
+class ReaderAsBytes @JvmOverloads constructor(
     private val reader: Reader,
     private val charset: CharSequence,
     private val size: Int = 16 shl 10

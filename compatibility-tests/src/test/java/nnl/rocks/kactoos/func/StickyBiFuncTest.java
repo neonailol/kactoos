@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.func;
 
+import java.security.SecureRandom;
 import nnl.rocks.kactoos.BiFunc;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.security.SecureRandom;
 
 /**
  * Test case for {@link StickyBiFunc}.

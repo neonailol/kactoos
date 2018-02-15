@@ -23,11 +23,10 @@
  */
 package nnl.rocks.kactoos.list;
 
+import java.util.Collections;
 import nnl.rocks.kactoos.matchers.RunsInThreads;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
-
-import java.util.Collections;
 
 /**
  * Test case for {@link SyncList}.

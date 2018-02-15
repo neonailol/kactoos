@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.iterator;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import nnl.rocks.kactoos.Text;
 import nnl.rocks.kactoos.matchers.TextHasString;
 import nnl.rocks.kactoos.text.FormattedText;
 import nnl.rocks.kactoos.text.JoinedText;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
-
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Test case for {@link StickyIterator}.

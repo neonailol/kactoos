@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.func;
 
+import java.io.IOException;
 import nnl.rocks.kactoos.matchers.FuncApplies;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.IOException;
 
 /**
  * Test case for {@link FuncWithFallback}.

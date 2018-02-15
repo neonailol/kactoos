@@ -23,13 +23,12 @@
  */
 package nnl.rocks.kactoos.time;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.Test;
-
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Locale;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.Test;
 
 /**
  * Tests for ZonedDateTimeAsText.

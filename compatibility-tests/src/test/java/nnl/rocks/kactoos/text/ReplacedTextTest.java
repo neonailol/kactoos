@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.text;
 
-import nnl.rocks.kactoos.matchers.TextHasString;
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+import nnl.rocks.kactoos.matchers.TextHasString;
+import org.hamcrest.MatcherAssert;
+import org.junit.Test;
 
 /**
  * Test case for {@link ReplacedText}.

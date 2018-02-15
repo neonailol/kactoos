@@ -35,4 +35,4 @@
  * @version $Id: 9d3508a71dd90ced66b143c9ad728b6c095c12f5 $
  * @since 0.14
  */
-package nnl.rocks.list;
+package nnl.rocks.kactoos.list;

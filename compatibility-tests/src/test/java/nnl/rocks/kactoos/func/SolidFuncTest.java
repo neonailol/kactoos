@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.func;
 
+import java.security.SecureRandom;
 import nnl.rocks.kactoos.Func;
 import nnl.rocks.kactoos.list.ListOf;
 import nnl.rocks.kactoos.matchers.RunsInThreads;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.security.SecureRandom;
 
 /**
  * Test case for {@link SolidFunc}.

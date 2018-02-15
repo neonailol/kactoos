@@ -23,17 +23,16 @@
  */
 package nnl.rocks.kactoos.list;
 
-import nnl.rocks.kactoos.Scalar;
-import nnl.rocks.kactoos.iterable.IterableOf;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import nnl.rocks.kactoos.Scalar;
+import nnl.rocks.kactoos.iterable.IterableOf;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.Test;
 
 /**
  * Test case for {@link StickyList}.

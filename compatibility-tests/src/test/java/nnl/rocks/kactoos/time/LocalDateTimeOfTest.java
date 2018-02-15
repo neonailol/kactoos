@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.time;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 /**
  * Tests for {@link LocalDateTimeOf}.

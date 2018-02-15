@@ -23,16 +23,15 @@
  */
 package nnl.rocks.kactoos.text;
 
-import nnl.rocks.kactoos.list.ListOf;
-import nnl.rocks.kactoos.matchers.TextHasString;
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.IllegalFormatConversionException;
 import java.util.Locale;
 import java.util.UnknownFormatConversionException;
+import nnl.rocks.kactoos.list.ListOf;
+import nnl.rocks.kactoos.matchers.TextHasString;
+import org.hamcrest.MatcherAssert;
+import org.junit.Test;
 
 /**
  * Test case for {@link FormattedText}.

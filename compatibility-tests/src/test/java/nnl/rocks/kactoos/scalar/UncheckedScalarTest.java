@@ -23,10 +23,9 @@
  */
 package nnl.rocks.kactoos.scalar;
 
-import org.junit.Test;
-
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import org.junit.Test;
 
 /**
  * Test case for {@link UncheckedScalar}.

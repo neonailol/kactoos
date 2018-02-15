@@ -193,6 +193,10 @@ class ReaderOf(
         charset: Charset = StandardCharsets.UTF_8
     ) : this(InputStreamReader(stream, charset))
 
+    constructor(
+        stream: InputStream
+    ) : this(InputStreamReader(stream, StandardCharsets.UTF_8))
+
     /**
      * @param stream The stream
      * @param charset The charset

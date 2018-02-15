@@ -268,13 +268,13 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
      * @param iterable The iterable to convert to string
      * @since 0.21
      */
-    constructor(iterable: Iterable<*>) : this(
+    constructor(iterable: Iterable<Any>) : this(
         Constant {
             JoinedText(
                 ", ",
                 Mapped<Any, String>(
-                    FuncOf { it.toString() },
-                    iterable
+                    fnc = FuncOf { it.toString() },
+                    iter = iterable
                 )
             ).asString()
         }

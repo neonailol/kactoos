@@ -23,20 +23,20 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-
 /**
  * Test case for {@link TeeInputStream}.
  * @author Yegor Bugayenko (yegor256@gmail.com)
- * @version $Id: c199811d890bbe86279ec07ed9dacbbacb59f2d3 $
+ * @author Stanislav Myachenkov (s.myachenkov@gmail.com)
+ * @version $Id: d5fdaa58617ec9d29a4c15b71a45d67ec7fef77f $
  * @since 0.1
  * @checkstyle JavadocMethodCheck (500 lines)
  * @checkstyle ClassDataAbstractionCouplingCheck (500 lines)
@@ -49,14 +49,15 @@ public final class TeeInputStreamTest {
         final String content = "Hello, товарищ!";
         MatcherAssert.assertThat(
             "Can't copy InputStream to OutputStream byte by byte",
-            TeeInputStreamTest.asString(
-                new TeeInputStream(
-                    new ByteArrayInputStream(
-                        content.getBytes(StandardCharsets.UTF_8)
-                    ),
-                    baos
+            new TextOf(
+                new ReaderOf(
+                    new TeeInputStream(
+                        new ByteArrayInputStream(
+                            content.getBytes(StandardCharsets.UTF_8)
+                        ), baos
+                    )
                 )
-            ),
+            ).asString(),
             Matchers.allOf(
                 Matchers.equalTo(content),
                 Matchers.equalTo(
@@ -64,19 +65,6 @@ public final class TeeInputStreamTest {
                 )
             )
         );
-    }
-
-    private static String asString(final InputStream input) throws IOException {
-        final ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        while (true) {
-            final int data = input.read();
-            if (data < 0) {
-                break;
-            }
-            baos.write(data);
-        }
-        input.close();
-        return new String(baos.toByteArray(), StandardCharsets.UTF_8);
     }
 
 }

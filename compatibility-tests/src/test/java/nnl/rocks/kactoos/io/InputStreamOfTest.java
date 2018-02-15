@@ -23,16 +23,15 @@
  */
 package nnl.rocks.kactoos.io;
 
-import nnl.rocks.kactoos.matchers.InputHasContent;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import nnl.rocks.kactoos.matchers.InputHasContent;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.Test;
 
 /**
  * Test case for {@link InputStreamOf}.

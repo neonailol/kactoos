@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.scalar;
 
+import java.security.SecureRandom;
 import nnl.rocks.kactoos.Scalar;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.security.SecureRandom;
 
 /**
  * Test case for {@link StickyScalar}.

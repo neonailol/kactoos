@@ -23,13 +23,12 @@
  */
 package nnl.rocks.kactoos.map;
 
+import java.util.Map;
 import nnl.rocks.kactoos.Scalar;
 import nnl.rocks.kactoos.matchers.RunsInThreads;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Map;
 
 /**
  * Test case for {@link SolidMap}.

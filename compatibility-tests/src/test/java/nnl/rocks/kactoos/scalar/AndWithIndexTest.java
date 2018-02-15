@@ -23,15 +23,14 @@
  */
 package nnl.rocks.kactoos.scalar;
 
+import java.util.LinkedList;
+import java.util.List;
 import nnl.rocks.kactoos.func.BiFuncOf;
 import nnl.rocks.kactoos.matchers.MatcherOf;
 import nnl.rocks.kactoos.matchers.ScalarHasValue;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Test case for {@link AndWithIndex}.

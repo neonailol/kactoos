@@ -23,18 +23,17 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.IOException;
 import nnl.rocks.kactoos.matchers.TextHasString;
 import nnl.rocks.kactoos.text.HexOf;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
 
-import java.io.IOException;
-
 /**
  * Test case for {@link Md5DigestOf}.
  *
  * @author Fabricio Cabral (fabriciofx@gmail.com)
- * @version $Id: 53a0d6ea22621a448497f1aa6daf621c8f9ff145 $
+ * @version $Id: 9344a566ce191dccb54b2d21ac6749f8077a5377 $
  * @since 0.29
  * @checkstyle JavadocMethodCheck (500 lines)
  */
@@ -78,13 +77,13 @@ public final class Md5DigestOfTest {
                 new Md5DigestOf(
                     new InputOf(
                         new ResourceOf(
-                            "org/cactoos/io/DigestEnvelope.class"
+                            "org/cactoos/digest-calculation.txt"
                         ).stream()
                     )
                 )
             ),
             new TextHasString(
-                "842a5e7012d76e1df96c3d92e5c661df"
+                "162665ab3d58424724f83f28e7a147d6"
             )
         );
     }

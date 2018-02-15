@@ -23,16 +23,15 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import nnl.rocks.kactoos.iterable.Endless;
 import nnl.rocks.kactoos.iterable.Limited;
 import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Test case for {@link InputAsBytes}.
@@ -51,7 +50,7 @@ public final class InputAsBytesTest {
         final String body = "1234567890";
         MatcherAssert.assertThat(
             "Can't read large content from in-memory Input",
-            new InputAsBytes(
+            new nnl.rocks.kactoos.io.InputAsBytes(
                 new InputOf(
                     String.join(
                         "",
@@ -72,7 +71,7 @@ public final class InputAsBytesTest {
         try (final InputStream slow = new SlowInputStream(size)) {
             MatcherAssert.assertThat(
                 "Can't read large content from Input",
-                new InputAsBytes(
+                new nnl.rocks.kactoos.io.InputAsBytes(
                     new InputOf(slow)
                 ).asBytes().length,
                 Matchers.equalTo(size)
@@ -85,7 +84,7 @@ public final class InputAsBytesTest {
         MatcherAssert.assertThat(
             "Can't read bytes from Input",
             new String(
-                new InputAsBytes(
+                new nnl.rocks.kactoos.io.InputAsBytes(
                     new InputOf(
                         new BytesOf(
                             new TextOf("Hello, друг!")
@@ -106,7 +105,7 @@ public final class InputAsBytesTest {
         MatcherAssert.assertThat(
             "Can't read bytes from Input with a small reading buffer",
             new String(
-                new InputAsBytes(
+                new nnl.rocks.kactoos.io.InputAsBytes(
                     new InputOf(
                         new BytesOf(
                             new TextOf("Hello, товарищ!")

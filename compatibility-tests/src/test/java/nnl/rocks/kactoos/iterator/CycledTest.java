@@ -35,7 +35,7 @@ import org.junit.Test;
 /**
  * Test Case for {@link Cycled}.
  * @author Ilia Rogozhin (ilia.rogozhin@gmail.com)
- * @version $Id: 27ade7f37b17f73e1150526e8a9f8714a3a9e3a9 $
+ * @version $Id: 21b000d93b821d68ae12597c2027090f1f12ccb7 $
  * @since 0.8
  * @checkstyle JavadocMethodCheck (500 lines)
  */

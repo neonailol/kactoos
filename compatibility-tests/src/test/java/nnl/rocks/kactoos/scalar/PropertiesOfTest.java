@@ -23,6 +23,9 @@
  */
 package nnl.rocks.kactoos.scalar;
 
+import java.security.SecureRandom;
+import java.util.Properties;
+import java.util.concurrent.atomic.AtomicInteger;
 import nnl.rocks.kactoos.io.InputOf;
 import nnl.rocks.kactoos.iterator.Repeated;
 import nnl.rocks.kactoos.map.MapEntry;
@@ -34,10 +37,6 @@ import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Ignore;
 import org.junit.Test;
-
-import java.security.SecureRandom;
-import java.util.Properties;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Test case for {@link PropertiesOf}.

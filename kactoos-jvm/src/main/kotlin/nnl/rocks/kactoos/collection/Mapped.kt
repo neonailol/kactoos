@@ -2,8 +2,8 @@ package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.iterable.Mapped
 import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.text.TextOf
 
 /**
  * Mapped collection.
@@ -12,18 +12,15 @@ import nnl.rocks.kactoos.scalar.Constant
  *
  * @param X Type of source item
  * @param Y Type of target item
- * @since 0.14
+ * @since 0.3
  */
-class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
-
-    constructor(
-        fnc: Func<X, Y>,
-        src: Collection<X>
-    ) : super(
-        Constant { CollectionOf<Y>(Mapped<X, Y>(fnc, src)) }
-    )
+class Mapped<X : Any, Y : Any>(
+    fnc: Func<X, Y>,
+    src: Collection<X>
+) : CollectionEnvelope<Y>(Constant { CollectionOf<Y>(nnl.rocks.kactoos.iterable.Mapped(fnc, src)) }) {
 
     /**
+     * Ctor.
      * @param src Source collection
      * @param fnc Func
      * @since 0.23
@@ -32,9 +29,10 @@ class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
     constructor(
         fnc: Func<X, Y>,
         vararg src: X
-    ) : this(fnc, IterableOf<X>(src.iterator()))
+    ) : this(fnc, IterableOf<X>(*src))
 
     /**
+     * Ctor.
      * @param src Source collection
      * @param fnc Func
      * @since 0.23
@@ -45,6 +43,7 @@ class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
     ) : this(fnc, IterableOf<X>(src))
 
     /**
+     * Ctor.
      * @param src Source collection
      * @param fnc Func
      */
@@ -52,4 +51,8 @@ class Mapped<X : Any, Y : Any> : CollectionEnvelope<Y> {
         fnc: Func<X, Y>,
         src: Iterable<X>
     ) : this(fnc, CollectionOf<X>(src))
+
+    override fun toString(): String {
+        return TextOf(this).toString()
+    }
 }

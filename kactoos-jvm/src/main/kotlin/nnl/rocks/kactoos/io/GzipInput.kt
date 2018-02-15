@@ -14,8 +14,10 @@ import java.util.zip.GZIPInputStream
  */
 class GzipInput(
     private val origin: Input,
-    private val size: Int = 16 shl 10
+    private val size: Int
 ) : Input {
+
+    constructor(origin: Input) : this(origin, 16 shl 10)
 
     @Throws(IOException::class)
     override fun stream(): InputStream {

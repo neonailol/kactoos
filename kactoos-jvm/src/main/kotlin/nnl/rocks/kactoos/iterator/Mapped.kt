@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.func.UncheckedFunc
+import nnl.rocks.kactoos.text.TextOf
 
 /**
  * Mapped iterator.
@@ -23,4 +24,9 @@ class Mapped<X : Any, out Y : Any>(
     override fun hasNext(): Boolean = this.origin.hasNext()
 
     override fun next(): Y = UncheckedFunc(this.fnc).apply(this.origin.next())
+
+    override fun toString(): String {
+        return TextOf(Iterable { this }).asString()
+    }
+
 }

@@ -23,11 +23,10 @@
  */
 package nnl.rocks.kactoos.list;
 
+import java.util.Comparator;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Comparator;
 
 /**
  * Test Case for {@link Sorted}.

@@ -23,13 +23,12 @@
  */
 package nnl.rocks.kactoos.scalar;
 
+import java.util.Collections;
 import nnl.rocks.kactoos.Scalar;
 import nnl.rocks.kactoos.iterable.IterableOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Collections;
 
 /**
  * Test case for {@link AvgOf}.

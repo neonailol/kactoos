@@ -23,11 +23,10 @@
  */
 package nnl.rocks.kactoos.func;
 
+import java.util.concurrent.atomic.AtomicBoolean;
 import nnl.rocks.kactoos.matchers.MatcherOf;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
-
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Test case for {@link RunnableOf}.

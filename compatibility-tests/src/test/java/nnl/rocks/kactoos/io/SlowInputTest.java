@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.nio.charset.StandardCharsets;
 import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.nio.charset.StandardCharsets;
 
 /**
  * Test case for {@link SlowInput}.

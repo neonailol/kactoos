@@ -35,4 +35,4 @@
  * @version $Id: d054cb3a1ad93f2312ac2d27ecaad86acbce18da $
  * @since 1.0
  */
-package nnl.rocks.time;
+package nnl.rocks.kactoos.time;

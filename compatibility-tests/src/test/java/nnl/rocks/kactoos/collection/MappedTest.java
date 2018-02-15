@@ -23,6 +23,9 @@
  */
 package nnl.rocks.kactoos.collection;
 
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
 import nnl.rocks.kactoos.Text;
 import nnl.rocks.kactoos.iterable.IterableOf;
 import nnl.rocks.kactoos.text.TextOf;
@@ -31,15 +34,13 @@ import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
-import java.io.IOException;
-import java.util.Collections;
-
 /**
  * Test case for {@link Mapped}.
  * @author Yegor Bugayenko (yegor256@gmail.com)
- * @version $Id: f45e158e57fcb9a855936a2367c73951c5c15199 $
+ * @version $Id: 1e966d1e12bb9e8f2cdc5e0e956828908798489b $
  * @since 0.14
  * @checkstyle JavadocMethodCheck (500 lines)
+ * @checkstyle MagicNumberCheck (500 lines)
  */
 public final class MappedTest {
 
@@ -79,4 +80,15 @@ public final class MappedTest {
         );
     }
 
+    @Test
+    public void string() {
+        MatcherAssert.assertThat(
+            "Can't convert to string",
+            new Mapped<>(
+                x -> x * 2,
+                Arrays.asList(1, 2, 3)
+            ).toString(),
+            Matchers.equalTo("2, 4, 6")
+        );
+    }
 }

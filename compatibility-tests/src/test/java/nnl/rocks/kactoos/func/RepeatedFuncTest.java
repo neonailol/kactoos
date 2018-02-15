@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.func;
 
+import java.security.SecureRandom;
+import java.util.Iterator;
 import nnl.rocks.kactoos.Func;
 import nnl.rocks.kactoos.iterator.StickyIterator;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.security.SecureRandom;
-import java.util.Iterator;
 
 /**
  * Test case for {@link RepeatedFunc}.

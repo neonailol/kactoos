@@ -23,13 +23,12 @@
  */
 package nnl.rocks.kactoos.io;
 
-import nnl.rocks.kactoos.matchers.InputHasContent;
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.Reader;
+import nnl.rocks.kactoos.matchers.InputHasContent;
+import org.hamcrest.MatcherAssert;
+import org.junit.Test;
 
 /**
  * Test case for {@link TeeReader}.

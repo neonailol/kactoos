@@ -23,20 +23,20 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-
 /**
  * Test case for {@link TeeOutputStream}.
  * @author Yegor Bugayenko (yegor256@gmail.com)
- * @version $Id: a7e4c1ba2ae5398a452a447ccb195206ba19ef72 $
+ * @author Stanislav Myachenkov (s.myachenkov@gmail.com)
+ * @version $Id: 721cbf848ed58ec9fcb2363357dd99c1de84393b $
  * @since 0.16
  * @checkstyle JavadocMethodCheck (500 lines)
  * @checkstyle ClassDataAbstractionCouplingCheck (500 lines)
@@ -50,14 +50,16 @@ public final class TeeOutputStreamTest {
         final String content = "Hello, товарищ!";
         MatcherAssert.assertThat(
             "Can't copy OutputStream to OutputStream byte by byte",
-            TeeOutputStreamTest.asString(
-                new TeeInputStream(
-                    new ByteArrayInputStream(
-                        content.getBytes(StandardCharsets.UTF_8)
-                    ),
-                    new TeeOutputStream(baos, copy)
+            new TextOf(
+                new ReaderOf(
+                    new TeeInputStream(
+                        new ByteArrayInputStream(
+                            content.getBytes(StandardCharsets.UTF_8)
+                        ),
+                        new TeeOutputStream(baos, copy)
+                    )
                 )
-            ),
+            ).asString(),
             Matchers.allOf(
                 Matchers.equalTo(content),
                 Matchers.equalTo(
@@ -68,19 +70,6 @@ public final class TeeOutputStreamTest {
                 )
             )
         );
-    }
-
-    private static String asString(final InputStream input) throws IOException {
-        final ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        while (true) {
-            final int data = input.read();
-            if (data < 0) {
-                break;
-            }
-            baos.write(data);
-        }
-        input.close();
-        return new String(baos.toByteArray(), StandardCharsets.UTF_8);
     }
 
 }

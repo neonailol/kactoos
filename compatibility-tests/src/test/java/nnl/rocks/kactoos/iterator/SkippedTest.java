@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.iterator;
 
+import java.util.NoSuchElementException;
 import nnl.rocks.kactoos.iterable.IterableOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.NoSuchElementException;
 
 /**
  * Test Case for {@link Skipped}.

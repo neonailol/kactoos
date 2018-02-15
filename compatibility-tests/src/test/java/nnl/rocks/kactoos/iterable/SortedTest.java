@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.iterable;
 
+import java.util.Collections;
+import java.util.Comparator;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Collections;
-import java.util.Comparator;
 
 /**
  * Test case for {@link Sorted}.

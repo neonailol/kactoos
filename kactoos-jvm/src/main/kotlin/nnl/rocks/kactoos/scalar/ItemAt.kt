@@ -4,39 +4,95 @@ import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.text.FormattedText
-
 import java.io.IOException
 
 /**
  * Element from position in [Iterator]
  * or fallback value if iterator hasn't this position.
  *
- *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @param T Scalar type
- * @since 0.7
+ * @since 0.3
  */
 class ItemAt<T : Any>(
-    private val src: Iterator<T>,
+    private val src: Scalar<Iterator<T>>,
     private val pos: Int,
     private val fbk: Func<Iterable<T>, T>
 ) : Scalar<T> {
 
+    /**
+     * Ctor.
+     *
+     * @param fallback Fallback value
+     * @param source Iterable
+     */
     constructor(
-        src: Iterator<T>,
-        pos: Int
+        fallback: T,
+        source: Iterable<T>
+    ) : this(source, FuncOf { itr -> fallback })
+
+    /**
+     * Ctor.
+     *
+     * @param fallback Fallback value
+     * @param source Iterable
+     */
+    @JvmOverloads constructor(
+        source: Iterable<T>,
+        fallback: Func<Iterable<T>, T> = FuncOf { itr -> throw IOException("The iterable is empty") }
+    ) : this(source, 0, fallback)
+
+    /**
+     * Ctor.
+     *
+     * @param position Position
+     * @param source Iterable
+     */
+    constructor(
+        position: Int,
+        source: Iterable<T>
     ) : this(
-        src,
-        pos,
-        FuncOf {
-            throw IOException(FormattedText("Iterator doesn't have an element at #%d position", pos).asString())
+        source,
+        position,
+        FuncOf { itr ->
+            throw IOException(
+                FormattedText(
+                    "The iterable doesn't have the position #%d",
+                    position
+                ).asString()
+            )
         }
     )
 
     /**
+     * Ctor.
+     *
+     * @param position Position
+     * @param source Iterable
+     * @since 0.21
+     */
+    constructor(
+        position: Int,
+        source: Iterator<T>
+    ) : this(position, Iterable { source })
+
+    /**
+     * Ctor.
+     *
+     * @param source Iterable
+     * @param position Position
+     * @param fallback Fallback value
+     */
+    constructor(
+        source: Iterable<T>,
+        position: Int,
+        fallback: Func<Iterable<T>, T>
+    ) : this(StickyScalar<Iterator<T>>(Constant<Iterator<T>> { source.iterator() }), position, fallback)
+
+    /**
+     * Ctor.
+     *
      * @param iterator Iterator
      * @param fallback Fallback value
      */
@@ -46,15 +102,35 @@ class ItemAt<T : Any>(
     ) : this(iterator, FuncOf { itr -> fallback })
 
     /**
+     * Ctor.
+     *
      * @param iterator Iterator
      * @param fallback Fallback value
      */
-    constructor(
+    @JvmOverloads constructor(
         iterator: Iterator<T>,
-        fallback: Func<Iterable<T>, T>
+        fallback: Func<Iterable<T>, T> = FuncOf { itr -> throw IOException("Iterator is empty") }
     ) : this(iterator, 0, fallback)
 
-    constructor(iterator: Iterator<T>) : this(iterator, FuncOf { itr -> throw IOException("Iterator is empty") })
+    /**
+     * Ctor.
+     *
+     * @param iterator Iterator
+     * @param position Position
+     * @param fallback Fallback value
+     */
+    @JvmOverloads constructor(
+        iterator: Iterator<T>,
+        position: Int,
+        fallback: Func<Iterable<T>, T> = FuncOf { itr ->
+            throw IOException(
+                FormattedText(
+                    "Iterator doesn't have an element at #%d position",
+                    position
+                ).asString()
+            )
+        }
+    ) : this(StickyScalar<Iterator<T>>(Constant { iterator }), position, fallback)
 
     @Throws(Exception::class)
     override fun value(): T {
@@ -66,16 +142,18 @@ class ItemAt<T : Any>(
                 ).asString()
             )
         }
-        var cur = 0
-        while (cur < this.pos && this.src.hasNext()) {
-            this.src.next()
+        val iterator = this.src.value()
+        var cur: Int
+        cur = 0
+        while (cur < this.pos && iterator.hasNext()) {
+            iterator.next()
             ++ cur
         }
         val ret: T
-        ret = if (cur == this.pos && this.src.hasNext()) {
-            this.src.next()
+        if (cur == this.pos && iterator.hasNext()) {
+            ret = iterator.next()
         } else {
-            this.fbk.apply(Iterable { this.src })
+            ret = this.fbk.apply(Iterable { iterator })
         }
         return ret
     }

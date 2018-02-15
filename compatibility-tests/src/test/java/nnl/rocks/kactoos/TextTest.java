@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos;
 
+import java.io.IOException;
 import nnl.rocks.kactoos.matchers.TextHasString;
 import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
-
-import java.io.IOException;
 
 /**
  * Test case for {@link Text}.

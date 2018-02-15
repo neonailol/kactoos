@@ -23,13 +23,12 @@
  */
 package nnl.rocks.kactoos.collection;
 
+import java.util.Collections;
 import nnl.rocks.kactoos.iterable.IterableOf;
 import nnl.rocks.kactoos.iterable.LengthOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Collections;
 
 /**
  * Test case for {@link Filtered}.

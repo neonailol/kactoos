@@ -23,13 +23,12 @@
  */
 package nnl.rocks.kactoos.iterable;
 
+import java.util.Collections;
+import java.util.concurrent.atomic.AtomicInteger;
 import nnl.rocks.kactoos.list.ListOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Collections;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Test case for {@link StickyIterable}.

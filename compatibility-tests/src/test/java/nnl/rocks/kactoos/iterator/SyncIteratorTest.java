@@ -23,13 +23,12 @@
  */
 package nnl.rocks.kactoos.iterator;
 
+import java.util.Arrays;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 import nnl.rocks.kactoos.list.ListOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Arrays;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 // @todo #482:30min add multi-threaded tests which test that the lock syncs the
 //  access to the next method against next and hasNext calls and calls to the

@@ -23,6 +23,9 @@
  */
 package nnl.rocks.kactoos.scalar;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 import nnl.rocks.kactoos.Proc;
 import nnl.rocks.kactoos.Scalar;
 import nnl.rocks.kactoos.func.FuncOf;
@@ -33,10 +36,6 @@ import nnl.rocks.kactoos.matchers.ScalarHasValue;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Test case for {@link AndInThreads}.

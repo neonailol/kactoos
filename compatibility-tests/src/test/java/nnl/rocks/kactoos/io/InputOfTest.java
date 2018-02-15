@@ -23,6 +23,12 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.*;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.concurrent.atomic.AtomicBoolean;
 import nnl.rocks.kactoos.matchers.InputHasContent;
 import nnl.rocks.kactoos.matchers.MatcherOf;
 import nnl.rocks.kactoos.matchers.TextHasString;
@@ -32,13 +38,6 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.takes.http.FtRemote;
 import org.takes.tk.TkHtml;
-
-import java.io.*;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Test case for {@link InputOf}.
@@ -286,7 +285,7 @@ public final class InputOfTest {
         MatcherAssert.assertThat(
             "Can't read encoded string through a reader",
             new TextOf(
-                new InputAsBytes(
+                new nnl.rocks.kactoos.io.InputAsBytes(
                     new InputOf(
                         new StringReader(source),
                         StandardCharsets.UTF_8
@@ -302,7 +301,7 @@ public final class InputOfTest {
         final byte[] bytes = new byte[]{(byte) 0xCA, (byte) 0xFE};
         MatcherAssert.assertThat(
             "Can't read array of bytes",
-            new InputAsBytes(
+            new nnl.rocks.kactoos.io.InputAsBytes(
                 new SyncInput(new InputOf(bytes))
             ).asBytes(),
             Matchers.equalTo(bytes)

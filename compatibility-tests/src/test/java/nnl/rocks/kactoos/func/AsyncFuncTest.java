@@ -23,16 +23,15 @@
  */
 package nnl.rocks.kactoos.func;
 
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 import nnl.rocks.kactoos.Proc;
 import nnl.rocks.kactoos.matchers.FuncApplies;
 import nnl.rocks.kactoos.matchers.MatcherOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Test case for {@link AsyncFunc}.

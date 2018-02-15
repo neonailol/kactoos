@@ -23,17 +23,16 @@
  */
 package nnl.rocks.kactoos.io;
 
-import nnl.rocks.kactoos.matchers.MatcherOf;
-import nnl.rocks.kactoos.matchers.TextHasString;
-import nnl.rocks.kactoos.text.TextOf;
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import nnl.rocks.kactoos.matchers.MatcherOf;
+import nnl.rocks.kactoos.matchers.TextHasString;
+import nnl.rocks.kactoos.text.TextOf;
+import org.hamcrest.MatcherAssert;
+import org.junit.Test;
 
 /**
  * Test case for {@link TeeInput}.

@@ -23,13 +23,12 @@
  */
 package nnl.rocks.kactoos.collection;
 
+import java.util.Collection;
 import nnl.rocks.kactoos.list.ListOf;
 import org.hamcrest.Description;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.hamcrest.TypeSafeMatcher;
-
-import java.util.Collection;
 
 /**
  * Matcher for collection.

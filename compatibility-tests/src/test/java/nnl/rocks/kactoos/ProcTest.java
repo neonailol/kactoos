@@ -23,11 +23,10 @@
  */
 package nnl.rocks.kactoos;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Test case for {@link Proc.NoNulls}.

@@ -23,17 +23,16 @@
  */
 package nnl.rocks.kactoos.map;
 
+import java.io.IOException;
+import java.security.SecureRandom;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import nnl.rocks.kactoos.Scalar;
 import nnl.rocks.kactoos.iterator.Repeated;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Ignore;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.security.SecureRandom;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Test case for {@link MapOf}.

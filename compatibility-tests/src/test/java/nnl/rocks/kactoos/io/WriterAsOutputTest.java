@@ -23,18 +23,17 @@
  */
 package nnl.rocks.kactoos.io;
 
-import nnl.rocks.kactoos.matchers.MatcherOf;
-import nnl.rocks.kactoos.matchers.TextHasString;
-import nnl.rocks.kactoos.text.TextOf;
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import nnl.rocks.kactoos.matchers.MatcherOf;
+import nnl.rocks.kactoos.matchers.TextHasString;
+import nnl.rocks.kactoos.text.TextOf;
+import org.hamcrest.MatcherAssert;
+import org.junit.Test;
 
 /**
  * Test case for {@link WriterAsOutput}.
@@ -55,7 +54,7 @@ public final class WriterAsOutputTest {
             new TextOf(
                 new TeeInput(
                     new ResourceOf("org/cactoos/large-text.txt"),
-                    new WriterAsOutput(
+                    new nnl.rocks.kactoos.io.WriterAsOutput(
                         new OutputStreamWriter(
                             new FileOutputStream(temp.toFile()),
                             StandardCharsets.UTF_8

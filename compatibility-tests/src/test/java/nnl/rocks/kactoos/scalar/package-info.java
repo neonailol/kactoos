@@ -35,4 +35,4 @@
  * @version $Id: b4f2e3dffaaf63ee0333a85cd4e3b50b727ede78 $
  * @since 0.12
  */
-package nnl.rocks.scalar;
+package nnl.rocks.kactoos.scalar;

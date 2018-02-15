@@ -23,9 +23,8 @@
  */
 package nnl.rocks.kactoos.text;
 
-import org.junit.Test;
-
 import java.io.IOException;
+import org.junit.Test;
 
 /**
  * Test case for {@link UncheckedText}.

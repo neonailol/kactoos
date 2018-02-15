@@ -23,19 +23,20 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.IOException;
+import java.io.StringReader;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 
-import java.io.IOException;
-import java.io.StringReader;
-
 /**
  * Test case for {@link ReaderAsBytes}.
  *
  * @author Kirill (g4s8.public@gmail.com)
- * @version $Id: 779161b2c8c3e4979cd36ff54892439f498b690a $
+ * @version $Id: 6bc96d8183e69f9d7e1f692da5479edab3dacdae $
  * @since 0.12
  * @checkstyle JavadocMethodCheck (500 lines)
  */
@@ -47,7 +48,7 @@ public final class ReaderAsBytesTest {
         MatcherAssert.assertThat(
             "Can't read string through a reader",
             new TextOf(
-                new ReaderAsBytes(
+                new nnl.rocks.kactoos.io.ReaderAsBytes(
                     new StringReader(source)
                 )
             ).asString(),
@@ -55,4 +56,26 @@ public final class ReaderAsBytesTest {
         );
     }
 
+    @Test
+    public void readsAsBytesAndDeletesTempFile() throws Exception {
+        final Path file = new TempFile().value();
+        new nnl.rocks.kactoos.io.ReaderAsBytes(
+            new ReaderOf(file)
+        ).asBytes();
+        Files.delete(file);
+        MatcherAssert.assertThat(
+            Files.exists(file),
+            Matchers.equalTo(false)
+        );
+    }
+
+    @Test
+    public void readsEmptyClosableReaderAsBytes() throws Exception {
+        final EmptyClosableReader reader = new EmptyClosableReader();
+        new nnl.rocks.kactoos.io.ReaderAsBytes(reader).asBytes();
+        MatcherAssert.assertThat(
+            reader.isClosed(),
+            Matchers.equalTo(true)
+        );
+    }
 }

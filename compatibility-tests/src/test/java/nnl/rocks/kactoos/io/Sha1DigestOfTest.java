@@ -23,18 +23,17 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.IOException;
 import nnl.rocks.kactoos.matchers.TextHasString;
 import nnl.rocks.kactoos.text.HexOf;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
 
-import java.io.IOException;
-
 /**
  * Test case for {@link Sha1DigestOf}.
  *
  * @author Fabricio Cabral (fabriciofx@gmail.com)
- * @version $Id: e06a5a9b29d291d1ba0a06f7ecbc3e79d2f4e796 $
+ * @version $Id: fc776fdf4daa111478681cdb3818a5c9893f9357 $
  * @since 0.29
  * @checkstyle JavadocMethodCheck (500 lines)
  */
@@ -78,13 +77,13 @@ public final class Sha1DigestOfTest {
                 new Sha1DigestOf(
                     new InputOf(
                         new ResourceOf(
-                            "org/cactoos/io/DigestEnvelope.class"
+                            "org/cactoos/digest-calculation.txt"
                         ).stream()
                     )
                 )
             ),
             new TextHasString(
-                "9d47e35afdcbf845aa9f05f15b4d936b97e55f0e"
+                "34f80bdab9b93af514004f127e440139aad63e2d"
             )
         );
     }

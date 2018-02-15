@@ -23,12 +23,11 @@
  */
 package nnl.rocks.kactoos.iterator;
 
+import java.util.Collections;
+import java.util.Iterator;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.util.Collections;
-import java.util.Iterator;
 
 /**
  * Test case for {@link Joined}.
@@ -45,7 +44,7 @@ public final class JoinedTest {
             "Can't concatenate mapped iterators together",
             new LengthOf(
                 new IteratorNoNulls<>(
-                    new Joined<>(
+                    new Joined<Iterator<String>>(
                         new Mapped<>(
                             input -> Collections.singleton(input).iterator(),
                             Collections.singleton("x").iterator()

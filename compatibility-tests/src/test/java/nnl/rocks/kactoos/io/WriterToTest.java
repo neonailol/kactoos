@@ -23,15 +23,14 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import nnl.rocks.kactoos.matchers.MatcherOf;
 import nnl.rocks.kactoos.matchers.TextHasString;
 import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 /**
  * Test case for {@link WriterTo}.
@@ -52,7 +51,7 @@ public final class WriterToTest {
             new TextOf(
                 new TeeInput(
                     new ResourceOf("org/cactoos/large-text.txt"),
-                    new WriterAsOutput(new WriterTo(temp))
+                    new nnl.rocks.kactoos.io.WriterAsOutput(new WriterTo(temp))
                 )
             ),
             new TextHasString(

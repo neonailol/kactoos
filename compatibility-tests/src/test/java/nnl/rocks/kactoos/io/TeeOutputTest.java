@@ -23,14 +23,13 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.ByteArrayOutputStream;
+import java.nio.charset.StandardCharsets;
 import nnl.rocks.kactoos.matchers.MatcherOf;
 import nnl.rocks.kactoos.matchers.TextHasString;
 import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Test case for {@link TeeOutput}.

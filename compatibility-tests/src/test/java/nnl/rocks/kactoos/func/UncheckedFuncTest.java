@@ -23,11 +23,10 @@
  */
 package nnl.rocks.kactoos.func;
 
-import nnl.rocks.kactoos.Func;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.io.UncheckedIOException;
+import nnl.rocks.kactoos.Func;
+import org.junit.Test;
 
 /**
  * Test case for {@link UncheckedFunc}.

@@ -23,10 +23,9 @@
  */
 package nnl.rocks.kactoos;
 
+import java.io.IOException;
 import nnl.rocks.kactoos.io.DeadInput;
 import org.junit.Test;
-
-import java.io.IOException;
 
 /**
  * Test case for {@link Input.NoNulls}.

@@ -23,6 +23,9 @@
  */
 package nnl.rocks.kactoos.io;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import nnl.rocks.kactoos.Input;
 import nnl.rocks.kactoos.func.RepeatedFunc;
 import nnl.rocks.kactoos.matchers.MatcherOf;
@@ -31,10 +34,6 @@ import nnl.rocks.kactoos.text.TextOf;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * Test case for {@link StickyInput}.

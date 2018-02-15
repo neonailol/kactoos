@@ -23,15 +23,14 @@
  */
 package nnl.rocks.kactoos.io;
 
-import nnl.rocks.kactoos.text.JoinedText;
-import nnl.rocks.kactoos.text.UncheckedText;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
+import nnl.rocks.kactoos.text.JoinedText;
+import nnl.rocks.kactoos.text.UncheckedText;
 
 /**
  * Fake logger.

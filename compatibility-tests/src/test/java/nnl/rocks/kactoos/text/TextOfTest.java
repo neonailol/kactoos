@@ -23,18 +23,17 @@
  */
 package nnl.rocks.kactoos.text;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringReader;
+import java.nio.charset.StandardCharsets;
 import nnl.rocks.kactoos.io.BytesOf;
 import nnl.rocks.kactoos.io.InputOf;
 import nnl.rocks.kactoos.matchers.TextHasString;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Test case for {@link TextOf}.
