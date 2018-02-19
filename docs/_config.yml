@@ -4,6 +4,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "/"
 markdown: kramdown
 theme: jekyll-theme-primer
+repository: https://github.com/neonailol/kactoos
 # theme: minima
 #theme: jekyll-theme-minimal
 

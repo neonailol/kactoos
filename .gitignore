@@ -1,5 +1,7 @@
 compatibility-tests/src/test/resources/tests-cactoos.txt
 compatibility-tests/src/test/resources/tests-kactoos.txt
+Gemfile.lock
+_site/
 
 
 # Created by https://www.gitignore.io/api/java,linux,macos,maven,gradle,kotlin,windows,intellij,node,npm,js
