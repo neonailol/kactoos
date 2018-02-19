@@ -1,14 +1,10 @@
----
-title: SolidScalar.value - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [SolidScalar](index.html) / [value](./value.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SolidScalar](index.md) / [value](./value.md)
 
 # value
 
-`fun value(): `[`T`](index.html#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SolidScalar.kt#L26)
+`fun value(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SolidScalar.kt#L26)
 
-Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.html)
+Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 
 Convert it to the value.
 

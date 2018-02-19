@@ -1,8 +1,4 @@
----
-title: ReaderOf.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [ReaderOf](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [ReaderOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -51,17 +47,17 @@ Ctor.
 
 ### Parameters
 
-`uri` - The URI`ReaderOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`)`
+`uri` - The URI`ReaderOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)`
 
 ### Parameters
 
-`bytes` - The text`ReaderOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
+`bytes` - The text`ReaderOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
 `ReaderOf(text: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
-`text` - The text`ReaderOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`ReaderOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`text` - The text`ReaderOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`ReaderOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 `ReaderOf(text: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
 `ReaderOf(text: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
@@ -69,14 +65,14 @@ Ctor.
 
 `text` - The text
 
-`charset` - Charset`ReaderOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
-`ReaderOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`charset` - Charset`ReaderOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
+`ReaderOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
 `input` - The input
 
-`charset` - The charset`ReaderOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, decoder: `[`CharsetDecoder`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/CharsetDecoder.html)`)`
+`charset` - The charset`ReaderOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, decoder: `[`CharsetDecoder`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/CharsetDecoder.html)`)`
 
 ### Parameters
 
@@ -114,7 +110,7 @@ Ctor.
 **Since**
 0.13.1
 
-`ReaderOf(source: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html)`<`[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`>)`
+`ReaderOf(source: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`>)`
 
 A [Reader](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html) that encapsulates other sources of data.
 

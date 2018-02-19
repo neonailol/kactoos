@@ -1,12 +1,8 @@
----
-title: ComparableText.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [ComparableText](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ComparableText](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`ComparableText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
+`ComparableText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
 
 Text implementing Comparable.
 

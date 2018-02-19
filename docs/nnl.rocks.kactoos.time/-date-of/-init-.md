@@ -1,8 +1,4 @@
----
-title: DateOf.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.time](../index.html) / [DateOf](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.time](../index.md) / [DateOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -15,7 +11,7 @@ Parses the date using the provided format.
 
 `date` - The date to parse.
 
-`format` - The format to use.`DateOf(parsed: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html)`<`[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)`>)`
+`format` - The format to use.`DateOf(parsed: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)`>)`
 
 Parser for [Date](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html) instances.
 Parsing the date using the provided formatter.

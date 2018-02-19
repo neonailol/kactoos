@@ -1,8 +1,4 @@
----
-title: InputHasContent.describeTo - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [InputHasContent](index.html) / [describeTo](./describe-to.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [InputHasContent](index.md) / [describeTo](./describe-to.md)
 
 # describeTo
 

@@ -1,12 +1,8 @@
----
-title: SyncText.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [SyncText](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [SyncText](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`SyncText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)``SyncText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, lock: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`
+`SyncText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``SyncText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, lock: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`
 
 Text that is thread-safe.
 

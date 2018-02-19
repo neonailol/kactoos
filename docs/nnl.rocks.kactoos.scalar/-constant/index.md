@@ -1,12 +1,8 @@
----
-title: Constant - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [Constant](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Constant](./index.md)
 
 # Constant
 
-`class Constant<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`T`](index.html#T)`>`
+`class Constant<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>`
 
 Constant value that never changes.
 
@@ -19,9 +15,12 @@ Constant value that never changes.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `Constant(origin: `[`T`](index.html#T)`)``Constant(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.html)`<`[`T`](index.html#T)`>)`<br>Constant value that never changes. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `Constant(origin: `[`T`](index.md#T)`)``Constant(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`<br>Constant value that never changes. |
 
 ### Functions
 
-| [value](value.html) | `fun value(): `[`T`](index.html#T)<br>Convert it to the value. |
-
+| Name | Summary |
+|---|---|
+| [value](value.md) | `fun value(): `[`T`](index.md#T)<br>Convert it to the value. |

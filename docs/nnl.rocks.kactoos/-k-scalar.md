@@ -1,14 +1,10 @@
----
-title: KScalar - kactoos-jvm
----
-
-[kactoos-jvm](../index.html) / [nnl.rocks.kactoos](index.html) / [KScalar](./-k-scalar.html)
+[kactoos-jvm](../index.md) / [nnl.rocks.kactoos](index.md) / [KScalar](./-k-scalar.md)
 
 # KScalar
 
-`typealias KScalar<T> = () -> `[`T`](-k-scalar.html#T)
+`typealias KScalar<T> = () -> `[`T`](-k-scalar.md#T)
 
-Alias for [Scalar](-scalar/index.html)
+Alias for [Scalar](-scalar/index.md)
 
 **Since**
 0.2

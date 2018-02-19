@@ -1,8 +1,4 @@
----
-title: SubText.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [SubText](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [SubText](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -20,14 +16,14 @@ title: SubText.<init> - kactoos-jvm
 
 `strt` - Start position in the text
 
-`finish` - End position in the text`SubText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, strt: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`finish` - End position in the text`SubText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, strt: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 ### Parameters
 
 `text` - The Text
 
-`strt` - Start position in the text`SubText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, strt: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, finish: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
-`SubText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, strt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>, finish: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>)`
+`strt` - Start position in the text`SubText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, strt: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, finish: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`SubText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, strt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>, finish: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>)`
 
 ### Parameters
 
@@ -35,7 +31,7 @@ title: SubText.<init> - kactoos-jvm
 
 `strt` - Start position in the text
 
-`finish` - End position in the text`SubText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, start: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>, end: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>)`
+`finish` - End position in the text`SubText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, start: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>, end: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>)`
 
 Extract a substring from a Text.
 

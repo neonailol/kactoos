@@ -1,8 +1,4 @@
----
-title: LSInputOf.setCharacterStream - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [setCharacterStream](./set-character-stream.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [setCharacterStream](./set-character-stream.md)
 
 # setCharacterStream
 

@@ -1,8 +1,4 @@
----
-title: SyncIterator.hasNext - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [SyncIterator](index.html) / [hasNext](./has-next.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [SyncIterator](index.md) / [hasNext](./has-next.md)
 
 # hasNext
 

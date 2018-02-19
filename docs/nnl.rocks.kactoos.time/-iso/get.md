@@ -1,8 +1,4 @@
----
-title: Iso.get - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.time](../index.html) / [Iso](index.html) / [get](./get.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.time](../index.md) / [Iso](index.md) / [get](./get.md)
 
 # get
 

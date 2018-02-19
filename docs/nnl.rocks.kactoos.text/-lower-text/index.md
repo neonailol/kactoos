@@ -1,12 +1,8 @@
----
-title: LowerText - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [LowerText](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [LowerText](./index.md)
 
 # LowerText
 
-`class LowerText : `[`Text`](../../nnl.rocks.kactoos/-text/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/LowerText.kt#L16)
+`class LowerText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/LowerText.kt#L16)
 
 Text in lower case.
 
@@ -23,9 +19,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `LowerText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)``LowerText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, locale: `[`Locale`](http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)`)`<br>Text in lower case. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `LowerText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``LowerText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, locale: `[`Locale`](http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)`)`<br>Text in lower case. |
 
 ### Functions
 
-| [asString](as-string.html) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
-
+| Name | Summary |
+|---|---|
+| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |

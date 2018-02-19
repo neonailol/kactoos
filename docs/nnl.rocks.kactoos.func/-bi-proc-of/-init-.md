@@ -1,12 +1,8 @@
----
-title: BiProcOf.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [BiProcOf](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [BiProcOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`BiProcOf(proc: `[`KBiProc`](../../nnl.rocks.kactoos/-k-bi-proc.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>)`
+`BiProcOf(proc: `[`KBiProc`](../../nnl.rocks.kactoos/-k-bi-proc.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)`
 
 Func as BiProc.
 

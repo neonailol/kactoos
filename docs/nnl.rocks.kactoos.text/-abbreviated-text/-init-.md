@@ -1,8 +1,4 @@
----
-title: AbbreviatedText.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [AbbreviatedText](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [AbbreviatedText](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -18,7 +14,7 @@ By default, the max line width is 80 characters.
 
 `text` - A String
 
-`max` - Max width of the result string`AbbreviatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, width: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = AbbreviatedText.MAX_WIDTH)`
+`max` - Max width of the result string`AbbreviatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, width: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = AbbreviatedText.MAX_WIDTH)`
 
 Abbreviates a Text using ellipses.
 

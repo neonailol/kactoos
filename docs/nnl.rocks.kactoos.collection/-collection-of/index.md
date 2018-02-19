@@ -1,12 +1,8 @@
----
-title: CollectionOf - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.collection](../index.html) / [CollectionOf](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.collection](../index.md) / [CollectionOf](./index.md)
 
 # CollectionOf
 
-`class CollectionOf<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](../-collection-envelope/index.html)`<`[`T`](index.html#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/collection/CollectionOf.kt#L22)
+`class CollectionOf<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](../-collection-envelope/index.md)`<`[`T`](index.md#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/collection/CollectionOf.kt#L22)
 
 Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html).
 
@@ -15,7 +11,7 @@ it will fetch the entire content of the encapsulated [Iterable](https://kotlinla
 method call. It doesn't cache the data anyhow.
 If you don't need this [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) to re-fresh
 its content on every call, by doing round-trips to
-the encapsulated iterable, use [StickyCollection](../-sticky-collection/index.html).
+the encapsulated iterable, use [StickyCollection](../-sticky-collection/index.md).
 
 There is no thread-safety guarantee.
 
@@ -25,12 +21,13 @@ There is no thread-safety guarantee.
 
 **See Also**
 
-[StickyCollection](../-sticky-collection/index.html)
+[StickyCollection](../-sticky-collection/index.md)
 
 **Since**
 0.1
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `CollectionOf(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.html#T)`>)`<br>`CollectionOf(vararg array: `[`T`](index.html#T)`)`<br>`CollectionOf(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.html#T)`>)` |
-
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `CollectionOf(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`<br>`CollectionOf(vararg array: `[`T`](index.md#T)`)`<br>`CollectionOf(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)` |

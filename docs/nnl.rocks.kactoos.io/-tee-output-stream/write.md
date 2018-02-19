@@ -1,8 +1,4 @@
----
-title: TeeOutputStream.write - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TeeOutputStream](index.html) / [write](./write.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeOutputStream](index.md) / [write](./write.md)
 
 # write
 

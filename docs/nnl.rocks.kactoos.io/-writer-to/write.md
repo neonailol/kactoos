@@ -1,8 +1,4 @@
----
-title: WriterTo.write - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [WriterTo](index.html) / [write](./write.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [WriterTo](index.md) / [write](./write.md)
 
 # write
 

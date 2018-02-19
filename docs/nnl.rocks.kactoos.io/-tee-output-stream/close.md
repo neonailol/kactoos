@@ -1,8 +1,4 @@
----
-title: TeeOutputStream.close - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TeeOutputStream](index.html) / [close](./close.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeOutputStream](index.md) / [close](./close.md)
 
 # close
 

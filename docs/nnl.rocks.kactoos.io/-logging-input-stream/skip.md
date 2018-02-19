@@ -1,8 +1,4 @@
----
-title: LoggingInputStream.skip - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LoggingInputStream](index.html) / [skip](./skip.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LoggingInputStream](index.md) / [skip](./skip.md)
 
 # skip
 

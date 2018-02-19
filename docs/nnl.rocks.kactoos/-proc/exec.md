@@ -1,12 +1,8 @@
----
-title: Proc.exec - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos](../index.html) / [Proc](index.html) / [exec](./exec.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Proc](index.md) / [exec](./exec.md)
 
 # exec
 
-`abstract fun exec(input: `[`X`](index.html#X)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`abstract fun exec(input: `[`X`](index.md#X)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Execute it.
 

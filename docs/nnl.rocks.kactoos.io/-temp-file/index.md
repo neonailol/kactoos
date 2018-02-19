@@ -1,12 +1,8 @@
----
-title: TempFile - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TempFile](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TempFile](./index.md)
 
 # TempFile
 
-`class TempFile : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, `[`Closeable`](http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TempFile.kt#L32)
+`class TempFile : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, `[`Closeable`](http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TempFile.kt#L32)
 
 A temporary file.
 
@@ -31,10 +27,13 @@ closed.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `TempFile(prefix: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "", suffix: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`<br>The temporary file will be created inside the filesystem's temporary folder (system property: `java.io.tmpdir`).`TempFile(dir: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, prefix: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, suffix: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>`TempFile(dir: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, prefix: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, suffix: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)` |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `TempFile(prefix: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "", suffix: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)` = "")`<br>The temporary file will be created inside the filesystem's temporary folder (system property: `java.io.tmpdir`).`TempFile(dir: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, prefix: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, suffix: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>`TempFile(dir: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, prefix: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, suffix: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)` |
 
 ### Functions
 
-| [close](close.html) | `fun close(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Deletes the file from the filesystem. |
-| [value](value.html) | `fun value(): `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)<br>Convert it to the value. |
-
+| Name | Summary |
+|---|---|
+| [close](close.md) | `fun close(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Deletes the file from the filesystem. |
+| [value](value.md) | `fun value(): `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)<br>Convert it to the value. |

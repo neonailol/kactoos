@@ -1,8 +1,4 @@
----
-title: MatcherOf.describeTo - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [MatcherOf](index.html) / [describeTo](./describe-to.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [MatcherOf](index.md) / [describeTo](./describe-to.md)
 
 # describeTo
 

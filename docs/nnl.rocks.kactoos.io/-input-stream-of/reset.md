@@ -1,8 +1,4 @@
----
-title: InputStreamOf.reset - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [InputStreamOf](index.html) / [reset](./reset.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [InputStreamOf](index.md) / [reset](./reset.md)
 
 # reset
 
