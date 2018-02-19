@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [setCertifiedText](./set-certified-text.md)
+---
+title: LSInputOf.setCertifiedText - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [setCertifiedText](./set-certified-text.html)
 
 # setCertifiedText
 

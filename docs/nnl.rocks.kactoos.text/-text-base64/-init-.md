@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [TextBase64](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: TextBase64.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [TextBase64](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
@@ -6,7 +10,7 @@
 
 ### Parameters
 
-`input` - The String`TextBase64(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
+`input` - The String`TextBase64(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
 
 Encodes the origin text using the Base64 encoding scheme.
 

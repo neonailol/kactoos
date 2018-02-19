@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [NumberEnvelope](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: NumberEnvelope.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [NumberEnvelope](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`NumberEnvelope(dnum: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
+`NumberEnvelope(dnum: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
 
 Envelope for the [Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html).
 

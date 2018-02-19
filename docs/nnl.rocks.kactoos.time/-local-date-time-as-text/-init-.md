@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.time](../index.md) / [LocalDateTimeAsText](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: LocalDateTimeAsText.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.time](../index.html) / [LocalDateTimeAsText](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

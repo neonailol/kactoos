@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [GzipOutput](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: GzipOutput.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [GzipOutput](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)``GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)``GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 Output that writes compressed data in the GZIP file format.
 

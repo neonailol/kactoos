@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [RunnableOf](index.md) / [run](./run.md)
+---
+title: RunnableOf.run - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [RunnableOf](index.html) / [run](./run.html)
 
 # run
 

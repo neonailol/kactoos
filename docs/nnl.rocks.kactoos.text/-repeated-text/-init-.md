@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [RepeatedText](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: RepeatedText.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [RepeatedText](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
@@ -10,7 +14,7 @@ Ctor.
 
 `text` - A String
 
-`count` - How many times repeat the Text`RepeatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, count: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`count` - How many times repeat the Text`RepeatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, count: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 Repeat an text count times.
 

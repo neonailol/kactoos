@@ -1,12 +1,16 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.collection](../index.md) / [CollectionOf](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: CollectionOf.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.collection](../index.html) / [CollectionOf](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`CollectionOf(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)``CollectionOf(vararg array: `[`T`](index.md#T)`)`
+`CollectionOf(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.html#T)`>)``CollectionOf(vararg array: `[`T`](index.html#T)`)`
 
 ### Parameters
 
-`array` - An array of some elements`CollectionOf(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)`
+`array` - An array of some elements`CollectionOf(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.html#T)`>)`
 
 ### Parameters
 

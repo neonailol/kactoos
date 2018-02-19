@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [UpperText](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: UpperText.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [UpperText](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`UpperText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``UpperText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, locale: `[`Locale`](http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)`)`
+`UpperText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)``UpperText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, locale: `[`Locale`](http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)`)`
 
 Text in upper case.
 

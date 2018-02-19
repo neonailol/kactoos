@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [getBaseURI](./get-base-u-r-i.md)
+---
+title: LSInputOf.getBaseURI - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [getBaseURI](./get-base-u-r-i.html)
 
 # getBaseURI
 

@@ -1,10 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [RetryScalar](index.md) / [value](./value.md)
+---
+title: RetryScalar.value - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [RetryScalar](index.html) / [value](./value.html)
 
 # value
 
-`fun value(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/RetryScalar.kt#L40)
+`fun value(): `[`T`](index.html#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/RetryScalar.kt#L40)
 
-Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
+Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.html)
 
 Convert it to the value.
 

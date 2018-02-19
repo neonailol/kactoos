@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [TrimmedText](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: TrimmedText.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [TrimmedText](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
+`TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
 
 Text without control characters (char &amp;lt;= 32) from both ends.
 

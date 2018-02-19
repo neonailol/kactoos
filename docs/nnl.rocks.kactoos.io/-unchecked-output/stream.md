@@ -1,10 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [UncheckedOutput](index.md) / [stream](./stream.md)
+---
+title: UncheckedOutput.stream - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [UncheckedOutput](index.html) / [stream](./stream.html)
 
 # stream
 
 `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/UncheckedOutput.kt#L22)
 
-Overrides [Output.stream](../../nnl.rocks.kactoos/-output/stream.md)
+Overrides [Output.stream](../../nnl.rocks.kactoos/-output/stream.html)
 
 Get write access to it.
 

@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [NumberEnvelope](index.md) / [toDouble](./to-double.md)
+---
+title: NumberEnvelope.toDouble - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [NumberEnvelope](index.html) / [toDouble](./to-double.html)
 
 # toDouble
 

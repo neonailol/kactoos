@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [getByteStream](./get-byte-stream.md)
+---
+title: LSInputOf.getByteStream - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [getByteStream](./get-byte-stream.html)
 
 # getByteStream
 

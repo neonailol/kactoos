@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](index.md) / [hashCode](./hash-code.md)
+---
+title: MapEntry.hashCode - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.map](../index.html) / [MapEntry](index.html) / [hashCode](./hash-code.html)
 
 # hashCode
 

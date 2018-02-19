@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Endless](index.md) / [hasNext](./has-next.md)
+---
+title: Endless.hasNext - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Endless](index.html) / [hasNext](./has-next.html)
 
 # hasNext
 

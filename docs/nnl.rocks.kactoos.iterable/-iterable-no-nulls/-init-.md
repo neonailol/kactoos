@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [IterableNoNulls](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: IterableNoNulls.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterable](../index.html) / [IterableNoNulls](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`IterableNoNulls(iterable: `[`IterableEnvelope`](../-iterable-envelope/index.md)`<`[`X`](index.md#X)`>)``IterableNoNulls(origin: `[`MutableIterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-iterable/index.html)`<`[`X`](index.md#X)`>)`
+`IterableNoNulls(iterable: `[`IterableEnvelope`](../-iterable-envelope/index.html)`<`[`X`](index.html#X)`>)``IterableNoNulls(origin: `[`MutableIterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-iterable/index.html)`<`[`X`](index.html#X)`>)`
 
 A decorator for [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) that doesn't allow any NULL.
 

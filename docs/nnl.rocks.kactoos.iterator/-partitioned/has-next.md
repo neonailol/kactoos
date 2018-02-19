@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Partitioned](index.md) / [hasNext](./has-next.md)
+---
+title: Partitioned.hasNext - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Partitioned](index.html) / [hasNext](./has-next.html)
 
 # hasNext
 

@@ -1,5 +1,9 @@
-[kactoos-jvm](../../../index.md) / [nnl.rocks.kactoos](../../index.md) / [Text](../index.md) / [NoNulls](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: Text.NoNulls.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../../index.html) / [nnl.rocks.kactoos](../../index.html) / [Text](../index.html) / [NoNulls](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`NoNulls(origin: `[`Text`](../index.md)`)`
+`NoNulls(origin: `[`Text`](../index.html)`)`

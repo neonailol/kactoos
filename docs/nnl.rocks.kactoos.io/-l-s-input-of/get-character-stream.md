@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [getCharacterStream](./get-character-stream.md)
+---
+title: LSInputOf.getCharacterStream - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [getCharacterStream](./get-character-stream.html)
 
 # getCharacterStream
 

@@ -1,10 +1,12 @@
 
 title: NNL
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "/"
 markdown: kramdown
-theme: jekyll-theme-primer
+theme: alembic-jekyll-theme
+#remote_theme: daviddarnes/alembic
+#remote_theme: pages-themes/primer
+#remote_theme: vinitkumar/white-paper
 repository: neonailol/kactoos
-# theme: minima
+#theme: minima
 #theme: jekyll-theme-minimal
-

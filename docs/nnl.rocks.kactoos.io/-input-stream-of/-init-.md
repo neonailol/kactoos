@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [InputStreamOf](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: InputStreamOf.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [InputStreamOf](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
@@ -26,15 +30,15 @@ Ctor.
 
 ### Parameters
 
-`uri` - The URI`InputStreamOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)`
+`uri` - The URI`InputStreamOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`)`
 `InputStreamOf(bytes: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`)`
 
 Ctor.
 
 ### Parameters
 
-`bytes` - The text`InputStreamOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
-`InputStreamOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`bytes` - The text`InputStreamOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
+`InputStreamOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 `InputStreamOf(text: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
 `InputStreamOf(text: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
@@ -107,7 +111,7 @@ Ctor.
 **Since**
 0.13.2
 
-`InputStreamOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)`
+`InputStreamOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`)`
 
 Ctor.
 

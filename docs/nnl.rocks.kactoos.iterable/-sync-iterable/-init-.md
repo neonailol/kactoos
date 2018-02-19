@@ -1,12 +1,16 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [SyncIterable](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: SyncIterable.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterable](../index.html) / [SyncIterable](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`SyncIterable(vararg src: `[`X`](index.md#X)`)`
+`SyncIterable(vararg src: `[`X`](index.html#X)`)`
 
 ### Parameters
 
-`src` - The underlying iterable`SyncIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
+`src` - The underlying iterable`SyncIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.html#X)`>)`
 
 Synchronized iterable.
 
@@ -15,7 +19,7 @@ it will fetch the entire content of the encapsulated [Iterable](https://kotlinla
 method call. It doesn't cache the data anyhow. If you don't
 need this [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) to re-fresh
 its content on every call, by doing round-trips to
-the encapsulated iterable, use [StickyIterable](../-sticky-iterable/index.md).
+the encapsulated iterable, use [StickyIterable](../-sticky-iterable/index.html).
 
 Objects of this class are thread-safe.
 

@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](index.md) / [equals](./equals.md)
+---
+title: MapEntry.equals - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.map](../index.html) / [MapEntry](index.html) / [equals](./equals.html)
 
 # equals
 

@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Joined](index.md) / [hasNext](./has-next.md)
+---
+title: Joined.hasNext - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Joined](index.html) / [hasNext](./has-next.html)
 
 # hasNext
 

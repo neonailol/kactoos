@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ReversedText](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: ReversedText.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [ReversedText](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`ReversedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
+`ReversedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
 
 Reverse the Text.
 

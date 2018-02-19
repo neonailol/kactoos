@@ -1,6 +1,7 @@
 compatibility-tests/src/test/resources/tests-cactoos.txt
 compatibility-tests/src/test/resources/tests-kactoos.txt
 Gemfile.lock
+.sass-cache
 _site/
 
 

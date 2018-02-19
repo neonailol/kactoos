@@ -1,5 +1,5 @@
-$dokka.format:gfm
-$dokka.linkExtension:md
+$dokka.format:jekyll
+$dokka.linkExtension:html
 
 nnl.rocks.kactoos
 nnl.rocks.kactoos.bytes

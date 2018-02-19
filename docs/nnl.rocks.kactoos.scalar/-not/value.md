@@ -1,10 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Not](index.md) / [value](./value.md)
+---
+title: Not.value - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [Not](index.html) / [value](./value.html)
 
 # value
 
 `fun value(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/Not.kt#L26)
 
-Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
+Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.html)
 
 Convert it to the value.
 

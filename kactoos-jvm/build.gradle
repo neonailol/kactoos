@@ -25,7 +25,7 @@ apply plugin: 'java'
 
 dokka {
     jdkVersion = 8
-    outputFormat = 'gfm'
+    outputFormat = 'jekyll'
     includes = ['src/dokka/extra.md', 'src/dokka/packages.md']
     linkMapping {
         dir = "$project.projectDir"

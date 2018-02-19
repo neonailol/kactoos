@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputTo](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: OutputTo.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [OutputTo](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
@@ -48,9 +52,9 @@ Ctor.
 
 ### Parameters
 
-`stream` - The stream`OutputTo(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`stream` - The stream`OutputTo(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
-An [Output](../../nnl.rocks.kactoos/-output/index.md) that encapsulates other destination for the data.
+An [Output](../../nnl.rocks.kactoos/-output/index.html) that encapsulates other destination for the data.
 
 There is no thread-safety guarantee.
 
