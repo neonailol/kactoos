@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [BiProcOf](./index.md)
+---
+title: BiProcOf - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [BiProcOf](./index.html)
 
 # BiProcOf
 
-`class BiProcOf<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`BiProc`](../../nnl.rocks.kactoos/-bi-proc/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/BiProcOf.kt#L16)
+`class BiProcOf<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`BiProc`](../../nnl.rocks.kactoos/-bi-proc/index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/BiProcOf.kt#L16)
 
 Func as BiProc.
 
@@ -21,12 +25,9 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `BiProcOf(proc: `[`KBiProc`](../../nnl.rocks.kactoos/-k-bi-proc.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)`<br>Func as BiProc. |
+| [&lt;init&gt;](-init-.html) | `BiProcOf(proc: `[`KBiProc`](../../nnl.rocks.kactoos/-k-bi-proc.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>)`<br>Func as BiProc. |
 
 ### Functions
 
-| Name | Summary |
-|---|---|
-| [exec](exec.md) | `fun exec(first: `[`X`](index.md#X)`, second: `[`Y`](index.md#Y)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Execute it. |
+| [exec](exec.html) | `fun exec(first: `[`X`](index.html#X)`, second: `[`Y`](index.html#Y)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Execute it. |
+

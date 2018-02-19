@@ -1,10 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ComparableText](index.md) / [asString](./as-string.md)
+---
+title: ComparableText.asString - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [ComparableText](index.html) / [asString](./as-string.html)
 
 # asString
 
 `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/ComparableText.kt#L33)
 
-Overrides [Text.asString](../../nnl.rocks.kactoos/-text/as-string.md)
+Overrides [Text.asString](../../nnl.rocks.kactoos/-text/as-string.html)
 
 Convert it to the string.
 

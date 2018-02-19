@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [MaxOf](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: MaxOf.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [MaxOf](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

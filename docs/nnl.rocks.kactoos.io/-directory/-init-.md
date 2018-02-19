@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [Directory](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: Directory.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [Directory](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

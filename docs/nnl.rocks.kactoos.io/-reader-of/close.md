@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [ReaderOf](index.md) / [close](./close.md)
+---
+title: ReaderOf.close - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [ReaderOf](index.html) / [close](./close.html)
 
 # close
 

@@ -1,10 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [SolidFunc](index.md) / [apply](./apply.md)
+---
+title: SolidFunc.apply - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [SolidFunc](index.html) / [apply](./apply.html)
 
 # apply
 
-`fun apply(input: `[`X`](index.md#X)`): `[`Y`](index.md#Y) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SolidFunc.kt#L28)
+`fun apply(input: `[`X`](index.html#X)`): `[`Y`](index.html#Y) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SolidFunc.kt#L28)
 
-Overrides [Func.apply](../../nnl.rocks.kactoos/-func/apply.md)
+Overrides [Func.apply](../../nnl.rocks.kactoos/-func/apply.html)
 
 Apply it.
 
@@ -17,7 +21,7 @@ Apply it.
 `Exception` - If fails
 
 **Return**
-The result of type [Y](index.md#Y)
+The result of type [Y](index.html#Y)
 
 **Since**
 0.2

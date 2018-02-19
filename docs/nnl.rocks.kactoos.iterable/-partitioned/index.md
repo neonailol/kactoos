@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [Partitioned](./index.md)
+---
+title: Partitioned - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterable](../index.html) / [Partitioned](./index.html)
 
 # Partitioned
 
-`class Partitioned<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](../-iterable-envelope/index.md)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterable/Partitioned.kt#L34)
+`class Partitioned<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](../-iterable-envelope/index.html)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.html#T)`>>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterable/Partitioned.kt#L34)
 
 Iterable implementation for partitioning functionality.
 
@@ -15,6 +19,5 @@ Iterable implementation for partitioning functionality.
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `Partitioned(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)``Partitioned(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, vararg items: `[`T`](index.md#T)`)`<br>Ctor. |
+| [&lt;init&gt;](-init-.html) | `Partitioned(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.html#T)`>)``Partitioned(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, vararg items: `[`T`](index.html#T)`)`<br>Ctor. |
+

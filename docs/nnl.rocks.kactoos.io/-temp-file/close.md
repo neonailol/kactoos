@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TempFile](index.md) / [close](./close.md)
+---
+title: TempFile.close - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TempFile](index.html) / [close](./close.html)
 
 # close
 

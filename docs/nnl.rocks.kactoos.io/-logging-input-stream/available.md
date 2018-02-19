@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LoggingInputStream](index.md) / [available](./available.md)
+---
+title: LoggingInputStream.available - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LoggingInputStream](index.html) / [available](./available.html)
 
 # available
 

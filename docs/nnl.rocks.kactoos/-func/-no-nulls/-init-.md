@@ -1,5 +1,9 @@
-[kactoos-jvm](../../../index.md) / [nnl.rocks.kactoos](../../index.md) / [Func](../index.md) / [NoNulls](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: Func.NoNulls.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../../index.html) / [nnl.rocks.kactoos](../../index.html) / [Func](../index.html) / [NoNulls](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`NoNulls(func: `[`Func`](../index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)`
+`NoNulls(func: `[`Func`](../index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>)`

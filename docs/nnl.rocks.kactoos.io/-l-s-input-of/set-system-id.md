@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [setSystemId](./set-system-id.md)
+---
+title: LSInputOf.setSystemId - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [setSystemId](./set-system-id.html)
 
 # setSystemId
 

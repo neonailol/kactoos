@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [WriterTo](index.md) / [close](./close.md)
+---
+title: WriterTo.close - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [WriterTo](index.html) / [close](./close.html)
 
 # close
 

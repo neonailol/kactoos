@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ReplacedText](./index.md)
+---
+title: ReplacedText - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [ReplacedText](./index.html)
 
 # ReplacedText
 
-`class ReplacedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/ReplacedText.kt#L41)
+`class ReplacedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/ReplacedText.kt#L41)
 
 Replace the Text.
 
@@ -38,12 +42,9 @@ string. Any exceptions will be wrapped in an [IOException](http://docs.oracle.co
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `ReplacedText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, find: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, replace: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>Will replace all instances of the substring matched by `find` with `replace`.`ReplacedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, regex: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Pattern`](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)`>, replacement: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Matcher`](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html)`, `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`<br>Replace the Text. |
+| [&lt;init&gt;](-init-.html) | `ReplacedText(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, find: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, replace: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>Will replace all instances of the substring matched by `find` with `replace`.`ReplacedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, regex: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Pattern`](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)`>, replacement: `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`Matcher`](http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html)`, `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`<br>Replace the Text. |
 
 ### Functions
 
-| Name | Summary |
-|---|---|
-| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+| [asString](as-string.html) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+

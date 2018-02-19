@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [LengthOf](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: LengthOf.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterable](../index.html) / [LengthOf](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

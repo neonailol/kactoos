@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [WriterAsOutputStream](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: WriterAsOutputStream.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [WriterAsOutputStream](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
@@ -32,7 +36,7 @@
 
 Writer as [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html).
 
-This class is for internal use only. Use [OutputStreamTo](../-output-stream-to/index.md)
+This class is for internal use only. Use [OutputStreamTo](../-output-stream-to/index.html)
 instead.
 
 There is no thread-safety guarantee.

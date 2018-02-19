@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.bytes](../index.md) / [BytesBase64](./index.md)
+---
+title: BytesBase64 - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.bytes](../index.html) / [BytesBase64](./index.html)
 
 # BytesBase64
 
-`class BytesBase64 : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/bytes/BytesBase64.kt#L14)
+`class BytesBase64 : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/bytes/BytesBase64.kt#L14)
 
 Encodes all origin bytes using the Base64 encoding scheme.
 
@@ -17,12 +21,9 @@ Encodes all origin bytes using the Base64 encoding scheme.
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `BytesBase64(origin: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)`<br>Uses [Base64.getEncoder](http://docs.oracle.com/javase/8/docs/api/java/util/Base64.html#getEncoder()) as [encoder](#)`BytesBase64(origin: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`, encoder: `[`Encoder`](http://docs.oracle.com/javase/8/docs/api/java/util/Base64/Encoder.html)`)`<br>Encodes all origin bytes using the Base64 encoding scheme. |
+| [&lt;init&gt;](-init-.html) | `BytesBase64(origin: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`)`<br>Uses [Base64.getEncoder](http://docs.oracle.com/javase/8/docs/api/java/util/Base64.html#getEncoder()) as [encoder](#)`BytesBase64(origin: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`, encoder: `[`Encoder`](http://docs.oracle.com/javase/8/docs/api/java/util/Base64/Encoder.html)`)`<br>Encodes all origin bytes using the Base64 encoding scheme. |
 
 ### Functions
 
-| Name | Summary |
-|---|---|
-| [asBytes](as-bytes.md) | `fun asBytes(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Convert it to the byte array. |
+| [asBytes](as-bytes.html) | `fun asBytes(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Convert it to the byte array. |
+

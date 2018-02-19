@@ -1,5 +1,9 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Endless](index.md) / [next](./next.md)
+---
+title: Endless.next - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Endless](index.html) / [next](./next.html)
 
 # next
 
-`fun next(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/Endless.kt#L34)
+`fun next(): `[`T`](index.html#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/Endless.kt#L34)

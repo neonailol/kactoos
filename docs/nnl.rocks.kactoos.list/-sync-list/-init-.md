@@ -1,13 +1,17 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.list](../index.md) / [SyncList](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: SyncList.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.list](../index.html) / [SyncList](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`SyncList(vararg items: `[`X`](index.md#X)`)`
-`SyncList(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
+`SyncList(vararg items: `[`X`](index.html#X)`)`
+`SyncList(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.html#X)`>)`
 
 ### Parameters
 
-`items` - The array`SyncList(items: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`
+`items` - The array`SyncList(items: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.html#X)`>)`
 
 ### Parameters
 
@@ -16,7 +20,7 @@
 **Since**
 0.21
 
-`SyncList(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)`
+`SyncList(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.html#X)`>)`
 
 Synchronized list.
 
@@ -25,7 +29,7 @@ it will fetch the entire content of the encapsulated [Iterable](https://kotlinla
 method call. It doesn't cache the data anyhow. If you don't
 need this [java.util.List](http://docs.oracle.com/javase/8/docs/api/java/util/List.html) to re-fresh
 its content on every call, by doing round-trips to
-the encapsulated iterable, use [StickyList](../-sticky-list/index.md).
+the encapsulated iterable, use [StickyList](../-sticky-list/index.html).
 
 The list is read only.
 

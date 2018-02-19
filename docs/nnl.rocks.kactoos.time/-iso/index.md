@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.time](../index.md) / [Iso](./index.md)
+---
+title: Iso - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.time](../index.html) / [Iso](./index.html)
 
 # Iso
 
@@ -11,12 +15,9 @@ Default formatter
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `Iso()`<br>Default formatter |
+| [&lt;init&gt;](-init-.html) | `Iso()`<br>Default formatter |
 
 ### Functions
 
-| Name | Summary |
-|---|---|
-| [get](get.md) | `fun get(): `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)<br>Take it. |
+| [get](get.html) | `fun get(): `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)<br>Take it. |
+

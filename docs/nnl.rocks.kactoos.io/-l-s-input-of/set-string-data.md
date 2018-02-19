@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [setStringData](./set-string-data.md)
+---
+title: LSInputOf.setStringData - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [setStringData](./set-string-data.html)
 
 # setStringData
 

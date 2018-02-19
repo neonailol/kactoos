@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [Reversed](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: Reversed.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterable](../index.html) / [Reversed](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`Reversed(vararg src: `[`X`](index.md#X)`)`
+`Reversed(vararg src: `[`X`](index.html#X)`)`
 
 Ctor.
 
@@ -13,7 +17,7 @@ Ctor.
 **Since**
 0.23
 
-`Reversed(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
+`Reversed(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.html#X)`>)`
 
 Reverse iterator.
 
@@ -25,7 +29,7 @@ There is no thread-safety guarantee.
 
 **See Also**
 
-[Filtered](../-filtered/index.md)
+[Filtered](../-filtered/index.html)
 
 **Since**
 0.9

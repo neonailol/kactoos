@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.time](../index.md) / [OffsetDateTimeOf](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: OffsetDateTimeOf.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.time](../index.html) / [OffsetDateTimeOf](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
@@ -14,7 +18,7 @@ Parses date using the provided format to create
 
 `format` - The format to use.
 
-`offset` - The offset to use.`OffsetDateTimeOf(parsed: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`OffsetDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html)`>)`
+`offset` - The offset to use.`OffsetDateTimeOf(parsed: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html)`<`[`OffsetDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html)`>)`
 
 Parser for [OffsetDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) instances.
 Parses the date using the formatter to create

@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [NormalizedText](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: NormalizedText.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [NormalizedText](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
@@ -8,7 +12,7 @@ Ctor.
 
 ### Parameters
 
-`text` - A Text`NormalizedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
+`text` - A Text`NormalizedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
 
 Normalize (replace sequences of whitespace characters by a single space) a Text.
 

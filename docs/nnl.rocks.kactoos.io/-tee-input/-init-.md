@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeInput](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: TeeInput.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TeeInput](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
@@ -24,7 +28,7 @@
 **Since**
 0.13.3
 
-`TeeInput(url: `[`URL`](http://docs.oracle.com/javase/8/docs/api/java/net/URL.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(url: `[`URL`](http://docs.oracle.com/javase/8/docs/api/java/net/URL.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 ### Parameters
 
@@ -57,7 +61,7 @@
 **Since**
 0.13.3
 
-`TeeInput(uri: `[`URI`](http://docs.oracle.com/javase/8/docs/api/java/net/URI.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(uri: `[`URI`](http://docs.oracle.com/javase/8/docs/api/java/net/URI.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 ### Parameters
 
@@ -96,8 +100,8 @@
 **Since**
 0.5
 
-`TeeInput(input: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
-`TeeInput(input: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(input: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
+`TeeInput(input: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 ### Parameters
 
@@ -128,7 +132,7 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(input: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 ### Parameters
 
@@ -139,10 +143,10 @@
 **Since**
 0.5
 
-`TeeInput(input: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`TeeInput(input: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
-`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`TeeInput(input: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`TeeInput(input: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
@@ -157,7 +161,7 @@
 
 `TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
 `TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, file: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
-`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
+`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
 
 ### Parameters
 
@@ -200,7 +204,7 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 ### Parameters
 
@@ -211,7 +215,7 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 ### Parameters
 
@@ -224,8 +228,8 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
-`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`TeeInput(input: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 ### Parameters
 
@@ -252,8 +256,8 @@
 **Since**
 0.5
 
-`TeeInput(input: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
-`TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(input: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
+`TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 ### Parameters
 
@@ -292,8 +296,8 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
@@ -306,7 +310,7 @@
 **Since**
 0.13.3
 
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
 
 ### Parameters
 
@@ -317,8 +321,8 @@
 **Since**
 0.13.3
 
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
@@ -331,7 +335,7 @@
 **Since**
 0.13.3
 
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
 
 ### Parameters
 
@@ -342,8 +346,8 @@
 **Since**
 0.13.3
 
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
@@ -356,7 +360,7 @@
 **Since**
 0.13.3
 
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 ### Parameters
 
@@ -367,8 +371,8 @@
 **Since**
 0.13.3
 
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`TeeInput(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
@@ -381,7 +385,7 @@
 **Since**
 0.13.3
 
-`TeeInput(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
+`TeeInput(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
 
 ### Parameters
 
@@ -392,7 +396,7 @@
 **Since**
 0.13.3
 
-`TeeInput(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
+`TeeInput(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
 
 ### Parameters
 
@@ -403,7 +407,7 @@
 **Since**
 0.13.3
 
-`TeeInput(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 ### Parameters
 
@@ -414,7 +418,7 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
+`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
 
 ### Parameters
 
@@ -425,7 +429,7 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)`
+`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)`
 
 ### Parameters
 
@@ -436,7 +440,7 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 ### Parameters
 
@@ -449,8 +453,8 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
@@ -463,8 +467,8 @@
 **Since**
 0.13.3
 
-`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
-`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`TeeInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, writer: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 ### Parameters
 
@@ -479,7 +483,7 @@
 **Since**
 0.13.3
 
-`TeeInput(source: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, target: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
+`TeeInput(source: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, target: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
 
 Input to Output copying pipe.
 

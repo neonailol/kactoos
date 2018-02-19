@@ -1,10 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [BiProcOf](index.md) / [exec](./exec.md)
+---
+title: BiProcOf.exec - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [BiProcOf](index.html) / [exec](./exec.html)
 
 # exec
 
-`fun exec(first: `[`X`](index.md#X)`, second: `[`Y`](index.md#Y)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/BiProcOf.kt#L20)
+`fun exec(first: `[`X`](index.html#X)`, second: `[`Y`](index.html#Y)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/BiProcOf.kt#L20)
 
-Overrides [BiProc.exec](../../nnl.rocks.kactoos/-bi-proc/exec.md)
+Overrides [BiProc.exec](../../nnl.rocks.kactoos/-bi-proc/exec.html)
 
 Execute it.
 

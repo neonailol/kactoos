@@ -1,10 +1,14 @@
-[kactoos-jvm](../../../index.md) / [nnl.rocks.kactoos](../../index.md) / [Scalar](../index.md) / [NoNulls](index.md) / [value](./value.md)
+---
+title: Scalar.NoNulls.value - kactoos-jvm
+---
+
+[kactoos-jvm](../../../index.html) / [nnl.rocks.kactoos](../../index.html) / [Scalar](../index.html) / [NoNulls](index.html) / [value](./value.html)
 
 # value
 
-`fun value(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Scalar.kt#L42)
+`fun value(): `[`T`](index.html#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Scalar.kt#L42)
 
-Overrides [Scalar.value](../value.md)
+Overrides [Scalar.value](../value.html)
 
 Convert it to the value.
 

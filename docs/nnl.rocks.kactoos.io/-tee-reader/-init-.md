@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeReader](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: TeeReader.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TeeReader](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

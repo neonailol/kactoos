@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [And](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: And.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [And](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`And(vararg src: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>)`
+`And(vararg src: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>)`
 
 ### Parameters
 
@@ -11,7 +15,7 @@
 **Since**
 0.3
 
-`And(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>>)`
+`And(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>>)`
 
 ### Parameters
 
@@ -20,7 +24,7 @@
 **Since**
 0.3
 
-`And(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>>)`
+`And(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>>)`
 
 Logical conjunction.
 
@@ -34,10 +38,10 @@ And<String>(
 ).value()
 ```
 
-This class implements [Scalar](../../nnl.rocks.kactoos/-scalar/index.md), which throws a checked
+This class implements [Scalar](../../nnl.rocks.kactoos/-scalar/index.html), which throws a checked
 [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). This may not be convenient in many cases. To make
 it more convenient and get rid of the checked exception you can
-use [UncheckedScalar](../-unchecked-scalar/index.md) or [IoCheckedScalar](../-io-checked-scalar/index.md) decorators.
+use [UncheckedScalar](../-unchecked-scalar/index.html) or [IoCheckedScalar](../-io-checked-scalar/index.html) decorators.
 
 There is no thread-safety guarantee.
 
@@ -47,9 +51,9 @@ There is no thread-safety guarantee.
 
 **See Also**
 
-[UncheckedScalar](../-unchecked-scalar/index.md)
+[UncheckedScalar](../-unchecked-scalar/index.html)
 
-[IoCheckedScalar](../-io-checked-scalar/index.md)
+[IoCheckedScalar](../-io-checked-scalar/index.html)
 
 **Since**
 0.3

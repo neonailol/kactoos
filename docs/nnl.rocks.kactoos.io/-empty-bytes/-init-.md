@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [EmptyBytes](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: EmptyBytes.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [EmptyBytes](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

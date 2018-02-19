@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [TextHasString](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: TextHasString.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [TextHasString](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

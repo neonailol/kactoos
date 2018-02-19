@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SumOf](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: SumOf.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [SumOf](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Bytes](index.md) / [asBytes](./as-bytes.md)
+---
+title: Bytes.asBytes - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos](../index.html) / [Bytes](index.html) / [asBytes](./as-bytes.html)
 
 # asBytes
 

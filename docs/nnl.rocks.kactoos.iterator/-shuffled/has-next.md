@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Shuffled](index.md) / [hasNext](./has-next.md)
+---
+title: Shuffled.hasNext - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Shuffled](index.html) / [hasNext](./has-next.html)
 
 # hasNext
 
