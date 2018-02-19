@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterable](../index.md) / [StickyIterable](./index.md)
+---
+title: StickyIterable - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterable](../index.html) / [StickyIterable](./index.html)
 
 # StickyIterable
 
-`class StickyIterable<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](../-iterable-envelope/index.md)`<`[`X`](index.md#X)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterable/StickyIterable.kt#L18)
+`class StickyIterable<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](../-iterable-envelope/index.html)`<`[`X`](index.html#X)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterable/StickyIterable.kt#L18)
 
 Iterable that returns the same set of elements, always.
 
@@ -17,6 +21,5 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `StickyIterable(vararg src: `[`X`](index.md#X)`)`<br>Ctor.`StickyIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`<br>Iterable that returns the same set of elements, always. |
+| [&lt;init&gt;](-init-.html) | `StickyIterable(vararg src: `[`X`](index.html#X)`)`<br>Ctor.`StickyIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.html#X)`>)`<br>Iterable that returns the same set of elements, always. |
+

@@ -1,10 +1,14 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [InputWithFallback](index.md) / [stream](./stream.md)
+---
+title: InputWithFallback.stream - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [InputWithFallback](index.html) / [stream](./stream.html)
 
 # stream
 
 `fun stream(): `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/InputWithFallback.kt#L50)
 
-Overrides [Input.stream](../../nnl.rocks.kactoos/-input/stream.md)
+Overrides [Input.stream](../../nnl.rocks.kactoos/-input/stream.html)
 
 Get read access to it.
 

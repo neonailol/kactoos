@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.map](../index.md) / [MapEntry](index.md) / [toString](./to-string.md)
+---
+title: MapEntry.toString - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.map](../index.html) / [MapEntry](index.html) / [toString](./to-string.html)
 
 # toString
 

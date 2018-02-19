@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [SwappedCaseText](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: SwappedCaseText.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [SwappedCaseText](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`SwappedCaseText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
+`SwappedCaseText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
 
 Swaps the case of a Text changing upper and title case to lower case,
 and lower case to upper case.

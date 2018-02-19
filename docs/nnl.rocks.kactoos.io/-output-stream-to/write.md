@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputStreamTo](index.md) / [write](./write.md)
+---
+title: OutputStreamTo.write - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [OutputStreamTo](index.html) / [write](./write.html)
 
 # write
 

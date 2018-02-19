@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LoggingInputStream](index.md) / [mark](./mark.md)
+---
+title: LoggingInputStream.mark - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LoggingInputStream](index.html) / [mark](./mark.html)
 
 # mark
 

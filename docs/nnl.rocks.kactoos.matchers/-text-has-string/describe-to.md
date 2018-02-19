@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [TextHasString](index.md) / [describeTo](./describe-to.md)
+---
+title: TextHasString.describeTo - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [TextHasString](index.html) / [describeTo](./describe-to.html)
 
 # describeTo
 

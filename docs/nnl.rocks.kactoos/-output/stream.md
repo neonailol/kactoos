@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Output](index.md) / [stream](./stream.md)
+---
+title: Output.stream - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos](../index.html) / [Output](index.html) / [stream](./stream.html)
 
 # stream
 

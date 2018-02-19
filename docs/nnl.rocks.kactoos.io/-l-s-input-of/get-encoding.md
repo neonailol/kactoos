@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [getEncoding](./get-encoding.md)
+---
+title: LSInputOf.getEncoding - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [getEncoding](./get-encoding.html)
 
 # getEncoding
 

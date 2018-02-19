@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LoggingOutputStream](index.md) / [flush](./flush.md)
+---
+title: LoggingOutputStream.flush - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LoggingOutputStream](index.html) / [flush](./flush.html)
 
 # flush
 

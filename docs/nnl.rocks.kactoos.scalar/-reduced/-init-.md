@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Reduced](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: Reduced.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [Reduced](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`Reduced(input: `[`X`](index.md#X)`, func: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`, `[`X`](index.md#X)`>, iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
+`Reduced(input: `[`X`](index.html#X)`, func: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.html)`<`[`X`](index.html#X)`, `[`T`](index.html#T)`, `[`X`](index.html#X)`>, iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.html#T)`>)`
 
 Iterable, which elements are "reduced" through the func.
 

@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SolidScalar](./index.md)
+---
+title: SolidScalar - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [SolidScalar](./index.html)
 
 # SolidScalar
 
-`class SolidScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SolidScalar.kt#L21)
+`class SolidScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`T`](index.html#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SolidScalar.kt#L21)
 
 Cached and synchronized version of a Scalar.
 
@@ -16,21 +20,18 @@ Objects of this class are thread safe.
 
 **See Also**
 
-[StickyScalar](../-sticky-scalar/index.md)
+[StickyScalar](../-sticky-scalar/index.html)
 
-[SyncScalar](../-sync-scalar/index.md)
+[SyncScalar](../-sync-scalar/index.html)
 
 **Since**
 0.24
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `SolidScalar(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)``SolidScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, `[`T`](index.md#T)`>)`<br>Cached and synchronized version of a Scalar. |
+| [&lt;init&gt;](-init-.html) | `SolidScalar(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`T`](index.html#T)`>)``SolidScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, `[`T`](index.html#T)`>)`<br>Cached and synchronized version of a Scalar. |
 
 ### Functions
 
-| Name | Summary |
-|---|---|
-| [value](value.md) | `fun value(): `[`T`](index.md#T)<br>Convert it to the value. |
+| [value](value.html) | `fun value(): `[`T`](index.html#T)<br>Convert it to the value. |
+

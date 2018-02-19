@@ -1,10 +1,7 @@
 
-title: NNL
-baseurl: "" # the subpath of your site, e.g. /blog
+title: Kactoos
+baseurl: ""
 url: "/"
 markdown: kramdown
 theme: jekyll-theme-primer
 repository: neonailol/kactoos
-# theme: minima
-#theme: jekyll-theme-minimal
-

@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [getPublicId](./get-public-id.md)
+---
+title: LSInputOf.getPublicId - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [getPublicId](./get-public-id.html)
 
 # getPublicId
 

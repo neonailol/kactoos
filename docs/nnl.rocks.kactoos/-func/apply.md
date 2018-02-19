@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Func](index.md) / [apply](./apply.md)
+---
+title: Func.apply - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos](../index.html) / [Func](index.html) / [apply](./apply.html)
 
 # apply
 
-`abstract fun apply(input: `[`X`](index.md#X)`): `[`Y`](index.md#Y)
+`abstract fun apply(input: `[`X`](index.html#X)`): `[`Y`](index.html#Y)
 
 Apply it.
 
@@ -11,7 +15,7 @@ Apply it.
 `input` - The argument
 
 **Return**
-The result of type [Y](index.md#Y)
+The result of type [Y](index.html#Y)
 
 **Since**
 0.2

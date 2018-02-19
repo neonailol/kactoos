@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Text](index.md) / [asString](./as-string.md)
+---
+title: Text.asString - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos](../index.html) / [Text](index.html) / [asString](./as-string.html)
 
 # asString
 

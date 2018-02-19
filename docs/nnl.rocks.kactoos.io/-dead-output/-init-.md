@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [DeadOutput](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: DeadOutput.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [DeadOutput](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 

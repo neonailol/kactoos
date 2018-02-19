@@ -1,13 +1,17 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.list](../index.md) / [SolidList](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: SolidList.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.list](../index.html) / [SolidList](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`SolidList(vararg items: `[`X`](index.md#X)`)`
-`SolidList(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
+`SolidList(vararg items: `[`X`](index.html#X)`)`
+`SolidList(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.html#X)`>)`
 
 ### Parameters
 
-`items` - The array`SolidList(items: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`
+`items` - The array`SolidList(items: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.html#X)`>)`
 
 ### Parameters
 
@@ -16,7 +20,7 @@
 **Since**
 0.21
 
-`SolidList(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)`
+`SolidList(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.html#X)`>)`
 
 A [java.util.List](http://docs.oracle.com/javase/8/docs/api/java/util/List.html) that is both synchronized and sticky.
 

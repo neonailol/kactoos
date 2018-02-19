@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [AbbreviatedText](./index.md)
+---
+title: AbbreviatedText - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [AbbreviatedText](./index.html)
 
 # AbbreviatedText
 
-`class AbbreviatedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/AbbreviatedText.kt#L16)
+`class AbbreviatedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/AbbreviatedText.kt#L16)
 
 Abbreviates a Text using ellipses.
 
@@ -19,12 +23,9 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| Name | Summary |
-|---|---|
-| [&lt;init&gt;](-init-.md) | `AbbreviatedText(text: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>By default, the max line width is 80 characters.`AbbreviatedText(text: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)``AbbreviatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, width: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = AbbreviatedText.MAX_WIDTH)`<br>Abbreviates a Text using ellipses. |
+| [&lt;init&gt;](-init-.html) | `AbbreviatedText(text: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>By default, the max line width is 80 characters.`AbbreviatedText(text: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)``AbbreviatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, width: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = AbbreviatedText.MAX_WIDTH)`<br>Abbreviates a Text using ellipses. |
 
 ### Functions
 
-| Name | Summary |
-|---|---|
-| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+| [asString](as-string.html) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+

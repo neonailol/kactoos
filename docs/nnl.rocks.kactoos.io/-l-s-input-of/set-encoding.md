@@ -1,4 +1,8 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [setEncoding](./set-encoding.md)
+---
+title: LSInputOf.setEncoding - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [setEncoding](./set-encoding.html)
 
 # setEncoding
 

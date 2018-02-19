@@ -1,8 +1,12 @@
-[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [BytesOf](index.md) / [&lt;init&gt;](./-init-.md)
+---
+title: BytesOf.<init> - kactoos-jvm
+---
+
+[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [BytesOf](index.html) / [&lt;init&gt;](./-init-.html)
 
 # &lt;init&gt;
 
-`BytesOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)``BytesOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)`
+`BytesOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`)``BytesOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`)`
 
 Ctor.
 
@@ -30,7 +34,7 @@ Ctor.
 **Since**
 0.13
 
-`BytesOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`BytesOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 Ctor.
 
@@ -101,8 +105,8 @@ Ctor.
 
 `chars` - The chars
 
-`charset` - The charset`BytesOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
-`BytesOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`charset` - The charset`BytesOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
+`BytesOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 Ctor.
 
@@ -148,9 +152,9 @@ Ctor.
 
 ### Parameters
 
-`bytes` - Bytes to encapsulate`BytesOf(origin: `[`KBytes`](../../nnl.rocks.kactoos/-k-bytes.md)`)`
+`bytes` - Bytes to encapsulate`BytesOf(origin: `[`KBytes`](../../nnl.rocks.kactoos/-k-bytes.html)`)`
 
-A [Bytes](../../nnl.rocks.kactoos/-bytes/index.md) that encapsulates other sources of data.
+A [Bytes](../../nnl.rocks.kactoos/-bytes/index.html) that encapsulates other sources of data.
 
 There is no thread-safety guarantee.
 
