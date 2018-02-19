@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger
  * @param items Items to iterate
  * @since 0.3
  */
-class IteratorOf<out X: Any>(
+class IteratorOf<out X : Any>(
     private val list: Array<X>,
     private val position: AtomicInteger = AtomicInteger(0)
 ) : Iterator<X> {
