@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TeeOutput - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos.io</a>&nbsp;/&nbsp;<a href="./index.html">TeeOutput</a><br/>
+<br/>
+<h1>TeeOutput</h1>
+<code><span class="keyword">class </span><span class="identifier">TeeOutput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-output/index.html"><span class="identifier">Output</span></a></code> <a href="https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TeeOutput.kt#L22">(source)</a>
+<p>Output to Output copying pipe.</p>
+<p>There is no thread-safety guarantee.</p>
+<p><strong>Since</strong><br/>
+0.16</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TeeOutput</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.Writer, java.nio.charset.Charset)/tgt">tgt</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-output/index.html"><span class="identifier">Output</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.Writer, java.nio.charset.Charset)/cpy">cpy</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html"><span class="identifier">Writer</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.Writer, java.nio.charset.Charset)/charset">charset</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html"><span class="identifier">Charset</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">TeeOutput</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.Writer)/tgt">tgt</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-output/index.html"><span class="identifier">Output</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.Writer)/cpy">cpy</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html"><span class="identifier">Writer</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">TeeOutput</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.nio.file.Path)/tgt">tgt</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-output/index.html"><span class="identifier">Output</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.nio.file.Path)/cpy">cpy</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><span class="identifier">Path</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">TeeOutput</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.File)/tgt">tgt</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-output/index.html"><span class="identifier">Output</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.File)/cpy">cpy</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">TeeOutput</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.OutputStream)/tgt">tgt</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-output/index.html"><span class="identifier">Output</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, java.io.OutputStream)/cpy">cpy</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html"><span class="identifier">OutputStream</span></a><span class="symbol">)</span></code><code><span class="identifier">TeeOutput</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, nnl.rocks.kactoos.Output)/target">target</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-output/index.html"><span class="identifier">Output</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TeeOutput$<init>(nnl.rocks.kactoos.Output, nnl.rocks.kactoos.Output)/copy">copy</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-output/index.html"><span class="identifier">Output</span></a><span class="symbol">)</span></code>
+<p>Output to Output copying pipe.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="stream.html">stream</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">stream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html"><span class="identifier">OutputStream</span></a></code>
+<p>Get write access to it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

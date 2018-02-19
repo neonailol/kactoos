@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Mapped - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos.iterable</a>&nbsp;/&nbsp;<a href="./index.html">Mapped</a><br/>
+<br/>
+<h1>Mapped</h1>
+<code><span class="keyword">class </span><span class="identifier">Mapped</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code> <a href="https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterable/Mapped.kt#L18">(source)</a>
+<p>Mapped iterable.</p>
+<p>There is no thread-safety guarantee.</p>
+<h3>Parameters</h3>
+<p><a name="X"></a>
+<code>X</code> - Type of source item</p>
+<p><a name="Y"></a>
+<code>Y</code> - Type of target item</p>
+<p><a name="fnc"></a>
+<code>fnc</code> - Func</p>
+<p><a name="src"></a>
+<code>src</code> - Source iterable</p>
+<p><strong>Since</strong><br/>
+0.1</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Mapped</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.iterable.Mapped$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.iterable.Mapped.X, nnl.rocks.kactoos.iterable.Mapped.Y)), kotlin.Array((nnl.rocks.kactoos.iterable.Mapped.X)))/fnc">fnc</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="keyword">vararg</span> <span class="identifier" id="nnl.rocks.kactoos.iterable.Mapped$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.iterable.Mapped.X, nnl.rocks.kactoos.iterable.Mapped.Y)), kotlin.Array((nnl.rocks.kactoos.iterable.Mapped.X)))/src">src</span><span class="symbol">:</span>&nbsp;<a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Mapped</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.iterable.Mapped$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.iterable.Mapped.X, nnl.rocks.kactoos.iterable.Mapped.Y)), kotlin.collections.Iterator((nnl.rocks.kactoos.iterable.Mapped.X)))/fnc">fnc</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.iterable.Mapped$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.iterable.Mapped.X, nnl.rocks.kactoos.iterable.Mapped.Y)), kotlin.collections.Iterator((nnl.rocks.kactoos.iterable.Mapped.X)))/iter">iter</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"><span class="identifier">Iterator</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Ctor.</p>
+<code><span class="identifier">Mapped</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.iterable.Mapped$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.iterable.Mapped.X, nnl.rocks.kactoos.iterable.Mapped.Y)), kotlin.collections.Iterable((nnl.rocks.kactoos.iterable.Mapped.X)))/fnc">fnc</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.iterable.Mapped$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.iterable.Mapped.X, nnl.rocks.kactoos.iterable.Mapped.Y)), kotlin.collections.Iterable((nnl.rocks.kactoos.iterable.Mapped.X)))/iter">iter</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Mapped iterable.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

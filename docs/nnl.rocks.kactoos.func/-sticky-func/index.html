@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StickyFunc - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos.func</a>&nbsp;/&nbsp;<a href="./index.html">StickyFunc</a><br/>
+<br/>
+<h1>StickyFunc</h1>
+<code><span class="keyword">class </span><span class="identifier">StickyFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code> <a href="https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/StickyFunc.kt#L25">(source)</a>
+<p>Func that caches previously calculated values and doesn't
+recalculate again.</p>
+<p>This <a href="../../nnl.rocks.kactoos/-func/index.html">Func</a> decorator technically is an in-memory
+cache.</p>
+<p>Pay attention that this class is not thread-safe. It is highly
+recommended to always decorate it with <a href="../-sync-func/index.html">SyncFunc</a>.</p>
+<p>There is no thread-safety guarantee.</p>
+<h3>Parameters</h3>
+<p><a name="X"></a>
+<code>X</code> - Type of input</p>
+<p><a name="Y"></a>
+<code>Y</code> - Type of output</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../../nnl.rocks.kactoos.scalar/-sticky-scalar/index.html">StickyScalar</a></p>
+</p>
+<p><strong>Since</strong><br/>
+0.1</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">StickyFunc</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.func.StickyFunc$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.func.StickyFunc.X, nnl.rocks.kactoos.func.StickyFunc.Y)), kotlin.Int)/fnc">fnc</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.func.StickyFunc$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.func.StickyFunc.X, nnl.rocks.kactoos.func.StickyFunc.Y)), kotlin.Int)/max">max</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">StickyFunc</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.func.StickyFunc$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.func.StickyFunc.X, nnl.rocks.kactoos.func.StickyFunc.Y)))/fnc">fnc</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code><code><span class="identifier">StickyFunc</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.func.StickyFunc$<init>(nnl.rocks.kactoos.BiFunc((nnl.rocks.kactoos.func.StickyFunc.X, kotlin.Boolean, nnl.rocks.kactoos.func.StickyFunc.Y)))/func">func</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-bi-func/index.html"><span class="identifier">BiFunc</span></a><span class="symbol">&lt;</span><a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Func that caches previously calculated values and doesn't
+recalculate again.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="apply.html">apply</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">apply</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.func.StickyFunc$apply(nnl.rocks.kactoos.func.StickyFunc.X)/input">input</span><span class="symbol">:</span>&nbsp;<a href="index.html#X"><span class="identifier">X</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#Y"><span class="identifier">Y</span></a></code>
+<p>Apply it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

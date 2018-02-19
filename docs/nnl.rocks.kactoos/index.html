@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>nnl.rocks.kactoos - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="./index.html">nnl.rocks.kactoos</a><br/>
+<br/>
+<h2>Package nnl.rocks.kactoos</h2>
+<p>Top level package</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-bi-func/index.html">BiFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">interface </span><span class="identifier">BiFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Z</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Function that accepts two arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-bi-proc/index.html">BiProc</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">interface </span><span class="identifier">BiProc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Proc that accepts two arguments.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-bytes/index.html">Bytes</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">interface </span><span class="identifier">Bytes</span></code>
+<p>Bytes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-func/index.html">Func</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">interface </span><span class="identifier">Func</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-input/index.html">Input</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Input</span></code>
+<p>Input.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-output/index.html">Output</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Output</span></code>
+<p>Output.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-proc/index.html">Proc</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">interface </span><span class="identifier">Proc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Procedure.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-scalar/index.html">Scalar</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">interface </span><span class="identifier">Scalar</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Scalar.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-text/index.html">Text</a></p>
+</td>
+<td>
+<code><span class="keyword">expect</span> <span class="keyword">interface </span><span class="identifier">Text</span></code>
+<p>Text.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-k-bi-func.html">KBiFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">KBiFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span><span class="symbol">, </span><span class="identifier">Y</span><span class="symbol">, </span><span class="identifier">Z</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="-k-bi-func.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-k-bi-func.html#Y"><span class="identifier">Y</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="-k-bi-func.html#Z"><span class="identifier">Z</span></a></code>
+<p>Alias for <a href="-bi-func/index.html">BiFunc</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-k-bi-proc.html">KBiProc</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">KBiProc</span><span class="symbol">&lt;</span><span class="identifier">X</span><span class="symbol">, </span><span class="identifier">Y</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="-k-bi-proc.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-k-bi-proc.html#Y"><span class="identifier">Y</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Alias for <a href="-bi-proc/index.html">BiProc</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-k-bytes.html">KBytes</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">KBytes</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html"><span class="identifier">ByteArray</span></a></code>
+<p>Alias for <a href="-bytes/index.html">Bytes</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-k-func.html">KFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">KFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span><span class="symbol">, </span><span class="identifier">Y</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="-k-func.html#X"><span class="identifier">X</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="-k-func.html#Y"><span class="identifier">Y</span></a></code>
+<p>Alias for <a href="-func/index.html">Func</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-k-proc.html">KProc</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">KProc</span><span class="symbol">&lt;</span><span class="identifier">X</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="-k-proc.html#X"><span class="identifier">X</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Alias for <a href="-proc/index.html">Proc</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-k-scalar.html">KScalar</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">KScalar</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="-k-scalar.html#T"><span class="identifier">T</span></a></code>
+<p>Alias for <a href="-scalar/index.html">Scalar</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-k-text.html">KText</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">KText</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Alias for <a href="-text/index.html">Text</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

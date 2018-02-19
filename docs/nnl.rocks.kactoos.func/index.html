@@ -1,0 +1,246 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>nnl.rocks.kactoos.func - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="./index.html">nnl.rocks.kactoos.func</a><br/>
+<br/>
+<h2>Package nnl.rocks.kactoos.func</h2>
+<p>Functions.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-async-func/index.html">AsyncFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AsyncFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-async-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html"><span class="identifier">Future</span></a><span class="symbol">&lt;</span><a href="-async-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><a href="../nnl.rocks.kactoos/-proc/index.html"><span class="identifier">Proc</span></a><span class="symbol">&lt;</span><a href="-async-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Func that runs in the background.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-bi-func-of/index.html">BiFuncOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BiFuncOf</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Z</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-func/index.html"><span class="identifier">BiFunc</span></a><span class="symbol">&lt;</span><a href="-bi-func-of/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-bi-func-of/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">,</span>&nbsp;<a href="-bi-func-of/index.html#Z"><span class="identifier">Z</span></a><span class="symbol">&gt;</span></code>
+<p>Represents many possible inputs as <a href="../nnl.rocks.kactoos/-bi-func/index.html">BiFunc</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-bi-proc-of/index.html">BiProcOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BiProcOf</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-proc/index.html"><span class="identifier">BiProc</span></a><span class="symbol">&lt;</span><a href="-bi-proc-of/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-bi-proc-of/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func as BiProc.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-callable-of/index.html">CallableOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">CallableOf</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html"><span class="identifier">Callable</span></a><span class="symbol">&lt;</span><a href="-callable-of/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Func as <a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html">Callable</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-chained-func/index.html">ChainedFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ChainedFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Z</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-chained-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-chained-func/index.html#Z"><span class="identifier">Z</span></a><span class="symbol">&gt;</span></code>
+<p>Composed function.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-func-of/index.html">FuncOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FuncOf</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-func-of/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-func-of/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Represents many possible inputs as <a href="../nnl.rocks.kactoos/-func/index.html">Func</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-func-with-fallback/index.html">FuncWithFallback</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FuncWithFallback</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-func-with-fallback/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-func-with-fallback/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func with a fallback plan.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-io-checked-bi-func/index.html">IoCheckedBiFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IoCheckedBiFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Z</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-func/index.html"><span class="identifier">BiFunc</span></a><span class="symbol">&lt;</span><a href="-io-checked-bi-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-io-checked-bi-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">,</span>&nbsp;<a href="-io-checked-bi-func/index.html#Z"><span class="identifier">Z</span></a><span class="symbol">&gt;</span></code>
+<p>Func that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>, but throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html">IOException</a> instead.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-io-checked-bi-proc/index.html">IoCheckedBiProc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IoCheckedBiProc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-proc/index.html"><span class="identifier">BiProc</span></a><span class="symbol">&lt;</span><a href="-io-checked-bi-proc/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-io-checked-bi-proc/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>BiProc that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>, but throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html">IOException</a> instead.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-io-checked-func/index.html">IoCheckedFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IoCheckedFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-io-checked-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-io-checked-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>, but throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html">IOException</a> instead.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-io-checked-proc/index.html">IoCheckedProc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IoCheckedProc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-proc/index.html"><span class="identifier">Proc</span></a><span class="symbol">&lt;</span><a href="-io-checked-proc/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Proc that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>, but throws <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html">java.io.IOException</a> instead.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-proc-of/index.html">ProcOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ProcOf</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-proc/index.html"><span class="identifier">Proc</span></a><span class="symbol">&lt;</span><a href="-proc-of/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Func as Proc.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-repeated-func/index.html">RepeatedFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RepeatedFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-repeated-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-repeated-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func that repeats its calculation a few times before returning the last result.
+If <a href="#">times</a> is equal or less than zero <a href="-repeated-func/apply.html">RepeatedFunc.apply</a> will return an exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-retry-func/index.html">RetryFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RetryFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-retry-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-retry-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func that will try a few times before throwing an exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-runnable-of/index.html">RunnableOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RunnableOf</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html"><span class="identifier">Runnable</span></a></code>
+<p>Func as Runnable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-solid-bi-func/index.html">SolidBiFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SolidBiFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Z</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-func/index.html"><span class="identifier">BiFunc</span></a><span class="symbol">&lt;</span><a href="-solid-bi-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-solid-bi-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">,</span>&nbsp;<a href="-solid-bi-func/index.html#Z"><span class="identifier">Z</span></a><span class="symbol">&gt;</span></code>
+<p>BiFunc that is thread-safe and sticky.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-solid-func/index.html">SolidFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SolidFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-solid-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-solid-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func that is thread-safe and sticky.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-sticky-bi-func/index.html">StickyBiFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StickyBiFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Z</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-func/index.html"><span class="identifier">BiFunc</span></a><span class="symbol">&lt;</span><a href="-sticky-bi-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-sticky-bi-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">,</span>&nbsp;<a href="-sticky-bi-func/index.html#Z"><span class="identifier">Z</span></a><span class="symbol">&gt;</span></code>
+<p>Func that accepts two arguments and caches previously calculated values
+and doesn't recalculate again.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-sticky-func/index.html">StickyFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StickyFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-sticky-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-sticky-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func that caches previously calculated values and doesn't
+recalculate again.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-sync-bi-func/index.html">SyncBiFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SyncBiFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Z</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-func/index.html"><span class="identifier">BiFunc</span></a><span class="symbol">&lt;</span><a href="-sync-bi-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-sync-bi-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">,</span>&nbsp;<a href="-sync-bi-func/index.html#Z"><span class="identifier">Z</span></a><span class="symbol">&gt;</span></code>
+<p>BiFunc that is thread-safe.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-sync-func/index.html">SyncFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SyncFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-sync-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-sync-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func that is thread-safe.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-unchecked-bi-func/index.html">UncheckedBiFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UncheckedBiFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Z</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-func/index.html"><span class="identifier">BiFunc</span></a><span class="symbol">&lt;</span><a href="-unchecked-bi-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-unchecked-bi-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">,</span>&nbsp;<a href="-unchecked-bi-func/index.html#Z"><span class="identifier">Z</span></a><span class="symbol">&gt;</span></code>
+<p>BiFunc that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-unchecked-bi-proc/index.html">UncheckedBiProc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UncheckedBiProc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">in</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-bi-proc/index.html"><span class="identifier">BiProc</span></a><span class="symbol">&lt;</span><a href="-unchecked-bi-proc/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-unchecked-bi-proc/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>BiProc that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-unchecked-func/index.html">UncheckedFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UncheckedFunc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="-unchecked-func/index.html#X"><span class="identifier">X</span></a><span class="symbol">,</span>&nbsp;<a href="-unchecked-func/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Func that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-unchecked-proc/index.html">UncheckedProc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UncheckedProc</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos/-proc/index.html"><span class="identifier">Proc</span></a><span class="symbol">&lt;</span><a href="-unchecked-proc/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Proc that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TempFile - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos.io</a>&nbsp;/&nbsp;<a href="./index.html">TempFile</a><br/>
+<br/>
+<h1>TempFile</h1>
+<code><span class="keyword">class </span><span class="identifier">TempFile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-scalar/index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><span class="identifier">Path</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a></code> <a href="https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TempFile.kt#L32">(source)</a>
+<p>A temporary file.</p>
+<p>These are ephemeral files to be used in small scopes.
+Typical use looks like this:</p>
+<pre><code>try (final TempFile file = new TempFile()) {
+    //write to the file
+}
+</code></pre>
+<p>The physical file is deleted from the filesystem when the temp file is
+closed.</p>
+<h3>Parameters</h3>
+<p><a name="file"></a>
+<code>file</code> - Creates the file and returns the path to it</p>
+<p><strong>Since</strong><br/>
+0.3</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TempFile</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TempFile$<init>(kotlin.String, kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TempFile$<init>(kotlin.String, kotlin.String)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;""<span class="symbol">)</span></code>
+<p>The temporary file will be created inside the filesystem's
+temporary folder (system property: <code>java.io.tmpdir</code>).</p>
+<code><span class="identifier">TempFile</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TempFile$<init>(nnl.rocks.kactoos.Scalar((java.nio.file.Path)), kotlin.String, kotlin.String)/dir">dir</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-scalar/index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><span class="identifier">Path</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TempFile$<init>(nnl.rocks.kactoos.Scalar((java.nio.file.Path)), kotlin.String, kotlin.String)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TempFile$<init>(nnl.rocks.kactoos.Scalar((java.nio.file.Path)), kotlin.String, kotlin.String)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">TempFile</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.io.TempFile$<init>(nnl.rocks.kactoos.Scalar((java.nio.file.Path)), nnl.rocks.kactoos.Text, nnl.rocks.kactoos.Text)/dir">dir</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-scalar/index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><span class="identifier">Path</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TempFile$<init>(nnl.rocks.kactoos.Scalar((java.nio.file.Path)), nnl.rocks.kactoos.Text, nnl.rocks.kactoos.Text)/prefix">prefix</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-text/index.html"><span class="identifier">Text</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.io.TempFile$<init>(nnl.rocks.kactoos.Scalar((java.nio.file.Path)), nnl.rocks.kactoos.Text, nnl.rocks.kactoos.Text)/suffix">suffix</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-text/index.html"><span class="identifier">Text</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Deletes the file from the filesystem.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">value</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><span class="identifier">Path</span></a></code>
+<p>Convert it to the value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

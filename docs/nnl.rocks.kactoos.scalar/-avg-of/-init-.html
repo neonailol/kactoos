@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AvgOf.<init> - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos.scalar</a>&nbsp;/&nbsp;<a href="index.html">AvgOf</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="nnl.rocks.kactoos.scalar.AvgOf$&lt;init&gt;(kotlin.IntArray)"></a>
+<code><span class="identifier">AvgOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="nnl.rocks.kactoos.scalar.AvgOf$<init>(kotlin.IntArray)/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code><br/>
+<a name="nnl.rocks.kactoos.scalar.AvgOf$&lt;init&gt;(kotlin.LongArray)"></a>
+<code><span class="identifier">AvgOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="nnl.rocks.kactoos.scalar.AvgOf$<init>(kotlin.LongArray)/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">)</span></code><br/>
+<a name="nnl.rocks.kactoos.scalar.AvgOf$&lt;init&gt;(kotlin.DoubleArray)"></a>
+<code><span class="identifier">AvgOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="nnl.rocks.kactoos.scalar.AvgOf$<init>(kotlin.DoubleArray)/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">)</span></code><br/>
+<a name="nnl.rocks.kactoos.scalar.AvgOf$&lt;init&gt;(kotlin.FloatArray)"></a>
+<code><span class="identifier">AvgOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="nnl.rocks.kactoos.scalar.AvgOf$<init>(kotlin.FloatArray)/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">)</span></code><br/>
+<a name="nnl.rocks.kactoos.scalar.AvgOf$&lt;init&gt;(kotlin.Array((nnl.rocks.kactoos.Scalar((kotlin.Number)))))"></a>
+<code><span class="identifier">AvgOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="nnl.rocks.kactoos.scalar.AvgOf$<init>(kotlin.Array((nnl.rocks.kactoos.Scalar((kotlin.Number)))))/src">src</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-scalar/index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Ctor.</p>
+<h3>Parameters</h3>
+<p><a name="src"></a>
+<code>src</code> - Numbers</p>
+<a name="nnl.rocks.kactoos.scalar.AvgOf$&lt;init&gt;(kotlin.collections.Iterable((nnl.rocks.kactoos.Scalar((kotlin.Number)))))"></a>
+<code><span class="identifier">AvgOf</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.scalar.AvgOf$<init>(kotlin.collections.Iterable((nnl.rocks.kactoos.Scalar((kotlin.Number)))))/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos/-scalar/index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Average of numbers.</p>
+<p>Here is how you can use it to fine mathematical average of numbers:</p>
+<pre><code class="lang-java">int sum = new AvgOf(1, 2, 3, 4).intValue();
+long sum = new AvgOf(1L, 2L, 3L).longValue();
+int sum = new AvgOf(numbers.toArray(new Integer[numbers.size()])).intValue();
+</code></pre>
+<p>This class implements <a href="../../nnl.rocks.kactoos/-scalar/index.html">Scalar</a>, which throws a checked
+<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>. This may not be convenient in many cases. To make
+it more convenient and get rid of the checked exception you can
+use <a href="../-unchecked-scalar/index.html">UncheckedScalar</a> or <a href="../-io-checked-scalar/index.html">IoCheckedScalar</a> decorators.</p>
+<p>There is no thread-safety guarantee.</p>
+<h3>Parameters</h3>
+<p><a name="src"></a>
+<code>src</code> - The iterable</p>
+<p><strong>Since</strong><br/>
+0.24</p>
+</BODY>
+</HTML>

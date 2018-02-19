@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ListEnvelope - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos.list</a>&nbsp;/&nbsp;<a href="./index.html">ListEnvelope</a><br/>
+<br/>
+<h1>ListEnvelope</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ListEnvelope</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <a href="https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/list/ListEnvelope.kt#L14">(source)</a>
+<p>List envelope.</p>
+<p>There is no thread-safety guarantee.</p>
+<h3>Parameters</h3>
+<p><a name="T"></a>
+<code>T</code> - Element type</p>
+<p><strong>Since</strong><br/>
+0.23</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ListEnvelope</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.list.ListEnvelope$<init>(nnl.rocks.kactoos.Scalar((kotlin.collections.List((nnl.rocks.kactoos.list.ListEnvelope.T)))))/src">src</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-scalar/index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span></code><code><span class="identifier">ListEnvelope</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.list.ListEnvelope$<init>(nnl.rocks.kactoos.scalar.UncheckedScalar((kotlin.collections.List((nnl.rocks.kactoos.list.ListEnvelope.T)))))/list">list</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html"><span class="identifier">UncheckedScalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>List envelope.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-joined/index.html">Joined</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Joined</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListEnvelope</span></a><span class="symbol">&lt;</span><a href="../-joined/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Joined list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-list-of/index.html">ListOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ListOf</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListEnvelope</span></a><span class="symbol">&lt;</span><a href="../-list-of/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Iterable as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-mapped/index.html">Mapped</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Mapped</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListEnvelope</span></a><span class="symbol">&lt;</span><a href="../-mapped/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Mapped list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-shuffled/index.html">Shuffled</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Shuffled</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListEnvelope</span></a><span class="symbol">&lt;</span><a href="../-shuffled/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Shuffled list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-solid-list/index.html">SolidList</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SolidList</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListEnvelope</span></a><span class="symbol">&lt;</span><a href="../-solid-list/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>A <a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html">java.util.List</a> that is both synchronized and sticky.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-sorted/index.html">Sorted</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Sorted</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="../-sorted/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListEnvelope</span></a><span class="symbol">&lt;</span><a href="../-sorted/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Sorted list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-sticky-list/index.html">StickyList</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StickyList</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListEnvelope</span></a><span class="symbol">&lt;</span><a href="../-sticky-list/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>List decorator that goes through the list only once.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-sync-list/index.html">SyncList</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SyncList</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ListEnvelope</span></a><span class="symbol">&lt;</span><a href="../-sync-list/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Synchronized list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

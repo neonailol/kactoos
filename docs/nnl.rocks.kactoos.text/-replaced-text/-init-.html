@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ReplacedText.<init> - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos.text</a>&nbsp;/&nbsp;<a href="index.html">ReplacedText</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="nnl.rocks.kactoos.text.ReplacedText$&lt;init&gt;(nnl.rocks.kactoos.Text, kotlin.String, kotlin.String)"></a>
+<code><span class="identifier">ReplacedText</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.text.ReplacedText$<init>(nnl.rocks.kactoos.Text, kotlin.String, kotlin.String)/text">text</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-text/index.html"><span class="identifier">Text</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.text.ReplacedText$<init>(nnl.rocks.kactoos.Text, kotlin.String, kotlin.String)/find">find</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.text.ReplacedText$<init>(nnl.rocks.kactoos.Text, kotlin.String, kotlin.String)/replace">replace</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>Will replace all instances of the substring matched by <code>find</code>
+with <code>replace</code>.</p>
+<h3>Parameters</h3>
+<p><a name="text"></a>
+<code>text</code> - The text</p>
+<p><a name="find"></a>
+<code>find</code> - The regular expression</p>
+<p><a name="replace"></a>
+<code>replace</code> - The replacement string</p>
+<a name="nnl.rocks.kactoos.text.ReplacedText$&lt;init&gt;(nnl.rocks.kactoos.Text, nnl.rocks.kactoos.Scalar((java.util.regex.Pattern)), nnl.rocks.kactoos.Func((java.util.regex.Matcher, kotlin.String)))"></a>
+<code><span class="identifier">ReplacedText</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.text.ReplacedText$<init>(nnl.rocks.kactoos.Text, nnl.rocks.kactoos.Scalar((java.util.regex.Pattern)), nnl.rocks.kactoos.Func((java.util.regex.Matcher, kotlin.String)))/origin">origin</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-text/index.html"><span class="identifier">Text</span></a><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.text.ReplacedText$<init>(nnl.rocks.kactoos.Text, nnl.rocks.kactoos.Scalar((java.util.regex.Pattern)), nnl.rocks.kactoos.Func((java.util.regex.Matcher, kotlin.String)))/regex">regex</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-scalar/index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html"><span class="identifier">Pattern</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="nnl.rocks.kactoos.text.ReplacedText$<init>(nnl.rocks.kactoos.Text, nnl.rocks.kactoos.Scalar((java.util.regex.Pattern)), nnl.rocks.kactoos.Func((java.util.regex.Matcher, kotlin.String)))/replacement">replacement</span><span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos/-func/index.html"><span class="identifier">Func</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html"><span class="identifier">Matcher</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<p>Replace the Text.</p>
+<p>The given <a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html">regex</a> is used to produce a
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matcher(java.lang.CharSequence)">matcher</a> that will be
+transformed by <code>func</code> into a replacement string to replace each
+<a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html#find()">matching</a> substring.</p>
+<p>Example usage:</p>
+<pre><code>final String result = new ReplacedText(
+new TextOf("one two THREE four FIVE six"),
+() -&gt; Pattern.compile("[a-z]+"),
+matcher -&gt; String.valueOf(matcher.group().length())
+).asString();  //will return the string "3 3 THREE 4 FIVE 3"
+</code></pre>
+<p>Note: a <a href="http://docs.oracle.com/javase/8/docs/api/java/util/regex/PatternSyntaxException.html">PatternSyntaxException</a> will be thrown if the
+regular expression's syntax is invalid.</p>
+<h3>Parameters</h3>
+<p><a name="origin"></a>
+<code>origin</code> - The text</p>
+<p><a name="regex"></a>
+<code>regex</code> - The regular expression</p>
+<p><a name="replacement"></a>
+<code>replacement</code> - Transforms the resulting matcher object into a replacement
+string. Any exceptions will be wrapped in an <a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html">IOException</a>.</p>
+<p><strong>Since</strong><br/>
+0.2</p>
+</BODY>
+</HTML>

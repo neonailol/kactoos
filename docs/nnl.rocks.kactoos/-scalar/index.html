@@ -1,0 +1,361 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Scalar - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos</a>&nbsp;/&nbsp;<a href="./index.html">Scalar</a><br/>
+<br/>
+<h1>Scalar</h1>
+<code><span class="keyword">expect</span> <span class="keyword">interface </span><span class="identifier">Scalar</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Scalar.</p>
+<h3>Parameters</h3>
+<p><a name="T"></a>
+<code>T</code> - Type of value</p>
+<p><strong>Since</strong><br/>
+0.2</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-no-nulls/index.html">NoNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NoNulls</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="-no-nulls/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="value.html">value</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">value</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#T"><span class="identifier">T</span></a></code>
+<p>Convert it to the value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-and/index.html">And</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">And</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical conjunction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-and-func/index.html">AndFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AndFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical conjunction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-and-in-threads/index.html">AndInThreads</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AndInThreads</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical conjunction, in multiple threads.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-and-in-threads-func/index.html">AndInThreadsFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AndInThreadsFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical conjunction, in multiple threads.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-and-with-index/index.html">AndWithIndex</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AndWithIndex</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical conjunction, with index.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-and-with-index-func/index.html">AndWithIndexFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AndWithIndexFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical conjunction, with index.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-bool-of/index.html">BoolOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BoolOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Text as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-constant/index.html">Constant</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Constant</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-constant/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Constant value that never changes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.time/-date-of/index.html">DateOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DateOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Date.html"><span class="identifier">Date</span></a><span class="symbol">&gt;</span></code>
+<p>Parser for <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Date.html">Date</a> instances.
+Parsing the date using the provided formatter.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-equals/index.html">Equals</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Equals</span><span class="symbol">&lt;</span><span class="keyword">in</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-equals/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Equals.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-false/index.html">False</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">False</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical false.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-folded/index.html">Folded</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Folded</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-folded/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Folds iterable via BiFunc.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.html">IoCheckedScalar</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IoCheckedScalar</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Scalar that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>, but throws
+<a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html">IOException</a> instead.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.text/-is-blank/index.html">IsBlank</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IsBlank</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Determines if text is blank (consists of spaces) or no.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-item-at/index.html">ItemAt</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ItemAt</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-item-at/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Element from position in <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html">Iterator</a>
+or fallback value if iterator hasn't this position.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.time/-local-date-time-of/index.html">LocalDateTimeOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">LocalDateTimeOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html"><span class="identifier">LocalDateTime</span></a><span class="symbol">&gt;</span></code>
+<p>Parser for <a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a> instances.
+Parses the date using the formatter to create
+<a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html">LocalDateTime</a> instances.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-no-nulls/index.html">NoNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NoNulls</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="-no-nulls/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-not/index.html">Not</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Not</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical negative.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-number-envelope/index.html">NumberEnvelope</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">NumberEnvelope</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">&gt;</span></code>
+<p>Envelope for the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-number-of/index.html">NumberOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NumberOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../nnl.rocks.kactoos.scalar/-number-envelope/index.html"><span class="identifier">NumberEnvelope</span></a><span class="symbol">, </span><a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a><span class="symbol">&gt;</span></code>
+<p>Text as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.time/-offset-date-time-of/index.html">OffsetDateTimeOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OffsetDateTimeOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html"><span class="identifier">OffsetDateTime</span></a><span class="symbol">&gt;</span></code>
+<p>Parser for <a href="http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html">OffsetDateTime</a> instances.
+Parses the date using the formatter to create
+<a href="http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html">OffsetDateTime</a> instances.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-or/index.html">Or</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Or</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical disjunction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-or-func/index.html">OrFunc</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">OrFunc</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical disjunction.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-properties-of/index.html">PropertiesOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PropertiesOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html"><span class="identifier">Properties</span></a><span class="symbol">&gt;</span></code>
+<p>Map as <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html">java.util.Properties</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-reduced/index.html">Reduced</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Reduced</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-reduced/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Iterable, which elements are "reduced" through the func.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-retry-scalar/index.html">RetryScalar</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RetryScalar</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-retry-scalar/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Func that will try a few times before throwing an exception.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-solid-scalar/index.html">SolidScalar</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SolidScalar</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-solid-scalar/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Cached and synchronized version of a Scalar.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-sticky-scalar/index.html">StickyScalar</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StickyScalar</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-sticky-scalar/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Cached version of a Scalar.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-sync-scalar/index.html">SyncScalar</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SyncScalar</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-sync-scalar/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Scalar that is thread-safe.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-temp-file/index.html">TempFile</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TempFile</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><span class="identifier">Path</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html"><span class="identifier">Closeable</span></a></code>
+<p>A temporary file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-ternary/index.html">Ternary</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Ternary</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-ternary/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Ternary operation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-true/index.html">True</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">True</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>Logical truth.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html">UncheckedScalar</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UncheckedScalar</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Scalar that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.time/-zoned-date-time-of/index.html">ZonedDateTimeOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ZonedDateTimeOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Scalar</span></a><span class="symbol">&lt;</span><a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html"><span class="identifier">ZonedDateTime</span></a><span class="symbol">&gt;</span></code>
+<p>Parser for <a href="http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html">ZonedDateTime</a> instances.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

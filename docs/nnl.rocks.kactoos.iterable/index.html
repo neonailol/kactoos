@@ -1,0 +1,198 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>nnl.rocks.kactoos.iterable - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="./index.html">nnl.rocks.kactoos.iterable</a><br/>
+<br/>
+<h2>Package nnl.rocks.kactoos.iterable</h2>
+<p>Iterables.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-cycled/index.html">Cycled</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Cycled</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-cycled/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Cycled Iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-endless/index.html">Endless</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Endless</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-endless/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Endless iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-filtered/index.html">Filtered</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Filtered</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-filtered/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Filtered iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-iterable-envelope/index.html">IterableEnvelope</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">IterableEnvelope</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="-iterable-envelope/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Iterable envelope.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-iterable-no-nulls/index.html">IterableNoNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IterableNoNulls</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-iterable/index.html"><span class="identifier">MutableIterable</span></a><span class="symbol">&lt;</span><a href="-iterable-no-nulls/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>A decorator for <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a> that doesn't allow any NULL.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-iterable-of/index.html">IterableOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">IterableOf</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-iterable-of/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Array as iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-joined/index.html">Joined</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Joined</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-joined/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>A few Iterables joined together.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-length-of/index.html">LengthOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">LengthOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../nnl.rocks.kactoos.scalar/-number-envelope/index.html"><span class="identifier">NumberEnvelope</span></a></code>
+<p>Length of iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-limited/index.html">Limited</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Limited</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-limited/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Limited iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-mapped/index.html">Mapped</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Mapped</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Y</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-mapped/index.html#Y"><span class="identifier">Y</span></a><span class="symbol">&gt;</span></code>
+<p>Mapped iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-partitioned/index.html">Partitioned</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Partitioned</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="-partitioned/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Iterable implementation for partitioning functionality.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-range-of/index.html">RangeOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">RangeOf</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="-range-of/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-range-of/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Iterable implementation to model range functionality.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-repeated/index.html">Repeated</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Repeated</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-repeated/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Repeat an element.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-reversed/index.html">Reversed</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Reversed</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-reversed/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Reverse iterator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-shuffled/index.html">Shuffled</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Shuffled</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-shuffled/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Shuffled iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-skipped/index.html">Skipped</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Skipped</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-skipped/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Skipped iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-solid-iterable/index.html">SolidIterable</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SolidIterable</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-solid-iterable/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>An <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a> that is both synchronized and sticky.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-sorted/index.html">Sorted</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Sorted</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><a href="-sorted/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-sorted/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Sorted iterable.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-sticky-iterable/index.html">StickyIterable</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StickyIterable</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-sticky-iterable/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Iterable that returns the same set of elements, always.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-sync-iterable/index.html">SyncIterable</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SyncIterable</span><span class="symbol">&lt;</span><span class="identifier">X</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-iterable-envelope/index.html"><span class="identifier">IterableEnvelope</span></a><span class="symbol">&lt;</span><a href="-sync-iterable/index.html#X"><span class="identifier">X</span></a><span class="symbol">&gt;</span></code>
+<p>Synchronized iterable.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

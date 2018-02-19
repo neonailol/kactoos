@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Input - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos</a>&nbsp;/&nbsp;<a href="./index.html">Input</a><br/>
+<br/>
+<h1>Input</h1>
+<code><span class="identifier">@FunctionalInterface</span> <span class="keyword">interface </span><span class="identifier">Input</span></code> <a href="https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Input.kt#L29">(source)</a>
+<p>Input.</p>
+<p>Here is for example how <a href="./index.html">Input</a> can be used
+in order to read the content of a text file:</p>
+<pre><code>String content = new TextOf(
+  new InputOf(new File("/tmp/names.txt"))
+).asString();
+</code></pre>
+<p>Here <a href="../../nnl.rocks.kactoos.io/-input-of/index.html">nnl.rocks.kactoos.io.InputOf</a> implements
+<a href="./index.html">Input</a> and behaves like
+one, providing read-only access to
+the encapsulated <a href="http://docs.oracle.com/javase/8/docs/api/java/io/File.html">java.io.File</a>.</p>
+<p>There is no thread-safety guarantee.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../../nnl.rocks.kactoos.io/-input-of/index.html">nnl.rocks.kactoos.io.InputOf</a></p>
+</p>
+<p><strong>Since</strong><br/>
+0.1</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-no-nulls/index.html">NoNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NoNulls</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="stream.html">stream</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">stream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a></code>
+<p>Get read access to it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-dead-input/index.html">DeadInput</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DeadInput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Input with no data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-gzip-input/index.html">GzipInput</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">GzipInput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Input that reads compressed data from the GZIP file format.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-input-of/index.html">InputOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">InputOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>An <a href="./index.html">Input</a> that encapsulates other sources of data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-input-with-fallback/index.html">InputWithFallback</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">InputWithFallback</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Input that returns an alternative input if the main one throws
+<a href="http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html">IOException</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-logging-input/index.html">LoggingInput</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">LoggingInput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Logged input.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-no-nulls/index.html">NoNulls</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">NoNulls</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-resource-of/index.html">ResourceOf</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ResourceOf</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Classpath resource.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-stdin-input/index.html">StdinInput</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StdinInput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Input that reads from <code>stdin</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-sticky-input/index.html">StickyInput</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StickyInput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Input that reads only once.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-sync-input/index.html">SyncInput</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SyncInput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Thread-safe <a href="./index.html">Input</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-tee-input/index.html">TeeInput</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TeeInput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Input to Output copying pipe.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../nnl.rocks.kactoos.io/-unchecked-input/index.html">UncheckedInput</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">UncheckedInput</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Input</span></a></code>
+<p>Input that doesn't throw checked <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html">Exception</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

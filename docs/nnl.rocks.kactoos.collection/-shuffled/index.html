@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Shuffled - kactoos-jvm</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">kactoos-jvm</a>&nbsp;/&nbsp;<a href="../index.html">nnl.rocks.kactoos.collection</a>&nbsp;/&nbsp;<a href="./index.html">Shuffled</a><br/>
+<br/>
+<h1>Shuffled</h1>
+<code><span class="keyword">class </span><span class="identifier">Shuffled</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-collection-envelope/index.html"><span class="identifier">CollectionEnvelope</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <a href="https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/collection/Shuffled.kt#L21">(source)</a>
+<p>Sorted collection.</p>
+<p>Pay attention that sorting will happen on each operation
+with the collection. Every time you touch it, it will fetch the
+entire collection from the encapsulated object and shuffle it. If you
+want to avoid that "side-effect", decorate it with
+<a href="../-sticky-collection/index.html">StickyCollection</a>.</p>
+<p>There is no thread-safety guarantee.</p>
+<h3>Parameters</h3>
+<p><a name="T"></a>
+<code>T</code> - Element type</p>
+<p><strong>Since</strong><br/>
+0.3</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Shuffled</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.collection.Shuffled$<init>(kotlin.collections.Collection((nnl.rocks.kactoos.collection.Shuffled.T)))/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Shuffled</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="nnl.rocks.kactoos.collection.Shuffled$<init>(kotlin.Array((nnl.rocks.kactoos.collection.Shuffled.T)))/src">src</span><span class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Shuffled</span><span class="symbol">(</span><span class="identifier" id="nnl.rocks.kactoos.collection.Shuffled$<init>(kotlin.collections.Iterable((nnl.rocks.kactoos.collection.Shuffled.T)))/src">src</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
