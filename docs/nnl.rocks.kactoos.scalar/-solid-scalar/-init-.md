@@ -1,12 +1,8 @@
----
-title: SolidScalar.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [SolidScalar](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SolidScalar](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`SolidScalar(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`T`](index.html#T)`>)``SolidScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, `[`T`](index.html#T)`>)`
+`SolidScalar(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)``SolidScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, `[`T`](index.md#T)`>)`
 
 Cached and synchronized version of a Scalar.
 
@@ -20,9 +16,9 @@ Objects of this class are thread safe.
 
 **See Also**
 
-[StickyScalar](../-sticky-scalar/index.html)
+[StickyScalar](../-sticky-scalar/index.md)
 
-[SyncScalar](../-sync-scalar/index.html)
+[SyncScalar](../-sync-scalar/index.md)
 
 **Since**
 0.24

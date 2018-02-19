@@ -1,8 +1,4 @@
----
-title: RunsInThreads.describeTo - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [RunsInThreads](index.html) / [describeTo](./describe-to.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [RunsInThreads](index.md) / [describeTo](./describe-to.md)
 
 # describeTo
 

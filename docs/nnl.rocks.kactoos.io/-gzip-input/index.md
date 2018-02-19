@@ -1,12 +1,8 @@
----
-title: GzipInput - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [GzipInput](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [GzipInput](./index.md)
 
 # GzipInput
 
-`class GzipInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/GzipInput.kt#L15)
+`class GzipInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/GzipInput.kt#L15)
 
 Input that reads compressed data from the GZIP file format.
 
@@ -21,9 +17,12 @@ Input that reads compressed data from the GZIP file format.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `GzipInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`)``GzipInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Input that reads compressed data from the GZIP file format. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `GzipInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)``GzipInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Input that reads compressed data from the GZIP file format. |
 
 ### Functions
 
-| [stream](stream.html) | `fun stream(): `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)<br>Get read access to it. |
-
+| Name | Summary |
+|---|---|
+| [stream](stream.md) | `fun stream(): `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)<br>Get read access to it. |

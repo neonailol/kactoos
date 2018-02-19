@@ -1,8 +1,4 @@
----
-title: TextOf.toString - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [TextOf](index.html) / [toString](./to-string.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [TextOf](index.md) / [toString](./to-string.md)
 
 # toString
 

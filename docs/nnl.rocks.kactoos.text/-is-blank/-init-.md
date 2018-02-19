@@ -1,12 +1,8 @@
----
-title: IsBlank.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [IsBlank](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [IsBlank](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`IsBlank(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
+`IsBlank(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
 
 Determines if text is blank (consists of spaces) or no.
 

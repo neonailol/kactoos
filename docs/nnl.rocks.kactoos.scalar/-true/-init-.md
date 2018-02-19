@@ -1,8 +1,4 @@
----
-title: True.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [True](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [True](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 

@@ -1,8 +1,4 @@
----
-title: Mapped.hasNext - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Mapped](index.html) / [hasNext](./has-next.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Mapped](index.md) / [hasNext](./has-next.md)
 
 # hasNext
 

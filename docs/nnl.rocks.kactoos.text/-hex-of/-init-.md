@@ -1,12 +1,8 @@
----
-title: HexOf.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [HexOf](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [HexOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`HexOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`)`
+`HexOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)`
 
 Hexadecimal representation of Bytes.
 

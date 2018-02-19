@@ -1,8 +1,4 @@
----
-title: LSInputOf.setBaseURI - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LSInputOf](index.html) / [setBaseURI](./set-base-u-r-i.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LSInputOf](index.md) / [setBaseURI](./set-base-u-r-i.md)
 
 # setBaseURI
 

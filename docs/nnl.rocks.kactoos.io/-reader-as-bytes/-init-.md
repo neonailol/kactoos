@@ -1,8 +1,4 @@
----
-title: ReaderAsBytes.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [ReaderAsBytes](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [ReaderAsBytes](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -31,9 +27,9 @@ Ctor.
 
 `ReaderAsBytes(reader: `[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = 16 shl 10)`
 
-Reader as [Bytes](../../nnl.rocks.kactoos/-bytes/index.html).
+Reader as [Bytes](../../nnl.rocks.kactoos/-bytes/index.md).
 
-This class is for internal use only. Use [BytesOf](../-bytes-of/index.html) instead.
+This class is for internal use only. Use [BytesOf](../-bytes-of/index.md) instead.
 
 There is no thread-safety guarantee.
 

@@ -1,14 +1,10 @@
----
-title: RunsInThreads.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [RunsInThreads](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [RunsInThreads](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`RunsInThreads(input: `[`T`](index.html#T)`? = null, total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = Runtime.getRuntime().availableProcessors() shl 4)`
+`RunsInThreads(input: `[`T`](index.md#T)`? = null, total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)` = Runtime.getRuntime().availableProcessors() shl 4)`
 
-Matcher for [Func](../../nnl.rocks.kactoos/-func/index.html) that must run in multiple threads.
+Matcher for [Func](../../nnl.rocks.kactoos/-func/index.md) that must run in multiple threads.
 
 ### Parameters
 

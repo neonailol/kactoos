@@ -1,14 +1,10 @@
----
-title: SyncFunc.apply - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [SyncFunc](index.html) / [apply](./apply.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [SyncFunc](index.md) / [apply](./apply.md)
 
 # apply
 
-`fun apply(input: `[`X`](index.html#X)`): `[`Y`](index.html#Y) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SyncFunc.kt#L62)
+`fun apply(input: `[`X`](index.md#X)`): `[`Y`](index.md#Y) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SyncFunc.kt#L62)
 
-Overrides [Func.apply](../../nnl.rocks.kactoos/-func/apply.html)
+Overrides [Func.apply](../../nnl.rocks.kactoos/-func/apply.md)
 
 Apply it.
 
@@ -21,7 +17,7 @@ Apply it.
 `Exception` - If fails
 
 **Return**
-The result of type [Y](index.html#Y)
+The result of type [Y](index.md#Y)
 
 **Since**
 0.2

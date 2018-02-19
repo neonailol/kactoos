@@ -1,8 +1,4 @@
----
-title: LoggingInputStream.markSupported - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LoggingInputStream](index.html) / [markSupported](./mark-supported.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LoggingInputStream](index.md) / [markSupported](./mark-supported.md)
 
 # markSupported
 

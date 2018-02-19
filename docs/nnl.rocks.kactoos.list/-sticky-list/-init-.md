@@ -1,17 +1,13 @@
----
-title: StickyList.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.list](../index.html) / [StickyList](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.list](../index.md) / [StickyList](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`StickyList(vararg items: `[`X`](index.html#X)`)`
-`StickyList(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.html#X)`>)`
+`StickyList(vararg items: `[`X`](index.md#X)`)`
+`StickyList(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
 
 ### Parameters
 
-`items` - The array`StickyList(items: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.html#X)`>)`
+`items` - The array`StickyList(items: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`
 
 ### Parameters
 
@@ -20,7 +16,7 @@ title: StickyList.<init> - kactoos-jvm
 **Since**
 0.21
 
-`StickyList(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.html#X)`>)`
+`StickyList(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)`
 
 List decorator that goes through the list only once.
 

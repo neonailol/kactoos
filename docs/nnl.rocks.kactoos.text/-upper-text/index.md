@@ -1,12 +1,8 @@
----
-title: UpperText - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [UpperText](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [UpperText](./index.md)
 
 # UpperText
 
-`class UpperText : `[`Text`](../../nnl.rocks.kactoos/-text/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/UpperText.kt#L17)
+`class UpperText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/UpperText.kt#L17)
 
 Text in upper case.
 
@@ -23,9 +19,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `UpperText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)``UpperText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, locale: `[`Locale`](http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)`)`<br>Text in upper case. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `UpperText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``UpperText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, locale: `[`Locale`](http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)`)`<br>Text in upper case. |
 
 ### Functions
 
-| [asString](as-string.html) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
-
+| Name | Summary |
+|---|---|
+| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |

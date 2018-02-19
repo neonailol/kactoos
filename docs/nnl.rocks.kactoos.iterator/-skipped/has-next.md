@@ -1,8 +1,4 @@
----
-title: Skipped.hasNext - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Skipped](index.html) / [hasNext](./has-next.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Skipped](index.md) / [hasNext](./has-next.md)
 
 # hasNext
 

@@ -1,18 +1,17 @@
----
-title: Bytes.NoNulls - kactoos-jvm
----
-
-[kactoos-jvm](../../../index.html) / [nnl.rocks.kactoos](../../index.html) / [Bytes](../index.html) / [NoNulls](./index.html)
+[kactoos-jvm](../../../index.md) / [nnl.rocks.kactoos](../../index.md) / [Bytes](../index.md) / [NoNulls](./index.md)
 
 # NoNulls
 
-`class NoNulls : `[`Bytes`](../index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Bytes.kt#L25)
+`class NoNulls : `[`Bytes`](../index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Bytes.kt#L25)
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `NoNulls(origin: `[`Bytes`](../index.html)`)` |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `NoNulls(origin: `[`Bytes`](../index.md)`)` |
 
 ### Functions
 
-| [asBytes](as-bytes.html) | `fun asBytes(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Convert it to the byte array. |
-
+| Name | Summary |
+|---|---|
+| [asBytes](as-bytes.md) | `fun asBytes(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Convert it to the byte array. |

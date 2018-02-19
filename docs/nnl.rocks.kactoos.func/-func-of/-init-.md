@@ -1,26 +1,22 @@
----
-title: FuncOf.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [FuncOf](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [FuncOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`FuncOf(result: `[`Y`](index.html#Y)`)`
+`FuncOf(result: `[`Y`](index.md#Y)`)`
 
 ### Parameters
 
-`result` - The result`FuncOf(callable: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`Y`](index.html#Y)`>)`
+`result` - The result`FuncOf(callable: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`Y`](index.md#Y)`>)`
 
 ### Parameters
 
-`callable` - The callable`FuncOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.html)`<`[`X`](index.html#X)`>, result: `[`Y`](index.html#Y)`)`
+`callable` - The callable`FuncOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, result: `[`Y`](index.md#Y)`)`
 
 ### Parameters
 
 `proc` - The proc
 
-`result` - Result to return`FuncOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.html)`<`[`X`](index.html#X)`>)`
+`result` - Result to return`FuncOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>)`
 
 ### Parameters
 
@@ -28,7 +24,7 @@ title: FuncOf.<init> - kactoos-jvm
 
 ### Exceptions
 
-`NullPointerException` - if you try to use result of [apply](apply.html)`FuncOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`)`
+`NullPointerException` - if you try to use result of [apply](apply.md)`FuncOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`)`
 
 ### Parameters
 
@@ -36,9 +32,9 @@ title: FuncOf.<init> - kactoos-jvm
 
 ### Exceptions
 
-`NullPointerException` - if you try to use result of [apply](apply.html)`FuncOf(func: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>)`
+`NullPointerException` - if you try to use result of [apply](apply.md)`FuncOf(func: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)`
 
-Represents many possible inputs as [Func](../../nnl.rocks.kactoos/-func/index.html).
+Represents many possible inputs as [Func](../../nnl.rocks.kactoos/-func/index.md).
 
 There is no thread-safety guarantee.
 

@@ -1,9 +1,5 @@
----
-title: BiFunc.NoNulls.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../../index.html) / [nnl.rocks.kactoos](../../index.html) / [BiFunc](../index.html) / [NoNulls](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../../index.md) / [nnl.rocks.kactoos](../../index.md) / [BiFunc](../index.md) / [NoNulls](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`NoNulls(origin: `[`BiFunc`](../index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`, `[`Z`](index.html#Z)`>)`
+`NoNulls(origin: `[`BiFunc`](../index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`

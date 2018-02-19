@@ -1,8 +1,4 @@
----
-title: TeeInputStream.available - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TeeInputStream](index.html) / [available](./available.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeInputStream](index.md) / [available](./available.md)
 
 # available
 

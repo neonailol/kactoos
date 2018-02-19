@@ -1,12 +1,8 @@
----
-title: EmptyBytes - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [EmptyBytes](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [EmptyBytes](./index.md)
 
 # EmptyBytes
 
-`class EmptyBytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/EmptyBytes.kt#L15)
+`class EmptyBytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/EmptyBytes.kt#L15)
 
 Bytes with no data.
 
@@ -17,9 +13,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `EmptyBytes()`<br>Bytes with no data. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `EmptyBytes()`<br>Bytes with no data. |
 
 ### Functions
 
-| [asBytes](as-bytes.html) | `fun asBytes(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Convert it to the byte array. |
-
+| Name | Summary |
+|---|---|
+| [asBytes](as-bytes.md) | `fun asBytes(): `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Convert it to the byte array. |

@@ -1,12 +1,8 @@
----
-title: OutputStreamTo.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [OutputStreamTo](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputStreamTo](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`OutputStreamTo(tgt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
+`OutputStreamTo(tgt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
 `OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)``OutputStreamTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
 
 ### Parameters
@@ -54,11 +50,11 @@ title: OutputStreamTo.<init> - kactoos-jvm
 **Since**
 0.13.1
 
-`OutputStreamTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
+`OutputStreamTo(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
 
 ### Parameters
 
-`output` - The input`OutputStreamTo(target: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
+`output` - The input`OutputStreamTo(target: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
 
 An [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) that encapsulates other destination for the data.
 

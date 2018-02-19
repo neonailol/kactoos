@@ -1,12 +1,8 @@
----
-title: TextOf.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [TextOf](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [TextOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`TextOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`)`
+`TextOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)`
 
 Ctor.
 
@@ -56,8 +52,8 @@ Ctor.
 **Since**
 0.13
 
-`TextOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, cset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`TextOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, cset: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`
+`TextOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, cset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`TextOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, cset: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`
 
 Ctor.
 
@@ -65,7 +61,7 @@ Ctor.
 
 `input` - The Input
 
-`cset` - The Charset`TextOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, cset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
+`cset` - The Charset`TextOf(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, cset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
 
 Ctor.
 
@@ -178,8 +174,8 @@ Ctor.
 
 ### Parameters
 
-`bytes` - The array of bytes`TextOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`, cset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
-`TextOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`, cset: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`
+`bytes` - The array of bytes`TextOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`, cset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)` = StandardCharsets.UTF_8)`
+`TextOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`, cset: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`
 
 Ctor.
 

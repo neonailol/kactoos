@@ -1,12 +1,8 @@
----
-title: HexOf - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [HexOf](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [HexOf](./index.md)
 
 # HexOf
 
-`class HexOf : `[`Text`](../../nnl.rocks.kactoos/-text/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/HexOf.kt#L17)
+`class HexOf : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/HexOf.kt#L17)
 
 Hexadecimal representation of Bytes.
 
@@ -29,9 +25,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `HexOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`)`<br>Hexadecimal representation of Bytes. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `HexOf(bytes: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)`<br>Hexadecimal representation of Bytes. |
 
 ### Functions
 
-| [asString](as-string.html) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
-
+| Name | Summary |
+|---|---|
+| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |

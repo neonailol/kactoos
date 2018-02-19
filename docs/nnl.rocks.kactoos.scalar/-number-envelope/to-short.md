@@ -1,8 +1,4 @@
----
-title: NumberEnvelope.toShort - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [NumberEnvelope](index.html) / [toShort](./to-short.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [NumberEnvelope](index.md) / [toShort](./to-short.md)
 
 # toShort
 

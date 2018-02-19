@@ -1,8 +1,4 @@
----
-title: LoggingOutputStream.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LoggingOutputStream](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LoggingOutputStream](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 

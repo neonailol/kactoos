@@ -1,9 +1,5 @@
----
-title: Bytes.NoNulls.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../../index.html) / [nnl.rocks.kactoos](../../index.html) / [Bytes](../index.html) / [NoNulls](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../../index.md) / [nnl.rocks.kactoos](../../index.md) / [Bytes](../index.md) / [NoNulls](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`NoNulls(origin: `[`Bytes`](../index.html)`)`
+`NoNulls(origin: `[`Bytes`](../index.md)`)`

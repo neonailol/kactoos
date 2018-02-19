@@ -1,14 +1,10 @@
----
-title: Constant.value - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [Constant](index.html) / [value](./value.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Constant](index.md) / [value](./value.md)
 
 # value
 
-`fun value(): `[`T`](index.html#T)
+`fun value(): `[`T`](index.md#T)
 
-Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.html)
+Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 
 Convert it to the value.
 

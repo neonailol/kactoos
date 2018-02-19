@@ -1,14 +1,10 @@
----
-title: KBiFunc - kactoos-jvm
----
-
-[kactoos-jvm](../index.html) / [nnl.rocks.kactoos](index.html) / [KBiFunc](./-k-bi-func.html)
+[kactoos-jvm](../index.md) / [nnl.rocks.kactoos](index.md) / [KBiFunc](./-k-bi-func.md)
 
 # KBiFunc
 
-`typealias KBiFunc<X, Y, Z> = (`[`X`](-k-bi-func.html#X)`, `[`Y`](-k-bi-func.html#Y)`) -> `[`Z`](-k-bi-func.html#Z)
+`typealias KBiFunc<X, Y, Z> = (`[`X`](-k-bi-func.md#X)`, `[`Y`](-k-bi-func.md#Y)`) -> `[`Z`](-k-bi-func.md#Z)
 
-Alias for [BiFunc](-bi-func/index.html)
+Alias for [BiFunc](-bi-func/index.md)
 
 **Since**
 0.2

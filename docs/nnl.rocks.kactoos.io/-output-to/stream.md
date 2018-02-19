@@ -1,14 +1,10 @@
----
-title: OutputTo.stream - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [OutputTo](index.html) / [stream](./stream.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputTo](index.md) / [stream](./stream.md)
 
 # stream
 
 `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/OutputTo.kt#L157)
 
-Overrides [Output.stream](../../nnl.rocks.kactoos/-output/stream.html)
+Overrides [Output.stream](../../nnl.rocks.kactoos/-output/stream.md)
 
 Get write access to it.
 

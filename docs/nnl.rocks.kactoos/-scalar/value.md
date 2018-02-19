@@ -1,12 +1,8 @@
----
-title: Scalar.value - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos](../index.html) / [Scalar](index.html) / [value](./value.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Scalar](index.md) / [value](./value.md)
 
 # value
 
-`abstract fun value(): `[`T`](index.html#T)
+`abstract fun value(): `[`T`](index.md#T)
 
 Convert it to the value.
 

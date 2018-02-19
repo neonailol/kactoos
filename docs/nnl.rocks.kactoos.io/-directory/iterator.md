@@ -1,8 +1,4 @@
----
-title: Directory.iterator - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [Directory](index.html) / [iterator](./iterator.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [Directory](index.md) / [iterator](./iterator.md)
 
 # iterator
 

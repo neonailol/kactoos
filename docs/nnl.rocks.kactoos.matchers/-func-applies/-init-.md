@@ -1,18 +1,14 @@
----
-title: FuncApplies.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [FuncApplies](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [FuncApplies](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`FuncApplies(input: `[`X`](index.html#X)`, result: `[`Y`](index.html#Y)`)`
+`FuncApplies(input: `[`X`](index.md#X)`, result: `[`Y`](index.md#Y)`)`
 
 ### Parameters
 
 `result` - The result expected
 
-`input` - Input for the function`FuncApplies(input: `[`X`](index.html#X)`, matcher: Matcher<`[`Y`](index.html#Y)`>)`
+`input` - Input for the function`FuncApplies(input: `[`X`](index.md#X)`, matcher: Matcher<`[`Y`](index.md#Y)`>)`
 
 Matcher for the value.
 

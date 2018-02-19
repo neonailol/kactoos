@@ -1,19 +1,15 @@
----
-title: InputWithFallback.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [InputWithFallback](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [InputWithFallback](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`InputWithFallback(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, alt: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`)`
-`InputWithFallback(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, alt: `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`IOException`](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)`, `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`>)`
+`InputWithFallback(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, alt: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)`
+`InputWithFallback(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, alt: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`IOException`](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)`, `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`>)`
 
 ### Parameters
 
 `input` - Main input
 
-`alt` - Alternative`InputWithFallback(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`)``InputWithFallback(main: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, alternative: `[`IoCheckedFunc`](../../nnl.rocks.kactoos.func/-io-checked-func/index.html)`<`[`IOException`](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)`, `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`>)`
+`alt` - Alternative`InputWithFallback(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)``InputWithFallback(main: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, alternative: `[`IoCheckedFunc`](../../nnl.rocks.kactoos.func/-io-checked-func/index.md)`<`[`IOException`](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html)`, `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`>)`
 
 Input that returns an alternative input if the main one throws
 [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html).

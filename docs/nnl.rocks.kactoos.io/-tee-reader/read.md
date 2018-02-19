@@ -1,8 +1,4 @@
----
-title: TeeReader.read - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TeeReader](index.html) / [read](./read.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeReader](index.md) / [read](./read.md)
 
 # read
 

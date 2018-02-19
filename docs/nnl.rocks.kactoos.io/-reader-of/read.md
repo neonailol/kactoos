@@ -1,8 +1,4 @@
----
-title: ReaderOf.read - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [ReaderOf](index.html) / [read](./read.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [ReaderOf](index.md) / [read](./read.md)
 
 # read
 

@@ -1,14 +1,10 @@
----
-title: SyncOutput - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [SyncOutput](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [SyncOutput](./index.md)
 
 # SyncOutput
 
-`class SyncOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/SyncOutput.kt#L18)
+`class SyncOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/SyncOutput.kt#L18)
 
-Thread-safe [Output](../../nnl.rocks.kactoos/-output/index.html).
+Thread-safe [Output](../../nnl.rocks.kactoos/-output/index.md).
 
 There is no thread-safety guarantee.
 
@@ -17,9 +13,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `SyncOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)``SyncOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, lock: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`<br>Thread-safe [Output](../../nnl.rocks.kactoos/-output/index.html). |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `SyncOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)``SyncOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, lock: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`<br>Thread-safe [Output](../../nnl.rocks.kactoos/-output/index.md). |
 
 ### Functions
 
-| [stream](stream.html) | `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)<br>Get write access to it. |
-
+| Name | Summary |
+|---|---|
+| [stream](stream.md) | `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)<br>Get write access to it. |

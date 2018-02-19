@@ -1,12 +1,8 @@
----
-title: CollectionEnvelope - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.collection](../index.html) / [CollectionEnvelope](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.collection](../index.md) / [CollectionEnvelope](./index.md)
 
 # CollectionEnvelope
 
-`open class CollectionEnvelope<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.html#X)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/collection/CollectionEnvelope.kt#L15)
+`open class CollectionEnvelope<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/collection/CollectionEnvelope.kt#L15)
 
 Base read-only collection.
 
@@ -23,20 +19,23 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `CollectionEnvelope(slr: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.html#X)`>>)``CollectionEnvelope(col: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.html)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.html#X)`>>)`<br>Base read-only collection. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `CollectionEnvelope(slr: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>>)``CollectionEnvelope(col: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>>)`<br>Base read-only collection. |
 
 ### Inheritors
 
-| [CollectionOf](../-collection-of/index.html) | `class CollectionOf<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-collection-of/index.html#T)`>`<br>Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |
-| [Filtered](../-filtered/index.html) | `class Filtered<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`X`](../-filtered/index.html#X)`>`<br>Filtered collection. |
-| [Joined](../-joined/index.html) | `class Joined<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`X`](../-joined/index.html#X)`>`<br>Joined collection. |
-| [Limited](../-limited/index.html) | `class Limited<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`X`](../-limited/index.html#X)`>`<br>Limited collection. |
-| [Mapped](../-mapped/index.html) | `class Mapped<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`Y`](../-mapped/index.html#Y)`>`<br>Mapped collection. |
-| [Reversed](../-reversed/index.html) | `class Reversed<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`X`](../-reversed/index.html#X)`>`<br>Reversed collection. |
-| [Shuffled](../-shuffled/index.html) | `class Shuffled<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-shuffled/index.html#T)`>`<br>Sorted collection. |
-| [Skipped](../-skipped/index.html) | `class Skipped<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-skipped/index.html#T)`>`<br>Skipped collection. |
-| [SolidCollection](../-solid-collection/index.html) | `class SolidCollection<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-solid-collection/index.html#T)`>`<br>A [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that is both synchronized and sticky. |
-| [Sorted](../-sorted/index.html) | `class Sorted<T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](../-sorted/index.html#T)`>> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-sorted/index.html#T)`>`<br>Sorted collection. |
-| [StickyCollection](../-sticky-collection/index.html) | `class StickyCollection<E : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`E`](../-sticky-collection/index.html#E)`>`<br>Collection decorator that goes through the list only once. |
-| [SyncCollection](../-sync-collection/index.html) | `class SyncCollection<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-sync-collection/index.html#T)`>`<br>Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |
-
+| Name | Summary |
+|---|---|
+| [CollectionOf](../-collection-of/index.md) | `class CollectionOf<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-collection-of/index.md#T)`>`<br>Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |
+| [Filtered](../-filtered/index.md) | `class Filtered<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`X`](../-filtered/index.md#X)`>`<br>Filtered collection. |
+| [Joined](../-joined/index.md) | `class Joined<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`X`](../-joined/index.md#X)`>`<br>Joined collection. |
+| [Limited](../-limited/index.md) | `class Limited<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`X`](../-limited/index.md#X)`>`<br>Limited collection. |
+| [Mapped](../-mapped/index.md) | `class Mapped<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`Y`](../-mapped/index.md#Y)`>`<br>Mapped collection. |
+| [Reversed](../-reversed/index.md) | `class Reversed<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`X`](../-reversed/index.md#X)`>`<br>Reversed collection. |
+| [Shuffled](../-shuffled/index.md) | `class Shuffled<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-shuffled/index.md#T)`>`<br>Sorted collection. |
+| [Skipped](../-skipped/index.md) | `class Skipped<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-skipped/index.md#T)`>`<br>Skipped collection. |
+| [SolidCollection](../-solid-collection/index.md) | `class SolidCollection<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-solid-collection/index.md#T)`>`<br>A [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that is both synchronized and sticky. |
+| [Sorted](../-sorted/index.md) | `class Sorted<T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](../-sorted/index.md#T)`>> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-sorted/index.md#T)`>`<br>Sorted collection. |
+| [StickyCollection](../-sticky-collection/index.md) | `class StickyCollection<E : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`E`](../-sticky-collection/index.md#E)`>`<br>Collection decorator that goes through the list only once. |
+| [SyncCollection](../-sync-collection/index.md) | `class SyncCollection<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](./index.md)`<`[`T`](../-sync-collection/index.md#T)`>`<br>Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |

@@ -1,8 +1,4 @@
----
-title: OutputStreamTo.flush - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [OutputStreamTo](index.html) / [flush](./flush.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [OutputStreamTo](index.md) / [flush](./flush.md)
 
 # flush
 

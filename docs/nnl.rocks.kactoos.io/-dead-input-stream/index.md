@@ -1,8 +1,4 @@
----
-title: DeadInputStream - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [DeadInputStream](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [DeadInputStream](./index.md)
 
 # DeadInputStream
 
@@ -17,9 +13,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `DeadInputStream()`<br>InputStream with no data. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `DeadInputStream()`<br>InputStream with no data. |
 
 ### Functions
 
-| [read](read.html) | `fun read(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
-
+| Name | Summary |
+|---|---|
+| [read](read.md) | `fun read(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |

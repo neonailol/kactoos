@@ -1,12 +1,8 @@
----
-title: TrimmedText - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [TrimmedText](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [TrimmedText](./index.md)
 
 # TrimmedText
 
-`class TrimmedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/TrimmedText.kt#L18)
+`class TrimmedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/TrimmedText.kt#L18)
 
 Text without control characters (char &amp;lt;= 32) from both ends.
 
@@ -29,9 +25,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`<br>Text without control characters (char &amp;lt;= 32) from both ends. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`<br>Text without control characters (char &amp;lt;= 32) from both ends. |
 
 ### Functions
 
-| [asString](as-string.html) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
-
+| Name | Summary |
+|---|---|
+| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |

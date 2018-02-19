@@ -1,8 +1,4 @@
----
-title: InputStreamOf.available - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [InputStreamOf](index.html) / [available](./available.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [InputStreamOf](index.md) / [available](./available.md)
 
 # available
 

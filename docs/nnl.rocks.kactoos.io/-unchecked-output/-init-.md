@@ -1,12 +1,8 @@
----
-title: UncheckedOutput.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [UncheckedOutput](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [UncheckedOutput](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`UncheckedOutput(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)`
+`UncheckedOutput(output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
 
 Input that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html).
 

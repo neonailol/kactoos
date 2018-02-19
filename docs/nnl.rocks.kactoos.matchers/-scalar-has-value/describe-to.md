@@ -1,8 +1,4 @@
----
-title: ScalarHasValue.describeTo - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [ScalarHasValue](index.html) / [describeTo](./describe-to.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [ScalarHasValue](index.md) / [describeTo](./describe-to.md)
 
 # describeTo
 

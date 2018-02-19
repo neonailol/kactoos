@@ -1,8 +1,4 @@
----
-title: DeadOutputStream.write - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [DeadOutputStream](index.html) / [write](./write.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [DeadOutputStream](index.md) / [write](./write.md)
 
 # write
 
