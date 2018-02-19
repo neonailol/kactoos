@@ -1,1 +1,9 @@
+
+title: NNL
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "/"
+markdown: kramdown
 theme: jekyll-theme-primer
+# theme: minima
+#theme: jekyll-theme-minimal
+

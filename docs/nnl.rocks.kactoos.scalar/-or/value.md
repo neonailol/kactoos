@@ -1,14 +1,10 @@
----
-title: Or.value - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [Or](index.html) / [value](./value.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [Or](index.md) / [value](./value.md)
 
 # value
 
 `fun value(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/Or.kt#L40)
 
-Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.html)
+Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 
 Convert it to the value.
 

@@ -1,9 +1,5 @@
----
-title: IteratorNoNulls.next - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [IteratorNoNulls](index.html) / [next](./next.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [IteratorNoNulls](index.md) / [next](./next.md)
 
 # next
 
-`fun next(): `[`X`](index.html#X) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/IteratorNoNulls.kt#L29)
+`fun next(): `[`X`](index.md#X) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/IteratorNoNulls.kt#L29)

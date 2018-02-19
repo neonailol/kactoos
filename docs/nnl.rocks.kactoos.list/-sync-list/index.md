@@ -1,12 +1,8 @@
----
-title: SyncList - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.list](../index.html) / [SyncList](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.list](../index.md) / [SyncList](./index.md)
 
 # SyncList
 
-`class SyncList<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](../-list-envelope/index.html)`<`[`X`](index.html#X)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/list/SyncList.kt#L28)
+`class SyncList<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](../-list-envelope/index.md)`<`[`X`](index.md#X)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/list/SyncList.kt#L28)
 
 Synchronized list.
 
@@ -15,7 +11,7 @@ it will fetch the entire content of the encapsulated [Iterable](https://kotlinla
 method call. It doesn't cache the data anyhow. If you don't
 need this [java.util.List](http://docs.oracle.com/javase/8/docs/api/java/util/List.html) to re-fresh
 its content on every call, by doing round-trips to
-the encapsulated iterable, use [StickyList](../-sticky-list/index.html).
+the encapsulated iterable, use [StickyList](../-sticky-list/index.md).
 
 The list is read only.
 
@@ -30,5 +26,6 @@ Objects of this class are thread-safe.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `SyncList(vararg items: `[`X`](index.html#X)`)`<br>`SyncList(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.html#X)`>)`<br>`SyncList(items: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.html#X)`>)``SyncList(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.html#X)`>)`<br>Synchronized list. |
-
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `SyncList(vararg items: `[`X`](index.md#X)`)`<br>`SyncList(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`<br>`SyncList(items: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)``SyncList(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)`<br>Synchronized list. |

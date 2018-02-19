@@ -1,8 +1,4 @@
----
-title: DeadInputStream.read - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [DeadInputStream](index.html) / [read](./read.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [DeadInputStream](index.md) / [read](./read.md)
 
 # read
 

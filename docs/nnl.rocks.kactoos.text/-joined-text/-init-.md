@@ -1,8 +1,4 @@
----
-title: JoinedText.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [JoinedText](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [JoinedText](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -15,7 +11,7 @@ Ctor.
 
 `delimit` - Delimit among strings
 
-`strs` - Strings to be joined`JoinedText(delimit: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, vararg txts: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
+`strs` - Strings to be joined`JoinedText(delimit: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, vararg txts: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
 
 Ctor.
 
@@ -23,7 +19,7 @@ Ctor.
 
 `delimit` - Delimit among texts
 
-`txts` - Texts to be joined`JoinedText(delimiter: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, texts: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`Text`](../../nnl.rocks.kactoos/-text/index.html)`>)`
+`txts` - Texts to be joined`JoinedText(delimiter: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, texts: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`Text`](../../nnl.rocks.kactoos/-text/index.md)`>)`
 
 Join a Text.
 

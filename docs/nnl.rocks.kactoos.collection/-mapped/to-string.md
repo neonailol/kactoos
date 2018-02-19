@@ -1,8 +1,4 @@
----
-title: Mapped.toString - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.collection](../index.html) / [Mapped](index.html) / [toString](./to-string.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.collection](../index.md) / [Mapped](index.md) / [toString](./to-string.md)
 
 # toString
 

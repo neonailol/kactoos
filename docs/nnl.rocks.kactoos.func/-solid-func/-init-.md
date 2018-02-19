@@ -1,13 +1,9 @@
----
-title: SolidFunc.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [SolidFunc](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [SolidFunc](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`SolidFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
-`SolidFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>)``SolidFunc(func: `[`SyncFunc`](../-sync-func/index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>)`
+`SolidFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`SolidFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)``SolidFunc(func: `[`SyncFunc`](../-sync-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)`
 
 Func that is thread-safe and sticky.
 

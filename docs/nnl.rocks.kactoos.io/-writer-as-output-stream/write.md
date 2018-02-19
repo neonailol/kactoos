@@ -1,8 +1,4 @@
----
-title: WriterAsOutputStream.write - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [WriterAsOutputStream](index.html) / [write](./write.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [WriterAsOutputStream](index.md) / [write](./write.md)
 
 # write
 

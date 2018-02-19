@@ -1,14 +1,10 @@
----
-title: SyncScalar.value - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [SyncScalar](index.html) / [value](./value.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [SyncScalar](index.md) / [value](./value.md)
 
 # value
 
-`fun value(): `[`T`](index.html#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SyncScalar.kt#L32)
+`fun value(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SyncScalar.kt#L32)
 
-Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.html)
+Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 
 Convert it to the value.
 

@@ -1,8 +1,4 @@
----
-title: InputStreamOf.read - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [InputStreamOf](index.html) / [read](./read.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [InputStreamOf](index.md) / [read](./read.md)
 
 # read
 

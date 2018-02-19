@@ -1,8 +1,4 @@
----
-title: NumberEnvelope.toFloat - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [NumberEnvelope](index.html) / [toFloat](./to-float.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [NumberEnvelope](index.md) / [toFloat](./to-float.md)
 
 # toFloat
 

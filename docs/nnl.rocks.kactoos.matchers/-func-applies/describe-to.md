@@ -1,8 +1,4 @@
----
-title: FuncApplies.describeTo - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [FuncApplies](index.html) / [describeTo](./describe-to.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [FuncApplies](index.md) / [describeTo](./describe-to.md)
 
 # describeTo
 

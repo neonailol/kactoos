@@ -1,14 +1,10 @@
----
-title: SyncInput.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [SyncInput](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [SyncInput](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`SyncInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`)``SyncInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`, lock: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`
+`SyncInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)``SyncInput(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`, lock: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`
 
-Thread-safe [Input](../../nnl.rocks.kactoos/-input/index.html).
+Thread-safe [Input](../../nnl.rocks.kactoos/-input/index.md).
 
 There is no thread-safety guarantee.
 

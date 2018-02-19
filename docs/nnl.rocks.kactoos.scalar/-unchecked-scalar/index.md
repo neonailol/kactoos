@@ -1,12 +1,8 @@
----
-title: UncheckedScalar - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.scalar](../index.html) / [UncheckedScalar](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.scalar](../index.md) / [UncheckedScalar](./index.md)
 
 # UncheckedScalar
 
-`class UncheckedScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`T`](index.html#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/UncheckedScalar.kt#L19)
+`class UncheckedScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/UncheckedScalar.kt#L19)
 
 Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html).
 
@@ -23,9 +19,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `UncheckedScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`T`](index.html#T)`>)`<br>Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `UncheckedScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`<br>Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 
 ### Functions
 
-| [value](value.html) | `fun value(): `[`T`](index.html#T)<br>Convert it to the value. |
-
+| Name | Summary |
+|---|---|
+| [value](value.md) | `fun value(): `[`T`](index.md#T)<br>Convert it to the value. |

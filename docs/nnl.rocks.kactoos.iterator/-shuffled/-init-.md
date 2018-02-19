@@ -1,12 +1,8 @@
----
-title: Shuffled.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Shuffled](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Shuffled](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`Shuffled(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.html#T)`>)`
+`Shuffled(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)`
 
 Shuffled iterator.
 

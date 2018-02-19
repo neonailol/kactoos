@@ -1,12 +1,8 @@
----
-title: GzipOutput - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [GzipOutput](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [GzipOutput](./index.md)
 
 # GzipOutput
 
-`class GzipOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/GzipOutput.kt#L15)
+`class GzipOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/GzipOutput.kt#L15)
 
 Output that writes compressed data in the GZIP file format.
 
@@ -21,9 +17,12 @@ Output that writes compressed data in the GZIP file format.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`)``GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Output that writes compressed data in the GZIP file format. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)``GzipOutput(origin: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Output that writes compressed data in the GZIP file format. |
 
 ### Functions
 
-| [stream](stream.html) | `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)<br>Get write access to it. |
-
+| Name | Summary |
+|---|---|
+| [stream](stream.md) | `fun stream(): `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)<br>Get write access to it. |

@@ -1,12 +1,8 @@
----
-title: LowerText.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [LowerText](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [LowerText](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`LowerText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)``LowerText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, locale: `[`Locale`](http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)`)`
+`LowerText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``LowerText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, locale: `[`Locale`](http://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)`)`
 
 Text in lower case.
 

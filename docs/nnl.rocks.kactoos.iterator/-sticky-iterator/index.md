@@ -1,12 +1,8 @@
----
-title: StickyIterator - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [StickyIterator](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [StickyIterator](./index.md)
 
 # StickyIterator
 
-`class StickyIterator<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.html#X)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/StickyIterator.kt#L20)
+`class StickyIterator<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/StickyIterator.kt#L20)
 
 Iterator that returns the same set of elements always.
 
@@ -21,10 +17,13 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `StickyIterator(vararg items: `[`X`](index.html#X)`)``StickyIterator(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.html#X)`>)`<br>Iterator that returns the same set of elements always. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `StickyIterator(vararg items: `[`X`](index.md#X)`)``StickyIterator(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`<br>Iterator that returns the same set of elements always. |
 
 ### Functions
 
-| [hasNext](has-next.html) | `fun hasNext(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [next](next.html) | `fun next(): `[`X`](index.html#X) |
-
+| Name | Summary |
+|---|---|
+| [hasNext](has-next.md) | `fun hasNext(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [next](next.md) | `fun next(): `[`X`](index.md#X) |

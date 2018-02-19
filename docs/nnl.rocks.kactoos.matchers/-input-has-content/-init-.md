@@ -1,8 +1,4 @@
----
-title: InputHasContent.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [InputHasContent](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [InputHasContent](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 

@@ -1,12 +1,8 @@
----
-title: ReversedText - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.text](../index.html) / [ReversedText](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.text](../index.md) / [ReversedText](./index.md)
 
 # ReversedText
 
-`class ReversedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/ReversedText.kt#L15)
+`class ReversedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/ReversedText.kt#L15)
 
 Reverse the Text.
 
@@ -19,9 +15,12 @@ Reverse the Text.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `ReversedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`<br>Reverse the Text. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `ReversedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`<br>Reverse the Text. |
 
 ### Functions
 
-| [asString](as-string.html) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
-
+| Name | Summary |
+|---|---|
+| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |

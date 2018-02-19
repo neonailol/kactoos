@@ -1,8 +1,4 @@
----
-title: LoggingOutputStream.close - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [LoggingOutputStream](index.html) / [close](./close.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [LoggingOutputStream](index.md) / [close](./close.md)
 
 # close
 

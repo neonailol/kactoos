@@ -1,8 +1,4 @@
----
-title: InputOf.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [InputOf](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [InputOf](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
@@ -22,7 +18,7 @@ title: InputOf.<init> - kactoos-jvm
 
 ### Parameters
 
-`url` - The URL`InputOf(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.html)`<`[`URL`](http://docs.oracle.com/javase/8/docs/api/java/net/URL.html)`>)`
+`url` - The URL`InputOf(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`URL`](http://docs.oracle.com/javase/8/docs/api/java/net/URL.html)`>)`
 
 ### Parameters
 
@@ -79,12 +75,12 @@ title: InputOf.<init> - kactoos-jvm
 
 `source` - The string
 
-`charset` - The charset`InputOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`)`
+`charset` - The charset`InputOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
 
 ### Parameters
 
-`text` - The text`InputOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
-`InputOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
+`text` - The text`InputOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
+`InputOf(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
 
 ### Parameters
 
@@ -105,7 +101,7 @@ title: InputOf.<init> - kactoos-jvm
 
 ### Parameters
 
-`bytes` - The bytes`InputOf(src: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.html)`)`
+`bytes` - The bytes`InputOf(src: `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)`)`
 
 ### Parameters
 
@@ -113,9 +109,9 @@ title: InputOf.<init> - kactoos-jvm
 
 ### Parameters
 
-`stream` - The stream`InputOf(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.html)`)`
+`stream` - The stream`InputOf(origin: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)`
 
-An [Input](../../nnl.rocks.kactoos/-input/index.html) that encapsulates other sources of data.
+An [Input](../../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data.
 
 There is no thread-safety guarantee.
 

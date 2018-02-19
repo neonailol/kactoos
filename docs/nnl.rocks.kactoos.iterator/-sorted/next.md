@@ -1,9 +1,5 @@
----
-title: Sorted.next - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.iterator](../index.html) / [Sorted](index.html) / [next](./next.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.iterator](../index.md) / [Sorted](index.md) / [next](./next.md)
 
 # next
 
-`fun next(): `[`T`](index.html#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/Sorted.kt#L56)
+`fun next(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/Sorted.kt#L56)

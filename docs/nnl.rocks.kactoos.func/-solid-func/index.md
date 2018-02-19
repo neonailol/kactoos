@@ -1,12 +1,8 @@
----
-title: SolidFunc - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.func](../index.html) / [SolidFunc](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.func](../index.md) / [SolidFunc](./index.md)
 
 # SolidFunc
 
-`class SolidFunc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SolidFunc.kt#L14)
+`class SolidFunc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SolidFunc.kt#L14)
 
 Func that is thread-safe and sticky.
 
@@ -23,9 +19,12 @@ Objects of this class are thread safe.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `SolidFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>`SolidFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>)``SolidFunc(func: `[`SyncFunc`](../-sync-func/index.html)`<`[`X`](index.html#X)`, `[`Y`](index.html#Y)`>)`<br>Func that is thread-safe and sticky. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `SolidFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, max: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>`SolidFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)``SolidFunc(func: `[`SyncFunc`](../-sync-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)`<br>Func that is thread-safe and sticky. |
 
 ### Functions
 
-| [apply](apply.html) | `fun apply(input: `[`X`](index.html#X)`): `[`Y`](index.html#Y)<br>Apply it. |
-
+| Name | Summary |
+|---|---|
+| [apply](apply.md) | `fun apply(input: `[`X`](index.md#X)`): `[`Y`](index.md#Y)<br>Apply it. |

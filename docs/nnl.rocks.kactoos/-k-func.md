@@ -1,14 +1,10 @@
----
-title: KFunc - kactoos-jvm
----
-
-[kactoos-jvm](../index.html) / [nnl.rocks.kactoos](index.html) / [KFunc](./-k-func.html)
+[kactoos-jvm](../index.md) / [nnl.rocks.kactoos](index.md) / [KFunc](./-k-func.md)
 
 # KFunc
 
-`typealias KFunc<X, Y> = (`[`X`](-k-func.html#X)`) -> `[`Y`](-k-func.html#Y)
+`typealias KFunc<X, Y> = (`[`X`](-k-func.md#X)`) -> `[`Y`](-k-func.md#Y)
 
-Alias for [Func](-func/index.html)
+Alias for [Func](-func/index.md)
 
 **Since**
 0.2

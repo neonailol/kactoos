@@ -1,8 +1,4 @@
----
-title: TeeOutputStream.flush - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TeeOutputStream](index.html) / [flush](./flush.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeOutputStream](index.md) / [flush](./flush.md)
 
 # flush
 

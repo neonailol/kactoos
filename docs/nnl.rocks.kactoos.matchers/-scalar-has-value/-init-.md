@@ -1,16 +1,12 @@
----
-title: ScalarHasValue.<init> - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.matchers](../index.html) / [ScalarHasValue](index.html) / [&lt;init&gt;](./-init-.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.matchers](../index.md) / [ScalarHasValue](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 
-`ScalarHasValue(value: `[`T`](index.html#T)`)`
+`ScalarHasValue(value: `[`T`](index.md#T)`)`
 
 ### Parameters
 
-`value` - The value to match against`ScalarHasValue(matcher: Matcher<`[`T`](index.html#T)`>)`
+`value` - The value to match against`ScalarHasValue(matcher: Matcher<`[`T`](index.md#T)`>)`
 
 Matcher for the value.
 

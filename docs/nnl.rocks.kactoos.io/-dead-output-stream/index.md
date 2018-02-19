@@ -1,8 +1,4 @@
----
-title: DeadOutputStream - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [DeadOutputStream](./index.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [DeadOutputStream](./index.md)
 
 # DeadOutputStream
 
@@ -17,9 +13,12 @@ There is no thread-safety guarantee.
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.html) | `DeadOutputStream()`<br>OutputStream that accepts anything. |
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | `DeadOutputStream()`<br>OutputStream that accepts anything. |
 
 ### Functions
 
-| [write](write.html) | `fun write(data: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |
-
+| Name | Summary |
+|---|---|
+| [write](write.md) | `fun write(data: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) |

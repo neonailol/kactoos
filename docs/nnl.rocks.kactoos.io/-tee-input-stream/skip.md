@@ -1,8 +1,4 @@
----
-title: TeeInputStream.skip - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [TeeInputStream](index.html) / [skip](./skip.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [TeeInputStream](index.md) / [skip](./skip.md)
 
 # skip
 

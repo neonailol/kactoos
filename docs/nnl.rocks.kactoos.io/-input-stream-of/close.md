@@ -1,8 +1,4 @@
----
-title: InputStreamOf.close - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos.io](../index.html) / [InputStreamOf](index.html) / [close](./close.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos.io](../index.md) / [InputStreamOf](index.md) / [close](./close.md)
 
 # close
 

@@ -1,8 +1,4 @@
----
-title: Input.stream - kactoos-jvm
----
-
-[kactoos-jvm](../../index.html) / [nnl.rocks.kactoos](../index.html) / [Input](index.html) / [stream](./stream.html)
+[kactoos-jvm](../../index.md) / [nnl.rocks.kactoos](../index.md) / [Input](index.md) / [stream](./stream.md)
 
 # stream
 
