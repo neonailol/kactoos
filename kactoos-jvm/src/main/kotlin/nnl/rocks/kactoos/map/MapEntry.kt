@@ -29,9 +29,10 @@ class MapEntry<out K, out V>(
     }
 
     override fun equals(other: Any?): Boolean {
-        return (other is Map.Entry<*, *>
-            && Map.Entry::class.java.cast(other).key == this.key
-            && Map.Entry::class.java.cast(other).value == this.value)
+        return when (other) {
+            is Map.Entry<*, *> -> other.key == this.key && other.value == other.value
+            else -> false
+        }
     }
 
     override fun hashCode(): Int {

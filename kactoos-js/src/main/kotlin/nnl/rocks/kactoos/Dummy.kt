@@ -5,6 +5,6 @@ package nnl.rocks.kactoos
  * Uses bug in compiler, see https://youtrack.jetbrains.com/issue/KT-8135
  */
 @Suppress("UNCHECKED_CAST")
-internal actual fun <T> dummy(): T {
+actual fun <T> dummy(): T {
     return null as T
 }

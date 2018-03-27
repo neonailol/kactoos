@@ -6,12 +6,12 @@ allprojects {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.5'
+    gradleVersion = '4.6'
     distributionType = "ALL"
 }
 
 buildscript {
-    ext.kotlinVersion = '1.2.21'
+    ext.kotlinVersion = '1.2.31'
 
     repositories {
         jcenter()
@@ -23,7 +23,7 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.6"
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.6.2"
         classpath "com.github.ben-manes:gradle-versions-plugin:0.17.0"
     }
 }
@@ -36,7 +36,7 @@ ext {
     kotlin_common_test = "org.jetbrains.kotlin:kotlin-test-common:$kotlinVersion"
 
     kotlin_jvm_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
-    kotlin_jvm_junit = "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
+    kotlin_jvm_testng = "org.jetbrains.kotlin:kotlin-test-testng:$kotlinVersion"
     kotlin_jvm_test = "org.jetbrains.kotlin:kotlin-test:$kotlinVersion"
 
     kotlin_js_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlinVersion"
