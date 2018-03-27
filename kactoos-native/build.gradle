@@ -22,3 +22,5 @@ konanArtifacts {
 dependencies {
     expectedBy project(":kactoos-common")
 }
+
+task test(dependsOn: run)

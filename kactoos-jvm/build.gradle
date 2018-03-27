@@ -61,7 +61,8 @@ dependencies {
     testCompile kotlin_jvm_test
     testCompile kotlin_jvm_testng
 
-    testCompile "junit:junit:4.12"
+
+    testCompile 'org.assertj:assertj-core:3.9.1'
     testCompile "org.takes:takes:1.11.2"
 
     compileOnly "org.hamcrest:hamcrest-core:1.3"
