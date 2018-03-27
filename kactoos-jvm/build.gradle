@@ -104,17 +104,6 @@ task ktlintFormat(type: JavaExec, group: "formatting") {
     args "-F", "src/**/*.kt"
 }
 
-test {
-
-    def testsOut = new File("$projectDir/../compatibility-tests/src/test/resources/tests-kactoos.txt")
-    testsOut.delete()
-    testsOut.createNewFile()
-
-    beforeTest { descriptor ->
-        testsOut.append("$descriptor\n")
-    }
-}
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
