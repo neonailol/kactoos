@@ -9,14 +9,14 @@ konanArtifacts {
         srcDir 'src/main/kotlin'
     }
 
-    program('kactoos-native-test') {
-        srcDir 'src/test/kotlin'
-        commonSourceSet 'test'
-        libraries {
-            artifact 'kactoos-native'
-        }
-        extraOpts '-tr'
-    }
+//    program('kactoos-native-test') {
+//        srcDir 'src/test/kotlin'
+//        commonSourceSet 'test'
+//        libraries {
+//            artifact 'kactoos-native'
+//        }
+//        extraOpts '-tr'
+//    }
 }
 
 dependencies {
