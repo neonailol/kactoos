@@ -1,5 +1,12 @@
 apply plugin: 'kotlin-platform-common'
 
+
+ext {
+    kotlin_common_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-common"
+    kotlin_common_annotations = "org.jetbrains.kotlin:kotlin-test-annotations-common"
+    kotlin_common_test = "org.jetbrains.kotlin:kotlin-test-common"
+}
+
 dependencies {
     compile kotlin_common_stdlib
     testCompile kotlin_common_annotations

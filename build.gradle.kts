@@ -1,3 +1,4 @@
+import org.gradle.kotlin.dsl.kotlin
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
@@ -52,5 +53,5 @@ plugins {
 }
 
 project(":cactoos:") {
-    apply { from("$rootProject.projectDir/build.cactoos.gradle") }
+    apply { from("${rootProject.projectDir}/build.cactoos.gradle") }
 }

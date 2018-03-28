@@ -54,6 +54,13 @@ configurations {
     ktlint
 }
 
+
+ext {
+    kotlin_jvm_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    kotlin_jvm_testng = "org.jetbrains.kotlin:kotlin-test-testng"
+    kotlin_jvm_test = "org.jetbrains.kotlin:kotlin-test"
+}
+
 dependencies {
     expectedBy project(":kactoos-common")
 

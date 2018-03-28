@@ -22,6 +22,12 @@ repositories {
     mavenCentral()
 }
 
+
+ext {
+    kotlin_js_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-js"
+    kotlin_js_test = "org.jetbrains.kotlin:kotlin-test-js"
+}
+
 dependencies {
     expectedBy project(":kactoos-common")
 
