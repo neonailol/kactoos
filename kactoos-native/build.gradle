@@ -1,10 +1,11 @@
-buildscript {
 
+buildscript {
     repositories {
         mavenCentral()
-        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+        maven {
+            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
+        }
     }
-
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.6.2"
     }
@@ -21,18 +22,18 @@ konanArtifacts {
         srcDir 'src/main/kotlin'
     }
 
-//    program('kactoos-native-test') {
-//        srcDir 'src/test/kotlin'
-//        commonSourceSet 'test'
-//        libraries {
-//            artifact 'kactoos-native'
-//        }
-//        extraOpts '-tr'
-//    }
+    program('kactoos-native-test') {
+        srcDir 'src/test/kotlin'
+        commonSourceSet 'test'
+        libraries {
+            artifact 'kactoos-native'
+        }
+        extraOpts '-tr'
+    }
 }
 
-dependencies {
-    expectedBy project(":kactoos-common")
-}
+//dependencies {
+//    expectedBy project(":kactoos-common")
+//}
 
-task test(dependsOn: run)
+//task test(dependsOn: run)

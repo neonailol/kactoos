@@ -26,8 +26,8 @@ repositories {
 }
 
 dependencies {
-    compile project(':cactoos')
     compile project(':kactoos-jvm')
+    compile "org.cactoos:cactoos:0.29"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile "org.jetbrains.kotlin:kotlin-reflect"
     compile "org.reflections:reflections:0.9.11"

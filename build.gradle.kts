@@ -7,8 +7,8 @@ buildscript {
     }
 }
 
-//
 allprojects {
+
     group = "nnl.rocks.kactoos"
     version = "1.0-SNAPSHOT"
 
@@ -20,6 +20,12 @@ allprojects {
             maven("http://kotlin.bintray.com/kotlinx")
             maven("https://dl.bintray.com/jetbrains/kotlin-native-dependencies")
         }
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven("https://jitpack.io")
     }
 
     tasks {
@@ -48,10 +54,11 @@ allprojects {
 }
 
 plugins {
-    `base`
+    base
     id("com.github.ben-manes.versions") version "0.17.0"
 }
 
-project(":cactoos:") {
-    apply { from("${rootProject.projectDir}/build.cactoos.gradle") }
+tasks.withType<Wrapper> {
+    distributionType = Wrapper.DistributionType.ALL
+    gradleVersion = "4.6"
 }
