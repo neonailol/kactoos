@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    compile(kotlin("stdlib-common"))
-    testCompile(kotlin("test-common"))
-    testCompile(kotlin("test-annotations-common"))
+    compile(kotlin("stdlib-common", "1.2.31"))
+    testCompile(kotlin("test-common", "1.2.31"))
+    testCompile(kotlin("test-annotations-common", "1.2.31"))
 }
