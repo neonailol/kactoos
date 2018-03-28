@@ -1,7 +1,16 @@
 import org.gradle.kotlin.dsl.kotlin
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+plugins {
+    base
+    id("com.github.ben-manes.versions") version "0.17.0"
+}
+
 buildscript {
+    repositories {
+        mavenCentral()
+    }
+
     dependencies {
         classpath(kotlin("gradle-plugin", "1.2.31"))
     }
@@ -53,10 +62,6 @@ allprojects {
     }
 }
 
-plugins {
-    base
-    id("com.github.ben-manes.versions") version "0.17.0"
-}
 
 tasks.withType<Wrapper> {
     distributionType = Wrapper.DistributionType.ALL
