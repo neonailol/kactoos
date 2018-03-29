@@ -2,7 +2,7 @@
 
 # Sha256DigestOf
 
-`class Sha256DigestOf : `[`DigestEnvelope`](../-digest-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/Sha256DigestOf.kt#L12)
+`class Sha256DigestOf : `[`DigestEnvelope`](../-digest-envelope/index.md)
 
 SHA-256 checksum calculation of [Input](../../nnl.rocks.kactoos/-input/index.md).
 

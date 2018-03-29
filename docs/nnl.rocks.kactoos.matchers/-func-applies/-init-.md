@@ -8,7 +8,7 @@
 
 `result` - The result expected
 
-`input` - Input for the function`FuncApplies(input: `[`X`](index.md#X)`, matcher: Matcher<`[`Y`](index.md#Y)`>)`
+`input` - Input for the function`FuncApplies(input: `[`X`](index.md#X)`, matcher: <ERROR CLASS><`[`Y`](index.md#Y)`>)`
 
 Matcher for the value.
 

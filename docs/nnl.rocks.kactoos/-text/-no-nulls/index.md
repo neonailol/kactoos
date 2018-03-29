@@ -2,7 +2,7 @@
 
 # NoNulls
 
-`class NoNulls : `[`Text`](../index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Text.kt#L29)
+`class NoNulls : `[`Text`](../index.md)
 
 ### Constructors
 

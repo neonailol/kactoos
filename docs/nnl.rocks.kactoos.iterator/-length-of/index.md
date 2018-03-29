@@ -2,7 +2,7 @@
 
 # LengthOf
 
-`class LengthOf : `[`NumberEnvelope`](../../nnl.rocks.kactoos.scalar/-number-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/LengthOf.kt#L15)
+`class LengthOf : `[`NumberEnvelope`](../../nnl.rocks.kactoos.scalar/-number-envelope/index.md)
 
 Length of iterator.
 

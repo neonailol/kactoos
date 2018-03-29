@@ -2,7 +2,7 @@
 
 # StdinInput
 
-`class StdinInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/StdinInput.kt#L17)
+`class StdinInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Input that reads from `stdin`.
 

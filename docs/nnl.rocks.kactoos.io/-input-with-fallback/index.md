@@ -2,7 +2,7 @@
 
 # InputWithFallback
 
-`class InputWithFallback : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/InputWithFallback.kt#L22)
+`class InputWithFallback : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Input that returns an alternative input if the main one throws
 [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html).

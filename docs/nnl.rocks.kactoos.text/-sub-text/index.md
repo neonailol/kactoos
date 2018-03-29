@@ -2,7 +2,7 @@
 
 # SubText
 
-`class SubText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/SubText.kt#L22)
+`class SubText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Extract a substring from a Text.
 

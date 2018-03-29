@@ -2,7 +2,7 @@
 
 # LocalDateAsText
 
-`class LocalDateAsText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/time/LocalDateAsText.kt#L21)
+`class LocalDateAsText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Formatter for [LocalDate](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) instances.
 

@@ -2,7 +2,7 @@
 
 # value
 
-`fun value(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Scalar.kt#L42)
+`fun value(): `[`T`](index.md#T)
 
 Overrides [Scalar.value](../value.md)
 

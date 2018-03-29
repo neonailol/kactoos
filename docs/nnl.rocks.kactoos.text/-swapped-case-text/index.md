@@ -2,7 +2,7 @@
 
 # SwappedCaseText
 
-`class SwappedCaseText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/SwappedCaseText.kt#L16)
+`class SwappedCaseText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Swaps the case of a Text changing upper and title case to lower case,
 and lower case to upper case.

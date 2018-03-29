@@ -2,7 +2,7 @@
 
 # WriterAsOutputStream
 
-`class WriterAsOutputStream : `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/WriterAsOutputStream.kt#L27)
+`class WriterAsOutputStream : `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)
 
 Writer as [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html).
 

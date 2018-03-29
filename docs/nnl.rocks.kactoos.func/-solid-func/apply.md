@@ -2,7 +2,7 @@
 
 # apply
 
-`fun apply(input: `[`X`](index.md#X)`): `[`Y`](index.md#Y) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/SolidFunc.kt#L28)
+`fun apply(input: `[`X`](index.md#X)`): `[`Y`](index.md#Y)
 
 Overrides [Func.apply](../../nnl.rocks.kactoos/-func/apply.md)
 

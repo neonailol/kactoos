@@ -2,7 +2,7 @@
 
 # value
 
-`fun value(): `[`LocalDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/time/LocalDateTimeOf.kt#L41)
+`fun value(): `[`LocalDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)
 
 Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 

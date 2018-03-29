@@ -2,7 +2,7 @@
 
 # TeeInput
 
-`class TeeInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/TeeInput.kt#L28)
+`class TeeInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Input to Output copying pipe.
 

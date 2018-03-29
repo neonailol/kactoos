@@ -2,7 +2,7 @@
 
 # TrimmedRightText
 
-`class TrimmedRightText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/TrimmedRightText.kt#L18)
+`class TrimmedRightText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Text without control characters (char &amp;lt;= 32) only from right.
 

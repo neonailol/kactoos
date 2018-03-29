@@ -2,7 +2,7 @@
 
 # LoggingOutputStream
 
-`class LoggingOutputStream : `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/LoggingOutputStream.kt#L21)
+`class LoggingOutputStream : `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)
 
 Logged output stream.
 

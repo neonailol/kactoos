@@ -2,7 +2,7 @@
 
 # ReplacedText
 
-`class ReplacedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/ReplacedText.kt#L41)
+`class ReplacedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Replace the Text.
 

@@ -2,7 +2,7 @@
 
 # ResourceOf
 
-`class ResourceOf : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/ResourceOf.kt#L27)
+`class ResourceOf : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Classpath resource.
 

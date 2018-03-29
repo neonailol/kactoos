@@ -2,7 +2,7 @@
 
 # LoggingOutput
 
-`class LoggingOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/LoggingOutput.kt#L19)
+`class LoggingOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md)
 
 Logged output.
 

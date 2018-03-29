@@ -2,7 +2,7 @@
 
 # RotatedText
 
-`class RotatedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/RotatedText.kt#L16)
+`class RotatedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Rotate (circular shift) a String of shift characters.
 

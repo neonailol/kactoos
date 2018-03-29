@@ -2,7 +2,7 @@
 
 # value
 
-`fun value(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SyncScalar.kt#L32)
+`fun value(): `[`T`](index.md#T)
 
 Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 

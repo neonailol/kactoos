@@ -2,7 +2,7 @@
 
 # SyncOutput
 
-`class SyncOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/SyncOutput.kt#L18)
+`class SyncOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md)
 
 Thread-safe [Output](../../nnl.rocks.kactoos/-output/index.md).
 

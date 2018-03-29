@@ -2,7 +2,7 @@
 
 # OutputStreamTo
 
-`class OutputStreamTo : `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/OutputStreamTo.kt#L28)
+`class OutputStreamTo : `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)
 
 An [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) that encapsulates other destination for the data.
 

@@ -2,7 +2,7 @@
 
 # FormattedText
 
-`class FormattedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/FormattedText.kt#L25)
+`class FormattedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Text in Sprinf format.
 

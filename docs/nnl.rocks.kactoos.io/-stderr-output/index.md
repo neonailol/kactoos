@@ -2,7 +2,7 @@
 
 # StderrOutput
 
-`class StderrOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/StderrOutput.kt#L17)
+`class StderrOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md)
 
 Output that writes to `stderr`.
 

@@ -2,7 +2,7 @@
 
 # DateOf
 
-`class DateOf : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/time/DateOf.kt#L18)
+`class DateOf : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)`>`
 
 Parser for [Date](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html) instances.
 Parsing the date using the provided formatter.

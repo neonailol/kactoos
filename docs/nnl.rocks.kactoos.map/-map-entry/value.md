@@ -2,4 +2,4 @@
 
 # value
 
-`val value: `[`V`](index.md#V) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/map/MapEntry.kt#L24)
+`val value: `[`V`](index.md#V)

@@ -2,7 +2,7 @@
 
 # DateAsText
 
-`class DateAsText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/time/DateAsText.kt#L21)
+`class DateAsText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Formatter for date instances.
 Formats the date using the provided formatter.

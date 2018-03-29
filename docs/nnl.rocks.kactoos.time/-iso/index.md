@@ -2,7 +2,7 @@
 
 # Iso
 
-`class Iso` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/time/Iso.kt#L10)
+`class Iso`
 
 Default formatter
 

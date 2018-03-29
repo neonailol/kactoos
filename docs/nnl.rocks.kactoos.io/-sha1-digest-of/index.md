@@ -2,7 +2,7 @@
 
 # Sha1DigestOf
 
-`class Sha1DigestOf : `[`DigestEnvelope`](../-digest-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/Sha1DigestOf.kt#L12)
+`class Sha1DigestOf : `[`DigestEnvelope`](../-digest-envelope/index.md)
 
 SHA-1 checksum calculation of [Input](../../nnl.rocks.kactoos/-input/index.md).
 

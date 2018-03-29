@@ -2,7 +2,7 @@
 
 # apply
 
-`fun apply(first: `[`X`](index.md#X)`, second: `[`Y`](index.md#Y)`): `[`Z`](index.md#Z) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/BiFuncOf.kt#L84)
+`fun apply(first: `[`X`](index.md#X)`, second: `[`Y`](index.md#Y)`): `[`Z`](index.md#Z)
 
 Overrides [BiFunc.apply](../../nnl.rocks.kactoos/-bi-func/apply.md)
 

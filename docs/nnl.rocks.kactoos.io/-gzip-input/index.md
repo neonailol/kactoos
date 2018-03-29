@@ -2,7 +2,7 @@
 
 # GzipInput
 
-`class GzipInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/GzipInput.kt#L15)
+`class GzipInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Input that reads compressed data from the GZIP file format.
 

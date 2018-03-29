@@ -1,5 +1,5 @@
 autoCorrect: true
-failFast: true
+failFast: false
 
 test-pattern: # Configure exclusions for test sources
   active: true
@@ -20,13 +20,12 @@ test-pattern: # Configure exclusions for test sources
     - 'TooManyFunctions'
 
 build:
-  warningThreshold: 5
-  failThreshold: 10
+  maxIssues: 1000
   weights:
-    complexity: 2
-    formatting: 1
-    LongParameterList: 1
-    comments: 1
+    # complexity: 2
+    # LongParameterList: 1
+    # style: 1
+    # comments: 1
 
 processors:
   active: true
@@ -49,38 +48,43 @@ console-reports:
 output-reports:
   active: true
   exclude:
+  #  - 'HtmlOutputReport'
   #  - 'PlainOutputReport'
   #  - 'XmlOutputReport'
 
 comments:
   active: true
   CommentOverPrivateFunction:
-    active: false
+    active: true
   CommentOverPrivateProperty:
-    active: false
+    active: true
+  EndOfSentenceFormat:
+    active: true
+    endOfSentenceFormat: ([.?!][ \t\n\r\f<])|([.?!]$)
   UndocumentedPublicClass:
-    active: false
+    active: true
     searchInNestedClass: true
     searchInInnerClass: true
     searchInInnerObject: true
     searchInInnerInterface: true
   UndocumentedPublicFunction:
-    active: false
+    active: true
 
 complexity:
   active: true
   ComplexCondition:
     active: true
-    threshold: 3
+    threshold: 4
   ComplexInterface:
-    active: false
+    active: true
     threshold: 10
     includeStaticDeclarations: false
   ComplexMethod:
     active: true
     threshold: 10
+    ignoreSingleWhenExpression: false
   LabeledExpression:
-    active: false
+    active: true
   LargeClass:
     active: true
     threshold: 150
@@ -89,32 +93,33 @@ complexity:
     threshold: 20
   LongParameterList:
     active: true
-    threshold: 5
+    threshold: 6
     ignoreDefaultParameters: false
   MethodOverloading:
-    active: false
-    threshold: 5
+    active: true
+    threshold: 6
   NestedBlockDepth:
     active: true
-    threshold: 3
+    threshold: 4
   StringLiteralDuplication:
-    active: false
-    threshold: 2
+    active: true
+    threshold: 3
     ignoreAnnotation: true
     excludeStringsWithLessThan5Characters: true
     ignoreStringsRegex: '$^'
   TooManyFunctions:
     active: true
-    thresholdInFiles: 10
-    thresholdInClasses: 10
-    thresholdInInterfaces: 10
-    thresholdInObjects: 10
-    thresholdInEnums: 10
+    thresholdInFiles: 11
+    thresholdInClasses: 11
+    thresholdInInterfaces: 11
+    thresholdInObjects: 11
+    thresholdInEnums: 11
 
 empty-blocks:
   active: true
   EmptyCatchBlock:
     active: true
+    allowedExceptionNameRegex: "^(ignore|expected).*"
   EmptyClassBlock:
     active: true
   EmptyDefaultConstructor:
@@ -145,32 +150,32 @@ empty-blocks:
 exceptions:
   active: true
   ExceptionRaisedInUnexpectedLocation:
-    active: false
+    active: true
     methodNames: 'toString,hashCode,equals,finalize'
   InstanceOfCheckForException:
-    active: false
+    active: true
   NotImplementedDeclaration:
-    active: false
+    active: true
   PrintStackTrace:
-    active: false
+    active: true
   RethrowCaughtException:
-    active: false
+    active: true
   ReturnFromFinally:
-    active: false
+    active: true
   SwallowedException:
-    active: false
+    active: true
   ThrowingExceptionFromFinally:
-    active: false
+    active: true
   ThrowingExceptionInMain:
-    active: false
+    active: true
   ThrowingExceptionsWithoutMessageOrCause:
-    active: false
+    active: true
     exceptions: 'IllegalArgumentException,IllegalStateException,IOException'
   ThrowingNewInstanceOfSameException:
-    active: false
+    active: true
   TooGenericExceptionCaught:
     active: true
-    exceptions:
+    exceptionNames:
      - ArrayIndexOutOfBoundsException
      - Error
      - Exception
@@ -181,10 +186,9 @@ exceptions:
      - Throwable
   TooGenericExceptionThrown:
     active: true
-    exceptions:
+    exceptionNames:
      - Error
      - Exception
-     - NullPointerException
      - Throwable
      - RuntimeException
 
@@ -195,23 +199,24 @@ naming:
     classPattern: '[A-Z$][a-zA-Z0-9$]*'
   EnumNaming:
     active: true
-    enumEntryPattern: '^[A-Z$][a-zA-Z_$]*$'
+    enumEntryPattern: '^[A-Z][_a-zA-Z0-9]*'
   ForbiddenClassName:
-    active: false
+    active: true
     forbiddenName: ''
   FunctionMaxLength:
-    active: false
+    active: true
     maximumFunctionNameLength: 30
   FunctionMinLength:
-    active: false
+    active: true
     minimumFunctionNameLength: 3
   FunctionNaming:
     active: true
     functionPattern: '^([a-z$][a-zA-Z$0-9]*)|(`.*`)$'
+    excludeClassPattern: '$^'
   MatchingDeclarationName:
     active: true
   MemberNameEqualsClassName:
-    active: false
+    active: true
     ignoreOverriddenFunction: true
   ObjectPropertyNaming:
     active: true
@@ -225,15 +230,16 @@ naming:
     propertyPattern: '[a-z][A-Za-z\d]*'
     privatePropertyPattern: '(_)?[a-z][A-Za-z0-9]*'
   VariableMaxLength:
-    active: false
+    active: true
     maximumVariableNameLength: 64
   VariableMinLength:
-    active: false
+    active: true
     minimumVariableNameLength: 1
   VariableNaming:
     active: true
     variablePattern: '[a-z][A-Za-z0-9]*'
     privateVariablePattern: '(_)?[a-z][A-Za-z0-9]*'
+    excludeClassPattern: '$^'
 
 performance:
   active: true
@@ -249,61 +255,61 @@ potential-bugs:
   DuplicateCaseInWhenExpression:
     active: true
   EqualsAlwaysReturnsTrueOrFalse:
-    active: false
+    active: true
   EqualsWithHashCodeExist:
     active: true
   ExplicitGarbageCollectionCall:
     active: true
   InvalidRange:
-    active: false
+    active: true
   IteratorHasNextCallsNextMethod:
-    active: false
+    active: true
   IteratorNotThrowingNoSuchElementException:
-    active: false
+    active: true
   LateinitUsage:
-    active: false
+    active: true
     excludeAnnotatedProperties: ""
     ignoreOnClassesPattern: ""
   UnconditionalJumpStatementInLoop:
-    active: false
+    active: true
   UnreachableCode:
     active: true
   UnsafeCallOnNullableType:
-    active: false
+    active: true
   UnsafeCast:
-    active: false
+    active: true
   UselessPostfixExpression:
-    active: false
+    active: true
   WrongEqualsTypeParameter:
-    active: false
+    active: true
 
 style:
   active: true
   CollapsibleIfStatements:
-    active: false
+    active: true
   DataClassContainsFunctions:
-    active: false
+    active: true
     conversionFunctionPrefix: 'to'
   EqualsNullCall:
-    active: false
+    active: true
   ExpressionBodySyntax:
-    active: false
+    active: true
   ForbiddenComment:
     active: true
     values: 'TODO:,FIXME:,STOPSHIP:'
   ForbiddenImport:
-    active: false
+    active: true
     imports: ''
   FunctionOnlyReturningConstant:
-    active: false
+    active: true
     ignoreOverridableFunction: true
     excludedFunctions: 'describeContents'
   LoopWithTooManyJumpStatements:
-    active: false
+    active: true
     maxJumpCount: 1
   MagicNumber:
     active: true
-    ignoreNumbers: '-1,0,1,2,3,16,10,4,0xff'
+    ignoreNumbers: '-1,0,1,2'
     ignoreHashCodeFunction: false
     ignorePropertyDeclaration: false
     ignoreConstantDeclaration: true
@@ -313,27 +319,29 @@ style:
     ignoreEnums: false
   MaxLineLength:
     active: true
-    maxLineLength: 160
+    maxLineLength: 120
     excludePackageStatements: false
     excludeImportStatements: false
+  MayBeConst:
+    active: true
   ModifierOrder:
     active: true
   NestedClassesVisibility:
-    active: false
+    active: true
   NewLineAtEndOfFile:
+    active: true
+  NoTabs:
     active: true
   OptionalAbstractKeyword:
     active: true
-  OptionalReturnKeyword:
-    active: false
   OptionalUnit:
-    active: false
+    active: true
   OptionalWhenBraces:
-    active: false
+    active: true
   ProtectedMemberInFinalClass:
-    active: false
+    active: true
   RedundantVisibilityModifierRule:
-    active: false
+    active: true
   ReturnCount:
     active: true
     max: 2
@@ -341,26 +349,31 @@ style:
   SafeCast:
     active: true
   SerialVersionUIDInSerializableClass:
-    active: false
+    active: true
   SpacingBetweenPackageAndImports:
-    active: false
+    active: true
   ThrowsCount:
     active: true
     max: 2
+  TrailingWhitespace:
+    active: true
   UnnecessaryAbstractClass:
-    active: false
+    active: true
   UnnecessaryInheritance:
-    active: false
+    active: true
   UnnecessaryParentheses:
-    active: false
+    active: true
   UntilInsteadOfRangeTo:
-    active: false
+    active: true
   UnusedImports:
-    active: false
+    active: true
+  UnusedPrivateMember:
+    active: true
   UseDataClass:
-    active: false
+    active: true
+    excludeAnnotatedClasses: ""
   UtilityClassWithPublicConstructor:
-    active: false
+    active: true
   WildcardImport:
     active: true
     excludeImports: 'java.util.*,kotlinx.android.synthetic.*'

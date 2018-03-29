@@ -8,7 +8,7 @@ Ctor.
 
 ### Parameters
 
-`text` - The text to match against`TextHasString(matcher: Matcher<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
+`text` - The text to match against`TextHasString(matcher: <ERROR CLASS><`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
 
 Matcher for the content.
 

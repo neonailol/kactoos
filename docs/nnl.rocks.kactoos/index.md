@@ -29,3 +29,9 @@ Top level package
 | [KProc](-k-proc.md) | `typealias KProc<X> = (`[`X`](-k-proc.md#X)`) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Alias for [Proc](-proc/index.md) |
 | [KScalar](-k-scalar.md) | `typealias KScalar<T> = () -> `[`T`](-k-scalar.md#T)<br>Alias for [Scalar](-scalar/index.md) |
 | [KText](-k-text.md) | `typealias KText = () -> `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Alias for [Text](-text/index.md) |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [dummy](dummy.md) | `expect fun <T> dummy(): `[`T`](dummy.md#T)<br>Dummy function, to provide generic argument when we don't have one. Uses bug in compiler, see https://youtrack.jetbrains.com/issue/KT-8135 |

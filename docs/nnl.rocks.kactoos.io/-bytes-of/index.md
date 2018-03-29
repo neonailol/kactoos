@@ -2,7 +2,7 @@
 
 # BytesOf
 
-`class BytesOf : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/BytesOf.kt#L23)
+`class BytesOf : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)
 
 A [Bytes](../../nnl.rocks.kactoos/-bytes/index.md) that encapsulates other sources of data.
 

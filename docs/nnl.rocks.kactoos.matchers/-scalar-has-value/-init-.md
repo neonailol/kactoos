@@ -6,7 +6,7 @@
 
 ### Parameters
 
-`value` - The value to match against`ScalarHasValue(matcher: Matcher<`[`T`](index.md#T)`>)`
+`value` - The value to match against`ScalarHasValue(matcher: <ERROR CLASS><`[`T`](index.md#T)`>)`
 
 Matcher for the value.
 

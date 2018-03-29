@@ -2,7 +2,7 @@
 
 # DeadOutput
 
-`class DeadOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/DeadOutput.kt#L17)
+`class DeadOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md)
 
 Output that accepts anything.
 

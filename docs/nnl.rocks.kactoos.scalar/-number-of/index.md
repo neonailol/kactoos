@@ -2,7 +2,7 @@
 
 # NumberOf
 
-`class NumberOf : `[`NumberEnvelope`](../-number-envelope/index.md)`, `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/NumberOf.kt#L24)
+`class NumberOf : `[`NumberEnvelope`](../-number-envelope/index.md)`, `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`
 
 Text as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html).
 

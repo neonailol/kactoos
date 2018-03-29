@@ -2,7 +2,7 @@
 
 # TextOf
 
-`class TextOf : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/TextOf.kt#L32)
+`class TextOf : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 TextOf
 

@@ -2,7 +2,7 @@
 
 # LoggingInput
 
-`class LoggingInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/LoggingInput.kt#L19)
+`class LoggingInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Logged input.
 

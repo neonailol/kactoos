@@ -2,7 +2,7 @@
 
 # Input
 
-`@FunctionalInterface interface Input` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Input.kt#L29)
+`@FunctionalInterface interface Input`
 
 Input.
 

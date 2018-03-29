@@ -35,9 +35,7 @@ class LoggingInputStream @JvmOverloads constructor(
     }
 
     @Throws(IOException::class)
-    override fun read(buf: ByteArray): Int {
-        return this.read(buf, 0, buf.size)
-    }
+    override fun read(buf: ByteArray): Int = this.read(buf, 0, buf.size)
 
     @Throws(IOException::class)
     override fun read(

@@ -2,7 +2,7 @@
 
 # ComparableText
 
-`class ComparableText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`Text`](../../nnl.rocks.kactoos/-text/index.md)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/ComparableText.kt#L26)
+`class ComparableText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`Text`](../../nnl.rocks.kactoos/-text/index.md)`>`
 
 Text implementing Comparable.
 

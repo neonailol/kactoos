@@ -2,4 +2,4 @@
 
 # key
 
-`val key: `[`K`](index.md#K) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/map/MapEntry.kt#L21)
+`val key: `[`K`](index.md#K)

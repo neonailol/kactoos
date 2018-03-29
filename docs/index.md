@@ -17,7 +17,6 @@ Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 | [nnl.rocks.kactoos.iterator](nnl.rocks.kactoos.iterator/index.md) | Iterators. |
 | [nnl.rocks.kactoos.list](nnl.rocks.kactoos.list/index.md) | Lists. |
 | [nnl.rocks.kactoos.map](nnl.rocks.kactoos.map/index.md) | Maps. |
-| [nnl.rocks.kactoos.matchers](nnl.rocks.kactoos.matchers/index.md) | Matchers. |
 | [nnl.rocks.kactoos.scalar](nnl.rocks.kactoos.scalar/index.md) | Scalars. |
 | [nnl.rocks.kactoos.text](nnl.rocks.kactoos.text/index.md) | Text. |
 | [nnl.rocks.kactoos.time](nnl.rocks.kactoos.time/index.md) | Time. |

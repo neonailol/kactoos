@@ -2,7 +2,7 @@
 
 # NormalizedText
 
-`class NormalizedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/NormalizedText.kt#L15)
+`class NormalizedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Normalize (replace sequences of whitespace characters by a single space) a Text.
 

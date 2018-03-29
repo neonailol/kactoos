@@ -2,7 +2,7 @@
 
 # Output
 
-`@FunctionalInterface interface Output` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Output.kt#L37)
+`@FunctionalInterface interface Output`
 
 Output.
 

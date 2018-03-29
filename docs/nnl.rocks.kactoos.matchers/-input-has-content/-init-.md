@@ -6,7 +6,7 @@
 
 ### Parameters
 
-`text` - The text to match against`InputHasContent(matcher: Matcher<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
+`text` - The text to match against`InputHasContent(matcher: <ERROR CLASS><`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
 
 Matcher for the input.
 

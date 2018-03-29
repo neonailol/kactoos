@@ -2,7 +2,7 @@
 
 # SyncText
 
-`class SyncText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/SyncText.kt#L16)
+`class SyncText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Text that is thread-safe.
 

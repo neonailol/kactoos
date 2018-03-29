@@ -2,7 +2,7 @@
 
 # ReaderAsBytes
 
-`class ReaderAsBytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/ReaderAsBytes.kt#L22)
+`class ReaderAsBytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)
 
 Reader as [Bytes](../../nnl.rocks.kactoos/-bytes/index.md).
 

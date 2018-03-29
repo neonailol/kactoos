@@ -2,7 +2,7 @@
 
 # MaxOf
 
-`class MaxOf : `[`NumberEnvelope`](../-number-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/MaxOf.kt#L35)
+`class MaxOf : `[`NumberEnvelope`](../-number-envelope/index.md)
 
 Find the greater among items.
 

@@ -2,7 +2,7 @@
 
 # Sorted
 
-`class Sorted<T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](index.md#T)`>> : `[`ListEnvelope`](../-list-envelope/index.md)`<`[`T`](index.md#T)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/list/Sorted.kt#L23)
+`class Sorted<T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](index.md#T)`>> : `[`ListEnvelope`](../-list-envelope/index.md)`<`[`T`](index.md#T)`>`
 
 Sorted list.
 

@@ -2,7 +2,7 @@
 
 # Md5DigestOf
 
-`class Md5DigestOf : `[`DigestEnvelope`](../-digest-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/Md5DigestOf.kt#L12)
+`class Md5DigestOf : `[`DigestEnvelope`](../-digest-envelope/index.md)
 
 MD5 checksum calculation of [Input](../../nnl.rocks.kactoos/-input/index.md).
 

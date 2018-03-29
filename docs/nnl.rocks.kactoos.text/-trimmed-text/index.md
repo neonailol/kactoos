@@ -2,7 +2,7 @@
 
 # TrimmedText
 
-`class TrimmedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/TrimmedText.kt#L18)
+`class TrimmedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Text without control characters (char &amp;lt;= 32) from both ends.
 

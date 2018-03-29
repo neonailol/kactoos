@@ -2,7 +2,7 @@
 
 # LSInputOf
 
-`class LSInputOf : `[`LSInput`](http://docs.oracle.com/javase/8/docs/api/org/w3c/dom/ls/LSInput.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/LSInputOf.kt#L24)
+`class LSInputOf : `[`LSInput`](http://docs.oracle.com/javase/8/docs/api/org/w3c/dom/ls/LSInput.html)
 
 Input as LSInput.
 

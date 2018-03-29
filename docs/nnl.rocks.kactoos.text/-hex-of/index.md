@@ -2,7 +2,7 @@
 
 # HexOf
 
-`class HexOf : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/HexOf.kt#L17)
+`class HexOf : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Hexadecimal representation of Bytes.
 

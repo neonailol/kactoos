@@ -2,7 +2,7 @@
 
 # Base64Bytes
 
-`class Base64Bytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/bytes/Base64Bytes.kt#L14)
+`class Base64Bytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)
 
 Decodes all origin bytes using the Base64 encoding scheme.
 

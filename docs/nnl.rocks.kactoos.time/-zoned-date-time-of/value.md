@@ -2,7 +2,7 @@
 
 # value
 
-`fun value(): `[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/time/ZonedDateTimeOf.kt#L60)
+`fun value(): `[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)
 
 Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 

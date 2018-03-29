@@ -2,7 +2,7 @@
 
 # DeadInput
 
-`class DeadInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/DeadInput.kt#L17)
+`class DeadInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Input with no data.
 

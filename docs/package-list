@@ -10,7 +10,6 @@ nnl.rocks.kactoos.iterable
 nnl.rocks.kactoos.iterator
 nnl.rocks.kactoos.list
 nnl.rocks.kactoos.map
-nnl.rocks.kactoos.matchers
 nnl.rocks.kactoos.scalar
 nnl.rocks.kactoos.text
 nnl.rocks.kactoos.time

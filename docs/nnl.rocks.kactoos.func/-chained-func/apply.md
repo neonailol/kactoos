@@ -2,7 +2,7 @@
 
 # apply
 
-`fun apply(input: `[`X`](index.md#X)`): `[`Z`](index.md#Z) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/ChainedFunc.kt#L32)
+`fun apply(input: `[`X`](index.md#X)`): `[`Z`](index.md#Z)
 
 Overrides [Func.apply](../../nnl.rocks.kactoos/-func/apply.md)
 

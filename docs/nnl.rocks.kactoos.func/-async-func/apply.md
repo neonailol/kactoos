@@ -2,7 +2,7 @@
 
 # apply
 
-`fun apply(input: `[`X`](index.md#X)`): `[`Future`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html)`<`[`Y`](index.md#Y)`>` [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/func/AsyncFunc.kt#L69)
+`fun apply(input: `[`X`](index.md#X)`): `[`Future`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html)`<`[`Y`](index.md#Y)`>`
 
 Overrides [Func.apply](../../nnl.rocks.kactoos/-func/apply.md)
 

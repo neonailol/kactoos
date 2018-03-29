@@ -2,7 +2,7 @@
 
 # LengthOf
 
-`class LengthOf : `[`NumberEnvelope`](../../nnl.rocks.kactoos.scalar/-number-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/LengthOf.kt#L17)
+`class LengthOf : `[`NumberEnvelope`](../../nnl.rocks.kactoos.scalar/-number-envelope/index.md)
 
 Length of [Input](../../nnl.rocks.kactoos/-input/index.md).
 

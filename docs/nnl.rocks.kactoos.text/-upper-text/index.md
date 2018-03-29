@@ -2,7 +2,7 @@
 
 # UpperText
 
-`class UpperText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/UpperText.kt#L17)
+`class UpperText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Text in upper case.
 

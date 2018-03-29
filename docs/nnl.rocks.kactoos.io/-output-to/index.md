@@ -2,7 +2,7 @@
 
 # OutputTo
 
-`class OutputTo : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/OutputTo.kt#L21)
+`class OutputTo : `[`Output`](../../nnl.rocks.kactoos/-output/index.md)
 
 An [Output](../../nnl.rocks.kactoos/-output/index.md) that encapsulates other destination for the data.
 

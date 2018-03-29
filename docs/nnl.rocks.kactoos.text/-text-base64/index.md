@@ -2,7 +2,7 @@
 
 # TextBase64
 
-`class TextBase64 : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/TextBase64.kt#L17)
+`class TextBase64 : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Encodes the origin text using the Base64 encoding scheme.
 

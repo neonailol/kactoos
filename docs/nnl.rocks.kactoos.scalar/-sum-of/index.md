@@ -2,7 +2,7 @@
 
 # SumOf
 
-`class SumOf : `[`NumberEnvelope`](../-number-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/SumOf.kt#L28)
+`class SumOf : `[`NumberEnvelope`](../-number-envelope/index.md)
 
 Represents total sum of given numbers.
 

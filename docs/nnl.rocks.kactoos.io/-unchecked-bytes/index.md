@@ -2,7 +2,7 @@
 
 # UncheckedBytes
 
-`class UncheckedBytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/UncheckedBytes.kt#L18)
+`class UncheckedBytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)
 
 Bytes that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html).
 

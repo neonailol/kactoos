@@ -2,7 +2,7 @@
 
 # GzipOutput
 
-`class GzipOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/GzipOutput.kt#L15)
+`class GzipOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md)
 
 Output that writes compressed data in the GZIP file format.
 

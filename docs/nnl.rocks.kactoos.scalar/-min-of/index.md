@@ -2,7 +2,7 @@
 
 # MinOf
 
-`class MinOf : `[`NumberEnvelope`](../-number-envelope/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/MinOf.kt#L31)
+`class MinOf : `[`NumberEnvelope`](../-number-envelope/index.md)
 
 Find the smaller among items.
 

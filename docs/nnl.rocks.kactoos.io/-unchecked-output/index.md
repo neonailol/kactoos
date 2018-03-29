@@ -2,7 +2,7 @@
 
 # UncheckedOutput
 
-`class UncheckedOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/UncheckedOutput.kt#L18)
+`class UncheckedOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md)
 
 Input that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html).
 

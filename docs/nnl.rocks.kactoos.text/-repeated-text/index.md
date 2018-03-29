@@ -2,7 +2,7 @@
 
 # RepeatedText
 
-`class RepeatedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/RepeatedText.kt#L18)
+`class RepeatedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Repeat an text count times.
 

@@ -2,7 +2,7 @@
 
 # InputOf
 
-`class InputOf : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/InputOf.kt#L30)
+`class InputOf : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 An [Input](../../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data.
 

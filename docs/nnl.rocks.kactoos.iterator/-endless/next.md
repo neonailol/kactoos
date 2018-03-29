@@ -2,4 +2,4 @@
 
 # next
 
-`fun next(): `[`T`](index.md#T) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/iterator/Endless.kt#L34)
+`fun next(): `[`T`](index.md#T)

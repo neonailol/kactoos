@@ -2,7 +2,7 @@
 
 # SyncInput
 
-`class SyncInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/SyncInput.kt#L15)
+`class SyncInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Thread-safe [Input](../../nnl.rocks.kactoos/-input/index.md).
 

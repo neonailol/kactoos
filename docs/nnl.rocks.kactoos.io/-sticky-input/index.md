@@ -2,7 +2,7 @@
 
 # StickyInput
 
-`class StickyInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/StickyInput.kt#L27)
+`class StickyInput : `[`Input`](../../nnl.rocks.kactoos/-input/index.md)
 
 Input that reads only once.
 

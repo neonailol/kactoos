@@ -53,7 +53,6 @@ Kactoos.
 | [nnl.rocks.kactoos.scalar.Folded](../nnl.rocks.kactoos.scalar/-folded/index.md) | Folds iterable via BiFunc. |
 | [nnl.rocks.kactoos.text.FormattedText](../nnl.rocks.kactoos.text/-formatted-text/index.md) | Text in Sprinf format. |
 | [nnl.rocks.kactoos.Func](../nnl.rocks.kactoos/-func/index.md) | Function. |
-| [nnl.rocks.kactoos.matchers.FuncApplies](../nnl.rocks.kactoos.matchers/-func-applies/index.md) | Matcher for the value. |
 | [nnl.rocks.kactoos.func.FuncOf](../nnl.rocks.kactoos.func/-func-of/index.md) | Represents many possible inputs as [Func](../nnl.rocks.kactoos/-func/index.md). |
 | [nnl.rocks.kactoos.func.FuncWithFallback](../nnl.rocks.kactoos.func/-func-with-fallback/index.md) | Func with a fallback plan. |
 | [nnl.rocks.kactoos.map.Grouped](../nnl.rocks.kactoos.map/-grouped/index.md) | Iterable as [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html). |
@@ -61,7 +60,6 @@ Kactoos.
 | [nnl.rocks.kactoos.io.GzipOutput](../nnl.rocks.kactoos.io/-gzip-output/index.md) | Output that writes compressed data in the GZIP file format. |
 | [nnl.rocks.kactoos.text.HexOf](../nnl.rocks.kactoos.text/-hex-of/index.md) | Hexadecimal representation of Bytes. |
 | [nnl.rocks.kactoos.Input](../nnl.rocks.kactoos/-input/index.md) | Input. |
-| [nnl.rocks.kactoos.matchers.InputHasContent](../nnl.rocks.kactoos.matchers/-input-has-content/index.md) | Matcher for the input. |
 | [nnl.rocks.kactoos.io.InputOf](../nnl.rocks.kactoos.io/-input-of/index.md) | An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.io.InputStreamOf](../nnl.rocks.kactoos.io/-input-stream-of/index.md) | An [InputStream](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.io.InputWithFallback](../nnl.rocks.kactoos.io/-input-with-fallback/index.md) | Input that returns an alternative input if the main one throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html). |
@@ -116,7 +114,6 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.Mapped](../nnl.rocks.kactoos.iterable/-mapped/index.md) | Mapped iterable. |
 | [nnl.rocks.kactoos.iterator.Mapped](../nnl.rocks.kactoos.iterator/-mapped/index.md) | Mapped iterator. |
 | [nnl.rocks.kactoos.list.Mapped](../nnl.rocks.kactoos.list/-mapped/index.md) | Mapped list. |
-| [nnl.rocks.kactoos.matchers.MatcherOf](../nnl.rocks.kactoos.matchers/-matcher-of/index.md) | Func as Matcher. |
 | [nnl.rocks.kactoos.scalar.MaxOf](../nnl.rocks.kactoos.scalar/-max-of/index.md) | Find the greater among items. |
 | [nnl.rocks.kactoos.io.Md5DigestOf](../nnl.rocks.kactoos.io/-md5-digest-of/index.md) | MD5 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.scalar.MinOf](../nnl.rocks.kactoos.scalar/-min-of/index.md) | Find the smaller among items. |
@@ -153,9 +150,7 @@ Kactoos.
 | [nnl.rocks.kactoos.text.ReversedText](../nnl.rocks.kactoos.text/-reversed-text/index.md) | Reverse the Text. |
 | [nnl.rocks.kactoos.text.RotatedText](../nnl.rocks.kactoos.text/-rotated-text/index.md) | Rotate (circular shift) a String of shift characters. |
 | [nnl.rocks.kactoos.func.RunnableOf](../nnl.rocks.kactoos.func/-runnable-of/index.md) | Func as Runnable. |
-| [nnl.rocks.kactoos.matchers.RunsInThreads](../nnl.rocks.kactoos.matchers/-runs-in-threads/index.md) | Matcher for [Func](../nnl.rocks.kactoos/-func/index.md) that must run in multiple threads. |
 | [nnl.rocks.kactoos.Scalar](../nnl.rocks.kactoos/-scalar/index.md) | Scalar. |
-| [nnl.rocks.kactoos.matchers.ScalarHasValue](../nnl.rocks.kactoos.matchers/-scalar-has-value/index.md) | Matcher for the value. |
 | [nnl.rocks.kactoos.io.Sha1DigestOf](../nnl.rocks.kactoos.io/-sha1-digest-of/index.md) | SHA-1 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.io.Sha256DigestOf](../nnl.rocks.kactoos.io/-sha256-digest-of/index.md) | SHA-256 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.collection.Shuffled](../nnl.rocks.kactoos.collection/-shuffled/index.md) | Sorted collection. |
@@ -212,7 +207,6 @@ Kactoos.
 | [nnl.rocks.kactoos.scalar.Ternary](../nnl.rocks.kactoos.scalar/-ternary/index.md) | Ternary operation. |
 | [nnl.rocks.kactoos.Text](../nnl.rocks.kactoos/-text/index.md) | Text. |
 | [nnl.rocks.kactoos.text.TextBase64](../nnl.rocks.kactoos.text/-text-base64/index.md) | Encodes the origin text using the Base64 encoding scheme. |
-| [nnl.rocks.kactoos.matchers.TextHasString](../nnl.rocks.kactoos.matchers/-text-has-string/index.md) | Matcher for the content. |
 | [nnl.rocks.kactoos.text.TextOf](../nnl.rocks.kactoos.text/-text-of/index.md) | TextOf |
 | [nnl.rocks.kactoos.text.TrimmedLeftText](../nnl.rocks.kactoos.text/-trimmed-left-text/index.md) | Text without control characters (char &amp;lt;= 32) only from left. |
 | [nnl.rocks.kactoos.text.TrimmedRightText](../nnl.rocks.kactoos.text/-trimmed-right-text/index.md) | Text without control characters (char &amp;lt;= 32) only from right. |

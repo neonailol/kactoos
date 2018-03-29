@@ -2,7 +2,7 @@
 
 # value
 
-`fun value(): `[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/PropertiesOf.kt#L89)
+`fun value(): `[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)
 
 Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
 

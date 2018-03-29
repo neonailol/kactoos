@@ -2,7 +2,7 @@
 
 # JoinedText
 
-`class JoinedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/text/JoinedText.kt#L22)
+`class JoinedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Join a Text.
 

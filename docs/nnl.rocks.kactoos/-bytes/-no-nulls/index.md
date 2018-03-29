@@ -2,7 +2,7 @@
 
 # NoNulls
 
-`class NoNulls : `[`Bytes`](../index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/Bytes.kt#L25)
+`class NoNulls : `[`Bytes`](../index.md)
 
 ### Constructors
 

@@ -2,7 +2,7 @@
 
 # StdoutOutput
 
-`class StdoutOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/StdoutOutput.kt#L17)
+`class StdoutOutput : `[`Output`](../../nnl.rocks.kactoos/-output/index.md)
 
 Output that writes to `stdout`.
 

@@ -2,7 +2,7 @@
 
 # ZonedDateTimeAsText
 
-`class ZonedDateTimeAsText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/time/ZonedDateTimeAsText.kt#L17)
+`class ZonedDateTimeAsText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
 
 Formatter for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances.
 

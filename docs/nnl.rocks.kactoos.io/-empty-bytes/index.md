@@ -2,7 +2,7 @@
 
 # EmptyBytes
 
-`class EmptyBytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md) [(source)](https://github.com/neonailol/kactoos/blob/master/kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/io/EmptyBytes.kt#L15)
+`class EmptyBytes : `[`Bytes`](../../nnl.rocks.kactoos/-bytes/index.md)
 
 Bytes with no data.
 
