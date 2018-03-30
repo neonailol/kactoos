@@ -1,4 +1,4 @@
-import org.junit.Test
+import org.testng.annotations.Test
 import kotlin.reflect.KClass
 import kotlin.test.assertEquals
 

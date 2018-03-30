@@ -1,5 +1,6 @@
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.gradle.LinkMapping
+import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
 plugins {
     id("maven")
@@ -27,6 +28,16 @@ configurations {
                 filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
             }
         )
+    }
+
+    ktlint {
+        version = "0.21.0"
+        debug = true
+        verbose = true
+        android = false
+        outputToConsole = true
+        reporters = arrayOf(ReporterType.PLAIN_GROUP_BY_FILE, ReporterType.CHECKSTYLE)
+        ignoreFailures = true
     }
 }
 

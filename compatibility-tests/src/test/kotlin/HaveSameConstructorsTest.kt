@@ -1,6 +1,6 @@
-import org.junit.Test
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
+import org.testng.annotations.Test
 
 class HaveSameConstructorsTest {
 
