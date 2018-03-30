@@ -5,10 +5,10 @@ import org.testng.annotations.Test
 import kotlin.reflect.KClass
 import kotlin.test.assertEquals
 
-class HaveSameSupertypesTest {
+class HaveSameInterfacesTest {
 
     @Test
-    fun haveSameSupertypes() {
+    fun haveSameInterfaces() {
         val cactoosTypes = Reflections(
             "org.cactoos",
             SubTypesScanner(false)
@@ -39,19 +39,18 @@ class HaveSameSupertypesTest {
             try {
                 val cClass = Class.forName("org.cactoos.$kType")
                 val kClass = Class.forName("nnl.rocks.kactoos.$kType")
-                haveSameSupertypes(cClass.kotlin, kClass.kotlin)
+                haveSameInterfaces(cClass.kotlin, kClass.kotlin)
             } catch (t: Throwable) {
             }
         }
-
     }
 
-    private fun haveSameSupertypes(
+    private fun haveSameInterfaces(
         first: KClass<*>,
         second: KClass<*>
     ) {
         val map = { type: KClass<*> ->
-            ClassUtils.getAllSuperclasses(type.java).map {
+            ClassUtils.getAllInterfaces(type.java).map {
                 it.toString()
             }.map {
                 it.replaceBeforeLast('.', "")
@@ -60,5 +59,9 @@ class HaveSameSupertypesTest {
         val firstTypes = map(first)
         val secondTypes = map(second)
         assertEquals(firstTypes, secondTypes)
+
+        if (firstTypes.size > 1 || secondTypes.size > 1) {
+            println()
+        }
     }
 }

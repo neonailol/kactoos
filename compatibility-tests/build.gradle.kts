@@ -13,6 +13,8 @@ dependencies {
     testCompile("org.reflections:reflections:0.9.11")
     testCompile("org.testng:testng:6.14.3")
     testCompile("org.assertj:assertj-core:3.9.1")
+    testCompile("org.assertj:assertj-core:3.9.1")
+    testCompile("org.apache.commons:commons-lang3:3.7")
 }
 
 tasks {
