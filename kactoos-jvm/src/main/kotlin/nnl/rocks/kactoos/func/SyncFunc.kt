@@ -20,10 +20,6 @@ class SyncFunc<X : Any, Y : Any>(
 
     constructor(func: Func<X, Y>) : this(func, func)
 
-    constructor(proc: Proc<X>) : this(FuncOf(proc))
-
-    constructor(runnable: Runnable) : this(FuncOf(runnable))
-
     /**
      * @param runnable Func original
      * @since 0.12

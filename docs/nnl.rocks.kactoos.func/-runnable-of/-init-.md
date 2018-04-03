@@ -15,9 +15,7 @@
 
 ### Parameters
 
-`proc` - Encapsulated proc`RunnableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`X`](index.md#X)`>)`
-`RunnableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>)`
-`RunnableOf(callable: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`X`](index.md#X)`>)``RunnableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`X`](index.md#X)`>, input: `[`X`](index.md#X)`)`
+`proc` - Encapsulated proc`RunnableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`X`](index.md#X)`>, input: `[`X`](index.md#X)`)`
 
 Func as Runnable.
 

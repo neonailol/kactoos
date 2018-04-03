@@ -20,9 +20,7 @@
 **Since**
 0.12
 
-`CallableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`>)`
-`CallableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>)`
-`CallableOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`)``CallableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`>, input: `[`X`](index.md#X)`)`
+`CallableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`>, input: `[`X`](index.md#X)`)`
 
 Func as [Callable](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html).
 

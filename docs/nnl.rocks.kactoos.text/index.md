@@ -2,6 +2,7 @@
 
 ## Package nnl.rocks.kactoos.text
 
+
 Text.
 
 ### Types

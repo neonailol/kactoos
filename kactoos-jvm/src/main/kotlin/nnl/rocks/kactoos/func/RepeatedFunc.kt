@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.dummy
 
 /**
  * Func that repeats its calculation a few times before returning the last result.
@@ -29,11 +28,6 @@ class RepeatedFunc<X : Any, Y : Any>(
         result: Y,
         max: Int
     ) : this(FuncOf { input -> proc.exec(input); result }, max)
-
-    constructor(
-        proc: Proc<X>,
-        max: Int
-    ) : this(proc, dummy(), max)
 
     @Throws(Exception::class)
     override fun apply(input: X): Y {

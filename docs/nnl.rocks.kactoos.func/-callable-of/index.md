@@ -32,7 +32,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `CallableOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`, input: `[`X`](index.md#X)`, result: `[`T`](index.md#T)`)`<br>`CallableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, input: `[`X`](index.md#X)`, result: `[`T`](index.md#T)`)`<br>`CallableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`>)`<br>`CallableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>)`<br>`CallableOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`)``CallableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`>, input: `[`X`](index.md#X)`)`<br>Func as [Callable](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html). |
+| [&lt;init&gt;](-init-.md) | `CallableOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`, input: `[`X`](index.md#X)`, result: `[`T`](index.md#T)`)`<br>`CallableOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, input: `[`X`](index.md#X)`, result: `[`T`](index.md#T)`)``CallableOf(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`>, input: `[`X`](index.md#X)`)`<br>Func as [Callable](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html). |
 
 ### Functions
 

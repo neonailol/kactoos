@@ -64,18 +64,6 @@ class RetryFunc<X : Any, Y : Any>(
 
     constructor(func: Func<X, Y>) : this(func, 3)
 
-    constructor(proc: Proc<X>) : this(FuncOf(proc))
-
-    constructor(
-        proc: Proc<X>,
-        attempts: Int
-    ) : this(FuncOf(proc), attempts)
-
-    constructor(
-        proc: Proc<X>,
-        func: Func<Int, Boolean>
-    ) : this(FuncOf(proc), func)
-
     @Throws(Exception::class)
     @Suppress("TooGenericExceptionCaught")
     override fun apply(input: X): Y {

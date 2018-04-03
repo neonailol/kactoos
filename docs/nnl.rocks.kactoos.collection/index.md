@@ -2,6 +2,7 @@
 
 ## Package nnl.rocks.kactoos.collection
 
+
 Collections.
 
 ### Types

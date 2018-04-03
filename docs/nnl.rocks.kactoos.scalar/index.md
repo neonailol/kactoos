@@ -2,6 +2,7 @@
 
 ## Package nnl.rocks.kactoos.scalar
 
+
 Scalars.
 
 ### Types

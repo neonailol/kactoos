@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.func
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.dummy
 import java.util.concurrent.Callable
 
 /**
@@ -38,18 +37,6 @@ class FuncOf<in X : Any, out Y : Any>(
         proc: Proc<X>,
         result: Y
     ) : this({ proc.exec(it); result })
-
-    /**
-     * @param proc The proc
-     * @throws NullPointerException if you try to use result of [apply]
-     */
-    constructor(proc: Proc<X>) : this({ proc.exec(it); dummy() })
-
-    /**
-     * @param runnable The runnable
-     * @throws NullPointerException if you try to use result of [apply]
-     */
-    constructor(runnable: Runnable) : this({ runnable.run(); dummy() })
 
     @Throws(Exception::class)
     override fun apply(input: X): Y = this.func(input)

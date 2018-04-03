@@ -52,20 +52,6 @@ class AsyncFunc<X : Any, Y : Any> constructor(
 
     constructor(fnc: Func<X, Y>) : this(fnc, Executors.defaultThreadFactory())
 
-    constructor(
-        proc: Proc<X>,
-        executor: ExecutorService
-    ) : this(FuncOf(proc), executor)
-
-    constructor(
-        proc: Proc<X>
-    ) : this(FuncOf(proc))
-
-    constructor(
-        proc: Proc<X>,
-        threadFactory: ThreadFactory
-    ) : this(FuncOf(proc), threadFactory)
-
     override fun apply(input: X): Future<Y> = this.executor.submit<Y> { this.func.apply(input) }
 
     override fun exec(input: X) {

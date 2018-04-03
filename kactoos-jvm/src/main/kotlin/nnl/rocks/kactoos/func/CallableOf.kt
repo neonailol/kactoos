@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.dummy
 import java.util.concurrent.Callable
 
 /**
@@ -47,12 +46,6 @@ class CallableOf<X : Any, T : Any>(
         input: X,
         result: T
     ) : this(FuncOf { it -> proc.exec(it); result }, input)
-
-    constructor(func: Func<X, T>) : this(func, dummy())
-
-    constructor(proc: Proc<X>) : this(proc, dummy(), dummy())
-
-    constructor(runnable: Runnable) : this(FuncOf(runnable))
 
     @Throws(Exception::class)
     override fun call(): T = this.func.apply(this.input)

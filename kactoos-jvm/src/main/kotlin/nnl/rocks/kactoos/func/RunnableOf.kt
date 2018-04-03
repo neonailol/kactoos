@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.dummy
 
 import java.util.concurrent.Callable
 
@@ -37,12 +36,6 @@ class RunnableOf<X : Any>(
         proc: Proc<X>,
         input: X
     ) : this(CallableOf(proc, input, input), input)
-
-    constructor(func: Func<X, X>) : this(func, dummy())
-
-    constructor(proc: Proc<X>) : this(proc, dummy())
-
-    constructor(callable: Callable<X>) : this(FuncOf(callable))
 
     override fun run() {
         UncheckedFunc(this.func).apply(this.input)

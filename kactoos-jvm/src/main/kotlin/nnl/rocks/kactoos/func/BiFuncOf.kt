@@ -1,10 +1,6 @@
 package nnl.rocks.kactoos.func
 
-import nnl.rocks.kactoos.BiFunc
-import nnl.rocks.kactoos.BiProc
-import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.KBiFunc
-import nnl.rocks.kactoos.Proc
+import nnl.rocks.kactoos.*
 import java.util.concurrent.Callable
 
 /**
@@ -59,10 +55,6 @@ class BiFuncOf<in X : Any, in Y : Any, out Z : Any>(
      * @param callable The callable
      */
     constructor(callable: Callable<Z>) : this({ _: X, _: Y -> callable.call() })
-
-    constructor(proc: Proc<X>) : this(FuncOf(proc))
-
-    constructor(runnable: Runnable) : this(FuncOf(runnable))
 
     /**
      * @param runnable The runnable
