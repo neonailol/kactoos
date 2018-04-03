@@ -14,7 +14,7 @@ dependencies {
     "expectedBy"(project(":kactoos-common"))
     "implementation"(kotlin("stdlib-jdk8"))
     "testCompile"(kotlin("test-testng"))
-    testCompile(Deps.testng)
+    testCompile(testng())
     "testCompile"("org.assertj:assertj-core:3.9.1")
 }
 
