@@ -5,7 +5,7 @@ package nnl.rocks.kactoos
  *
  * @since 0.2
  */
-expect interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
+interface BiFunc<in X : Any, in Y : Any, out Z : Any> {
 
     /**
      * Apply it.
