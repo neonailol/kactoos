@@ -12,10 +12,6 @@ Execute it.
 
 `input` - The argument
 
-### Exceptions
-
-`Exception` - If fails
-
 **Since**
 0.2
 

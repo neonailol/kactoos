@@ -6,7 +6,7 @@ package nnl.rocks.kactoos
  * @param X Type of input
  * @since 0.2
  */
-expect interface Proc<in X : Any> {
+interface Proc<in X : Any> {
 
     /**
      * Execute it.

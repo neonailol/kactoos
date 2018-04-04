@@ -2,7 +2,7 @@
 
 # Proc
 
-`expect interface Proc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
+`interface Proc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
 
 Procedure.
 
@@ -12,12 +12,6 @@ Procedure.
 
 **Since**
 0.2
-
-### Types
-
-| Name | Summary |
-|---|---|
-| [NoNulls](-no-nulls/index.md) | `class NoNulls<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Proc`](./index.md)`<`[`X`](-no-nulls/index.md#X)`>` |
 
 ### Functions
 
@@ -31,6 +25,5 @@ Procedure.
 |---|---|
 | [AsyncFunc](../../nnl.rocks.kactoos.func/-async-func/index.md) | `class AsyncFunc<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](../-func/index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-async-func/index.md#X)`, `[`Future`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html)`<`[`Y`](../../nnl.rocks.kactoos.func/-async-func/index.md#Y)`>>, `[`Proc`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-async-func/index.md#X)`>`<br>Func that runs in the background. |
 | [IoCheckedProc](../../nnl.rocks.kactoos.func/-io-checked-proc/index.md) | `class IoCheckedProc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Proc`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-io-checked-proc/index.md#X)`>`<br>Proc that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [java.io.IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
-| [NoNulls](-no-nulls/index.md) | `class NoNulls<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Proc`](./index.md)`<`[`X`](-no-nulls/index.md#X)`>` |
 | [ProcOf](../../nnl.rocks.kactoos.func/-proc-of/index.md) | `class ProcOf<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Proc`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-proc-of/index.md#X)`>`<br>Func as Proc. |
 | [UncheckedProc](../../nnl.rocks.kactoos.func/-unchecked-proc/index.md) | `class UncheckedProc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Proc`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-unchecked-proc/index.md#X)`>`<br>Proc that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |

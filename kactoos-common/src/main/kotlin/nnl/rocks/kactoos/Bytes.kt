@@ -5,7 +5,7 @@ package nnl.rocks.kactoos
  *
  * @since 0.2
  */
-expect interface Bytes {
+interface Bytes {
 
     /**
      * Convert it to the byte array.

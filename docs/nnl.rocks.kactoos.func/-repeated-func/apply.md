@@ -12,10 +12,6 @@ Apply it.
 
 `input` - The argument
 
-### Exceptions
-
-`Exception` - If fails
-
 **Return**
 The result of type [Y](index.md#Y)
 

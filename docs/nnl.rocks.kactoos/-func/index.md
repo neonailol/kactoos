@@ -2,18 +2,12 @@
 
 # Func
 
-`expect interface Func<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
+`interface Func<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
 
 Function.
 
 **Since**
 0.2
-
-### Types
-
-| Name | Summary |
-|---|---|
-| [NoNulls](-no-nulls/index.md) | `class NoNulls<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](./index.md)`<`[`X`](-no-nulls/index.md#X)`, `[`Y`](-no-nulls/index.md#Y)`>` |
 
 ### Functions
 
@@ -30,7 +24,6 @@ Function.
 | [FuncOf](../../nnl.rocks.kactoos.func/-func-of/index.md) | `class FuncOf<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-func-of/index.md#X)`, `[`Y`](../../nnl.rocks.kactoos.func/-func-of/index.md#Y)`>`<br>Represents many possible inputs as [Func](./index.md). |
 | [FuncWithFallback](../../nnl.rocks.kactoos.func/-func-with-fallback/index.md) | `class FuncWithFallback<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-func-with-fallback/index.md#X)`, `[`Y`](../../nnl.rocks.kactoos.func/-func-with-fallback/index.md#Y)`>`<br>Func with a fallback plan. |
 | [IoCheckedFunc](../../nnl.rocks.kactoos.func/-io-checked-func/index.md) | `class IoCheckedFunc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-io-checked-func/index.md#X)`, `[`Y`](../../nnl.rocks.kactoos.func/-io-checked-func/index.md#Y)`>`<br>Func that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
-| [NoNulls](-no-nulls/index.md) | `class NoNulls<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](./index.md)`<`[`X`](-no-nulls/index.md#X)`, `[`Y`](-no-nulls/index.md#Y)`>` |
 | [RepeatedFunc](../../nnl.rocks.kactoos.func/-repeated-func/index.md) | `class RepeatedFunc<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-repeated-func/index.md#X)`, `[`Y`](../../nnl.rocks.kactoos.func/-repeated-func/index.md#Y)`>`<br>Func that repeats its calculation a few times before returning the last result. If [times](#) is equal or less than zero [RepeatedFunc.apply](../../nnl.rocks.kactoos.func/-repeated-func/apply.md) will return an exception. |
 | [RetryFunc](../../nnl.rocks.kactoos.func/-retry-func/index.md) | `class RetryFunc<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-retry-func/index.md#X)`, `[`Y`](../../nnl.rocks.kactoos.func/-retry-func/index.md#Y)`>`<br>Func that will try a few times before throwing an exception. |
 | [SolidFunc](../../nnl.rocks.kactoos.func/-solid-func/index.md) | `class SolidFunc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Func`](./index.md)`<`[`X`](../../nnl.rocks.kactoos.func/-solid-func/index.md#X)`, `[`Y`](../../nnl.rocks.kactoos.func/-solid-func/index.md#Y)`>`<br>Func that is thread-safe and sticky. |

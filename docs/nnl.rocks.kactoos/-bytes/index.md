@@ -2,18 +2,12 @@
 
 # Bytes
 
-`expect interface Bytes`
+`interface Bytes`
 
 Bytes.
 
 **Since**
 0.2
-
-### Types
-
-| Name | Summary |
-|---|---|
-| [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Bytes`](./index.md) |
 
 ### Functions
 
@@ -30,6 +24,5 @@ Bytes.
 | [BytesOf](../../nnl.rocks.kactoos.io/-bytes-of/index.md) | `class BytesOf : `[`Bytes`](./index.md)<br>A [Bytes](./index.md) that encapsulates other sources of data. |
 | [DigestEnvelope](../../nnl.rocks.kactoos.io/-digest-envelope/index.md) | `abstract class DigestEnvelope : `[`Bytes`](./index.md)<br>Digest Envelope. |
 | [EmptyBytes](../../nnl.rocks.kactoos.io/-empty-bytes/index.md) | `class EmptyBytes : `[`Bytes`](./index.md)<br>Bytes with no data. |
-| [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Bytes`](./index.md) |
 | [ReaderAsBytes](../../nnl.rocks.kactoos.io/-reader-as-bytes/index.md) | `class ReaderAsBytes : `[`Bytes`](./index.md)<br>Reader as [Bytes](./index.md). |
 | [UncheckedBytes](../../nnl.rocks.kactoos.io/-unchecked-bytes/index.md) | `class UncheckedBytes : `[`Bytes`](./index.md)<br>Bytes that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |

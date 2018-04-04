@@ -10,14 +10,14 @@ Top level package
 | Name | Summary |
 |---|---|
 | [BiFunc](-bi-func/index.md) | `interface BiFunc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Z : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Function that accepts two arguments. |
-| [BiProc](-bi-proc/index.md) | `expect interface BiProc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Proc that accepts two arguments. |
-| [Bytes](-bytes/index.md) | `expect interface Bytes`<br>Bytes. |
-| [Func](-func/index.md) | `expect interface Func<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Function. |
+| [BiProc](-bi-proc/index.md) | `interface BiProc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, in Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Proc that accepts two arguments. |
+| [Bytes](-bytes/index.md) | `interface Bytes`<br>Bytes. |
+| [Func](-func/index.md) | `interface Func<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Function. |
 | [Input](-input/index.md) | `interface Input`<br>Input. |
 | [Output](-output/index.md) | `interface Output`<br>Output. |
-| [Proc](-proc/index.md) | `expect interface Proc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Procedure. |
-| [Scalar](-scalar/index.md) | `expect interface Scalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Scalar. |
-| [Text](-text/index.md) | `expect interface Text`<br>Text. |
+| [Proc](-proc/index.md) | `interface Proc<in X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Procedure. |
+| [Scalar](-scalar/index.md) | `interface Scalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`<br>Scalar. |
+| [Text](-text/index.md) | `interface Text`<br>Text. |
 
 ### Type Aliases
 

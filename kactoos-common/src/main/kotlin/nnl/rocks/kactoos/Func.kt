@@ -5,7 +5,7 @@ package nnl.rocks.kactoos
  *
  * @since 0.2
  */
-expect interface Func<in X : Any, out Y : Any> {
+interface Func<in X : Any, out Y : Any> {
 
     /**
      * Apply it.

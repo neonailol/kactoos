@@ -5,7 +5,7 @@ package nnl.rocks.kactoos
  *
  * @since 0.2
  */
-expect interface BiProc<in X : Any, in Y : Any> {
+interface BiProc<in X : Any, in Y : Any> {
 
     /**
      * Execute it.

@@ -2,18 +2,12 @@
 
 # Text
 
-`expect interface Text`
+`interface Text`
 
 Text.
 
 **Since**
 0.2
-
-### Types
-
-| Name | Summary |
-|---|---|
-| [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Text`](./index.md) |
 
 ### Functions
 
@@ -35,7 +29,6 @@ Text.
 | [LocalDateAsText](../../nnl.rocks.kactoos.time/-local-date-as-text/index.md) | `class LocalDateAsText : `[`Text`](./index.md)<br>Formatter for [LocalDate](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) instances. |
 | [LocalDateTimeAsText](../../nnl.rocks.kactoos.time/-local-date-time-as-text/index.md) | `class LocalDateTimeAsText : `[`Text`](./index.md)<br>Formatter for [LocalDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) instances. |
 | [LowerText](../../nnl.rocks.kactoos.text/-lower-text/index.md) | `class LowerText : `[`Text`](./index.md)<br>Text in lower case. |
-| [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Text`](./index.md) |
 | [NormalizedText](../../nnl.rocks.kactoos.text/-normalized-text/index.md) | `class NormalizedText : `[`Text`](./index.md)<br>Normalize (replace sequences of whitespace characters by a single space) a Text. |
 | [OffsetDateTimeAsText](../../nnl.rocks.kactoos.time/-offset-date-time-as-text/index.md) | `class OffsetDateTimeAsText : `[`Text`](./index.md)<br>Formatter for [OffsetDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) instances. |
 | [RepeatedText](../../nnl.rocks.kactoos.text/-repeated-text/index.md) | `class RepeatedText : `[`Text`](./index.md)<br>Repeat an text count times. |

@@ -8,12 +8,8 @@ Overrides [Text.asString](../../nnl.rocks.kactoos/-text/as-string.md)
 
 Convert it to the string.
 
-### Exceptions
-
-`IOException` - If fails
-
 **Return**
-The string
+The string.
 
 **Since**
 0.2

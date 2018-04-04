@@ -2,7 +2,7 @@
 
 # Scalar
 
-`expect interface Scalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
+`interface Scalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>`
 
 Scalar.
 
@@ -12,12 +12,6 @@ Scalar.
 
 **Since**
 0.2
-
-### Types
-
-| Name | Summary |
-|---|---|
-| [NoNulls](-no-nulls/index.md) | `class NoNulls<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](./index.md)`<`[`T`](-no-nulls/index.md#T)`>` |
 
 ### Functions
 
@@ -45,7 +39,6 @@ Scalar.
 | [IsBlank](../../nnl.rocks.kactoos.text/-is-blank/index.md) | `class IsBlank : `[`Scalar`](./index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Determines if text is blank (consists of spaces) or no. |
 | [ItemAt](../../nnl.rocks.kactoos.scalar/-item-at/index.md) | `class ItemAt<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](./index.md)`<`[`T`](../../nnl.rocks.kactoos.scalar/-item-at/index.md#T)`>`<br>Element from position in [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) or fallback value if iterator hasn't this position. |
 | [LocalDateTimeOf](../../nnl.rocks.kactoos.time/-local-date-time-of/index.md) | `class LocalDateTimeOf : `[`Scalar`](./index.md)`<`[`LocalDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)`>`<br>Parser for [LocalDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) instances. Parses the date using the formatter to create [LocalDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) instances. |
-| [NoNulls](-no-nulls/index.md) | `class NoNulls<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](./index.md)`<`[`T`](-no-nulls/index.md#T)`>` |
 | [Not](../../nnl.rocks.kactoos.scalar/-not/index.md) | `class Not : `[`Scalar`](./index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Logical negative. |
 | [NumberEnvelope](../../nnl.rocks.kactoos.scalar/-number-envelope/index.md) | `open class NumberEnvelope : `[`Number`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html)`, `[`Scalar`](./index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`<br>Envelope for the [Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html). |
 | [NumberOf](../../nnl.rocks.kactoos.scalar/-number-of/index.md) | `class NumberOf : `[`NumberEnvelope`](../../nnl.rocks.kactoos.scalar/-number-envelope/index.md)`, `[`Scalar`](./index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`<br>Text as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html). |
