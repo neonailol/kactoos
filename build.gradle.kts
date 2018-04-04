@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     base
+    maven
     id("com.github.ben-manes.versions") version "0.17.0"
 }
 
@@ -18,6 +19,10 @@ buildscript {
 }
 
 allprojects {
+
+    plugins {
+        maven
+    }
 
     group = "nnl.rocks.kactoos"
     version = "1.0-SNAPSHOT"
@@ -62,7 +67,6 @@ allprojects {
         }
     }
 }
-
 
 tasks.withType<Wrapper> {
     distributionType = Wrapper.DistributionType.ALL

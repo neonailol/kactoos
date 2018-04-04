@@ -1,9 +1,11 @@
+import org.gradle.api.publication.maven.internal.pom.DefaultMavenPom
+import org.gradle.api.publish.maven.MavenPom
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.gradle.LinkMapping
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
 plugins {
-    id("maven")
+    maven
     id("kotlin-platform-jvm")
     id("org.jetbrains.dokka") version "0.9.16"
     id("io.gitlab.arturbosch.detekt") version "1.0.0.RC6-4"
@@ -65,10 +67,9 @@ tasks {
     "test"(Test::class) {
         useTestNG()
     }
-}
 
-tasks["check"].dependsOn("ktlintCheck")
+}
 
 tasks["assemble"].dependsOn("dokka")
 tasks["assemble"].dependsOn("detektCheck")
-
+tasks["check"].dependsOn("ktlintCheck")
