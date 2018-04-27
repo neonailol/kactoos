@@ -18,4 +18,6 @@ class MapNoNulls<K : Any, V : Any> private constructor(private val map: MutableM
             mapOf
         }.invoke()
     )
+
+    override fun get(key: K): V = map[key] !!
 }
