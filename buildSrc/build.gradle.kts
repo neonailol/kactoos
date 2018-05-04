@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.2.31"
+    kotlin("jvm") version "1.2.41"
 //    `embedded-kotlin` version "0.16.2"
 //    `kotlin-dsl` version "0.16.2"
 }

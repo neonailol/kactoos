@@ -22,3 +22,9 @@ There is no thread-safety guarantee.
 | Name | Summary |
 |---|---|
 | [&lt;init&gt;](-init-.md) | `MapNoNulls(map: `[`MapEnvelope`](../-map-envelope/index.md)`<`[`K`](index.md#K)`, `[`V`](index.md#V)`>)` |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [get](get.md) | `fun get(key: `[`K`](index.md#K)`): `[`V`](index.md#V) |

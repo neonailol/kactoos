@@ -13,16 +13,12 @@ buildscript {
     }
 
     dependencies {
-        classpath(kotlin("gradle-plugin", "1.2.31"))
-        classpath(kotlin("native-gradle-plugin", "0.6.2"))
+        classpath(kotlin("gradle-plugin", "1.2.41"))
+        classpath(kotlin("native-gradle-plugin", "0.7"))
     }
 }
 
 allprojects {
-
-    plugins {
-        maven
-    }
 
     group = "nnl.rocks.kactoos"
     version = "1.0-SNAPSHOT"
@@ -70,5 +66,5 @@ allprojects {
 
 tasks.withType<Wrapper> {
     distributionType = Wrapper.DistributionType.ALL
-    gradleVersion = "4.6"
+    gradleVersion = "4.7"
 }

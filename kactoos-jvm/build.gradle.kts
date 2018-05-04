@@ -9,7 +9,7 @@ plugins {
     id("kotlin-platform-jvm")
     id("org.jetbrains.dokka") version "0.9.16"
     id("io.gitlab.arturbosch.detekt") version "1.0.0.RC6-4"
-    id("org.jlleitschuh.gradle.ktlint") version "3.2.0"
+    id("org.jlleitschuh.gradle.ktlint") version "3.3.0"
 }
 
 dependencies {
@@ -33,7 +33,7 @@ configurations {
     }
 
     ktlint {
-        version = "0.21.0"
+        version = "0.23.0"
         debug = true
         verbose = true
         android = false
