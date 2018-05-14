@@ -6,6 +6,7 @@ import org.reflections.scanners.SubTypesScanner
 import org.testng.annotations.Test
 import kotlin.reflect.KClass
 import kotlin.reflect.KType
+import kotlin.reflect.full.allSupertypes
 import kotlin.test.assertEquals
 
 class HaveSameSupertypesTest {
@@ -44,7 +45,7 @@ class HaveSameSupertypesTest {
             FuncOf({ type: KClass<*> ->
                        Mapped(
                            FuncOf({ it: KType -> it.toString().replaceBeforeLast('.', "") }),
-                           type.supertypes
+                           type.allSupertypes
                        )
                    })
         val firstTypes = map.apply(first)

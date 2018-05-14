@@ -1,4 +1,6 @@
-import org.apache.commons.lang3.ClassUtils
+import nnl.rocks.kactoos.collection.Filtered
+import nnl.rocks.kactoos.collection.Mapped
+import nnl.rocks.kactoos.func.FuncOf
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 import org.testng.annotations.Test
@@ -9,31 +11,18 @@ class HaveSameInterfacesTest {
 
     @Test
     fun haveSameInterfaces() {
-        val cactoosTypes = Reflections(
-            "org.cactoos",
-            SubTypesScanner(false)
-        ).allTypes.map {
-            it.replace("org.cactoos.", "")
-        }
-            .sorted()
-            .toMutableList()
 
-        cactoosTypes.removeIf {
-            it.contains("\$")
-        }
-
-        val kactoosTypes = Reflections(
-            "nnl.rocks.kactoos",
-            SubTypesScanner(false)
-        ).allTypes.map {
-            it.replace("nnl.rocks.kactoos.", "")
-        }
-            .sorted()
-            .toMutableList()
-
-        kactoosTypes.removeIf {
-            it.endsWith("Kt")
-        }
+        val cactoosTypes =
+            Mapped(
+                FuncOf({ it: String -> it.replace("org.cactoos.", "") }),
+                Filtered(
+                    FuncOf({ it: String -> it.contains('$').not() }),
+                    Reflections(
+                        "org.cactoos",
+                        SubTypesScanner(false)
+                    ).allTypes
+                )
+            )
 
         cactoosTypes.forEach { kType: String ->
             try {
@@ -49,19 +38,16 @@ class HaveSameInterfacesTest {
         first: KClass<*>,
         second: KClass<*>
     ) {
-        val map = { type: KClass<*> ->
-            ClassUtils.getAllInterfaces(type.java).map {
-                it.toString()
-            }.map {
-                it.replaceBeforeLast('.', "")
-            }
-        }
-        val firstTypes = map(first)
-        val secondTypes = map(second)
+        val map =
+            FuncOf({ type: KClass<*> ->
+                       Mapped(
+                           FuncOf({ it: Class<*> -> it.toString().replaceBeforeLast('.', "") }),
+                           type.java.interfaces.asList()
+                       )
+                   })
+        val firstTypes = map.apply(first)
+        val secondTypes = map.apply(second)
         assertEquals(firstTypes, secondTypes)
-
-        if (firstTypes.size > 1 || secondTypes.size > 1) {
-            println()
-        }
     }
+
 }
