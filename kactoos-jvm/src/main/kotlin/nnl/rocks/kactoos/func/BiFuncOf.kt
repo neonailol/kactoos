@@ -88,7 +88,6 @@ class BiFuncOf<in X : Any, in Y : Any, out Z : Any>(
          * @return The result of type [Z]
          * @throws Exception If fails
          */
-        @Throws(Exception::class)
         override fun apply(
             first: X,
             second: Y

@@ -27,7 +27,7 @@ class DateOf(
 
     constructor (
         date: CharSequence
-    ) : this(date, Iso().get())
+    ) : this(date, Iso().invoke())
 
     /**
      * Parses the date using the provided format.

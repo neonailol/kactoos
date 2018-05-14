@@ -18,7 +18,7 @@ class OffsetDateTimeAsText constructor(
 
     constructor(
         date: OffsetDateTime,
-        formatter: DateTimeFormatter = Iso().get()
+        formatter: DateTimeFormatter = Iso().invoke()
     ) : this(
         Constant { formatter.format(date) }
     )

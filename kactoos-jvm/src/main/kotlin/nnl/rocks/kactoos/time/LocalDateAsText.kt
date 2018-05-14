@@ -24,7 +24,7 @@ class LocalDateAsText constructor(
 
     constructor(
         date: LocalDate,
-        formatter: DateTimeFormatter = Iso().get()
+        formatter: DateTimeFormatter = Iso().invoke()
     ) : this(
         Constant {
             formatter.format(

@@ -45,7 +45,6 @@ class ProcOf<in X : Any>(private val proc: Proc<X>) : Proc<X> by proc {
          * @param input The argument
          * @throws Exception If fails
          */
-        @Throws(Exception::class)
         override fun exec(input: X) = func(input)
     }
 }

@@ -36,7 +36,7 @@ class ZonedDateTimeOf(
      * */
     constructor(date: CharSequence) : this(
         Constant {
-            ZonedDateTime.from(Iso().get().parse(date))
+            ZonedDateTime.from(Iso().invoke().parse(date))
         }
     )
 

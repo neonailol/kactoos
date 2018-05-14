@@ -19,7 +19,7 @@ class LocalDateTimeOf(
 
     constructor(
         date: CharSequence
-    ) : this(Constant { LocalDateTime.from(Iso().get().parse(date)) })
+    ) : this(Constant { LocalDateTime.from(Iso().invoke().parse(date)) })
 
     constructor(
         date: CharSequence,

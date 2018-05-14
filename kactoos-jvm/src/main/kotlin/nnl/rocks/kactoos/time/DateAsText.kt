@@ -29,7 +29,7 @@ class DateAsText(
 
     constructor(
         date: TemporalAccessor
-    ) : this(Constant { Iso().get().format(date) })
+    ) : this(Constant { Iso().invoke().format(date) })
 
     /**
      * Formats the milliseconds using the ISO format.
@@ -39,7 +39,7 @@ class DateAsText(
         ZonedDateTime.ofInstant(
             Instant.ofEpochMilli(milliseconds), ZoneId.of("UTC")
         ),
-        Iso().get()
+        Iso().invoke()
     )
 
     constructor() : this(System.currentTimeMillis())
@@ -83,7 +83,7 @@ class DateAsText(
      */
     constructor(date: Date) : this(
         ZonedDateTime.ofInstant(date.toInstant(), ZoneId.of("UTC")),
-        Iso().get()
+        Iso().invoke()
     )
 
     /**
