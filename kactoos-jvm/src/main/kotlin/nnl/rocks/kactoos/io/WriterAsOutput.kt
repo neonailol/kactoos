@@ -32,7 +32,7 @@ internal class WriterAsOutput(
      * @param cset Charset
      * @param max Buffer size
      */
-    @JvmOverloads constructor(
+    constructor(
         wtr: Writer,
         cset: Charset = StandardCharsets.UTF_8,
         max: Int = 16 shl 10

@@ -67,7 +67,7 @@ class InputStreamOf(
      * @param text The text
      * @param charset Charset
      */
-    @JvmOverloads constructor(
+    constructor(
         text: Text,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(InputOf(text, charset))
@@ -114,7 +114,7 @@ class InputStreamOf(
      * @param charset Charset
      * @since 0.13.2
      */
-    @JvmOverloads constructor(
+    constructor(
         rdr: Reader,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(InputOf(rdr, charset))

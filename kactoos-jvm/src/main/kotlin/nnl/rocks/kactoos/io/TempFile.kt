@@ -39,7 +39,7 @@ class TempFile private constructor(
      * @param prefix The temp filename's prefix
      * @param suffix The temp filename's suffix
      */
-    @JvmOverloads constructor(
+    constructor(
         prefix: String = "",
         suffix: String = ""
     ) : this(

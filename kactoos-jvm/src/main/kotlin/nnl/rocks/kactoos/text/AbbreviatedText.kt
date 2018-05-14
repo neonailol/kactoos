@@ -13,7 +13,7 @@ import java.io.IOException
  * @param width Max width of the result string
  * @since 0.3
  */
-class AbbreviatedText @JvmOverloads constructor(
+class AbbreviatedText constructor(
     private val origin: Text,
     private val width: Int = AbbreviatedText.MAX_WIDTH
 ) : Text {

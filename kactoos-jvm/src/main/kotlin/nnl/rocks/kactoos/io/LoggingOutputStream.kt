@@ -18,7 +18,7 @@ import java.util.logging.Logger
  * @param logger Message logger
  * @since 0.3
  */
-class LoggingOutputStream @JvmOverloads constructor(
+class LoggingOutputStream constructor(
     private val origin: OutputStream,
     private val destination: String,
     private val logger: Logger = Logger.getLogger(destination)

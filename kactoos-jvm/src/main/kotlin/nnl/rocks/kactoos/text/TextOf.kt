@@ -91,7 +91,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
      * @param max Max length of the buffer for reading
      * @param cset The Charset
      */
-    @JvmOverloads constructor(
+    constructor(
         input: Input,
         max: Int,
         cset: Charset = StandardCharsets.UTF_8
@@ -232,7 +232,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
      * @param bytes The Bytes
      * @param cset The Charset
      */
-    @JvmOverloads constructor(
+    constructor(
         bytes: Bytes,
         cset: Charset = StandardCharsets.UTF_8
     ) : this(Constant { String(bytes.asBytes(), cset) })
@@ -254,7 +254,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
      * @param input The String
      * @param cset The Charset
      */
-    @JvmOverloads constructor(
+    constructor(
         input: String,
         cset: Charset = StandardCharsets.UTF_8
     ) : this(Constant { String(input.toByteArray(cset), cset) })

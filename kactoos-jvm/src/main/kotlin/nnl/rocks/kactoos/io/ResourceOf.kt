@@ -25,7 +25,7 @@ import java.io.InputStream
  * @since 0.1
  */
 class ResourceOf
-@JvmOverloads constructor(
+constructor(
     private val path: Text,
     private val fallback: Func<Text, Input>,
     private val loader: ClassLoader = Thread.currentThread().contextClassLoader
@@ -36,7 +36,7 @@ class ResourceOf
      * @param res Resource name
      * @param ldr Resource class loader
      */
-    @JvmOverloads constructor(
+    constructor(
         res: CharSequence,
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
     ) : this(TextOf(res), ldr)
@@ -47,7 +47,7 @@ class ResourceOf
      * @param ldr Resource class loader
      * @param fbk Fallback
      */
-    @JvmOverloads constructor(
+    constructor(
         res: CharSequence,
         fbk: Func<CharSequence, Input>,
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
@@ -78,7 +78,7 @@ class ResourceOf
      * @param res Resource name
      * @param ldr Resource class loader
      */
-    @JvmOverloads constructor(
+    constructor(
         res: Text,
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
     ) : this(

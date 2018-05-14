@@ -38,7 +38,7 @@ class ItemAt<T : Any>(
      * @param fallback Fallback value
      * @param source Iterable
      */
-    @JvmOverloads constructor(
+    constructor(
         source: Iterable<T>,
         fallback: Func<Iterable<T>, T> = FuncOf { itr -> throw IOException("The iterable is empty") }
     ) : this(source, 0, fallback)
@@ -107,7 +107,7 @@ class ItemAt<T : Any>(
      * @param iterator Iterator
      * @param fallback Fallback value
      */
-    @JvmOverloads constructor(
+    constructor(
         iterator: Iterator<T>,
         fallback: Func<Iterable<T>, T> = FuncOf { itr -> throw IOException("Iterator is empty") }
     ) : this(iterator, 0, fallback)
@@ -119,7 +119,7 @@ class ItemAt<T : Any>(
      * @param position Position
      * @param fallback Fallback value
      */
-    @JvmOverloads constructor(
+    constructor(
         iterator: Iterator<T>,
         position: Int,
         fallback: Func<Iterable<T>, T> = FuncOf { itr ->

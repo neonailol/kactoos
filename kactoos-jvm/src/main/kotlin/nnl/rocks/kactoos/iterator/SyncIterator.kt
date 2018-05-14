@@ -17,7 +17,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock
  * @param lock The lock to use for synchronization.
  * @since 0.3
  */
-class SyncIterator<out T> @JvmOverloads constructor(
+class SyncIterator<out T> constructor(
     private val iterator: Iterator<T>,
     private val lock: ReadWriteLock = ReentrantReadWriteLock()
 ) : Iterator<T> {

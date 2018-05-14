@@ -31,7 +31,7 @@ class ZonedDateTimeAsText constructor(
      * @param format The format string to use.
      * @param locale The locale to use.
      */
-    @JvmOverloads constructor(
+    constructor(
         date: ZonedDateTime,
         format: String,
         locale: Locale = Locale.getDefault(Locale.Category.FORMAT)

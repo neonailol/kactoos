@@ -117,7 +117,7 @@ class BytesOf constructor(private val origin: KBytes) : Bytes {
      * @param input The source
      * @param charset The charset
      */
-    @JvmOverloads constructor(
+    constructor(
         input: CharSequence,
         charset: Charset = StandardCharsets.UTF_8
     ) : this({ input.toString().toByteArray(charset) })
@@ -167,7 +167,7 @@ class BytesOf constructor(private val origin: KBytes) : Bytes {
      * @param text The source
      * @param charset The charset
      */
-    @JvmOverloads constructor(
+    constructor(
         text: Text,
         charset: Charset = StandardCharsets.UTF_8
     ) : this({ text.asString().toByteArray(charset) })
@@ -187,7 +187,7 @@ class BytesOf constructor(private val origin: KBytes) : Bytes {
      * @param error The exception to serialize
      * @param charset Charset
      */
-    @JvmOverloads constructor(
+    constructor(
         error: Throwable,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(error, charset.name())

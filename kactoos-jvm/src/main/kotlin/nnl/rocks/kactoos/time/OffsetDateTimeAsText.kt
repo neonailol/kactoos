@@ -30,7 +30,7 @@ class OffsetDateTimeAsText constructor(
      * @param format The format string to use.
      * @param locale The locale to use.
      */
-    @JvmOverloads constructor(
+    constructor(
         date: OffsetDateTime,
         format: String,
         locale: Locale = Locale.getDefault(Locale.Category.FORMAT)
