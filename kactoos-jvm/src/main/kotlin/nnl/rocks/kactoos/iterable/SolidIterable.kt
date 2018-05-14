@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.SolidScalar
 
 /**
@@ -15,7 +14,7 @@ import nnl.rocks.kactoos.scalar.SolidScalar
  */
 class SolidIterable<X : Any>(iterable: Iterable<X>) : IterableEnvelope<X>(
     SolidScalar<Iterable<X>>(
-        Constant { SyncIterable<X>(StickyIterable<X>(iterable)) }
+        { SyncIterable<X>(StickyIterable<X>(iterable)) }
     )
 ) {
 

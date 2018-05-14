@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.InputOf
@@ -21,9 +21,9 @@ import java.util.Properties
  */
 class PropertiesOf(
     private val scalar: IoCheckedScalar<Properties>
-) : Scalar<Properties> {
+) : KScalar<Properties> {
 
-    constructor(sclr: Scalar<Properties>) : this(IoCheckedScalar(sclr))
+    constructor(sclr: KScalar<Properties>) : this(IoCheckedScalar(sclr))
 
     /**
      * @param content String
@@ -39,7 +39,7 @@ class PropertiesOf(
      * @param input Input
      */
     constructor(input: Input) : this(
-        Constant {
+         {
             val props = Properties()
             input.stream().use { stream -> props.load(stream) }
             props
@@ -72,7 +72,7 @@ class PropertiesOf(
      * @param map The map with properties
      */
     constructor(map: Map<*, *>) : this(
-        Constant {
+         {
             val props = Properties()
             for ((key, value) in map) {
                 props.setProperty(

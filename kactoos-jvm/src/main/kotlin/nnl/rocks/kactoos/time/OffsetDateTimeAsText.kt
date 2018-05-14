@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.time
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.Constant
 import java.time.OffsetDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -13,14 +12,14 @@ import java.util.Locale
  * @since 0.3
  */
 class OffsetDateTimeAsText constructor(
-    private val formatted: Scalar<String>
+    private val formatted: KScalar<String>
 ) : Text {
 
     constructor(
         date: OffsetDateTime,
         formatter: DateTimeFormatter = Iso().invoke()
     ) : this(
-        Constant { formatter.format(date) }
+         { formatter.format(date) }
     )
 
     /**

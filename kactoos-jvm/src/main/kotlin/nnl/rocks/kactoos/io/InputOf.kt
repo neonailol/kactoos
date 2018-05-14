@@ -1,7 +1,9 @@
 package nnl.rocks.kactoos.io
 
-import nnl.rocks.kactoos.*
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.Bytes
+import nnl.rocks.kactoos.Input
+import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
 import java.io.*
 import java.net.URI
@@ -19,22 +21,10 @@ import java.nio.file.Path
  */
 class InputOf(private val origin: Input) : Input {
 
-    constructor(input: KInput) : this(
-        object : Input {
-            override fun stream(): InputStream = input()
-        }
-    )
-
     /**
      * @param file The file
      */
-    constructor(file: File) : this(
-        {
-            FileInputStream(
-                Constant { file }.invoke()
-            )
-        }
-    )
+    constructor(file: File) : this(FileInputStream(file))
 
     /**
      * @param path The path
@@ -44,17 +34,17 @@ class InputOf(private val origin: Input) : Input {
     /**
      * @param uri The URI
      */
-    constructor(uri: URI) : this(Constant { uri.toURL() })
+    constructor(uri: URI) : this( { uri.toURL() })
 
     /**
      * @param url The URL
      */
-    constructor(url: URL) : this(Constant { url })
+    constructor(url: URL) : this( { url })
 
     /**
      * @param scalar The url
      */
-    constructor(scalar: Scalar<URL>) : this({ IoCheckedScalar<URL>(scalar).invoke().openStream() })
+    constructor(scalar: KScalar<URL>) : this(scalar().openStream())
 
     /**
      * @param rdr Reader
@@ -213,7 +203,7 @@ class InputOf(private val origin: Input) : Input {
      */
     constructor(src: Bytes) : this(
         IoCheckedScalar<InputStream>(
-            Constant { ByteArrayInputStream(src.asBytes()) }
+            { ByteArrayInputStream(src.asBytes()) }
         ).invoke()
     )
 

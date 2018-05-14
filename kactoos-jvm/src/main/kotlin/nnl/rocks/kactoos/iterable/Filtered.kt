@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.iterator.Filtered
-import nnl.rocks.kactoos.scalar.Constant
 import java.util.LinkedList
 
 /**
@@ -34,7 +33,7 @@ class Filtered<X : Any>(
     fnc: Func<X, Boolean>,
     src: Iterable<X>
 ) : IterableEnvelope<X>(
-    Constant {
+    {
         Iterable {
             Filtered<X>(
                 fnc, src.iterator(), LinkedList<X>()

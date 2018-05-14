@@ -6,7 +6,7 @@
 
 ### Parameters
 
-`items` - Items to iterate over`StickyIterator(gate: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>>)`
+`items` - Items to iterate over`StickyIterator(gate: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>>)`
 
 Iterator that returns the same set of elements always.
 

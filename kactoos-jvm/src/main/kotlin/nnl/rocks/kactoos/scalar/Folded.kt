@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.BiFunc
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import java.util.NoSuchElementException
 
 /**
@@ -17,15 +17,15 @@ import java.util.NoSuchElementException
  * There is no thread-safety guarantee.
  *
  *
- * @param T Scalar type
+ * @param T KScalar type
  * @param function Folding function
  * @param items The scalars
  * @since 0.3
  */
 class Folded<out T : Any>(
     private val function: BiFunc<T, T, T>,
-    private val items: Iterable<Scalar<T>>
-) : Scalar<T> {
+    private val items: Iterable<KScalar<T>>
+) : KScalar<T> {
 
     override fun invoke(): T {
         val iter = this.items.iterator()

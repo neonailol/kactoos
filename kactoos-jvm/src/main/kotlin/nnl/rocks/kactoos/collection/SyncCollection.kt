@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.SyncScalar
 import java.util.Collections
 import java.util.LinkedList
@@ -27,7 +26,7 @@ class SyncCollection<T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Collection<T>) : super(
         SyncScalar<Collection<T>>(
-            Constant {
+            {
                 val temp = LinkedList<T>()
                 temp.addAll(src)
                 Collections.synchronizedCollection<T>(temp)

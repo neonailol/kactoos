@@ -110,7 +110,7 @@ Ctor.
 **Since**
 0.13.1
 
-`ReaderOf(source: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`>)`
+`ReaderOf(source: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`>)`
 
 A [Reader](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html) that encapsulates other sources of data.
 

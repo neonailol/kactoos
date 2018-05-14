@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.time
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 import java.time.OffsetDateTime
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
@@ -16,17 +15,17 @@ import java.time.format.DateTimeFormatter
  * @since 0.27
  */
 class OffsetDateTimeOf(
-    private val parsed: Scalar<OffsetDateTime>
-) : Scalar<OffsetDateTime> {
+    private val parsed: KScalar<OffsetDateTime>
+) : KScalar<OffsetDateTime> {
 
     constructor(
         date: CharSequence
-    ) : this(Constant { ZonedDateTime.from(Iso().invoke().parse(date)).toOffsetDateTime() })
+    ) : this( { ZonedDateTime.from(Iso().invoke().parse(date)).toOffsetDateTime() })
 
     constructor(
         date: CharSequence,
         formatter: DateTimeFormatter
-    ) : this(Constant { ZonedDateTime.from(formatter.parse(date)).toOffsetDateTime() })
+    ) : this( { ZonedDateTime.from(formatter.parse(date)).toOffsetDateTime() })
 
     /**
      * Parses date using the provided format to create

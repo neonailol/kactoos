@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.text
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Extract a substring from a Text.
@@ -19,8 +18,8 @@ import nnl.rocks.kactoos.scalar.Constant
  */
 class SubText(
     private val origin: Text,
-    private val start: Scalar<Int>,
-    private val end: Scalar<Int>
+    private val start: KScalar<Int>,
+    private val end: KScalar<Int>
 ) : Text {
 
     /**
@@ -50,7 +49,7 @@ class SubText(
     constructor(
         text: Text,
         strt: Int
-    ) : this(text, Constant { strt }, Constant { text.asString().length })
+    ) : this(text,  { strt },  { text.asString().length })
 
     /**
      * @param text The Text
@@ -61,7 +60,7 @@ class SubText(
         text: Text,
         strt: Int,
         finish: Int
-    ) : this(text, Constant { strt }, Constant { finish })
+    ) : this(text,  { strt },  { finish })
 
     override fun asString(): String {
         var begin = this.start()

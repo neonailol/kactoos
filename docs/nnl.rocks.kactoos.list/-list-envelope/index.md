@@ -19,7 +19,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ListEnvelope(list: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>)``ListEnvelope(list: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>>)`<br>List envelope. |
+| [&lt;init&gt;](-init-.md) | `ListEnvelope(list: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>)``ListEnvelope(list: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>>)`<br>List envelope. |
 
 ### Inheritors
 

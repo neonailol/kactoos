@@ -18,7 +18,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `StickyInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)``StickyInput(cache: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`>)`<br>Input that reads only once. |
+| [&lt;init&gt;](-init-.md) | `StickyInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)``StickyInput(cache: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`>)`<br>Input that reads only once. |
 
 ### Functions
 

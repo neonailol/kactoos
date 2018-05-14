@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.list
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 
 /**
  * List envelope.
@@ -12,8 +11,8 @@ import nnl.rocks.kactoos.scalar.Constant
  * @since 0.3
  */
 open class ListEnvelope<T : Any>(
-    private val list: Scalar<List<T>>
+    private val list: KScalar<List<T>>
 ) : List<T> by list() {
 
-    constructor(list: List<T>) : this(Constant { list })
+    constructor(list: List<T>) : this( { list })
 }

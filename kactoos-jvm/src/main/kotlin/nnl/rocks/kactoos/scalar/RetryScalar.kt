@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.RetryFunc
 
@@ -17,20 +17,20 @@ import nnl.rocks.kactoos.func.RetryFunc
  * @since 0.9
  */
 class RetryScalar<T : Any>(
-    private val origin: Scalar<T>,
+    private val origin: KScalar<T>,
     private val func: Func<Int, Boolean>
-) : Scalar<T> {
+) : KScalar<T> {
 
     /**
-     * @param scalar Scalar original
+     * @param scalar KScalar original
      * @param attempts Maximum number of attempts
      */
     constructor(
-        scalar: Scalar<T>,
+        scalar: KScalar<T>,
         attempts: Int
     ) : this(scalar, FuncOf { attempt -> attempt >= attempts })
 
-    constructor(scalar: Scalar<T>) : this(scalar, 3)
+    constructor(scalar: KScalar<T>) : this(scalar, 3)
 
     override fun invoke(): T {
         return RetryFunc(

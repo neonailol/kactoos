@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`PropertiesOf(sclr: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)`>)``PropertiesOf(content: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`
+`PropertiesOf(sclr: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)`>)``PropertiesOf(content: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`
 
 ### Parameters
 

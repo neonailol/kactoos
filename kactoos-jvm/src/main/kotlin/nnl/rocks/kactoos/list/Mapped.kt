@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.list
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.collection.Mapped
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.text.TextOf
 
 /**
@@ -20,7 +19,7 @@ class Mapped<X : Any, Y : Any>(
     fnc: Func<X, Y>,
     src: Collection<X>
 ) : ListEnvelope<Y>(
-    Constant { ListOf<Y>(Mapped<X, Y>(fnc, src)) }
+     { ListOf<Y>(Mapped<X, Y>(fnc, src)) }
 ) {
 
     /**

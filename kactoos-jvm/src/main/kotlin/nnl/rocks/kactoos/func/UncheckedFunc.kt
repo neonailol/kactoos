@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Func that doesn't throw checked [Exception].
@@ -16,5 +15,5 @@ import nnl.rocks.kactoos.scalar.Constant
  */
 class UncheckedFunc<in X : Any, out Y : Any>(private val func: Func<X, Y>) : Func<X, Y> {
 
-    override fun apply(input: X): Y = Constant { this.func.apply(input) }.invoke()
+    override fun apply(input: X): Y = this.func.apply(input)
 }

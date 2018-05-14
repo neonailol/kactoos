@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.time
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
@@ -15,14 +14,14 @@ import java.util.Date
  * @since 0.27
  */
 class DateOf(
-    private val parsed: Scalar<Date>
-) : Scalar<Date> {
+    private val parsed: KScalar<Date>
+) : KScalar<Date> {
 
     constructor(
         date: CharSequence,
         formatter: DateTimeFormatter
     ) : this(
-        Constant { Date.from(LocalDateTime.from(formatter.parse(date)).toInstant(ZoneOffset.UTC)) }
+         { Date.from(LocalDateTime.from(formatter.parse(date)).toInstant(ZoneOffset.UTC)) }
     )
 
     constructor (

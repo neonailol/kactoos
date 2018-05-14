@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.iterator.Limited
-import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Limited iterable.
@@ -22,7 +21,7 @@ class Limited<T : Any>(
     lmt: Int,
     itr: Iterable<T>
 ) : IterableEnvelope<T>(
-    Constant {
+     {
         Iterable {
             Limited<T>(lmt, itr.iterator())
         }

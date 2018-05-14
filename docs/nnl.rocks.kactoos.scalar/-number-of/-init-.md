@@ -7,7 +7,7 @@
 
 ### Parameters
 
-`txt` - Number-string`NumberOf(dnum: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
+`txt` - Number-string`NumberOf(dnum: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
 
 Text as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html).
 

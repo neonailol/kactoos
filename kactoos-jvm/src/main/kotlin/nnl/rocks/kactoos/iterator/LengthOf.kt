@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.NumberEnvelope
 
 /**
@@ -13,7 +12,7 @@ import nnl.rocks.kactoos.scalar.NumberEnvelope
  * @since 0.1
  */
 class LengthOf(iterator: Iterator<*>) : NumberEnvelope(
-    Constant {
+     {
         var size = 0
         while (iterator.hasNext()) {
             iterator.next()

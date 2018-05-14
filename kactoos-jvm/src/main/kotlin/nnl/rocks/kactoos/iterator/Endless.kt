@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Iterator that never ends.
@@ -14,13 +13,13 @@ import nnl.rocks.kactoos.scalar.Constant
  * @param T Element type
  * @since 0.3
  */
-class Endless<T : Any>(private val origin: Scalar<T>) : Iterator<T> {
+class Endless<T : Any>(private val origin: KScalar<T>) : Iterator<T> {
 
     /**
      * Ctor.
      * @param element Element to repeat
      */
-    constructor(element: T) : this(Constant { element })
+    constructor(element: T) : this({ element })
 
     override fun hasNext(): Boolean = true
 

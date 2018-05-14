@@ -30,7 +30,7 @@
 
 `strt` - Start position in the text
 
-`finish` - End position in the text`SubText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, start: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>, end: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>)`
+`finish` - End position in the text`SubText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, start: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>, end: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`>)`
 
 Extract a substring from a Text.
 

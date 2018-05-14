@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.io
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Output
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
 import java.io.File
 import java.io.OutputStream
 import java.io.Writer
@@ -22,7 +21,7 @@ import java.nio.file.Path
  * @since 0.3
  */
 class OutputStreamTo(
-    private val target: Scalar<OutputStream>
+    private val target: KScalar<OutputStream>
 ) : OutputStream() {
 
     /**
@@ -96,7 +95,7 @@ class OutputStreamTo(
     /**
      * @param output The input
      */
-    constructor(output: Output) : this(Constant<OutputStream> { output.stream() })
+    constructor(output: Output) : this({ output.stream() })
 
     override fun write(data: Int) {
         this.target().write(data)

@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.collection
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Base read-only collection.
@@ -13,8 +12,8 @@ import nnl.rocks.kactoos.scalar.Constant
  * @since 0.3
  */
 open class CollectionEnvelope<X : Any>(
-    private val col: Scalar<Collection<X>>
+    private val col: KScalar<Collection<X>>
 ) : Collection<X> by col() {
 
-    constructor(col: Collection<X>) : this(Constant { col })
+    constructor(col: Collection<X>) : this({ col })
 }

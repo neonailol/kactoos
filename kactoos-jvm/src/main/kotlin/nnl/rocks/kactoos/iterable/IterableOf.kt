@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Array as iterable.
@@ -15,28 +14,28 @@ import nnl.rocks.kactoos.scalar.Constant
  */
 class IterableOf<X : Any> : IterableEnvelope<X> {
 
-    constructor(scalar: Scalar<Iterator<X>>) : super(
-        Constant { Iterable { scalar.invoke() } }
+    constructor(scalar: KScalar<Iterator<X>>) : super(
+         { Iterable { scalar.invoke() } }
     )
 
     /**
      * @param items The array
      */
     @SafeVarargs
-    constructor(vararg items: X) : this(Constant { items.iterator() })
+    constructor(vararg items: X) : this( { items.iterator() })
 
     /**
      * @param list The List
      */
-    constructor(list: List<X>) : this(Constant<Iterator<X>> { list.iterator() })
+    constructor(list: List<X>) : this( { list.iterator() })
 
     /**
      * @param set The Set
      */
-    constructor(set: Set<X>) : this(Constant<Iterator<X>> { set.iterator() })
+    constructor(set: Set<X>) : this( { set.iterator() })
 
     /**
      * @param iterator The Iterator
      */
-    constructor(iterator: Iterator<X>) : this(Constant { iterator })
+    constructor(iterator: Iterator<X>) : this( { iterator })
 }

@@ -2,11 +2,11 @@
 
 # &lt;init&gt;
 
-`StickyScalar(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)``StickyScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, `[`T`](index.md#T)`>)`
+`StickyScalar(scalar: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)``StickyScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, `[`T`](index.md#T)`>)`
 
-Cached version of a Scalar.
+Cached version of a KScalar.
 
-This [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) decorator technically is an in-memory
+This [KScalar](../../nnl.rocks.kactoos/-k-scalar.md) decorator technically is an in-memory
 cache.
 
 Pay attention that this class is not thread-safe. It is highly

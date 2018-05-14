@@ -22,7 +22,7 @@ Parses date using the provided format to create [ZonedDateTime](http://docs.orac
 
 `format` - The format to use.
 
-`zone` - The zone to use.`ZonedDateTimeOf(parsed: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)`>)`
+`zone` - The zone to use.`ZonedDateTimeOf(parsed: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)`>)`
 
 Parser for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances.
 

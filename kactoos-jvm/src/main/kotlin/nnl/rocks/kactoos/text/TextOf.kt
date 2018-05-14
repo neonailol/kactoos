@@ -2,13 +2,12 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.BytesOf
 import nnl.rocks.kactoos.io.InputOf
 import nnl.rocks.kactoos.iterable.Mapped
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
 import java.io.File
 import java.io.InputStream
@@ -25,10 +24,10 @@ import java.nio.file.Path
  *
  * There is no thread-safety guarantee.
  *
- * @param origin The Scalar of String
+ * @param origin The KScalar of String
  * @since 0.3
  */
-class TextOf private constructor(private val origin: Scalar<String>) : Text {
+class TextOf private constructor(private val origin: KScalar<String>) : Text {
 
     /**
      * Ctor.
@@ -238,7 +237,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     constructor(
         bytes: Bytes,
         cset: Charset = StandardCharsets.UTF_8
-    ) : this(Constant { String(bytes.asBytes(), cset) })
+    ) : this( { String(bytes.asBytes(), cset) })
 
     /**
      * Ctor.
@@ -249,7 +248,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     constructor(
         bytes: Bytes,
         cset: String
-    ) : this(Constant { String(bytes.asBytes(), Charset.forName(cset)) })
+    ) : this( { String(bytes.asBytes(), Charset.forName(cset)) })
 
     /**
      * Ctor.
@@ -260,7 +259,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
     constructor(
         input: String,
         cset: Charset = StandardCharsets.UTF_8
-    ) : this(Constant { String(input.toByteArray(cset), cset) })
+    ) : this( { String(input.toByteArray(cset), cset) })
 
     /**
      * Ctor.
@@ -268,7 +267,7 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
      * @since 0.21
      */
     constructor(iterable: Iterable<Any>) : this(
-        Constant {
+         {
             JoinedText(
                 ", ",
                 Mapped<Any, String>(

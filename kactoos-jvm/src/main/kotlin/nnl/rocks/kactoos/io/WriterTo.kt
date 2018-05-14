@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.io
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Output
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
 import java.io.File
 import java.io.OutputStream
 import java.io.OutputStreamWriter
@@ -23,7 +22,7 @@ import java.nio.file.Path
  * @since 0.13
  */
 class WriterTo(
-    private val target: Scalar<Writer>
+    private val target: KScalar<Writer>
 ) : Writer() {
 
     /**
@@ -49,7 +48,7 @@ class WriterTo(
         output: Output,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(
-        Constant { OutputStreamWriter(output.stream(), charset) }
+         { OutputStreamWriter(output.stream(), charset) }
     )
 
     /**
@@ -59,7 +58,7 @@ class WriterTo(
     constructor(
         output: Output,
         charset: CharSequence
-    ) : this(Constant { OutputStreamWriter(output.stream(), charset.toString()) })
+    ) : this({ OutputStreamWriter(output.stream(), charset.toString()) })
 
     /**
      * @param output The input
@@ -69,7 +68,7 @@ class WriterTo(
     constructor(
         output: Output,
         encoder: CharsetEncoder
-    ) : this(Constant { OutputStreamWriter(output.stream(), encoder) })
+    ) : this({ OutputStreamWriter(output.stream(), encoder) })
 
     override fun write(
         cbuf: CharArray,

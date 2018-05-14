@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.iterator.Sorted
-import nnl.rocks.kactoos.scalar.Constant
 import java.util.Comparator
 
 /**
@@ -18,7 +17,7 @@ class Sorted<T : Comparable<T>> : IterableEnvelope<T> {
         cmp: Comparator<T>,
         src: Iterable<T>
     ) : super(
-        Constant {
+         {
             Iterable {
                 Sorted<T>(
                     cmp, src.iterator()

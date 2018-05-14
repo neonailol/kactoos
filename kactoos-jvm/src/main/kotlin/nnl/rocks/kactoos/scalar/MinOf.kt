@@ -28,7 +28,7 @@ class MinOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Int) : super(
-        Constant {
+        {
             var min = java.lang.Double.MAX_VALUE
             for (`val` in src) {
                 if (`val`.toDouble() < min) {
@@ -43,7 +43,7 @@ class MinOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Long) : super(
-        Constant {
+        {
             var min = java.lang.Double.MAX_VALUE
             for (`val` in src) {
                 if (`val`.toDouble() < min) {
@@ -58,7 +58,7 @@ class MinOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Double) : super(
-        Constant {
+        {
             var min = java.lang.Double.MAX_VALUE
             for (`val` in src) {
                 if (`val` < min) {
@@ -73,7 +73,7 @@ class MinOf : NumberEnvelope {
      * @param src Numbers
      */
     constructor(vararg src: Float) : super(
-        Constant {
+        {
             var min = java.lang.Double.MAX_VALUE
             for (`val` in src) {
                 if (`val`.toDouble() < min) {
@@ -88,7 +88,7 @@ class MinOf : NumberEnvelope {
      * @param src The iterable
      */
     constructor(src: Iterable<Number>) : super(
-        Constant {
+        {
             val numbers = src.iterator()
             var min = java.lang.Double.MAX_VALUE
             while (numbers.hasNext()) {

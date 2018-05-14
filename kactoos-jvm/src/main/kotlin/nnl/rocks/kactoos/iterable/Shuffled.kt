@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.iterator.Shuffled
-import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Shuffled iterable.
@@ -15,7 +14,7 @@ import nnl.rocks.kactoos.scalar.Constant
  * @since 0.20
  */
 class Shuffled<T : Any>(src: Iterable<T>) : IterableEnvelope<T>(
-    Constant { Iterable { Shuffled<T>(src.iterator()) } }
+    { Iterable { Shuffled<T>(src.iterator()) } }
 ) {
 
     /**

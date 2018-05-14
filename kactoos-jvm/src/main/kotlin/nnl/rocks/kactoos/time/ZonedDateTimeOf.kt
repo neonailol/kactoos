@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.time
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
@@ -15,8 +14,8 @@ import java.time.format.DateTimeFormatter
  * @since 0.27
  */
 class ZonedDateTimeOf(
-    private val parsed: Scalar<ZonedDateTime>
-) : Scalar<ZonedDateTime> {
+    private val parsed: KScalar<ZonedDateTime>
+) : KScalar<ZonedDateTime> {
 
     /**
      * @param date The date to parse.
@@ -26,7 +25,7 @@ class ZonedDateTimeOf(
         date: CharSequence,
         formatter: DateTimeFormatter
     ) : this(
-        Constant {
+         {
             ZonedDateTime.from(formatter.parse(date))
         }
     )
@@ -35,7 +34,7 @@ class ZonedDateTimeOf(
      * @param date The date to parse.
      * */
     constructor(date: CharSequence) : this(
-        Constant {
+         {
             ZonedDateTime.from(Iso().invoke().parse(date))
         }
     )

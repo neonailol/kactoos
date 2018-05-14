@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.map
 
-import nnl.rocks.kactoos.scalar.Constant
 import java.util.function.Function
 import java.util.stream.Collectors
 import java.util.stream.StreamSupport
@@ -27,7 +26,7 @@ class Grouped<K : Any, out V : Any, T : Any>(
     keys: Function<T, K>,
     values: Function<T, V>
 ) : MapEnvelope<K, List<V>>(
-    Constant {
+     {
         val stream = StreamSupport.stream(
             list.spliterator(), false
         )

@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.text
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 
 /**
@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.Text
  *
  * @since 0.1
  */
-class IsBlank(private val origin: Text) : Scalar<Boolean> {
+class IsBlank(private val origin: Text) : KScalar<Boolean> {
 
     override fun invoke(): Boolean {
         return origin.asString().isBlank()

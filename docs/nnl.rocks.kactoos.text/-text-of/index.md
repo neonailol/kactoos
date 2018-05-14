@@ -10,7 +10,7 @@ There is no thread-safety guarantee.
 
 ### Parameters
 
-`origin` - The Scalar of String
+`origin` - The KScalar of String
 
 **Since**
 0.3

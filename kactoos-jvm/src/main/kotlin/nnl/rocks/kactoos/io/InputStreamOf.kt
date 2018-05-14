@@ -2,9 +2,8 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.Constant
 import java.io.File
 import java.io.InputStream
 import java.io.Reader
@@ -22,7 +21,7 @@ import java.nio.file.Path
  * @since 0.3
  */
 class InputStreamOf(
-    private val source: Scalar<InputStream>
+    private val source: KScalar<InputStream>
 ) : InputStream() {
 
     /**
@@ -170,7 +169,7 @@ class InputStreamOf(
      * Ctor.
      * @param input The input
      */
-    constructor(input: Input) : this(Constant { input.stream() })
+    constructor(input: Input) : this({ input.stream() })
 
     override fun read(): Int {
         return this.source().read()

@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.iterator.Repeated
-import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Repeat an element.
@@ -14,9 +13,9 @@ import nnl.rocks.kactoos.scalar.Constant
  */
 class Repeated<T : Any>(
     total: Int,
-    item: Scalar<T>
+    item: KScalar<T>
 ) : IterableEnvelope<T>(
-    Constant {
+     {
         Iterable {
             Repeated<T>(total, item)
         }
@@ -31,6 +30,6 @@ class Repeated<T : Any>(
     constructor(
         total: Int,
         elm: T
-    ) : this(total, Constant { elm })
+    ) : this(total, { elm })
 
 }

@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.func.UncheckedFunc
-import nnl.rocks.kactoos.scalar.Constant
 import java.util.NoSuchElementException
 
 /**
@@ -17,7 +16,7 @@ class RangeOf<T : Comparable<T>>(
     max: T,
     incrementor: Func<T, T>
 ) : IterableEnvelope<T>(
-    Constant {
+    {
         IterableOf<T>(
             object : Iterator<T> {
                 private val inc = UncheckedFunc(incrementor)

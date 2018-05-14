@@ -32,7 +32,7 @@ import nnl.rocks.kactoos.iterable.Mapped
  */
 class AndWithIndexFunc<X : Any>(
     private val iterable: Iterable<Func<Int, Boolean>>
-) : Scalar<Boolean> {
+) : KScalar<Boolean> {
 
     /**
      * @param proc Proc to map

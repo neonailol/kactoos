@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Logical negative.
@@ -16,7 +16,7 @@ import nnl.rocks.kactoos.Scalar
  *
  * @since 0.7
  */
-class Not(private val origin: Scalar<Boolean>) : Scalar<Boolean> {
+class Not(private val origin: KScalar<Boolean>) : KScalar<Boolean> {
 
     override fun invoke(): Boolean = ! this.origin()
 }

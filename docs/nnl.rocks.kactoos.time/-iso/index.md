@@ -2,12 +2,12 @@
 
 # Iso
 
-`class Iso`
+`class Iso : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)`>`
 
 Default formatter
 
 **Since**
-0.27
+0.3
 
 ### Constructors
 
@@ -19,4 +19,4 @@ Default formatter
 
 | Name | Summary |
 |---|---|
-| [get](get.md) | `fun get(): `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)<br>Take it. |
+| [invoke](invoke.md) | `fun invoke(): `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) |

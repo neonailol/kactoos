@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Ternary operation.
@@ -20,10 +20,10 @@ import nnl.rocks.kactoos.Scalar
  * @since 0.8
  */
 class Ternary<T : Any, X : Any>(
-    private val condition: Scalar<Boolean>,
-    private val consequent: Scalar<T>,
-    private val alternative: Scalar<T>
-) : Scalar<T> {
+    private val condition: KScalar<Boolean>,
+    private val consequent: KScalar<T>,
+    private val alternative: KScalar<T>
+) : KScalar<T> {
 
     /**
      * @param input The input to pass to all of them
@@ -39,9 +39,9 @@ class Ternary<T : Any, X : Any>(
         cons: Func<X, T>,
         alter: Func<X, T>
     ) : this(
-        Constant { cnd.apply(input) },
-        Constant { cons.apply(input) },
-        Constant { alter.apply(input) }
+         { cnd.apply(input) },
+         { cons.apply(input) },
+         { alter.apply(input) }
     )
 
     /**
@@ -54,7 +54,7 @@ class Ternary<T : Any, X : Any>(
         cnd: Boolean,
         cons: T,
         alter: T
-    ) : this(Constant { cnd }, cons, alter)
+    ) : this( { cnd }, cons, alter)
 
     /**
      * @param cnd The condition
@@ -62,13 +62,13 @@ class Ternary<T : Any, X : Any>(
      * @param alter The alternative
      */
     constructor(
-        cnd: Scalar<Boolean>,
+        cnd: KScalar<Boolean>,
         cons: T,
         alter: T
-    ) : this(cnd, Constant { cons }, Constant { alter })
+    ) : this(cnd,  { cons },  { alter })
 
     override fun invoke(): T {
-        val result: Scalar<T> = if (this.condition()) {
+        val result: KScalar<T> = if (this.condition()) {
             this.consequent
         } else {
             this.alternative

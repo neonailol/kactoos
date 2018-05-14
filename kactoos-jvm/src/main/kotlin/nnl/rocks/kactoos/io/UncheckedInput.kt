@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.scalar.Constant
 import java.io.InputStream
 
 /**
@@ -16,5 +15,5 @@ import java.io.InputStream
  */
 class UncheckedInput(private val input: Input) : Input {
 
-    override fun stream(): InputStream = Constant { this.input.stream() }.invoke()
+    override fun stream(): InputStream = this.input.stream()
 }

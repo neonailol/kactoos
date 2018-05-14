@@ -1,12 +1,12 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.SolidFunc
 
 /**
- * Cached and synchronized version of a Scalar.
+ * Cached and synchronized version of a KScalar.
  *
  * Objects of this class are thread safe.
  *
@@ -18,9 +18,9 @@ import nnl.rocks.kactoos.func.SolidFunc
  * @see SyncScalar
  * @since 0.24
  */
-class SolidScalar<out T : Any>(private val func: Func<Boolean, T>) : Scalar<T> {
+class SolidScalar<out T : Any>(private val func: Func<Boolean, T>) : KScalar<T> {
 
-    constructor(scalar: Scalar<T>) : this(SolidFunc(FuncOf { _ -> scalar() }))
+    constructor(scalar: KScalar<T>) : this(SolidFunc(FuncOf { _ -> scalar() }))
 
     override fun invoke(): T = this.func.apply(true)
 }

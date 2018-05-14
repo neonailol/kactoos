@@ -1,8 +1,8 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
@@ -17,8 +17,8 @@ import nnl.rocks.kactoos.iterable.Mapped
  * @since 0.8
  */
 class OrFunc<X : Any>(
-    private val origin: Iterable<Scalar<Boolean>>
-) : Scalar<Boolean> {
+    private val origin: Iterable<KScalar<Boolean>>
+) : KScalar<Boolean> {
 
     /**
      * @param proc Proc to map
@@ -84,8 +84,8 @@ class OrFunc<X : Any>(
         func: Func<X, Boolean>,
         src: Iterable<X>
     ) : this(
-        Mapped<X, Scalar<Boolean>>(
-            FuncOf { item -> Constant(func.apply(item)) }, src
+        Mapped<X, KScalar<Boolean>>(
+            FuncOf { item -> { func.apply(item) } }, src
         )
     )
 

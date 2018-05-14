@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import java.util.LinkedList
 
@@ -15,12 +14,12 @@ import java.util.LinkedList
  * @since 0.3
  */
 class StickyIterator<X : Any>(
-    private val gate: Scalar<Iterator<X>>
+    private val gate: KScalar<Iterator<X>>
 ) : Iterator<X> by gate() {
 
     constructor(iterator: Iterator<X>) : this(
         StickyScalar<Iterator<X>>(
-            Constant {
+             {
                 val temp = LinkedList<X>()
                 while (iterator.hasNext()) {
                     temp.add(iterator.next())

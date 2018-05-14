@@ -5,7 +5,6 @@ import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Joined
 import nnl.rocks.kactoos.iterable.Mapped
-import nnl.rocks.kactoos.scalar.Constant
 import java.util.Collections
 import java.util.HashMap
 
@@ -28,7 +27,7 @@ import java.util.HashMap
  * @since 0.3
  */
 class MapOf<X : Any, Y : Any>(entries: Iterable<Map.Entry<X, Y>>) : MapEnvelope<X, Y>(
-    Constant {
+     {
         val temp = HashMap<X, Y>(0)
         for ((key, value) in entries) {
             temp[key] = value

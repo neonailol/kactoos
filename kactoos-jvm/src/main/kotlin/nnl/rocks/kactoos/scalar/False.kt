@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Logical false.
@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.Scalar
  *
  * @since 0.7
  */
-class False : Scalar<Boolean> {
+class False : KScalar<Boolean> {
 
     override fun invoke(): Boolean = false
 }

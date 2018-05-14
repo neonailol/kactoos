@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.NumberEnvelope
 
 /**
@@ -18,7 +17,7 @@ class LengthOf(
     input: Input,
     max: Int
 ) : NumberEnvelope(
-    Constant {
+     {
         input.stream().use { stream ->
             val buf = ByteArray(max)
             var length = 0L

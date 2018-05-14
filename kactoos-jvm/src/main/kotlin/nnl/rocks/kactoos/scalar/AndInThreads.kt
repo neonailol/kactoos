@@ -1,8 +1,8 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
@@ -35,27 +35,27 @@ import java.util.concurrent.TimeUnit
  */
 class AndInThreads(
     private val service: ExecutorService,
-    private val iterable: Iterable<Scalar<Boolean>>,
+    private val iterable: Iterable<KScalar<Boolean>>,
     private val shut: Boolean
-) : Scalar<Boolean> {
+) : KScalar<Boolean> {
 
     /**
      * @param src The iterable
      */
     @SafeVarargs
     @Suppress("SpreadOperator")
-    constructor(vararg src: Scalar<Boolean>) : this(IterableOf<Scalar<Boolean>>(*src))
+    constructor(vararg src: KScalar<Boolean>) : this(IterableOf<KScalar<Boolean>>(*src))
 
     /**
      * @param src The iterable
      * @since 0.24
      */
-    constructor(src: Iterator<Scalar<Boolean>>) : this(IterableOf<Scalar<Boolean>>(src))
+    constructor(src: Iterator<KScalar<Boolean>>) : this(IterableOf<KScalar<Boolean>>(src))
 
     /**
      * @param src The iterable
      */
-    constructor(src: Iterable<Scalar<Boolean>>) : this(Executors.newCachedThreadPool(), src, true)
+    constructor(src: Iterable<KScalar<Boolean>>) : this(Executors.newCachedThreadPool(), src, true)
 
     /**
      * Ctor.
@@ -66,8 +66,8 @@ class AndInThreads(
     @Suppress("SpreadOperator")
     constructor(
         svc: ExecutorService,
-        vararg src: Scalar<Boolean>
-    ) : this(svc, IterableOf<Scalar<Boolean>>(*src))
+        vararg src: KScalar<Boolean>
+    ) : this(svc, IterableOf<KScalar<Boolean>>(*src))
 
     /**
      * Ctor.
@@ -76,8 +76,8 @@ class AndInThreads(
      */
     constructor(
         svc: ExecutorService,
-        src: Iterator<Scalar<Boolean>>
-    ) : this(svc, IterableOf<Scalar<Boolean>>(src))
+        src: Iterator<KScalar<Boolean>>
+    ) : this(svc, IterableOf<KScalar<Boolean>>(src))
 
     /**
      * Ctor.
@@ -86,7 +86,7 @@ class AndInThreads(
      */
     constructor(
         svc: ExecutorService,
-        src: Iterable<Scalar<Boolean>>
+        src: Iterable<KScalar<Boolean>>
     ) : this(svc, src, false)
 
     override fun invoke(): Boolean {
@@ -194,8 +194,8 @@ class AndInThreads(
         ): AndInThreads {
             return AndInThreads(
                 AndInThreadsFunc<X>(
-                    Mapped<X, Scalar<Boolean>>(
-                        FuncOf { item -> Constant(func.apply(item)) }, src
+                    Mapped<X, KScalar<Boolean>>(
+                        FuncOf { item -> { func.apply(item) } }, src
                     )
                 )
             )
@@ -292,8 +292,8 @@ class AndInThreads(
             return AndInThreads(
                 AndInThreadsFunc<X>(
                     svc,
-                    Mapped<X, Scalar<Boolean>>(
-                        FuncOf { item -> Constant { func.apply(item) } },
+                    Mapped<X, KScalar<Boolean>>(
+                        FuncOf { item ->  { func.apply(item) } },
                         src
                     )
                 )

@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Output
-import nnl.rocks.kactoos.scalar.Constant
 import java.io.OutputStream
 
 /**
@@ -18,5 +17,5 @@ class UncheckedOutput(
     private val output: Output
 ) : Output {
 
-    override fun stream(): OutputStream = Constant { this.output.stream() }.invoke()
+    override fun stream(): OutputStream = this.output.stream()
 }

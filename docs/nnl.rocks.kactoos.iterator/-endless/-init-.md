@@ -8,7 +8,7 @@ Ctor.
 
 ### Parameters
 
-`element` - Element to repeat`Endless(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`
+`element` - Element to repeat`Endless(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
 
 Iterator that never ends.
 

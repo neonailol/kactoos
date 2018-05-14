@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.text.TextOf
 
 /**
@@ -18,7 +17,7 @@ import nnl.rocks.kactoos.text.TextOf
 class Mapped<X : Any, Y : Any>(
     fnc: Func<X, Y>,
     iter: Iterable<X>
-) : IterableEnvelope<Y>(Constant { Iterable { nnl.rocks.kactoos.iterator.Mapped(fnc, iter.iterator()) } }) {
+) : IterableEnvelope<Y>({ Iterable { nnl.rocks.kactoos.iterator.Mapped(fnc, iter.iterator()) } }) {
 
     /**
      * Ctor.

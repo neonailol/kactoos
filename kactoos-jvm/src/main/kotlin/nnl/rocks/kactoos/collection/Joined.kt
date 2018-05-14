@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.Joined
-import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Joined collection.
@@ -14,7 +13,7 @@ import nnl.rocks.kactoos.scalar.Constant
 class Joined<X : Any> : CollectionEnvelope<X> {
 
     constructor(list: Iterable<Iterable<X>>) : super(
-        Constant { CollectionOf<X>(Joined<X>(list)) }
+        { CollectionOf<X>(Joined<X>(list)) }
     )
 
     /**

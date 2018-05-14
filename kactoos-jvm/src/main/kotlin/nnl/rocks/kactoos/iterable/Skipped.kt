@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.iterator.Skipped
-import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Skipped iterable.
@@ -18,7 +17,7 @@ class Skipped<T : Any>(
     skip: Int,
     iterable: Iterable<T>
 ) : IterableEnvelope<T>(
-    Constant {
+     {
         Iterable {
             Skipped<T>(
                 skip, iterable.iterator()

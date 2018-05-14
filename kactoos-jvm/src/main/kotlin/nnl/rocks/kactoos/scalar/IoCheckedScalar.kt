@@ -1,10 +1,10 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import java.io.IOException
 
 /**
- * Scalar that doesn't throw checked [Exception], but throws
+ * KScalar that doesn't throw checked [Exception], but throws
  * [IOException] instead.
  *
  * There is no thread-safety guarantee.
@@ -16,7 +16,7 @@ import java.io.IOException
  * @param origin Encapsulated scalar
  * @since 0.4
  */
-class IoCheckedScalar<out T : Any>(private val origin: Scalar<T>) : Scalar<T> {
+class IoCheckedScalar<out T : Any>(private val origin: KScalar<T>) : KScalar<T> {
 
     @Suppress("TooGenericExceptionCaught")
     override fun invoke(): T = try {

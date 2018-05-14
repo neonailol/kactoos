@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.collection.CollectionOf
 import nnl.rocks.kactoos.iterator.Joined
-import nnl.rocks.kactoos.scalar.Constant
 import java.util.LinkedList
 
 /**
@@ -18,7 +17,7 @@ import java.util.LinkedList
 class Joined<T : Any> : IterableEnvelope<T> {
 
     constructor(items: Iterable<Iterable<T>>) : super(
-        Constant {
+         {
             val iterators = LinkedList<Iterator<T>>()
             for (item in items) {
                 iterators.add(item.iterator())

@@ -1,14 +1,14 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.StickyFunc
 
 /**
- * Cached version of a Scalar.
+ * Cached version of a KScalar.
  *
- * This [Scalar] decorator technically is an in-memory
+ * This [KScalar] decorator technically is an in-memory
  * cache.
  *
  * Pay attention that this class is not thread-safe. It is highly
@@ -25,9 +25,9 @@ import nnl.rocks.kactoos.func.StickyFunc
  * @see StickyFunc
  * @since 0.3
  */
-class StickyScalar<T : Any>(private val func: Func<Boolean, T>) : Scalar<T> {
+class StickyScalar<T : Any>(private val func: Func<Boolean, T>) : KScalar<T> {
 
-    constructor(scalar: Scalar<T>) : this(StickyFunc(FuncOf { _ -> scalar() }))
+    constructor(scalar: KScalar<T>) : this(StickyFunc(FuncOf { _ -> scalar() }))
 
     override fun invoke(): T = this.func.apply(true)
 }

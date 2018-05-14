@@ -66,7 +66,7 @@ locale.
 
 `format` - The format string to use.
 
-`locale` - The locale to use.`DateAsText(formatted: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
+`locale` - The locale to use.`DateAsText(formatted: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
 
 Formatter for date instances.
 Formats the date using the provided formatter.

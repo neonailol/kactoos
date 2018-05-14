@@ -13,7 +13,7 @@ Text.
 | [ComparableText](-comparable-text/index.md) | `class ComparableText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)`, `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`Text`](../nnl.rocks.kactoos/-text/index.md)`>`<br>Text implementing Comparable. |
 | [FormattedText](-formatted-text/index.md) | `class FormattedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Text in Sprinf format. |
 | [HexOf](-hex-of/index.md) | `class HexOf : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Hexadecimal representation of Bytes. |
-| [IsBlank](-is-blank/index.md) | `class IsBlank : `[`Scalar`](../nnl.rocks.kactoos/-scalar/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Determines if text is blank (consists of spaces) or no. |
+| [IsBlank](-is-blank/index.md) | `class IsBlank : `[`KScalar`](../nnl.rocks.kactoos/-k-scalar.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Determines if text is blank (consists of spaces) or no. |
 | [JoinedText](-joined-text/index.md) | `class JoinedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Join a Text. |
 | [LowerText](-lower-text/index.md) | `class LowerText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Text in lower case. |
 | [NormalizedText](-normalized-text/index.md) | `class NormalizedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Normalize (replace sequences of whitespace characters by a single space) a Text. |

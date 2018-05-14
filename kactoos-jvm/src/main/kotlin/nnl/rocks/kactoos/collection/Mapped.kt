@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.text.TextOf
 
 /**
@@ -17,7 +16,7 @@ import nnl.rocks.kactoos.text.TextOf
 class Mapped<X : Any, Y : Any>(
     fnc: Func<X, Y>,
     src: Collection<X>
-) : CollectionEnvelope<Y>(Constant { CollectionOf<Y>(nnl.rocks.kactoos.iterable.Mapped(fnc, src)) }) {
+) : CollectionEnvelope<Y>( { CollectionOf<Y>(nnl.rocks.kactoos.iterable.Mapped(fnc, src)) }) {
 
     /**
      * Ctor.

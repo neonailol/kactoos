@@ -67,7 +67,7 @@ Kactoos.
 | [nnl.rocks.kactoos.func.IoCheckedBiProc](../nnl.rocks.kactoos.func/-io-checked-bi-proc/index.md) | BiProc that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
 | [nnl.rocks.kactoos.func.IoCheckedFunc](../nnl.rocks.kactoos.func/-io-checked-func/index.md) | Func that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
 | [nnl.rocks.kactoos.func.IoCheckedProc](../nnl.rocks.kactoos.func/-io-checked-proc/index.md) | Proc that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [java.io.IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
-| [nnl.rocks.kactoos.scalar.IoCheckedScalar](../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md) | Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
+| [nnl.rocks.kactoos.scalar.IoCheckedScalar](../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md) | KScalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html), but throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html) instead. |
 | [nnl.rocks.kactoos.text.IsBlank](../nnl.rocks.kactoos.text/-is-blank/index.md) | Determines if text is blank (consists of spaces) or no. |
 | [nnl.rocks.kactoos.time.Iso](../nnl.rocks.kactoos.time/-iso/index.md) | Default formatter |
 | [nnl.rocks.kactoos.scalar.ItemAt](../nnl.rocks.kactoos.scalar/-item-at/index.md) | Element from position in [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) or fallback value if iterator hasn't this position. |
@@ -86,7 +86,7 @@ Kactoos.
 | [nnl.rocks.kactoos.KBytes](../nnl.rocks.kactoos/-k-bytes.md) | Alias for [Bytes](../nnl.rocks.kactoos/-bytes/index.md) |
 | [nnl.rocks.kactoos.KFunc](../nnl.rocks.kactoos/-k-func.md) | Alias for [Func](../nnl.rocks.kactoos/-func/index.md) |
 | [nnl.rocks.kactoos.KProc](../nnl.rocks.kactoos/-k-proc.md) | Alias for [Proc](../nnl.rocks.kactoos/-proc/index.md) |
-| [nnl.rocks.kactoos.KScalar](../nnl.rocks.kactoos/-k-scalar.md) | Alias for [Scalar](../nnl.rocks.kactoos/-scalar/index.md) |
+| [nnl.rocks.kactoos.KScalar](../nnl.rocks.kactoos/-k-scalar.md) | Alias for [KScalar](../nnl.rocks.kactoos/-k-scalar.md) |
 | [nnl.rocks.kactoos.KText](../nnl.rocks.kactoos/-k-text.md) | Alias for [Text](../nnl.rocks.kactoos/-text/index.md) |
 | [nnl.rocks.kactoos.io.LSInputOf](../nnl.rocks.kactoos.io/-l-s-input-of/index.md) | Input as LSInput. |
 | [nnl.rocks.kactoos.io.LengthOf](../nnl.rocks.kactoos.io/-length-of/index.md) | Length of [Input](../nnl.rocks.kactoos/-input/index.md). |
@@ -166,7 +166,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.SolidIterable](../nnl.rocks.kactoos.iterable/-solid-iterable/index.md) | An [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) that is both synchronized and sticky. |
 | [nnl.rocks.kactoos.list.SolidList](../nnl.rocks.kactoos.list/-solid-list/index.md) | A [java.util.List](http://docs.oracle.com/javase/8/docs/api/java/util/List.html) that is both synchronized and sticky. |
 | [nnl.rocks.kactoos.map.SolidMap](../nnl.rocks.kactoos.map/-solid-map/index.md) | A [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) that is both synchronized and sticky. |
-| [nnl.rocks.kactoos.scalar.SolidScalar](../nnl.rocks.kactoos.scalar/-solid-scalar/index.md) | Cached and synchronized version of a Scalar. |
+| [nnl.rocks.kactoos.scalar.SolidScalar](../nnl.rocks.kactoos.scalar/-solid-scalar/index.md) | Cached and synchronized version of a KScalar. |
 | [nnl.rocks.kactoos.collection.Sorted](../nnl.rocks.kactoos.collection/-sorted/index.md) | Sorted collection. |
 | [nnl.rocks.kactoos.iterable.Sorted](../nnl.rocks.kactoos.iterable/-sorted/index.md) | Sorted iterable. |
 | [nnl.rocks.kactoos.iterator.Sorted](../nnl.rocks.kactoos.iterator/-sorted/index.md) | Sorted iterator. |
@@ -183,7 +183,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterator.StickyIterator](../nnl.rocks.kactoos.iterator/-sticky-iterator/index.md) | Iterator that returns the same set of elements always. |
 | [nnl.rocks.kactoos.list.StickyList](../nnl.rocks.kactoos.list/-sticky-list/index.md) | List decorator that goes through the list only once. |
 | [nnl.rocks.kactoos.map.StickyMap](../nnl.rocks.kactoos.map/-sticky-map/index.md) | Read-only [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) decorator that goes through the map only once. |
-| [nnl.rocks.kactoos.scalar.StickyScalar](../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md) | Cached version of a Scalar. |
+| [nnl.rocks.kactoos.scalar.StickyScalar](../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md) | Cached version of a KScalar. |
 | [nnl.rocks.kactoos.text.SubText](../nnl.rocks.kactoos.text/-sub-text/index.md) | Extract a substring from a Text. |
 | [nnl.rocks.kactoos.scalar.SumOf](../nnl.rocks.kactoos.scalar/-sum-of/index.md) | Represents total sum of given numbers. |
 | [nnl.rocks.kactoos.text.SwappedCaseText](../nnl.rocks.kactoos.text/-swapped-case-text/index.md) | Swaps the case of a Text changing upper and title case to lower case, and lower case to upper case. |
@@ -196,7 +196,7 @@ Kactoos.
 | [nnl.rocks.kactoos.list.SyncList](../nnl.rocks.kactoos.list/-sync-list/index.md) | Synchronized list. |
 | [nnl.rocks.kactoos.map.SyncMap](../nnl.rocks.kactoos.map/-sync-map/index.md) | Map decorator that goes through the map only once. |
 | [nnl.rocks.kactoos.io.SyncOutput](../nnl.rocks.kactoos.io/-sync-output/index.md) | Thread-safe [Output](../nnl.rocks.kactoos/-output/index.md). |
-| [nnl.rocks.kactoos.scalar.SyncScalar](../nnl.rocks.kactoos.scalar/-sync-scalar/index.md) | Scalar that is thread-safe. |
+| [nnl.rocks.kactoos.scalar.SyncScalar](../nnl.rocks.kactoos.scalar/-sync-scalar/index.md) | KScalar that is thread-safe. |
 | [nnl.rocks.kactoos.text.SyncText](../nnl.rocks.kactoos.text/-sync-text/index.md) | Text that is thread-safe. |
 | [nnl.rocks.kactoos.io.TeeInput](../nnl.rocks.kactoos.io/-tee-input/index.md) | Input to Output copying pipe. |
 | [nnl.rocks.kactoos.io.TeeInputStream](../nnl.rocks.kactoos.io/-tee-input-stream/index.md) | Stream that copies input to output. |

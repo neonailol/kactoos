@@ -1,9 +1,7 @@
 package nnl.rocks.kactoos.time
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.Constant
-
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -15,7 +13,7 @@ import java.util.Locale
  * @since 0.3
  */
 class LocalDateTimeAsText(
-    private val formatted: Scalar<String>
+    private val formatted: KScalar<String>
 ) : Text {
 
     /**
@@ -26,7 +24,7 @@ class LocalDateTimeAsText(
         date: LocalDateTime,
         formatter: DateTimeFormatter = Iso().invoke()
     ) : this(
-        Constant { formatter.format(date.atZone(ZoneId.systemDefault())) }
+         { formatter.format(date.atZone(ZoneId.systemDefault())) }
     )
 
     /**

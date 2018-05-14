@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.BiFunc
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Iterable, which elements are "reduced" through the func.
@@ -19,7 +19,7 @@ class Reduced<out X : Any, T : Any>(
     private val input: X,
     private val func: BiFunc<X, T, X>,
     private val iterable: Iterable<T>
-) : Scalar<X> {
+) : KScalar<X> {
 
     override fun invoke(): X {
         var memo = this.input

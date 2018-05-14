@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.map
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Map envelope.
@@ -14,7 +13,7 @@ import nnl.rocks.kactoos.scalar.Constant
  *
  * @since 0.3
  */
-open class MapEnvelope<X, out Y>(private val map: Scalar<Map<X, Y>>) : Map<X, Y> by map() {
+open class MapEnvelope<X, out Y>(private val map: KScalar<Map<X, Y>>) : Map<X, Y> by map() {
 
-    constructor(map: Map<X, Y>) : this(Constant { map })
+    constructor(map: Map<X, Y>) : this( { map })
 }

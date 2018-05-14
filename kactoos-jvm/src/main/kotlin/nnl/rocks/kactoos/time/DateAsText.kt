@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.time
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.Constant
 import java.time.Instant
 import java.time.ZoneId
 import java.time.ZonedDateTime
@@ -19,17 +18,17 @@ import java.util.Locale
  * @since 0.27
  */
 class DateAsText(
-    private val formatted: Scalar<String>
+    private val formatted: KScalar<String>
 ) : Text {
 
     constructor(
         date: TemporalAccessor,
         formatter: DateTimeFormatter
-    ) : this(Constant { formatter.format(date) })
+    ) : this( { formatter.format(date) })
 
     constructor(
         date: TemporalAccessor
-    ) : this(Constant { Iso().invoke().format(date) })
+    ) : this( { Iso().invoke().format(date) })
 
     /**
      * Formats the milliseconds using the ISO format.

@@ -1,8 +1,8 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.iterable.IterableOf
 
 /**
@@ -25,7 +25,7 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * @see IoCheckedScalar
  * @since 0.3
  */
-class And(private val iterable: Iterable<Scalar<Boolean>>) : Scalar<Boolean> {
+class And(private val iterable: Iterable<KScalar<Boolean>>) : KScalar<Boolean> {
 
     init {
     }
@@ -35,13 +35,13 @@ class And(private val iterable: Iterable<Scalar<Boolean>>) : Scalar<Boolean> {
      * @since 0.3
      */
     @SafeVarargs
-    constructor(vararg src: Scalar<Boolean>) : this(IterableOf(src.iterator()))
+    constructor(vararg src: KScalar<Boolean>) : this(IterableOf(src.iterator()))
 
     /**
      * @param src Iterator
      * @since 0.3
      */
-    constructor(src: Iterator<Scalar<Boolean>>) : this(IterableOf(src))
+    constructor(src: Iterator<KScalar<Boolean>>) : this(IterableOf(src))
 
     override fun invoke(): Boolean {
         return iterable.all { it() }

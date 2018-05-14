@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`InputOf(input: KInput)``InputOf(file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
+`InputOf(file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
 
 ### Parameters
 
@@ -18,7 +18,7 @@
 
 ### Parameters
 
-`url` - The URL`InputOf(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`URL`](http://docs.oracle.com/javase/8/docs/api/java/net/URL.html)`>)`
+`url` - The URL`InputOf(scalar: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`URL`](http://docs.oracle.com/javase/8/docs/api/java/net/URL.html)`>)`
 
 ### Parameters
 

@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.func.BiFuncOf
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
@@ -26,14 +26,14 @@ import java.math.MathContext
  * @param src The iterable
  * @since 0.24
  */
-class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
+class AvgOf(src: Iterable<KScalar<Number>>) : NumberEnvelope(Ternary(
     LengthOf(src).toLong(),
     FuncOf { len -> len > 0 },
     FuncOf { len ->
         Reduced<BigDecimal, BigDecimal>(
             BigDecimal.ZERO,
             BiFuncOf { sum, value -> sum.add(value, MathContext.DECIMAL128) },
-            Mapped<Scalar<Number>, BigDecimal>(
+            Mapped<KScalar<Number>, BigDecimal>(
                 FuncOf { number ->
                     BigDecimal.valueOf(
                         number().toDouble()
@@ -54,8 +54,8 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      * @param src Numbers
      */
     constructor(vararg src: Int) : this(
-        Mapped<Int, Scalar<Number>>(
-            FuncOf<Int, Scalar<Number>> { number -> Constant { number } },
+        Mapped<Int, KScalar<Number>>(
+            FuncOf<Int, KScalar<Number>> { number ->  { number } },
             Iterable { src.iterator() }
         )
     )
@@ -65,8 +65,8 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      * @param src Numbers
      */
     constructor(vararg src: Long) : this(
-        Mapped<Long, Scalar<Number>>(
-            FuncOf { number -> Constant { number } },
+        Mapped<Long, KScalar<Number>>(
+            FuncOf { number ->  { number } },
             Iterable { src.iterator() }
         )
     )
@@ -76,8 +76,8 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      * @param src Numbers
      */
     constructor(vararg src: Double) : this(
-        Mapped<Double, Scalar<Number>>(
-            FuncOf { number -> Constant { number } },
+        Mapped<Double, KScalar<Number>>(
+            FuncOf { number ->  { number } },
             Iterable { src.iterator() }
         )
     )
@@ -87,8 +87,8 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      * @param src Numbers
      */
     constructor(vararg src: Float) : this(
-        Mapped<Float, Scalar<Number>>(
-            FuncOf { number -> Constant { number } },
+        Mapped<Float, KScalar<Number>>(
+            FuncOf { number ->  { number } },
             Iterable { src.iterator() }
         )
     )
@@ -98,5 +98,5 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
      * @param src Numbers
      */
     @SafeVarargs
-    constructor(vararg src: Scalar<Number>) : this(IterableOf<Scalar<Number>>(*src))
+    constructor(vararg src: KScalar<Number>) : this(IterableOf<KScalar<Number>>(*src))
 }

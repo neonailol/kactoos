@@ -2,19 +2,19 @@
 
 # &lt;init&gt;
 
-`SyncScalar(src: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`
+`SyncScalar(src: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
 
 ### Parameters
 
-`src` - The Scalar to cache`SyncScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>, mutex: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`
+`src` - The KScalar to cache`SyncScalar(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>, mutex: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`)`
 
-Scalar that is thread-safe.
+KScalar that is thread-safe.
 
 ### Parameters
 
 `T` - Type of result
 
-`origin` - The Scalar to cache
+`origin` - The KScalar to cache
 
 `mutex` - Sync lock
 

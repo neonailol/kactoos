@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.time
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import java.time.format.DateTimeFormatter
 
 /**
@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter
  *
  * @since 0.3
  */
-class Iso : Scalar<DateTimeFormatter> {
+class Iso : KScalar<DateTimeFormatter> {
 
     override fun invoke(): DateTimeFormatter = DateTimeFormatter.ISO_OFFSET_DATE_TIME
 }

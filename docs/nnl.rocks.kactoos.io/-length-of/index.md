@@ -21,7 +21,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [invoke](../../nnl.rocks.kactoos.scalar/-number-envelope/invoke.md) | `open fun invoke(): `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |
+| [invoke](../../nnl.rocks.kactoos.scalar/-number-envelope/invoke.md) | `open fun invoke(): `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
 | [toByte](../../nnl.rocks.kactoos.scalar/-number-envelope/to-byte.md) | `open fun toByte(): `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html) |
 | [toChar](../../nnl.rocks.kactoos.scalar/-number-envelope/to-char.md) | `open fun toChar(): `[`Char`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html) |
 | [toDouble](../../nnl.rocks.kactoos.scalar/-number-envelope/to-double.md) | `open fun toDouble(): `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |

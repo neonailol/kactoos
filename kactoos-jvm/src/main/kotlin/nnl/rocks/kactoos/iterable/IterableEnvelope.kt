@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Iterable envelope.
@@ -12,8 +11,8 @@ import nnl.rocks.kactoos.scalar.Constant
  * @since 0.24
  */
 open class IterableEnvelope<out X : Any>(
-    private val iterable: Scalar<Iterable<X>>
+    private val iterable: KScalar<Iterable<X>>
 ) : Iterable<X> by iterable() {
 
-    constructor(iterable: Iterable<X>) : this(Constant { iterable })
+    constructor(iterable: Iterable<X>) : this({ iterable })
 }

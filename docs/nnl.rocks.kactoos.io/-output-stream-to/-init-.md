@@ -53,7 +53,7 @@
 
 ### Parameters
 
-`output` - The input`OutputStreamTo(target: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
+`output` - The input`OutputStreamTo(target: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
 
 An [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) that encapsulates other destination for the data.
 

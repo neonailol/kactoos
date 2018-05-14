@@ -22,7 +22,7 @@ class HaveSameConstructorsTest {
             "iterable.Sorted(java.util.Comparator,java.lang.Object[])",
             "list.Sorted(java.lang.Object[])",
             "list.Sorted(java.util.Comparator,java.lang.Object[])",
-            "scalar.NumberEnvelope(Scalar,Scalar,Scalar,Scalar)"
+            "scalar.NumberEnvelope(KScalar,KScalar,KScalar,KScalar)"
         )
 
         cactoosCtors

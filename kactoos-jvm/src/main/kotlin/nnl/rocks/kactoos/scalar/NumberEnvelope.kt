@@ -1,33 +1,30 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Envelope for the [Number].
  *
  * There is no thread-safety guarantee.
  *
- * @param dnum Double scalar
- *
- *
- *
- * @since 0.26
+ * @param value Double scalar
+ * @since 0.4
  */
-open class NumberEnvelope(private val dnum: Scalar<Double>) : Number(), Scalar<Double> {
+open class NumberEnvelope(private val value: KScalar<Double>) : Number(), KScalar<Double> {
 
-    override fun invoke(): Double = this.dnum()
+    override fun invoke(): Double = this.value()
 
-    override fun toDouble(): Double = (this.dnum).invoke()
+    override fun toDouble(): Double = this.value()
 
-    override fun toByte(): Byte = (Constant(this.dnum().toByte())).invoke()
+    override fun toByte(): Byte = this.value().toByte()
 
-    override fun toChar(): Char = (Constant(this.dnum().toChar())).invoke()
+    override fun toChar(): Char = this.value().toChar()
 
-    override fun toFloat(): Float = (Constant(this.dnum().toFloat())).invoke()
+    override fun toFloat(): Float = this.value().toFloat()
 
-    override fun toInt(): Int = (Constant(this.dnum().toInt())).invoke()
+    override fun toInt(): Int = this.value().toInt()
 
-    override fun toLong(): Long = (Constant(this.dnum().toLong())).invoke()
+    override fun toLong(): Long = this.value().toLong()
 
-    override fun toShort(): Short = (Constant(this.dnum().toShort())).invoke()
+    override fun toShort(): Short = this.value().toShort()
 }

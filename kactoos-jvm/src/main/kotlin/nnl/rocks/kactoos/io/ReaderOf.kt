@@ -2,9 +2,8 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.Constant
 import java.io.*
 import java.net.URI
 import java.net.URL
@@ -24,7 +23,7 @@ import java.nio.file.Path
  * @since 0.3
  */
 class ReaderOf(
-    private val source: Scalar<Reader>
+    private val source: KScalar<Reader>
 ) : Reader() {
 
     /**
@@ -153,7 +152,7 @@ class ReaderOf(
         input: Input,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(
-        Constant { InputStreamReader(input.stream(), charset) }
+         { InputStreamReader(input.stream(), charset) }
     )
 
     /**
@@ -163,7 +162,7 @@ class ReaderOf(
     constructor(
         input: Input,
         charset: CharSequence
-    ) : this(Constant { InputStreamReader(input.stream(), charset.toString()) })
+    ) : this({ InputStreamReader(input.stream(), charset.toString()) })
 
     /**
      * @param input The input
@@ -173,7 +172,7 @@ class ReaderOf(
     constructor(
         input: Input,
         decoder: CharsetDecoder
-    ) : this(Constant { InputStreamReader(input.stream(), decoder) })
+    ) : this( { InputStreamReader(input.stream(), decoder) })
 
     /**
      * @param stream The stream
@@ -211,7 +210,7 @@ class ReaderOf(
     /**
      * @param rdr The reader
      */
-    private constructor(rdr: Reader) : this(Constant { rdr })
+    private constructor(rdr: Reader) : this( { rdr })
 
     override fun read(
         cbuf: CharArray,

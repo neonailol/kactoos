@@ -1,9 +1,7 @@
 package nnl.rocks.kactoos.time
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.scalar.Constant
-
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.ZoneId
@@ -19,14 +17,14 @@ import java.util.Locale
  * @since 0.3
  */
 class LocalDateAsText constructor(
-    private val formatted: Scalar<String>
+    private val formatted: KScalar<String>
 ) : Text {
 
     constructor(
         date: LocalDate,
         formatter: DateTimeFormatter = Iso().invoke()
     ) : this(
-        Constant {
+         {
             formatter.format(
                 ZonedDateTime.of(date, LocalTime.MIN, ZoneId.systemDefault())
             )

@@ -31,7 +31,7 @@ import nnl.rocks.kactoos.iterable.Mapped
  */
 class AndWithIndex(
     private val iterable: Iterable<Func<Int, Boolean>>
-) : Scalar<Boolean> {
+) : KScalar<Boolean> {
 
     /**
      * @param src The iterable

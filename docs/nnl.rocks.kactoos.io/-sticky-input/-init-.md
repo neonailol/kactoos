@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`StickyInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)``StickyInput(cache: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`>)`
+`StickyInput(input: `[`Input`](../../nnl.rocks.kactoos/-input/index.md)`)``StickyInput(cache: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`>)`
 
 Input that reads only once.
 

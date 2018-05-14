@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 
 /**
  * Equals.
@@ -17,9 +17,9 @@ import nnl.rocks.kactoos.Scalar
  * @since 0.9
  */
 class Equals<in T : Comparable<T>>(
-    private val first: Scalar<T>,
-    private val second: Scalar<T>
-) : Scalar<Boolean> {
+    private val first: KScalar<T>,
+    private val second: KScalar<T>
+) : KScalar<Boolean> {
 
     override fun invoke(): Boolean = this.first().compareTo(this.second()) == 0
 }

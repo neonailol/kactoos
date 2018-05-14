@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.Constant
+import nnl.rocks.kactoos.KScalar
 import java.util.NoSuchElementException
 
 /**
@@ -14,7 +13,7 @@ import java.util.NoSuchElementException
  */
 class Repeated<T : Any>(
     private var repeat: Int,
-    private val elm: Scalar<T>
+    private val elm: KScalar<T>
 ) : Iterator<T> {
 
     /**
@@ -24,7 +23,7 @@ class Repeated<T : Any>(
     constructor(
         max: Int,
         element: T
-    ) : this(max, Constant { element })
+    ) : this(max, { element })
 
     override fun hasNext(): Boolean = this.repeat > 0
 

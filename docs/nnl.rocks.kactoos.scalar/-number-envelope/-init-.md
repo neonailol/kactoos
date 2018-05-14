@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`NumberEnvelope(dnum: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
+`NumberEnvelope(value: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
 
 Envelope for the [Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html).
 
@@ -10,8 +10,8 @@ There is no thread-safety guarantee.
 
 ### Parameters
 
-`dnum` - Double scalar
+`value` - Double scalar
 
 **Since**
-0.26
+0.4
 

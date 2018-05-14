@@ -1,8 +1,7 @@
 package nnl.rocks.kactoos.collection
 
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.iterator.IteratorNoNulls
-import nnl.rocks.kactoos.scalar.Constant
 import java.util.concurrent.atomic.AtomicLong
 
 /**
@@ -14,12 +13,12 @@ import java.util.concurrent.atomic.AtomicLong
  * @since 0.3
  */
 class CollectionNoNulls<X : Any>(
-    private val col: Scalar<MutableCollection<X>>
+    private val col: KScalar<MutableCollection<X>>
 ) : MutableCollection<X> by col() {
 
-    constructor(col: CollectionEnvelope<X>) : this(Constant { col.toMutableList() })
+    constructor(col: CollectionEnvelope<X>) : this({ col.toMutableList() })
 
-    constructor(col: Collection<X>) : this(Constant { col.toMutableList() })
+    constructor(col: Collection<X>) : this({ col.toMutableList() })
 
     override fun iterator(): MutableIterator<X> {
         return IteratorNoNulls(this.col().iterator(), AtomicLong())
