@@ -1,8 +1,8 @@
 package nnl.rocks.kactoos.time
 
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 
 import java.time.LocalDateTime
 import java.time.ZoneId
@@ -12,19 +12,20 @@ import java.util.Locale
 /**
  * Formatter for [LocalDateTime] instances.
  *
- * @param date The date to format.
- * @param formatter The formatter to use.
  * @since 0.3
  */
-class LocalDateTimeAsText @JvmOverloads constructor(
-    date: LocalDateTime,
-    formatter: DateTimeFormatter = Iso().get()
+class LocalDateTimeAsText(
+    private val formatted: Scalar<String>
 ) : Text {
 
     /**
-     * Scalar carrying the formatted date.
+     * @param date The date to format.
+     * @param formatter The formatter to use.
      */
-    private val formatted: UncheckedScalar<String> = UncheckedScalar(
+    constructor(
+        date: LocalDateTime,
+        formatter: DateTimeFormatter = Iso().get()
+    ) : this(
         Constant { formatter.format(date.atZone(ZoneId.systemDefault())) }
     )
 

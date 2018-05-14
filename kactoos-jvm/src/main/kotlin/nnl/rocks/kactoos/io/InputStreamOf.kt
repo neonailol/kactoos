@@ -5,8 +5,6 @@ import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.StickyScalar
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.File
 import java.io.IOException
 import java.io.InputStream
@@ -24,12 +22,9 @@ import java.nio.file.Path
  *
  * @since 0.3
  */
-class InputStreamOf private constructor(src: Scalar<InputStream>) : InputStream() {
-
-    /**
-     * The source.
-     */
-    private val source: UncheckedScalar<InputStream> = UncheckedScalar(StickyScalar(src))
+class InputStreamOf(
+    private val source: Scalar<InputStream>
+) : InputStream() {
 
     /**
      * Ctor.
@@ -176,7 +171,7 @@ class InputStreamOf private constructor(src: Scalar<InputStream>) : InputStream(
      * Ctor.
      * @param input The input
      */
-    constructor(input: Input) : this(Constant<InputStream> { input.stream() } as Scalar<InputStream>)
+    constructor(input: Input) : this(Constant { input.stream() })
 
     @Throws(IOException::class)
     override fun read(): Int {

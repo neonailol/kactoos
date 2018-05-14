@@ -1,9 +1,8 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
-import nnl.rocks.kactoos.scalar.UncheckedScalar
-import java.util.Collections
 import java.util.LinkedList
 
 /**
@@ -16,24 +15,20 @@ import java.util.LinkedList
  * @param T Element type
  * @since 0.20
  */
-class Shuffled<out T>(iterator: Iterator<T>) : Iterator<T> {
+class Shuffled<out T>(private val scalar: Scalar<Iterator<T>>) : Iterator<T> {
 
-    private val scalar: UncheckedScalar<Iterator<T>>
-
-    init {
-        this.scalar = UncheckedScalar(
-            StickyScalar<Iterator<T>>(
-                Constant {
-                    val items = LinkedList<T>()
-                    while (iterator.hasNext()) {
-                        items.add(iterator.next())
-                    }
-                    Collections.shuffle(items)
-                    items.iterator()
+    constructor(iterator: Iterator<T>) : this(
+        StickyScalar<Iterator<T>>(
+            Constant {
+                val items = LinkedList<T>()
+                while (iterator.hasNext()) {
+                    items.add(iterator.next())
                 }
-            )
+                items.shuffle()
+                items.iterator()
+            }
         )
-    }
+    )
 
     override fun hasNext(): Boolean = this.scalar().hasNext()
 

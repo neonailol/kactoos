@@ -1,9 +1,8 @@
 package nnl.rocks.kactoos.time
 
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
-
 import java.time.OffsetDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -11,19 +10,16 @@ import java.util.Locale
 /**
  * Formatter for [OffsetDateTime] instances.
  *
- * @param date The date to format.
- * @param formatter The formatter to use.
- * @since 0.27
+ * @since 0.3
  */
-class OffsetDateTimeAsText @JvmOverloads constructor(
-    date: OffsetDateTime,
-    formatter: DateTimeFormatter = Iso().get()
+class OffsetDateTimeAsText constructor(
+    private val formatted: Scalar<String>
 ) : Text {
 
-    /**
-     * Scalar carrying the formatted date.
-     */
-    private val formatted: UncheckedScalar<String> = UncheckedScalar(
+    constructor(
+        date: OffsetDateTime,
+        formatter: DateTimeFormatter = Iso().get()
+    ) : this(
         Constant { formatter.format(date) }
     )
 
