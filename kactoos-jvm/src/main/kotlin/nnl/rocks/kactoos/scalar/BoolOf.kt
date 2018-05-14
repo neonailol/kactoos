@@ -30,5 +30,5 @@ class BoolOf(private val origin: Text) : Scalar<Boolean> {
     constructor(txt: String) : this(TextOf(txt))
 
     @Throws(IOException::class)
-    override fun value(): Boolean = this.origin.asString().toBoolean()
+    override fun invoke(): Boolean = this.origin.asString().toBoolean()
 }

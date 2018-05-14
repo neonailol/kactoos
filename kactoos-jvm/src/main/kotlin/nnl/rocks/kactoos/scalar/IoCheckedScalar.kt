@@ -24,7 +24,7 @@ class IoCheckedScalar<out T : Any>(private val origin: Scalar<T>) : Scalar<T> {
 
     @Throws(IOException::class)
     @Suppress("TooGenericExceptionCaught")
-    override fun value(): T = try {
+    override fun invoke(): T = try {
         this.origin()
     } catch (ex: IOException) {
         throw ex

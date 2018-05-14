@@ -37,7 +37,7 @@ class RetryScalar<T : Any>(
     constructor(scalar: Scalar<T>) : this(scalar, 3)
 
     @Throws(Exception::class)
-    override fun value(): T {
+    override fun invoke(): T {
         return RetryFunc(
             FuncOf<Boolean, T> { _ -> this.origin() },
             this.func

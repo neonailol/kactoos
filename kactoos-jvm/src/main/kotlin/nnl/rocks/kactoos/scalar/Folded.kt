@@ -32,7 +32,7 @@ class Folded<out T : Any>(
 ) : Scalar<T> {
 
     @Throws(Exception::class)
-    override fun value(): T {
+    override fun invoke(): T {
         val iter = this.items.iterator()
         if (! iter.hasNext()) {
             throw NoSuchElementException(

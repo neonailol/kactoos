@@ -18,7 +18,7 @@ import java.io.IOException
 class IsBlank(private val origin: Text) : Scalar<Boolean> {
 
     @Throws(IOException::class)
-    override fun value(): Boolean {
+    override fun invoke(): Boolean {
         return origin.asString().isBlank()
     }
 }

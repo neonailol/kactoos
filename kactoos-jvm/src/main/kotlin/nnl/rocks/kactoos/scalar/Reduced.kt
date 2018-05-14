@@ -22,7 +22,7 @@ class Reduced<out X : Any, T : Any>(
 ) : Scalar<X> {
 
     @Throws(Exception::class)
-    override fun value(): X {
+    override fun invoke(): X {
         var memo = this.input
         for (item in this.iterable) {
             memo = this.func.apply(memo, item)

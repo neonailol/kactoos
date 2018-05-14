@@ -13,5 +13,7 @@ class Constant<out T : Any>(
     private val origin: KScalar<T>
 ) : Scalar<T> {
 
-    override fun value(): T = origin()
+    constructor(origin: T) : this({ origin })
+
+    override fun invoke(): T = origin()
 }

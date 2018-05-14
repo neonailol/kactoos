@@ -11,7 +11,7 @@ class ScalarOfTest {
             "Hello",
             Constant(
                 "Hello"
-            ).value()
+            ).invoke()
         )
     }
 }

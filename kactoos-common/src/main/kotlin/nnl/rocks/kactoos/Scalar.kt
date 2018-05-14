@@ -9,16 +9,9 @@ package nnl.rocks.kactoos
 interface Scalar<out T : Any> {
 
     /**
-     * Convert it to the value.
+     * Get value of this [Scalar]
      * @return The value
      * @since 0.2
      */
-    fun value(): T
-
-    /**
-     * Same as calling [value] but using overloading `()` operator.
-     * @return The value
-     * @since 0.2
-     */
-    operator fun invoke() : T = value()
+    operator fun invoke(): T
 }

@@ -14,5 +14,5 @@ import nnl.rocks.kactoos.Scalar
  */
 class False : Scalar<Boolean> {
 
-    override fun value(): Boolean = false
+    override fun invoke(): Boolean = false
 }

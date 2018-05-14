@@ -86,5 +86,5 @@ class PropertiesOf(
     )
 
     @Throws(IOException::class)
-    override fun value(): Properties = this.scalar()
+    override fun invoke(): Properties = this.scalar()
 }

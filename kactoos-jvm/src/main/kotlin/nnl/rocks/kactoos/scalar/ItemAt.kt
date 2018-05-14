@@ -133,7 +133,7 @@ class ItemAt<T : Any>(
     ) : this(StickyScalar<Iterator<T>>(Constant { iterator }), position, fallback)
 
     @Throws(Exception::class)
-    override fun value(): T {
+    override fun invoke(): T {
         if (this.pos < 0) {
             throw IOException(
                 FormattedText(

@@ -19,7 +19,7 @@ class Skipped<T : Any>(
     skip: Int,
     src: Collection<T>
 ) : CollectionEnvelope<T>(
-    UncheckedScalar<Collection<T>>(Constant(CollectionOf<T>(Skipped<T>(skip, src))))
+    UncheckedScalar<Collection<T>>(Constant<Collection<T>>(CollectionOf<T>(Skipped<T>(skip, src))))
 ) {
 
     /**

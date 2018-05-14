@@ -72,7 +72,7 @@ class Ternary<T : Any, X : Any>(
     ) : this(cnd, Constant { cons }, Constant { alter })
 
     @Throws(Exception::class)
-    override fun value(): T {
+    override fun invoke(): T {
         val result: Scalar<T> = if (this.condition()) {
             this.consequent
         } else {

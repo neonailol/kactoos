@@ -34,5 +34,5 @@ class StickyScalar<T : Any>(private val func: Func<Boolean, T>) : Scalar<T> {
     constructor(scalar: Scalar<T>) : this(StickyFunc(FuncOf { _ -> scalar() }))
 
     @Throws(Exception::class)
-    override fun value(): T = this.func.apply(true)
+    override fun invoke(): T = this.func.apply(true)
 }

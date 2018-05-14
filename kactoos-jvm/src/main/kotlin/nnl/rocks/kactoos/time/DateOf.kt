@@ -40,5 +40,5 @@ class DateOf(
         format: String
     ) : this(date, DateTimeFormatter.ofPattern(format))
 
-    override fun value(): Date = this.parsed()
+    override fun invoke(): Date = this.parsed()
 }

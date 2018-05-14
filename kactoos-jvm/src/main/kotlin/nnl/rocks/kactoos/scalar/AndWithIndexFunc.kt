@@ -88,7 +88,7 @@ class AndWithIndexFunc<X : Any>(
     )
 
     @Throws(Exception::class)
-    override fun value(): Boolean {
+    override fun invoke(): Boolean {
         return AndWithIndex(iterable).invoke()
     }
 

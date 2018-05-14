@@ -1,10 +1,6 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.BiFunc
-import nnl.rocks.kactoos.BiProc
-import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.Proc
-import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.*
 import nnl.rocks.kactoos.func.BiFuncOf
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
@@ -54,7 +50,7 @@ class AndWithIndex(
     constructor(src: Iterator<Func<Int, Boolean>>) : this(IterableOf<Func<Int, Boolean>>(src))
 
     @Throws(Exception::class)
-    override fun value(): Boolean {
+    override fun invoke(): Boolean {
         var result = true
         var pos = 0
         for (item in this.iterable) {

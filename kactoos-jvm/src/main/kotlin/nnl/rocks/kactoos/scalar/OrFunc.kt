@@ -94,7 +94,7 @@ class OrFunc<X : Any>(
     )
 
     @Throws(Exception::class)
-    override fun value(): Boolean {
+    override fun invoke(): Boolean {
         var result = false
         for (item in this.origin) {
             if (item()) {

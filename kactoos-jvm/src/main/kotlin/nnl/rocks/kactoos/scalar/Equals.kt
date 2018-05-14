@@ -26,5 +26,5 @@ class Equals<in T : Comparable<T>>(
 ) : Scalar<Boolean> {
 
     @Throws(Exception::class)
-    override fun value(): Boolean = this.first().compareTo(this.second()) == 0
+    override fun invoke(): Boolean = this.first().compareTo(this.second()) == 0
 }

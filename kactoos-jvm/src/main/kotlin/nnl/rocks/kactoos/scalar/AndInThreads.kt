@@ -95,7 +95,7 @@ class AndInThreads(
     ) : this(svc, src, false)
 
     @Throws(Exception::class)
-    override fun value(): Boolean {
+    override fun invoke(): Boolean {
         val futures = LinkedList<Future<Boolean>>()
         for (item in this.iterable) {
             futures.add(this.service.submit<Boolean>({ item() }))

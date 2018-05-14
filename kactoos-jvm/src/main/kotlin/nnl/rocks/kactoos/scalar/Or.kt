@@ -37,7 +37,7 @@ class Or(
     constructor(iterable: Iterator<Scalar<Boolean>>) : this(IterableOf<Scalar<Boolean>>(iterable))
 
     @Throws(Exception::class)
-    override fun value(): Boolean {
+    override fun invoke(): Boolean {
         var result = false
         for (item in this.origin) {
             if (item()) {
