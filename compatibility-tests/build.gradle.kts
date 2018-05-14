@@ -13,7 +13,7 @@ dependencies {
     testCompile(kotlin("test-testng"))
     testCompile("org.reflections:reflections:0.9.11")
     testCompile(testng())
-    testCompile("org.assertj:assertj-core:3.9.1")
+    testCompile(assertj())
     testCompile("org.apache.commons:commons-lang3:3.7")
 }
 

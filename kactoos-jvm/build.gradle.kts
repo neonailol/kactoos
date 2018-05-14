@@ -8,7 +8,7 @@ plugins {
     maven
     id("kotlin-platform-jvm")
     id("org.jetbrains.dokka") version "0.9.16"
-    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC6-4"
+    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC7"
     id("org.jlleitschuh.gradle.ktlint") version "3.3.0"
 }
 
@@ -17,12 +17,12 @@ dependencies {
     "implementation"(kotlin("stdlib-jdk8"))
     "testCompile"(kotlin("test-testng"))
     testCompile(testng())
-    "testCompile"("org.assertj:assertj-core:3.9.1")
+    "testCompile"(assertj())
 }
 
 configurations {
     detekt {
-        version = "1.0.0.RC6-4"
+        version = "1.0.0.RC7"
         defaultProfile(
             Action {
                 input = "$projectDir/src/main/kotlin"
@@ -33,7 +33,7 @@ configurations {
     }
 
     ktlint {
-        version = "0.23.0"
+        version = "0.23.1"
         debug = true
         verbose = true
         android = false
