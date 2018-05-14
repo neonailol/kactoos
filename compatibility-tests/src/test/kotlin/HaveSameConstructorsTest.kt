@@ -1,21 +1,13 @@
-import nnl.rocks.kactoos.func.FuncOf
-import nnl.rocks.kactoos.iterable.Filtered
-import nnl.rocks.kactoos.iterable.IterableOf
-import nnl.rocks.kactoos.list.Joined
-import nnl.rocks.kactoos.list.Mapped
-import nnl.rocks.kactoos.list.Sorted
-import org.reflections.Reflections
-import org.reflections.scanners.SubTypesScanner
+import helpers.PackageConstructors
 import org.testng.annotations.Test
-import java.lang.reflect.Constructor
 
 class HaveSameConstructorsTest {
 
     @Test
     fun haveSameConstructors() {
 
-        val cactoosCtors = constructors("org.cactoos")
-        val kactoosCtors = constructors("nnl.rocks.kactoos")
+        val cactoosCtors = PackageConstructors("org.cactoos").value()
+        val kactoosCtors = PackageConstructors("nnl.rocks.kactoos").value()
 
         val skip = listOf(
             "scalar.And",
@@ -39,27 +31,4 @@ class HaveSameConstructorsTest {
 
 //        assertTrue("Have $ok unresolved constructor issues!", { ok == 0 })
     }
-
-    private fun constructors(pkg: String): Sorted<String> {
-        return Sorted(
-            Filtered(
-                FuncOf({ it: String -> it.contains("\$").not() }),
-                Mapped(
-                    FuncOf({ it: Constructor<*> -> it.toString().replace("$pkg.", "") }),
-                    Joined(
-                        IterableOf(
-                            Mapped(
-                                FuncOf({ it: Class<*> -> it.constructors.asList() }),
-                                Reflections(
-                                    pkg,
-                                    SubTypesScanner(false)
-                                ).getSubTypesOf(Any::class.java)
-                            )
-                        )
-                    )
-                )
-            )
-        )
-    }
-
 }
