@@ -16,8 +16,8 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  */
 class IterableOf<X : Any> : IterableEnvelope<X> {
 
-    constructor(sclr: Scalar<Iterator<X>>) : super(
-        Constant { Iterable { UncheckedScalar(sclr).value() } }
+    constructor(scalar: Scalar<Iterator<X>>) : super(
+        Constant { Iterable { UncheckedScalar(scalar).value() } }
     )
 
     /**
@@ -27,13 +27,17 @@ class IterableOf<X : Any> : IterableEnvelope<X> {
     constructor(vararg items: X) : this(Constant { items.iterator() })
 
     /**
-     * @param list The list
+     * @param list The List
      */
     constructor(list: List<X>) : this(Constant<Iterator<X>> { list.iterator() })
 
     /**
-     * @param list The list
-     * @since 0.21
+     * @param set The Set
      */
-    constructor(list: Iterator<X>) : this(Constant { list })
+    constructor(set: Set<X>) : this(Constant<Iterator<X>> { set.iterator() })
+
+    /**
+     * @param iterator The Iterator
+     */
+    constructor(iterator: Iterator<X>) : this(Constant { iterator })
 }
