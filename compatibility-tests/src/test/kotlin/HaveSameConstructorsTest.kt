@@ -1,43 +1,21 @@
+import nnl.rocks.kactoos.func.FuncOf
+import nnl.rocks.kactoos.iterable.Filtered
+import nnl.rocks.kactoos.iterable.IterableOf
+import nnl.rocks.kactoos.list.Joined
+import nnl.rocks.kactoos.list.Mapped
+import nnl.rocks.kactoos.list.Sorted
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 import org.testng.annotations.Test
+import java.lang.reflect.Constructor
 
 class HaveSameConstructorsTest {
 
     @Test
     fun haveSameConstructors() {
-        val cactoosTypes = Reflections(
-            "org.cactoos",
-            SubTypesScanner(false)
-        ).getSubTypesOf(Any::class.java)
 
-        val cactoosCtors = mutableListOf<String>()
-
-        for (clazz in cactoosTypes) {
-            clazz.constructors.mapTo(cactoosCtors) {
-                it.toString().replace("org.cactoos.", "")
-            }
-        }
-
-        cactoosCtors.removeIf {
-            it.contains("\$")
-        }
-
-        val kactoosCtors = mutableListOf<String>()
-
-        val kactoosTypes = Reflections(
-            "nnl.rocks.kactoos",
-            SubTypesScanner(false)
-        ).getSubTypesOf(Any::class.java)
-
-        for (clazz in kactoosTypes) {
-            clazz.constructors.mapTo(kactoosCtors) {
-                it.toString().replace("nnl.rocks.kactoos.", "")
-            }
-        }
-
-        cactoosCtors.sort()
-        kactoosCtors.sort()
+        val cactoosCtors = constructors("org.cactoos")
+        val kactoosCtors = constructors("nnl.rocks.kactoos")
 
         val skip = listOf(
             "scalar.And",
@@ -55,18 +33,33 @@ class HaveSameConstructorsTest {
             "scalar.NumberEnvelope(Scalar,Scalar,Scalar,Scalar)"
         )
 
-        var ok = 0
-
-        for (type in cactoosCtors) {
-            if (skip.none { s -> s in type }) {
-                if (kactoosCtors.contains(type).not()) {
-                    println("Missing $type")
-                    ok ++
-                }
-            }
-        }
+        cactoosCtors
+            .filter { skip.none { s -> s in it } && kactoosCtors.contains(it).not() }
+            .forEach { println("Missing $it") }
 
 //        assertTrue("Have $ok unresolved constructor issues!", { ok == 0 })
+    }
+
+    private fun constructors(pkg: String): Sorted<String> {
+        return Sorted(
+            Filtered(
+                FuncOf({ it: String -> it.contains("\$").not() }),
+                Mapped(
+                    FuncOf({ it: Constructor<*> -> it.toString().replace("$pkg.", "") }),
+                    Joined(
+                        IterableOf(
+                            Mapped(
+                                FuncOf({ it: Class<*> -> it.constructors.asList() }),
+                                Reflections(
+                                    pkg,
+                                    SubTypesScanner(false)
+                                ).getSubTypesOf(Any::class.java)
+                            )
+                        )
+                    )
+                )
+            )
+        )
     }
 
 }
