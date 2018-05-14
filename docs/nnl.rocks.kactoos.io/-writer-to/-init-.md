@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`WriterTo(tgt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`>)``WriterTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
+`WriterTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
 
 ### Parameters
 
@@ -32,7 +32,7 @@
 **Since**
 0.13.1
 
-`WriterTo(target: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`>)`
+`WriterTo(target: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`>)`
 
 A [Writer](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html) that encapsulates other destination for the data.
 

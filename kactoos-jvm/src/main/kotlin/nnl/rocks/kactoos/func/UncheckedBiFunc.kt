@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.BiFunc
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 
 /**
  * BiFunc that doesn't throw checked [Exception].
@@ -21,5 +20,5 @@ class UncheckedBiFunc<in X : Any, in Y : Any, out Z : Any>(private val func: BiF
     override fun apply(
         first: X,
         second: Y
-    ): Z = UncheckedScalar(Constant { this.func.apply(first, second) }).invoke()
+    ): Z = Constant { this.func.apply(first, second) }.invoke()
 }

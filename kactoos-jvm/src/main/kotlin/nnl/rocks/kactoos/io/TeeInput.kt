@@ -4,11 +4,7 @@ import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Output
 import nnl.rocks.kactoos.Text
-import java.io.File
-import java.io.IOException
-import java.io.InputStream
-import java.io.Reader
-import java.io.Writer
+import java.io.*
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset

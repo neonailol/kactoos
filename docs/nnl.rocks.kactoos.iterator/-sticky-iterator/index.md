@@ -13,17 +13,10 @@ There is no thread-safety guarantee.
 `X` - Type of item
 
 **Since**
-0.8
+0.3
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `StickyIterator(vararg items: `[`X`](index.md#X)`)``StickyIterator(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`<br>Iterator that returns the same set of elements always. |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [hasNext](has-next.md) | `fun hasNext(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [next](next.md) | `fun next(): `[`X`](index.md#X) |
+| [&lt;init&gt;](-init-.md) | `StickyIterator(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`<br>`StickyIterator(vararg items: `[`X`](index.md#X)`)``StickyIterator(gate: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>>)`<br>Iterator that returns the same set of elements always. |

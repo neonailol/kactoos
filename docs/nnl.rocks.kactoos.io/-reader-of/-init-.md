@@ -110,12 +110,12 @@ Ctor.
 **Since**
 0.13.1
 
-`ReaderOf(source: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`>)`
+`ReaderOf(source: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Reader`](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html)`>)`
 
 A [Reader](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html) that encapsulates other sources of data.
 
 There is no thread-safety guarantee.
 
 **Since**
-0.13
+0.3
 

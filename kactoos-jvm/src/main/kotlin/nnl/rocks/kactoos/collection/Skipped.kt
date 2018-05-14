@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.collection
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Skipped
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 
 /**
  * Skipped collection.
@@ -19,7 +18,7 @@ class Skipped<T : Any>(
     skip: Int,
     src: Collection<T>
 ) : CollectionEnvelope<T>(
-    UncheckedScalar<Collection<T>>(Constant<Collection<T>>(CollectionOf<T>(Skipped<T>(skip, src))))
+    Constant<Collection<T>>(CollectionOf<T>(Skipped<T>(skip, src)))
 ) {
 
     /**

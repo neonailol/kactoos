@@ -33,4 +33,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `fun value(): `[`T`](index.md#T)<br>Convert it to the value. |
+| [invoke](invoke.md) | `fun invoke(): `[`T`](index.md#T)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

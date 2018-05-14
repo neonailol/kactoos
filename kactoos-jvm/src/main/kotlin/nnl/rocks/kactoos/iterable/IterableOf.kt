@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 
 /**
  * Array as iterable.
@@ -17,7 +16,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
 class IterableOf<X : Any> : IterableEnvelope<X> {
 
     constructor(scalar: Scalar<Iterator<X>>) : super(
-        Constant { Iterable { UncheckedScalar(scalar).invoke() } }
+        Constant { Iterable { scalar.invoke() } }
     )
 
     /**

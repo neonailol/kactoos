@@ -12,10 +12,6 @@ import nnl.rocks.kactoos.iterable.Mapped
  *
  * There is no thread-safety guarantee.
  *
- * This class implements [Scalar], which throws a checked
- * [Exception]. This may not be convenient in many cases. To make
- * it more convenient and get rid of the checked exception you can
- * use [UncheckedScalar] or [IoCheckedScalar] decorators.
  *
  * @param origin The iterable.
  * @since 0.8

@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`CollectionEnvelope(slr: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>>)``CollectionEnvelope(col: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>>)`
+`CollectionEnvelope(col: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)``CollectionEnvelope(col: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>>)`
 
 Base read-only collection.
 

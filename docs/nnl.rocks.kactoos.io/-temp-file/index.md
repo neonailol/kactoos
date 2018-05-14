@@ -36,4 +36,4 @@ closed.
 | Name | Summary |
 |---|---|
 | [close](close.md) | `fun close(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Deletes the file from the filesystem. |
-| [value](value.md) | `fun value(): `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)<br>Convert it to the value. |
+| [invoke](invoke.md) | `fun invoke(): `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

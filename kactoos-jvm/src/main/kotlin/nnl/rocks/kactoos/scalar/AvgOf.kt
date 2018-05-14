@@ -20,10 +20,6 @@ import java.math.MathContext
  * int sum = new AvgOf(numbers.toArray(new Integer[numbers.size()])).intValue();
  * ```
  *
- * This class implements [Scalar], which throws a checked
- * [Exception]. This may not be convenient in many cases. To make
- * it more convenient and get rid of the checked exception you can
- * use [UncheckedScalar] or [IoCheckedScalar] decorators.
  *
  * There is no thread-safety guarantee.
  *

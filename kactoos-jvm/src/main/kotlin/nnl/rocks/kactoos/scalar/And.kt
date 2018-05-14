@@ -18,15 +18,10 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * ).value()
  * ```
  *
- * This class implements [Scalar], which throws a checked
- * [Exception]. This may not be convenient in many cases. To make
- * it more convenient and get rid of the checked exception you can
- * use [UncheckedScalar] or [IoCheckedScalar] decorators.
  *
  * There is no thread-safety guarantee.
  *
  * @param iterable The encapsulated iterable
- * @see UncheckedScalar
  * @see IoCheckedScalar
  * @since 0.3
  */

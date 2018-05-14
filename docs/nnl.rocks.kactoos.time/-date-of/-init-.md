@@ -11,7 +11,7 @@ Parses the date using the provided format.
 
 `date` - The date to parse.
 
-`format` - The format to use.`DateOf(parsed: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)`>)`
+`format` - The format to use.`DateOf(parsed: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)`>)`
 
 Parser for [Date](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html) instances.
 Parsing the date using the provided formatter.

@@ -21,4 +21,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `fun value(): `[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)<br>Convert it to the value. |
+| [invoke](invoke.md) | `fun invoke(): `[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

@@ -2,11 +2,7 @@ package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.KOutput
 import nnl.rocks.kactoos.Output
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.OutputStream
-import java.io.Writer
+import java.io.*
 import java.nio.charset.Charset
 import java.nio.charset.CharsetDecoder
 import java.nio.file.Path

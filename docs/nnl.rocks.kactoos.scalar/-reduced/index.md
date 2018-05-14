@@ -31,4 +31,4 @@ Iterable, which elements are "reduced" through the func.
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `fun value(): `[`X`](index.md#X)<br>Convert it to the value. |
+| [invoke](invoke.md) | `fun invoke(): `[`X`](index.md#X)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

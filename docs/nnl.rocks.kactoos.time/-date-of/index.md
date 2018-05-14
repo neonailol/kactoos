@@ -18,10 +18,10 @@ Parsing the date using the provided formatter.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `DateOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, formatter: `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)`)`<br>`DateOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)``DateOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, format: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>Parses the date using the provided format.`DateOf(parsed: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)`>)`<br>Parser for [Date](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html) instances. Parsing the date using the provided formatter. |
+| [&lt;init&gt;](-init-.md) | `DateOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, formatter: `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)`)`<br>`DateOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)``DateOf(date: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, format: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>Parses the date using the provided format.`DateOf(parsed: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)`>)`<br>Parser for [Date](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html) instances. Parsing the date using the provided formatter. |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `fun value(): `[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)<br>Convert it to the value. |
+| [invoke](invoke.md) | `fun invoke(): `[`Date`](http://docs.oracle.com/javase/8/docs/api/java/util/Date.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

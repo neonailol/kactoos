@@ -21,6 +21,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
+| [invoke](../../nnl.rocks.kactoos.scalar/-number-envelope/invoke.md) | `open fun invoke(): `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |
 | [toByte](../../nnl.rocks.kactoos.scalar/-number-envelope/to-byte.md) | `open fun toByte(): `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html) |
 | [toChar](../../nnl.rocks.kactoos.scalar/-number-envelope/to-char.md) | `open fun toChar(): `[`Char`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html) |
 | [toDouble](../../nnl.rocks.kactoos.scalar/-number-envelope/to-double.md) | `open fun toDouble(): `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html) |
@@ -28,4 +29,3 @@ There is no thread-safety guarantee.
 | [toInt](../../nnl.rocks.kactoos.scalar/-number-envelope/to-int.md) | `open fun toInt(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
 | [toLong](../../nnl.rocks.kactoos.scalar/-number-envelope/to-long.md) | `open fun toLong(): `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) |
 | [toShort](../../nnl.rocks.kactoos.scalar/-number-envelope/to-short.md) | `open fun toShort(): `[`Short`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html) |
-| [value](../../nnl.rocks.kactoos.scalar/-number-envelope/value.md) | `open fun value(): `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)<br>Convert it to the value. |

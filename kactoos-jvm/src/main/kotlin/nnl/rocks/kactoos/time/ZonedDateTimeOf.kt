@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.time
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
@@ -27,22 +26,18 @@ class ZonedDateTimeOf(
         date: CharSequence,
         formatter: DateTimeFormatter
     ) : this(
-        UncheckedScalar(
-            Constant {
-                ZonedDateTime.from(formatter.parse(date))
-            }
-        )
+        Constant {
+            ZonedDateTime.from(formatter.parse(date))
+        }
     )
 
     /**
      * @param date The date to parse.
      * */
     constructor(date: CharSequence) : this(
-        UncheckedScalar(
-            Constant {
-                ZonedDateTime.from(Iso().get().parse(date))
-            }
-        )
+        Constant {
+            ZonedDateTime.from(Iso().get().parse(date))
+        }
     )
 
     /**

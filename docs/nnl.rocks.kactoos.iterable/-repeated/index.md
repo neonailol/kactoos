@@ -19,4 +19,4 @@ If you need to repeat endlessly, use [Endless](../-endless/index.md).
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Repeated(total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, elm: `[`T`](index.md#T)`)`<br>`Repeated(total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, elm: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`<br>Ctor.`Repeated(total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, item: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`T`](index.md#T)`>)`<br>Repeat an element. |
+| [&lt;init&gt;](-init-.md) | `Repeated(total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, elm: `[`T`](index.md#T)`)`<br>Ctor.`Repeated(total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, item: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`<br>Repeat an element. |

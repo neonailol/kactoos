@@ -60,11 +60,6 @@ new And(
 ).value();
 ```
 
-This class implements [Scalar](../../nnl.rocks.kactoos/-scalar/index.md), which throws a checked
-[Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). This may not be convenient in many cases. To make
-it more convenient and get rid of the checked exception you can
-use [UncheckedScalar](../-unchecked-scalar/index.md) or [IoCheckedScalar](../-io-checked-scalar/index.md) decorators.
-
 There is no thread-safety guarantee.
 
 ### Parameters
@@ -74,8 +69,6 @@ There is no thread-safety guarantee.
 `X` - Type argument
 
 **See Also**
-
-[UncheckedScalar](../-unchecked-scalar/index.md)
 
 [IoCheckedScalar](../-io-checked-scalar/index.md)
 

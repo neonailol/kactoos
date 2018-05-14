@@ -12,11 +12,6 @@ cache.
 Pay attention that this class is not thread-safe. It is highly
 recommended to always decorate it with [SyncScalar](../-sync-scalar/index.md).
 
-This class implements [Scalar](../../nnl.rocks.kactoos/-scalar/index.md), which throws a checked
-[Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). This may not be convenient in many cases. To make
-it more convenient and get rid of the checked exception you can
-use [UncheckedScalar](../-unchecked-scalar/index.md) or [IoCheckedScalar](../-io-checked-scalar/index.md) decorators.
-
 There is no thread-safety guarantee.
 
 ### Parameters
@@ -42,4 +37,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [value](value.md) | `fun value(): `[`T`](index.md#T)<br>Convert it to the value. |
+| [invoke](invoke.md) | `fun invoke(): `[`T`](index.md#T)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

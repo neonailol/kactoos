@@ -21,10 +21,6 @@ import java.util.concurrent.Executors
  * ).value();
  * ```
  *
- * This class implements [Scalar], which throws a checked
- * [Exception]. This may not be convenient in many cases. To make
- * it more convenient and get rid of the checked exception you can
- * use [UncheckedScalar] or [IoCheckedScalar] decorators.
  *
  * There is no thread-safety guarantee.
  *
@@ -32,7 +28,6 @@ import java.util.concurrent.Executors
  * @param iterable The iterable
  * @param shut Shut it down
  * @param X Type of items in the iterable
- * @see UncheckedScalar
  * @see IoCheckedScalar
  * @since 0.25
  */

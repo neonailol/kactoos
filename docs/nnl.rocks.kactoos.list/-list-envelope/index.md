@@ -13,13 +13,13 @@ There is no thread-safety guarantee.
 `T` - Element type
 
 **Since**
-0.23
+0.3
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ListEnvelope(src: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>>)``ListEnvelope(list: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>>)`<br>List envelope. |
+| [&lt;init&gt;](-init-.md) | `ListEnvelope(list: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>)``ListEnvelope(list: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>>)`<br>List envelope. |
 
 ### Inheritors
 

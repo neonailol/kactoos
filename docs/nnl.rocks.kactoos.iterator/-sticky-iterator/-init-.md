@@ -2,11 +2,11 @@
 
 # &lt;init&gt;
 
-`StickyIterator(vararg items: `[`X`](index.md#X)`)`
+`StickyIterator(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)``StickyIterator(vararg items: `[`X`](index.md#X)`)`
 
 ### Parameters
 
-`items` - Items to iterate`StickyIterator(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`
+`items` - Items to iterate over`StickyIterator(gate: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>>)`
 
 Iterator that returns the same set of elements always.
 
@@ -17,5 +17,5 @@ There is no thread-safety guarantee.
 `X` - Type of item
 
 **Since**
-0.8
+0.3
 

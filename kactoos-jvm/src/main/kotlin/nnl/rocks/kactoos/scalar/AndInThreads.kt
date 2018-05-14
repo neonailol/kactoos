@@ -24,17 +24,12 @@ import java.util.concurrent.TimeUnit
  * ).value();
  * ```
  *
- * This class implements [Scalar], which throws a checked
- * [Exception]. This may not be convenient in many cases. To make
- * it more convenient and get rid of the checked exception you can
- * use [UncheckedScalar] or [IoCheckedScalar] decorators.
  *
  * There is no thread-safety guarantee.
  *
  * @param service Executable service to run thread in
  * @param iterable The iterable
  * @param shut Shut it down
- * @see UncheckedScalar
  * @see IoCheckedScalar
  * @since 0.25
  */

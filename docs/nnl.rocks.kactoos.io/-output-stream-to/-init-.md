@@ -2,8 +2,7 @@
 
 # &lt;init&gt;
 
-`OutputStreamTo(tgt: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
-`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)``OutputStreamTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
+`OutputStreamTo(path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`)`
 
 ### Parameters
 
@@ -23,7 +22,7 @@
 **Since**
 0.13.1
 
-`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`)``OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 `OutputStreamTo(wtr: `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 ### Parameters
@@ -54,12 +53,12 @@
 
 ### Parameters
 
-`output` - The input`OutputStreamTo(target: `[`UncheckedScalar`](../../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
+`output` - The input`OutputStreamTo(target: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)`>)`
 
 An [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) that encapsulates other destination for the data.
 
 There is no thread-safety guarantee.
 
 **Since**
-0.13
+0.3
 

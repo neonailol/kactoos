@@ -4,11 +4,7 @@ import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.KBytes
 import nnl.rocks.kactoos.Text
-import java.io.ByteArrayOutputStream
-import java.io.File
-import java.io.IOException
-import java.io.PrintStream
-import java.io.Reader
+import java.io.*
 import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
 import java.nio.file.Path

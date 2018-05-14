@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.time
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.time.OffsetDateTime
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
@@ -22,12 +21,12 @@ class OffsetDateTimeOf(
 
     constructor(
         date: CharSequence
-    ) : this(UncheckedScalar(Constant { ZonedDateTime.from(Iso().get().parse(date)).toOffsetDateTime() }))
+    ) : this(Constant { ZonedDateTime.from(Iso().get().parse(date)).toOffsetDateTime() })
 
     constructor(
         date: CharSequence,
         formatter: DateTimeFormatter
-    ) : this(UncheckedScalar(Constant { ZonedDateTime.from(formatter.parse(date)).toOffsetDateTime() }))
+    ) : this(Constant { ZonedDateTime.from(formatter.parse(date)).toOffsetDateTime() })
 
     /**
      * Parses date using the provided format to create

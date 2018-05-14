@@ -113,4 +113,12 @@ Ctor.
 
 ### Parameters
 
-`input` - The input
+`input` - The input`InputStreamOf(source: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)`>)`
+
+An [InputStream](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) that encapsulates other sources of data.
+
+There is no thread-safety guarantee.
+
+**Since**
+0.3
+

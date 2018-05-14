@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.*
 import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.*
 import java.net.URI
 import java.net.URL
@@ -32,7 +31,7 @@ class InputOf(private val origin: Input) : Input {
     constructor(file: File) : this(
         {
             FileInputStream(
-                UncheckedScalar(Constant { file }).invoke()
+                Constant { file }.invoke()
             )
         }
     )

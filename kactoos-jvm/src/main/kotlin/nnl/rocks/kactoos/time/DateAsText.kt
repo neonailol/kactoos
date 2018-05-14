@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.time
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.time.Instant
 import java.time.ZoneId
 import java.time.ZonedDateTime
@@ -26,11 +25,11 @@ class DateAsText(
     constructor(
         date: TemporalAccessor,
         formatter: DateTimeFormatter
-    ) : this(UncheckedScalar(Constant { formatter.format(date) }))
+    ) : this(Constant { formatter.format(date) })
 
     constructor(
         date: TemporalAccessor
-    ) : this(UncheckedScalar(Constant { Iso().get().format(date) }))
+    ) : this(Constant { Iso().get().format(date) })
 
     /**
      * Formats the milliseconds using the ISO format.
