@@ -1,7 +1,6 @@
 package helpers
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.collection.Filtered
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.list.Mapped
@@ -9,12 +8,14 @@ import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 
 open class PackageClasses(
-    private val pkg: String,
-    private val filter: Func<String, Boolean>
-) : Scalar<List<String>> {
+    private val decorated: List<String>
+) : List<String> by decorated {
 
-    override fun value(): List<String> {
-        return Mapped(
+    constructor(
+        pkg: String,
+        filter: Func<String, Boolean>
+    ) : this(
+        Mapped(
             FuncOf({ it: String -> it.replace("$pkg.", "") }),
             Filtered(
                 filter,
@@ -24,7 +25,7 @@ open class PackageClasses(
                 ).allTypes
             )
         )
-    }
+    )
 }
 
 class CactoosClasses : PackageClasses("org.cactoos", FuncOf({ it: String -> it.contains('$').not() }))

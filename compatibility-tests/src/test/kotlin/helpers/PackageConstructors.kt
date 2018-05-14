@@ -6,17 +6,16 @@ import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.list.Joined
 import nnl.rocks.kactoos.list.Mapped
 import nnl.rocks.kactoos.list.Sorted
-import org.cactoos.Scalar
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 import java.lang.reflect.Constructor
 
 class PackageConstructors(
-    private val pkg: String
-) : Scalar<List<String>> {
+    private val decorated: List<String>
+) : List<String> by decorated {
 
-    override fun value(): List<String> {
-        return Sorted(
+    constructor(pkg: String) : this(
+        Sorted(
             Filtered(
                 FuncOf({ it: String -> it.contains("\$").not() }),
                 Mapped(
@@ -35,5 +34,5 @@ class PackageConstructors(
                 )
             )
         )
-    }
+    )
 }

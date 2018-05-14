@@ -6,8 +6,8 @@ class HaveSameConstructorsTest {
     @Test
     fun haveSameConstructors() {
 
-        val cactoosCtors = PackageConstructors("org.cactoos").value()
-        val kactoosCtors = PackageConstructors("nnl.rocks.kactoos").value()
+        val cactoosCtors = PackageConstructors("org.cactoos")
+        val kactoosCtors = PackageConstructors("nnl.rocks.kactoos")
 
         val skip = listOf(
             "scalar.And",

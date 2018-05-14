@@ -7,8 +7,8 @@ class MissingClassesTest {
 
     @Test
     fun missingClasses() {
-        val cactoosTypes = CactoosClasses().value()
-        val kactoosTypes = KactoosClasses().value()
+        val cactoosTypes = CactoosClasses()
+        val kactoosTypes = KactoosClasses()
         val count = AtomicInteger(0)
         cactoosTypes.forEach {
             if (kactoosTypes.contains(it).not()) {

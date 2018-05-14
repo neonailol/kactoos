@@ -9,7 +9,7 @@ class HaveSameInterfacesTest {
 
     @Test
     fun haveSameInterfaces() {
-        CactoosClasses().value().forEach { kType: String ->
+        CactoosClasses().forEach { kType: String ->
             try {
                 val cClass = Class.forName("org.cactoos.$kType")
                 val kClass = Class.forName("nnl.rocks.kactoos.$kType")
