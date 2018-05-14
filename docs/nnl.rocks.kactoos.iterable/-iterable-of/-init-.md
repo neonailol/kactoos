@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`IterableOf(sclr: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>>)``IterableOf(vararg items: `[`X`](index.md#X)`)`
+`IterableOf(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>>)``IterableOf(vararg items: `[`X`](index.md#X)`)`
 
 ### Parameters
 
@@ -10,12 +10,12 @@
 
 ### Parameters
 
-`list` - The list`IterableOf(list: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`
+`list` - The List`IterableOf(set: `[`Set`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html)`<`[`X`](index.md#X)`>)`
 
 ### Parameters
 
-`list` - The list
+`set` - The Set`IterableOf(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`
 
-**Since**
-0.21
+### Parameters
 
+`iterator` - The Iterator
