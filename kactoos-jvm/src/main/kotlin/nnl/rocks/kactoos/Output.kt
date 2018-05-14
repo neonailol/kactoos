@@ -41,7 +41,6 @@ interface Output {
      * @return InputStream to read from
      * @throws IOException If something goes wrong
      */
-    @Throws(IOException::class)
     fun stream(): OutputStream
 
     class NoNulls(private val origin: Output) : Output {

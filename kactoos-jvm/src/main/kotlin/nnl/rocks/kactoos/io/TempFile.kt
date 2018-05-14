@@ -84,7 +84,6 @@ class TempFile private constructor(
         )
     )
 
-    @Throws(Exception::class)
     override fun invoke(): Path {
         return this.file()
     }

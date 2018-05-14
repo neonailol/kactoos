@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.io
 
-import java.io.IOException
 import java.io.OutputStream
 import java.time.Duration
 import java.time.Instant
@@ -27,18 +26,15 @@ class LoggingOutputStream constructor(
     private val bytes: AtomicLong = AtomicLong()
     private val time: AtomicLong = AtomicLong()
 
-    @Throws(IOException::class)
     override fun write(data: Int) {
         val buf = byteArrayOf(data.toByte())
         this.write(buf, 0, 1)
     }
 
-    @Throws(IOException::class)
     override fun write(buf: ByteArray) {
         this.write(buf, 0, buf.size)
     }
 
-    @Throws(IOException::class)
     override fun write(
         buf: ByteArray,
         offset: Int,
@@ -64,7 +60,6 @@ class LoggingOutputStream constructor(
         }
     }
 
-    @Throws(IOException::class)
     override fun close() {
         this.origin.close()
         val level = this.logger.level
@@ -88,7 +83,6 @@ class LoggingOutputStream constructor(
         )
     }
 
-    @Throws(IOException::class)
     override fun flush() {
         this.origin.flush()
         val level = this.logger.level

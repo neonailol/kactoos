@@ -4,7 +4,6 @@ import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
-import java.io.IOException
 import java.util.StringJoiner
 
 /**
@@ -57,7 +56,6 @@ class JoinedText(
         vararg txts: Text
     ) : this(delimit, IterableOf<Text>(txts.iterator()))
 
-    @Throws(IOException::class)
     override fun asString(): String {
         val joint = StringJoiner(this.delimiter.asString())
         for (text in this.texts) {

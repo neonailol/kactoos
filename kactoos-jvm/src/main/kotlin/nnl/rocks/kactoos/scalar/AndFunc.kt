@@ -100,6 +100,5 @@ class AndFunc<X : Any>(private val iterable: Iterable<Scalar<Boolean>>) : Scalar
         )
     )
 
-    @Throws(Exception::class)
     override fun invoke(): Boolean = And(iterable).invoke()
 }

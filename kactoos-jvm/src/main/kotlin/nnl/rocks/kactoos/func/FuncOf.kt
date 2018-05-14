@@ -38,6 +38,5 @@ class FuncOf<in X : Any, out Y : Any>(
         result: Y
     ) : this({ proc.exec(it); result })
 
-    @Throws(Exception::class)
     override fun apply(input: X): Y = this.func(input)
 }

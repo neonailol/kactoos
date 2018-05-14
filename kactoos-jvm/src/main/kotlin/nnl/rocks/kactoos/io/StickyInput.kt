@@ -7,7 +7,6 @@ import nnl.rocks.kactoos.scalar.IoCheckedScalar
 import nnl.rocks.kactoos.scalar.StickyScalar
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
-import java.io.IOException
 import java.io.InputStream
 
 /**
@@ -40,7 +39,6 @@ class StickyInput(
         )
     )
 
-    @Throws(IOException::class)
     override fun stream(): InputStream = ByteArrayInputStream(
         IoCheckedScalar(this.cache).invoke()
     )

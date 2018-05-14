@@ -27,7 +27,6 @@ class FuncWithFallback<in X : Any, out Y : Any>(
         fallback: Func<Throwable, Y>
     ) : this(func, fallback, FuncOf { input -> input })
 
-    @Throws(Exception::class)
     @Suppress("TooGenericExceptionCaught")
     override fun apply(input: X): Y {
         val result: Y = try {

@@ -18,7 +18,6 @@ import java.io.IOException
  */
 class IoCheckedScalar<out T : Any>(private val origin: Scalar<T>) : Scalar<T> {
 
-    @Throws(IOException::class)
     @Suppress("TooGenericExceptionCaught")
     override fun invoke(): T = try {
         this.origin()

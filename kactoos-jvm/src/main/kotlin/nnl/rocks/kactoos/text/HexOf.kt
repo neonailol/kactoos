@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Text
-import java.io.IOException
 
 /**
  * Hexadecimal representation of Bytes.
@@ -16,7 +15,6 @@ import java.io.IOException
  */
 class HexOf(private val bytes: Bytes) : Text {
 
-    @Throws(IOException::class)
     override fun asString(): String {
         val bts = this.bytes.asBytes()
         val hex = CharArray(bts.size * 2)

@@ -24,7 +24,6 @@ class SyncScalar<T : Any>(
      */
     constructor(src: Scalar<T>) : this(src, src)
 
-    @Throws(Exception::class)
     override fun invoke(): T {
         synchronized(this.mutex) {
             return this.origin()

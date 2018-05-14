@@ -43,7 +43,6 @@ class And(private val iterable: Iterable<Scalar<Boolean>>) : Scalar<Boolean> {
      */
     constructor(src: Iterator<Scalar<Boolean>>) : this(IterableOf(src))
 
-    @Throws(Exception::class)
     override fun invoke(): Boolean {
         return iterable.all { it() }
     }

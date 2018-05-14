@@ -2,8 +2,6 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
 
-import java.io.IOException
-
 /**
  * Text without control characters (char &lt;= 32) only from right.
  *
@@ -17,7 +15,6 @@ import java.io.IOException
  */
 class TrimmedRightText(private val origin: Text) : Text {
 
-    @Throws(IOException::class)
     override fun asString(): String {
         val text = this.origin.asString()
         var cursor = text.length - 1

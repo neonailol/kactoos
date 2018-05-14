@@ -1,8 +1,6 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Output
-
-import java.io.IOException
 import java.io.OutputStream
 
 /**
@@ -22,7 +20,6 @@ class SyncOutput(
 
     constructor(origin: Output) : this(origin, origin)
 
-    @Throws(IOException::class)
     override fun stream(): OutputStream {
         synchronized(this.lock) {
             return this.origin.stream()

@@ -10,7 +10,6 @@ import nnl.rocks.kactoos.iterable.Mapped
 import nnl.rocks.kactoos.map.MapEntry
 import nnl.rocks.kactoos.map.MapOf
 import nnl.rocks.kactoos.text.TextOf
-import java.io.IOException
 import java.util.Properties
 
 /**
@@ -85,6 +84,5 @@ class PropertiesOf(
         }
     )
 
-    @Throws(IOException::class)
     override fun invoke(): Properties = this.scalar()
 }

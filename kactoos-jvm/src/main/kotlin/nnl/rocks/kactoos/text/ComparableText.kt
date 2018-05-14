@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
-import java.io.IOException
 
 /**
  * Text implementing Comparable.
@@ -27,6 +26,5 @@ class ComparableText(private val text: Text) : Text, Comparable<Text> {
     override fun compareTo(other: Text): Int =
         Constant { this.text.asString().compareTo(other.asString()) }.invoke()
 
-    @Throws(IOException::class)
     override fun asString(): String = this.text.asString()
 }

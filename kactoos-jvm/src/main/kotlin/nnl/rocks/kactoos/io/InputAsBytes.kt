@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
 import java.io.ByteArrayOutputStream
-import java.io.IOException
 
 /**
  * Input as Byte Array.
@@ -21,7 +20,6 @@ internal class InputAsBytes(
 
     constructor(source: Input) : this(source, 16 shl 10)
 
-    @Throws(IOException::class)
     @Suppress("NestedBlockDepth")
     override fun asBytes(): ByteArray {
         ByteArrayOutputStream().use {

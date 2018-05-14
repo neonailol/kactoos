@@ -28,7 +28,6 @@ class ChainedFunc<X : Any, Y : Any, Z : Any>(
         atr: Func<Y, Z>
     ) : this(bfr, emptyList<Func<Y, Y>>(), atr)
 
-    @Throws(Exception::class)
     override fun apply(input: X): Z {
         var temp = this.before.apply(input)
         for (func in this.functions) {

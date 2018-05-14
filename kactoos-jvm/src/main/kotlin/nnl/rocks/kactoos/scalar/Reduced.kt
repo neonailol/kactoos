@@ -21,7 +21,6 @@ class Reduced<out X : Any, T : Any>(
     private val iterable: Iterable<T>
 ) : Scalar<X> {
 
-    @Throws(Exception::class)
     override fun invoke(): X {
         var memo = this.input
         for (item in this.iterable) {

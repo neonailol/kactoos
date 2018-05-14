@@ -1,9 +1,7 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Output
-
 import java.io.File
-import java.io.IOException
 import java.io.OutputStream
 import java.io.Writer
 import java.nio.charset.Charset
@@ -71,7 +69,6 @@ class TeeOutput(
         cpy: OutputStream
     ) : this(tgt, OutputTo(cpy))
 
-    @Throws(IOException::class)
     override fun stream(): OutputStream {
         return TeeOutputStream(
             this.target.stream(), this.copy.stream()

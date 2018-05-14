@@ -3,7 +3,10 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.Output
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
-import java.io.*
+import java.io.File
+import java.io.OutputStream
+import java.io.OutputStreamWriter
+import java.io.Writer
 import java.nio.charset.Charset
 import java.nio.charset.CharsetEncoder
 import java.nio.charset.StandardCharsets
@@ -68,7 +71,6 @@ class WriterTo(
         encoder: CharsetEncoder
     ) : this(Constant { OutputStreamWriter(output.stream(), encoder) })
 
-    @Throws(IOException::class)
     override fun write(
         cbuf: CharArray,
         off: Int,
@@ -77,12 +79,10 @@ class WriterTo(
         this.target().write(cbuf, off, len)
     }
 
-    @Throws(IOException::class)
     override fun flush() {
         this.target().flush()
     }
 
-    @Throws(IOException::class)
     override fun close() {
         this.target().close()
     }

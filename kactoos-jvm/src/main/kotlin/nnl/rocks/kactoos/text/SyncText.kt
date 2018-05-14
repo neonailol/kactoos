@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
-import java.io.IOException
 
 /**
  * Text that is thread-safe.
@@ -20,7 +19,6 @@ class SyncText(
 
     constructor(origin: Text) : this(origin, origin)
 
-    @Throws(IOException::class)
     override fun asString(): String = synchronized(this.lock) {
         return this.origin.asString()
     }

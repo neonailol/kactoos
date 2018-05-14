@@ -47,6 +47,5 @@ class CallableOf<X : Any, T : Any>(
         result: T
     ) : this(FuncOf { it -> proc.exec(it); result }, input)
 
-    @Throws(Exception::class)
     override fun call(): T = this.func.apply(this.input)
 }

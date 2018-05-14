@@ -64,7 +64,6 @@ class RetryFunc<X : Any, Y : Any>(
 
     constructor(func: Func<X, Y>) : this(func, 3)
 
-    @Throws(Exception::class)
     @Suppress("TooGenericExceptionCaught")
     override fun apply(input: X): Y {
         var attempt = 0

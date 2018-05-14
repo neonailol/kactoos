@@ -15,7 +15,6 @@ import nnl.rocks.kactoos.Scalar
  */
 open class NumberEnvelope(private val dnum: Scalar<Double>) : Number(), Scalar<Double> {
 
-    @Throws(Exception::class)
     override fun invoke(): Double = this.dnum()
 
     override fun toDouble(): Double = (this.dnum).invoke()

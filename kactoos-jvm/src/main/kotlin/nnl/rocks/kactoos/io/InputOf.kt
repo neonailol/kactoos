@@ -226,7 +226,6 @@ class InputOf(private val origin: Input) : Input {
         }
     )
 
-    @Throws(IOException::class)
     override fun stream(): InputStream {
         return this.origin.stream()
     }

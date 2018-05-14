@@ -17,7 +17,6 @@ import java.io.IOException
  */
 class IoCheckedBiProc<in X : Any, in Y : Any>(private val proc: BiProc<X, Y>) : BiProc<X, Y> {
 
-    @Throws(IOException::class)
     override fun exec(
         first: X,
         second: Y

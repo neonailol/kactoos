@@ -21,7 +21,6 @@ class SolidBiFunc<in X : Any, in Y : Any, out Z : Any>(
         max: Int
     ) : this(SyncBiFunc(StickyBiFunc(fnc, max)))
 
-    @Throws(Exception::class)
     override fun apply(
         first: X,
         second: Y

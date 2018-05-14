@@ -4,7 +4,6 @@ import nnl.rocks.kactoos.Output
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
 import java.io.File
-import java.io.IOException
 import java.io.OutputStream
 import java.io.Writer
 import java.nio.charset.Charset
@@ -99,17 +98,14 @@ class OutputStreamTo(
      */
     constructor(output: Output) : this(Constant<OutputStream> { output.stream() })
 
-    @Throws(IOException::class)
     override fun write(data: Int) {
         this.target().write(data)
     }
 
-    @Throws(IOException::class)
     override fun write(buffer: ByteArray) {
         this.target().write(buffer)
     }
 
-    @Throws(IOException::class)
     override fun write(
         buffer: ByteArray,
         offset: Int,
@@ -118,12 +114,10 @@ class OutputStreamTo(
         this.target().write(buffer, offset, length)
     }
 
-    @Throws(IOException::class)
     override fun close() {
         this.target().close()
     }
 
-    @Throws(IOException::class)
     override fun flush() {
         this.target().flush()
     }

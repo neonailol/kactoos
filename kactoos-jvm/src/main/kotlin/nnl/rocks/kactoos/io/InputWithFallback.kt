@@ -46,7 +46,6 @@ class InputWithFallback(
         alt: Func<IOException, Input>
     ) : this(input, IoCheckedFunc<IOException, Input>(alt))
 
-    @Throws(IOException::class)
     override fun stream(): InputStream = try {
         this.main.stream()
     } catch (ex: IOException) {

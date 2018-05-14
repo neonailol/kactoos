@@ -89,7 +89,6 @@ class AndInThreads(
         src: Iterable<Scalar<Boolean>>
     ) : this(svc, src, false)
 
-    @Throws(Exception::class)
     override fun invoke(): Boolean {
         val futures = LinkedList<Future<Boolean>>()
         for (item in this.iterable) {

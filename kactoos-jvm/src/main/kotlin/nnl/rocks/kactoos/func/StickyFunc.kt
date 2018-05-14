@@ -33,6 +33,5 @@ class StickyFunc<in X : Any, out Y : Any>(
 
     constructor(fnc: Func<X, Y>) : this(StickyBiFunc(BiFuncOf({ first, _ -> fnc.apply(first) }), Integer.MAX_VALUE))
 
-    @Throws(Exception::class)
     override fun apply(input: X): Y = this.func.apply(input, true)
 }

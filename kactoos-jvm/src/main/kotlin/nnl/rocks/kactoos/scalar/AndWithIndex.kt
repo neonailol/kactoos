@@ -45,7 +45,6 @@ class AndWithIndex(
      */
     constructor(src: Iterator<Func<Int, Boolean>>) : this(IterableOf<Func<Int, Boolean>>(src))
 
-    @Throws(Exception::class)
     override fun invoke(): Boolean {
         var result = true
         var pos = 0

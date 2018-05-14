@@ -1,8 +1,6 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Input
-
-import java.io.IOException
 import java.io.InputStream
 import java.util.logging.Logger
 
@@ -22,7 +20,6 @@ class LoggingInput constructor(
     private val logger: Logger = Logger.getLogger(source)
 ) : Input {
 
-    @Throws(IOException::class)
     override fun stream(): InputStream {
         return LoggingInputStream(
             this.origin.stream(),

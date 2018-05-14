@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
-import java.io.IOException
 
 /**
  * Repeat an text count times.
@@ -30,7 +29,6 @@ class RepeatedText(
         count: Int
     ) : this(TextOf(text), count)
 
-    @Throws(IOException::class)
     override fun asString(): String = with(StringBuilder()) {
         for (cnt in 0 until count) {
             append(origin.asString())

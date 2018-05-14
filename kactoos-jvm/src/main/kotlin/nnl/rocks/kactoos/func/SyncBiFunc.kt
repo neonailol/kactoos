@@ -19,7 +19,6 @@ class SyncBiFunc<in X : Any, in Y : Any, out Z : Any> constructor(
 
     constructor(func: BiFunc<X, Y, Z>) : this(func, func)
 
-    @Throws(Exception::class)
     override fun apply(
         first: X,
         second: Y

@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.bytes
 
 import nnl.rocks.kactoos.Bytes
-import java.io.IOException
 import java.util.Base64
 
 /**
@@ -22,6 +21,5 @@ class BytesBase64(
      */
     constructor(origin: Bytes) : this(origin, Base64.getEncoder())
 
-    @Throws(IOException::class)
     override fun asBytes(): ByteArray = encoder.encode(this.origin.asBytes())
 }

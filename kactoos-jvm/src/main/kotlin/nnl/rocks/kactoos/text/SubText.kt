@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.text
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
-import java.io.IOException
 
 /**
  * Extract a substring from a Text.
@@ -64,7 +63,6 @@ class SubText(
         finish: Int
     ) : this(text, Constant { strt }, Constant { finish })
 
-    @Throws(IOException::class)
     override fun asString(): String {
         var begin = this.start()
         if (begin < 0) {

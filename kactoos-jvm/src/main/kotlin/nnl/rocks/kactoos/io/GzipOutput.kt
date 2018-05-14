@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Output
-import java.io.IOException
 import java.io.OutputStream
 import java.util.zip.GZIPOutputStream
 
@@ -19,7 +18,6 @@ class GzipOutput(
 
     constructor(origin: Output) : this(origin, 16 shl 10)
 
-    @Throws(IOException::class)
     override fun stream(): OutputStream {
         return GZIPOutputStream(
             this.origin.stream(),

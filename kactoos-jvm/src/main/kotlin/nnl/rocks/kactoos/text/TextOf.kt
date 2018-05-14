@@ -10,7 +10,10 @@ import nnl.rocks.kactoos.io.InputOf
 import nnl.rocks.kactoos.iterable.Mapped
 import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import java.io.*
+import java.io.File
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.io.Reader
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
@@ -283,7 +286,6 @@ class TextOf private constructor(private val origin: Scalar<String>) : Text {
      */
     constructor(input: InputStream) : this(InputOf(InputStreamReader(input)))
 
-    @Throws(IOException::class)
     override fun asString(): String {
         return IoCheckedScalar(this.origin).invoke()
     }

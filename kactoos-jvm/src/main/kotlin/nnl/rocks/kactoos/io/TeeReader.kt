@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.io
 
-import java.io.IOException
 import java.io.Reader
 import java.io.Writer
 
@@ -18,7 +17,6 @@ class TeeReader(
     private val destination: Writer
 ) : Reader() {
 
-    @Throws(IOException::class)
     override fun read(
         cbuf: CharArray,
         offset: Int,
@@ -31,7 +29,6 @@ class TeeReader(
         return done
     }
 
-    @Throws(IOException::class)
     override fun close() {
         try {
             this.source.close()

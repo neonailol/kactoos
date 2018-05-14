@@ -114,7 +114,6 @@ constructor(
         fbk: Input
     ) : this(res, FuncOf { input -> fbk })
 
-    @Throws(IOException::class)
     override fun stream(): InputStream {
         var input: InputStream? = this.loader.getResourceAsStream(
             this.path.asString()

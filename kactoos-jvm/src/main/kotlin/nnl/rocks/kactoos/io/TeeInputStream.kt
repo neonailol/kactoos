@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.io
 
-import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
 
@@ -19,7 +18,6 @@ class TeeInputStream(
     private val output: OutputStream
 ) : InputStream() {
 
-    @Throws(IOException::class)
     override fun read(): Int {
         val data = this.input.read()
         if (data >= 0) {
@@ -28,12 +26,10 @@ class TeeInputStream(
         return data
     }
 
-    @Throws(IOException::class)
     override fun read(buf: ByteArray): Int {
         return this.read(buf, 0, buf.size)
     }
 
-    @Throws(IOException::class)
     override fun read(
         buf: ByteArray,
         offset: Int,
@@ -46,17 +42,14 @@ class TeeInputStream(
         return max
     }
 
-    @Throws(IOException::class)
     override fun skip(num: Long): Long {
         return this.input.skip(num)
     }
 
-    @Throws(IOException::class)
     override fun available(): Int {
         return this.input.available()
     }
 
-    @Throws(IOException::class)
     override fun close() {
         this.input.close()
         this.output.close()
@@ -66,7 +59,6 @@ class TeeInputStream(
         this.input.mark(limit)
     }
 
-    @Throws(IOException::class)
     override fun reset() {
         this.input.reset()
     }

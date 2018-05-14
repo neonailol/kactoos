@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.io
 
-import java.io.IOException
 import java.io.InputStream
 import java.time.Duration
 import java.time.Instant
@@ -27,17 +26,14 @@ class LoggingInputStream constructor(
     private val bytes: AtomicLong = AtomicLong()
     private val time: AtomicLong = AtomicLong()
 
-    @Throws(IOException::class)
     override fun read(): Int {
         val buf = ByteArray(1)
         this.read(buf)
         return java.lang.Byte.toUnsignedInt(buf[0])
     }
 
-    @Throws(IOException::class)
     override fun read(buf: ByteArray): Int = this.read(buf, 0, buf.size)
 
-    @Throws(IOException::class)
     override fun read(
         buf: ByteArray,
         offset: Int,
@@ -70,7 +66,6 @@ class LoggingInputStream constructor(
         return byts
     }
 
-    @Throws(IOException::class)
     override fun skip(num: Long): Long {
         val skipped = this.origin.skip(num)
         this.logger.log(
@@ -84,7 +79,6 @@ class LoggingInputStream constructor(
         return skipped
     }
 
-    @Throws(IOException::class)
     override fun available(): Int {
         val avail = this.origin.available()
         this.logger.log(
@@ -98,7 +92,6 @@ class LoggingInputStream constructor(
         return avail
     }
 
-    @Throws(IOException::class)
     override fun close() {
         this.origin.close()
         this.logger.log(
@@ -122,7 +115,6 @@ class LoggingInputStream constructor(
         )
     }
 
-    @Throws(IOException::class)
     override fun reset() {
         this.origin.reset()
         this.logger.log(

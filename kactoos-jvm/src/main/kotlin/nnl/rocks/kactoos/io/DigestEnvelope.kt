@@ -31,7 +31,6 @@ abstract class DigestEnvelope(
         algrthm: String
     ) : this(input, 16 shl 10, algrthm)
 
-    @Throws(IOException::class)
     override fun asBytes(): ByteArray {
         try {
             val msg = MessageDigest.getInstance(this.algorithm)

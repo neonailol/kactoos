@@ -4,7 +4,10 @@ import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.KBytes
 import nnl.rocks.kactoos.Text
-import java.io.*
+import java.io.ByteArrayOutputStream
+import java.io.File
+import java.io.PrintStream
+import java.io.Reader
 import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
 import java.nio.file.Path
@@ -262,7 +265,6 @@ class BytesOf constructor(private val origin: KBytes) : Bytes {
      */
     constructor(vararg bytes: Byte) : this({ bytes })
 
-    @Throws(IOException::class)
     override fun asBytes(): ByteArray {
         return this.origin.invoke()
     }

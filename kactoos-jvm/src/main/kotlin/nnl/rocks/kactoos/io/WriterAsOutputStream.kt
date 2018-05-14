@@ -86,17 +86,14 @@ class WriterAsOutputStream
         this.writer.close()
     }
 
-    @Throws(IOException::class)
     override fun write(data: Int) {
         this.write(byteArrayOf(data.toByte()), 0, 1)
     }
 
-    @Throws(IOException::class)
     override fun write(buffer: ByteArray) {
         this.write(buffer, 0, buffer.size)
     }
 
-    @Throws(IOException::class)
     override fun write(
         buffer: ByteArray,
         offset: Int,
@@ -119,7 +116,6 @@ class WriterAsOutputStream
      * @return How much was taken
      * @throws IOException If fails
      */
-    @Throws(IOException::class)
     private fun next(
         buffer: ByteArray,
         offset: Int,

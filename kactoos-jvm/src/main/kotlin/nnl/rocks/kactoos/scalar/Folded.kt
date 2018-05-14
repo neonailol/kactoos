@@ -27,7 +27,6 @@ class Folded<out T : Any>(
     private val items: Iterable<Scalar<T>>
 ) : Scalar<T> {
 
-    @Throws(Exception::class)
     override fun invoke(): T {
         val iter = this.items.iterator()
         if (! iter.hasNext()) {

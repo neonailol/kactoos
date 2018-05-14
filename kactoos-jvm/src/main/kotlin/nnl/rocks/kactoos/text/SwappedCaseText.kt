@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
-import java.io.IOException
 
 /**
  * Swaps the case of a Text changing upper and title case to lower case,
@@ -15,7 +14,6 @@ import java.io.IOException
  */
 class SwappedCaseText(private val origin: Text) : Text {
 
-    @Throws(IOException::class)
     override fun asString(): String {
         val text = this.origin.asString()
         val chars = text.toCharArray()

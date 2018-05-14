@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.scalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.text.TextOf
-import java.io.IOException
 
 /**
  * Text as [Boolean].
@@ -25,6 +24,5 @@ class BoolOf(private val origin: Text) : Scalar<Boolean> {
      */
     constructor(txt: String) : this(TextOf(txt))
 
-    @Throws(IOException::class)
     override fun invoke(): Boolean = this.origin.asString().toBoolean()
 }

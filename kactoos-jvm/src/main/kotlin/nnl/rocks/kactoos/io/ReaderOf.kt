@@ -193,7 +193,6 @@ class ReaderOf(
      * @param charset The charset
      * @throws UnsupportedEncodingException If fails
      */
-    @Throws(UnsupportedEncodingException::class)
     constructor(
         stream: InputStream,
         charset: CharSequence
@@ -214,7 +213,6 @@ class ReaderOf(
      */
     private constructor(rdr: Reader) : this(Constant { rdr })
 
-    @Throws(IOException::class)
     override fun read(
         cbuf: CharArray,
         off: Int,
@@ -223,7 +221,6 @@ class ReaderOf(
         return this.source().read(cbuf, off, len)
     }
 
-    @Throws(IOException::class)
     override fun close() {
         this.source().close()
     }

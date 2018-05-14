@@ -18,6 +18,5 @@ import nnl.rocks.kactoos.Scalar
  */
 class Not(private val origin: Scalar<Boolean>) : Scalar<Boolean> {
 
-    @Throws(Exception::class)
     override fun invoke(): Boolean = ! this.origin()
 }

@@ -6,7 +6,6 @@ import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
 import java.io.File
-import java.io.IOException
 import java.io.InputStream
 import java.io.Reader
 import java.net.URI
@@ -173,17 +172,14 @@ class InputStreamOf(
      */
     constructor(input: Input) : this(Constant { input.stream() })
 
-    @Throws(IOException::class)
     override fun read(): Int {
         return this.source().read()
     }
 
-    @Throws(IOException::class)
     override fun read(buffer: ByteArray): Int {
         return this.source().read(buffer)
     }
 
-    @Throws(IOException::class)
     override fun read(
         buffer: ByteArray,
         offset: Int,
@@ -192,17 +188,14 @@ class InputStreamOf(
         return this.source().read(buffer, offset, length)
     }
 
-    @Throws(IOException::class)
     override fun close() {
         this.source().close()
     }
 
-    @Throws(IOException::class)
     override fun skip(num: Long): Long {
         return this.source().skip(num)
     }
 
-    @Throws(IOException::class)
     override fun available(): Int {
         return this.source().available()
     }
@@ -211,7 +204,6 @@ class InputStreamOf(
         this.source().mark(limit)
     }
 
-    @Throws(IOException::class)
     override fun reset() {
         this.source().reset()
     }

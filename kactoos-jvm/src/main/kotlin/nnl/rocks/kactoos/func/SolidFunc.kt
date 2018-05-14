@@ -24,6 +24,5 @@ class SolidFunc<in X : Any, out Y : Any>(
         fnc: Func<X, Y>
     ) : this(SyncFunc(StickyFunc(fnc, Integer.MAX_VALUE)))
 
-    @Throws(Exception::class)
     override fun apply(input: X): Y = this.func.apply(input)
 }

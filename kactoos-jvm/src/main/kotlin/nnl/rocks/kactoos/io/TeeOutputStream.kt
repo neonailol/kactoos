@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.io
 
-import java.io.IOException
 import java.io.OutputStream
 
 /**
@@ -18,7 +17,6 @@ class TeeOutputStream(
     private val copy: OutputStream
 ) : OutputStream() {
 
-    @Throws(IOException::class)
     override fun write(data: Int) {
         try {
             this.target.write(data)
@@ -27,7 +25,6 @@ class TeeOutputStream(
         }
     }
 
-    @Throws(IOException::class)
     override fun write(buf: ByteArray) {
         try {
             this.target.write(buf)
@@ -36,7 +33,6 @@ class TeeOutputStream(
         }
     }
 
-    @Throws(IOException::class)
     override fun write(
         buf: ByteArray,
         off: Int,
@@ -49,7 +45,6 @@ class TeeOutputStream(
         }
     }
 
-    @Throws(IOException::class)
     override fun flush() {
         try {
             this.target.flush()
@@ -58,7 +53,6 @@ class TeeOutputStream(
         }
     }
 
-    @Throws(IOException::class)
     override fun close() {
         try {
             this.target.close()

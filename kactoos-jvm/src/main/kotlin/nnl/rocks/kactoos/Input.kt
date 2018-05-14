@@ -33,7 +33,6 @@ interface Input {
      * @return InputStream to read from
      * @throws IOException If something goes wrong
      */
-    @Throws(IOException::class)
     fun stream(): InputStream
 
     class NoNulls(private val origin: Input) : Input {

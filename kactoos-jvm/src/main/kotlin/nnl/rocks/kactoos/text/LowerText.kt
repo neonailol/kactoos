@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
-import java.io.IOException
 import java.util.Locale
 
 /**
@@ -20,6 +19,5 @@ class LowerText(
 
     constructor(origin: Text) : this(origin, Locale.ENGLISH)
 
-    @Throws(IOException::class)
     override fun asString(): String = this.origin.asString().toLowerCase(this.locale)
 }

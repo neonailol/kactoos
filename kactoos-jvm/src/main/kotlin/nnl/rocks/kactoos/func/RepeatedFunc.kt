@@ -29,7 +29,6 @@ class RepeatedFunc<X : Any, Y : Any>(
         max: Int
     ) : this(FuncOf { input -> proc.exec(input); result }, max)
 
-    @Throws(Exception::class)
     override fun apply(input: X): Y {
         return when {
             this.times <= 0 -> throw IllegalArgumentException("The number of repetitions must be at least 1")

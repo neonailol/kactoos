@@ -20,7 +20,6 @@ class IoCheckedBiFunc<in X : Any, in Y : Any, out Z : Any>(
     private val func: BiFunc<X, Y, Z>
 ) : BiFunc<X, Y, Z> {
 
-    @Throws(IOException::class)
     override fun apply(
         first: X,
         second: Y

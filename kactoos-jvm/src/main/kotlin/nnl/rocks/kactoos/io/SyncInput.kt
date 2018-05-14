@@ -1,8 +1,6 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Input
-
-import java.io.IOException
 import java.io.InputStream
 
 /**
@@ -19,7 +17,6 @@ class SyncInput(
 
     constructor(origin: Input) : this(origin, origin)
 
-    @Throws(IOException::class)
     override fun stream(): InputStream {
         synchronized(this.lock) {
             return this.origin.stream()

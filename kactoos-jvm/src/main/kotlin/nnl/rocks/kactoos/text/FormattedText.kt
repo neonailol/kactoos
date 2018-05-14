@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.list.ListOf
-import java.io.IOException
 import java.util.Collections
 import java.util.Formatter
 import java.util.Locale
@@ -116,7 +115,6 @@ class FormattedText(
         arguments: Collection<Any>
     ) : this(TextOf(ptn), locale, arguments)
 
-    @Throws(IOException::class)
     @Suppress("SpreadOperator")
     override fun asString(): String {
         val out = StringBuilder(0)

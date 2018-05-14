@@ -2,8 +2,6 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
 
-import java.io.IOException
-
 /**
  * Text without control characters (char &lt;= 32) from both ends.
  *
@@ -17,7 +15,6 @@ import java.io.IOException
  */
 class TrimmedText(private val origin: Text) : Text {
 
-    @Throws(IOException::class)
     override fun asString(): String {
         return this.origin.asString().trim { it <= ' ' }
     }

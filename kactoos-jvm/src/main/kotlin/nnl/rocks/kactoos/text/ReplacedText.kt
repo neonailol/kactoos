@@ -57,7 +57,6 @@ class ReplacedText(
         replace: String
     ) : this(text, Constant { Pattern.compile(find) }, FuncOf { matcher -> replace })
 
-    @Throws(IOException::class)
     override fun asString(): String {
         val buffer = StringBuffer()
         val matcher = IoCheckedScalar(this.regex)

@@ -1,8 +1,6 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Output
-
-import java.io.IOException
 import java.io.OutputStream
 import java.util.logging.Logger
 
@@ -22,7 +20,6 @@ class LoggingOutput constructor(
     private val logger: Logger = Logger.getLogger(destination)
 ) : Output {
 
-    @Throws(IOException::class)
     override fun stream(): OutputStream {
         return LoggingOutputStream(
             this.origin.stream(),

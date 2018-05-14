@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
-import java.io.IOException
 
 /**
  * Rotate (circular shift) a String of shift characters.
@@ -18,7 +17,6 @@ class RotatedText(
     private val move: Int
 ) : Text {
 
-    @Throws(IOException::class)
     override fun asString(): String {
         var text = this.origin.asString()
         val length = text.length

@@ -54,7 +54,6 @@ class SyncFunc<X : Any, Y : Any>(
         }
     )
 
-    @Throws(Exception::class)
     override fun apply(input: X): Y {
         synchronized(this.lock) {
             return this.func.apply(input)

@@ -1,8 +1,6 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
-
-import java.io.IOException
 import java.util.Locale
 
 /**
@@ -21,6 +19,5 @@ class UpperText(
 
     constructor(origin: Text) : this(origin, Locale.ENGLISH)
 
-    @Throws(IOException::class)
     override fun asString(): String = this.origin.asString().toUpperCase(this.locale)
 }

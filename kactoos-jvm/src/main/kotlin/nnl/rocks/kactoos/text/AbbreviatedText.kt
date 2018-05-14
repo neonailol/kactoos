@@ -2,8 +2,6 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Text
 
-import java.io.IOException
-
 /**
  * Abbreviates a Text using ellipses.
  *
@@ -33,7 +31,6 @@ class AbbreviatedText constructor(
         max: Int
     ) : this(TextOf(text), max)
 
-    @Throws(IOException::class)
     override fun asString(): String {
         val abbreviated: Text
         if (this.origin.asString().length <= this.width) {

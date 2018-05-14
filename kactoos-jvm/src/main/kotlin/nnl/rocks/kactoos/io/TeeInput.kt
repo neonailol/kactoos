@@ -4,7 +4,10 @@ import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Output
 import nnl.rocks.kactoos.Text
-import java.io.*
+import java.io.File
+import java.io.InputStream
+import java.io.Reader
+import java.io.Writer
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
@@ -836,6 +839,5 @@ class TeeInput(
         size: Int
     ) : this(input, OutputTo(writer, charset, size))
 
-    @Throws(IOException::class)
     override fun stream(): InputStream = TeeInputStream(this.source.stream(), this.target.stream())
 }

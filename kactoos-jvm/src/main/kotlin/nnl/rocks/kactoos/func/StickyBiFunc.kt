@@ -45,7 +45,6 @@ class StickyBiFunc<in X : Any, in Y : Any, out Z : Any>(
         this.cache = LinkedHashMap(0)
     }
 
-    @Throws(Exception::class)
     override fun apply(
         first: X,
         second: Y
