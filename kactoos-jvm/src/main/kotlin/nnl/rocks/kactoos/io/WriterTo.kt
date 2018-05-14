@@ -5,11 +5,7 @@ import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
-import java.io.File
-import java.io.IOException
-import java.io.OutputStream
-import java.io.OutputStreamWriter
-import java.io.Writer
+import java.io.*
 import java.nio.charset.Charset
 import java.nio.charset.CharsetEncoder
 import java.nio.charset.StandardCharsets
@@ -82,16 +78,16 @@ class WriterTo(
         off: Int,
         len: Int
     ) {
-        this.target.value().write(cbuf, off, len)
+        this.target().write(cbuf, off, len)
     }
 
     @Throws(IOException::class)
     override fun flush() {
-        this.target.value().flush()
+        this.target().flush()
     }
 
     @Throws(IOException::class)
     override fun close() {
-        this.target.value().close()
+        this.target().close()
     }
 }

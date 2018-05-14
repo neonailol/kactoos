@@ -31,5 +31,5 @@ class Endless<T : Any>(private val origin: UncheckedScalar<T>) : Iterator<T> {
 
     override fun hasNext(): Boolean = true
 
-    override fun next(): T = IterableOf(this.origin.value()).iterator().next()
+    override fun next(): T = IterableOf(this.origin()).iterator().next()
 }

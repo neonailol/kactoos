@@ -27,7 +27,7 @@ class ComparableText(private val text: Text) : Text, Comparable<Text> {
 
     override fun compareTo(other: Text): Int = UncheckedScalar(
         Constant { this.text.asString().compareTo(other.asString()) }
-    ).value()
+    ).invoke()
 
     @Throws(IOException::class)
     override fun asString(): String = this.text.asString()

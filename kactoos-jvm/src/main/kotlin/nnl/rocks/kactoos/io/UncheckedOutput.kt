@@ -19,5 +19,5 @@ class UncheckedOutput(
     private val output: Output
 ) : Output {
 
-    override fun stream(): OutputStream = UncheckedScalar(Constant { this.output.stream() }).value()
+    override fun stream(): OutputStream = UncheckedScalar(Constant { this.output.stream() }).invoke()
 }

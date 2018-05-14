@@ -98,12 +98,12 @@ class AndInThreads(
     override fun value(): Boolean {
         val futures = LinkedList<Future<Boolean>>()
         for (item in this.iterable) {
-            futures.add(this.service.submit<Boolean>({ item.value() }))
+            futures.add(this.service.submit<Boolean>({ item() }))
         }
         val result = AndFunc(
             FuncOf<Future<Boolean>, Boolean> { it.get() },
             futures
-        ).value()
+        ).invoke()
         if (this.shut) {
             this.service.shutdown()
             try {

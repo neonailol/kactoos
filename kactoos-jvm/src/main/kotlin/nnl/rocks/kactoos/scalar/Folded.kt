@@ -39,9 +39,9 @@ class Folded<out T : Any>(
                 "Can't find first element in an empty iterable"
             )
         }
-        var acc = iter.next().value()
+        var acc = iter.next().invoke()
         while (iter.hasNext()) {
-            val next = iter.next().value()
+            val next = iter.next().invoke()
             acc = this.function.apply(acc, next)
         }
         return acc

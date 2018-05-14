@@ -76,7 +76,7 @@ class TempFile private constructor(
         StickyScalar<Path>(
             Constant {
                 Files.createTempFile(
-                    dir.value(),
+                    dir(),
                     prefix.asString(),
                     suffix.asString()
                 )
@@ -86,13 +86,13 @@ class TempFile private constructor(
 
     @Throws(Exception::class)
     override fun value(): Path {
-        return this.file.value()
+        return this.file()
     }
 
     /**
      * Deletes the file from the filesystem.
      */
     override fun close() {
-        Files.delete(IoCheckedScalar(this.file).value())
+        Files.delete(IoCheckedScalar(this.file).invoke())
     }
 }

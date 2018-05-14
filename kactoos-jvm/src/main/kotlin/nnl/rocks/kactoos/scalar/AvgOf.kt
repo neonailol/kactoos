@@ -40,12 +40,12 @@ class AvgOf(src: Iterable<Scalar<Number>>) : NumberEnvelope(Ternary(
             Mapped<Scalar<Number>, BigDecimal>(
                 FuncOf { number ->
                     BigDecimal.valueOf(
-                        number.value().toDouble()
+                        number().toDouble()
                     )
                 },
                 src
             )
-        ).value().divide(
+        ).invoke().divide(
             BigDecimal.valueOf(len),
             MathContext.DECIMAL128
         ).toDouble()

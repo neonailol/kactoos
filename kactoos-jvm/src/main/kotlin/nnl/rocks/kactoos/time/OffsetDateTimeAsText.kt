@@ -41,6 +41,6 @@ class OffsetDateTimeAsText @JvmOverloads constructor(
     ) : this(date, DateTimeFormatter.ofPattern(format, locale))
 
     override fun asString(): String {
-        return this.formatted.value()
+        return this.formatted()
     }
 }

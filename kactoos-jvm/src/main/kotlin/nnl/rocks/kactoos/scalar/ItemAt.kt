@@ -142,7 +142,7 @@ class ItemAt<T : Any>(
                 ).asString()
             )
         }
-        val iterator = this.src.value()
+        val iterator = this.src()
         var cur: Int
         cur = 0
         while (cur < this.pos && iterator.hasNext()) {

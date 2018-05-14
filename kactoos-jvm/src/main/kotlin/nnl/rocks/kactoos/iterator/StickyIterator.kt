@@ -44,7 +44,7 @@ class StickyIterator<X : Any>(iterator: Iterator<X>) : Iterator<X> {
     @SafeVarargs
     constructor(vararg items: X) : this(IterableOf<X>(items.iterator()).iterator())
 
-    override fun hasNext(): Boolean = this.gate.value().hasNext()
+    override fun hasNext(): Boolean = this.gate().hasNext()
 
-    override fun next(): X = this.gate.value().next()
+    override fun next(): X = this.gate().next()
 }

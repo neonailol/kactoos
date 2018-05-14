@@ -40,7 +40,7 @@ class Or(
     override fun value(): Boolean {
         var result = false
         for (item in this.origin) {
-            if (item.value()) {
+            if (item()) {
                 result = true
                 break
             }

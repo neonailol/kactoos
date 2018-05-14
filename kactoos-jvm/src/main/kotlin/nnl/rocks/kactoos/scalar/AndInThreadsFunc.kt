@@ -205,6 +205,6 @@ class AndInThreadsFunc<X : Any>(
 
     @Throws(Exception::class)
     override fun value(): Boolean {
-        return AndInThreads(service, iterable, shut).value()
+        return AndInThreads(service, iterable, shut).invoke()
     }
 }

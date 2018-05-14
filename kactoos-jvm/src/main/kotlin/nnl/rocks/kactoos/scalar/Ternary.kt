@@ -73,11 +73,11 @@ class Ternary<T : Any, X : Any>(
 
     @Throws(Exception::class)
     override fun value(): T {
-        val result: Scalar<T> = if (this.condition.value()) {
+        val result: Scalar<T> = if (this.condition()) {
             this.consequent
         } else {
             this.alternative
         }
-        return result.value()
+        return result()
     }
 }

@@ -50,7 +50,7 @@ class And(private val iterable: Iterable<Scalar<Boolean>>) : Scalar<Boolean> {
 
     @Throws(Exception::class)
     override fun value(): Boolean {
-        return iterable.all { it.value() }
+        return iterable.all { it() }
     }
 
     companion object {

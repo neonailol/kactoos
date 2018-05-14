@@ -57,5 +57,5 @@ class ZonedDateTimeOf(
         zone: ZoneId
     ) : this(date, DateTimeFormatter.ofPattern(format).withZone(zone))
 
-    override fun value(): ZonedDateTime = this.parsed.value()
+    override fun value(): ZonedDateTime = this.parsed()
 }

@@ -141,5 +141,5 @@ class DateAsText(
         date, DateTimeFormatter.ofPattern(format, Locale.getDefault(Locale.Category.FORMAT))
     )
 
-    override fun asString(): String = this.formatted.value()
+    override fun asString(): String = this.formatted()
 }

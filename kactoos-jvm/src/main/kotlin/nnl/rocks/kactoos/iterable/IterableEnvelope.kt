@@ -16,7 +16,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  */
 open class IterableEnvelope<out X : Any>(
     private val iterable: UncheckedScalar<Iterable<X>>
-) : Iterable<X> by iterable.value() {
+) : Iterable<X> by iterable() {
 
     constructor(scalar: Scalar<Iterable<X>>) : this(UncheckedScalar(scalar))
 }

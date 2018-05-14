@@ -21,5 +21,5 @@ class UncheckedBiFunc<in X : Any, in Y : Any, out Z : Any>(private val func: BiF
     override fun apply(
         first: X,
         second: Y
-    ): Z = UncheckedScalar(Constant { this.func.apply(first, second) }).value()
+    ): Z = UncheckedScalar(Constant { this.func.apply(first, second) }).invoke()
 }

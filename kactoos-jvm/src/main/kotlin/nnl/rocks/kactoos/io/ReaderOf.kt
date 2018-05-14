@@ -7,12 +7,7 @@ import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.StickyScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
-import java.io.File
-import java.io.IOException
-import java.io.InputStream
-import java.io.InputStreamReader
-import java.io.Reader
-import java.io.UnsupportedEncodingException
+import java.io.*
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
@@ -229,11 +224,11 @@ class ReaderOf(
         off: Int,
         len: Int
     ): Int {
-        return this.source.value().read(cbuf, off, len)
+        return this.source().read(cbuf, off, len)
     }
 
     @Throws(IOException::class)
     override fun close() {
-        this.source.value().close()
+        this.source().close()
     }
 }

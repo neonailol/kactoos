@@ -1,19 +1,10 @@
 package nnl.rocks.kactoos.io
 
-import nnl.rocks.kactoos.Bytes
-import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.KInput
-import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.*
 import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
 import nnl.rocks.kactoos.scalar.UncheckedScalar
-import java.io.ByteArrayInputStream
-import java.io.File
-import java.io.FileInputStream
-import java.io.IOException
-import java.io.InputStream
-import java.io.Reader
+import java.io.*
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
@@ -41,7 +32,7 @@ class InputOf(private val origin: Input) : Input {
     constructor(file: File) : this(
         {
             FileInputStream(
-                UncheckedScalar(Constant { file }).value()
+                UncheckedScalar(Constant { file }).invoke()
             )
         }
     )
@@ -64,7 +55,7 @@ class InputOf(private val origin: Input) : Input {
     /**
      * @param scalar The url
      */
-    constructor(scalar: Scalar<URL>) : this({ IoCheckedScalar<URL>(scalar).value().openStream() })
+    constructor(scalar: Scalar<URL>) : this({ IoCheckedScalar<URL>(scalar).invoke().openStream() })
 
     /**
      * @param rdr Reader
@@ -224,7 +215,7 @@ class InputOf(private val origin: Input) : Input {
     constructor(src: Bytes) : this(
         IoCheckedScalar<InputStream>(
             Constant { ByteArrayInputStream(src.asBytes()) }
-        ).value()
+        ).invoke()
     )
 
     /**

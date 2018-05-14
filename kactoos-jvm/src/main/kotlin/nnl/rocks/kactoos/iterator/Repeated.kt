@@ -49,6 +49,6 @@ class Repeated<T : Any>(
             )
         }
         -- this.repeat
-        return this.elm.value()
+        return this.elm()
     }
 }

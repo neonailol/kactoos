@@ -17,7 +17,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
 class IterableOf<X : Any> : IterableEnvelope<X> {
 
     constructor(scalar: Scalar<Iterator<X>>) : super(
-        Constant { Iterable { UncheckedScalar(scalar).value() } }
+        Constant { Iterable { UncheckedScalar(scalar).invoke() } }
     )
 
     /**

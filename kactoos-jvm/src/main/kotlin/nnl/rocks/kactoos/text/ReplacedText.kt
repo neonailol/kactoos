@@ -61,7 +61,7 @@ class ReplacedText(
     override fun asString(): String {
         val buffer = StringBuffer()
         val matcher = IoCheckedScalar(this.regex)
-            .value()
+            .invoke()
             .matcher(this.origin.asString())
         val safe = IoCheckedFunc(this.replacement)
         while (matcher.find()) {

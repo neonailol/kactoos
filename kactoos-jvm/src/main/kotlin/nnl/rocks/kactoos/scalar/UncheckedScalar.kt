@@ -19,7 +19,7 @@ import java.io.UncheckedIOException
 class UncheckedScalar<out T : Any>(private val origin: Scalar<T>) : Scalar<T> {
 
     override fun value(): T = try {
-        IoCheckedScalar(this.origin).value()
+        IoCheckedScalar(this.origin).invoke()
     } catch (ex: IOException) {
         throw UncheckedIOException(ex)
     }

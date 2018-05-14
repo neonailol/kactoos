@@ -16,7 +16,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  *
  * @since 0.24
  */
-open class MapEnvelope<X, out Y>(private val map: UncheckedScalar<Map<X, Y>>) : Map<X, Y> by map.value() {
+open class MapEnvelope<X, out Y>(private val map: UncheckedScalar<Map<X, Y>>) : Map<X, Y> by map() {
 
     constructor(scalar: Scalar<Map<X, Y>>) : this(
         UncheckedScalar(scalar)

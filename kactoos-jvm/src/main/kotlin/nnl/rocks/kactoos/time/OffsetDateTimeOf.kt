@@ -45,5 +45,5 @@ class OffsetDateTimeOf(
         DateTimeFormatter.ofPattern(format).withZone(offset.normalized())
     )
 
-    override fun value(): OffsetDateTime = this.parsed.value()
+    override fun value(): OffsetDateTime = this.parsed()
 }

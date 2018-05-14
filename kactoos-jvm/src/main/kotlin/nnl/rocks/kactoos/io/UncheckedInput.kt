@@ -17,5 +17,5 @@ import java.io.InputStream
  */
 class UncheckedInput(private val input: Input) : Input {
 
-    override fun stream(): InputStream = UncheckedScalar(Constant { this.input.stream() }).value()
+    override fun stream(): InputStream = UncheckedScalar(Constant { this.input.stream() }).invoke()
 }

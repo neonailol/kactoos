@@ -15,13 +15,13 @@ import java.util.concurrent.atomic.AtomicLong
  */
 class CollectionNoNulls<X : Any>(
     private val col: Scalar<MutableCollection<X>>
-) : MutableCollection<X> by col.value() {
+) : MutableCollection<X> by col() {
 
     constructor(col: CollectionEnvelope<X>) : this(Constant { col.toMutableList() })
 
     constructor(col: Collection<X>) : this(Constant { col.toMutableList() })
 
     override fun iterator(): MutableIterator<X> {
-        return IteratorNoNulls(this.col.value().iterator(), AtomicLong())
+        return IteratorNoNulls(this.col().iterator(), AtomicLong())
     }
 }

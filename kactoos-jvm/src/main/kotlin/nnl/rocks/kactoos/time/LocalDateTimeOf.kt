@@ -38,5 +38,5 @@ class LocalDateTimeOf(
         format: String
     ) : this(date, DateTimeFormatter.ofPattern(format))
 
-    override fun value(): LocalDateTime = this.parsed.value()
+    override fun value(): LocalDateTime = this.parsed()
 }

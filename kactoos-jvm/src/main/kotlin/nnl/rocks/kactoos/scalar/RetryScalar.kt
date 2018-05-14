@@ -39,7 +39,7 @@ class RetryScalar<T : Any>(
     @Throws(Exception::class)
     override fun value(): T {
         return RetryFunc(
-            FuncOf<Boolean, T> { input -> this.origin.value() },
+            FuncOf<Boolean, T> { _ -> this.origin() },
             this.func
         ).apply(true)
     }

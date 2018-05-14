@@ -106,12 +106,12 @@ class OutputStreamTo(
 
     @Throws(IOException::class)
     override fun write(data: Int) {
-        this.target.value().write(data)
+        this.target().write(data)
     }
 
     @Throws(IOException::class)
     override fun write(buffer: ByteArray) {
-        this.target.value().write(buffer)
+        this.target().write(buffer)
     }
 
     @Throws(IOException::class)
@@ -120,16 +120,16 @@ class OutputStreamTo(
         offset: Int,
         length: Int
     ) {
-        this.target.value().write(buffer, offset, length)
+        this.target().write(buffer, offset, length)
     }
 
     @Throws(IOException::class)
     override fun close() {
-        this.target.value().close()
+        this.target().close()
     }
 
     @Throws(IOException::class)
     override fun flush() {
-        this.target.value().flush()
+        this.target().flush()
     }
 }

@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  */
 open class ListEnvelope<T : Any>(
     private val list: UncheckedScalar<List<T>>
-) : List<T> by list.value() {
+) : List<T> by list() {
 
     constructor(src: Scalar<List<T>>) : this(UncheckedScalar(src))
 }

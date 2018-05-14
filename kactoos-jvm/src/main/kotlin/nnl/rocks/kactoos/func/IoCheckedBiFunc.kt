@@ -24,5 +24,5 @@ class IoCheckedBiFunc<in X : Any, in Y : Any, out Z : Any>(
     override fun apply(
         first: X,
         second: Y
-    ): Z = IoCheckedScalar(Constant { this.func.apply(first, second) }).value()
+    ): Z = IoCheckedScalar(Constant { this.func.apply(first, second) }).invoke()
 }

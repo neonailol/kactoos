@@ -31,7 +31,7 @@ import nnl.rocks.kactoos.func.StickyFunc
  */
 class StickyScalar<T : Any>(private val func: Func<Boolean, T>) : Scalar<T> {
 
-    constructor(scalar: Scalar<T>) : this(StickyFunc(FuncOf { input -> scalar.value() }))
+    constructor(scalar: Scalar<T>) : this(StickyFunc(FuncOf { _ -> scalar() }))
 
     @Throws(Exception::class)
     override fun value(): T = this.func.apply(true)

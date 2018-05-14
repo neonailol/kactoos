@@ -35,7 +35,7 @@ class Shuffled<out T>(iterator: Iterator<T>) : Iterator<T> {
         )
     }
 
-    override fun hasNext(): Boolean = this.scalar.value().hasNext()
+    override fun hasNext(): Boolean = this.scalar().hasNext()
 
-    override fun next(): T = this.scalar.value().next()
+    override fun next(): T = this.scalar().next()
 }

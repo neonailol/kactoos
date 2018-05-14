@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  */
 open class CollectionEnvelope<X : Any>(
     private val col: UncheckedScalar<Collection<X>>
-) : Collection<X> by col.value() {
+) : Collection<X> by col() {
 
     constructor(slr: Scalar<Collection<X>>) : this(UncheckedScalar(slr))
 }

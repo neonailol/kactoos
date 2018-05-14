@@ -17,5 +17,5 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  */
 class UncheckedFunc<in X : Any, out Y : Any>(private val func: Func<X, Y>) : Func<X, Y> {
 
-    override fun apply(input: X): Y = UncheckedScalar(Constant { this.func.apply(input) }).value()
+    override fun apply(input: X): Y = UncheckedScalar(Constant { this.func.apply(input) }).invoke()
 }

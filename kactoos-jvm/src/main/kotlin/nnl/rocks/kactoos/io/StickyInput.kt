@@ -34,7 +34,7 @@ class StickyInput(
                 val baos = ByteArrayOutputStream()
                 LengthOf(
                     TeeInput(input, OutputTo(baos))
-                ).value()
+                ).invoke()
                 baos.toByteArray()
             }
         )
@@ -42,6 +42,6 @@ class StickyInput(
 
     @Throws(IOException::class)
     override fun stream(): InputStream = ByteArrayInputStream(
-        IoCheckedScalar(this.cache).value()
+        IoCheckedScalar(this.cache).invoke()
     )
 }

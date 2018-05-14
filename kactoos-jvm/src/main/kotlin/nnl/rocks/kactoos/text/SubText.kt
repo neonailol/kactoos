@@ -78,11 +78,11 @@ class SubText(
 
     @Throws(IOException::class)
     override fun asString(): String {
-        var begin = this.start.value()
+        var begin = this.start()
         if (begin < 0) {
             begin = 0
         }
-        var finish = this.end.value()
+        var finish = this.end()
         val text = this.origin.asString()
         if (text.length < finish) {
             finish = text.length

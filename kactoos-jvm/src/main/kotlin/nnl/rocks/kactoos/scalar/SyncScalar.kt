@@ -31,7 +31,7 @@ class SyncScalar<T : Any>(
     @Throws(Exception::class)
     override fun value(): T {
         synchronized(this.mutex) {
-            return this.origin.value()
+            return this.origin()
         }
     }
 }

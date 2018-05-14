@@ -180,12 +180,12 @@ class InputStreamOf private constructor(src: Scalar<InputStream>) : InputStream(
 
     @Throws(IOException::class)
     override fun read(): Int {
-        return this.source.value().read()
+        return this.source().read()
     }
 
     @Throws(IOException::class)
     override fun read(buffer: ByteArray): Int {
-        return this.source.value().read(buffer)
+        return this.source().read(buffer)
     }
 
     @Throws(IOException::class)
@@ -194,34 +194,34 @@ class InputStreamOf private constructor(src: Scalar<InputStream>) : InputStream(
         offset: Int,
         length: Int
     ): Int {
-        return this.source.value().read(buffer, offset, length)
+        return this.source().read(buffer, offset, length)
     }
 
     @Throws(IOException::class)
     override fun close() {
-        this.source.value().close()
+        this.source().close()
     }
 
     @Throws(IOException::class)
     override fun skip(num: Long): Long {
-        return this.source.value().skip(num)
+        return this.source().skip(num)
     }
 
     @Throws(IOException::class)
     override fun available(): Int {
-        return this.source.value().available()
+        return this.source().available()
     }
 
     override fun mark(limit: Int) {
-        this.source.value().mark(limit)
+        this.source().mark(limit)
     }
 
     @Throws(IOException::class)
     override fun reset() {
-        this.source.value().reset()
+        this.source().reset()
     }
 
     override fun markSupported(): Boolean {
-        return this.source.value().markSupported()
+        return this.source().markSupported()
     }
 }
