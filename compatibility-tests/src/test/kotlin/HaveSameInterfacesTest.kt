@@ -1,8 +1,6 @@
-import nnl.rocks.kactoos.collection.Filtered
+import helpers.CactoosClasses
 import nnl.rocks.kactoos.collection.Mapped
 import nnl.rocks.kactoos.func.FuncOf
-import org.reflections.Reflections
-import org.reflections.scanners.SubTypesScanner
 import org.testng.annotations.Test
 import kotlin.reflect.KClass
 import kotlin.test.assertEquals
@@ -11,20 +9,7 @@ class HaveSameInterfacesTest {
 
     @Test
     fun haveSameInterfaces() {
-
-        val cactoosTypes =
-            Mapped(
-                FuncOf({ it: String -> it.replace("org.cactoos.", "") }),
-                Filtered(
-                    FuncOf({ it: String -> it.contains('$').not() }),
-                    Reflections(
-                        "org.cactoos",
-                        SubTypesScanner(false)
-                    ).allTypes
-                )
-            )
-
-        cactoosTypes.forEach { kType: String ->
+        CactoosClasses().value().forEach { kType: String ->
             try {
                 val cClass = Class.forName("org.cactoos.$kType")
                 val kClass = Class.forName("nnl.rocks.kactoos.$kType")
