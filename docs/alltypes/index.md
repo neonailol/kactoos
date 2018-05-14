@@ -1,9 +1,6 @@
 
 
-
 Kactoos.
-
-Reworked to Kotlin version of [Cactoos](http://www.cactoos.org)
 
 ### All Types
 

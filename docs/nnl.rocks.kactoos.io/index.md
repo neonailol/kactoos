@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos.io
 
-
 Input/Output.
 
 ### Types

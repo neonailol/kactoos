@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos.iterable
 
-
 Iterables.
 
 ### Types

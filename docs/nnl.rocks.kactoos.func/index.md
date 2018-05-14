@@ -2,7 +2,6 @@
 
 ## Package nnl.rocks.kactoos.func
 
-
 Functions.
 
 ### Types
