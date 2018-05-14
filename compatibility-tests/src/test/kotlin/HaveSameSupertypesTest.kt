@@ -1,39 +1,29 @@
-import org.apache.commons.lang3.ClassUtils
+import nnl.rocks.kactoos.collection.Filtered
+import nnl.rocks.kactoos.collection.Mapped
+import nnl.rocks.kactoos.func.FuncOf
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 import org.testng.annotations.Test
 import kotlin.reflect.KClass
+import kotlin.reflect.KType
 import kotlin.test.assertEquals
 
 class HaveSameSupertypesTest {
 
     @Test
     fun haveSameSupertypes() {
-        val cactoosTypes = Reflections(
-            "org.cactoos",
-            SubTypesScanner(false)
-        ).allTypes.map {
-            it.replace("org.cactoos.", "")
-        }
-            .sorted()
-            .toMutableList()
 
-        cactoosTypes.removeIf {
-            it.contains("\$")
-        }
-
-        val kactoosTypes = Reflections(
-            "nnl.rocks.kactoos",
-            SubTypesScanner(false)
-        ).allTypes.map {
-            it.replace("nnl.rocks.kactoos.", "")
-        }
-            .sorted()
-            .toMutableList()
-
-        kactoosTypes.removeIf {
-            it.endsWith("Kt")
-        }
+        val cactoosTypes =
+            Mapped(
+                FuncOf({ it: String -> it.replace("org.cactoos.", "") }),
+                Filtered(
+                    FuncOf({ it: String -> it.contains('$').not() }),
+                    Reflections(
+                        "org.cactoos",
+                        SubTypesScanner(false)
+                    ).allTypes
+                )
+            )
 
         cactoosTypes.forEach { kType: String ->
             try {
@@ -50,15 +40,15 @@ class HaveSameSupertypesTest {
         first: KClass<*>,
         second: KClass<*>
     ) {
-        val map = { type: KClass<*> ->
-            ClassUtils.getAllSuperclasses(type.java).map {
-                it.toString()
-            }.map {
-                it.replaceBeforeLast('.', "")
-            }
-        }
-        val firstTypes = map(first)
-        val secondTypes = map(second)
+        val map =
+            FuncOf({ type: KClass<*> ->
+                       Mapped(
+                           FuncOf({ it: KType -> it.toString().replaceBeforeLast('.', "") }),
+                           type.supertypes
+                       )
+                   })
+        val firstTypes = map.apply(first)
+        val secondTypes = map.apply(second)
         assertEquals(firstTypes, secondTypes)
     }
 }
