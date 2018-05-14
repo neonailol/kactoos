@@ -14,4 +14,11 @@ interface Scalar<out T : Any> {
      * @since 0.2
      */
     fun value(): T
+
+    /**
+     * Same as calling [value] but using overloading `()` operator.
+     * @return The value
+     * @since 0.2
+     */
+    operator fun invoke() : T = value()
 }
