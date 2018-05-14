@@ -3,8 +3,6 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.Output
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.StickyScalar
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.*
 import java.nio.charset.Charset
 import java.nio.charset.CharsetEncoder
@@ -22,10 +20,8 @@ import java.nio.file.Path
  * @since 0.13
  */
 class WriterTo(
-    private val target: UncheckedScalar<Writer>
+    private val target: Scalar<Writer>
 ) : Writer() {
-
-    constructor(tgt: Scalar<Writer>) : this(UncheckedScalar(StickyScalar(tgt)))
 
     /**
      * @param path The path

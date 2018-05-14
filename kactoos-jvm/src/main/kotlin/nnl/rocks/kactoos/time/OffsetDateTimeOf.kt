@@ -17,7 +17,7 @@ import java.time.format.DateTimeFormatter
  * @since 0.27
  */
 class OffsetDateTimeOf(
-    private val parsed: UncheckedScalar<OffsetDateTime>
+    private val parsed: Scalar<OffsetDateTime>
 ) : Scalar<OffsetDateTime> {
 
     constructor(

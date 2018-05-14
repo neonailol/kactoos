@@ -16,7 +16,7 @@ import java.time.format.DateTimeFormatter
  * @since 0.27
  */
 class ZonedDateTimeOf(
-    private val parsed: UncheckedScalar<ZonedDateTime>
+    private val parsed: Scalar<ZonedDateTime>
 ) : Scalar<ZonedDateTime> {
 
     /**

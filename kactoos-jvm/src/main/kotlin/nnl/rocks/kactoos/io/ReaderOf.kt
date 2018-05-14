@@ -5,8 +5,6 @@ import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.StickyScalar
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.*
 import java.net.URI
 import java.net.URL
@@ -23,13 +21,11 @@ import java.nio.file.Path
  *
  *
  *
- * @since 0.13
+ * @since 0.3
  */
 class ReaderOf(
-    private val source: UncheckedScalar<Reader>
+    private val source: Scalar<Reader>
 ) : Reader() {
-
-    private constructor(src: Scalar<Reader>) : this(UncheckedScalar(StickyScalar(src)))
 
     /**
      * @param chars Chars

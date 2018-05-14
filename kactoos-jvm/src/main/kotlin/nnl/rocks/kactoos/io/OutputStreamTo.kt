@@ -3,9 +3,6 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.Output
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.StickyScalar
-import nnl.rocks.kactoos.scalar.UncheckedScalar
-
 import java.io.File
 import java.io.IOException
 import java.io.OutputStream
@@ -23,13 +20,11 @@ import java.nio.file.Path
  *
  *
  *
- * @since 0.13
+ * @since 0.3
  */
 class OutputStreamTo(
-    private val target: UncheckedScalar<OutputStream>
+    private val target: Scalar<OutputStream>
 ) : OutputStream() {
-
-    constructor(tgt: Scalar<OutputStream>) : this(UncheckedScalar(StickyScalar(tgt)))
 
     /**
      * @param path The path

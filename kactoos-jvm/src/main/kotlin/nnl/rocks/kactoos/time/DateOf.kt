@@ -16,7 +16,7 @@ import java.util.Date
  * @since 0.27
  */
 class DateOf(
-    private val parsed: UncheckedScalar<Date>
+    private val parsed: Scalar<Date>
 ) : Scalar<Date> {
 
     constructor(

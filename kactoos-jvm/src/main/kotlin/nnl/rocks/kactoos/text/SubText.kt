@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.text
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.io.IOException
 
 /**
@@ -21,8 +20,8 @@ import java.io.IOException
  */
 class SubText(
     private val origin: Text,
-    private val start: UncheckedScalar<Int>,
-    private val end: UncheckedScalar<Int>
+    private val start: Scalar<Int>,
+    private val end: Scalar<Int>
 ) : Text {
 
     /**
@@ -64,17 +63,6 @@ class SubText(
         strt: Int,
         finish: Int
     ) : this(text, Constant { strt }, Constant { finish })
-
-    /**
-     * @param text The Text
-     * @param strt Start position in the text
-     * @param finish End position in the text
-     */
-    constructor(
-        text: Text,
-        strt: Scalar<Int>,
-        finish: Scalar<Int>
-    ) : this(text, UncheckedScalar<Int>(strt), UncheckedScalar<Int>(finish))
 
     @Throws(IOException::class)
     override fun asString(): String {

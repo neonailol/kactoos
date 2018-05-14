@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.time
 
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.Constant
 import nnl.rocks.kactoos.scalar.UncheckedScalar
@@ -19,7 +20,7 @@ import java.util.Locale
  * @since 0.27
  */
 class DateAsText(
-    private val formatted: UncheckedScalar<String>
+    private val formatted: Scalar<String>
 ) : Text {
 
     constructor(

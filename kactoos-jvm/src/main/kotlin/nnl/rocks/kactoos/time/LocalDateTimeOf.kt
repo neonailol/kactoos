@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter
  * @since 0.27
  */
 class LocalDateTimeOf(
-    private val parsed: UncheckedScalar<LocalDateTime>
+    private val parsed: Scalar<LocalDateTime>
 ) : Scalar<LocalDateTime> {
 
     constructor(

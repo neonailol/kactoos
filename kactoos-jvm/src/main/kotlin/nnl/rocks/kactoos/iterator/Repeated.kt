@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.Constant
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 import java.util.NoSuchElementException
 
 /**
@@ -10,15 +9,12 @@ import java.util.NoSuchElementException
  *
  * If you need to repeat endlessly, use [Endless].
  *
- *
- *
- *
  * @param T Element type
- * @since 0.4
+ * @since 0.3
  */
 class Repeated<T : Any>(
     private var repeat: Int,
-    private val elm: UncheckedScalar<T>
+    private val elm: Scalar<T>
 ) : Iterator<T> {
 
     /**
@@ -29,16 +25,6 @@ class Repeated<T : Any>(
         max: Int,
         element: T
     ) : this(max, Constant { element })
-
-    /**
-     * Ctor.
-     * @param max How many times to repeat
-     * @param scalar Scalar to repeat
-     */
-    constructor(
-        max: Int,
-        scalar: Scalar<T>
-    ) : this(max, UncheckedScalar<T>(scalar))
 
     override fun hasNext(): Boolean = this.repeat > 0
 

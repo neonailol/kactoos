@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.Scalar
-import nnl.rocks.kactoos.scalar.UncheckedScalar
+import nnl.rocks.kactoos.scalar.Constant
 
 /**
  * Base read-only collection.
@@ -13,8 +13,8 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  * @since 0.3
  */
 open class CollectionEnvelope<X : Any>(
-    private val col: UncheckedScalar<Collection<X>>
+    private val col: Scalar<Collection<X>>
 ) : Collection<X> by col() {
 
-    constructor(slr: Scalar<Collection<X>>) : this(UncheckedScalar(slr))
+    constructor(col: Collection<X>) : this(Constant { col })
 }
