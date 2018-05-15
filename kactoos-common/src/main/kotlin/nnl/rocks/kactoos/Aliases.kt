@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos
 
     /**
-     * Alias for [KScalar]
+     * Alias for [Scalar]
      * @since 0.2
      */
 typealias KScalar<T> = () -> T
