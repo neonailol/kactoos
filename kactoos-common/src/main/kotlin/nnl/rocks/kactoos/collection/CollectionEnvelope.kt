@@ -8,12 +8,12 @@ import nnl.rocks.kactoos.KScalar
  * There is no thread-safety guarantee.
  *
  * @param X Element type.
- * @param col Encapsulated collection.
+ * @param collection Encapsulated collection.
  * @since 0.3
  */
 open class CollectionEnvelope<X : Any>(
-    private val col: KScalar<Collection<X>>
-) : Collection<X> by col() {
+    private val collection: KScalar<Collection<X>>
+) : Collection<X> by collection() {
 
-    constructor(col: Collection<X>) : this({ col })
+    constructor(collection: Collection<X>) : this({ collection })
 }
