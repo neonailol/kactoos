@@ -4,7 +4,7 @@
 
 `typealias KScalar<T> = () -> `[`T`](-k-scalar.md#T)
 
-Alias for [KScalar](./-k-scalar.md)
+Alias for [Scalar](-scalar/index.md)
 
 **Since**
 0.2
@@ -44,4 +44,5 @@ Alias for [KScalar](./-k-scalar.md)
 | [TempFile](../nnl.rocks.kactoos.io/-temp-file/index.md) | `class TempFile : `[`KScalar`](./-k-scalar.md)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, `[`Closeable`](http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)<br>A temporary file. |
 | [Ternary](../nnl.rocks.kactoos.scalar/-ternary/index.md) | `class Ternary<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`KScalar`](./-k-scalar.md)`<`[`T`](../nnl.rocks.kactoos.scalar/-ternary/index.md#T)`>`<br>Ternary operation. |
 | [True](../nnl.rocks.kactoos.scalar/-true/index.md) | `class True : `[`KScalar`](./-k-scalar.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>`<br>Logical truth. |
+| [UncheckedScalar](../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md) | `class UncheckedScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`KScalar`](./-k-scalar.md)`<`[`T`](../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md#T)`>`<br>Scalar that throws unchecked [UncheckedIOException](http://docs.oracle.com/javase/8/docs/api/java/io/UncheckedIOException.html) instead of checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [ZonedDateTimeOf](../nnl.rocks.kactoos.time/-zoned-date-time-of/index.md) | `class ZonedDateTimeOf : `[`KScalar`](./-k-scalar.md)`<`[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)`>`<br>Parser for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances. |

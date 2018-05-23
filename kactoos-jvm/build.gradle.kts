@@ -7,9 +7,9 @@ import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 plugins {
     maven
     id("kotlin-platform-jvm")
-    id("org.jetbrains.dokka") version "0.9.16"
+    id("org.jetbrains.dokka") version "0.9.17"
     id("io.gitlab.arturbosch.detekt") version "1.0.0.RC7"
-    id("org.jlleitschuh.gradle.ktlint") version "3.3.0"
+    id("org.jlleitschuh.gradle.ktlint") version "4.0.0"
 }
 
 dependencies {

@@ -51,7 +51,5 @@ class Mapped<X : Any, Y : Any>(
         src: Iterable<X>
     ) : this(fnc, CollectionOf<X>(src))
 
-    override fun toString(): String {
-        return TextOf(this).toString()
-    }
+    override fun toString(): String = TextOf(this).toString()
 }

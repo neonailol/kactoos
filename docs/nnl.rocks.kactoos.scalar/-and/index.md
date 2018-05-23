@@ -7,7 +7,7 @@
 Logical conjunction.
 
 This class can be effectively used to iterate through
-a collection, just like [java.util.stream.Stream.forEach](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#forEach(java.util.function.Consumer<? super T>)) works:
+a collection, just like `forEach` works:
 
 ```
 And<String>(

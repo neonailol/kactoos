@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.collection
 
 import java.util.ArrayList
-import java.util.Collections
 
 /**
  * Sorted collection.
@@ -19,14 +18,7 @@ import java.util.Collections
  */
 class Shuffled<T : Any> : CollectionEnvelope<T> {
 
-    constructor(src: Collection<T>) : super(
-         {
-            val items = ArrayList<T>(src.size)
-            items.addAll(src)
-            Collections.shuffle(items)
-            items
-        }
-    )
+    constructor(src: Collection<T>) : super({ MutableList(src.size, { index: Int -> src.elementAt(index) } ).shuffled() })
 
     /**
      * @param src The underlying collection

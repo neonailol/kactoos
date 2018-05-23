@@ -13,7 +13,7 @@ Apply it.
 `input` - The argument
 
 **Return**
-The result of type [Y](index.md#Y)
+The result of type [Y](../../nnl.rocks.kactoos/-func/index.md#Y)
 
 **Since**
 0.2

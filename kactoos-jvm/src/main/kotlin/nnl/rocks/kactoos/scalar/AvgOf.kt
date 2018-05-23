@@ -46,7 +46,7 @@ class AvgOf(src: Iterable<KScalar<Number>>) : NumberEnvelope(Ternary(
             MathContext.DECIMAL128
         ).toDouble()
     },
-    FuncOf { len -> 0.0 }
+    FuncOf { 0.0 }
 )) {
 
     /**

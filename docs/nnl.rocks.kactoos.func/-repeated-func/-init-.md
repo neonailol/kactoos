@@ -16,7 +16,7 @@
 `RepeatedFunc(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, times: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 Func that repeats its calculation a few times before returning the last result.
-If [times](-init-.md#nnl.rocks.kactoos.func.RepeatedFunc$<init>(nnl.rocks.kactoos.Func((nnl.rocks.kactoos.func.RepeatedFunc.X, nnl.rocks.kactoos.func.RepeatedFunc.Y)), kotlin.Int)/times) is equal or less than zero [RepeatedFunc.apply](apply.md) will return an exception.
+If [times](#) is equal or less than zero [RepeatedFunc.apply](apply.md) will return an exception.
 
 ### Parameters
 

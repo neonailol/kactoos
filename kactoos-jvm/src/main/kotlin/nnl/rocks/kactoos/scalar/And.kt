@@ -9,7 +9,7 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * Logical conjunction.
  *
  * This class can be effectively used to iterate through
- * a collection, just like [java.util.stream.Stream.forEach] works:
+ * a collection, just like `forEach` works:
  *
  * ```
  * And<String>(
@@ -17,7 +17,6 @@ import nnl.rocks.kactoos.iterable.IterableOf
  *     IterableOf("Mary", "John", "William", "Napkin")
  * ).value()
  * ```
- *
  *
  * There is no thread-safety guarantee.
  *
@@ -27,14 +26,10 @@ import nnl.rocks.kactoos.iterable.IterableOf
  */
 class And(private val iterable: Iterable<KScalar<Boolean>>) : KScalar<Boolean> {
 
-    init {
-    }
-
     /**
      * @param src Iterable
      * @since 0.3
      */
-    @SafeVarargs
     constructor(vararg src: KScalar<Boolean>) : this(IterableOf(src.iterator()))
 
     /**
@@ -43,9 +38,7 @@ class And(private val iterable: Iterable<KScalar<Boolean>>) : KScalar<Boolean> {
      */
     constructor(src: Iterator<KScalar<Boolean>>) : this(IterableOf(src))
 
-    override fun invoke(): Boolean {
-        return iterable.all { it() }
-    }
+    override fun invoke(): Boolean = iterable.all { it() }
 
     companion object {
 

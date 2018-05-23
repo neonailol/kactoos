@@ -2,9 +2,9 @@
 
 # &lt;init&gt;
 
-`UncheckedScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)`
+`UncheckedScalar(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
 
-Scalar that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html).
+Scalar that throws unchecked [UncheckedIOException](http://docs.oracle.com/javase/8/docs/api/java/io/UncheckedIOException.html) instead of checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html).
 
 There is no thread-safety guarantee.
 
@@ -15,5 +15,5 @@ There is no thread-safety guarantee.
 `origin` - Encapsulated origin
 
 **Since**
-0.3
+0.4
 

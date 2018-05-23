@@ -28,7 +28,7 @@ class SyncFunc<X : Any, Y : Any>(
         runnable: Runnable,
         result: Y
     ) : this(
-        FuncOf { input ->
+        FuncOf {
             runnable.run()
             result
         }

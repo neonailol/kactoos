@@ -55,7 +55,7 @@ class ItemAt<T : Any>(
     ) : this(
         source,
         position,
-        FuncOf { itr ->
+        FuncOf {
             throw IOException(
                 FormattedText(
                     "The iterable doesn't have the position #%d",
@@ -99,7 +99,7 @@ class ItemAt<T : Any>(
     constructor(
         iterator: Iterator<T>,
         fallback: T
-    ) : this(iterator, FuncOf { itr -> fallback })
+    ) : this(iterator, FuncOf { fallback })
 
     /**
      * Ctor.
@@ -122,7 +122,7 @@ class ItemAt<T : Any>(
     constructor(
         iterator: Iterator<T>,
         position: Int,
-        fallback: Func<Iterable<T>, T> = FuncOf { itr ->
+        fallback: Func<Iterable<T>, T> = FuncOf {
             throw IOException(
                 FormattedText(
                     "Iterator doesn't have an element at #%d position",

@@ -61,7 +61,7 @@ constructor(
     constructor(
         res: CharSequence,
         fbk: CharSequence
-    ) : this(res, FuncOf { input -> InputOf(BytesOf(fbk)) })
+    ) : this(res, FuncOf { InputOf(BytesOf(fbk)) })
 
     /**
      * New resource input with current context [ClassLoader].
@@ -71,7 +71,7 @@ constructor(
     constructor(
         res: CharSequence,
         fbk: Input
-    ) : this(res, FuncOf { input -> fbk })
+    ) : this(res, FuncOf { fbk })
 
     /**
      * New resource input with specified [ClassLoader].
@@ -102,7 +102,7 @@ constructor(
     constructor(
         res: Text,
         fbk: Text
-    ) : this(res, FuncOf { input -> InputOf(BytesOf(fbk.asString())) })
+    ) : this(res, FuncOf { InputOf(BytesOf(fbk.asString())) })
 
     /**
      * New resource input with current context [ClassLoader].
@@ -112,7 +112,7 @@ constructor(
     constructor(
         res: Text,
         fbk: Input
-    ) : this(res, FuncOf { input -> fbk })
+    ) : this(res, FuncOf { fbk })
 
     override fun stream(): InputStream {
         var input: InputStream? = this.loader.getResourceAsStream(

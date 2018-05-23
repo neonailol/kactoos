@@ -54,7 +54,7 @@ class ReplacedText(
         text: Text,
         find: String,
         replace: String
-    ) : this(text,  { Pattern.compile(find) }, FuncOf { matcher -> replace })
+    ) : this(text,  { Pattern.compile(find) }, FuncOf { replace })
 
     override fun asString(): String {
         val buffer = StringBuffer()

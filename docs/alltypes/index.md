@@ -86,7 +86,7 @@ Kactoos.
 | [nnl.rocks.kactoos.KBytes](../nnl.rocks.kactoos/-k-bytes.md) | Alias for [Bytes](../nnl.rocks.kactoos/-bytes/index.md) |
 | [nnl.rocks.kactoos.KFunc](../nnl.rocks.kactoos/-k-func.md) | Alias for [Func](../nnl.rocks.kactoos/-func/index.md) |
 | [nnl.rocks.kactoos.KProc](../nnl.rocks.kactoos/-k-proc.md) | Alias for [Proc](../nnl.rocks.kactoos/-proc/index.md) |
-| [nnl.rocks.kactoos.KScalar](../nnl.rocks.kactoos/-k-scalar.md) | Alias for [KScalar](../nnl.rocks.kactoos/-k-scalar.md) |
+| [nnl.rocks.kactoos.KScalar](../nnl.rocks.kactoos/-k-scalar.md) | Alias for [Scalar](../nnl.rocks.kactoos/-scalar/index.md) |
 | [nnl.rocks.kactoos.KText](../nnl.rocks.kactoos/-k-text.md) | Alias for [Text](../nnl.rocks.kactoos/-text/index.md) |
 | [nnl.rocks.kactoos.io.LSInputOf](../nnl.rocks.kactoos.io/-l-s-input-of/index.md) | Input as LSInput. |
 | [nnl.rocks.kactoos.io.LengthOf](../nnl.rocks.kactoos.io/-length-of/index.md) | Length of [Input](../nnl.rocks.kactoos/-input/index.md). |
@@ -219,6 +219,7 @@ Kactoos.
 | [nnl.rocks.kactoos.io.UncheckedInput](../nnl.rocks.kactoos.io/-unchecked-input/index.md) | Input that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [nnl.rocks.kactoos.io.UncheckedOutput](../nnl.rocks.kactoos.io/-unchecked-output/index.md) | Input that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [nnl.rocks.kactoos.func.UncheckedProc](../nnl.rocks.kactoos.func/-unchecked-proc/index.md) | Proc that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
+| [nnl.rocks.kactoos.scalar.UncheckedScalar](../nnl.rocks.kactoos.scalar/-unchecked-scalar/index.md) | Scalar that throws unchecked [UncheckedIOException](http://docs.oracle.com/javase/8/docs/api/java/io/UncheckedIOException.html) instead of checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [nnl.rocks.kactoos.text.UncheckedText](../nnl.rocks.kactoos.text/-unchecked-text/index.md) | Text that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [nnl.rocks.kactoos.text.UpperText](../nnl.rocks.kactoos.text/-upper-text/index.md) | Text in upper case. |
 | [nnl.rocks.kactoos.io.WriterAsOutputStream](../nnl.rocks.kactoos.io/-writer-as-output-stream/index.md) | Writer as [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html). |

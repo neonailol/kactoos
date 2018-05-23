@@ -27,5 +27,5 @@ Top level package
 | [KBytes](-k-bytes.md) | `typealias KBytes = () -> `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)<br>Alias for [Bytes](-bytes/index.md) |
 | [KFunc](-k-func.md) | `typealias KFunc<X, Y> = (`[`X`](-k-func.md#X)`) -> `[`Y`](-k-func.md#Y)<br>Alias for [Func](-func/index.md) |
 | [KProc](-k-proc.md) | `typealias KProc<X> = (`[`X`](-k-proc.md#X)`) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Alias for [Proc](-proc/index.md) |
-| [KScalar](-k-scalar.md) | `typealias KScalar<T> = () -> `[`T`](-k-scalar.md#T)<br>Alias for [KScalar](-k-scalar.md) |
+| [KScalar](-k-scalar.md) | `typealias KScalar<T> = () -> `[`T`](-k-scalar.md#T)<br>Alias for [Scalar](-scalar/index.md) |
 | [KText](-k-text.md) | `typealias KText = () -> `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Alias for [Text](-text/index.md) |
