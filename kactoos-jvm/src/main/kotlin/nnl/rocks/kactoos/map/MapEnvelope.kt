@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.map
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 
 /**
  * Map envelope.
@@ -16,4 +17,6 @@ import nnl.rocks.kactoos.KScalar
 open class MapEnvelope<X, out Y>(private val map: KScalar<Map<X, Y>>) : Map<X, Y> by map() {
 
     constructor(map: Map<X, Y>) : this( { map })
+
+    constructor(map: Scalar<Map<X, Y>>) : this( { map() })
 }

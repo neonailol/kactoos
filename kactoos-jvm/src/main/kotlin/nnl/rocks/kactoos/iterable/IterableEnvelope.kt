@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 
 /**
  * Iterable envelope.
@@ -15,4 +16,6 @@ open class IterableEnvelope<out X : Any>(
 ) : Iterable<X> by iterable() {
 
     constructor(iterable: Iterable<X>) : this({ iterable })
+
+    constructor(iterable: Scalar<Iterable<X>>) : this({ iterable() })
 }

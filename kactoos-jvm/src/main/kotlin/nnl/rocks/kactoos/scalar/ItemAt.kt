@@ -30,7 +30,7 @@ class ItemAt<T : Any>(
     constructor(
         fallback: T,
         source: Iterable<T>
-    ) : this(source, FuncOf { itr -> fallback })
+    ) : this(source, FuncOf { fallback })
 
     /**
      * Ctor.
@@ -40,7 +40,7 @@ class ItemAt<T : Any>(
      */
     constructor(
         source: Iterable<T>,
-        fallback: Func<Iterable<T>, T> = FuncOf { itr -> throw IOException("The iterable is empty") }
+        fallback: Func<Iterable<T>, T> = FuncOf { throw IOException("The iterable is empty") }
     ) : this(source, 0, fallback)
 
     /**
@@ -109,7 +109,7 @@ class ItemAt<T : Any>(
      */
     constructor(
         iterator: Iterator<T>,
-        fallback: Func<Iterable<T>, T> = FuncOf { itr -> throw IOException("Iterator is empty") }
+        fallback: Func<Iterable<T>, T> = FuncOf { throw IOException("Iterator is empty") }
     ) : this(iterator, 0, fallback)
 
     /**

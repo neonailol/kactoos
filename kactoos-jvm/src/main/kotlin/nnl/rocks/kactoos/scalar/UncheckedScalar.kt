@@ -17,7 +17,7 @@ import java.io.UncheckedIOException
 class UncheckedScalar<out T : Any>(private val origin: KScalar<T>) : KScalar<T> {
 
     override fun invoke(): T = try {
-        IoCheckedScalar(this.origin).invoke()
+        IoCheckedScalar(origin).invoke()
     } catch (ex: IOException) {
         throw UncheckedIOException(ex)
     }

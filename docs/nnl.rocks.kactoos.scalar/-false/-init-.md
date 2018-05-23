@@ -6,8 +6,8 @@
 
 Logical false.
 
-There is no thread-safety guarantee.
+This class is thread-safe.
 
 **Since**
-0.7
+0.5
 

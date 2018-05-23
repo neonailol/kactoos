@@ -196,7 +196,7 @@ Kactoos.
 | [nnl.rocks.kactoos.list.SyncList](../nnl.rocks.kactoos.list/-sync-list/index.md) | Synchronized list. |
 | [nnl.rocks.kactoos.map.SyncMap](../nnl.rocks.kactoos.map/-sync-map/index.md) | Map decorator that goes through the map only once. |
 | [nnl.rocks.kactoos.io.SyncOutput](../nnl.rocks.kactoos.io/-sync-output/index.md) | Thread-safe [Output](../nnl.rocks.kactoos/-output/index.md). |
-| [nnl.rocks.kactoos.scalar.SyncScalar](../nnl.rocks.kactoos.scalar/-sync-scalar/index.md) | KScalar that is thread-safe. |
+| [nnl.rocks.kactoos.scalar.SyncScalar](../nnl.rocks.kactoos.scalar/-sync-scalar/index.md) | Scalar that is thread-safe. |
 | [nnl.rocks.kactoos.text.SyncText](../nnl.rocks.kactoos.text/-sync-text/index.md) | Text that is thread-safe. |
 | [nnl.rocks.kactoos.io.TeeInput](../nnl.rocks.kactoos.io/-tee-input/index.md) | Input to Output copying pipe. |
 | [nnl.rocks.kactoos.io.TeeInputStream](../nnl.rocks.kactoos.io/-tee-input-stream/index.md) | Stream that copies input to output. |

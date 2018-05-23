@@ -6,8 +6,8 @@
 
 Logical truth.
 
-There is no thread-safety guarantee.
+This class is thread-safe.
 
 **Since**
-0.3
+0.5
 

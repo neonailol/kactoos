@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 
 /**
  * Base read-only collection.
@@ -16,4 +17,6 @@ open class CollectionEnvelope<X : Any>(
 ) : Collection<X> by collection() {
 
     constructor(collection: Collection<X>) : this({ collection })
+
+    constructor(collection: Scalar<Collection<X>>) : this({ collection() })
 }
