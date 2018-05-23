@@ -13,5 +13,5 @@ There is no thread-safety guarantee.
 `origin` - The scalar
 
 **Since**
-0.7
+0.5
 

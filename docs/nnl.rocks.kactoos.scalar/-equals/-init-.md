@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`Equals(first: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>, second: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
+`Equals(left: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>, right: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
 
 Equals.
 
@@ -10,12 +10,12 @@ There is no thread-safety guarantee.
 
 ### Parameters
 
-`first` - The first scalar to compare.
+`left` - The left scalar to compare.
 
-`second` - The second scalar to compare.
+`right` - The right scalar to compare.
 
 `T` - Type of object to compare
 
 **Since**
-0.9
+0.5
 
