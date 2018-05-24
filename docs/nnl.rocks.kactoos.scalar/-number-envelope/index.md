@@ -42,7 +42,7 @@ There is no thread-safety guarantee.
 | [LengthOf](../../nnl.rocks.kactoos.io/-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](./index.md)<br>Length of [Input](../../nnl.rocks.kactoos/-input/index.md). |
 | [LengthOf](../../nnl.rocks.kactoos.iterable/-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](./index.md)<br>Length of iterable. |
 | [LengthOf](../../nnl.rocks.kactoos.iterator/-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](./index.md)<br>Length of iterator. |
-| [MaxOf](../-max-of/index.md) | `class MaxOf : `[`NumberEnvelope`](./index.md)<br>Find the greater among items. |
-| [MinOf](../-min-of/index.md) | `class MinOf : `[`NumberEnvelope`](./index.md)<br>Find the smaller among items. |
-| [NumberOf](../-number-of/index.md) | `class NumberOf : `[`NumberEnvelope`](./index.md)`, `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`<br>Text as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html). |
+| [MaxOf](../-max-of/index.md) | `class MaxOf : `[`NumberEnvelope`](./index.md)<br>Find the greatest value among numbers. |
+| [MinOf](../-min-of/index.md) | `class MinOf : `[`NumberEnvelope`](./index.md)<br>Find the smallest value among numbers. |
+| [NumberOf](../-number-of/index.md) | `class NumberOf : `[`NumberEnvelope`](./index.md)`, `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`<br>Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html). |
 | [SumOf](../-sum-of/index.md) | `class SumOf : `[`NumberEnvelope`](./index.md)<br>Represents total sum of given numbers. |

@@ -25,7 +25,6 @@ class OrFunc<X : Any>(
      * @param src The iterable
      * @param X Type of items in the iterable
      */
-    @SafeVarargs
     constructor(
         proc: Proc<X>,
         vararg src: X
@@ -36,7 +35,6 @@ class OrFunc<X : Any>(
      * @param src The iterable
      * @param X Type of items in the iterable
      */
-    @SafeVarargs
     constructor(
         func: Func<X, Boolean>,
         vararg src: X
@@ -89,14 +87,5 @@ class OrFunc<X : Any>(
         )
     )
 
-    override fun invoke(): Boolean {
-        var result = false
-        for (item in this.origin) {
-            if (item()) {
-                result = true
-                break
-            }
-        }
-        return result
-    }
+    override fun invoke(): Boolean = origin.any { it() }
 }

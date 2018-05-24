@@ -20,7 +20,6 @@ import java.math.MathContext
  * int sum = new AvgOf(numbers.toArray(new Integer[numbers.size()])).intValue();
  * ```
  *
- *
  * There is no thread-safety guarantee.
  *
  * @param src The iterable
@@ -30,7 +29,7 @@ class AvgOf(src: Iterable<KScalar<Number>>) : NumberEnvelope(Ternary(
     LengthOf(src).toLong(),
     FuncOf { len -> len > 0 },
     FuncOf { len ->
-        Reduced<BigDecimal, BigDecimal>(
+        Folded<BigDecimal, BigDecimal>(
             BigDecimal.ZERO,
             BiFuncOf { sum, value -> sum.add(value, MathContext.DECIMAL128) },
             Mapped<KScalar<Number>, BigDecimal>(

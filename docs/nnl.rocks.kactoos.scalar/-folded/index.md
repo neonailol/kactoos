@@ -2,38 +2,33 @@
 
 # Folded
 
-`class Folded<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>`
+`class Folded<out X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`X`](index.md#X)`>`
 
-Folds iterable via BiFunc.
-
-```
-new Folded<>(
-(first, last) -> first + last,
-new IterableOf<>(() -> 1L, () -> 2L, () -> 3L, () -> 4L)
-).value() // returns 10L
-```
-
-There is no thread-safety guarantee.
+Iterable, which elements are "folded" through the func.
 
 ### Parameters
 
-`T` - KScalar type
+`T` - Type of element
 
-`function` - Folding function
+`X` - Type of input and output
 
-`items` - The scalars
+`input` - Input
+
+`func` - Func original
+
+`iterable` - List of items
 
 **Since**
-0.3
+0.9
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Folded(function: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`, `[`T`](index.md#T)`>, items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>>)`<br>Folds iterable via BiFunc. |
+| [&lt;init&gt;](-init-.md) | `Folded(input: `[`X`](index.md#X)`, func: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`, `[`X`](index.md#X)`>, iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)``Folded(input: `[`X`](index.md#X)`, func: `[`KBiFunc`](../../nnl.rocks.kactoos/-k-bi-func.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`, `[`X`](index.md#X)`>, iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`<br>Iterable, which elements are "folded" through the func. |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`T`](index.md#T) |
+| [invoke](invoke.md) | `fun invoke(): `[`X`](index.md#X) |

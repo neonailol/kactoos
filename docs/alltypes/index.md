@@ -50,7 +50,7 @@ Kactoos.
 | [nnl.rocks.kactoos.collection.Filtered](../nnl.rocks.kactoos.collection/-filtered/index.md) | Filtered collection. |
 | [nnl.rocks.kactoos.iterable.Filtered](../nnl.rocks.kactoos.iterable/-filtered/index.md) | Filtered iterable. |
 | [nnl.rocks.kactoos.iterator.Filtered](../nnl.rocks.kactoos.iterator/-filtered/index.md) | Filtered iterator. |
-| [nnl.rocks.kactoos.scalar.Folded](../nnl.rocks.kactoos.scalar/-folded/index.md) | Folds iterable via BiFunc. |
+| [nnl.rocks.kactoos.scalar.Folded](../nnl.rocks.kactoos.scalar/-folded/index.md) | Iterable, which elements are "folded" through the func. |
 | [nnl.rocks.kactoos.text.FormattedText](../nnl.rocks.kactoos.text/-formatted-text/index.md) | Text in Sprinf format. |
 | [nnl.rocks.kactoos.Func](../nnl.rocks.kactoos/-func/index.md) | Function. |
 | [nnl.rocks.kactoos.func.FuncOf](../nnl.rocks.kactoos.func/-func-of/index.md) | Represents many possible inputs as [Func](../nnl.rocks.kactoos/-func/index.md). |
@@ -114,13 +114,13 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.Mapped](../nnl.rocks.kactoos.iterable/-mapped/index.md) | Mapped iterable. |
 | [nnl.rocks.kactoos.iterator.Mapped](../nnl.rocks.kactoos.iterator/-mapped/index.md) | Mapped iterator. |
 | [nnl.rocks.kactoos.list.Mapped](../nnl.rocks.kactoos.list/-mapped/index.md) | Mapped list. |
-| [nnl.rocks.kactoos.scalar.MaxOf](../nnl.rocks.kactoos.scalar/-max-of/index.md) | Find the greater among items. |
+| [nnl.rocks.kactoos.scalar.MaxOf](../nnl.rocks.kactoos.scalar/-max-of/index.md) | Find the greatest value among numbers. |
 | [nnl.rocks.kactoos.io.Md5DigestOf](../nnl.rocks.kactoos.io/-md5-digest-of/index.md) | MD5 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
-| [nnl.rocks.kactoos.scalar.MinOf](../nnl.rocks.kactoos.scalar/-min-of/index.md) | Find the smaller among items. |
+| [nnl.rocks.kactoos.scalar.MinOf](../nnl.rocks.kactoos.scalar/-min-of/index.md) | Find the smallest value among numbers. |
 | [nnl.rocks.kactoos.text.NormalizedText](../nnl.rocks.kactoos.text/-normalized-text/index.md) | Normalize (replace sequences of whitespace characters by a single space) a Text. |
 | [nnl.rocks.kactoos.scalar.Not](../nnl.rocks.kactoos.scalar/-not/index.md) | Logical negative. |
 | [nnl.rocks.kactoos.scalar.NumberEnvelope](../nnl.rocks.kactoos.scalar/-number-envelope/index.md) | Envelope for the [Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html). |
-| [nnl.rocks.kactoos.scalar.NumberOf](../nnl.rocks.kactoos.scalar/-number-of/index.md) | Text as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html). |
+| [nnl.rocks.kactoos.scalar.NumberOf](../nnl.rocks.kactoos.scalar/-number-of/index.md) | Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html). |
 | [nnl.rocks.kactoos.time.OffsetDateTimeAsText](../nnl.rocks.kactoos.time/-offset-date-time-as-text/index.md) | Formatter for [OffsetDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) instances. |
 | [nnl.rocks.kactoos.time.OffsetDateTimeOf](../nnl.rocks.kactoos.time/-offset-date-time-of/index.md) | Parser for [OffsetDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) instances. Parses the date using the formatter to create [OffsetDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) instances. |
 | [nnl.rocks.kactoos.scalar.Or](../nnl.rocks.kactoos.scalar/-or/index.md) | Logical disjunction. |
@@ -136,7 +136,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.RangeOf](../nnl.rocks.kactoos.iterable/-range-of/index.md) | Iterable implementation to model range functionality. |
 | [nnl.rocks.kactoos.io.ReaderAsBytes](../nnl.rocks.kactoos.io/-reader-as-bytes/index.md) | Reader as [Bytes](../nnl.rocks.kactoos/-bytes/index.md). |
 | [nnl.rocks.kactoos.io.ReaderOf](../nnl.rocks.kactoos.io/-reader-of/index.md) | A [Reader](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html) that encapsulates other sources of data. |
-| [nnl.rocks.kactoos.scalar.Reduced](../nnl.rocks.kactoos.scalar/-reduced/index.md) | Iterable, which elements are "reduced" through the func. |
+| [nnl.rocks.kactoos.scalar.Reduced](../nnl.rocks.kactoos.scalar/-reduced/index.md) | Reduce iterable via BiFunc. |
 | [nnl.rocks.kactoos.iterable.Repeated](../nnl.rocks.kactoos.iterable/-repeated/index.md) | Repeat an element. |
 | [nnl.rocks.kactoos.iterator.Repeated](../nnl.rocks.kactoos.iterator/-repeated/index.md) | Repeat an element. |
 | [nnl.rocks.kactoos.func.RepeatedFunc](../nnl.rocks.kactoos.func/-repeated-func/index.md) | Func that repeats its calculation a few times before returning the last result. If [times](#) is equal or less than zero [RepeatedFunc.apply](../nnl.rocks.kactoos.func/-repeated-func/apply.md) will return an exception. |

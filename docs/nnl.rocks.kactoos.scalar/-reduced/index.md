@@ -2,33 +2,38 @@
 
 # Reduced
 
-`class Reduced<out X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`X`](index.md#X)`>`
+`class Reduced<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>`
 
-Iterable, which elements are "reduced" through the func.
+Reduce iterable via BiFunc.
+
+```
+Reduced(
+{ head, tail -> head + tail },
+IterableOf({ 1 }, { 2 }, { 3 }, { 4 })
+).invoke()
+```
+
+There is no thread-safety guarantee.
 
 ### Parameters
 
-`T` - Type of element
+`T` - KScalar type
 
-`X` - Type of input and output
+`function` - Folding function
 
-`input` - Input
-
-`func` - Func original
-
-`iterable` - List of items
+`items` - The scalars
 
 **Since**
-0.9
+0.3
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Reduced(input: `[`X`](index.md#X)`, func: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`X`](index.md#X)`, `[`T`](index.md#T)`, `[`X`](index.md#X)`>, iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`<br>Iterable, which elements are "reduced" through the func. |
+| [&lt;init&gt;](-init-.md) | `Reduced(function: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`, `[`T`](index.md#T)`>, items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>>)``Reduced(function: `[`KBiFunc`](../../nnl.rocks.kactoos/-k-bi-func.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`, `[`T`](index.md#T)`>, items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>>)`<br>Reduce iterable via BiFunc. |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`X`](index.md#X) |
+| [invoke](invoke.md) | `fun invoke(): `[`T`](index.md#T) |

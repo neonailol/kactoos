@@ -57,5 +57,5 @@ There is no thread-safety guarantee.
 `alternative` - The alternative
 
 **Since**
-0.8
+0.5
 

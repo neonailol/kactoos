@@ -52,7 +52,6 @@ class SumOf : NumberEnvelope {
      */
     constructor(src: Iterable<Number>) : super(
          {
-            1.0F.toBigDecimal()
             src.fold(
                 BigDecimal.ZERO,
                 { acc, number -> acc.add(BigDecimal.valueOf(number.toDouble()), MathContext.UNLIMITED) }

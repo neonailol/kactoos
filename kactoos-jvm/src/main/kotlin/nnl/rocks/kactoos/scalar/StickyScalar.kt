@@ -8,26 +8,21 @@ import nnl.rocks.kactoos.func.StickyFunc
 /**
  * Cached version of a KScalar.
  *
- * This [KScalar] decorator technically is an in-memory
- * cache.
+ * This [KScalar] decorator technically is an in-memory cache.
  *
  * Pay attention that this class is not thread-safe. It is highly
  * recommended to always decorate it with [SyncScalar].
  *
- *
  * There is no thread-safety guarantee.
- *
- *
- *
  *
  * @param T Type of result
  * @param func Cached func
  * @see StickyFunc
  * @since 0.3
  */
-class StickyScalar<T : Any>(private val func: Func<Boolean, T>) : KScalar<T> {
+class StickyScalar<T : Any> private constructor(private val func: Func<Boolean, T>) : KScalar<T> {
 
     constructor(scalar: KScalar<T>) : this(StickyFunc(FuncOf { _ -> scalar() }))
 
-    override fun invoke(): T = this.func.apply(true)
+    override fun invoke(): T = func.apply(true)
 }

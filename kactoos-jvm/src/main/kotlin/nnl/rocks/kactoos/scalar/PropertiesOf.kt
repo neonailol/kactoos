@@ -23,7 +23,7 @@ class PropertiesOf(
     private val scalar: IoCheckedScalar<Properties>
 ) : KScalar<Properties> {
 
-    constructor(sclr: KScalar<Properties>) : this(IoCheckedScalar(sclr))
+    constructor(scalar: KScalar<Properties>) : this(IoCheckedScalar(scalar))
 
     /**
      * @param content String
@@ -39,10 +39,10 @@ class PropertiesOf(
      * @param input Input
      */
     constructor(input: Input) : this(
-         {
-            val props = Properties()
-            input.stream().use { stream -> props.load(stream) }
-            props
+        {
+            Properties().apply {
+                input.stream().use { stream -> load(stream) }
+            }
         }
     )
 
@@ -72,17 +72,14 @@ class PropertiesOf(
      * @param map The map with properties
      */
     constructor(map: Map<*, *>) : this(
-         {
-            val props = Properties()
-            for ((key, value) in map) {
-                props.setProperty(
-                    key.toString(),
-                    value.toString()
-                )
+        {
+            Properties().apply {
+                for ((key, value) in map) {
+                    setProperty(key.toString(), value.toString())
+                }
             }
-            props
         }
     )
 
-    override fun invoke(): Properties = this.scalar()
+    override fun invoke(): Properties = scalar()
 }

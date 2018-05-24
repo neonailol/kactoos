@@ -6,18 +6,13 @@ import nnl.rocks.kactoos.KScalar
 /**
  * Ternary operation.
  *
- *
  * There is no thread-safety guarantee.
- *
- *
- *
- *
  *
  * @param T Type of item.
  * @param condition The condition
  * @param consequent The consequent
  * @param alternative The alternative
- * @since 0.8
+ * @since 0.5
  */
 class Ternary<T : Any, X : Any>(
     private val condition: KScalar<Boolean>,
@@ -39,9 +34,9 @@ class Ternary<T : Any, X : Any>(
         cons: Func<X, T>,
         alter: Func<X, T>
     ) : this(
-         { cnd.apply(input) },
-         { cons.apply(input) },
-         { alter.apply(input) }
+        { cnd.apply(input) },
+        { cons.apply(input) },
+        { alter.apply(input) }
     )
 
     /**
@@ -54,7 +49,7 @@ class Ternary<T : Any, X : Any>(
         cnd: Boolean,
         cons: T,
         alter: T
-    ) : this( { cnd }, cons, alter)
+    ) : this({ cnd }, cons, alter)
 
     /**
      * @param cnd The condition
@@ -65,14 +60,13 @@ class Ternary<T : Any, X : Any>(
         cnd: KScalar<Boolean>,
         cons: T,
         alter: T
-    ) : this(cnd,  { cons },  { alter })
+    ) : this(cnd, { cons }, { alter })
 
     override fun invoke(): T {
-        val result: KScalar<T> = if (this.condition()) {
-            this.consequent
+        return if (condition()) {
+            consequent()
         } else {
-            this.alternative
+            alternative()
         }
-        return result()
     }
 }

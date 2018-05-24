@@ -1,44 +1,32 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.BiFunc
+import nnl.rocks.kactoos.KBiFunc
 import nnl.rocks.kactoos.KScalar
-import java.util.NoSuchElementException
 
 /**
- * Folds iterable via BiFunc.
+ * Iterable, which elements are "folded" through the func.
  *
- * ```
- * new Folded<>(
- * (first, last) -> first + last,
- * new IterableOf<>(() -> 1L, () -> 2L, () -> 3L, () -> 4L)
- * ).value() // returns 10L
- * ```
- *
- * There is no thread-safety guarantee.
- *
- *
- * @param T KScalar type
- * @param function Folding function
- * @param items The scalars
- * @since 0.3
+ * @param T Type of element
+ * @param X Type of input and output
+ * @param input Input
+ * @param func Func original
+ * @param iterable List of items
+ * @since 0.9
  */
-class Folded<out T : Any>(
-    private val function: BiFunc<T, T, T>,
-    private val items: Iterable<KScalar<T>>
-) : KScalar<T> {
+class Folded<out X : Any, T : Any>(
+    private val input: X,
+    private val func: KBiFunc<X, T, X>,
+    private val iterable: Iterable<T>
+) : KScalar<X> {
 
-    override fun invoke(): T {
-        val iter = this.items.iterator()
-        if (! iter.hasNext()) {
-            throw NoSuchElementException(
-                "Can't find first element in an empty iterable"
-            )
-        }
-        var acc = iter.next().invoke()
-        while (iter.hasNext()) {
-            val next = iter.next().invoke()
-            acc = this.function.apply(acc, next)
-        }
-        return acc
+    constructor(
+        input: X,
+        func: BiFunc<X, T, X>,
+        iterable: Iterable<T>
+    ) : this(input, { l, r -> func.apply(l, r) }, iterable)
+
+    override fun invoke(): X {
+        return iterable.fold(input, func)
     }
 }

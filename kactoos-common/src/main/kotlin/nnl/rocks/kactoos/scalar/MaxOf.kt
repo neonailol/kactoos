@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 /**
- * Find the greater among items.
+ * Find the greatest value among numbers.
  *
  * Here is how you can use it to find maximum among numbers:
  *
@@ -40,5 +40,5 @@ class MaxOf : NumberEnvelope {
     /**
      * @param src The iterable
      */
-    constructor(src: Iterable<Number>) : super({ src.maxBy { it.toDouble() }?.toDouble() ?: Double.MAX_VALUE })
+    constructor(src: Iterable<Number>) : super({ src.maxBy { it.toDouble() }?.toDouble() ?: Double.MIN_VALUE })
 }

@@ -6,8 +6,7 @@
 
 Cached version of a KScalar.
 
-This [KScalar](../../nnl.rocks.kactoos/-k-scalar.md) decorator technically is an in-memory
-cache.
+This [KScalar](../../nnl.rocks.kactoos/-k-scalar.md) decorator technically is an in-memory cache.
 
 Pay attention that this class is not thread-safe. It is highly
 recommended to always decorate it with [SyncScalar](../-sync-scalar/index.md).
@@ -31,7 +30,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `StickyScalar(scalar: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)``StickyScalar(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, `[`T`](index.md#T)`>)`<br>Cached version of a KScalar. |
+| [&lt;init&gt;](-init-.md) | `StickyScalar(scalar: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)` |
 
 ### Functions
 

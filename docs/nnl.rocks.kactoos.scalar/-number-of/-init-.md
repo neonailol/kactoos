@@ -9,7 +9,7 @@
 
 `txt` - Number-string`NumberOf(dnum: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
 
-Text as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html).
+Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html).
 
 There is no thread-safety guarantee.
 

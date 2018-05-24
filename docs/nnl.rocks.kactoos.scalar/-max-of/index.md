@@ -4,7 +4,7 @@
 
 `class MaxOf : `[`NumberEnvelope`](../-number-envelope/index.md)
 
-Find the greater among items.
+Find the greatest value among numbers.
 
 Here is how you can use it to find maximum among numbers:
 

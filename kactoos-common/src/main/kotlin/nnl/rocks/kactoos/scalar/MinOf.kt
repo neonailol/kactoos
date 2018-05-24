@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 /**
- * Find the smaller among items.
+ * Find the smallest value among numbers.
  *
  * Here is how you can use it to find minimum among numbers:
  *

@@ -32,16 +32,7 @@ class Or(
      */
     constructor(iterable: Iterator<KScalar<Boolean>>) : this(IterableOf<KScalar<Boolean>>(iterable))
 
-    override fun invoke(): Boolean {
-        var result = false
-        for (item in this.origin) {
-            if (item()) {
-                result = true
-                break
-            }
-        }
-        return result
-    }
+    override fun invoke(): Boolean = origin.any { it() }
 
     companion object {
 
@@ -54,9 +45,7 @@ class Or(
         operator fun <X : Any> invoke(
             proc: Proc<X>,
             vararg src: X
-        ): Or {
-            return Or(OrFunc(FuncOf(proc, false), src.iterator()))
-        }
+        ): Or = Or(OrFunc(FuncOf(proc, false), src.iterator()))
 
         /**
          * @param func Func to map
@@ -67,9 +56,7 @@ class Or(
         operator fun <X : Any> invoke(
             func: Func<X, Boolean>,
             vararg src: X
-        ): Or {
-            return Or(OrFunc(func, IterableOf(src.iterator())))
-        }
+        ): Or = Or(OrFunc(func, IterableOf(src.iterator())))
 
         /**
          * @param src The iterable
@@ -80,9 +67,7 @@ class Or(
         operator fun <X : Any> invoke(
             proc: Proc<X>,
             src: Iterator<X>
-        ): Or {
-            return Or(OrFunc(proc, IterableOf(src)))
-        }
+        ): Or = Or(OrFunc(proc, IterableOf(src)))
 
         /**
          * @param src The iterable
@@ -93,9 +78,7 @@ class Or(
         operator fun <X : Any> invoke(
             proc: Proc<X>,
             src: Iterable<X>
-        ): Or {
-            return Or(OrFunc(FuncOf(proc, false), src))
-        }
+        ): Or = Or(OrFunc(FuncOf(proc, false), src))
 
         /**
          * @param src The iterable
@@ -106,9 +89,7 @@ class Or(
         operator fun <X : Any> invoke(
             func: Func<X, Boolean>,
             src: Iterator<X>
-        ): Or {
-            return Or(OrFunc(func, IterableOf(src)))
-        }
+        ): Or = Or(OrFunc(func, IterableOf(src)))
 
         /**
          * @param src The iterable
@@ -122,7 +103,7 @@ class Or(
             return Or(
                 OrFunc<X>(
                     Mapped<X, KScalar<Boolean>>(
-                        FuncOf { item -> {func.apply(item)} }, src
+                        FuncOf { item -> { func.apply(item) } }, src
                     )
                 )
             )

@@ -2,4 +2,4 @@
 
 # invoke
 
-`fun invoke(): `[`T`](index.md#T)
+`fun invoke(): `[`X`](index.md#X)

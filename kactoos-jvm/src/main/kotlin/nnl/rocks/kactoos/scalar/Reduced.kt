@@ -1,31 +1,38 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.BiFunc
+import nnl.rocks.kactoos.KBiFunc
 import nnl.rocks.kactoos.KScalar
 
 /**
- * Iterable, which elements are "reduced" through the func.
+ * Reduce iterable via BiFunc.
+ *
+ * ```
+ * Reduced(
+ * { head, tail -> head + tail },
+ * IterableOf({ 1 }, { 2 }, { 3 }, { 4 })
+ * ).invoke()
+ * ```
+ *
+ * There is no thread-safety guarantee.
  *
  *
- *
- * @param T Type of element
- * @param X Type of input and output
- * @param input Input
- * @param func Func original
- * @param iterable List of items
- * @since 0.9
+ * @param T KScalar type
+ * @param function Folding function
+ * @param items The scalars
+ * @since 0.3
  */
-class Reduced<out X : Any, T : Any>(
-    private val input: X,
-    private val func: BiFunc<X, T, X>,
-    private val iterable: Iterable<T>
-) : KScalar<X> {
+class Reduced<out T : Any>(
+    private val function: KBiFunc<T, T, T>,
+    private val items: Iterable<KScalar<T>>
+) : KScalar<T> {
 
-    override fun invoke(): X {
-        var memo = this.input
-        for (item in this.iterable) {
-            memo = this.func.apply(memo, item)
-        }
-        return memo
+    constructor(
+        function: BiFunc<T, T, T>,
+        items: Iterable<KScalar<T>>
+    ) : this({ l, r -> function.apply(l, r) }, items)
+
+    override fun invoke(): T {
+        return items.reduce { acc, next -> { function.invoke(acc(), next()) } }.invoke()
     }
 }
