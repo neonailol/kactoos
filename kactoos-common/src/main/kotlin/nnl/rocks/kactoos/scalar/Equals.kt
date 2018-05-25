@@ -18,5 +18,7 @@ class Equals<in T : Comparable<T>>(
     private val right: KScalar<T>
 ) : Scalar<Boolean> {
 
+    constructor(left: Scalar<T>, right: Scalar<T>) : this({ left() }, { right() })
+
     override fun invoke(): Boolean = left().compareTo(right()) == 0
 }

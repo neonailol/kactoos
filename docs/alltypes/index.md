@@ -133,6 +133,7 @@ Kactoos.
 | [nnl.rocks.kactoos.Proc](../nnl.rocks.kactoos/-proc/index.md) | Procedure. |
 | [nnl.rocks.kactoos.func.ProcOf](../nnl.rocks.kactoos.func/-proc-of/index.md) | Func as Proc. |
 | [nnl.rocks.kactoos.scalar.PropertiesOf](../nnl.rocks.kactoos.scalar/-properties-of/index.md) | Map as [java.util.Properties](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html). |
+| [nnl.rocks.kactoos.text.RandomText](../nnl.rocks.kactoos.text/-random-text/index.md) | Random text. |
 | [nnl.rocks.kactoos.iterable.RangeOf](../nnl.rocks.kactoos.iterable/-range-of/index.md) | Iterable implementation to model range functionality. |
 | [nnl.rocks.kactoos.io.ReaderAsBytes](../nnl.rocks.kactoos.io/-reader-as-bytes/index.md) | Reader as [Bytes](../nnl.rocks.kactoos/-bytes/index.md). |
 | [nnl.rocks.kactoos.io.ReaderOf](../nnl.rocks.kactoos.io/-reader-of/index.md) | A [Reader](http://docs.oracle.com/javase/8/docs/api/java/io/Reader.html) that encapsulates other sources of data. |

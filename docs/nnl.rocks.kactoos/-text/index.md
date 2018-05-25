@@ -31,6 +31,7 @@ Text.
 | [LowerText](../../nnl.rocks.kactoos.text/-lower-text/index.md) | `class LowerText : `[`Text`](./index.md)<br>Text in lower case. |
 | [NormalizedText](../../nnl.rocks.kactoos.text/-normalized-text/index.md) | `class NormalizedText : `[`Text`](./index.md)<br>Normalize (replace sequences of whitespace characters by a single space) a Text. |
 | [OffsetDateTimeAsText](../../nnl.rocks.kactoos.time/-offset-date-time-as-text/index.md) | `class OffsetDateTimeAsText : `[`Text`](./index.md)<br>Formatter for [OffsetDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) instances. |
+| [RandomText](../../nnl.rocks.kactoos.text/-random-text/index.md) | `class RandomText : `[`Text`](./index.md)<br>Random text. |
 | [RepeatedText](../../nnl.rocks.kactoos.text/-repeated-text/index.md) | `class RepeatedText : `[`Text`](./index.md)<br>Repeat an text count times. |
 | [ReplacedText](../../nnl.rocks.kactoos.text/-replaced-text/index.md) | `class ReplacedText : `[`Text`](./index.md)<br>Replace the Text. |
 | [ReversedText](../../nnl.rocks.kactoos.text/-reversed-text/index.md) | `class ReversedText : `[`Text`](./index.md)<br>Reverse the Text. |
