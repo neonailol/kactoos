@@ -19,7 +19,7 @@ import java.nio.file.Path
  *
  * @since 0.3
  */
-class BytesOf constructor(private val origin: KBytes) : Bytes {
+class BytesOf(private val origin: KBytes) : Bytes {
 
     constructor(bytes: Bytes) : this({ bytes.asBytes() })
 
@@ -257,7 +257,6 @@ class BytesOf constructor(private val origin: KBytes) : Bytes {
                 }
             }
         }
-
     )
 
     /**
@@ -265,7 +264,5 @@ class BytesOf constructor(private val origin: KBytes) : Bytes {
      */
     constructor(vararg bytes: Byte) : this({ bytes })
 
-    override fun asBytes(): ByteArray {
-        return this.origin.invoke()
-    }
+    override fun asBytes(): ByteArray = origin()
 }

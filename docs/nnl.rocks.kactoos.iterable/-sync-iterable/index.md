@@ -2,7 +2,7 @@
 
 # SyncIterable
 
-`class SyncIterable<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](../-iterable-envelope/index.md)`<`[`X`](index.md#X)`>`
+`class SyncIterable<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>`
 
 Synchronized iterable.
 
@@ -19,11 +19,21 @@ Objects of this class are thread-safe.
 
 `X` - Type of item
 
+`origin` - The iterable synchronize access to.
+
+`lock` - The lock to synchronize with.
+
 **Since**
-0.24
+0.5
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `SyncIterable(vararg src: `[`X`](index.md#X)`)``SyncIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`<br>Synchronized iterable. |
+| [&lt;init&gt;](-init-.md) | `SyncIterable(vararg src: `[`X`](index.md#X)`)``SyncIterable(origin: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>, lock: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)` = Any())`<br>Synchronized iterable. |
+
+### Functions
+
+| Name | Summary |
+|---|---|
+| [iterator](iterator.md) | `fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>` |

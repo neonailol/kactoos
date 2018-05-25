@@ -21,5 +21,5 @@ class Base64Bytes(
      */
     constructor(origin: Bytes) : this(origin, Base64.getDecoder())
 
-    override fun asBytes(): ByteArray = decoder.decode(this.origin.asBytes())
+    override fun asBytes(): ByteArray = decoder.decode(origin.asBytes())
 }

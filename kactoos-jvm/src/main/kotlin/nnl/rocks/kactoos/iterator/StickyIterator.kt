@@ -1,9 +1,9 @@
 package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.scalar.StickyScalar
-import java.util.LinkedList
 
 /**
  * Iterator that returns the same set of elements always.
@@ -13,14 +13,16 @@ import java.util.LinkedList
  * @param X Type of item
  * @since 0.3
  */
-class StickyIterator<X : Any>(
+class StickyIterator<X : Any> private constructor(
     private val gate: KScalar<Iterator<X>>
 ) : Iterator<X> by gate() {
 
+    private constructor(gate: Scalar<Iterator<X>>) : this({ gate() })
+
     constructor(iterator: Iterator<X>) : this(
         StickyScalar<Iterator<X>>(
-             {
-                val temp = LinkedList<X>()
+            {
+                val temp = mutableListOf<X>()
                 while (iterator.hasNext()) {
                     temp.add(iterator.next())
                 }
@@ -29,8 +31,5 @@ class StickyIterator<X : Any>(
         )
     )
 
-    /**
-     * @param items Items to iterate over
-     */
     constructor(vararg items: X) : this(IterableOf<X>(items.iterator()).iterator())
 }

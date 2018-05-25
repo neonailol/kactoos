@@ -2,7 +2,7 @@
 
 # TempFile
 
-`class TempFile : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, `[`Closeable`](http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)
+`class TempFile : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`>, `[`Closeable`](http://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)
 
 A temporary file.
 
@@ -36,4 +36,4 @@ closed.
 | Name | Summary |
 |---|---|
 | [close](close.md) | `fun close(): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Deletes the file from the filesystem. |
-| [invoke](invoke.md) | `fun invoke(): `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html) |
+| [invoke](invoke.md) | `fun invoke(): `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

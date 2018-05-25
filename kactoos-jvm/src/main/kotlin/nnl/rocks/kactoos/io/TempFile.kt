@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
 import nnl.rocks.kactoos.scalar.StickyScalar
@@ -30,7 +31,9 @@ import java.nio.file.Paths
  */
 class TempFile private constructor(
     private val file: KScalar<Path>
-) : KScalar<Path>, Closeable {
+) : Scalar<Path>, Closeable {
+
+    private constructor(file: Scalar<Path>) : this({ file() })
 
     /**
      * The temporary file will be created inside the filesystem's

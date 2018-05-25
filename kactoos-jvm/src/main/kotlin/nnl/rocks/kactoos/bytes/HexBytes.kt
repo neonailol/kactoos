@@ -12,14 +12,13 @@ import java.io.UncheckedIOException
  * Decodes origin [Text] using the hexadecimal encoding scheme.
  *
  * @since 0.5
- * @checkstyle MagicNumberCheck (500 lines)
  */
 class HexBytes(
     private val origin: Text
 ) : Bytes {
 
     override fun asBytes(): ByteArray {
-        val hex = this.origin.asString()
+        val hex = origin.asString()
         if (hex.length and 1 == 1) {
             throw IOException("Length of hexadecimal text is odd")
         }

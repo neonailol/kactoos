@@ -5,25 +5,22 @@ import nnl.rocks.kactoos.Text
 
 /**
  * Hexadecimal representation of Bytes.
- * @param bytes The bytes
  *
  * There is no thread-safety guarantee.
  *
- *
- *
- * @since 0.28
+ * @param bytes The bytes
+ * @since 0.5
  */
 class HexOf(private val bytes: Bytes) : Text {
 
     override fun asString(): String {
-        val bts = this.bytes.asBytes()
+        val bts = bytes.asBytes()
         val hex = CharArray(bts.size * 2)
         var chr = - 1
         for (idx in bts.indices) {
-            // @checkstyle MagicNumber (3 line)
             val value = 0xff and bts[idx].toInt()
-            hex[++ chr] = HexOf.HEX_CHARS[value.ushr(4)]
-            hex[++ chr] = HexOf.HEX_CHARS[value and 0x0f]
+            hex[++ chr] = HEX_CHARS[value ushr 4]
+            hex[++ chr] = HEX_CHARS[value and 0x0f]
         }
         return String(hex)
     }

@@ -19,4 +19,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `StickyIterator(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`<br>`StickyIterator(vararg items: `[`X`](index.md#X)`)``StickyIterator(gate: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>>)`<br>Iterator that returns the same set of elements always. |
+| [&lt;init&gt;](-init-.md) | `StickyIterator(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`<br>`StickyIterator(vararg items: `[`X`](index.md#X)`)` |

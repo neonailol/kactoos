@@ -9,9 +9,6 @@ Decodes origin [Text](../../nnl.rocks.kactoos/-text/index.md) using the hexadeci
 **Since**
 0.5
 
-**Checkstyle**
-MagicNumberCheck (500 lines)
-
 ### Constructors
 
 | Name | Summary |

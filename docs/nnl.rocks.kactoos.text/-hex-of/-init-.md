@@ -6,20 +6,12 @@
 
 Hexadecimal representation of Bytes.
 
-### Parameters
-
-`bytes` -
-
-The bytes
-
-
-
-
 There is no thread-safety guarantee.
 
+### Parameters
 
-
+`bytes` - The bytes
 
 **Since**
-0.28
+0.5
 

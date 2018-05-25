@@ -2,11 +2,7 @@
 
 # &lt;init&gt;
 
-`SyncIterable(vararg src: `[`X`](index.md#X)`)`
-
-### Parameters
-
-`src` - The underlying iterable`SyncIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
+`SyncIterable(vararg src: `[`X`](index.md#X)`)``SyncIterable(origin: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>, lock: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)` = Any())`
 
 Synchronized iterable.
 
@@ -23,6 +19,10 @@ Objects of this class are thread-safe.
 
 `X` - Type of item
 
+`origin` - The iterable synchronize access to.
+
+`lock` - The lock to synchronize with.
+
 **Since**
-0.24
+0.5
 

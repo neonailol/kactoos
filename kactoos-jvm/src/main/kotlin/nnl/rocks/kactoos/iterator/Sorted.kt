@@ -1,9 +1,8 @@
 package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.StickyScalar
-import java.util.Comparator
-import java.util.LinkedList
 
 /**
  * Sorted iterator.
@@ -13,9 +12,11 @@ import java.util.LinkedList
  * @param T Element type
  * @since 0.3
  */
-class Sorted<T : Any>(
+class Sorted<T : Any> private constructor(
     private val scalar: KScalar<Iterator<T>>
 ) : Iterator<T> by scalar() {
+
+    private constructor(scalar: Scalar<Iterator<T>>) : this({ scalar() })
 
     constructor(
         comparator: Comparator<T>,
@@ -23,7 +24,7 @@ class Sorted<T : Any>(
     ) : this(
         StickyScalar<Iterator<T>>(
             {
-                val items = LinkedList<T>()
+                val items = mutableListOf<T>()
                 while (iterator.hasNext()) {
                     items.add(iterator.next())
                 }
