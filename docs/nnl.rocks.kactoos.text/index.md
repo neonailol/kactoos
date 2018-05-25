@@ -17,6 +17,7 @@ Text.
 | [JoinedText](-joined-text/index.md) | `class JoinedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Join a Text. |
 | [LowerText](-lower-text/index.md) | `class LowerText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Text in lower case. |
 | [NormalizedText](-normalized-text/index.md) | `class NormalizedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Normalize (replace sequences of whitespace characters by a single space) a Text. |
+| [PaddedStartText](-padded-start-text/index.md) | `class PaddedStartText : `[`TextEnvelope`](-text-envelope/index.md)<br>Text padded at start to reach the given length. |
 | [RandomText](-random-text/index.md) | `class RandomText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Random text. |
 | [RepeatedText](-repeated-text/index.md) | `class RepeatedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Repeat an text count times. |
 | [ReplacedText](-replaced-text/index.md) | `class ReplacedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Replace the Text. |

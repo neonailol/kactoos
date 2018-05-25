@@ -58,6 +58,9 @@ Kactoos.
 | [nnl.rocks.kactoos.map.Grouped](../nnl.rocks.kactoos.map/-grouped/index.md) | Iterable as [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html). |
 | [nnl.rocks.kactoos.io.GzipInput](../nnl.rocks.kactoos.io/-gzip-input/index.md) | Input that reads compressed data from the GZIP file format. |
 | [nnl.rocks.kactoos.io.GzipOutput](../nnl.rocks.kactoos.io/-gzip-output/index.md) | Output that writes compressed data in the GZIP file format. |
+| [nnl.rocks.kactoos.collection.HeadOf](../nnl.rocks.kactoos.collection/-head-of/index.md) | Head portion of collection. |
+| [nnl.rocks.kactoos.iterable.HeadOf](../nnl.rocks.kactoos.iterable/-head-of/index.md) | Head portion of the iterable. |
+| [nnl.rocks.kactoos.iterator.HeadOf](../nnl.rocks.kactoos.iterator/-head-of/index.md) | Head portion of the iterator. |
 | [nnl.rocks.kactoos.bytes.HexBytes](../nnl.rocks.kactoos.bytes/-hex-bytes/index.md) | Decodes origin [Text](../nnl.rocks.kactoos/-text/index.md) using the hexadecimal encoding scheme. |
 | [nnl.rocks.kactoos.text.HexOf](../nnl.rocks.kactoos.text/-hex-of/index.md) | Hexadecimal representation of Bytes. |
 | [nnl.rocks.kactoos.Input](../nnl.rocks.kactoos/-input/index.md) | Input. |
@@ -129,6 +132,7 @@ Kactoos.
 | [nnl.rocks.kactoos.Output](../nnl.rocks.kactoos/-output/index.md) | Output. |
 | [nnl.rocks.kactoos.io.OutputStreamTo](../nnl.rocks.kactoos.io/-output-stream-to/index.md) | An [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html) that encapsulates other destination for the data. |
 | [nnl.rocks.kactoos.io.OutputTo](../nnl.rocks.kactoos.io/-output-to/index.md) | An [Output](../nnl.rocks.kactoos/-output/index.md) that encapsulates other destination for the data. |
+| [nnl.rocks.kactoos.text.PaddedStartText](../nnl.rocks.kactoos.text/-padded-start-text/index.md) | Text padded at start to reach the given length. |
 | [nnl.rocks.kactoos.iterable.Partitioned](../nnl.rocks.kactoos.iterable/-partitioned/index.md) | Iterable implementation for partitioning functionality. |
 | [nnl.rocks.kactoos.iterator.Partitioned](../nnl.rocks.kactoos.iterator/-partitioned/index.md) | Iterator implementation for [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) partitioning. |
 | [nnl.rocks.kactoos.Proc](../nnl.rocks.kactoos/-proc/index.md) | Procedure. |
@@ -188,6 +192,10 @@ Kactoos.
 | [nnl.rocks.kactoos.scalar.StickyScalar](../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md) | Cached version of a KScalar. |
 | [nnl.rocks.kactoos.text.SubText](../nnl.rocks.kactoos.text/-sub-text/index.md) | Extract a substring from a Text. |
 | [nnl.rocks.kactoos.scalar.SumOf](../nnl.rocks.kactoos.scalar/-sum-of/index.md) | Represents total sum of given numbers. |
+| [nnl.rocks.kactoos.scalar.SumOfDoubleScalar](../nnl.rocks.kactoos.scalar/-sum-of-double-scalar/index.md) | Double Scalar which sums up the values of other Scalars of the same type. |
+| [nnl.rocks.kactoos.scalar.SumOfFloatScalar](../nnl.rocks.kactoos.scalar/-sum-of-float-scalar/index.md) | Float Scalar which sums up the values of other Scalars of the same type |
+| [nnl.rocks.kactoos.scalar.SumOfIntScalar](../nnl.rocks.kactoos.scalar/-sum-of-int-scalar/index.md) | Integer Scalar which sums up the values of other Scalars of the same type |
+| [nnl.rocks.kactoos.scalar.SumOfLongScalar](../nnl.rocks.kactoos.scalar/-sum-of-long-scalar/index.md) | Long Scalar which sums up the values of other Scalars of the same type |
 | [nnl.rocks.kactoos.text.SwappedCaseText](../nnl.rocks.kactoos.text/-swapped-case-text/index.md) | Swaps the case of a Text changing upper and title case to lower case, and lower case to upper case. |
 | [nnl.rocks.kactoos.func.SyncBiFunc](../nnl.rocks.kactoos.func/-sync-bi-func/index.md) | BiFunc that is thread-safe. |
 | [nnl.rocks.kactoos.collection.SyncCollection](../nnl.rocks.kactoos.collection/-sync-collection/index.md) | Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |
@@ -200,6 +208,9 @@ Kactoos.
 | [nnl.rocks.kactoos.io.SyncOutput](../nnl.rocks.kactoos.io/-sync-output/index.md) | Thread-safe [Output](../nnl.rocks.kactoos/-output/index.md). |
 | [nnl.rocks.kactoos.scalar.SyncScalar](../nnl.rocks.kactoos.scalar/-sync-scalar/index.md) | Scalar that is thread-safe. |
 | [nnl.rocks.kactoos.text.SyncText](../nnl.rocks.kactoos.text/-sync-text/index.md) | Text that is thread-safe. |
+| [nnl.rocks.kactoos.collection.TailOf](../nnl.rocks.kactoos.collection/-tail-of/index.md) | Tail portion of the collection. |
+| [nnl.rocks.kactoos.iterable.TailOf](../nnl.rocks.kactoos.iterable/-tail-of/index.md) | Tail portion of the iterable. |
+| [nnl.rocks.kactoos.iterator.TailOf](../nnl.rocks.kactoos.iterator/-tail-of/index.md) | Tail portion of the iterator. |
 | [nnl.rocks.kactoos.io.TeeInput](../nnl.rocks.kactoos.io/-tee-input/index.md) | Input to Output copying pipe. |
 | [nnl.rocks.kactoos.io.TeeInputStream](../nnl.rocks.kactoos.io/-tee-input-stream/index.md) | Stream that copies input to output. |
 | [nnl.rocks.kactoos.io.TeeOutput](../nnl.rocks.kactoos.io/-tee-output/index.md) | Output to Output copying pipe. |

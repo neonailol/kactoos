@@ -10,7 +10,7 @@
 
 ### Parameters
 
-`scalar` - Scalar representing the text value.`TextEnvelope(origin: `[`IoCheckedScalar`](../../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
+`scalar` - Scalar representing the text value.`TextEnvelope(scalar: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)``TextEnvelope(origin: `[`IoCheckedScalar`](../../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
 
 Text envelope that provides equals and hashCode methods.
 
