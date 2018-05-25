@@ -8,16 +8,18 @@ import nnl.rocks.kactoos.Scalar
  *
  * Here is how you can use it to summarize numbers:
  *
- * `val sum = SumOfLongScalar(arrayOf({ 1L }, { 2L }, { 3L })).invoke()`
+ * `val sum = SumOfLongScalar({ 1L }, { 2L }, { 3L }).invoke()`
  *
  * There is no thread-safety guarantee.
  *
  * @param scalars Scalars to sum up values from
  * @since 0.5
  */
-class SumOfLongScalar(private val scalars: Array<KScalar<Long>>) : Scalar<Long> {
+class SumOfLongScalar(private val scalars: Iterable<KScalar<Long>>) : Scalar<Long> {
 
-    constructor(vararg scalars: Scalar<Long>) : this(scalars.map { { it() } }.toTypedArray())
+    constructor(vararg scalars: Scalar<Long>) : this(scalars.map { { it() } })
+
+    constructor(vararg scalars: KScalar<Long>) : this(scalars.map { it })
 
     override fun invoke(): Long = SumOfScalar(scalars).invoke().invoke().toLong()
 }

@@ -12,9 +12,11 @@ import nnl.rocks.kactoos.Scalar
  *
  * @since 0.5
  */
-internal class SumOfScalar<T : Number>(private val scalars: Array<KScalar<T>>) : Scalar<SumOf> {
+internal class SumOfScalar<T : Number>(private val scalars: Iterable<KScalar<T>>) : Scalar<SumOf> {
 
-    constructor(scalars: Array<Scalar<T>>) : this(scalars.map { { it() } }.toTypedArray())
+    constructor(vararg scalars: Scalar<T>) : this(scalars.map { { it() } })
+
+    constructor(vararg scalars: KScalar<T>) : this(scalars.map { it })
 
     override fun invoke(): SumOf = SumOf(
         scalars.map { UncheckedScalar(it).invoke() }

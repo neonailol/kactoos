@@ -8,16 +8,18 @@ import nnl.rocks.kactoos.Scalar
  *
  * Here is how you can use it to summarize double numbers:
  *
- * `val sum = SumOfDoubleScalar(arrayOf({ 1.0 }, { 2.1 }, { 3.1 })).invoke()`
+ * `val sum = SumOfDoubleScalar({ 1.0 }, { 2.1 }, { 3.1 }).invoke()`
  *
  * There is no thread-safety guarantee.
  *
  * @param scalars Scalars to sum up values from
  * @since 0.5
  */
-class SumOfDoubleScalar(private val scalars: Array<KScalar<Double>>) : Scalar<Double> {
+class SumOfDoubleScalar(private val scalars: Iterable<KScalar<Double>>) : Scalar<Double> {
 
-    constructor(vararg scalars: Scalar<Double>) : this(scalars.map { { it() } }.toTypedArray())
+    constructor(vararg scalars: Scalar<Double>) : this(scalars.map { { it() } })
+
+    constructor(vararg scalars: KScalar<Double>) : this(scalars.map { it })
 
     override fun invoke(): Double = SumOfScalar(scalars).invoke().invoke()
 }
