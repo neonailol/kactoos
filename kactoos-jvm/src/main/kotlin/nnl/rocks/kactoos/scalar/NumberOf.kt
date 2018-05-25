@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.text.TextOf
 
@@ -11,7 +12,9 @@ import nnl.rocks.kactoos.text.TextOf
  *
  * @since 0.2
  */
-class NumberOf(dnum: KScalar<Double>) : NumberEnvelope(dnum), KScalar<Double> {
+class NumberOf(dnum: KScalar<Double>) : NumberEnvelope(dnum) {
+
+    constructor(number: Scalar<Double>) : this({ number() })
 
     /**
      * @param txt Number-string
@@ -21,5 +24,5 @@ class NumberOf(dnum: KScalar<Double>) : NumberEnvelope(dnum), KScalar<Double> {
     /**
      * @param txt Number-string
      */
-    constructor(txt: Text) : this(StickyScalar( { txt.asString().toDouble() }))
+    constructor(txt: Text) : this(StickyScalar({ txt.asString().toDouble() }))
 }

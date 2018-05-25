@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.text.FormattedText
 import java.io.IOException
@@ -20,6 +21,14 @@ class ItemAt<T : Any>(
     private val pos: Int,
     private val fbk: Func<Iterable<T>, T>
 ) : KScalar<T> {
+
+    constructor(
+        src: Scalar<Iterator<T>>,
+        pos: Int,
+        fbk: Func<Iterable<T>, T>
+    ) : this(
+        { src() }, pos, fbk
+    )
 
     /**
      * Ctor.
@@ -88,7 +97,7 @@ class ItemAt<T : Any>(
         source: Iterable<T>,
         position: Int,
         fallback: Func<Iterable<T>, T>
-    ) : this(StickyScalar<Iterator<T>>( { source.iterator() }), position, fallback)
+    ) : this(StickyScalar<Iterator<T>>({ source.iterator() }), position, fallback)
 
     /**
      * Ctor.
@@ -130,7 +139,7 @@ class ItemAt<T : Any>(
                 ).asString()
             )
         }
-    ) : this(StickyScalar<Iterator<T>>( { iterator }), position, fallback)
+    ) : this(StickyScalar<Iterator<T>>({ iterator }), position, fallback)
 
     override fun invoke(): T {
         if (this.pos < 0) {
