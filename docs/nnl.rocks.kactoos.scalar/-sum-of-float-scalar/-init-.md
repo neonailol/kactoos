@@ -2,13 +2,14 @@
 
 # &lt;init&gt;
 
-`SumOfFloatScalar(vararg scalars: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`>)``SumOfFloatScalar(scalars: `[`Array`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)`<`[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`>>)`
+`SumOfFloatScalar(vararg scalars: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`>)`
+`SumOfFloatScalar(vararg scalars: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`>)``SumOfFloatScalar(scalars: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`>>)`
 
 Float Scalar which sums up the values of other Scalars of the same type
 
 Here is how you can use it to summarize float numbers:
 
-`val sum = SumOfFloatScalar(arrayOf({ 1f }, { 2f }, { 3f })).invoke()`
+`val sum = SumOfFloatScalar({ 1f }, { 2f }, { 3f }).invoke()`
 
 There is no thread-safety guarantee.
 

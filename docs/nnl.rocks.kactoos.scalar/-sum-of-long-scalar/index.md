@@ -8,7 +8,7 @@ Long Scalar which sums up the values of other Scalars of the same type
 
 Here is how you can use it to summarize numbers:
 
-`val sum = SumOfLongScalar(arrayOf({ 1L }, { 2L }, { 3L })).invoke()`
+`val sum = SumOfLongScalar({ 1L }, { 2L }, { 3L }).invoke()`
 
 There is no thread-safety guarantee.
 
@@ -23,7 +23,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `SumOfLongScalar(vararg scalars: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`>)``SumOfLongScalar(scalars: `[`Array`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)`<`[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`>>)`<br>Long Scalar which sums up the values of other Scalars of the same type |
+| [&lt;init&gt;](-init-.md) | `SumOfLongScalar(vararg scalars: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`>)`<br>`SumOfLongScalar(vararg scalars: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`>)``SumOfLongScalar(scalars: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`>>)`<br>Long Scalar which sums up the values of other Scalars of the same type |
 
 ### Functions
 

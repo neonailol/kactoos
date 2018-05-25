@@ -27,6 +27,7 @@ Kactoos.
 | [nnl.rocks.kactoos.io.BytesOf](../nnl.rocks.kactoos.io/-bytes-of/index.md) | A [Bytes](../nnl.rocks.kactoos/-bytes/index.md) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.func.CallableOf](../nnl.rocks.kactoos.func/-callable-of/index.md) | Func as [Callable](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html). |
 | [nnl.rocks.kactoos.func.ChainedFunc](../nnl.rocks.kactoos.func/-chained-func/index.md) | Composed function. |
+| [nnl.rocks.kactoos.scalar.CheckedScalar](../nnl.rocks.kactoos.scalar/-checked-scalar/index.md) | Scalar that wraps an original checked exception thrown by the origin using the given wrapping function. |
 | [nnl.rocks.kactoos.collection.CollectionEnvelope](../nnl.rocks.kactoos.collection/-collection-envelope/index.md) | Base read-only collection. |
 | [nnl.rocks.kactoos.collection.CollectionNoNulls](../nnl.rocks.kactoos.collection/-collection-no-nulls/index.md) | A decorator of [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that tolerates no NULLs. |
 | [nnl.rocks.kactoos.collection.CollectionOf](../nnl.rocks.kactoos.collection/-collection-of/index.md) | Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |
@@ -45,7 +46,9 @@ Kactoos.
 | [nnl.rocks.kactoos.io.EmptyBytes](../nnl.rocks.kactoos.io/-empty-bytes/index.md) | Bytes with no data. |
 | [nnl.rocks.kactoos.iterable.Endless](../nnl.rocks.kactoos.iterable/-endless/index.md) | Endless iterable. |
 | [nnl.rocks.kactoos.iterator.Endless](../nnl.rocks.kactoos.iterator/-endless/index.md) | Iterator that never ends. |
+| [nnl.rocks.kactoos.scalar.Equality](../nnl.rocks.kactoos.scalar/-equality/index.md) | Equality. |
 | [nnl.rocks.kactoos.scalar.Equals](../nnl.rocks.kactoos.scalar/-equals/index.md) | Equals. |
+| [nnl.rocks.kactoos.scalar.FallbackFrom](../nnl.rocks.kactoos.scalar/-fallback-from/index.md) | Fallback from exception. |
 | [nnl.rocks.kactoos.scalar.False](../nnl.rocks.kactoos.scalar/-false/index.md) | Logical false. |
 | [nnl.rocks.kactoos.collection.Filtered](../nnl.rocks.kactoos.collection/-filtered/index.md) | Filtered collection. |
 | [nnl.rocks.kactoos.iterable.Filtered](../nnl.rocks.kactoos.iterable/-filtered/index.md) | Filtered iterable. |
@@ -63,6 +66,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterator.HeadOf](../nnl.rocks.kactoos.iterator/-head-of/index.md) | Head portion of the iterator. |
 | [nnl.rocks.kactoos.bytes.HexBytes](../nnl.rocks.kactoos.bytes/-hex-bytes/index.md) | Decodes origin [Text](../nnl.rocks.kactoos/-text/index.md) using the hexadecimal encoding scheme. |
 | [nnl.rocks.kactoos.text.HexOf](../nnl.rocks.kactoos.text/-hex-of/index.md) | Hexadecimal representation of Bytes. |
+| [nnl.rocks.kactoos.scalar.InheritanceLevel](../nnl.rocks.kactoos.scalar/-inheritance-level/index.md) | Calculates number of superclasses between base and derived class. |
 | [nnl.rocks.kactoos.Input](../nnl.rocks.kactoos/-input/index.md) | Input. |
 | [nnl.rocks.kactoos.io.InputOf](../nnl.rocks.kactoos.io/-input-of/index.md) | An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.io.InputStreamOf](../nnl.rocks.kactoos.io/-input-stream-of/index.md) | An [InputStream](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) that encapsulates other sources of data. |
@@ -157,6 +161,7 @@ Kactoos.
 | [nnl.rocks.kactoos.text.RotatedText](../nnl.rocks.kactoos.text/-rotated-text/index.md) | Rotate (circular shift) a String of shift characters. |
 | [nnl.rocks.kactoos.func.RunnableOf](../nnl.rocks.kactoos.func/-runnable-of/index.md) | Func as Runnable. |
 | [nnl.rocks.kactoos.Scalar](../nnl.rocks.kactoos/-scalar/index.md) | Scalar. |
+| [nnl.rocks.kactoos.scalar.ScalarWithFallback](../nnl.rocks.kactoos.scalar/-scalar-with-fallback/index.md) | Scalar with a fallback plan. |
 | [nnl.rocks.kactoos.io.Sha1DigestOf](../nnl.rocks.kactoos.io/-sha1-digest-of/index.md) | SHA-1 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.io.Sha256DigestOf](../nnl.rocks.kactoos.io/-sha256-digest-of/index.md) | SHA-256 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.collection.Shuffled](../nnl.rocks.kactoos.collection/-shuffled/index.md) | Sorted collection. |

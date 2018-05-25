@@ -13,5 +13,7 @@ import nnl.rocks.kactoos.Scalar
  */
 class Not(private val origin: KScalar<Boolean>) : Scalar<Boolean> {
 
+    constructor(origin: Scalar<Boolean>) : this({ origin() })
+
     override fun invoke(): Boolean = origin().not()
 }

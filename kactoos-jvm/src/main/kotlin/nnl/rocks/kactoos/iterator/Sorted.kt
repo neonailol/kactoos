@@ -13,7 +13,7 @@ import java.util.LinkedList
  * @param T Element type
  * @since 0.3
  */
-class Sorted<T : Comparable<T>>(
+class Sorted<T : Any>(
     private val scalar: KScalar<Iterator<T>>
 ) : Iterator<T> by scalar() {
 
@@ -33,6 +33,8 @@ class Sorted<T : Comparable<T>>(
         )
     )
 
-    constructor(items: Iterator<T>) : this(Comparator.naturalOrder<T>(), items)
+    companion object {
+        operator fun <T : Comparable<T>> invoke(items: Iterator<T>): Sorted<T> = Sorted(Comparator.naturalOrder<T>(), items)
+    }
 
 }
