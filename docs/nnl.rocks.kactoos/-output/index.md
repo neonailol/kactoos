@@ -50,6 +50,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
+| [CheckedOutput](../../nnl.rocks.kactoos.io/-checked-output/index.md) | `class CheckedOutput<E> : `[`Output`](./index.md)<br>Output that throws exception of specified type. |
 | [DeadOutput](../../nnl.rocks.kactoos.io/-dead-output/index.md) | `class DeadOutput : `[`Output`](./index.md)<br>Output that accepts anything. |
 | [GzipOutput](../../nnl.rocks.kactoos.io/-gzip-output/index.md) | `class GzipOutput : `[`Output`](./index.md)<br>Output that writes compressed data in the GZIP file format. |
 | [LoggingOutput](../../nnl.rocks.kactoos.io/-logging-output/index.md) | `class LoggingOutput : `[`Output`](./index.md)<br>Logged output. |

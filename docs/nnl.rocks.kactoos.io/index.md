@@ -9,6 +9,9 @@ Input/Output.
 | Name | Summary |
 |---|---|
 | [BytesOf](-bytes-of/index.md) | `class BytesOf : `[`Bytes`](../nnl.rocks.kactoos/-bytes/index.md)<br>A [Bytes](../nnl.rocks.kactoos/-bytes/index.md) that encapsulates other sources of data. |
+| [CheckedBytes](-checked-bytes/index.md) | `class CheckedBytes<E> : `[`Bytes`](../nnl.rocks.kactoos/-bytes/index.md)<br>Bytes that throws exception of specified type. |
+| [CheckedInput](-checked-input/index.md) | `class CheckedInput<E> : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input that throws exception of specified type. |
+| [CheckedOutput](-checked-output/index.md) | `class CheckedOutput<E> : `[`Output`](../nnl.rocks.kactoos/-output/index.md)<br>Output that throws exception of specified type. |
 | [DeadInput](-dead-input/index.md) | `class DeadInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input with no data. |
 | [DeadInputStream](-dead-input-stream/index.md) | `class DeadInputStream : `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)<br>InputStream with no data. |
 | [DeadOutput](-dead-output/index.md) | `class DeadOutput : `[`Output`](../nnl.rocks.kactoos/-output/index.md)<br>Output that accepts anything. |
@@ -18,6 +21,8 @@ Input/Output.
 | [EmptyBytes](-empty-bytes/index.md) | `class EmptyBytes : `[`Bytes`](../nnl.rocks.kactoos/-bytes/index.md)<br>Bytes with no data. |
 | [GzipInput](-gzip-input/index.md) | `class GzipInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input that reads compressed data from the GZIP file format. |
 | [GzipOutput](-gzip-output/index.md) | `class GzipOutput : `[`Output`](../nnl.rocks.kactoos/-output/index.md)<br>Output that writes compressed data in the GZIP file format. |
+| [HeadInput](-head-input/index.md) | `class HeadInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input that only shows the first N bytes of the original input. |
+| [HeadInputStream](-head-input-stream/index.md) | `class HeadInputStream : `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)<br>Input stream that only shows the first N bytes of the original stream. |
 | [InputOf](-input-of/index.md) | `class InputOf : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
 | [InputStreamOf](-input-stream-of/index.md) | `class InputStreamOf : `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)<br>An [InputStream](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) that encapsulates other sources of data. |
 | [InputWithFallback](-input-with-fallback/index.md) | `class InputWithFallback : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input that returns an alternative input if the main one throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html). |
@@ -41,6 +46,7 @@ Input/Output.
 | [StickyInput](-sticky-input/index.md) | `class StickyInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input that reads only once. |
 | [SyncInput](-sync-input/index.md) | `class SyncInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Thread-safe [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [SyncOutput](-sync-output/index.md) | `class SyncOutput : `[`Output`](../nnl.rocks.kactoos/-output/index.md)<br>Thread-safe [Output](../nnl.rocks.kactoos/-output/index.md). |
+| [TailInput](-tail-input/index.md) | `class TailInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input showing only last N bytes of the stream. |
 | [TeeInput](-tee-input/index.md) | `class TeeInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input to Output copying pipe. |
 | [TeeInputStream](-tee-input-stream/index.md) | `class TeeInputStream : `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)<br>Stream that copies input to output. |
 | [TeeOutput](-tee-output/index.md) | `class TeeOutput : `[`Output`](../nnl.rocks.kactoos/-output/index.md)<br>Output to Output copying pipe. |
@@ -52,3 +58,4 @@ Input/Output.
 | [UncheckedOutput](-unchecked-output/index.md) | `class UncheckedOutput : `[`Output`](../nnl.rocks.kactoos/-output/index.md)<br>Input that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [WriterAsOutputStream](-writer-as-output-stream/index.md) | `class WriterAsOutputStream : `[`OutputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html)<br>Writer as [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html). |
 | [WriterTo](-writer-to/index.md) | `class WriterTo : `[`Writer`](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html)<br>A [Writer](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html) that encapsulates other destination for the data. |
+| [Zip](-zip/index.md) | `class Zip : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Zip files and directory. |

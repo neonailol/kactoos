@@ -27,6 +27,9 @@ Kactoos.
 | [nnl.rocks.kactoos.io.BytesOf](../nnl.rocks.kactoos.io/-bytes-of/index.md) | A [Bytes](../nnl.rocks.kactoos/-bytes/index.md) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.func.CallableOf](../nnl.rocks.kactoos.func/-callable-of/index.md) | Func as [Callable](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html). |
 | [nnl.rocks.kactoos.func.ChainedFunc](../nnl.rocks.kactoos.func/-chained-func/index.md) | Composed function. |
+| [nnl.rocks.kactoos.io.CheckedBytes](../nnl.rocks.kactoos.io/-checked-bytes/index.md) | Bytes that throws exception of specified type. |
+| [nnl.rocks.kactoos.io.CheckedInput](../nnl.rocks.kactoos.io/-checked-input/index.md) | Input that throws exception of specified type. |
+| [nnl.rocks.kactoos.io.CheckedOutput](../nnl.rocks.kactoos.io/-checked-output/index.md) | Output that throws exception of specified type. |
 | [nnl.rocks.kactoos.scalar.CheckedScalar](../nnl.rocks.kactoos.scalar/-checked-scalar/index.md) | Scalar that wraps an original checked exception thrown by the origin using the given wrapping function. |
 | [nnl.rocks.kactoos.collection.CollectionEnvelope](../nnl.rocks.kactoos.collection/-collection-envelope/index.md) | Base read-only collection. |
 | [nnl.rocks.kactoos.collection.CollectionNoNulls](../nnl.rocks.kactoos.collection/-collection-no-nulls/index.md) | A decorator of [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that tolerates no NULLs. |
@@ -62,12 +65,15 @@ Kactoos.
 | [nnl.rocks.kactoos.map.Grouped](../nnl.rocks.kactoos.map/-grouped/index.md) | Iterable as [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html). |
 | [nnl.rocks.kactoos.io.GzipInput](../nnl.rocks.kactoos.io/-gzip-input/index.md) | Input that reads compressed data from the GZIP file format. |
 | [nnl.rocks.kactoos.io.GzipOutput](../nnl.rocks.kactoos.io/-gzip-output/index.md) | Output that writes compressed data in the GZIP file format. |
+| [nnl.rocks.kactoos.io.HeadInput](../nnl.rocks.kactoos.io/-head-input/index.md) | Input that only shows the first N bytes of the original input. |
+| [nnl.rocks.kactoos.io.HeadInputStream](../nnl.rocks.kactoos.io/-head-input-stream/index.md) | Input stream that only shows the first N bytes of the original stream. |
 | [nnl.rocks.kactoos.collection.HeadOf](../nnl.rocks.kactoos.collection/-head-of/index.md) | Head portion of collection. |
 | [nnl.rocks.kactoos.iterable.HeadOf](../nnl.rocks.kactoos.iterable/-head-of/index.md) | Head portion of the iterable. |
 | [nnl.rocks.kactoos.iterator.HeadOf](../nnl.rocks.kactoos.iterator/-head-of/index.md) | Head portion of the iterator. |
 | [nnl.rocks.kactoos.bytes.HexBytes](../nnl.rocks.kactoos.bytes/-hex-bytes/index.md) | Decodes origin [Text](../nnl.rocks.kactoos/-text/index.md) using the hexadecimal encoding scheme. |
 | [nnl.rocks.kactoos.text.HexOf](../nnl.rocks.kactoos.text/-hex-of/index.md) | Hexadecimal representation of Bytes. |
 | [nnl.rocks.kactoos.scalar.HighestOf](../nnl.rocks.kactoos.scalar/-highest-of/index.md) | Find the highest item. |
+| [nnl.rocks.kactoos.iterator.Immutable](../nnl.rocks.kactoos.iterator/-immutable/index.md) | Iterator that doesn't allow removal of elements. |
 | [nnl.rocks.kactoos.scalar.InheritanceLevel](../nnl.rocks.kactoos.scalar/-inheritance-level/index.md) | Calculates number of superclasses between base and derived class. |
 | [nnl.rocks.kactoos.Input](../nnl.rocks.kactoos/-input/index.md) | Input. |
 | [nnl.rocks.kactoos.io.InputOf](../nnl.rocks.kactoos.io/-input-of/index.md) | An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
@@ -84,8 +90,24 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.IterableEnvelope](../nnl.rocks.kactoos.iterable/-iterable-envelope/index.md) | Iterable envelope. |
 | [nnl.rocks.kactoos.iterable.IterableNoNulls](../nnl.rocks.kactoos.iterable/-iterable-no-nulls/index.md) | A decorator for [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) that doesn't allow any NULL. |
 | [nnl.rocks.kactoos.iterable.IterableOf](../nnl.rocks.kactoos.iterable/-iterable-of/index.md) | Array as iterable. |
+| [nnl.rocks.kactoos.iterable.IterableOfBooleans](../nnl.rocks.kactoos.iterable/-iterable-of-booleans/index.md) | Iterable of boolean values. |
+| [nnl.rocks.kactoos.iterable.IterableOfBytes](../nnl.rocks.kactoos.iterable/-iterable-of-bytes/index.md) | Iterable of bytes. |
+| [nnl.rocks.kactoos.iterable.IterableOfChars](../nnl.rocks.kactoos.iterable/-iterable-of-chars/index.md) | Iterable of characters. |
+| [nnl.rocks.kactoos.iterable.IterableOfDoubles](../nnl.rocks.kactoos.iterable/-iterable-of-doubles/index.md) | Iterable of double values. |
+| [nnl.rocks.kactoos.iterable.IterableOfFloats](../nnl.rocks.kactoos.iterable/-iterable-of-floats/index.md) | Iterable of float values. |
+| [nnl.rocks.kactoos.iterable.IterableOfInts](../nnl.rocks.kactoos.iterable/-iterable-of-ints/index.md) | Iterable of integer values. |
+| [nnl.rocks.kactoos.iterable.IterableOfLongs](../nnl.rocks.kactoos.iterable/-iterable-of-longs/index.md) | Iterable of long values. |
+| [nnl.rocks.kactoos.iterable.IterableOfShorts](../nnl.rocks.kactoos.iterable/-iterable-of-shorts/index.md) | Iterable of short values. |
 | [nnl.rocks.kactoos.iterator.IteratorNoNulls](../nnl.rocks.kactoos.iterator/-iterator-no-nulls/index.md) | A decorator of an [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns no NULL. |
 | [nnl.rocks.kactoos.iterator.IteratorOf](../nnl.rocks.kactoos.iterator/-iterator-of/index.md) | Iterator that returns the set of elements. |
+| [nnl.rocks.kactoos.iterator.IteratorOfBooleans](../nnl.rocks.kactoos.iterator/-iterator-of-booleans/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns the `boolean`s as [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)s. |
+| [nnl.rocks.kactoos.iterator.IteratorOfBytes](../nnl.rocks.kactoos.iterator/-iterator-of-bytes/index.md) | Iterator that returns a set of bytes. |
+| [nnl.rocks.kactoos.iterator.IteratorOfChars](../nnl.rocks.kactoos.iterator/-iterator-of-chars/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns the `char`s as [Character](http://docs.oracle.com/javase/8/docs/api/java/lang/Character.html)s. |
+| [nnl.rocks.kactoos.iterator.IteratorOfDoubles](../nnl.rocks.kactoos.iterator/-iterator-of-doubles/index.md) | Iterator that returns a set of double values. |
+| [nnl.rocks.kactoos.iterator.IteratorOfFloats](../nnl.rocks.kactoos.iterator/-iterator-of-floats/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns the `float`s as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)s. |
+| [nnl.rocks.kactoos.iterator.IteratorOfInts](../nnl.rocks.kactoos.iterator/-iterator-of-ints/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns the `int`s as [Integer](http://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html)s. |
+| [nnl.rocks.kactoos.iterator.IteratorOfLongs](../nnl.rocks.kactoos.iterator/-iterator-of-longs/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns the `long`s as [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)s. |
+| [nnl.rocks.kactoos.iterator.IteratorOfShorts](../nnl.rocks.kactoos.iterator/-iterator-of-shorts/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns the `short`s as [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)s. |
 | [nnl.rocks.kactoos.collection.Joined](../nnl.rocks.kactoos.collection/-joined/index.md) | Joined collection. |
 | [nnl.rocks.kactoos.iterable.Joined](../nnl.rocks.kactoos.iterable/-joined/index.md) | A few Iterables joined together. |
 | [nnl.rocks.kactoos.iterator.Joined](../nnl.rocks.kactoos.iterator/-joined/index.md) | A few Iterators joined together. |
@@ -106,6 +128,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.Limited](../nnl.rocks.kactoos.iterable/-limited/index.md) | Limited iterable. |
 | [nnl.rocks.kactoos.iterator.Limited](../nnl.rocks.kactoos.iterator/-limited/index.md) | Limited origin. |
 | [nnl.rocks.kactoos.list.ListEnvelope](../nnl.rocks.kactoos.list/-list-envelope/index.md) | List envelope. |
+| [nnl.rocks.kactoos.list.ListIterator](../nnl.rocks.kactoos.list/-list-iterator/index.md) | Iterator of the list. |
 | [nnl.rocks.kactoos.list.ListNoNulls](../nnl.rocks.kactoos.list/-list-no-nulls/index.md) | A decorator of [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) that tolerates no NULLs. |
 | [nnl.rocks.kactoos.list.ListOf](../nnl.rocks.kactoos.list/-list-of/index.md) | Iterable as [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html). |
 | [nnl.rocks.kactoos.time.LocalDateAsText](../nnl.rocks.kactoos.time/-local-date-as-text/index.md) | Formatter for [LocalDate](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) instances. |
@@ -216,6 +239,7 @@ Kactoos.
 | [nnl.rocks.kactoos.io.SyncOutput](../nnl.rocks.kactoos.io/-sync-output/index.md) | Thread-safe [Output](../nnl.rocks.kactoos/-output/index.md). |
 | [nnl.rocks.kactoos.scalar.SyncScalar](../nnl.rocks.kactoos.scalar/-sync-scalar/index.md) | Scalar that is thread-safe. |
 | [nnl.rocks.kactoos.text.SyncText](../nnl.rocks.kactoos.text/-sync-text/index.md) | Text that is thread-safe. |
+| [nnl.rocks.kactoos.io.TailInput](../nnl.rocks.kactoos.io/-tail-input/index.md) | Input showing only last N bytes of the stream. |
 | [nnl.rocks.kactoos.collection.TailOf](../nnl.rocks.kactoos.collection/-tail-of/index.md) | Tail portion of the collection. |
 | [nnl.rocks.kactoos.iterable.TailOf](../nnl.rocks.kactoos.iterable/-tail-of/index.md) | Tail portion of the iterable. |
 | [nnl.rocks.kactoos.iterator.TailOf](../nnl.rocks.kactoos.iterator/-tail-of/index.md) | Tail portion of the iterator. |
@@ -246,5 +270,6 @@ Kactoos.
 | [nnl.rocks.kactoos.text.UpperText](../nnl.rocks.kactoos.text/-upper-text/index.md) | Text in upper case. |
 | [nnl.rocks.kactoos.io.WriterAsOutputStream](../nnl.rocks.kactoos.io/-writer-as-output-stream/index.md) | Writer as [OutputStream](http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html). |
 | [nnl.rocks.kactoos.io.WriterTo](../nnl.rocks.kactoos.io/-writer-to/index.md) | A [Writer](http://docs.oracle.com/javase/8/docs/api/java/io/Writer.html) that encapsulates other destination for the data. |
+| [nnl.rocks.kactoos.io.Zip](../nnl.rocks.kactoos.io/-zip/index.md) | Zip files and directory. |
 | [nnl.rocks.kactoos.time.ZonedDateTimeAsText](../nnl.rocks.kactoos.time/-zoned-date-time-as-text/index.md) | Formatter for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances. |
 | [nnl.rocks.kactoos.time.ZonedDateTimeOf](../nnl.rocks.kactoos.time/-zoned-date-time-of/index.md) | Parser for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances. |

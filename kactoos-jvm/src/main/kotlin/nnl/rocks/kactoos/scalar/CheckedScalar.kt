@@ -1,6 +1,8 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.UncheckedFunc
 import nnl.rocks.kactoos.text.FormattedText
@@ -18,8 +20,8 @@ import nnl.rocks.kactoos.text.UncheckedText
  * @since 0.5
  */
 class CheckedScalar<T : Any, E : Exception>(
-    private val origin: Scalar<T>,
-    private val func: Func<Exception, E>
+    private val origin: KScalar<T>,
+    private val func: KFunc<Exception, E>
 ) : Scalar<T> {
 
     override fun invoke(): T {
