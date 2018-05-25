@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`UncheckedScalar(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
+`UncheckedScalar(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)``UncheckedScalar(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
 
 Scalar that throws unchecked [UncheckedIOException](http://docs.oracle.com/javase/8/docs/api/java/io/UncheckedIOException.html) instead of checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html).
 

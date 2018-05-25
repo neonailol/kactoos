@@ -10,7 +10,7 @@ class MissingClassesTest {
         val cactoosTypes = CactoosClasses()
         val kactoosTypes = KactoosClasses()
         val count = AtomicInteger(0)
-        cactoosTypes.sorted().forEach {
+        cactoosTypes.forEach {
             if (kactoosTypes.contains(it).not()) {
                 println(it)
                 count.incrementAndGet()

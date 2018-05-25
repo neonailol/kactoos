@@ -4,6 +4,7 @@ import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.collection.Filtered
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.list.Mapped
+import nnl.rocks.kactoos.list.Sorted
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 
@@ -15,14 +16,16 @@ open class PackageClasses(
         pkg: String,
         filter: Func<String, Boolean>
     ) : this(
-        Mapped(
-            FuncOf({ it: String -> it.replace("$pkg.", "") }),
-            Filtered(
-                filter,
-                Reflections(
-                    pkg,
-                    SubTypesScanner(false)
-                ).allTypes
+        Sorted(
+            Mapped(
+                FuncOf({ it: String -> it.replace("$pkg.", "") }),
+                Filtered(
+                    filter,
+                    Reflections(
+                        pkg,
+                        SubTypesScanner(false)
+                    ).allTypes
+                )
             )
         )
     )

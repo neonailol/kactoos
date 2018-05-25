@@ -208,6 +208,7 @@ Kactoos.
 | [nnl.rocks.kactoos.scalar.Ternary](../nnl.rocks.kactoos.scalar/-ternary/index.md) | Ternary operation. |
 | [nnl.rocks.kactoos.Text](../nnl.rocks.kactoos/-text/index.md) | Text. |
 | [nnl.rocks.kactoos.text.TextBase64](../nnl.rocks.kactoos.text/-text-base64/index.md) | Encodes the origin text using the Base64 encoding scheme. |
+| [nnl.rocks.kactoos.text.TextEnvelope](../nnl.rocks.kactoos.text/-text-envelope/index.md) | Text envelope that provides equals and hashCode methods. |
 | [nnl.rocks.kactoos.text.TextOf](../nnl.rocks.kactoos.text/-text-of/index.md) | TextOf |
 | [nnl.rocks.kactoos.text.TrimmedLeftText](../nnl.rocks.kactoos.text/-trimmed-left-text/index.md) | Text without control characters (char &amp;lt;= 32) only from left. |
 | [nnl.rocks.kactoos.text.TrimmedRightText](../nnl.rocks.kactoos.text/-trimmed-right-text/index.md) | Text without control characters (char &amp;lt;= 32) only from right. |

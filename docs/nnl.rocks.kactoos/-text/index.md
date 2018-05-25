@@ -40,6 +40,7 @@ Text.
 | [SwappedCaseText](../../nnl.rocks.kactoos.text/-swapped-case-text/index.md) | `class SwappedCaseText : `[`Text`](./index.md)<br>Swaps the case of a Text changing upper and title case to lower case, and lower case to upper case. |
 | [SyncText](../../nnl.rocks.kactoos.text/-sync-text/index.md) | `class SyncText : `[`Text`](./index.md)<br>Text that is thread-safe. |
 | [TextBase64](../../nnl.rocks.kactoos.text/-text-base64/index.md) | `class TextBase64 : `[`Text`](./index.md)<br>Encodes the origin text using the Base64 encoding scheme. |
+| [TextEnvelope](../../nnl.rocks.kactoos.text/-text-envelope/index.md) | `abstract class TextEnvelope : `[`Text`](./index.md)<br>Text envelope that provides equals and hashCode methods. |
 | [TextOf](../../nnl.rocks.kactoos.text/-text-of/index.md) | `class TextOf : `[`Text`](./index.md)<br>TextOf |
 | [TrimmedLeftText](../../nnl.rocks.kactoos.text/-trimmed-left-text/index.md) | `class TrimmedLeftText : `[`Text`](./index.md)<br>Text without control characters (char &amp;lt;= 32) only from left. |
 | [TrimmedRightText](../../nnl.rocks.kactoos.text/-trimmed-right-text/index.md) | `class TrimmedRightText : `[`Text`](./index.md)<br>Text without control characters (char &amp;lt;= 32) only from right. |

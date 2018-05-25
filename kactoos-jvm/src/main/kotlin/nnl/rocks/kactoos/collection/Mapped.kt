@@ -16,7 +16,7 @@ import nnl.rocks.kactoos.text.TextOf
 class Mapped<X : Any, Y : Any>(
     fnc: Func<X, Y>,
     src: Collection<X>
-) : CollectionEnvelope<Y>( { CollectionOf<Y>(nnl.rocks.kactoos.iterable.Mapped(fnc, src)) }) {
+) : CollectionEnvelope<Y>({ CollectionOf<Y>(nnl.rocks.kactoos.iterable.Mapped(fnc, src)) }) {
 
     /**
      * Ctor.
