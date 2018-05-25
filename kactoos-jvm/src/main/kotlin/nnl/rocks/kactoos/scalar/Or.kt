@@ -3,6 +3,7 @@ package nnl.rocks.kactoos.scalar
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Proc
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
@@ -12,13 +13,12 @@ import nnl.rocks.kactoos.iterable.Mapped
  *
  * There is no thread-safety guarantee.
  *
- *
  * @param origin The iterable.
- * @since 0.8
+ * @since 0.5
  */
 class Or(
     private val origin: Iterable<KScalar<Boolean>>
-) : KScalar<Boolean> {
+) : Scalar<Boolean> {
 
     /**
      * @param scalar The KScalar.

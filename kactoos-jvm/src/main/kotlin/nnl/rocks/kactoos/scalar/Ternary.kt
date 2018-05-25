@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 
 /**
  * Ternary operation.
@@ -18,7 +19,7 @@ class Ternary<T : Any, X : Any>(
     private val condition: KScalar<Boolean>,
     private val consequent: KScalar<T>,
     private val alternative: KScalar<T>
-) : KScalar<T> {
+) : Scalar<T> {
 
     /**
      * @param input The input to pass to all of them
