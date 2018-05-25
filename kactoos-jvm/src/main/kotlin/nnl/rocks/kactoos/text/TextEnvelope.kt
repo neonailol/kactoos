@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
@@ -24,6 +25,8 @@ abstract class TextEnvelope(
      * @param scalar Scalar representing the text value.
      */
     constructor(scalar: Scalar<String>) : this(IoCheckedScalar(scalar))
+
+    constructor(scalar: KScalar<String>) : this(IoCheckedScalar(scalar))
 
     override fun asString(): String = origin()
 
