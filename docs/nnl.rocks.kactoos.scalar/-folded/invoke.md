@@ -3,3 +3,14 @@
 # invoke
 
 `fun invoke(): `[`X`](index.md#X)
+
+Overrides [Scalar.invoke](../../nnl.rocks.kactoos/-scalar/invoke.md)
+
+Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md)
+
+**Return**
+The value
+
+**Since**
+0.2
+

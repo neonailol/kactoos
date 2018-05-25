@@ -40,5 +40,5 @@ There is no thread-safety guarantee.
 `iterable` - The iterable
 
 **Since**
-0.20
+0.5
 

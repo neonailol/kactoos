@@ -2,7 +2,7 @@
 
 # PropertiesOf
 
-`class PropertiesOf : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)`>`
+`class PropertiesOf : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)`>`
 
 Map as [java.util.Properties](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html).
 
@@ -21,4 +21,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html) |
+| [invoke](invoke.md) | `fun invoke(): `[`Properties`](http://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

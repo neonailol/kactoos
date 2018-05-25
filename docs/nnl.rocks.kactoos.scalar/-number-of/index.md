@@ -2,7 +2,7 @@
 
 # NumberOf
 
-`class NumberOf : `[`NumberEnvelope`](../-number-envelope/index.md)`, `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`
+`class NumberOf : `[`NumberEnvelope`](../-number-envelope/index.md)`, `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`
 
 Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html).
 
@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `NumberOf(txt: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>`NumberOf(txt: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``NumberOf(dnum: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`<br>Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html). |
+| [&lt;init&gt;](-init-.md) | `NumberOf(number: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`<br>`NumberOf(txt: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`<br>`NumberOf(txt: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``NumberOf(dnum: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`<br>Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html). |
 
 ### Inherited Functions
 

@@ -2,7 +2,7 @@
 
 # SolidScalar
 
-`class SolidScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>`
+`class SolidScalar<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>`
 
 Cached and synchronized version of a KScalar.
 
@@ -21,7 +21,7 @@ Objects of this class are thread safe.
 [SyncScalar](../-sync-scalar/index.md)
 
 **Since**
-0.24
+0.5
 
 ### Constructors
 
@@ -33,4 +33,4 @@ Objects of this class are thread safe.
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`T`](index.md#T) |
+| [invoke](invoke.md) | `fun invoke(): `[`T`](index.md#T)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

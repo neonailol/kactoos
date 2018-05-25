@@ -23,5 +23,5 @@ There is no thread-safety guarantee.
 `func` - Exit condition, returns TRUE if there is no reason to try
 
 **Since**
-0.9
+0.5
 

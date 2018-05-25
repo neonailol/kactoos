@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`NumberEnvelope(value: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
+`NumberEnvelope(value: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)``NumberEnvelope(value: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`
 
 Envelope for the [Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html).
 

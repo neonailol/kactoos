@@ -2,7 +2,7 @@
 
 # RetryScalar
 
-`class RetryScalar<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>`
+`class RetryScalar<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>`
 
 Func that will try a few times before throwing an exception.
 
@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `func` - Exit condition, returns TRUE if there is no reason to try
 
 **Since**
-0.9
+0.5
 
 ### Constructors
 
@@ -29,4 +29,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`T`](index.md#T) |
+| [invoke](invoke.md) | `fun invoke(): `[`T`](index.md#T)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

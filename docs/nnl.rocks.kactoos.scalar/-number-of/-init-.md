@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`NumberOf(txt: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`
+`NumberOf(number: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)``NumberOf(txt: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`
 `NumberOf(txt: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
 
 ### Parameters

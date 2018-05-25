@@ -19,7 +19,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `NumberEnvelope(value: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`<br>Envelope for the [Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html). |
+| [&lt;init&gt;](-init-.md) | `NumberEnvelope(value: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)``NumberEnvelope(value: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>)`<br>Envelope for the [Number](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html). |
 
 ### Functions
 
@@ -44,5 +44,5 @@ There is no thread-safety guarantee.
 | [LengthOf](../../nnl.rocks.kactoos.iterator/-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](./index.md)<br>Length of iterator. |
 | [MaxOf](../-max-of/index.md) | `class MaxOf : `[`NumberEnvelope`](./index.md)<br>Find the greatest value among numbers. |
 | [MinOf](../-min-of/index.md) | `class MinOf : `[`NumberEnvelope`](./index.md)<br>Find the smallest value among numbers. |
-| [NumberOf](../-number-of/index.md) | `class NumberOf : `[`NumberEnvelope`](./index.md)`, `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`<br>Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html). |
+| [NumberOf](../-number-of/index.md) | `class NumberOf : `[`NumberEnvelope`](./index.md)`, `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`<br>Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html). |
 | [SumOf](../-sum-of/index.md) | `class SumOf : `[`NumberEnvelope`](./index.md)<br>Represents total sum of given numbers. |

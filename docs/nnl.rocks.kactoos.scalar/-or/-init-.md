@@ -26,5 +26,5 @@ There is no thread-safety guarantee.
 `origin` - The iterable.
 
 **Since**
-0.8
+0.5
 

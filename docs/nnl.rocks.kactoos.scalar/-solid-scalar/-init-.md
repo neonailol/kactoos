@@ -21,5 +21,5 @@ Objects of this class are thread safe.
 [SyncScalar](../-sync-scalar/index.md)
 
 **Since**
-0.24
+0.5
 
