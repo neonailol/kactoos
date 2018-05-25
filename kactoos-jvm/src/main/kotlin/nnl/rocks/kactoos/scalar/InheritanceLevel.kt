@@ -15,7 +15,7 @@ import nnl.rocks.kactoos.Scalar
  *  * 2 -&gt; two inheritance levels. (ex. matching FileNotFoundException with Exception).
  *
  * @param derived Derived class
- * @param base Base class111
+ * @param base Base class
  * @since 0.5
  */
 class InheritanceLevel(
