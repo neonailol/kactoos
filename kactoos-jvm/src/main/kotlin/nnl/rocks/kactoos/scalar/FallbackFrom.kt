@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
@@ -17,15 +18,15 @@ import nnl.rocks.kactoos.iterable.Mapped
  */
 class FallbackFrom<T : Any>(
     private val exceptions: Iterable<Class<out Throwable>>,
-    private val func: Func<Throwable, T>
+    private val func: KFunc<Throwable, T>
 ) : Func<Throwable, T> {
 
     constructor(
         exp: Class<out Throwable>,
-        func: Func<Throwable, T>
+        func: KFunc<Throwable, T>
     ) : this(IterableOf<Class<out Throwable>>(exp), func)
 
-    override fun apply(input: Throwable): T = func.apply(input)
+    override fun apply(input: Throwable): T = func(input)
 
     /**
      * Calculate level of support of the given exception type.

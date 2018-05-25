@@ -2,7 +2,7 @@
 
 # ScalarWithFallback
 
-`class ScalarWithFallback<T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](index.md#T)`>> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>`
+`class ScalarWithFallback<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>`
 
 Scalar with a fallback plan.
 
@@ -25,7 +25,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ScalarWithFallback(origin: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>, fallbacks: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`FallbackFrom`](../-fallback-from/index.md)`<`[`T`](index.md#T)`>>, follow: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`>)`<br>Scalar with a fallback plan. |
+| [&lt;init&gt;](-init-.md) | `ScalarWithFallback(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>, fallbacks: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`FallbackFrom`](../-fallback-from/index.md)`<`[`T`](index.md#T)`>>, follow: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`>)`<br>Scalar with a fallback plan. |
 
 ### Functions
 

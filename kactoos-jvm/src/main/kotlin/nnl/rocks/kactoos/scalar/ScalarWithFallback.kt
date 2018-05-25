@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KFunc
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterator.Filtered
@@ -18,10 +19,10 @@ import nnl.rocks.kactoos.map.MapOf
  * @param follow Follow up function
  * @since 0.5
  */
-class ScalarWithFallback<T : Comparable<T>>(
-    private val origin: Scalar<T>,
+class ScalarWithFallback<T : Any>(
+    private val origin: KScalar<T>,
     private val fallbacks: Iterable<FallbackFrom<T>>,
-    private val follow: Func<T, T>
+    private val follow: KFunc<T, T>
 ) : Scalar<T> {
 
     override fun invoke(): T {
@@ -33,7 +34,7 @@ class ScalarWithFallback<T : Comparable<T>>(
         } catch (ex: Throwable) {
             fallback(ex)
         }
-        return follow.apply(result)
+        return follow(result)
     }
 
     /**

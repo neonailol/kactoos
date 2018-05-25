@@ -53,6 +53,7 @@ Kactoos.
 | [nnl.rocks.kactoos.collection.Filtered](../nnl.rocks.kactoos.collection/-filtered/index.md) | Filtered collection. |
 | [nnl.rocks.kactoos.iterable.Filtered](../nnl.rocks.kactoos.iterable/-filtered/index.md) | Filtered iterable. |
 | [nnl.rocks.kactoos.iterator.Filtered](../nnl.rocks.kactoos.iterator/-filtered/index.md) | Filtered iterator. |
+| [nnl.rocks.kactoos.scalar.FirstOf](../nnl.rocks.kactoos.scalar/-first-of/index.md) | Find first element in a list that satisfies specified condition. |
 | [nnl.rocks.kactoos.scalar.Folded](../nnl.rocks.kactoos.scalar/-folded/index.md) | Iterable, which elements are "folded" through the func. |
 | [nnl.rocks.kactoos.text.FormattedText](../nnl.rocks.kactoos.text/-formatted-text/index.md) | Text in Sprinf format. |
 | [nnl.rocks.kactoos.Func](../nnl.rocks.kactoos/-func/index.md) | Function. |
@@ -66,6 +67,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterator.HeadOf](../nnl.rocks.kactoos.iterator/-head-of/index.md) | Head portion of the iterator. |
 | [nnl.rocks.kactoos.bytes.HexBytes](../nnl.rocks.kactoos.bytes/-hex-bytes/index.md) | Decodes origin [Text](../nnl.rocks.kactoos/-text/index.md) using the hexadecimal encoding scheme. |
 | [nnl.rocks.kactoos.text.HexOf](../nnl.rocks.kactoos.text/-hex-of/index.md) | Hexadecimal representation of Bytes. |
+| [nnl.rocks.kactoos.scalar.HighestOf](../nnl.rocks.kactoos.scalar/-highest-of/index.md) | Find the highest item. |
 | [nnl.rocks.kactoos.scalar.InheritanceLevel](../nnl.rocks.kactoos.scalar/-inheritance-level/index.md) | Calculates number of superclasses between base and derived class. |
 | [nnl.rocks.kactoos.Input](../nnl.rocks.kactoos/-input/index.md) | Input. |
 | [nnl.rocks.kactoos.io.InputOf](../nnl.rocks.kactoos.io/-input-of/index.md) | An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
@@ -114,6 +116,7 @@ Kactoos.
 | [nnl.rocks.kactoos.io.LoggingOutput](../nnl.rocks.kactoos.io/-logging-output/index.md) | Logged output. |
 | [nnl.rocks.kactoos.io.LoggingOutputStream](../nnl.rocks.kactoos.io/-logging-output-stream/index.md) | Logged output stream. |
 | [nnl.rocks.kactoos.text.LowerText](../nnl.rocks.kactoos.text/-lower-text/index.md) | Text in lower case. |
+| [nnl.rocks.kactoos.scalar.LowestOf](../nnl.rocks.kactoos.scalar/-lowest-of/index.md) | Find the lowest item. |
 | [nnl.rocks.kactoos.map.MapEntry](../nnl.rocks.kactoos.map/-map-entry/index.md) | MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html). |
 | [nnl.rocks.kactoos.map.MapEnvelope](../nnl.rocks.kactoos.map/-map-envelope/index.md) | Map envelope. |
 | [nnl.rocks.kactoos.map.MapNoNulls](../nnl.rocks.kactoos.map/-map-no-nulls/index.md) | A decorator of [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) that tolerates no NULLs. |
