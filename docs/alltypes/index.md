@@ -58,6 +58,7 @@ Kactoos.
 | [nnl.rocks.kactoos.map.Grouped](../nnl.rocks.kactoos.map/-grouped/index.md) | Iterable as [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html). |
 | [nnl.rocks.kactoos.io.GzipInput](../nnl.rocks.kactoos.io/-gzip-input/index.md) | Input that reads compressed data from the GZIP file format. |
 | [nnl.rocks.kactoos.io.GzipOutput](../nnl.rocks.kactoos.io/-gzip-output/index.md) | Output that writes compressed data in the GZIP file format. |
+| [nnl.rocks.kactoos.bytes.HexBytes](../nnl.rocks.kactoos.bytes/-hex-bytes/index.md) | Decodes origin [Text](../nnl.rocks.kactoos/-text/index.md) using the hexadecimal encoding scheme. |
 | [nnl.rocks.kactoos.text.HexOf](../nnl.rocks.kactoos.text/-hex-of/index.md) | Hexadecimal representation of Bytes. |
 | [nnl.rocks.kactoos.Input](../nnl.rocks.kactoos/-input/index.md) | Input. |
 | [nnl.rocks.kactoos.io.InputOf](../nnl.rocks.kactoos.io/-input-of/index.md) | An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
