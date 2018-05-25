@@ -27,9 +27,13 @@ Kactoos.
 | [nnl.rocks.kactoos.io.BytesOf](../nnl.rocks.kactoos.io/-bytes-of/index.md) | A [Bytes](../nnl.rocks.kactoos/-bytes/index.md) that encapsulates other sources of data. |
 | [nnl.rocks.kactoos.func.CallableOf](../nnl.rocks.kactoos.func/-callable-of/index.md) | Func as [Callable](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html). |
 | [nnl.rocks.kactoos.func.ChainedFunc](../nnl.rocks.kactoos.func/-chained-func/index.md) | Composed function. |
+| [nnl.rocks.kactoos.func.CheckedBiFunc](../nnl.rocks.kactoos.func/-checked-bi-func/index.md) | BiFunc that throws exception of specified type. |
+| [nnl.rocks.kactoos.func.CheckedBiProc](../nnl.rocks.kactoos.func/-checked-bi-proc/index.md) | BiProc that throws exception of specified type. |
 | [nnl.rocks.kactoos.io.CheckedBytes](../nnl.rocks.kactoos.io/-checked-bytes/index.md) | Bytes that throws exception of specified type. |
+| [nnl.rocks.kactoos.func.CheckedFunc](../nnl.rocks.kactoos.func/-checked-func/index.md) | Func that throws exception of specified type. |
 | [nnl.rocks.kactoos.io.CheckedInput](../nnl.rocks.kactoos.io/-checked-input/index.md) | Input that throws exception of specified type. |
 | [nnl.rocks.kactoos.io.CheckedOutput](../nnl.rocks.kactoos.io/-checked-output/index.md) | Output that throws exception of specified type. |
+| [nnl.rocks.kactoos.func.CheckedProc](../nnl.rocks.kactoos.func/-checked-proc/index.md) | Proc that throws exception of specified type. |
 | [nnl.rocks.kactoos.scalar.CheckedScalar](../nnl.rocks.kactoos.scalar/-checked-scalar/index.md) | Scalar that wraps an original checked exception thrown by the origin using the given wrapping function. |
 | [nnl.rocks.kactoos.collection.CollectionEnvelope](../nnl.rocks.kactoos.collection/-collection-envelope/index.md) | Base read-only collection. |
 | [nnl.rocks.kactoos.collection.CollectionNoNulls](../nnl.rocks.kactoos.collection/-collection-no-nulls/index.md) | A decorator of [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that tolerates no NULLs. |
@@ -254,6 +258,7 @@ Kactoos.
 | [nnl.rocks.kactoos.text.TextBase64](../nnl.rocks.kactoos.text/-text-base64/index.md) | Encodes the origin text using the Base64 encoding scheme. |
 | [nnl.rocks.kactoos.text.TextEnvelope](../nnl.rocks.kactoos.text/-text-envelope/index.md) | Text envelope that provides equals and hashCode methods. |
 | [nnl.rocks.kactoos.text.TextOf](../nnl.rocks.kactoos.text/-text-of/index.md) | TextOf |
+| [nnl.rocks.kactoos.func.TimedFunc](../nnl.rocks.kactoos.func/-timed-func/index.md) | Function that gets interrupted after a certain time has passed. |
 | [nnl.rocks.kactoos.text.TrimmedLeftText](../nnl.rocks.kactoos.text/-trimmed-left-text/index.md) | Text without control characters (char &amp;lt;= 32) only from left. |
 | [nnl.rocks.kactoos.text.TrimmedRightText](../nnl.rocks.kactoos.text/-trimmed-right-text/index.md) | Text without control characters (char &amp;lt;= 32) only from right. |
 | [nnl.rocks.kactoos.text.TrimmedText](../nnl.rocks.kactoos.text/-trimmed-text/index.md) | Text without control characters (char &amp;lt;= 32) from both ends. |

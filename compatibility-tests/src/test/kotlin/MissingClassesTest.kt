@@ -2,6 +2,7 @@ import helpers.CactoosClasses
 import helpers.KactoosClasses
 import org.testng.annotations.Test
 import java.util.concurrent.atomic.AtomicInteger
+import kotlin.test.assertTrue
 
 class MissingClassesTest {
 
@@ -16,7 +17,7 @@ class MissingClassesTest {
                 count.incrementAndGet()
             }
         }
-        //assertTrue("Missing $count classes") { count.get() == 0 }
+        assertTrue("Missing $count classes") { count.get() == 0 }
     }
 
 }
