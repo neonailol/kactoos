@@ -3,6 +3,7 @@ package nnl.rocks.kactoos.scalar
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Proc
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.iterable.IterableOf
 
 /**
@@ -24,25 +25,18 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * @see IoCheckedScalar
  * @since 0.3
  */
-class And(private val iterable: Iterable<KScalar<Boolean>>) : KScalar<Boolean> {
+class And(private val iterable: Iterable<KScalar<Boolean>>) : Scalar<Boolean> {
 
-    /**
-     * @param src Iterable
-     * @since 0.3
-     */
     constructor(vararg src: KScalar<Boolean>) : this(IterableOf(src.iterator()))
 
-    /**
-     * @param src Iterator
-     * @since 0.3
-     */
+    constructor(vararg src: Scalar<Boolean>) : this(IterableOf(src.map { { it() } }.iterator()))
+
     constructor(src: Iterator<KScalar<Boolean>>) : this(IterableOf(src))
 
     override fun invoke(): Boolean = iterable.all { it() }
 
     companion object {
 
-        @SafeVarargs
         operator fun <X : Any> invoke(
             func: Func<X, Boolean>,
             vararg src: X
@@ -70,7 +64,6 @@ class And(private val iterable: Iterable<KScalar<Boolean>>) : KScalar<Boolean> {
             )
         }
 
-        @SafeVarargs
         operator fun <X : Any> invoke(
             proc: Proc<X>,
             vararg src: X

@@ -3,6 +3,7 @@ package nnl.rocks.kactoos.scalar
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Proc
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
@@ -35,7 +36,7 @@ class AndInThreadsFunc<X : Any>(
     private val service: ExecutorService,
     private val iterable: Iterable<KScalar<Boolean>>,
     private val shut: Boolean
-) : KScalar<Boolean> {
+) : Scalar<Boolean> {
 
     constructor(
         service: ExecutorService,
@@ -51,8 +52,6 @@ class AndInThreadsFunc<X : Any>(
      * @param src The iterable
      * @param X Type of items in the iterable
      */
-    @SafeVarargs
-    @Suppress("SpreadOperator")
     constructor(
         proc: Proc<X>,
         vararg src: X
@@ -63,8 +62,6 @@ class AndInThreadsFunc<X : Any>(
      * @param src The iterable
      * @param X Type of items in the iterable
      */
-    @SafeVarargs
-    @Suppress("SpreadOperator")
     constructor(
         func: Func<X, Boolean>,
         vararg src: X
@@ -120,8 +117,6 @@ class AndInThreadsFunc<X : Any>(
      * @param src The iterable
      * @param X Type of items in the iterable
      */
-    @SafeVarargs
-    @Suppress("SpreadOperator")
     constructor(
         svc: ExecutorService,
         proc: Proc<X>,
@@ -134,8 +129,6 @@ class AndInThreadsFunc<X : Any>(
      * @param src The iterable
      * @param X Type of items in the iterable
      */
-    @SafeVarargs
-    @Suppress("SpreadOperator")
     constructor(
         svc: ExecutorService,
         func: Func<X, Boolean>,

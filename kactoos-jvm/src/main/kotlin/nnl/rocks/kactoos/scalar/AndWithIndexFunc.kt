@@ -32,15 +32,13 @@ import nnl.rocks.kactoos.iterable.Mapped
  */
 class AndWithIndexFunc<X : Any>(
     private val iterable: Iterable<Func<Int, Boolean>>
-) : KScalar<Boolean> {
+) : Scalar<Boolean> {
 
     /**
      * @param proc Proc to map
      * @param src The iterable
      * @param X Type of items in the iterable
      */
-    @SafeVarargs
-    @Suppress("SpreadOperator")
     constructor(
         proc: Proc<X>,
         vararg src: X
@@ -51,7 +49,6 @@ class AndWithIndexFunc<X : Any>(
      * @param src The iterable
      * @param X Type of items in the iterable
      */
-    @SafeVarargs
     constructor(
         func: BiFunc<X, Int, Boolean>,
         vararg src: X

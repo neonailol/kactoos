@@ -23,20 +23,18 @@ import nnl.rocks.kactoos.iterable.Mapped
  * ).value();
  * ```
  *
- *
  * There is no thread-safety guarantee.
  *
  * @param iterable The iterable
- * @since 0.20
+ * @since 0.5
  */
 class AndWithIndex(
     private val iterable: Iterable<Func<Int, Boolean>>
-) : KScalar<Boolean> {
+) : Scalar<Boolean> {
 
     /**
      * @param src The iterable
      */
-    @SafeVarargs
     constructor(vararg src: Func<Int, Boolean>) : this(IterableOf<Func<Int, Boolean>>(src.iterator()))
 
     /**
@@ -65,8 +63,6 @@ class AndWithIndex(
          * @param src The iterable
          * @param X Type of items in the iterable
          */
-        @SafeVarargs
-        @Suppress("SpreadOperator")
         operator fun <X : Any> invoke(
             proc: Proc<X>,
             vararg src: X
@@ -79,7 +75,6 @@ class AndWithIndex(
          * @param src The iterable
          * @param X Type of items in the iterable
          */
-        @SafeVarargs
         operator fun <X : Any> invoke(
             func: BiFunc<X, Int, Boolean>,
             vararg src: X
