@@ -2,7 +2,7 @@
 
 # LocalDateTimeOf
 
-`class LocalDateTimeOf : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`LocalDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)`>`
+`class LocalDateTimeOf : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`LocalDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)`>`
 
 Parser for [LocalDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) instances.
 Parses the date using the formatter to create
@@ -25,4 +25,4 @@ Parses the date using the formatter to create
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`LocalDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) |
+| [invoke](invoke.md) | `fun invoke(): `[`LocalDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

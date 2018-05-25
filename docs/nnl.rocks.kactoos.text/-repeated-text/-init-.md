@@ -2,7 +2,13 @@
 
 # &lt;init&gt;
 
-`RepeatedText(text: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, count: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`RepeatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, count: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+
+### Parameters
+
+`origin` - The Text
+
+`count` - How many times repeat the Text`RepeatedText(text: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, count: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
 Ctor.
 
@@ -10,26 +16,4 @@ Ctor.
 
 `text` - A String
 
-`count` - How many times repeat the Text`RepeatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, count: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
-
-Repeat an text count times.
-
-### Parameters
-
-`origin` - The Text
-
-`count` -
-
-How many times repeat the Text
-
-
-
-
-There is no thread-safety guarantee.
-
-
-
-
-**Since**
-0.9
-
+`count` - How many times repeat the Text

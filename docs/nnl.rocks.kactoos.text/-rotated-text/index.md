@@ -2,27 +2,24 @@
 
 # RotatedText
 
-`class RotatedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
+`class RotatedText : `[`TextEnvelope`](../-text-envelope/index.md)
 
 Rotate (circular shift) a String of shift characters.
 
-### Parameters
-
-`origin` - The text
-
-`move` - The shift
-
 **Since**
-0.12
+0.5
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `RotatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, move: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`<br>Rotate (circular shift) a String of shift characters. |
+| [&lt;init&gt;](-init-.md) | `RotatedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`, move: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)` |
 
-### Functions
+### Inherited Functions
 
 | Name | Summary |
 |---|---|
-| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+| [asString](../-text-envelope/as-string.md) | `open fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+| [equals](../-text-envelope/equals.md) | `open fun equals(other: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [hashCode](../-text-envelope/hash-code.md) | `open fun hashCode(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [toString](../-text-envelope/to-string.md) | `open fun toString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

@@ -1,17 +1,18 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 
 /**
  * Reverse the Text.
  *
- * @param origin The text
- *
- *
- *
  * @since 0.2
  */
-class ReversedText(private val origin: Text) : Text {
+class ReversedText private constructor(text: KScalar<String>) : TextEnvelope(text) {
 
-    override fun asString(): String = StringBuilder(this.origin.asString()).reverse().toString()
+    constructor(origin: Text) : this(
+        {
+            StringBuilder(origin.asString()).reverse().toString()
+        }
+    )
 }

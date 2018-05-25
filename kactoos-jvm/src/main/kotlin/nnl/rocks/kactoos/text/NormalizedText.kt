@@ -1,23 +1,21 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 
 /**
  * Normalize (replace sequences of whitespace characters by a single space) a Text.
  *
- * @param origin A Text
- *
- *
- *
- * @since 0.9
+ * @since 0.5
  */
-class NormalizedText(private val origin: Text) : Text {
+class NormalizedText private constructor(origin: KScalar<String>): TextEnvelope(origin) {
 
-    /**
-     * Ctor.
-     * @param text A Text
-     */
+    constructor(origin: Text) : this(
+        {
+            TrimmedText(origin).asString().replace(Regex("\\s+"), " ")
+        }
+    )
+
     constructor(text: String) : this(TextOf(text))
 
-    override fun asString(): String = TrimmedText(this.origin).asString().replace("\\s+".toRegex(), " ")
 }

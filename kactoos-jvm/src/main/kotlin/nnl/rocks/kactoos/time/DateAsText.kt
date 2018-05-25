@@ -15,9 +15,9 @@ import java.util.Locale
  * Formats the date using the provided formatter.
  *
  * @param formatted The formatted date.
- * @since 0.27
+ * @since 0.5
  */
-class DateAsText(
+class DateAsText private constructor(
     private val formatted: KScalar<String>
 ) : Text {
 

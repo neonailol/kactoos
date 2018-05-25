@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.time
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
@@ -15,7 +16,7 @@ import java.time.format.DateTimeFormatter
  */
 class ZonedDateTimeOf(
     private val parsed: KScalar<ZonedDateTime>
-) : KScalar<ZonedDateTime> {
+) : Scalar<ZonedDateTime> {
 
     /**
      * @param date The date to parse.

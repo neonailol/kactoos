@@ -2,13 +2,9 @@
 
 # ReversedText
 
-`class ReversedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
+`class ReversedText : `[`TextEnvelope`](../-text-envelope/index.md)
 
 Reverse the Text.
-
-### Parameters
-
-`origin` - The text
 
 **Since**
 0.2
@@ -17,10 +13,13 @@ Reverse the Text.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ReversedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`<br>Reverse the Text. |
+| [&lt;init&gt;](-init-.md) | `ReversedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)` |
 
-### Functions
+### Inherited Functions
 
 | Name | Summary |
 |---|---|
-| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+| [asString](../-text-envelope/as-string.md) | `open fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+| [equals](../-text-envelope/equals.md) | `open fun equals(other: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [hashCode](../-text-envelope/hash-code.md) | `open fun hashCode(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [toString](../-text-envelope/to-string.md) | `open fun toString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

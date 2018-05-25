@@ -1,32 +1,30 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 
 /**
- * Swaps the case of a Text changing upper and title case to lower case,
- * and lower case to upper case.
+ * Swaps the case of a Text changing upper and title case to lower case, and lower case to upper case.
  *
- * @param origin The text
- *
- *
- *
- * @since 0.13.3
+ * @since 0.5
  */
-class SwappedCaseText(private val origin: Text) : Text {
+class SwappedCaseText private constructor(origin: KScalar<String>): TextEnvelope(origin) {
 
-    override fun asString(): String {
-        val text = this.origin.asString()
-        val chars = text.toCharArray()
-        var idx = 0
-        while (idx < chars.size) {
-            val chr = chars[idx]
-            if (Character.isUpperCase(chr)) {
-                chars[idx] = Character.toLowerCase(chr)
-            } else if (Character.isLowerCase(chr)) {
-                chars[idx] = Character.toUpperCase(chr)
+    constructor(origin: Text) : this(
+        {
+            val text = origin.asString()
+            val chars = text.toCharArray()
+            var idx = 0
+            while (idx < chars.size) {
+                val chr = chars[idx]
+                if (chr.isUpperCase()) {
+                    chars[idx] = chr.toLowerCase()
+                } else if (chr.isLowerCase()) {
+                    chars[idx] = chr.toUpperCase()
+                }
+                idx += 1
             }
-            idx += 1
+            String(chars)
         }
-        return String(chars)
-    }
+    )
 }

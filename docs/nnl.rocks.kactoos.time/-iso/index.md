@@ -2,7 +2,7 @@
 
 # Iso
 
-`class Iso : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)`>`
+`class Iso : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)`>`
 
 Default formatter
 
@@ -19,4 +19,4 @@ Default formatter
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) |
+| [invoke](invoke.md) | `fun invoke(): `[`DateTimeFormatter`](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

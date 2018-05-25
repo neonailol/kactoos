@@ -1,23 +1,30 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 
 /**
  * Repeat an text count times.
  *
- * @param origin The Text
- * @param count How many times repeat the Text
- *
  * There is no thread-safety guarantee.
  *
- *
- *
- * @since 0.9
+ * @since 0.5
  */
-class RepeatedText(
-    private val origin: Text,
-    private val count: Int
-) : Text {
+class RepeatedText private constructor(text: KScalar<String>) : TextEnvelope(text) {
+
+    /**
+     * @param origin The Text
+     * @param count How many times repeat the Text
+     */
+    constructor(origin: Text, count: Int) : this(
+        {
+            with(StringBuilder()) {
+                for (cnt in 0 until count) {
+                    append(origin.asString())
+                }
+            }.toString()
+        }
+    )
 
     /**
      * Ctor.
@@ -29,10 +36,4 @@ class RepeatedText(
         count: Int
     ) : this(TextOf(text), count)
 
-    override fun asString(): String = with(StringBuilder()) {
-        for (cnt in 0 until count) {
-            append(origin.asString())
-        }
-        toString()
-    }
 }

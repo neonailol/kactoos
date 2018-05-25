@@ -2,7 +2,7 @@
 
 # ZonedDateTimeOf
 
-`class ZonedDateTimeOf : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)`>`
+`class ZonedDateTimeOf : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)`>`
 
 Parser for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances.
 
@@ -25,4 +25,4 @@ Parses the date using the formatter to create [ZonedDateTime](http://docs.oracle
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) |
+| [invoke](invoke.md) | `fun invoke(): `[`ZonedDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

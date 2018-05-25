@@ -6,21 +6,31 @@ import nnl.rocks.kactoos.Text
 /**
  * Extract a substring from a Text.
  *
- * @param origin The Text
- * @param start Start position in the text
- * @param end End position in the text
- *
  * There is no thread-safety guarantee.
  *
- *
- *
- * @since 0.11
+ * @since 0.5
  */
-class SubText(
-    private val origin: Text,
-    private val start: KScalar<Int>,
-    private val end: KScalar<Int>
-) : Text {
+class SubText private constructor(text: KScalar<String>): TextEnvelope(text) {
+
+    /**
+     * @param origin The Text
+     * @param start Start position in the text
+     * @param end End position in the text
+     */
+    constructor(origin: Text, start: KScalar<Int>, end: KScalar<Int>) : this(
+        {
+            var begin = start()
+            if (begin < 0) {
+                begin = 0
+            }
+            var finish = end()
+            val text = origin.asString()
+            if (text.length < finish) {
+                finish = text.length
+            }
+            text.substring(begin, finish)
+        }
+    )
 
     /**
      * @param text The String
@@ -62,16 +72,4 @@ class SubText(
         finish: Int
     ) : this(text,  { strt },  { finish })
 
-    override fun asString(): String {
-        var begin = this.start()
-        if (begin < 0) {
-            begin = 0
-        }
-        var finish = this.end()
-        val text = this.origin.asString()
-        if (text.length < finish) {
-            finish = text.length
-        }
-        return text.substring(begin, finish)
-    }
 }

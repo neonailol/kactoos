@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
@@ -9,22 +10,27 @@ import java.util.StringJoiner
 /**
  * Join a Text.
  *
- * @param delimiter Delimit among texts
- * @param texts Texts to be joined
- *
  * There is no thread-safety guarantee.
  *
- *
- *
- * @since 0.9
+ * @since 0.5
  */
-class JoinedText(
-    private val delimiter: Text,
-    private val texts: Iterable<Text>
-) : Text {
+class JoinedText private constructor(origin: KScalar<String>) : TextEnvelope(origin) {
 
     /**
-     * Ctor.
+     * @param delimiter Delimit among texts
+     * @param texts Texts to be joined
+     */
+    constructor(delimiter: Text, texts: Iterable<Text>) : this(
+        {
+            val joint = StringJoiner(delimiter.asString())
+            for (text in texts) {
+                joint.add(text.asString())
+            }
+            joint.toString()
+        }
+    )
+
+    /**
      * @param delimit Delimit among strings
      * @param strs Strings to be joined
      */
@@ -34,7 +40,6 @@ class JoinedText(
     ) : this(delimit, IterableOf<String>(strs.iterator()))
 
     /**
-     * Ctor.
      * @param delimit Delimit among strings
      * @param strs Strings to be joined
      */
@@ -47,7 +52,6 @@ class JoinedText(
     )
 
     /**
-     * Ctor.
      * @param delimit Delimit among texts
      * @param txts Texts to be joined
      */
@@ -55,12 +59,4 @@ class JoinedText(
         delimit: Text,
         vararg txts: Text
     ) : this(delimit, IterableOf<Text>(txts.iterator()))
-
-    override fun asString(): String {
-        val joint = StringJoiner(this.delimiter.asString())
-        for (text in this.texts) {
-            joint.add(text.asString())
-        }
-        return joint.toString()
-    }
 }

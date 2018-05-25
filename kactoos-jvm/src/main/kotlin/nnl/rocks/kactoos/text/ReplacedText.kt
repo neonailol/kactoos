@@ -6,7 +6,6 @@ import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.IoCheckedFunc
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import java.io.IOException
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import java.util.regex.PatternSyntaxException
@@ -31,17 +30,32 @@ import java.util.regex.PatternSyntaxException
  * Note: a [PatternSyntaxException] will be thrown if the
  * regular expression's syntax is invalid.
  *
- * @param origin The text
- * @param regex The regular expression
- * @param replacement Transforms the resulting matcher object into a replacement
- * string. Any exceptions will be wrapped in an [IOException].
  * @since 0.2
  */
-class ReplacedText(
-    private val origin: Text,
-    private val regex: KScalar<Pattern>,
-    private val replacement: Func<Matcher, String>
-) : Text {
+class ReplacedText private constructor(text: KScalar<String>): TextEnvelope(text) {
+
+    /**
+     * @param origin The text
+     * @param regex The regular expression
+     * @param replacement Transforms the resulting matcher object into a replacement string.
+     */
+    constructor(origin: Text, regex: KScalar<Pattern>, replacement: Func<Matcher, String>) : this(
+        {
+            val buffer = StringBuffer()
+            val matcher = IoCheckedScalar(regex)
+                .invoke()
+                .matcher(origin.asString())
+            val safe = IoCheckedFunc(replacement)
+            while (matcher.find()) {
+                matcher.appendReplacement(
+                    buffer,
+                    safe.apply(matcher)
+                )
+            }
+            matcher.appendTail(buffer)
+            buffer.toString()
+        }
+    )
 
     /**
      * Will replace all instances of the substring matched by `find`
@@ -55,20 +69,4 @@ class ReplacedText(
         find: String,
         replace: String
     ) : this(text,  { Pattern.compile(find) }, FuncOf { replace })
-
-    override fun asString(): String {
-        val buffer = StringBuffer()
-        val matcher = IoCheckedScalar(this.regex)
-            .invoke()
-            .matcher(this.origin.asString())
-        val safe = IoCheckedFunc(this.replacement)
-        while (matcher.find()) {
-            matcher.appendReplacement(
-                buffer,
-                safe.apply(matcher)
-            )
-        }
-        matcher.appendTail(buffer)
-        return buffer.toString()
-    }
 }

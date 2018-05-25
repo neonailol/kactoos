@@ -7,18 +7,13 @@ import nnl.rocks.kactoos.io.BytesOf
 /**
  * Encodes the origin text using the Base64 encoding scheme.
  *
- * @param origin Origin text
- *
- *
- *
- * @since 0.20.2
+ * @since 0.5
  */
-class TextBase64(private val origin: Text) : Text {
+class TextBase64 private constructor(origin: Text) : TextEnvelope(origin) {
 
     /**
      * @param input The String
      */
-    constructor(input: String) : this(TextOf(input))
+    constructor(input: String) : this(TextOf(BytesBase64(BytesOf(input))))
 
-    override fun asString(): String = TextOf(BytesBase64(BytesOf(this.origin))).asString()
 }

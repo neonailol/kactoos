@@ -6,14 +6,4 @@
 
 ### Parameters
 
-`input` - The String`TextBase64(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
-
-Encodes the origin text using the Base64 encoding scheme.
-
-### Parameters
-
-`origin` - Origin text
-
-**Since**
-0.20.2
-
+`input` - The String

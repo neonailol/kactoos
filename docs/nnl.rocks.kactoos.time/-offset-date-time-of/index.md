@@ -2,7 +2,7 @@
 
 # OffsetDateTimeOf
 
-`class OffsetDateTimeOf : `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`OffsetDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html)`>`
+`class OffsetDateTimeOf : `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`OffsetDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html)`>`
 
 Parser for [OffsetDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) instances.
 Parses the date using the formatter to create
@@ -25,4 +25,4 @@ Parses the date using the formatter to create
 
 | Name | Summary |
 |---|---|
-| [invoke](invoke.md) | `fun invoke(): `[`OffsetDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) |
+| [invoke](invoke.md) | `fun invoke(): `[`OffsetDateTime`](http://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html)<br>Get value of this [Scalar](../../nnl.rocks.kactoos/-scalar/index.md) |

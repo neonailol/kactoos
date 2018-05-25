@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 import java.util.Locale
 
@@ -8,16 +9,20 @@ import java.util.Locale
  *
  * There is no thread-safety guarantee.
  *
- * @param origin The text
- * @param locale Locale
  * @since 0.1
  */
-class LowerText(
-    private val origin: Text,
-    private val locale: Locale
-) : Text {
+class LowerText private constructor(origin: KScalar<String>) : TextEnvelope(origin) {
+
+    /**
+     * @param origin The text
+     * @param locale Locale
+     */
+    constructor(origin: Text, locale: Locale) : this(
+        {
+            origin.asString().toLowerCase(locale)
+        }
+    )
 
     constructor(origin: Text) : this(origin, Locale.ENGLISH)
 
-    override fun asString(): String = this.origin.asString().toLowerCase(this.locale)
 }
