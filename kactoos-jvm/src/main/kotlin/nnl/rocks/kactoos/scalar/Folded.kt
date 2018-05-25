@@ -3,6 +3,7 @@ package nnl.rocks.kactoos.scalar
 import nnl.rocks.kactoos.BiFunc
 import nnl.rocks.kactoos.KBiFunc
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 
 /**
  * Iterable, which elements are "folded" through the func.
@@ -18,7 +19,7 @@ class Folded<out X : Any, T : Any>(
     private val input: X,
     private val func: KBiFunc<X, T, X>,
     private val iterable: Iterable<T>
-) : KScalar<X> {
+) : Scalar<X> {
 
     constructor(
         input: X,

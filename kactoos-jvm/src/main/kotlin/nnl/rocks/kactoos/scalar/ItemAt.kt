@@ -20,7 +20,7 @@ class ItemAt<T : Any>(
     private val src: KScalar<Iterator<T>>,
     private val pos: Int,
     private val fbk: Func<Iterable<T>, T>
-) : KScalar<T> {
+) : Scalar<T> {
 
     constructor(
         src: Scalar<Iterator<T>>,

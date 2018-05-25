@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.RetryFunc
 
@@ -10,16 +11,15 @@ import nnl.rocks.kactoos.func.RetryFunc
  *
  * There is no thread-safety guarantee.
  *
- *
  * @param T Type of output
  * @param origin Func original
  * @param func Exit condition, returns TRUE if there is no reason to try
- * @since 0.9
+ * @since 0.5
  */
 class RetryScalar<T : Any>(
     private val origin: KScalar<T>,
     private val func: Func<Int, Boolean>
-) : KScalar<T> {
+) : Scalar<T> {
 
     /**
      * @param scalar KScalar original

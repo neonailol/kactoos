@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.InputOf
@@ -21,7 +22,7 @@ import java.util.Properties
  */
 class PropertiesOf(
     private val scalar: IoCheckedScalar<Properties>
-) : KScalar<Properties> {
+) : Scalar<Properties> {
 
     constructor(scalar: KScalar<Properties>) : this(IoCheckedScalar(scalar))
 

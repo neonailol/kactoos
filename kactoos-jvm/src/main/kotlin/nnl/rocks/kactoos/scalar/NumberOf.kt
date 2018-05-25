@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.text.TextOf
  *
  * @since 0.2
  */
-class NumberOf(dnum: KScalar<Double>) : NumberEnvelope(dnum) {
+class NumberOf(dnum: KScalar<Double>) : NumberEnvelope(dnum), Scalar<Double> {
 
     constructor(number: Scalar<Double>) : this({ number() })
 
