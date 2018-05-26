@@ -20,22 +20,25 @@ import java.math.MathContext
  *
  * There is no thread-safety guarantee.
  *
- * @param src The iterable
  * @since 0.5
  */
-class AvgOf(src: Iterable<KScalar<Number>>) : NumberEnvelope(
-    Ternary(
-        LengthOf(src).toLong(),
-        FuncOf { len -> len > 0 },
-        FuncOf { len ->
-            src.map { BigDecimal.valueOf(it().toDouble()) }
-                .fold(BigDecimal.ZERO) { acc, r -> acc.add(r, MathContext.DECIMAL128) }
-                .divide(BigDecimal.valueOf(len), MathContext.DECIMAL128)
-                .toDouble()
-        },
-        FuncOf { 0.0 }
+class AvgOf private constructor(value: KScalar<Double>) : NumberEnvelope(value) {
+
+    private constructor(value: Scalar<Double>) : this({ value() })
+
+    constructor(src: Iterable<KScalar<Number>>) : this(
+        Ternary(
+            LengthOf(src).toLong(),
+            FuncOf { len -> len > 0 },
+            FuncOf { len ->
+                src.map { BigDecimal.valueOf(it().toDouble()) }
+                    .fold(BigDecimal.ZERO) { acc, r -> acc.add(r, MathContext.DECIMAL128) }
+                    .divide(BigDecimal.valueOf(len), MathContext.DECIMAL128)
+                    .toDouble()
+            },
+            FuncOf { 0.0 }
+        )
     )
-) {
 
     constructor(vararg src: Int) : this(
         Mapped(

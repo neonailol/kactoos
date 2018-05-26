@@ -330,10 +330,16 @@ class AvgOfTest {
     fun withCompositionOfScalars() {
         assertEquals(
             AvgOf(
-                { MinOf(1.0, 2.0).invoke() },
-                { MaxOf(2.0, 4.0).invoke() },
-                { SumOf(1.0, 2.0, 2.0).invoke() },
-                { Ternary<Scalar<Number>, Scalar<Number>>(true, Constant { 5.0 }, Constant { 1.0 }).invoke().invoke() }
+                Constant { MinOf(1.0, 2.0).invoke() },
+                Constant { MaxOf(2.0, 4.0).invoke() },
+                Constant { SumOf(1.0, 2.0, 2.0).invoke() },
+                Constant {
+                    Ternary<Scalar<Number>, Scalar<Number>>(
+                        true,
+                        Constant { 5.0 },
+                        Constant { 1.0 }
+                    ).invoke().invoke()
+                }
             ).toInt(),
             3
         )
