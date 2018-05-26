@@ -27,7 +27,7 @@ class Equality<T : Bytes>(
     override fun invoke(): Int {
         val lft = left.asBytes()
         val rght = right.asBytes()
-        return Ternary<Int, Any>(
+        return Ternary(
             { lft.size == rght.size },
             {
                 var result = 0

@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.iterable.IterableOf
 import org.testng.Assert.assertEquals
 import org.testng.annotations.Test
@@ -334,7 +333,7 @@ class AvgOfTest {
                 Constant { MaxOf(2.0, 4.0).invoke() },
                 Constant { SumOf(1.0, 2.0, 2.0).invoke() },
                 Constant {
-                    Ternary<Scalar<Number>, Scalar<Number>>(
+                    Ternary(
                         true,
                         Constant { 5.0 },
                         Constant { 1.0 }

@@ -15,36 +15,17 @@ import nnl.rocks.kactoos.Scalar
  * @param alternative The alternative
  * @since 0.5
  */
-class Ternary<T : Any, X : Any>(
+class Ternary<T : Any>(
     private val condition: KScalar<Boolean>,
     private val consequent: KScalar<T>,
     private val alternative: KScalar<T>
 ) : Scalar<T> {
 
     /**
-     * @param input The input to pass to all of them
      * @param cnd The condition
      * @param cons The consequent
      * @param alter The alternative
-     * @param X Type of input
-     * @since 0.9
-     */
-    constructor(
-        input: X,
-        cnd: Func<X, Boolean>,
-        cons: Func<X, T>,
-        alter: Func<X, T>
-    ) : this(
-        { cnd.apply(input) },
-        { cons.apply(input) },
-        { alter.apply(input) }
-    )
-
-    /**
-     * @param cnd The condition
-     * @param cons The consequent
-     * @param alter The alternative
-     * @since 0.9
+     * @since 0.5
      */
     constructor(
         cnd: Boolean,
@@ -56,6 +37,7 @@ class Ternary<T : Any, X : Any>(
      * @param cnd The condition
      * @param cons The consequent
      * @param alter The alternative
+     * @since 0.5
      */
     constructor(
         cnd: KScalar<Boolean>,
@@ -68,6 +50,30 @@ class Ternary<T : Any, X : Any>(
             consequent()
         } else {
             alternative()
+        }
+    }
+
+    companion object {
+
+        /**
+         * @param input The input to pass to all of them
+         * @param cnd The condition
+         * @param cons The consequent
+         * @param alter The alternative
+         * @param X Type of input
+         * @since 0.5
+         */
+        operator fun <T : Any, X : Any> invoke(
+            input: X,
+            cnd: Func<X, Boolean>,
+            cons: Func<X, T>,
+            alter: Func<X, T>
+        ): Ternary<T> {
+            return Ternary(
+                { cnd.apply(input) },
+                { cons.apply(input) },
+                { alter.apply(input) }
+            )
         }
     }
 }
