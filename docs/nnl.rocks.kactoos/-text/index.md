@@ -33,7 +33,6 @@ Text.
 | [TextEnvelope](../../nnl.rocks.kactoos.text/-text-envelope/index.md) | `abstract class TextEnvelope : `[`Text`](./index.md)<br>Text envelope that provides equals and hashCode methods. |
 | [TrimmedLeftText](../../nnl.rocks.kactoos.text/-trimmed-left-text/index.md) | `class TrimmedLeftText : `[`Text`](./index.md)<br>Text without control characters (char &amp;lt;= 32) only from left. |
 | [TrimmedRightText](../../nnl.rocks.kactoos.text/-trimmed-right-text/index.md) | `class TrimmedRightText : `[`Text`](./index.md)<br>Text without control characters (char &amp;lt;= 32) only from right. |
-| [TrimmedText](../../nnl.rocks.kactoos.text/-trimmed-text/index.md) | `class TrimmedText : `[`Text`](./index.md)<br>Text without control characters (char &amp;lt;= 32) from both ends. |
 | [UncheckedText](../../nnl.rocks.kactoos.text/-unchecked-text/index.md) | `class UncheckedText : `[`Text`](./index.md)<br>Text that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [UpperText](../../nnl.rocks.kactoos.text/-upper-text/index.md) | `class UpperText : `[`Text`](./index.md)<br>Text in upper case. |
 | [ZonedDateTimeAsText](../../nnl.rocks.kactoos.time/-zoned-date-time-as-text/index.md) | `class ZonedDateTimeAsText : `[`Text`](./index.md)<br>Formatter for [ZonedDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html) instances. |

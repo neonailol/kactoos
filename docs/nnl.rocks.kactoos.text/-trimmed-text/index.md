@@ -2,23 +2,11 @@
 
 # TrimmedText
 
-`class TrimmedText : `[`Text`](../../nnl.rocks.kactoos/-text/index.md)
+`class TrimmedText : `[`TextEnvelope`](../-text-envelope/index.md)
 
-Text without control characters (char &amp;lt;= 32) from both ends.
-
-### Parameters
-
-`origin` -
-
-The text
-
-
-
+Text without control characters (char &lt;= 32) from both ends.
 
 There is no thread-safety guarantee.
-
-
-
 
 **Since**
 0.1
@@ -27,10 +15,13 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`<br>Text without control characters (char &amp;lt;= 32) from both ends. |
+| [&lt;init&gt;](-init-.md) | `TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``TrimmedText(origin: `[`KText`](../../nnl.rocks.kactoos/-k-text.md)`)`<br>Text without control characters (char &lt;= 32) from both ends. |
 
-### Functions
+### Inherited Functions
 
 | Name | Summary |
 |---|---|
-| [asString](as-string.md) | `fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+| [asString](../-text-envelope/as-string.md) | `open fun asString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)<br>Convert it to the string. |
+| [equals](../-text-envelope/equals.md) | `open fun equals(other: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`?): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
+| [hashCode](../-text-envelope/hash-code.md) | `open fun hashCode(): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [toString](../-text-envelope/to-string.md) | `open fun toString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

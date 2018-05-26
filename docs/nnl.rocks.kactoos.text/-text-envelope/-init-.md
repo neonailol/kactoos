@@ -3,14 +3,8 @@
 # &lt;init&gt;
 
 `TextEnvelope(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
-
-### Parameters
-
-`text` - Text representing the text value.`TextEnvelope(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
-
-### Parameters
-
-`scalar` - Scalar representing the text value.`TextEnvelope(scalar: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)``TextEnvelope(origin: `[`IoCheckedScalar`](../../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
+`TextEnvelope(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
+`TextEnvelope(string: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)``TextEnvelope(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`
 
 Text envelope that provides equals and hashCode methods.
 

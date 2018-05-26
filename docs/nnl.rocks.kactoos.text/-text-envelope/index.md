@@ -17,7 +17,7 @@ Text envelope that provides equals and hashCode methods.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `TextEnvelope(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`<br>`TextEnvelope(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`<br>`TextEnvelope(scalar: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)``TextEnvelope(origin: `[`IoCheckedScalar`](../../nnl.rocks.kactoos.scalar/-io-checked-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`<br>Text envelope that provides equals and hashCode methods. |
+| [&lt;init&gt;](-init-.md) | `TextEnvelope(text: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`<br>`TextEnvelope(scalar: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`<br>`TextEnvelope(string: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)``TextEnvelope(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`>)`<br>Text envelope that provides equals and hashCode methods. |
 
 ### Functions
 
@@ -44,3 +44,4 @@ Text envelope that provides equals and hashCode methods.
 | [SwappedCaseText](../-swapped-case-text/index.md) | `class SwappedCaseText : `[`TextEnvelope`](./index.md)<br>Swaps the case of a Text changing upper and title case to lower case, and lower case to upper case. |
 | [TextBase64](../-text-base64/index.md) | `class TextBase64 : `[`TextEnvelope`](./index.md)<br>Encodes the origin text using the Base64 encoding scheme. |
 | [TextOf](../-text-of/index.md) | `class TextOf : `[`TextEnvelope`](./index.md)<br>TextOf |
+| [TrimmedText](../-trimmed-text/index.md) | `class TrimmedText : `[`TextEnvelope`](./index.md)<br>Text without control characters (char &lt;= 32) from both ends. |
