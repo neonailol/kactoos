@@ -19,7 +19,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `IsBlank(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`<br>Determines if text is blank (consists of spaces) or no. |
+| [&lt;init&gt;](-init-.md) | `IsBlank(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``IsBlank(origin: `[`KText`](../../nnl.rocks.kactoos/-k-text.md)`)`<br>Determines if text is blank (consists of spaces) or no. |
 
 ### Functions
 

@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`IsBlank(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)`
+`IsBlank(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``IsBlank(origin: `[`KText`](../../nnl.rocks.kactoos/-k-text.md)`)`
 
 Determines if text is blank (consists of spaces) or no.
 
