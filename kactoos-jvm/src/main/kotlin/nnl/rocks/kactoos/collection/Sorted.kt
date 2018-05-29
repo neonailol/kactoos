@@ -1,8 +1,6 @@
 package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.list.ListOf
-import java.util.ArrayList
-import java.util.Comparator
 
 /**
  * Sorted collection.
@@ -20,22 +18,8 @@ import java.util.Comparator
  */
 class Sorted<T : Comparable<T>> : CollectionEnvelope<T> {
 
-    constructor(
-        cmp: Comparator<T>,
-        src: Collection<T>
-    ) : super(
-        {
-            val items = ArrayList<T>(src.size)
-            items.addAll(src)
-            items.sortWith(cmp)
-            items
-        }
-    )
+    constructor(cmp: Comparator<T>, src: Collection<T>) : super({ src.sortedWith(cmp) })
 
-    /**
-     * @param src The underlying collection
-     */
-    @SafeVarargs
     constructor(vararg src: T) : this(ListOf<T>(src.iterator()))
 
     /**
@@ -53,7 +37,6 @@ class Sorted<T : Comparable<T>> : CollectionEnvelope<T> {
      * @param src The underlying collection
      * @param cmp The comparator
      */
-    @SafeVarargs
     constructor(
         cmp: Comparator<T>,
         vararg src: T

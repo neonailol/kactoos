@@ -22,15 +22,7 @@ class CollectionOf<T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Iterable<T>) : super({ src.toList() })
 
-    /**
-     * @param array An array of some elements
-     */
-    @SafeVarargs
     constructor(vararg array: T) : this(IterableOf<T>(array.iterator()))
 
-    /**
-     * @param src An [Iterator]
-     * @since 0.21
-     */
     constructor(src: Iterator<T>) : this(IterableOf<T>(src))
 }

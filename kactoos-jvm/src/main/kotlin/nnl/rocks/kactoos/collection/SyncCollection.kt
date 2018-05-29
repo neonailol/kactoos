@@ -2,8 +2,6 @@ package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.scalar.SyncScalar
-import java.util.Collections
-import java.util.LinkedList
 
 /**
  * Iterable as [Collection].
@@ -24,29 +22,11 @@ import java.util.LinkedList
  */
 class SyncCollection<T : Any> : CollectionEnvelope<T> {
 
-    constructor(src: Collection<T>) : super(
-        SyncScalar<Collection<T>>(
-            {
-                val temp = LinkedList<T>()
-                temp.addAll(src)
-                Collections.synchronizedCollection<T>(temp)
-            }
-        )
-    )
+    constructor(src: Collection<T>) : super(SyncScalar<Collection<T>>({ src.toList() }))
 
-    /**
-     * @param array An array of some elements
-     */
-    @SafeVarargs
     constructor(vararg array: T) : this(IterableOf<T>(array.iterator()))
 
-    /**
-     * @param src An [Iterator]
-     */
     constructor(src: Iterator<T>) : this(IterableOf<T>(src))
 
-    /**
-     * @param src An [Iterable]
-     */
     constructor(src: Iterable<T>) : this(CollectionOf<T>(src))
 }
