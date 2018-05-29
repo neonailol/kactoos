@@ -2,23 +2,7 @@
 
 # &lt;init&gt;
 
-`ProcOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`)`
-
-### Parameters
-
-`runnable` - The runnable`ProcOf(callable: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`X`](index.md#X)`>)`
-
-### Parameters
-
-`callable` - The callable`ProcOf(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, *>)`
-
-### Parameters
-
-`fnc` - The func`ProcOf(proc: `[`KProc`](../../nnl.rocks.kactoos/-k-proc.md)`<`[`X`](index.md#X)`>)`
-
-### Parameters
-
-`proc` - The proc`ProcOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>)`
+`ProcOf(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, *>)``ProcOf(proc: `[`KProc`](../../nnl.rocks.kactoos/-k-proc.md)`<`[`X`](index.md#X)`>)`
 
 Func as Proc.
 
@@ -31,5 +15,5 @@ There is no thread-safety guarantee.
 `proc` - The proc
 
 **Since**
-0.12
+0.4
 

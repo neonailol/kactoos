@@ -27,7 +27,7 @@ class RunnableOf<X : Any>(
     constructor(
         proc: Callable<X>,
         input: X
-    ) : this(FuncOf(proc), input)
+    ) : this(FuncOf({ proc.call() }), input)
 
     /**
      * @param proc Encapsulated proc
@@ -38,6 +38,6 @@ class RunnableOf<X : Any>(
     ) : this(CallableOf(proc, input, input), input)
 
     override fun run() {
-        UncheckedFunc(this.func).apply(this.input)
+        UncheckedFunc(func).apply(input)
     }
 }
