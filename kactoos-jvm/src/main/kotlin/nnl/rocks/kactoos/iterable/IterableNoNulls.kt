@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.iterator.IteratorNoNulls
-import java.util.concurrent.atomic.AtomicLong
 
 /**
  * A decorator for [Iterable] that doesn't allow any NULL.
@@ -11,9 +10,9 @@ import java.util.concurrent.atomic.AtomicLong
  * @param X Type of item
  * @since 0.4
  */
-class IterableNoNulls<out X : Any>(private val origin: MutableIterable<X>) : MutableIterable<X> {
+class IterableNoNulls<out X : Any>(private val origin: Iterable<X>) : Iterable<X> {
 
-    constructor(iterable: IterableEnvelope<X>) : this(iterable.toMutableList())
+    constructor(iterable: IterableEnvelope<X>) : this(iterable.toList())
 
-    override fun iterator(): MutableIterator<X> = IteratorNoNulls(origin.iterator(), AtomicLong())
+    override fun iterator(): Iterator<X> = IteratorNoNulls(origin.iterator())
 }

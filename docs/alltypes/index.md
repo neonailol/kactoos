@@ -51,6 +51,7 @@ Kactoos.
 | [nnl.rocks.kactoos.io.DigestEnvelope](../nnl.rocks.kactoos.io/-digest-envelope/index.md) | Digest Envelope. |
 | [nnl.rocks.kactoos.io.Directory](../nnl.rocks.kactoos.io/-directory/index.md) | Files in a directory. |
 | [nnl.rocks.kactoos.io.EmptyBytes](../nnl.rocks.kactoos.io/-empty-bytes/index.md) | Bytes with no data. |
+| [nnl.rocks.kactoos.iterator.EmptyIterator](../nnl.rocks.kactoos.iterator/-empty-iterator/index.md) | Iterator that has no elements. |
 | [nnl.rocks.kactoos.iterable.Endless](../nnl.rocks.kactoos.iterable/-endless/index.md) | Endless iterable. |
 | [nnl.rocks.kactoos.iterator.Endless](../nnl.rocks.kactoos.iterator/-endless/index.md) | Iterator that never ends. |
 | [nnl.rocks.kactoos.scalar.Equality](../nnl.rocks.kactoos.scalar/-equality/index.md) | Equality. |

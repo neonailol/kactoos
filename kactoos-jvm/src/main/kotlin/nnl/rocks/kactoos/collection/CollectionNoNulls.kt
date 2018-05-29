@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.iterator.IteratorNoNulls
-import java.util.concurrent.atomic.AtomicLong
 
 /**
  * A decorator of [Collection] that tolerates no NULLs.
@@ -13,14 +12,12 @@ import java.util.concurrent.atomic.AtomicLong
  * @since 0.3
  */
 class CollectionNoNulls<X : Any>(
-    private val col: KScalar<MutableCollection<X>>
-) : MutableCollection<X> by col() {
+    private val col: KScalar<Collection<X>>
+) : Collection<X> by col() {
 
-    constructor(col: CollectionEnvelope<X>) : this({ col.toMutableList() })
+    constructor(col: CollectionEnvelope<X>) : this({ col.toList() })
 
-    constructor(col: Collection<X>) : this({ col.toMutableList() })
+    constructor(col: Collection<X>) : this({ col.toList() })
 
-    override fun iterator(): MutableIterator<X> {
-        return IteratorNoNulls(this.col().iterator(), AtomicLong())
-    }
+    override fun iterator(): Iterator<X> = IteratorNoNulls(col().iterator())
 }

@@ -10,8 +10,7 @@ and doesn't recalculate again.
 Pay attention that this class is not thread-safe. It is highly
 recommended to always decorate it with [SyncBiFunc](../-sync-bi-func/index.md).
 
-This [BiFunc](../../nnl.rocks.kactoos/-bi-func/index.md) decorator technically is an in-memory
-cache.
+This [BiFunc](../../nnl.rocks.kactoos/-bi-func/index.md) decorator technically is an in-memory cache.
 
 There is no thread-safety guarantee.
 

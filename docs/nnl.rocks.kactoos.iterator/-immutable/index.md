@@ -2,7 +2,7 @@
 
 # Immutable
 
-`class Immutable<T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>`
+`class Immutable<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>`
 
 Iterator that doesn't allow removal of elements.
 
@@ -10,10 +10,12 @@ There is no thread-safety guarantee.
 
 ### Parameters
 
-`T` - Element type
+`T` - Element type.
+
+`iterator` - Encapsulated iterator.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

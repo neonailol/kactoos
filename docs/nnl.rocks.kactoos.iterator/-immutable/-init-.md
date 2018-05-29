@@ -10,8 +10,10 @@ There is no thread-safety guarantee.
 
 ### Parameters
 
-`T` - Element type
+`T` - Element type.
+
+`iterator` - Encapsulated iterator.
 
 **Since**
-0.5
+0.4
 

@@ -10,7 +10,9 @@ There is no thread-safety guarantee.
 
 ### Parameters
 
-`T` - Element type
+`T` - Element type.
+
+`list` - Encapsulated list.
 
 **Since**
 0.3

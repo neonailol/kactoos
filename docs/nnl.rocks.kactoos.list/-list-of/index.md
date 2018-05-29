@@ -8,20 +8,15 @@ Iterable as [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collectio
 
 This class should be used very carefully. You must understand that
 it will fetch the entire content of the encapsulated [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) on each
-method call. It doesn't cache the data anyhow. If you don't
-need this [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) to re-fresh its content on every call,
-by doing round-trips to the encapsulated iterable, decorate it with
-[StickyList](../-sticky-list/index.md).
+method call. It doesn't cache the data anyhow. If you don't need this [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)
+to re-fresh its content on every call, by doing round-trips to the
+encapsulated iterable, decorate it with [StickyList](../-sticky-list/index.md).
 
 There is no thread-safety guarantee.
 
 ### Parameters
 
 `T` - List type
-
-**See Also**
-
-[StickyList](../-sticky-list/index.md)
 
 **Since**
 0.1
@@ -30,4 +25,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ListOf(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`<br>`ListOf(vararg array: `[`T`](index.md#T)`)`<br>`ListOf(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)` |
+| [&lt;init&gt;](-init-.md) | `ListOf(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`<br>`ListOf(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)`<br>`ListOf(vararg array: `[`T`](index.md#T)`)` |
