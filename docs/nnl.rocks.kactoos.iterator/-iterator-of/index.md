@@ -21,7 +21,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `IteratorOf(list: `[`Array`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html)`<`[`X`](index.md#X)`>, position: `[`AtomicInteger`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html)` = AtomicInteger(0))`<br>Iterator that returns the set of elements. |
+| [&lt;init&gt;](-init-.md) | `IteratorOf(vararg items: `[`X`](index.md#X)`)` |
 
 ### Functions
 

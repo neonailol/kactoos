@@ -15,5 +15,7 @@ class Not(private val origin: KScalar<Boolean>) : Scalar<Boolean> {
 
     constructor(origin: Scalar<Boolean>) : this({ origin() })
 
+    constructor(origin: Boolean) : this({ origin })
+
     override fun invoke(): Boolean = origin().not()
 }
