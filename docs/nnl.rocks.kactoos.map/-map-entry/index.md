@@ -2,7 +2,7 @@
 
 # MapEntry
 
-`class MapEntry<out K, out V> : `[`Entry`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html)`<`[`K`](index.md#K)`, `[`V`](index.md#V)`>`
+`class MapEntry<out K : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, out V : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Entry`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html)`<`[`K`](index.md#K)`, `[`V`](index.md#V)`>`
 
 MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html).
 
@@ -14,25 +14,25 @@ There is no thread-safety guarantee.
 
 `V` - Value type
 
-`src` - The key of the entry's map.
+`key` - The key of the entry's map.
 
-`trgt` - The value associated to the key of the entry's map.
+`value` - The value associated to the key of the entry's map.
 
 **Since**
-0.9
+0.4
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `MapEntry(src: `[`K`](index.md#K)`, trgt: `[`V`](index.md#V)`)`<br>MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html). |
+| [&lt;init&gt;](-init-.md) | `MapEntry(key: `[`K`](index.md#K)`, value: `[`V`](index.md#V)`)`<br>MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html). |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [key](key.md) | `val key: `[`K`](index.md#K) |
-| [value](value.md) | `val value: `[`V`](index.md#V) |
+| [key](key.md) | `val key: `[`K`](index.md#K)<br>The key of the entry's map. |
+| [value](value.md) | `val value: `[`V`](index.md#V)<br>The value associated to the key of the entry's map. |
 
 ### Functions
 

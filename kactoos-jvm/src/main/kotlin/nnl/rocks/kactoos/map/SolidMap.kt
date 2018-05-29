@@ -29,14 +29,12 @@ class SolidMap<X : Any, Y : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
     /**
      * @param list List of entries
      */
-    @SafeVarargs
     constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf<Map.Entry<X, Y>>(list.iterator()))
 
     /**
      * @param map The map to extend
      * @param list List of entries
      */
-    @SafeVarargs
     constructor(
         map: Map<X, Y>,
         vararg list: Map.Entry<X, Y>
@@ -106,8 +104,6 @@ class SolidMap<X : Any, Y : Any>(map: Map<X, Y>) : MapEnvelope<X, Y>(
          * @param entry Func to create entry
          * @param Z Type of items in the list
          */
-        @SafeVarargs
-        @Suppress("SpreadOperator")
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             entry: Func<Z, Map.Entry<X, Y>>,
             vararg args: Z

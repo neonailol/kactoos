@@ -2,8 +2,8 @@
 
 # &lt;init&gt;
 
-`MapEnvelope(map: `[`Map`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)`
-`MapEnvelope(map: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Map`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>>)``MapEnvelope(map: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Map`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>>)`
+`MapEnvelope(map: `[`Map`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html)`<`[`K`](index.md#K)`, `[`V`](index.md#V)`>)`
+`MapEnvelope(map: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Map`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html)`<`[`K`](index.md#K)`, `[`V`](index.md#V)`>>)``MapEnvelope(map: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Map`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html)`<`[`K`](index.md#K)`, `[`V`](index.md#V)`>>)`
 
 Map envelope.
 
@@ -11,13 +11,9 @@ There is no thread-safety guarantee.
 
 ### Parameters
 
-`X` - Type of key
+`K` - Type of key
 
-`Y` - Type of value
-
-**See Also**
-
-[StickyMap](../-sticky-map/index.md)
+`V` - Type of value
 
 **Since**
 0.3

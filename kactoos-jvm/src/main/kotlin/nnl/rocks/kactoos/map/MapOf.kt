@@ -39,7 +39,6 @@ class MapOf<X : Any, Y : Any>(entries: Iterable<Map.Entry<X, Y>>) : MapEnvelope<
     /**
      * @param list List of entries
      */
-    @SafeVarargs
     constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf<Map.Entry<X, Y>>(list.iterator()))
 
     /**
@@ -47,7 +46,6 @@ class MapOf<X : Any, Y : Any>(entries: Iterable<Map.Entry<X, Y>>) : MapEnvelope<
      * @param list List of entries
      * @since 0.12
      */
-    @SafeVarargs
     constructor(
         src: Map<X, Y>,
         vararg list: Map.Entry<X, Y>

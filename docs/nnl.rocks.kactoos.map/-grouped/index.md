@@ -6,8 +6,7 @@
 
 Iterable as [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html).
 
-This class groups objects from iterable by applying
-functions for keys and values
+This class groups objects from iterable by applying functions for keys and values
 
 There is no thread-safety guarantee.
 
@@ -32,4 +31,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Grouped(list: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>, keys: `[`Function`](http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html)`<`[`T`](index.md#T)`, `[`K`](index.md#K)`>, values: `[`Function`](http://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html)`<`[`T`](index.md#T)`, `[`V`](index.md#V)`>)`<br>Iterable as [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html). |
+| [&lt;init&gt;](-init-.md) | `Grouped(list: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>, keys: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`T`](index.md#T)`, `[`K`](index.md#K)`>, values: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`T`](index.md#T)`, `[`V`](index.md#V)`>)`<br>Iterable as [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html). |

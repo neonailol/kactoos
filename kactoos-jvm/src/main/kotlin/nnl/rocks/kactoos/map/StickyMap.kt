@@ -32,7 +32,6 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
     /**
      * @param list List of entries
      */
-    @SafeVarargs
     constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf<Map.Entry<X, Y>>(list.iterator()))
 
     /**
@@ -40,7 +39,6 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
      * @param list List of entries
      * @since 0.12
      */
-    @SafeVarargs
     constructor(
         map: Map<X, Y>,
         vararg list: Map.Entry<X, Y>
@@ -112,8 +110,6 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
          * @param entry Func to create entry
          * @param Z Type of items in the list
          */
-        @SafeVarargs
-        @Suppress("SpreadOperator")
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             entry: Func<Z, Map.Entry<X, Y>>,
             vararg args: Z

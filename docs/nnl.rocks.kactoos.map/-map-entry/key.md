@@ -3,3 +3,6 @@
 # key
 
 `val key: `[`K`](index.md#K)
+
+The key of the entry's map.
+

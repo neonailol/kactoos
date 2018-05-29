@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`MapEntry(src: `[`K`](index.md#K)`, trgt: `[`V`](index.md#V)`)`
+`MapEntry(key: `[`K`](index.md#K)`, value: `[`V`](index.md#V)`)`
 
 MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html).
 
@@ -14,10 +14,10 @@ There is no thread-safety guarantee.
 
 `V` - Value type
 
-`src` - The key of the entry's map.
+`key` - The key of the entry's map.
 
-`trgt` - The value associated to the key of the entry's map.
+`value` - The value associated to the key of the entry's map.
 
 **Since**
-0.9
+0.4
 
