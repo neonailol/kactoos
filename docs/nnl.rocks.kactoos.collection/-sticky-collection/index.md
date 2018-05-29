@@ -13,7 +13,7 @@ There is no thread-safety guarantee.
 `E` - Type of item
 
 **Since**
-0.16
+0.3
 
 ### Constructors
 

@@ -2,17 +2,6 @@
 
 # &lt;init&gt;
 
-`Reversed(src: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)``Reversed(vararg src: `[`X`](index.md#X)`)`
-
-### Parameters
-
-`src` - Source collection
-
-**Since**
-0.23
-
+`Reversed(src: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)`
+`Reversed(vararg src: `[`X`](index.md#X)`)`
 `Reversed(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
-
-### Parameters
-
-`src` - Source collection

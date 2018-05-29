@@ -4,13 +4,12 @@
 
 `class Shuffled<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](../-collection-envelope/index.md)`<`[`T`](index.md#T)`>`
 
-Sorted collection.
+Shuffled collection.
 
-Pay attention that sorting will happen on each operation
+Pay attention that shuffling will happen on each operation
 with the collection. Every time you touch it, it will fetch the
 entire collection from the encapsulated object and shuffle it. If you
-want to avoid that "side-effect", decorate it with
-[StickyCollection](../-sticky-collection/index.md).
+want to avoid that behaviour, decorate it with [StickyCollection](../-sticky-collection/index.md).
 
 There is no thread-safety guarantee.
 

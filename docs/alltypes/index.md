@@ -195,7 +195,7 @@ Kactoos.
 | [nnl.rocks.kactoos.scalar.ScalarWithFallback](../nnl.rocks.kactoos.scalar/-scalar-with-fallback/index.md) | Scalar with a fallback plan. |
 | [nnl.rocks.kactoos.io.Sha1DigestOf](../nnl.rocks.kactoos.io/-sha1-digest-of/index.md) | SHA-1 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.io.Sha256DigestOf](../nnl.rocks.kactoos.io/-sha256-digest-of/index.md) | SHA-256 checksum calculation of [Input](../nnl.rocks.kactoos/-input/index.md). |
-| [nnl.rocks.kactoos.collection.Shuffled](../nnl.rocks.kactoos.collection/-shuffled/index.md) | Sorted collection. |
+| [nnl.rocks.kactoos.collection.Shuffled](../nnl.rocks.kactoos.collection/-shuffled/index.md) | Shuffled collection. |
 | [nnl.rocks.kactoos.iterable.Shuffled](../nnl.rocks.kactoos.iterable/-shuffled/index.md) | Shuffled iterable. |
 | [nnl.rocks.kactoos.iterator.Shuffled](../nnl.rocks.kactoos.iterator/-shuffled/index.md) | Shuffled iterator. |
 | [nnl.rocks.kactoos.list.Shuffled](../nnl.rocks.kactoos.list/-shuffled/index.md) | Shuffled list. |

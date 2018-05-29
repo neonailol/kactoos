@@ -12,6 +12,8 @@ There is no thread-safety guarantee.
 
 `X` - Element type
 
+`collection` - Encapsulated collection.
+
 **Since**
 0.3
 
@@ -19,7 +21,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `CollectionNoNulls(col: `[`CollectionEnvelope`](../-collection-envelope/index.md)`<`[`X`](index.md#X)`>)`<br>`CollectionNoNulls(col: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)``CollectionNoNulls(col: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>>)`<br>A decorator of [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that tolerates no NULLs. |
+| [&lt;init&gt;](-init-.md) | `CollectionNoNulls(collection: `[`CollectionEnvelope`](../-collection-envelope/index.md)`<`[`X`](index.md#X)`>)`<br>`CollectionNoNulls(collection: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>)``CollectionNoNulls(collection: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`X`](index.md#X)`>>)`<br>A decorator of [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that tolerates no NULLs. |
 
 ### Functions
 
