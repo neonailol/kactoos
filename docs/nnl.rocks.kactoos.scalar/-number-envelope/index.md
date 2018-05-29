@@ -39,9 +39,9 @@ There is no thread-safety guarantee.
 | Name | Summary |
 |---|---|
 | [AvgOf](../-avg-of/index.md) | `class AvgOf : `[`NumberEnvelope`](./index.md)<br>Average of numbers. |
-| [LengthOf](../../nnl.rocks.kactoos.io/-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](./index.md)<br>Length of [Input](../../nnl.rocks.kactoos/-input/index.md). |
 | [LengthOf](../../nnl.rocks.kactoos.iterable/-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](./index.md)<br>Length of iterable. |
 | [LengthOf](../../nnl.rocks.kactoos.iterator/-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](./index.md)<br>Length of iterator. |
+| [LengthOf](../../nnl.rocks.kactoos.io/-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](./index.md)<br>Length of [Input](../../nnl.rocks.kactoos/-input/index.md). |
 | [MaxOf](../-max-of/index.md) | `class MaxOf : `[`NumberEnvelope`](./index.md)<br>Find the greatest value among numbers. |
 | [MinOf](../-min-of/index.md) | `class MinOf : `[`NumberEnvelope`](./index.md)<br>Find the smallest value among numbers. |
 | [NumberOf](../-number-of/index.md) | `class NumberOf : `[`NumberEnvelope`](./index.md)`, `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`<br>Text as [Double](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html). |

@@ -8,14 +8,10 @@ import nnl.rocks.kactoos.scalar.NumberEnvelope
  *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @since 0.1
  */
 class LengthOf(items: Iterable<*>) : NumberEnvelope(
     {
-        LengthOf(
-            items.iterator()
-        ).toDouble()
+        LengthOf(items.iterator()).toDouble()
     }
 )

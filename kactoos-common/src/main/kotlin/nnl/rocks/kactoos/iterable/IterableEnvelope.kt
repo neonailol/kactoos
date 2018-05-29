@@ -9,7 +9,7 @@ import nnl.rocks.kactoos.Scalar
  * There is no thread-safety guarantee.
  *
  * @param X Type of item
- * @since 0.24
+ * @since 0.5
  */
 open class IterableEnvelope<out X : Any>(
     private val iterable: KScalar<Iterable<X>>

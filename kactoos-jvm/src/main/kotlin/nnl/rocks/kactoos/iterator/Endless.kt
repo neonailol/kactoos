@@ -8,8 +8,6 @@ import nnl.rocks.kactoos.iterable.IterableOf
  *
  * If you need to repeat certain amount of time, use [Repeated].
  *
- *
- *
  * @param T Element type
  * @since 0.3
  */
@@ -23,5 +21,5 @@ class Endless<T : Any>(private val origin: KScalar<T>) : Iterator<T> {
 
     override fun hasNext(): Boolean = true
 
-    override fun next(): T = IterableOf(this.origin()).iterator().next()
+    override fun next(): T = IterableOf(origin()).iterator().next()
 }

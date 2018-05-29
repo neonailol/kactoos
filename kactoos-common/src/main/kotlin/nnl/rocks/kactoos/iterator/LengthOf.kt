@@ -7,12 +7,10 @@ import nnl.rocks.kactoos.scalar.NumberEnvelope
  *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @since 0.1
  */
 class LengthOf(iterator: Iterator<*>) : NumberEnvelope(
-     {
+    {
         var size = 0
         while (iterator.hasNext()) {
             iterator.next()

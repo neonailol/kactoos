@@ -125,9 +125,9 @@ Kactoos.
 | [nnl.rocks.kactoos.KScalar](../nnl.rocks.kactoos/-k-scalar.md) | Alias for [Scalar](../nnl.rocks.kactoos/-scalar/index.md) |
 | [nnl.rocks.kactoos.KText](../nnl.rocks.kactoos/-k-text.md) | Alias for [Text](../nnl.rocks.kactoos/-text/index.md) |
 | [nnl.rocks.kactoos.io.LSInputOf](../nnl.rocks.kactoos.io/-l-s-input-of/index.md) | Input as LSInput. |
-| [nnl.rocks.kactoos.io.LengthOf](../nnl.rocks.kactoos.io/-length-of/index.md) | Length of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.iterable.LengthOf](../nnl.rocks.kactoos.iterable/-length-of/index.md) | Length of iterable. |
 | [nnl.rocks.kactoos.iterator.LengthOf](../nnl.rocks.kactoos.iterator/-length-of/index.md) | Length of iterator. |
+| [nnl.rocks.kactoos.io.LengthOf](../nnl.rocks.kactoos.io/-length-of/index.md) | Length of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.collection.Limited](../nnl.rocks.kactoos.collection/-limited/index.md) | Limited collection. |
 | [nnl.rocks.kactoos.iterable.Limited](../nnl.rocks.kactoos.iterable/-limited/index.md) | Limited iterable. |
 | [nnl.rocks.kactoos.iterator.Limited](../nnl.rocks.kactoos.iterator/-limited/index.md) | Limited origin. |
