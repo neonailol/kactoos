@@ -15,7 +15,7 @@ import java.util.LinkedList
 class TailOf<T : Any>(num: Int, iterator: Iterator<T>) : Iterator<T> {
 
     private val origin: Iterator<T> = LinkedList(
-        CollectionOf<T>(
+        CollectionOf(
             HeadOf(
                 num,
                 LinkedList(

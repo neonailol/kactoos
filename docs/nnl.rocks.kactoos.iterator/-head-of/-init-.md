@@ -17,5 +17,5 @@ There is no thread-safety guarantee.
 `origin` - Decorated iterator.
 
 **Since**
-0.5
+0.4
 

@@ -10,21 +10,16 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  * There is no thread-safety guarantee.
  *
  * @param T Element type
- * @since 0.5
+ * @since 0.4
  */
-class Shuffled<out T> private constructor(private val scalar: KScalar<Iterator<T>>) : Iterator<T> {
+class Shuffled<out T : Any> private constructor(private val scalar: KScalar<Iterator<T>>) : Iterator<T> {
 
     private constructor(scalar: Scalar<Iterator<T>>) : this({ scalar() })
 
     constructor(iterator: Iterator<T>) : this(
         StickyScalar<Iterator<T>>(
             {
-                val items = mutableListOf<T>()
-                while (iterator.hasNext()) {
-                    items.add(iterator.next())
-                }
-                items.shuffle()
-                items.iterator()
+                Iterable { iterator }.shuffled().iterator()
             }
         )
     )

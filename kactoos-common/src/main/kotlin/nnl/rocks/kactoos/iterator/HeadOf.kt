@@ -1,5 +1,7 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.internal.empty
+
 /**
  * Head portion of the iterator.
  *
@@ -8,7 +10,7 @@ package nnl.rocks.kactoos.iterator
  * @param T Element type
  * @param head Number of head elements.
  * @param origin Decorated iterator.
- * @since 0.5
+ * @since 0.4
  */
 class HeadOf<T>(
     private val head: Int,
@@ -23,7 +25,7 @@ class HeadOf<T>(
     override fun hasNext(): Boolean = current < head && origin.hasNext()
 
     override fun next(): T {
-        if (! hasNext()) {
+        if (empty()) {
             throw NoSuchElementException(
                 "The iterator doesn't have items any more"
             )

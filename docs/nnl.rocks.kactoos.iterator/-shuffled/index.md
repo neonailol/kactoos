@@ -2,7 +2,7 @@
 
 # Shuffled
 
-`class Shuffled<out T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>`
+`class Shuffled<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>`
 
 Shuffled iterator.
 
@@ -13,7 +13,7 @@ There is no thread-safety guarantee.
 `T` - Element type
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

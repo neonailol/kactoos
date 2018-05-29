@@ -13,18 +13,18 @@ import nnl.rocks.kactoos.list.ListOf
  */
 class Joined<T : Any>(items: Iterable<Iterator<T>>) : Iterator<T> {
 
-    private val iters: Iterator<Iterator<T>> = items.iterator()
+    private val iterators: Iterator<Iterator<T>> = items.iterator()
 
     private var current: Iterator<T> = EmptyIterator()
 
     /**
      * @param items Items to concatenate
      */
-    constructor(vararg items: Iterator<T>) : this(ListOf<Iterator<T>>(items.iterator()))
+    constructor(vararg items: Iterator<T>) : this(ListOf(items.iterator()))
 
     override fun hasNext(): Boolean {
-        while (current.empty() && iters.hasNext()) {
-            current = iters.next()
+        while (current.empty() && iterators.hasNext()) {
+            current = iterators.next()
         }
         return current.hasNext()
     }

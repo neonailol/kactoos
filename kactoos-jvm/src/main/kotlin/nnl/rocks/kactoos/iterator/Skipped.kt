@@ -1,36 +1,34 @@
 package nnl.rocks.kactoos.iterator
 
-import java.util.NoSuchElementException
+import nnl.rocks.kactoos.internal.empty
 
 /**
  * Skipped iterator.
  *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @param T Element type
- * @since 0.8
+ * @since 0.4
  */
-class Skipped<out T>(
+class Skipped<out T : Any>(
     private var omit: Int,
     private val origin: Iterator<T>
 ) : Iterator<T> {
 
     override fun hasNext(): Boolean {
-        while (this.omit > 0 && this.origin.hasNext()) {
-            this.origin.next()
-            -- this.omit
+        while (omit > 0 && origin.hasNext()) {
+            origin.next()
+            -- omit
         }
-        return this.origin.hasNext()
+        return origin.hasNext()
     }
 
     override fun next(): T {
-        if (! this.hasNext()) {
+        if (empty()) {
             throw NoSuchElementException(
                 "The iterator doesn't have items any more"
             )
         }
-        return this.origin.next()
+        return origin.next()
     }
 }

@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.internal.empty
 import java.util.NoSuchElementException
 
 /**
@@ -10,8 +11,6 @@ import java.util.NoSuchElementException
  * returned or the underlying origin has been exhausted.
  *
  * There is no thread-safety guarantee.
- *
- *
  *
  * @param T Element type
  * @since 0.6
@@ -26,15 +25,13 @@ class Limited<out T>(
      */
     private var consumed: Int = 0
 
-    override fun hasNext(): Boolean {
-        return this.consumed < this.restrict && this.origin.hasNext()
-    }
+    override fun hasNext(): Boolean = consumed < restrict && origin.hasNext()
 
     override fun next(): T {
-        if (! this.hasNext()) {
+        if (empty()) {
             throw NoSuchElementException("No more elements.")
         }
-        ++ this.consumed
-        return this.origin.next()
+        ++ consumed
+        return origin.next()
     }
 }

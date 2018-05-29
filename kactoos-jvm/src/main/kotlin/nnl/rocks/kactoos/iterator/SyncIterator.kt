@@ -23,20 +23,20 @@ class SyncIterator<out T> constructor(
 ) : Iterator<T> {
 
     override fun hasNext(): Boolean {
-        this.lock.readLock().lock()
+        lock.readLock().lock()
         try {
             return this.iterator.hasNext()
         } finally {
-            this.lock.readLock().unlock()
+            lock.readLock().unlock()
         }
     }
 
     override fun next(): T {
-        this.lock.writeLock().lock()
+        lock.writeLock().lock()
         try {
             return this.iterator.next()
         } finally {
-            this.lock.writeLock().unlock()
+            lock.writeLock().unlock()
         }
     }
 }

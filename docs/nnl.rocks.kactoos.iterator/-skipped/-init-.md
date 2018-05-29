@@ -13,5 +13,5 @@ There is no thread-safety guarantee.
 `T` - Element type
 
 **Since**
-0.8
+0.4
 

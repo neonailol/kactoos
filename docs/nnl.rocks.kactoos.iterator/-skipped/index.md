@@ -2,7 +2,7 @@
 
 # Skipped
 
-`class Skipped<out T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>`
+`class Skipped<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>`
 
 Skipped iterator.
 
@@ -13,7 +13,7 @@ There is no thread-safety guarantee.
 `T` - Element type
 
 **Since**
-0.8
+0.4
 
 ### Constructors
 
