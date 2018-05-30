@@ -22,7 +22,7 @@ class CollectionOf<T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Iterable<T>) : super({ src.toList() })
 
-    constructor(vararg array: T) : this(IterableOf<T>(array.iterator()))
+    constructor(vararg array: T) : this(IterableOf(array.iterator()))
 
-    constructor(src: Iterator<T>) : this(IterableOf<T>(src))
+    constructor(src: Iterator<T>) : this(IterableOf(src))
 }

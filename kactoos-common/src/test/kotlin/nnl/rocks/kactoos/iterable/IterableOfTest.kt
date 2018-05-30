@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.iterable
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
 class IterableOfTest {
 
@@ -50,7 +51,7 @@ class IterableOfTest {
             3,
             LengthOf(
                 IterableOf(
-                    setOf('a', 'b', 'c').iterator()
+                    listOf('a', 'b', 'c').iterator()
                 )
             ).toInt(),
             "Can't iterate over iterator of items"

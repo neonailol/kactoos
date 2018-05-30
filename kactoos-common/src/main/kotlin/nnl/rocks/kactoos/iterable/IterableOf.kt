@@ -9,12 +9,12 @@ import nnl.rocks.kactoos.Scalar
  * There is no thread-safety guarantee.
  *
  * @param X Type of item
- * @since 0.5
+ * @since 0.4
  */
 class IterableOf<X : Any> : IterableEnvelope<X> {
 
     private constructor(scalar: KScalar<Iterator<X>>) : super(
-        { Iterable { scalar() } }
+        Iterable { scalar() }
     )
 
     constructor(scalar: Scalar<Iterator<X>>) : this({ scalar() })
