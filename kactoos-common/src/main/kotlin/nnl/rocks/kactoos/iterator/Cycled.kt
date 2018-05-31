@@ -1,5 +1,7 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.internal.isEmpty
+
 /**
  * Cycled Iterator.
  *
@@ -8,19 +10,21 @@ package nnl.rocks.kactoos.iterator
  * @param T Type of item
  * @since 0.3
  */
-class Cycled<out T>(private val origin: Iterable<T>) : Iterator<T> {
+class Cycled<out T : Any>(private val origin: () -> Iterator<T>) : Iterator<T> {
+
+    constructor(origin: Iterable<T>) : this({ origin.iterator() })
 
     private var iterator: Iterator<T>? = null
 
     override fun hasNext(): Boolean {
-        if (this.iterator == null || ! this.iterator !!.hasNext()) {
-            this.iterator = origin.iterator()
+        if (this.iterator == null || this.iterator !!.isEmpty()) {
+            this.iterator = origin()
         }
         return this.iterator !!.hasNext()
     }
 
     override fun next(): T {
-        if (! hasNext()) {
+        if (isEmpty()) {
             throw NoSuchElementException(
                 "The iterator doesn't have any more items"
             )
