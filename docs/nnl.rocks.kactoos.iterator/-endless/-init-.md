@@ -3,12 +3,7 @@
 # &lt;init&gt;
 
 `Endless(element: `[`T`](index.md#T)`)`
-
-Ctor.
-
-### Parameters
-
-`element` - Element to repeat`Endless(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
+`Endless(element: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)``Endless(element: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
 
 Iterator that never ends.
 
@@ -17,6 +12,8 @@ If you need to repeat certain amount of time, use [Repeated](../-repeated/index.
 ### Parameters
 
 `T` - Element type
+
+`element` - Element to repeat
 
 **Since**
 0.3

@@ -8,7 +8,7 @@ Iterators.
 
 | Name | Summary |
 |---|---|
-| [Cycled](-cycled/index.md) | `class Cycled<out T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](-cycled/index.md#T)`>`<br>Cycled Iterator. |
+| [Cycled](-cycled/index.md) | `class Cycled<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](-cycled/index.md#T)`>`<br>Cycled Iterator. |
 | [EmptyIterator](-empty-iterator/index.md) | `class EmptyIterator<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](-empty-iterator/index.md#T)`>`<br>Iterator that has no elements. |
 | [Endless](-endless/index.md) | `class Endless<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](-endless/index.md#T)`>`<br>Iterator that never ends. |
 | [Filtered](-filtered/index.md) | `class Filtered<out X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](-filtered/index.md#X)`>`<br>Filtered iterator. |

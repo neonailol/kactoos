@@ -12,6 +12,8 @@ If you need to repeat certain amount of time, use [Repeated](../-repeated/index.
 
 `T` - Element type
 
+`element` - Element to repeat
+
 **Since**
 0.3
 
@@ -19,7 +21,7 @@ If you need to repeat certain amount of time, use [Repeated](../-repeated/index.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Endless(element: `[`T`](index.md#T)`)`<br>Ctor.`Endless(origin: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`<br>Iterator that never ends. |
+| [&lt;init&gt;](-init-.md) | `Endless(element: `[`T`](index.md#T)`)`<br>`Endless(element: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`T`](index.md#T)`>)``Endless(element: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`<br>Iterator that never ends. |
 
 ### Functions
 
