@@ -12,7 +12,7 @@ this code will create a list of two strings "red" and "fox":
 
 ```
 val filtered = Filtered(
-    { input -> input.length < 4 }
+    { input -> input.length < 4 },
     IteratorOf("red", "lazy", "fox")
 )
 ```

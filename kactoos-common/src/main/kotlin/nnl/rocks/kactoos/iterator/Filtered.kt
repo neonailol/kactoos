@@ -15,7 +15,7 @@ import nnl.rocks.kactoos.internal.isEmpty
  *
  * ```
  * val filtered = Filtered(
- *     { input -> input.length < 4 }
+ *     { input -> input.length < 4 },
  *     IteratorOf("red", "lazy", "fox")
  * )
  * ```
