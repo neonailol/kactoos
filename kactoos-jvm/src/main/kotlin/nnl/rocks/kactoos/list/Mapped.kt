@@ -9,37 +9,25 @@ import nnl.rocks.kactoos.text.TextOf
  *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @param X Type of source item
  * @param Y Type of target item
- * @since 0.14
+ * @since 0.4
  */
-class Mapped<X : Any, Y : Any>(
-    fnc: Func<X, Y>,
-    src: Collection<X>
-) : ListEnvelope<Y>(
-     { ListOf<Y>(Mapped<X, Y>(fnc, src)) }
-) {
+class Mapped<X : Any, Y : Any> : ListEnvelope<Y> {
 
-    /**
-     * @param src Source list
-     * @param fnc Func
-     * @since 0.21
-     */
+    constructor(fnc: Func<X, Y>, src: Collection<X>) : super(
+        { ListOf(Mapped(fnc, src)) }
+    )
+
     constructor(
         fnc: Func<X, Y>,
         src: Iterator<X>
-    ) : this(fnc, ListOf<X>(src))
+    ) : this(fnc, ListOf(src))
 
-    /**
-     * @param src Source list
-     * @param fnc Func
-     */
     constructor(
         fnc: Func<X, Y>,
         src: Iterable<X>
-    ) : this(fnc, ListOf<X>(src))
+    ) : this(fnc, ListOf(src))
 
     override fun toString(): String {
         return TextOf(this).asString()

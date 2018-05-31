@@ -19,36 +19,24 @@ import java.util.LinkedList
  *
  * Objects of this class are thread-safe.
  *
- *
- *
  * @param X Type of item
- * @since 0.24
+ * @since 0.4
  */
-class SyncList<X : Any>(list: Collection<X>) : ListEnvelope<X>(
-    SyncScalar<List<X>>(
-         {
-            val temp = LinkedList<X>()
-            temp.addAll(list)
-            Collections.synchronizedList<X>(temp)
-        }
+class SyncList<X : Any> : ListEnvelope<X> {
+
+    constructor(list: Collection<X>) : super(
+        SyncScalar(
+            {
+                val temp = LinkedList<X>()
+                temp.addAll(list)
+                Collections.synchronizedList<X>(temp)
+            }
+        )
     )
-) {
 
-    /**
-     * @param items The array
-     */
-    @SafeVarargs
-    @Suppress("SpreadOperator")
-    constructor(vararg items: X) : this(IterableOf<X>(*items))
+    constructor(vararg items: X) : this(IterableOf(items.iterator()))
 
-    /**
-     * @param items The array
-     */
-    constructor(items: Iterable<X>) : this(ListOf<X>(items))
+    constructor(items: Iterable<X>) : this(ListOf(items))
 
-    /**
-     * @param items The array
-     * @since 0.21
-     */
-    constructor(items: Iterator<X>) : this(ListOf<X>(items))
+    constructor(items: Iterator<X>) : this(ListOf(items))
 }

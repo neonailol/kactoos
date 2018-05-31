@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.list
 
-import java.util.Collections
-import java.util.LinkedList
+import nnl.rocks.kactoos.iterable.IterableOf
 
 /**
  * Shuffled list.
@@ -14,35 +13,17 @@ import java.util.LinkedList
  *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @param T Element type
  * @see StickyList
- * @since 0.23
+ * @since 0.4
  */
-class Shuffled<T : Any>
-(src: Collection<T>) : ListEnvelope<T>(
-    {
-        val items = LinkedList<T>()
-        items.addAll(src)
-        Collections.shuffle(items)
-        Collections.unmodifiableList<T>(items)
-    }
-) {
+class Shuffled<T : Any> : ListEnvelope<T> {
 
-    /**
-     * @param src The underlying collection
-     */
-    @SafeVarargs
-    constructor(vararg src: T) : this(ListOf<T>(src.iterator()))
+    constructor(src: Collection<T>) : super({ src.shuffled().toList() })
 
-    /**
-     * @param src The underlying collection
-     */
-    constructor(src: Iterator<T>) : this(Iterable { src })
+    constructor(vararg src: T) : this(ListOf(src.iterator()))
 
-    /**
-     * @param src The underlying collection
-     */
-    constructor(src: Iterable<T>) : this(ListOf<T>(src))
+    constructor(src: Iterator<T>) : this(IterableOf(src))
+
+    constructor(src: Iterable<T>) : this(ListOf(src))
 }

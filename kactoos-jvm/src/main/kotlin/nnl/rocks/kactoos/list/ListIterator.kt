@@ -11,7 +11,7 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  *
  * @param T Items type
  * @param origin Original list iterator.
- * @since 0.5
+ * @since 0.4
  */
 class ListIterator<T : Any>(
     private val origin: UncheckedScalar<kotlin.collections.ListIterator<T>>
@@ -21,10 +21,6 @@ class ListIterator<T : Any>(
 
     constructor(list: List<T>) : this({ list.listIterator() })
 
-    /**
-     * @param list List that will be called to get a list iterator.
-     * @param index Start index for a newly created list iterator.
-     */
     constructor(list: List<T>, index: Int) : this({ list.listIterator(index) })
 
     constructor(iter: kotlin.collections.ListIterator<T>) : this({ iter })

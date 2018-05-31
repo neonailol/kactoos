@@ -7,32 +7,20 @@ import nnl.rocks.kactoos.scalar.SolidScalar
 /**
  * A [java.util.List] that is both synchronized and sticky.
  *
- *
  * Objects of this class are thread-safe.
  *
- *
- *
  * @param X Type of item
- * @since 0.24
+ * @since 0.4
  */
-class SolidList<X : Any>(list: Collection<X>) : ListEnvelope<X>(
-    SolidScalar<List<X>>( { SyncList<X>(StickyList<X>(list)) })
-) {
+class SolidList<X : Any> : ListEnvelope<X> {
 
-    /**
-     * @param items The array
-     */
-    @SafeVarargs
-    constructor(vararg items: X) : this(IterableOf<X>(items.iterator()))
+    constructor(list: Collection<X>) : super(
+        SolidScalar<List<X>>({ SyncList(StickyList(list)) })
+    )
 
-    /**
-     * @param items The array
-     * @since 0.21
-     */
-    constructor(items: Iterator<X>) : this(IterableOf<X>(items))
+    constructor(vararg items: X) : this(IterableOf(items.iterator()))
 
-    /**
-     * @param items The array
-     */
-    constructor(items: Iterable<X>) : this(CollectionOf<X>(items))
+    constructor(items: Iterator<X>) : this(IterableOf(items))
+
+    constructor(items: Iterable<X>) : this(CollectionOf(items))
 }
