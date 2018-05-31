@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.internal.empty
+import nnl.rocks.kactoos.internal.isEmpty
 
 /**
  * Skipped iterator.
@@ -24,7 +24,7 @@ class Skipped<out T : Any>(
     }
 
     override fun next(): T {
-        if (empty()) {
+        if (isEmpty()) {
             throw NoSuchElementException(
                 "The iterator doesn't have items any more"
             )

@@ -36,7 +36,7 @@ class Filtered<X : Any>(
     {
         Iterable {
             Filtered<X>(
-                fnc, src.iterator(), LinkedList<X>()
+                fnc, src.iterator()
             )
         }
     }

@@ -1,3 +1,3 @@
 package nnl.rocks.kactoos.internal
 
-internal fun Iterator<*>.empty(): Boolean = ! hasNext()
+internal fun Iterator<*>.isEmpty(): Boolean = ! hasNext()

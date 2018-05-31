@@ -8,15 +8,13 @@ Filtered iterator.
 
 You can use it in order to create a declarative/lazy
 version of a filtered collection/iterable. For example,
-this code will create a list of two strings "hello" and "world":
+this code will create a list of two strings "red" and "fox":
 
 ```
-Iterator<String>; list = new Filtered<>(
-  new ArrayOf<>(
-    "hey", "hello", "world"
-  ).iterator(),
-  input -> input.length() > 4
-);
+val filtered = Filtered(
+    { input -> input.length < 4 }
+    IteratorOf("red", "lazy", "fox")
+)
 ```
 
 There is no thread-safety guarantee.
@@ -25,10 +23,6 @@ There is no thread-safety guarantee.
 
 `X` - Type of item
 
-**See Also**
-
-[Filtered](./index.md)
-
 **Since**
 0.1
 
@@ -36,7 +30,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Filtered(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>, iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)``Filtered(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>, iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>, buffer: `[`Queue`](http://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)`<`[`X`](index.md#X)`>)`<br>Filtered iterator. |
+| [&lt;init&gt;](-init-.md) | `Filtered(func: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`X`](index.md#X)`, `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>, iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)`<br>`Filtered(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>, iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`X`](index.md#X)`>)` |
 
 ### Functions
 

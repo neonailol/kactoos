@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.internal.empty
+import nnl.rocks.kactoos.internal.isEmpty
 import java.util.NoSuchElementException
 
 /**
@@ -28,7 +28,7 @@ class Limited<out T>(
     override fun hasNext(): Boolean = consumed < restrict && origin.hasNext()
 
     override fun next(): T {
-        if (empty()) {
+        if (isEmpty()) {
             throw NoSuchElementException("No more elements.")
         }
         ++ consumed

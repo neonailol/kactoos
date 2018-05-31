@@ -1,6 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.internal.empty
+import nnl.rocks.kactoos.internal.isEmpty
 import nnl.rocks.kactoos.list.ListOf
 
 /**
@@ -23,7 +23,7 @@ class Joined<T : Any>(items: Iterable<Iterator<T>>) : Iterator<T> {
     constructor(vararg items: Iterator<T>) : this(ListOf(items.iterator()))
 
     override fun hasNext(): Boolean {
-        while (current.empty() && iterators.hasNext()) {
+        while (current.isEmpty() && iterators.hasNext()) {
             current = iterators.next()
         }
         return current.hasNext()
