@@ -10,7 +10,9 @@ package nnl.rocks.kactoos.list
  */
 class Joined<X : Any> : ListEnvelope<X> {
 
-    constructor(src: Iterable<List<X>>) : super({ src.flatMap { it } })
+    constructor(iterable: Iterable<List<X>>) : super({ iterable.flatMap { it } })
 
-    constructor(vararg src: List<X>) : this(ListOf(src.iterator()))
+    constructor(vararg lists: List<X>) : this(ListOf(lists.iterator()))
+
+    constructor(first: X, vararg lists: List<X>) : this(ListOf(first), *lists)
 }
