@@ -28,6 +28,7 @@ There is no thread-safety guarantee.
 | Name | Summary |
 |---|---|
 | [Joined](../-joined/index.md) | `class Joined<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`X`](../-joined/index.md#X)`>`<br>Joined list. |
+| [ListNoNulls](../-list-no-nulls/index.md) | `class ListNoNulls<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`T`](../-list-no-nulls/index.md#T)`>`<br>A decorator of [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) that tolerates no NULLs. |
 | [ListOf](../-list-of/index.md) | `class ListOf<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`T`](../-list-of/index.md#T)`>`<br>Iterable as [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html). |
 | [Mapped](../-mapped/index.md) | `class Mapped<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`Y`](../-mapped/index.md#Y)`>`<br>Mapped list. |
 | [Shuffled](../-shuffled/index.md) | `class Shuffled<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`T`](../-shuffled/index.md#T)`>`<br>Shuffled list. |

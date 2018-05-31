@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 `origin` - Original list iterator.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

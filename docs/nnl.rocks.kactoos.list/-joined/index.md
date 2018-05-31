@@ -13,7 +13,7 @@ There is no thread-safety guarantee.
 `X` - Type of source item
 
 **Since**
-0.20
+0.4
 
 ### Constructors
 

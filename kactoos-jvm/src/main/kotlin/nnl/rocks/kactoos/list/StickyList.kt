@@ -2,8 +2,6 @@ package nnl.rocks.kactoos.list
 
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.scalar.StickyScalar
-import java.util.Collections
-import java.util.LinkedList
 
 /**
  * List decorator that goes through the list only once.
@@ -15,19 +13,15 @@ import java.util.LinkedList
  * @param X Type of item
  * @since 0.4
  */
-class StickyList<X : Any>(list: Collection<X>) : ListEnvelope<X>(
-    StickyScalar<List<X>>(
-         {
-            val temp = LinkedList<X>()
-            temp.addAll(list)
-            Collections.unmodifiableList<X>(temp)
-        }
-    )
-) {
+class StickyList<X : Any> : ListEnvelope<X> {
 
-    constructor(vararg items: X) : this(IterableOf<X>(items.iterator()))
+    constructor(collection: Collection<X>) : super(StickyScalar { collection.toList() })
 
-    constructor(items: Iterable<X>) : this(ListOf<X>(items))
+    constructor(vararg items: X) : this(IterableOf(items.iterator()))
 
-    constructor(items: Iterator<X>) : this(ListOf<X>(items))
+    constructor(items: Iterable<X>) : this(ListOf(items))
+
+    constructor(items: Iterator<X>) : this(ListOf(items))
+
+
 }
