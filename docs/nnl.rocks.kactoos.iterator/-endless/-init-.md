@@ -9,11 +9,13 @@ Iterator that never ends.
 
 If you need to repeat certain amount of time, use [Repeated](../-repeated/index.md).
 
+If you need endless cycle from iterator, use [Cycled](../-cycled/index.md).
+
 ### Parameters
 
-`T` - Element type
+`T` - Element type.
 
-`element` - Element to repeat
+`element` - Element to repeat.
 
 **Since**
 0.3

@@ -129,9 +129,6 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.LengthOf](../nnl.rocks.kactoos.iterable/-length-of/index.md) | Length of iterable. |
 | [nnl.rocks.kactoos.iterator.LengthOf](../nnl.rocks.kactoos.iterator/-length-of/index.md) | Length of iterator. |
 | [nnl.rocks.kactoos.io.LengthOf](../nnl.rocks.kactoos.io/-length-of/index.md) | Length of [Input](../nnl.rocks.kactoos/-input/index.md). |
-| [nnl.rocks.kactoos.collection.Limited](../nnl.rocks.kactoos.collection/-limited/index.md) | Limited collection. |
-| [nnl.rocks.kactoos.iterable.Limited](../nnl.rocks.kactoos.iterable/-limited/index.md) | Limited iterable. |
-| [nnl.rocks.kactoos.iterator.Limited](../nnl.rocks.kactoos.iterator/-limited/index.md) | Limited origin. |
 | [nnl.rocks.kactoos.list.ListEnvelope](../nnl.rocks.kactoos.list/-list-envelope/index.md) | List envelope. |
 | [nnl.rocks.kactoos.list.ListIterator](../nnl.rocks.kactoos.list/-list-iterator/index.md) | Iterator of the list. |
 | [nnl.rocks.kactoos.list.ListNoNulls](../nnl.rocks.kactoos.list/-list-no-nulls/index.md) | A decorator of [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) that tolerates no NULLs. |

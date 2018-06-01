@@ -8,8 +8,10 @@ import nnl.rocks.kactoos.Scalar
  *
  * If you need to repeat certain amount of time, use [Repeated].
  *
- * @param T Element type
- * @param element Element to repeat
+ * If you need endless cycle from iterator, use [Cycled].
+ *
+ * @param T Element type.
+ * @param element Element to repeat.
  * @since 0.3
  */
 class Endless<T : Any>(private val element: KScalar<T>) : Iterator<T> {
