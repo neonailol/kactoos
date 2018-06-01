@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 `Y` - Type of input
 
 **Since**
-0.22
+0.4
 
 ### Constructors
 

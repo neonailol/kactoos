@@ -3,16 +3,10 @@
 # &lt;init&gt;
 
 `BiFuncOf(fnc: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`
-`BiFuncOf(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Z`](index.md#Z)`>)`
 
 ### Parameters
 
-`fnc` - The func`BiFuncOf(result: `[`Z`](index.md#Z)`)`
-
-### Parameters
-
-`result` - The result`BiFuncOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, result: `[`Z`](index.md#Z)`)`
-`BiFuncOf(proc: `[`BiProc`](../../nnl.rocks.kactoos/-bi-proc/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, result: `[`Z`](index.md#Z)`)`
+`fnc` - The func`BiFuncOf(proc: `[`BiProc`](../../nnl.rocks.kactoos/-bi-proc/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, result: `[`Z`](index.md#Z)`)`
 
 ### Parameters
 

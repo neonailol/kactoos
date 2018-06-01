@@ -19,5 +19,8 @@ Apply it.
 `Exception` - If fails
 
 **Return**
-The result [Z](index.md#Z)
+The result [Z](../../nnl.rocks.kactoos/-bi-func/index.md#Z)
+
+**Since**
+0.2
 

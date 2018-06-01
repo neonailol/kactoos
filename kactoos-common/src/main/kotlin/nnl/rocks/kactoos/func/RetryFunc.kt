@@ -15,7 +15,7 @@ import nnl.rocks.kactoos.Proc
  * @param exit Exit condition, returns TRUE if there is no more reason to try
  * @param X Type of input
  * @param Y Type of output
- * @since 0.8
+ * @since 0.4
  */
 class RetryFunc<X : Any, Y : Any>(
     private val func: Func<X, Y>,
@@ -24,7 +24,7 @@ class RetryFunc<X : Any, Y : Any>(
 
     /**
      * @param proc Func original
-     * @since 0.12
+     * @since 0.4
      */
     constructor(
         proc: Proc<X>,
@@ -34,7 +34,7 @@ class RetryFunc<X : Any, Y : Any>(
     /**
      * @param proc Func original
      * @param attempts Maximum number of attempts
-     * @since 0.12
+     * @since 0.4
      */
     constructor(
         proc: Proc<X>,
@@ -45,7 +45,7 @@ class RetryFunc<X : Any, Y : Any>(
     /**
      * @param proc Func original
      * @param ext Exit condition, returns TRUE if there is no more reason to try
-     * @since 0.12
+     * @since 0.4
      */
     constructor(
         proc: Proc<X>,
@@ -64,20 +64,14 @@ class RetryFunc<X : Any, Y : Any>(
 
     constructor(func: Func<X, Y>) : this(func, 3)
 
-    @Suppress("TooGenericExceptionCaught")
     override fun apply(input: X): Y {
         var attempt = 0
         var error: Exception = IllegalArgumentException(
             "An immediate exit, didn't have a chance to try at least once"
         )
-        while (! this.exit.apply(attempt)) {
+        while (! exit.apply(attempt)) {
             try {
-                return this.func.apply(input)
-            } catch (ex: InterruptedException) {
-                Thread.currentThread().interrupt()
-                error = ex
-                break
-                // @checkstyle IllegalCatchCheck (1 line)
+                return func.apply(input)
             } catch (ex: Exception) {
                 error = ex
             }

@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.*
 import nnl.rocks.kactoos.func.BiFuncOf
+import nnl.rocks.kactoos.func.BiProcOf
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
@@ -42,7 +43,7 @@ class AndWithIndexFunc<X : Any>(
     constructor(
         proc: Proc<X>,
         vararg src: X
-    ) : this(BiFuncOf<X, Int, Boolean>(proc, true), *src)
+    ) : this(BiFuncOf<X, Int, Boolean>(BiProcOf({ x: X, _: Any -> proc.exec(x) }), true), *src)
 
     /**
      * @param func Func to map

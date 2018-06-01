@@ -17,6 +17,6 @@ import nnl.rocks.kactoos.scalar.True
 class UncheckedProc<in X : Any>(private val proc: Proc<X>) : Proc<X> {
 
     override fun exec(input: X) {
-        UncheckedFunc(FuncOf(this.proc, True())).apply(input)
+        UncheckedFunc(FuncOf(proc, True())).apply(input)
     }
 }

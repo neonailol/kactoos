@@ -1,8 +1,8 @@
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.BiFunc
+import nnl.rocks.kactoos.KBiFunc
 import nnl.rocks.kactoos.map.MapEntry
-import nnl.rocks.kactoos.scalar.StickyScalar
 
 /**
  * Func that accepts two arguments and caches previously calculated values
@@ -18,16 +18,20 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  * @param X Type of input
  * @param Y Type of input
  * @param Z Type of output
+ * @param func Original function
+ * @param size Cache size
  * @see StickyScalar
  *
- * @since 0.13
+ * @since 0.4
  */
 class StickyBiFunc<in X : Any, in Y : Any, out Z : Any>(
-    private val func: BiFunc<X, Y, Z>,
+    private val func: KBiFunc<X, Y, Z>,
     private val size: Int
 ) : BiFunc<X, Y, Z> {
 
-    constructor(func: BiFunc<X, Y, Z>) : this(func, Integer.MAX_VALUE)
+    constructor(func: BiFunc<X, Y, Z>) : this({ first, second -> func.apply(first, second) }, Int.MAX_VALUE)
+
+    constructor(func: BiFunc<X, Y, Z>, size: Int) : this({ first, second -> func.apply(first, second) }, size)
 
     /**
      * Cache.
@@ -43,7 +47,7 @@ class StickyBiFunc<in X : Any, in Y : Any, out Z : Any>(
             cache.remove(cache.keys.iterator().next())
         }
         if (! cache.containsKey(key)) {
-            cache[key] = func.apply(first, second)
+            cache[key] = func(first, second)
         }
         return cache[key] !!
     }

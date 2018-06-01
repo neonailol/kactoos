@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `proc` - The proc
 
 **Since**
-0.12
+0.4
 
 ### Constructors
 

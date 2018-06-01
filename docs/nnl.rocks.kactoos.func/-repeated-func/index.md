@@ -18,7 +18,7 @@ If [times](#) is equal or less than zero [RepeatedFunc.apply](apply.md) will ret
 `Y` - Type of output
 
 **Since**
-0.6
+0.4
 
 ### Constructors
 

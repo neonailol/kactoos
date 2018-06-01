@@ -11,7 +11,7 @@
 `max` - How many times
 
 **Since**
-0.12
+0.4
 
 `RepeatedFunc(func: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, times: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
@@ -29,5 +29,5 @@ If [times](#) is equal or less than zero [RepeatedFunc.apply](apply.md) will ret
 `Y` - Type of output
 
 **Since**
-0.6
+0.4
 

@@ -21,13 +21,13 @@ Composed function.
 `Z` - Type of output.
 
 **Since**
-0.7
+0.4
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `ChainedFunc(bfr: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, atr: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)``ChainedFunc(before: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, functions: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Y`](index.md#Y)`, `[`Y`](index.md#Y)`>>, after: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`<br>Composed function. |
+| [&lt;init&gt;](-init-.md) | `ChainedFunc(before: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, after: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)``ChainedFunc(before: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, functions: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`Y`](index.md#Y)`, `[`Y`](index.md#Y)`>>, after: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`<br>Composed function. |
 
 ### Functions
 

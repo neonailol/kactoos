@@ -18,8 +18,6 @@ class FuncOf<in X : Any, out Y : Any>(
     private val func: KFunc<X, Y>
 ) : Func<X, Y> {
 
-    constructor(result: Y) : this({ result })
-
     constructor(
         proc: Proc<X>,
         result: Y
@@ -31,4 +29,10 @@ class FuncOf<in X : Any, out Y : Any>(
     )
 
     override fun apply(input: X): Y = func(input)
+
+    companion object {
+        operator fun <Y : Any> invoke(
+            result: Y
+        ) = FuncOf({ _: Any -> result })
+    }
 }

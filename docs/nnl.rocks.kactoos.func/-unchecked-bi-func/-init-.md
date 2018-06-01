@@ -17,5 +17,5 @@ There is no thread-safety guarantee.
 `Z` - Type of output
 
 **Since**
-0.13
+0.4
 

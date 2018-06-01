@@ -11,7 +11,7 @@ import nnl.rocks.kactoos.KBiProc
  * @param X Type of input
  * @param Y Type of input
  * @param proc The proc
- * @since 0.12
+ * @since 0.4
  */
 class BiProcOf<in X : Any, in Y : Any>(
     private val proc: KBiProc<X, Y>

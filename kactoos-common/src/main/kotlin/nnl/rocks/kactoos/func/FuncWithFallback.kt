@@ -7,8 +7,6 @@ import nnl.rocks.kactoos.Func
  *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @param X Type of input
  * @param Y Type of output
  * @param func The func
@@ -27,16 +25,12 @@ class FuncWithFallback<in X : Any, out Y : Any>(
         fallback: Func<Throwable, Y>
     ) : this(func, fallback, FuncOf { input -> input })
 
-    @Suppress("TooGenericExceptionCaught")
     override fun apply(input: X): Y {
         val result: Y = try {
-            this.func.apply(input)
-        } catch (ex: InterruptedException) {
-            Thread.currentThread().interrupt()
-            this.fallback.apply(ex)
+            func.apply(input)
         } catch (ex: Throwable) {
-            this.fallback.apply(ex)
+            fallback.apply(ex)
         }
-        return this.follow.apply(result)
+        return follow.apply(result)
     }
 }

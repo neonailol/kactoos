@@ -19,7 +19,7 @@ There is no thread-safety guarantee.
 `Y` - Type of output
 
 **Since**
-0.8
+0.4
 
 ### Constructors
 

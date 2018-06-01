@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.BiFunc
  * @param X Type of first input
  * @param Y Type of second input
  * @param Z Type of output
- * @since 0.24
+ * @since 0.4
  */
 class SolidBiFunc<in X : Any, in Y : Any, out Z : Any>(
     private val func: BiFunc<X, Y, Z>
@@ -24,7 +24,5 @@ class SolidBiFunc<in X : Any, in Y : Any, out Z : Any>(
     override fun apply(
         first: X,
         second: Y
-    ): Z {
-        return this.func.apply(first, second)
-    }
+    ): Z = func.apply(first, second)
 }

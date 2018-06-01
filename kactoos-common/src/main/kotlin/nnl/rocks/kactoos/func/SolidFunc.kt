@@ -9,7 +9,7 @@ import nnl.rocks.kactoos.Func
  *
  * @param X Type of input
  * @param Y Type of output
- * @since 0.24
+ * @since 0.4
  */
 class SolidFunc<in X : Any, out Y : Any>(
     private val func: SyncFunc<X, Y>
@@ -22,7 +22,7 @@ class SolidFunc<in X : Any, out Y : Any>(
 
     constructor(
         fnc: Func<X, Y>
-    ) : this(SyncFunc(StickyFunc(fnc, Integer.MAX_VALUE)))
+    ) : this(SyncFunc(StickyFunc(fnc, Int.MAX_VALUE)))
 
-    override fun apply(input: X): Y = this.func.apply(input)
+    override fun apply(input: X): Y = func.apply(input)
 }

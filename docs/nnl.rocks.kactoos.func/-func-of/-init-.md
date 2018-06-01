@@ -2,7 +2,6 @@
 
 # &lt;init&gt;
 
-`FuncOf(result: `[`Y`](index.md#Y)`)`
 `FuncOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, result: `[`Y`](index.md#Y)`)``FuncOf(func: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>)`
 
 Represents many possible inputs as [Func](../../nnl.rocks.kactoos/-func/index.md).

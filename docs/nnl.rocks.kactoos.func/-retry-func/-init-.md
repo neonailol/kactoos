@@ -9,7 +9,7 @@
 `proc` - Func original
 
 **Since**
-0.12
+0.4
 
 `RetryFunc(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, result: `[`Y`](index.md#Y)`, attempts: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
@@ -20,7 +20,7 @@
 `attempts` - Maximum number of attempts
 
 **Since**
-0.12
+0.4
 
 `RetryFunc(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, result: `[`Y`](index.md#Y)`, ext: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>)`
 
@@ -31,7 +31,7 @@
 `ext` - Exit condition, returns TRUE if there is no more reason to try
 
 **Since**
-0.12
+0.4
 
 `RetryFunc(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, attempts: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
 
@@ -56,5 +56,5 @@ There is no thread-safety guarantee.
 `Y` - Type of output
 
 **Since**
-0.8
+0.4
 

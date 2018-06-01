@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KFunc
-import nnl.rocks.kactoos.func.UncheckedFunc
 import nnl.rocks.kactoos.internal.Temporary
 import nnl.rocks.kactoos.internal.isEmpty
 
@@ -42,11 +41,11 @@ class Filtered<out X : Any> private constructor(
     ) : this(iterator, { x -> func.apply(x) }, Temporary())
 
     override fun hasNext(): Boolean {
-        val fnc = UncheckedFunc(func)
+        val fnc = func
         if (buffer.isEmpty()) {
             while (this.iterator.hasNext()) {
                 val obj = this.iterator.next()
-                if (fnc.apply(obj)) {
+                if (fnc(obj)) {
                     buffer.put(obj)
                     break
                 }

@@ -15,7 +15,7 @@ Objects of this class are thread safe.
 `Y` - Type of output
 
 **Since**
-0.24
+0.4
 
 ### Constructors
 

@@ -11,7 +11,7 @@ import nnl.rocks.kactoos.Proc
  * @param times How many times.
  * @param X Type of input
  * @param Y Type of output
- * @since 0.6
+ * @since 0.4
  */
 class RepeatedFunc<X : Any, Y : Any>(
     private val func: Func<X, Y>,
@@ -21,7 +21,7 @@ class RepeatedFunc<X : Any, Y : Any>(
     /**
      * @param proc Proc
      * @param max How many times
-     * @since 0.12
+     * @since 0.4
      */
     constructor(
         proc: Proc<X>,
@@ -31,7 +31,7 @@ class RepeatedFunc<X : Any, Y : Any>(
 
     override fun apply(input: X): Y {
         return when {
-            this.times <= 0 -> throw IllegalArgumentException("The number of repetitions must be at least 1")
+            times <= 0 -> throw IllegalArgumentException("The number of repetitions must be at least 1")
             else -> (0 until times).map { func.apply(input) }.reduce { _, y -> y }
         }
     }
