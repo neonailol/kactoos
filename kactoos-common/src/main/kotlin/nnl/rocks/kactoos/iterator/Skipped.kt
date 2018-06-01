@@ -23,12 +23,8 @@ class Skipped<out T : Any>(
         return origin.hasNext()
     }
 
-    override fun next(): T {
-        if (isEmpty()) {
-            throw NoSuchElementException(
-                "The iterator doesn't have items any more"
-            )
-        }
-        return origin.next()
+    override fun next(): T = when {
+        isEmpty() -> throw NoSuchElementException("The iterator doesn't have items any more")
+        else -> origin.next()
     }
 }
