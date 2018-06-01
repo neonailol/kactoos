@@ -4,18 +4,18 @@
 
 `class IteratorOfFloats : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`>`
 
-[Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns the `float`s as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)s.
+[Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) over [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)s.
 
 There is no thread-safety guarantee.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `IteratorOfFloats(vararg items: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`)``IteratorOfFloats(items: `[`FloatArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float-array/index.html)`, position: `[`AtomicInteger`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html)` = AtomicInteger(0))`<br>[Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns the `float`s as [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)s. |
+| [&lt;init&gt;](-init-.md) | `IteratorOfFloats(vararg items: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`)` |
 
 ### Functions
 

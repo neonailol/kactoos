@@ -3,24 +3,22 @@ package nnl.rocks.kactoos.iterator
 import nnl.rocks.kactoos.internal.isEmpty
 
 /**
- * Iterator that returns the set of elements.
+ * [Iterator] over [Char]s.
  *
  * There is no thread-safety guarantee.
  *
- * @param X Type of item
- * @param items Items to iterate
- * @since 0.3
+ * @since 0.4
  */
-class IteratorOf<out X : Any> private constructor(
-    private val items: Array<out X>,
+class IteratorOfChars private constructor(
+    private val items: CharArray,
     private var position: Int
-) : Iterator<X> {
+) : Iterator<Char> {
 
-    constructor(vararg items: X) : this(items, 0)
+    constructor(vararg items: Char) : this(items, 0)
 
     override fun hasNext(): Boolean = position < items.size
 
-    override fun next(): X = when {
+    override fun next(): Char = when {
         isEmpty() -> throw NoSuchElementException("The iterator doesn't have any more items")
         else -> items[position ++]
     }
