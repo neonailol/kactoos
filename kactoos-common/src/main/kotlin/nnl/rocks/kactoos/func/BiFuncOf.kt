@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.*
-import java.util.concurrent.Callable
 
 /**
  * Represents many possible inputs as [BiFunc].
@@ -12,16 +11,16 @@ import java.util.concurrent.Callable
  * @param Y Type of input
  * @param Z Type of output
  * @param func Func
- * @since 0.20
+ * @since 0.4
  */
 class BiFuncOf<in X : Any, in Y : Any, out Z : Any>(
-    private val func: BiFunc<X, Y, Z>
+    private val func: KBiFunc<X, Y, Z>
 ) : BiFunc<X, Y, Z> {
 
     /**
      * @param fnc The func
      */
-    constructor(fnc: KBiFunc<X, Y, Z>) : this(Lambda(fnc))
+    constructor(fnc: BiFunc<X, Y, Z>) : this({ first, second -> fnc.apply(first, second) })
 
     /**
      * @param result The result
@@ -52,20 +51,6 @@ class BiFuncOf<in X : Any, in Y : Any, out Z : Any>(
     ) : this({ first: X, second: Y -> proc.exec(first, second); result })
 
     /**
-     * @param callable The callable
-     */
-    constructor(callable: Callable<Z>) : this({ _: X, _: Y -> callable.call() })
-
-    /**
-     * @param runnable The runnable
-     */
-    constructor(
-        runnable: Runnable,
-        input: X,
-        result: Z
-    ) : this(CallableOf<X, Z>(runnable, input, result))
-
-    /**
      * Apply it.
      * @param first The first argument
      * @param second The second argument
@@ -75,22 +60,5 @@ class BiFuncOf<in X : Any, in Y : Any, out Z : Any>(
     override fun apply(
         first: X,
         second: Y
-    ): Z = func.apply(first, second)
-
-    private class Lambda<in X : Any, in Y : Any, out Z : Any>(
-        private val func: KBiFunc<X, Y, Z>
-    ) : BiFunc<X, Y, Z> {
-
-        /**
-         * Apply it.
-         * @param first The first argument
-         * @param second The second argument
-         * @return The result of type [Z]
-         * @throws Exception If fails
-         */
-        override fun apply(
-            first: X,
-            second: Y
-        ): Z = func(first, second)
-    }
+    ): Z = func(first, second)
 }

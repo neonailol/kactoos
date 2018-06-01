@@ -22,7 +22,7 @@ class Sorted<T : Comparable<T>> : ListEnvelope<T> {
 
     constructor(src: Iterator<T>) : this(Iterable { src })
 
-    constructor(src: Iterable<T>) : this(Comparator({ left: T, right: T -> left.compareTo(right) }), ListOf(src))
+    constructor(src: Iterable<T>) : this(naturalOrder(), ListOf(src))
 
     constructor(cmp: Comparator<T>, vararg src: T) : this(cmp, ListOf(src.iterator()))
 }

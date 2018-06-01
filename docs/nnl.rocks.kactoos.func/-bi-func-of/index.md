@@ -19,13 +19,13 @@ There is no thread-safety guarantee.
 `func` - Func
 
 **Since**
-0.20
+0.4
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `BiFuncOf(fnc: `[`KBiFunc`](../../nnl.rocks.kactoos/-k-bi-func.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`<br>`BiFuncOf(result: `[`Z`](index.md#Z)`)`<br>`BiFuncOf(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Z`](index.md#Z)`>)`<br>`BiFuncOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, result: `[`Z`](index.md#Z)`)`<br>`BiFuncOf(proc: `[`BiProc`](../../nnl.rocks.kactoos/-bi-proc/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, result: `[`Z`](index.md#Z)`)`<br>`BiFuncOf(callable: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`Z`](index.md#Z)`>)`<br>`BiFuncOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`, input: `[`X`](index.md#X)`, result: `[`Z`](index.md#Z)`)``BiFuncOf(func: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`<br>Represents many possible inputs as [BiFunc](../../nnl.rocks.kactoos/-bi-func/index.md). |
+| [&lt;init&gt;](-init-.md) | `BiFuncOf(fnc: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`<br>`BiFuncOf(result: `[`Z`](index.md#Z)`)`<br>`BiFuncOf(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Z`](index.md#Z)`>)`<br>`BiFuncOf(proc: `[`Proc`](../../nnl.rocks.kactoos/-proc/index.md)`<`[`X`](index.md#X)`>, result: `[`Z`](index.md#Z)`)`<br>`BiFuncOf(proc: `[`BiProc`](../../nnl.rocks.kactoos/-bi-proc/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`>, result: `[`Z`](index.md#Z)`)``BiFuncOf(func: `[`KBiFunc`](../../nnl.rocks.kactoos/-k-bi-func.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`<br>Represents many possible inputs as [BiFunc](../../nnl.rocks.kactoos/-bi-func/index.md). |
 
 ### Functions
 

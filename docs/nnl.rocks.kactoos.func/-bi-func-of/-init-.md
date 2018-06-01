@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`BiFuncOf(fnc: `[`KBiFunc`](../../nnl.rocks.kactoos/-k-bi-func.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`
+`BiFuncOf(fnc: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`
 `BiFuncOf(fnc: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`X`](index.md#X)`, `[`Z`](index.md#Z)`>)`
 
 ### Parameters
@@ -18,15 +18,7 @@
 
 `proc` - The proc
 
-`result` - Result to return`BiFuncOf(callable: `[`Callable`](http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)`<`[`Z`](index.md#Z)`>)`
-
-### Parameters
-
-`callable` - The callable`BiFuncOf(runnable: `[`Runnable`](http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)`, input: `[`X`](index.md#X)`, result: `[`Z`](index.md#Z)`)`
-
-### Parameters
-
-`runnable` - The runnable`BiFuncOf(func: `[`BiFunc`](../../nnl.rocks.kactoos/-bi-func/index.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`
+`result` - Result to return`BiFuncOf(func: `[`KBiFunc`](../../nnl.rocks.kactoos/-k-bi-func.md)`<`[`X`](index.md#X)`, `[`Y`](index.md#Y)`, `[`Z`](index.md#Z)`>)`
 
 Represents many possible inputs as [BiFunc](../../nnl.rocks.kactoos/-bi-func/index.md).
 
@@ -43,5 +35,5 @@ There is no thread-safety guarantee.
 `func` - Func
 
 **Since**
-0.20
+0.4
 
