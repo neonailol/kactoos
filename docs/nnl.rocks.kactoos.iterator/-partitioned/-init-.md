@@ -15,5 +15,5 @@ Iterator implementation for [Iterator](https://kotlinlang.org/api/latest/jvm/std
 `T` - Partitions value type
 
 **Since**
-0.29
+0.4
 
