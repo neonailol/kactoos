@@ -20,7 +20,7 @@ import nnl.rocks.kactoos.map.MapEntry
  * @param Z Type of output
  * @param func Original function
  * @param size Cache size
- * @see StickyScalar
+ * @see nnl.rocks.kactoos.scalar.StickyScalar
  *
  * @since 0.4
  */
@@ -29,14 +29,11 @@ class StickyBiFunc<in X : Any, in Y : Any, out Z : Any>(
     private val size: Int
 ) : BiFunc<X, Y, Z> {
 
+    private val cache: MutableMap<Map.Entry<X, Y>, Z> = mutableMapOf()
+
     constructor(func: BiFunc<X, Y, Z>) : this({ first, second -> func.apply(first, second) }, Int.MAX_VALUE)
 
     constructor(func: BiFunc<X, Y, Z>, size: Int) : this({ first, second -> func.apply(first, second) }, size)
-
-    /**
-     * Cache.
-     */
-    private val cache: MutableMap<Map.Entry<X, Y>, Z> = mutableMapOf()
 
     override fun apply(
         first: X,
@@ -44,7 +41,7 @@ class StickyBiFunc<in X : Any, in Y : Any, out Z : Any>(
     ): Z {
         val key = MapEntry(first, second)
         while (cache.size > size) {
-            cache.remove(cache.keys.iterator().next())
+            cache.remove(cache.keys.first())
         }
         if (! cache.containsKey(key)) {
             cache[key] = func(first, second)

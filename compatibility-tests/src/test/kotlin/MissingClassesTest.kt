@@ -20,4 +20,17 @@ class MissingClassesTest {
         assertTrue("Missing $count classes") { count.get() == 0 }
     }
 
+    @Test
+    fun additionalClasses() {
+        val cactoosTypes = CactoosClasses()
+        val kactoosTypes = KactoosClasses()
+        val count = AtomicInteger(0)
+        kactoosTypes.forEach {
+            if (cactoosTypes.contains(it).not()) {
+                println(it)
+                count.incrementAndGet()
+            }
+        }
+    }
+
 }

@@ -17,17 +17,17 @@ import nnl.rocks.kactoos.iterable.Mapped
 class LowestOf<T : Comparable<T>> private constructor(private val result: KScalar<T>) : Scalar<T> {
 
     constructor(iterable: Iterable<KScalar<T>>) : this(
-        iterable.minBy { it() } !!
+        iterable.minBy { it() } ?: throw NoSuchElementException()
     )
 
     constructor(vararg items: T) : this(
-        Mapped<T, KScalar<T>>(
-            FuncOf { item -> { item } },
-            *items
+        Mapped(
+            FuncOf { item: T -> { item } },
+            items.iterator()
         )
     )
 
-    constructor(vararg scalars: KScalar<T>) : this(IterableOf<KScalar<T>>(*scalars))
+    constructor(vararg scalars: KScalar<T>) : this(IterableOf(scalars.iterator()))
 
-    override fun invoke(): T = result.invoke()
+    override fun invoke(): T = result()
 }

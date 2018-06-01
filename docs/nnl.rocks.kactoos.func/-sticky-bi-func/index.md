@@ -28,7 +28,7 @@ There is no thread-safety guarantee.
 
 **See Also**
 
-[StickyScalar](#)
+[nnl.rocks.kactoos.scalar.StickyScalar](../../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md)
 
 **Since**
 0.4

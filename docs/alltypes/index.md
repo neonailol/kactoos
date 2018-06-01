@@ -220,7 +220,6 @@ Kactoos.
 | [nnl.rocks.kactoos.func.StickyFunc](../nnl.rocks.kactoos.func/-sticky-func/index.md) | Func that caches previously calculated values and doesn't recalculate again. |
 | [nnl.rocks.kactoos.io.StickyInput](../nnl.rocks.kactoos.io/-sticky-input/index.md) | Input that reads only once. |
 | [nnl.rocks.kactoos.iterable.StickyIterable](../nnl.rocks.kactoos.iterable/-sticky-iterable/index.md) | Iterable that returns the same set of elements, always. |
-| [nnl.rocks.kactoos.iterator.StickyIterator](../nnl.rocks.kactoos.iterator/-sticky-iterator/index.md) | Iterator that returns the same set of elements always. |
 | [nnl.rocks.kactoos.list.StickyList](../nnl.rocks.kactoos.list/-sticky-list/index.md) | List decorator that goes through the list only once. |
 | [nnl.rocks.kactoos.map.StickyMap](../nnl.rocks.kactoos.map/-sticky-map/index.md) | Read-only [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) decorator that goes through the map only once. |
 | [nnl.rocks.kactoos.scalar.StickyScalar](../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md) | Cached version of a KScalar. |
