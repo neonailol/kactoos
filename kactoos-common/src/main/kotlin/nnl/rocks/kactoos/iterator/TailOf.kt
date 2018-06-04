@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.list.ListOf
  */
 class TailOf<T : Any>(num: Int, iterator: Iterator<T>) : Iterator<T> {
 
-    private val origin: Iterator<T> = ListOf(iterator).takeLast(num).asReversed().iterator()
+    private val origin: Iterator<T> = ListOf(iterator).takeLast(num).iterator()
 
     override fun hasNext(): Boolean = origin.hasNext()
 

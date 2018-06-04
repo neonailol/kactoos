@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `num` - Number of tail elements
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 
