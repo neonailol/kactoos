@@ -20,10 +20,3 @@ There is no thread-safety guarantee.
 | Name | Summary |
 |---|---|
 | [&lt;init&gt;](-init-.md) | `Shuffled(iterator: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)` |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [hasNext](has-next.md) | `fun hasNext(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [next](next.md) | `fun next(): `[`T`](index.md#T) |

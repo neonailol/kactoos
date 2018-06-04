@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.scalar.StickyScalar
 
 /**
@@ -12,19 +13,17 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  * @param T Element type
  * @since 0.4
  */
-class Shuffled<out T : Any> private constructor(private val scalar: KScalar<Iterator<T>>) : Iterator<T> {
+class Shuffled<out T : Any> private constructor(
+    private val scalar: KScalar<Iterator<T>>
+) : Iterator<T> by scalar() {
 
     private constructor(scalar: Scalar<Iterator<T>>) : this({ scalar() })
 
     constructor(iterator: Iterator<T>) : this(
         StickyScalar<Iterator<T>>(
             {
-                Iterable { iterator }.shuffled().iterator()
+                IterableOf(iterator).shuffled().iterator()
             }
         )
     )
-
-    override fun hasNext(): Boolean = scalar().hasNext()
-
-    override fun next(): T = scalar().next()
 }
