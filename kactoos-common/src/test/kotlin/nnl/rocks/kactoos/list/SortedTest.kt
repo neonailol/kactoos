@@ -24,4 +24,15 @@ class SortedTest {
         assertEquals("the", sorted[2])
     }
 
+    @Test
+    fun sortsVarArgsUsingComparator() {
+        val sorted = Sorted(
+            Comparator { a, b -> a.first().compareTo(b.first()) },
+            "the", "red", "fox"
+        )
+        assertEquals("fox", sorted[0])
+        assertEquals("red", sorted[1])
+        assertEquals("the", sorted[2])
+    }
+
 }

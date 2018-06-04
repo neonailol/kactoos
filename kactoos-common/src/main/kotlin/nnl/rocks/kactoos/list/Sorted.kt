@@ -18,7 +18,7 @@ class Sorted<T : Comparable<T>> : ListEnvelope<T> {
 
     constructor(cmp: Comparator<T>, src: Collection<T>) : super({ src.sortedWith(cmp) })
 
-    constructor(vararg src: T) : this(ListOf(src.iterator()))
+    constructor(vararg src: T) : this(src.iterator())
 
     constructor(src: Iterator<T>) : this(Iterable { src })
 
