@@ -5,8 +5,6 @@ import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Joined
 import nnl.rocks.kactoos.iterable.Mapped
-import java.util.Collections
-import java.util.HashMap
 
 /**
  * Iterable as [Map].
@@ -26,44 +24,34 @@ import java.util.HashMap
  *
  * @since 0.3
  */
-class MapOf<X : Any, Y : Any>(entries: Iterable<Map.Entry<X, Y>>) : MapEnvelope<X, Y>(
-     {
-        val temp = HashMap<X, Y>(0)
-        for ((key, value) in entries) {
-            temp[key] = value
-        }
-        Collections.unmodifiableMap<X, Y>(temp)
-    }
-) {
+class MapOf<X : Any, Y : Any>(
+    entries: Iterable<Map.Entry<X, Y>>
+) : MapEnvelope<X, Y>({ entries.map { entry: Map.Entry<X, Y> -> entry.key to entry.value }.toMap() }) {
 
     /**
      * @param list List of entries
      */
-    constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf<Map.Entry<X, Y>>(list.iterator()))
+    constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf(list.iterator()))
 
     /**
      * @param src The map to extend
      * @param list List of entries
-     * @since 0.12
+     * @since 0.4
      */
     constructor(
         src: Map<X, Y>,
         vararg list: Map.Entry<X, Y>
-    ) : this(src, IterableOf<Map.Entry<X, Y>>(list.iterator()))
+    ) : this(src, IterableOf(list.iterator()))
 
     /**
      * @param src Map to extend
      * @param list List of the entries
-     * @since 0.12
+     * @since 0.4
      */
     constructor(
         src: Map<X, Y>,
         list: Iterable<Map.Entry<X, Y>>
-    ) : this(
-        Joined<Map.Entry<X, Y>>(
-            src.entries, list
-        )
-    )
+    ) : this(Joined(src.entries, list))
 
     /**
      * @param entries List of the entries
@@ -95,7 +83,7 @@ class MapOf<X : Any, Y : Any>(entries: Iterable<Map.Entry<X, Y>>) : MapEnvelope<
          * @param key Func to create key
          * @param value Func to create value
          * @param Z Type of items in the list
-         * @since 0.12
+         * @since 0.4
          */
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             key: Func<Z, X>,
@@ -110,7 +98,7 @@ class MapOf<X : Any, Y : Any>(entries: Iterable<Map.Entry<X, Y>>) : MapEnvelope<
          * @param list List of items
          * @param entry Func to create entry
          * @param Z Type of items in the list
-         * @since 0.11
+         * @since 0.4
          */
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             entry: Func<Z, Map.Entry<X, Y>>,
@@ -124,7 +112,7 @@ class MapOf<X : Any, Y : Any>(entries: Iterable<Map.Entry<X, Y>>) : MapEnvelope<
          * @param list List of items
          * @param entry Func to create entry
          * @param Z Type of items in the list
-         * @since 0.11
+         * @since 0.4
          */
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             entry: Func<Z, Map.Entry<X, Y>>,
