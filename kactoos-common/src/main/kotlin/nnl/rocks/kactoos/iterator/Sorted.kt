@@ -23,19 +23,14 @@ class Sorted<T : Any> private constructor(
         iterator: Iterator<T>
     ) : this(
         StickyScalar<Iterator<T>>(
-            {
-                val items = mutableListOf<T>()
-                while (iterator.hasNext()) {
-                    items.add(iterator.next())
-                }
-                items.sortWith(comparator)
-                items.iterator()
-            }
+            { iterator.asSequence().sortedWith(comparator).iterator() }
         )
     )
 
     companion object {
-        operator fun <T : Comparable<T>> invoke(items: Iterator<T>): Sorted<T> = Sorted(Comparator.naturalOrder<T>(), items)
+        operator fun <T : Comparable<T>> invoke(
+            items: Iterator<T>
+        ): Sorted<T> = Sorted(naturalOrder(), items)
     }
 
 }
