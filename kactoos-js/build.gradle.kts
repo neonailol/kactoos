@@ -17,7 +17,7 @@ dependencies {
 configurations {
     node {
         isDownload = true
-        setNodeVersion("9.11.1")
+        setNodeVersion("10.3.0")
     }
 }
 
@@ -50,9 +50,9 @@ tasks {
     }
 
     "installQunit"(ExecuteNpmTask::class) {
-        inputs.property("qunitVersion", "2.6.0")
+        inputs.property("qunitVersion", "2.6.1")
         outputs.dir(file("node_modules/qunit"))
-        setArgs(listOf("install", "qunit@2.6.0"))
+        setArgs(listOf("install", "qunit@2.6.1"))
     }
 
     "runQunit"(ExecuteNodeScriptTask::class) {

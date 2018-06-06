@@ -3,12 +3,13 @@ import org.gradle.api.publish.maven.MavenPom
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.gradle.LinkMapping
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     maven
     id("kotlin-platform-jvm")
     id("org.jetbrains.dokka") version "0.9.17"
-    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC7"
+    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC7-2"
     id("org.jlleitschuh.gradle.ktlint") version "4.0.0"
 }
 
@@ -22,7 +23,7 @@ dependencies {
 
 configurations {
     detekt {
-        version = "1.0.0.RC7"
+        version = "1.0.0.RC7-2"
         defaultProfile(
             Action {
                 input = "$projectDir/src/main/kotlin"
@@ -68,6 +69,14 @@ tasks {
         useTestNG()
     }
 
+    withType<KotlinCompile> {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            javaParameters = true
+            verbose = true
+            freeCompilerArgs = listOf("-Xjsr305=strict")
+        }
+    }
 }
 
 tasks["assemble"].dependsOn("dokka")

@@ -1,5 +1,4 @@
 import org.gradle.kotlin.dsl.kotlin
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     base
@@ -46,15 +45,6 @@ allprojects {
                 events("passed", "failed")
             }
         }
-
-        withType<KotlinCompile> {
-            kotlinOptions {
-                jvmTarget = "1.8"
-                javaParameters = true
-                verbose = true
-                freeCompilerArgs = listOf("-Xjsr305=strict")
-            }
-        }
     }
 
     dependencies {
@@ -66,5 +56,5 @@ allprojects {
 
 tasks.withType<Wrapper> {
     distributionType = Wrapper.DistributionType.ALL
-    gradleVersion = "4.8"
+    gradleVersion = "4.7"
 }
