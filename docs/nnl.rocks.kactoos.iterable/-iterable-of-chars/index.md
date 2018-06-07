@@ -13,4 +13,4 @@ Iterable of characters.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `IterableOfChars(vararg chars: `[`Char`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html)`)`<br>Iterable of characters. |
+| [&lt;init&gt;](-init-.md) | `IterableOfChars(vararg values: `[`Char`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html)`)`<br>Iterable of characters. |

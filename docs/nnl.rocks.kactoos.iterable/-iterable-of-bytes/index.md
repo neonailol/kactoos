@@ -13,4 +13,4 @@ Iterable of bytes.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `IterableOfBytes(vararg bytes: `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)`)`<br>Iterable of bytes. |
+| [&lt;init&gt;](-init-.md) | `IterableOfBytes(vararg values: `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)`)`<br>Iterable of bytes. |

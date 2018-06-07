@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`IterableOfChars(vararg chars: `[`Char`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html)`)`
+`IterableOfChars(vararg values: `[`Char`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html)`)`
 
 Iterable of characters.
 

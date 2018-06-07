@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`IterableOfBytes(vararg bytes: `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)`)`
+`IterableOfBytes(vararg values: `[`Byte`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)`)`
 
 Iterable of bytes.
 
