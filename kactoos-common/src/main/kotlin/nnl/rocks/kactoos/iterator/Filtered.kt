@@ -41,11 +41,10 @@ class Filtered<out X : Any> private constructor(
     ) : this(iterator, { x -> func.apply(x) }, Temporary())
 
     override fun hasNext(): Boolean {
-        val fnc = func
         if (buffer.isEmpty()) {
-            while (this.iterator.hasNext()) {
-                val obj = this.iterator.next()
-                if (fnc(obj)) {
+            while (iterator.hasNext()) {
+                val obj = iterator.next()
+                if (func(obj)) {
                     buffer.put(obj)
                     break
                 }
@@ -55,11 +54,9 @@ class Filtered<out X : Any> private constructor(
     }
 
     override fun next(): X {
-        if (isEmpty()) {
-            throw NoSuchElementException(
-                "No more elements that fit the condition"
-            )
+        when {
+            isEmpty() -> throw NoSuchElementException("No more elements that fit the condition")
+            else -> return buffer.poll()
         }
-        return buffer.poll()
     }
 }
