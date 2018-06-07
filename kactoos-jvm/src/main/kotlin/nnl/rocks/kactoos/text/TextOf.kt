@@ -270,7 +270,7 @@ class TextOf private constructor(origin: KScalar<String>) : TextEnvelope(origin)
                 ", ",
                 Mapped<Any, String>(
                     fnc = FuncOf { it.toString() },
-                    iter = iterable
+                    iterable = iterable
                 )
             ).asString()
         }

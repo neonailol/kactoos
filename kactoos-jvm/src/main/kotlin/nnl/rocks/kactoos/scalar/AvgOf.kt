@@ -42,29 +42,29 @@ class AvgOf private constructor(value: KScalar<Double>) : NumberEnvelope(value) 
 
     constructor(vararg src: Int) : this(
         Mapped(
-            FuncOf { number: Int -> { number } },
-            Iterable { src.iterator() }
+            { number: Int -> { number } },
+            src.asIterable()
         )
     )
 
     constructor(vararg src: Long) : this(
         Mapped(
-            FuncOf { number: Long -> { number } },
-            Iterable { src.iterator() }
+            { number: Long -> { number } },
+            src.asIterable()
         )
     )
 
     constructor(vararg src: Double) : this(
         Mapped(
-            FuncOf { number: Double -> { number } },
-            Iterable { src.iterator() }
+            { number: Double -> { number } },
+            src.asIterable()
         )
     )
 
     constructor(vararg src: Float) : this(
         Mapped(
-            FuncOf { number: Float -> { number } },
-            Iterable { src.iterator() }
+            { number: Float -> { number } },
+            src.asIterable()
         )
     )
 
