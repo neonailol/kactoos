@@ -1,5 +1,7 @@
 package nnl.rocks.kactoos.iterable
 
+import nnl.rocks.kactoos.iterator.HeadOf
+
 /**
  * Head portion of the iterable.
  *
@@ -13,7 +15,7 @@ package nnl.rocks.kactoos.iterable
 class HeadOf<T : Any>(
     num: Int,
     iterable: Iterable<T>
-) : IterableEnvelope<T>({ Iterable { nnl.rocks.kactoos.iterator.HeadOf<T>(num, iterable.iterator()) } }) {
+) : IterableEnvelope<T>(IterableOf(HeadOf(num, iterable.iterator()))) {
 
-    constructor(num: Int, vararg src: T) : this(num, IterableOf<T>(*src))
+    constructor(num: Int, vararg src: T) : this(num, src.asIterable())
 }
