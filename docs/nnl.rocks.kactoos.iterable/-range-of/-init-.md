@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`RangeOf(min: `[`T`](index.md#T)`, max: `[`T`](index.md#T)`, incrementor: `[`Func`](../../nnl.rocks.kactoos/-func/index.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`>)`
+`RangeOf(min: `[`T`](index.md#T)`, max: `[`T`](index.md#T)`, incrementor: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`>)`
 
 Iterable implementation to model range functionality.
 
@@ -11,5 +11,5 @@ Iterable implementation to model range functionality.
 `T` - Range value type
 
 **Since**
-1.0
+0.4
 
