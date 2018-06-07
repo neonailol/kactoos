@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.collection.CollectionOf
 import nnl.rocks.kactoos.iterator.Joined
 
 /**
@@ -13,14 +12,9 @@ import nnl.rocks.kactoos.iterator.Joined
  */
 class Joined<T : Any> : IterableEnvelope<T> {
 
-    constructor(items: Iterable<Iterable<T>>) : super(
-        {
-            val iterators = items.mapTo(ArrayList()) { it.iterator() }
-            CollectionOf(Joined(iterators))
-        }
-    )
+    constructor(items: Iterable<Iterable<T>>) : super(IterableOf(Joined(items.map { it.iterator() })))
 
-    constructor(vararg items: Iterable<T>) : this(IterableOf(items.iterator()))
+    constructor(vararg items: Iterable<T>) : this(items.asIterable())
 
     constructor(items: Iterator<Iterable<T>>) : this(IterableOf(items))
 }
