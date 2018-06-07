@@ -3,17 +3,4 @@
 # &lt;init&gt;
 
 `Partitioned(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
-
-### Parameters
-
-`size` - The partitions size.
-
-`iterable` - The source [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html).`Partitioned(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, vararg items: `[`T`](index.md#T)`)`
-
-Ctor.
-
-### Parameters
-
-`size` - The partitions size.
-
-`items` - The source items.
+`Partitioned(size: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, vararg items: `[`T`](index.md#T)`)`
