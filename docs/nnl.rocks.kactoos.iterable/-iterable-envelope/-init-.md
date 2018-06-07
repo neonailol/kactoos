@@ -2,8 +2,8 @@
 
 # &lt;init&gt;
 
-`IterableEnvelope(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`
-`IterableEnvelope(iterable: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>>)``IterableEnvelope(iterable: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>>)`
+`IterableEnvelope(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
+`IterableEnvelope(iterable: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>>)``IterableEnvelope(iterable: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>>)`
 
 Iterable envelope.
 
@@ -11,7 +11,7 @@ There is no thread-safety guarantee.
 
 ### Parameters
 
-`X` - Type of item
+`T` - Type of item
 
 **Since**
 0.5

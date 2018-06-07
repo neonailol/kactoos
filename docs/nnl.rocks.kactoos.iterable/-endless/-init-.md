@@ -6,12 +6,13 @@
 
 Endless iterable.
 
-If you need to repeat certain amount of time,
-use [Repeated](../-repeated/index.md).
+If you need to repeat certain amount of time, use [Repeated](../-repeated/index.md).
 
 ### Parameters
 
 `T` - Element type
+
+`item` - Item to repeat
 
 **Since**
 0.4

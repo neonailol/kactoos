@@ -8,14 +8,14 @@ import nnl.rocks.kactoos.Scalar
  *
  * There is no thread-safety guarantee.
  *
- * @param X Type of item
+ * @param T Type of item
  * @since 0.5
  */
-open class IterableEnvelope<out X : Any>(
-    private val iterable: KScalar<Iterable<X>>
-) : Iterable<X> by iterable() {
+open class IterableEnvelope<out T : Any>(
+    private val iterable: KScalar<Iterable<T>>
+) : Iterable<T> by iterable() {
 
-    constructor(iterable: Iterable<X>) : this({ iterable })
+    constructor(iterable: Iterable<T>) : this({ iterable })
 
-    constructor(iterable: Scalar<Iterable<X>>) : this({ iterable() })
+    constructor(iterable: Scalar<Iterable<T>>) : this({ iterable() })
 }
