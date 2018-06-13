@@ -14,12 +14,12 @@ Objects of this class are thread safe.
 
 `func` - Cached func
 
+**Since**
+0.4
+
 **See Also**
 
 [StickyScalar](../-sticky-scalar/index.md)
 
 [SyncScalar](../-sync-scalar/index.md)
-
-**Since**
-0.5
 

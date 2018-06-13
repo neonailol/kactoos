@@ -13,13 +13,15 @@ import nnl.rocks.kactoos.func.SolidFunc
  *
  * @param T Type of result
  * @param func Cached func
+ * @since 0.4
  * @see StickyScalar
  * @see SyncScalar
- * @since 0.5
  */
-class SolidScalar<out T : Any>(private val func: Func<Boolean, T>) : Scalar<T> {
+class SolidScalar<out T : Any>(
+    private val func: Func<Boolean, T>
+) : Scalar<T> {
 
     constructor(scalar: KScalar<T>) : this(SolidFunc(FuncOf { _ -> scalar() }))
 
-    override fun invoke(): T = this.func.apply(true)
+    override fun invoke(): T = func.apply(true)
 }

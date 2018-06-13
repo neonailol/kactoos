@@ -19,4 +19,4 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `StickyIterable(vararg src: `[`X`](index.md#X)`)`<br>Ctor.`StickyIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`<br>Iterable that returns the same set of elements, always. |
+| [&lt;init&gt;](-init-.md) | `StickyIterable(vararg src: `[`X`](index.md#X)`)``StickyIterable(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`<br>Iterable that returns the same set of elements, always. |
