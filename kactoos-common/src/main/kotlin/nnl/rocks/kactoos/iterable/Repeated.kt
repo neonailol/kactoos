@@ -10,23 +10,14 @@ import nnl.rocks.kactoos.iterator.Repeated
  *
  * @param T Element type
  * @since 0.1
+ * @param total The total number of repetitions
+ * @param item The element to repeat
  */
 class Repeated<T : Any>(
     total: Int,
     item: KScalar<T>
-) : IterableEnvelope<T>(
-     {
-        Iterable {
-            Repeated<T>(total, item)
-        }
-    }
-) {
+) : IterableEnvelope<T>({ IterableOf { Repeated(total, item) } }) {
 
-    /**
-     * Ctor.
-     * @param total The total number of repetitions
-     * @param elm The element to repeat
-     */
     constructor(
         total: Int,
         elm: T
