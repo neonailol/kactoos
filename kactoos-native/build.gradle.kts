@@ -11,6 +11,7 @@ configure<KonanArtifactContainer> {
     }
 
     program("kactoos-native-test") {
+        enableMultiplatform(true)
         srcDir("src/test/kotlin")
         commonSourceSets("test")
         libraries {
@@ -24,8 +25,4 @@ dependencies {
     "expectedBy"(project(":kactoos-common"))
 }
 
-tasks {
-    "test"(Task::class) {
-        dependsOn("run")
-    }
-}
+tasks["check"].finalizedBy("run")

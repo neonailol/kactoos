@@ -21,7 +21,7 @@ class Joined<out T : Any> private constructor(
 
     override fun hasNext(): Boolean {
         while (current.isEmpty() && iterators.hasNext()) {
-            current = iterators.next()
+            current = Immutable(iterators.next())
         }
         return current.hasNext()
     }

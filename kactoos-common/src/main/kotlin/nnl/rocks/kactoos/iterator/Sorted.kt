@@ -23,7 +23,7 @@ class Sorted<T : Any> private constructor(
         iterator: Iterator<T>
     ) : this(
         StickyScalar<Iterator<T>>(
-            { iterator.asSequence().sortedWith(comparator).iterator() }
+            { Immutable(iterator.asSequence().sortedWith(comparator).iterator()) }
         )
     )
 

@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.iterator.Joined
  */
 class Joined<T : Any> : IterableEnvelope<T> {
 
-    constructor(items: Iterable<Iterable<T>>) : super(IterableOf(Joined(items.map { it.iterator() })))
+    constructor(items: Iterable<Iterable<T>>) : super(IterableOf { Joined(items.map { it.iterator() }) })
 
     constructor(vararg items: Iterable<T>) : this(items.asIterable())
 

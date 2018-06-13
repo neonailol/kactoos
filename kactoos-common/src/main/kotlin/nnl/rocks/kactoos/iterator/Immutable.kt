@@ -1,5 +1,7 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.internal.isEmpty
+
 /**
  * Iterator that doesn't allow removal of elements.
  *
@@ -9,4 +11,10 @@ package nnl.rocks.kactoos.iterator
  * @param iterator Encapsulated iterator.
  * @since 0.4
  */
-class Immutable<out T : Any>(private val iterator: Iterator<T>) : Iterator<T> by iterator
+class Immutable<out T : Any>(private val iterator: Iterator<T>) : Iterator<T> by iterator {
+
+    override fun next(): T = when {
+        isEmpty() -> throw NoSuchElementException("The iterator doesn't have any more items")
+        else -> iterator.next()
+    }
+}

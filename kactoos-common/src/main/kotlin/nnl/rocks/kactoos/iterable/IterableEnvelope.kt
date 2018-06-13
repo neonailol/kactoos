@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.iterator.Immutable
 
 /**
  * Iterable envelope.
@@ -18,4 +19,6 @@ open class IterableEnvelope<out T : Any>(
     constructor(iterable: Iterable<T>) : this({ iterable })
 
     constructor(iterable: Scalar<Iterable<T>>) : this({ iterable() })
+
+    override fun iterator(): Iterator<T> = Immutable(iterable().iterator())
 }
