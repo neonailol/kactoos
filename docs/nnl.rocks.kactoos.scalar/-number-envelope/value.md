@@ -2,15 +2,7 @@
 
 # value
 
-`open fun value(): `[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)
+`private val value: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Double`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html)`>`
 
-Overrides [Scalar.value](../../nnl.rocks.kactoos/-scalar/value.md)
-
-Convert it to the value.
-
-**Return**
-The value
-
-**Since**
-0.2
+Double scalar
 
