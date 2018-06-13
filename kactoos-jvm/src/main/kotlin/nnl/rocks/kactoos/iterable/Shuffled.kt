@@ -5,28 +5,16 @@ import nnl.rocks.kactoos.iterator.Shuffled
 /**
  * Shuffled iterable.
  *
- *
  * There is no thread-safety guarantee.
  *
- *
- *
  * @param T Element type
- * @since 0.20
+ * @since 0.4
  */
-class Shuffled<T : Any>(src: Iterable<T>) : IterableEnvelope<T>(
-    { Iterable { Shuffled<T>(src.iterator()) } }
-) {
+class Shuffled<T : Any>(
+    src: Iterable<T>
+) : IterableEnvelope<T>({ IterableOf { Shuffled(src.iterator()) } }) {
 
-    /**
-     * @param src The underlying iterable
-     * @since 0.23
-     */
-    @SafeVarargs
-    constructor(vararg src: T) : this(IterableOf<T>(src.iterator()))
+    constructor(vararg src: T) : this(IterableOf { src.iterator() })
 
-    /**
-     * @param src The underlying iterable
-     * @since 0.23
-     */
-    constructor(src: Iterator<T>) : this(IterableOf<T>(src))
+    constructor(src: Iterator<T>) : this(IterableOf { src })
 }
