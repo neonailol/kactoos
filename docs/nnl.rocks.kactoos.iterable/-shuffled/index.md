@@ -13,7 +13,7 @@ There is no thread-safety guarantee.
 `T` - Element type
 
 **Since**
-0.20
+0.4
 
 ### Constructors
 

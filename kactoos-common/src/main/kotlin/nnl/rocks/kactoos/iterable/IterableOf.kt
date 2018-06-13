@@ -13,9 +13,7 @@ import nnl.rocks.kactoos.Scalar
  */
 class IterableOf<X : Any> : IterableEnvelope<X> {
 
-    constructor(scalar: KScalar<Iterator<X>>) : super(
-        Iterable { scalar() }
-    )
+    constructor(scalar: KScalar<Iterator<X>>) : super(Iterable { scalar() })
 
     constructor(scalar: Scalar<Iterator<X>>) : this({ scalar() })
 
