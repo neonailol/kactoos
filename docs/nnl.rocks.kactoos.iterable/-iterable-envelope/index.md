@@ -21,6 +21,12 @@ There is no thread-safety guarantee.
 |---|---|
 | [&lt;init&gt;](-init-.md) | `IterableEnvelope(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`<br>`IterableEnvelope(iterable: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>>)``IterableEnvelope(iterable: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>>)`<br>Iterable envelope. |
 
+### Functions
+
+| Name | Summary |
+|---|---|
+| [iterator](iterator.md) | `open fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>` |
+
 ### Inheritors
 
 | Name | Summary |

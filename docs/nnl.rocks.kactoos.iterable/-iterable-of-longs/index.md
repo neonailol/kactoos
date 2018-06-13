@@ -14,3 +14,9 @@ Iterable of long values.
 | Name | Summary |
 |---|---|
 | [&lt;init&gt;](-init-.md) | `IterableOfLongs(vararg values: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)`)`<br>Iterable of long values. |
+
+### Inherited Functions
+
+| Name | Summary |
+|---|---|
+| [iterator](../-iterable-envelope/iterator.md) | `open fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](../-iterable-envelope/index.md#T)`>` |

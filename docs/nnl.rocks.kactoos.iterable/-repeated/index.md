@@ -24,3 +24,9 @@ If you need to repeat endlessly, use [Endless](../-endless/index.md).
 | Name | Summary |
 |---|---|
 | [&lt;init&gt;](-init-.md) | `Repeated(total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, elm: `[`T`](index.md#T)`)``Repeated(total: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, item: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`<br>Repeat an element. |
+
+### Inherited Functions
+
+| Name | Summary |
+|---|---|
+| [iterator](../-iterable-envelope/iterator.md) | `open fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](../-iterable-envelope/index.md#T)`>` |

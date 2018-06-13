@@ -14,3 +14,9 @@ Iterable of float values.
 | Name | Summary |
 |---|---|
 | [&lt;init&gt;](-init-.md) | `IterableOfFloats(vararg values: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`)`<br>Iterable of float values. |
+
+### Inherited Functions
+
+| Name | Summary |
+|---|---|
+| [iterator](../-iterable-envelope/iterator.md) | `open fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](../-iterable-envelope/index.md#T)`>` |

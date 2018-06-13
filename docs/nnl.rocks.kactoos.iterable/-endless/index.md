@@ -22,3 +22,9 @@ If you need to repeat certain amount of time, use [Repeated](../-repeated/index.
 | Name | Summary |
 |---|---|
 | [&lt;init&gt;](-init-.md) | `Endless(item: `[`T`](index.md#T)`)`<br>Endless iterable. |
+
+### Inherited Functions
+
+| Name | Summary |
+|---|---|
+| [iterator](../-iterable-envelope/iterator.md) | `open fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](../-iterable-envelope/index.md#T)`>` |

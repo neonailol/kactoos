@@ -20,3 +20,9 @@ There is no thread-safety guarantee.
 | Name | Summary |
 |---|---|
 | [&lt;init&gt;](-init-.md) | `Reversed(vararg src: `[`X`](index.md#X)`)``Reversed(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`X`](index.md#X)`>)`<br>Reverse iterable. |
+
+### Inherited Functions
+
+| Name | Summary |
+|---|---|
+| [iterator](../-iterable-envelope/iterator.md) | `open fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](../-iterable-envelope/index.md#T)`>` |
