@@ -12,5 +12,5 @@ import nnl.rocks.kactoos.iterator.RangeOf
 class RangeOf<T : Comparable<T>>(
     min: T,
     max: T,
-    incrementor: KFunc<T, T>
-) : IterableEnvelope<T>({ Iterable { RangeOf(min, max, incrementor) } })
+    incrementer: KFunc<T, T>
+) : IterableEnvelope<T>({ IterableOf(RangeOf(min, max, incrementer)) })

@@ -5,7 +5,7 @@ import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
 
 plugins {
     id("kotlin-platform-js")
-    id("com.liferay.node") version "4.3.4"
+    id("com.liferay.node") version "4.3.5"
 }
 
 dependencies {
@@ -17,7 +17,7 @@ dependencies {
 configurations {
     node {
         isDownload = true
-        setNodeVersion("10.3.0")
+        setNodeVersion("10.4.1")
     }
 }
 

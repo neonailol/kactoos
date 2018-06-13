@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.internal.isEmpty
 class RangeOf<T : Comparable<T>>(
     private val min: T,
     private val max: T,
-    private val incrementor: KFunc<T, T>
+    private val incrementer: KFunc<T, T>
 ) : Iterator<T> {
 
     private var value = min
@@ -25,7 +25,7 @@ class RangeOf<T : Comparable<T>>(
 
             else -> {
                 val result = value
-                value = incrementor(value)
+                value = incrementer(value)
                 return result
             }
         }

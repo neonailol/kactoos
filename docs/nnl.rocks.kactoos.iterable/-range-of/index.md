@@ -17,4 +17,4 @@ Iterable implementation to model range functionality.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `RangeOf(min: `[`T`](index.md#T)`, max: `[`T`](index.md#T)`, incrementor: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`>)`<br>Iterable implementation to model range functionality. |
+| [&lt;init&gt;](-init-.md) | `RangeOf(min: `[`T`](index.md#T)`, max: `[`T`](index.md#T)`, incrementer: `[`KFunc`](../../nnl.rocks.kactoos/-k-func.md)`<`[`T`](index.md#T)`, `[`T`](index.md#T)`>)`<br>Iterable implementation to model range functionality. |
