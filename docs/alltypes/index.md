@@ -185,7 +185,7 @@ Kactoos.
 | [nnl.rocks.kactoos.func.RetryFunc](../nnl.rocks.kactoos.func/-retry-func/index.md) | Func that will try a few times before throwing an exception. |
 | [nnl.rocks.kactoos.scalar.RetryScalar](../nnl.rocks.kactoos.scalar/-retry-scalar/index.md) | Func that will try a few times before throwing an exception. |
 | [nnl.rocks.kactoos.collection.Reversed](../nnl.rocks.kactoos.collection/-reversed/index.md) | Reversed collection. |
-| [nnl.rocks.kactoos.iterable.Reversed](../nnl.rocks.kactoos.iterable/-reversed/index.md) | Reverse iterator. |
+| [nnl.rocks.kactoos.iterable.Reversed](../nnl.rocks.kactoos.iterable/-reversed/index.md) | Reverse iterable. |
 | [nnl.rocks.kactoos.list.Reversed](../nnl.rocks.kactoos.list/-reversed/index.md) | Reversed list. |
 | [nnl.rocks.kactoos.text.ReversedText](../nnl.rocks.kactoos.text/-reversed-text/index.md) | Reverse the Text. |
 | [nnl.rocks.kactoos.text.RotatedText](../nnl.rocks.kactoos.text/-rotated-text/index.md) | Rotate (circular shift) a String of shift characters. |
