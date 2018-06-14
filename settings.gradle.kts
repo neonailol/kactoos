@@ -13,7 +13,15 @@ pluginManagement {
 
 rootProject.name = "kactoos"
 
-include("kactoos-common", "kactoos-jvm", "kactoos-js", "kactoos-native", "compatibility-tests", "cactoos")
+include(
+    "kactoos-test",
+    "kactoos-common",
+    "kactoos-jvm",
+    "kactoos-js",
+    "kactoos-native",
+    "compatibility-tests",
+    "cactoos"
+)
 
-val cactoos = rootProject.children.first { it.name == "cactoos" }
+val cactoos: ProjectDescriptor = rootProject.children.first { it.name == "cactoos" }
 cactoos.buildFileName = "../build.cactoos.gradle.kts"
