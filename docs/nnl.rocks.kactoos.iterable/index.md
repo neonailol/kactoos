@@ -9,6 +9,7 @@ Iterables.
 | Name | Summary |
 |---|---|
 | [Cycled](-cycled/index.md) | `class Cycled<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](-iterable-envelope/index.md)`<`[`T`](-cycled/index.md#T)`>`<br>Cycled Iterable. |
+| [EmptyIterable](-empty-iterable/index.md) | `class EmptyIterable<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](-empty-iterable/index.md#T)`>`<br>Iterable that returns [EmptyIterator](../nnl.rocks.kactoos.iterator/-empty-iterator/index.md) |
 | [Endless](-endless/index.md) | `class Endless<out T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](-iterable-envelope/index.md)`<`[`T`](-endless/index.md#T)`>`<br>Endless iterable. |
 | [Filtered](-filtered/index.md) | `class Filtered<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](-iterable-envelope/index.md)`<`[`X`](-filtered/index.md#X)`>`<br>Filtered iterable. |
 | [HeadOf](-head-of/index.md) | `class HeadOf<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`IterableEnvelope`](-iterable-envelope/index.md)`<`[`T`](-head-of/index.md#T)`>`<br>Head portion of the iterable. |

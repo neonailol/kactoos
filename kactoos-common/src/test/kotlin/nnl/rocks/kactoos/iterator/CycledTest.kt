@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.iterable.EmptyIterable
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
@@ -9,7 +10,7 @@ class CycledTest {
 
     @Test
     fun cyclesIterable() {
-        val cycled = Cycled(listOf(0, 1, 2))
+        val cycled = Cycled { listOf(0, 1, 2) }
         for (i in 0 .. 10) {
             assertTrue(cycled.hasNext())
             assertEquals(i % 3, cycled.next())
@@ -19,7 +20,7 @@ class CycledTest {
     @Test
     fun cantCycleEmptyIterator() {
         assertFailsWith(NoSuchElementException::class) {
-            Cycled { EmptyIterator<Unit>() }.next()
+            Cycled(EmptyIterable<Unit>()).next()
         }
     }
 

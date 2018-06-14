@@ -10,9 +10,7 @@ import nnl.rocks.kactoos.iterator.Cycled
  * @param T Type of item
  * @since 0.4
  */
-class Cycled<T : Any>(itr: Iterable<T>) : IterableEnvelope<T>(IterableOf(Cycled(itr))) {
+class Cycled<T : Any>(itr: Iterable<T>) : IterableEnvelope<T>(IterableOf(Cycled { itr })) {
 
-    constructor(vararg itr: T) : this(IterableOf(*itr))
-
-    constructor(itr: Iterator<T>) : this(IterableOf(itr))
+    constructor(vararg args: T) : this(args.asIterable())
 }

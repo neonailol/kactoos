@@ -2,8 +2,7 @@
 
 # &lt;init&gt;
 
-`Cycled(vararg itr: `[`T`](index.md#T)`)`
-`Cycled(itr: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)``Cycled(itr: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
+`Cycled(vararg args: `[`T`](index.md#T)`)``Cycled(itr: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
 
 Cycled Iterable.
 

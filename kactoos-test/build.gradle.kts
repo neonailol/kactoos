@@ -1,5 +1,6 @@
 plugins {
     id("kotlin-platform-common")
+    id("org.jetbrains.kotlin.pill.PillConfigurablePlugin")
 }
 
 dependencies {

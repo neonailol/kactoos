@@ -14,7 +14,6 @@ pluginManagement {
 rootProject.name = "kactoos"
 
 include(
-    "kactoos-test",
     "kactoos-common",
     "kactoos-jvm",
     "kactoos-js",

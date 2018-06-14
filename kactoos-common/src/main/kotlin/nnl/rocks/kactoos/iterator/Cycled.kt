@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.internal.isEmpty
 
 /**
@@ -10,15 +11,15 @@ import nnl.rocks.kactoos.internal.isEmpty
  * @param T Type of item
  * @since 0.3
  */
-class Cycled<out T : Any>(private val origin: () -> Iterator<T>) : Iterator<T> {
+class Cycled<out T : Any>(private val origin: KScalar<Iterable<T>>) : Iterator<T> {
 
-    constructor(origin: Iterable<T>) : this({ origin.iterator() })
+    constructor(iterable: Iterable<T>) : this({ iterable })
 
     private var iterator: Iterator<T> = EmptyIterator()
 
     override fun hasNext(): Boolean {
         if (this.iterator.isEmpty()) {
-            this.iterator = origin()
+            this.iterator = origin().iterator()
         }
         return this.iterator.hasNext()
     }
