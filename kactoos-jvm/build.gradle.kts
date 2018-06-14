@@ -46,7 +46,24 @@ configurations {
 
 tasks {
 
+    "cleanDocs"(Task::class) {
+        delete("$rootDir/docs/alltypes")
+        delete("$rootDir/docs/nnl.rocks.kactoos")
+        delete("$rootDir/docs/nnl.rocks.kactoos.bytes")
+        delete("$rootDir/docs/nnl.rocks.kactoos.collection")
+        delete("$rootDir/docs/nnl.rocks.kactoos.func")
+        delete("$rootDir/docs/nnl.rocks.kactoos.io")
+        delete("$rootDir/docs/nnl.rocks.kactoos.iterable")
+        delete("$rootDir/docs/nnl.rocks.kactoos.iterator")
+        delete("$rootDir/docs/nnl.rocks.kactoos.list")
+        delete("$rootDir/docs/nnl.rocks.kactoos.map")
+        delete("$rootDir/docs/nnl.rocks.kactoos.scalar")
+        delete("$rootDir/docs/nnl.rocks.kactoos.text")
+        delete("$rootDir/docs/nnl.rocks.kactoos.time")
+    }
+
     "moveDocs"(Copy::class) {
+        dependsOn("cleanDocs")
         from("build/dokka/kactoos-jvm")
         into("../docs")
     }
