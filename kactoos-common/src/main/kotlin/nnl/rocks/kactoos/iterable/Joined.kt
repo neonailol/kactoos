@@ -16,5 +16,4 @@ class Joined<T : Any> : IterableEnvelope<T> {
 
     constructor(vararg items: Iterable<T>) : this(items.asIterable())
 
-    constructor(items: Iterator<Iterable<T>>) : this(IterableOf(items))
 }

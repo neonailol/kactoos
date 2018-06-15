@@ -50,7 +50,7 @@ class PropertiesOf(
     /**
      * @param entries The map with properties
      */
-    constructor(vararg entries: Map.Entry<*, *>) : this(IterableOf<Map.Entry<*, *>>(entries.iterator()))
+    constructor(vararg entries: Map.Entry<*, *>) : this(IterableOf<Map.Entry<*, *>>(entries.asIterable()))
 
     /**
      * @param entries The map with properties

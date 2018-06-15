@@ -23,12 +23,4 @@ class CollectionOfTest {
         )
     }
 
-    @Test
-    fun collectionFromIterator() {
-        val listOf = listOf("one", "two", "three")
-        assertTrue(
-            CollectionOf(listOf.iterator()).containsAll(listOf),
-            "CollectionOf does not contain all values from original list"
-        )
-    }
 }

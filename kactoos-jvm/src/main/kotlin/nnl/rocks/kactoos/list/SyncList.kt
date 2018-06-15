@@ -34,9 +34,7 @@ class SyncList<X : Any> : ListEnvelope<X> {
         )
     )
 
-    constructor(vararg items: X) : this(IterableOf(items.iterator()))
+    constructor(vararg items: X) : this(IterableOf(items.asIterable()))
 
     constructor(items: Iterable<X>) : this(ListOf(items))
-
-    constructor(items: Iterator<X>) : this(ListOf(items))
 }

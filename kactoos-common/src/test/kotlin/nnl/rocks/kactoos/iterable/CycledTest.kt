@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.iterable
 
-import nnl.rocks.kactoos.iterator.IteratorOf
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue

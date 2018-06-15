@@ -1,7 +1,5 @@
 package nnl.rocks.kactoos.list
 
-import nnl.rocks.kactoos.iterable.IterableOf
-
 /**
  * Iterable as [List].
  *
@@ -20,7 +18,5 @@ class ListOf<T : Any> : ListEnvelope<T> {
 
     constructor(src: Iterable<T>) : super({ src.toList() })
 
-    constructor(src: Iterator<T>) : this(IterableOf(src))
-
-    constructor(vararg array: T) : this(IterableOf(array.iterator()))
+    constructor(vararg args: T) : this(args.asIterable())
 }

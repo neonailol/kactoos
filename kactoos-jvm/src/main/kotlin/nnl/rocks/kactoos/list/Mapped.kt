@@ -21,11 +21,6 @@ class Mapped<X : Any, Y : Any> : ListEnvelope<Y> {
 
     constructor(
         fnc: Func<X, Y>,
-        src: Iterator<X>
-    ) : this(fnc, ListOf(src))
-
-    constructor(
-        fnc: Func<X, Y>,
         src: Iterable<X>
     ) : this(fnc, ListOf(src))
 

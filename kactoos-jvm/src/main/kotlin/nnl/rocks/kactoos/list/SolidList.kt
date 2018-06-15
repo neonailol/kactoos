@@ -18,9 +18,7 @@ class SolidList<X : Any> : ListEnvelope<X> {
         SolidScalar<List<X>>({ SyncList(StickyList(list)) })
     )
 
-    constructor(vararg items: X) : this(IterableOf(items.iterator()))
-
-    constructor(items: Iterator<X>) : this(IterableOf(items))
+    constructor(vararg items: X) : this(IterableOf(items.asIterable()))
 
     constructor(items: Iterable<X>) : this(CollectionOf(items))
 }

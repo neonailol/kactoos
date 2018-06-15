@@ -31,7 +31,7 @@ class MapOf<X : Any, Y : Any>(
     /**
      * @param list List of entries
      */
-    constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf(list.iterator()))
+    constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf(list.asIterable()))
 
     /**
      * @param src The map to extend
@@ -41,7 +41,7 @@ class MapOf<X : Any, Y : Any>(
     constructor(
         src: Map<X, Y>,
         vararg list: Map.Entry<X, Y>
-    ) : this(src, IterableOf(list.iterator()))
+    ) : this(src, IterableOf(list.asIterable()))
 
     /**
      * @param src Map to extend

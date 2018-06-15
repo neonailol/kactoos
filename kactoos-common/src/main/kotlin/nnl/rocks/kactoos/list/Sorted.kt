@@ -24,5 +24,5 @@ class Sorted<T : Comparable<T>> : ListEnvelope<T> {
 
     constructor(src: Iterable<T>) : this(naturalOrder(), ListOf(src))
 
-    constructor(cmp: Comparator<T>, vararg src: T) : this(cmp, ListOf(src.iterator()))
+    constructor(cmp: Comparator<T>, vararg src: T) : this(cmp, ListOf(src.asIterable()))
 }

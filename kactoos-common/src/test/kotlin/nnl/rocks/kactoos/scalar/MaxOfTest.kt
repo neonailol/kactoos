@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.iterable.IterableOf
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -38,13 +37,4 @@ class MaxOfTest {
         )
     }
 
-    @Test
-    fun iterable() {
-        assertEquals(
-            4.0,
-            MaxOf(
-                IterableOf(doubleArrayOf(1.0, 2.0, 3.0, 4.0).iterator())
-            ).toDouble()
-        )
-    }
 }

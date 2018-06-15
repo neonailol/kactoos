@@ -15,7 +15,7 @@ import nnl.rocks.kactoos.iterator.HeadOf
 class HeadOf<T : Any>(
     num: Int,
     iterable: Iterable<T>
-) : IterableEnvelope<T>(IterableOf(HeadOf(num, iterable.iterator()))) {
+) : IterableEnvelope<T>(IterableOf { HeadOf(num, iterable.iterator()) }) {
 
     constructor(num: Int, vararg src: T) : this(num, src.asIterable())
 }

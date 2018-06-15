@@ -45,13 +45,7 @@ class AndInThreads(
      */
     constructor(vararg src: KScalar<Boolean>) : this(IterableOf<KScalar<Boolean>>(*src))
 
-    constructor(vararg src: Scalar<Boolean>) : this(IterableOf(src.map { { it() } }.iterator()))
-
-    /**
-     * @param src The iterable
-     * @since 0.24
-     */
-    constructor(src: Iterator<KScalar<Boolean>>) : this(IterableOf<KScalar<Boolean>>(src))
+    constructor(vararg src: Scalar<Boolean>) : this(IterableOf(src.map { { it() } }.asIterable()))
 
     /**
      * @param src The iterable
@@ -67,16 +61,6 @@ class AndInThreads(
         svc: ExecutorService,
         vararg src: KScalar<Boolean>
     ) : this(svc, IterableOf<KScalar<Boolean>>(*src))
-
-    /**
-     * Ctor.
-     * @param svc Executable service to run thread in
-     * @param src The iterable
-     */
-    constructor(
-        svc: ExecutorService,
-        src: Iterator<KScalar<Boolean>>
-    ) : this(svc, IterableOf<KScalar<Boolean>>(src))
 
     /**
      * Ctor.
@@ -149,33 +133,9 @@ class AndInThreads(
          */
         operator fun <X : Any> invoke(
             proc: Proc<X>,
-            src: Iterator<X>
-        ): AndInThreads {
-            return AndInThreads(AndInThreadsFunc(FuncOf(proc, true), src))
-        }
-
-        /**
-         * @param src The iterable
-         * @param proc Proc to use
-         * @param X Type of items in the iterable
-         */
-        operator fun <X : Any> invoke(
-            proc: Proc<X>,
             src: Iterable<X>
         ): AndInThreads {
             return AndInThreads(AndInThreadsFunc(FuncOf(proc, true), src))
-        }
-
-        /**
-         * @param src The iterable
-         * @param func Func to map
-         * @param X Type of items in the iterable
-         */
-        operator fun <X : Any> invoke(
-            func: Func<X, Boolean>,
-            src: Iterator<X>
-        ): AndInThreads {
-            return AndInThreads(AndInThreadsFunc(func, IterableOf(src)))
         }
 
         /**
@@ -225,20 +185,6 @@ class AndInThreads(
         }
 
         /**
-         * @param svc Executable service to run thread in
-         * @param src The iterable
-         * @param proc Proc to use
-         * @param X Type of items in the iterable
-         */
-        operator fun <X : Any> invoke(
-            svc: ExecutorService,
-            proc: Proc<X>,
-            src: Iterator<X>
-        ): AndInThreads {
-            return AndInThreads(AndInThreadsFunc(svc, FuncOf(proc, true), src))
-        }
-
-        /**
          * Ctor.
          * @param svc Executable service to run thread in
          * @param src The iterable
@@ -251,21 +197,6 @@ class AndInThreads(
             src: Iterable<X>
         ): AndInThreads {
             return AndInThreads(AndInThreadsFunc(svc, FuncOf(proc, true), src))
-        }
-
-        /**
-         * Ctor.
-         * @param svc Executable service to run thread in
-         * @param src The iterable
-         * @param func Func to map
-         * @param X Type of items in the iterable
-         */
-        operator fun <X : Any> invoke(
-            svc: ExecutorService,
-            func: Func<X, Boolean>,
-            src: Iterator<X>
-        ): AndInThreads {
-            return AndInThreads(AndInThreadsFunc(svc, func, IterableOf(src)))
         }
 
         /**

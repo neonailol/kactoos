@@ -1,7 +1,5 @@
 package nnl.rocks.kactoos.iterator
 
-import nnl.rocks.kactoos.list.ListOf
-
 /**
  * Tail portion of the iterator.
  *
@@ -14,7 +12,7 @@ import nnl.rocks.kactoos.list.ListOf
  */
 class TailOf<T : Any>(num: Int, iterator: Iterator<T>) : Iterator<T> {
 
-    private val origin: Iterator<T> = Immutable(ListOf(iterator).takeLast(num).iterator())
+    private val origin: Iterator<T> = Immutable(iterator.asSequence().toList().takeLast(num).iterator())
 
     override fun hasNext(): Boolean = origin.hasNext()
 

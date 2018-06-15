@@ -24,9 +24,7 @@ class SyncCollection<T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Collection<T>) : super(SyncScalar<Collection<T>>({ src.toList() }))
 
-    constructor(vararg array: T) : this(IterableOf<T>(array.iterator()))
-
-    constructor(src: Iterator<T>) : this(IterableOf<T>(src))
+    constructor(vararg array: T) : this(IterableOf<T>(array.asIterable()))
 
     constructor(src: Iterable<T>) : this(CollectionOf<T>(src))
 }

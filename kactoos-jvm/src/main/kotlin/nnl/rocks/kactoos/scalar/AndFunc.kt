@@ -39,7 +39,7 @@ class AndFunc<X : Any>(private val iterable: Iterable<KScalar<Boolean>>) : Scala
     constructor (
         proc: Proc<X>,
         vararg src: X
-    ) : this(FuncOf(proc, true), src.iterator())
+    ) : this(FuncOf(proc, true), src.asIterable())
 
     /**
      * @param func Func to map
@@ -49,18 +49,7 @@ class AndFunc<X : Any>(private val iterable: Iterable<KScalar<Boolean>>) : Scala
     constructor(
         func: Func<X, Boolean>,
         vararg src: X
-    ) : this(func, IterableOf(src.iterator()))
-
-    /**
-     * @param src The iterable
-     * @param proc Proc to use
-     * @param X Type of items in the iterable
-     * @since 0.24
-     */
-    constructor(
-        proc: Proc<X>,
-        src: Iterator<X>
-    ) : this(FuncOf(proc, true), src)
+    ) : this(func, IterableOf(src.asIterable()))
 
     /**
      * @param src The iterable
@@ -72,17 +61,6 @@ class AndFunc<X : Any>(private val iterable: Iterable<KScalar<Boolean>>) : Scala
         proc: Proc<X>,
         src: Iterable<X>
     ) : this(FuncOf(proc, true), src)
-
-    /**
-     * @param src The iterable
-     * @param func Func to map
-     * @param X Type of items in the iterable
-     * @since 0.24
-     */
-    constructor(
-        func: Func<X, Boolean>,
-        src: Iterator<X>
-    ) : this(func, IterableOf(src))
 
     /**
      * @param src The iterable

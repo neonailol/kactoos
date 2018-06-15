@@ -26,18 +26,7 @@ class Filtered<X : Any>(
     constructor(
         func: Func<X, Boolean>,
         vararg src: X
-    ) : this(func, IterableOf<X>(src.iterator()))
-
-    /**
-     * Ctor.
-     * @param src Source collection
-     * @param func Filter function
-     * @since 0.23
-     */
-    constructor(
-        func: Func<X, Boolean>,
-        src: Iterator<X>
-    ) : this(func, IterableOf<X>(src))
+    ) : this(func, IterableOf<X>(src.asList()))
 
     override fun toString(): String = TextOf(this).toString()
 }

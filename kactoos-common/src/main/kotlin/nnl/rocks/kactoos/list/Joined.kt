@@ -12,7 +12,7 @@ class Joined<X : Any> : ListEnvelope<X> {
 
     constructor(iterable: Iterable<List<X>>) : super({ iterable.flatMap { it } })
 
-    constructor(vararg lists: List<X>) : this(ListOf(lists.iterator()))
+    constructor(vararg lists: List<X>) : this(ListOf(lists.asIterable()))
 
     constructor(first: X, vararg lists: List<X>) : this(ListOf(first), *lists)
 }

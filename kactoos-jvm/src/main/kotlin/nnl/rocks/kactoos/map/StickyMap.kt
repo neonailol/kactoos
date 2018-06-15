@@ -32,7 +32,7 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
     /**
      * @param list List of entries
      */
-    constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf<Map.Entry<X, Y>>(list.iterator()))
+    constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf<Map.Entry<X, Y>>(list.asIterable()))
 
     /**
      * @param map The map to extend
@@ -42,7 +42,7 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
     constructor(
         map: Map<X, Y>,
         vararg list: Map.Entry<X, Y>
-    ) : this(map, IterableOf<Map.Entry<X, Y>>(list.iterator()))
+    ) : this(map, IterableOf<Map.Entry<X, Y>>(list.asIterable()))
 
     /**
      * @param list Entries for the entries

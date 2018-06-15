@@ -24,13 +24,7 @@ class Or(
      * @param scalar The KScalar.
      */
     @SafeVarargs
-    constructor(vararg scalar: KScalar<Boolean>) : this(IterableOf<KScalar<Boolean>>(scalar.iterator()))
-
-    /**
-     * @param iterable The iterable.
-     * @since 0.24
-     */
-    constructor(iterable: Iterator<KScalar<Boolean>>) : this(IterableOf<KScalar<Boolean>>(iterable))
+    constructor(vararg scalar: KScalar<Boolean>) : this(IterableOf<KScalar<Boolean>>(scalar.asIterable()))
 
     override fun invoke(): Boolean = origin.any { it() }
 
@@ -45,7 +39,7 @@ class Or(
         operator fun <X : Any> invoke(
             proc: Proc<X>,
             vararg src: X
-        ): Or = Or(OrFunc(FuncOf(proc, false), src.iterator()))
+        ): Or = Or(OrFunc(FuncOf(proc, false), src.asIterable()))
 
         /**
          * @param func Func to map
@@ -56,18 +50,7 @@ class Or(
         operator fun <X : Any> invoke(
             func: Func<X, Boolean>,
             vararg src: X
-        ): Or = Or(OrFunc(func, IterableOf(src.iterator())))
-
-        /**
-         * @param src The iterable
-         * @param proc Proc to use
-         * @param X Type of items in the iterable
-         * @since 0.24
-         */
-        operator fun <X : Any> invoke(
-            proc: Proc<X>,
-            src: Iterator<X>
-        ): Or = Or(OrFunc(proc, IterableOf(src)))
+        ): Or = Or(OrFunc(func, IterableOf(src.asIterable())))
 
         /**
          * @param src The iterable
@@ -79,17 +62,6 @@ class Or(
             proc: Proc<X>,
             src: Iterable<X>
         ): Or = Or(OrFunc(FuncOf(proc, false), src))
-
-        /**
-         * @param src The iterable
-         * @param func Func to map
-         * @param X Type of items in the iterable
-         * @since 0.24
-         */
-        operator fun <X : Any> invoke(
-            func: Func<X, Boolean>,
-            src: Iterator<X>
-        ): Or = Or(OrFunc(func, IterableOf(src)))
 
         /**
          * @param src The iterable

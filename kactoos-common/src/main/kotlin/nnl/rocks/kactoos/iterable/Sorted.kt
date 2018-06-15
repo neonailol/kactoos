@@ -10,21 +10,24 @@ import nnl.rocks.kactoos.iterator.Sorted
  * @param T Element type
  * @since 0.4
  */
-class Sorted<T : Comparable<T>>(
+class Sorted<T : Any>(
     cmp: Comparator<T>,
     src: Iterable<T>
 ) : IterableEnvelope<T>({ IterableOf { Sorted(cmp, src.iterator()) } }) {
 
     constructor(
-        vararg args: T
-    ) : this(args.asIterable())
-
-    constructor(
-        src: Iterable<T>
-    ) : this(naturalOrder(), src)
-
-    constructor(
         cmp: Comparator<T>,
         vararg args: T
     ) : this(cmp, args.asIterable())
+
+    companion object {
+        
+        operator fun <T : Comparable<T>> invoke(
+            origin: Iterable<T>
+        ) = Sorted(naturalOrder<T>(), origin)
+
+        operator fun <T : Comparable<T>> invoke(
+            vararg args: T
+        ) = Sorted(args.asIterable())
+    }
 }

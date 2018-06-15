@@ -20,7 +20,7 @@ class Sorted<T : Comparable<T>> : CollectionEnvelope<T> {
 
     constructor(cmp: Comparator<T>, src: Collection<T>) : super({ src.sortedWith(cmp) })
 
-    constructor(vararg src: T) : this(ListOf<T>(src.iterator()))
+    constructor(vararg src: T) : this(ListOf<T>(src.asIterable()))
 
     /**
      * If you're using this ctor you must be sure that type `T`
@@ -40,17 +40,7 @@ class Sorted<T : Comparable<T>> : CollectionEnvelope<T> {
     constructor(
         cmp: Comparator<T>,
         vararg src: T
-    ) : this(cmp, CollectionOf<T>(src.iterator()))
-
-    /**
-     * @param src The underlying collection
-     * @param cmp The comparator
-     * @since 0.23
-     */
-    constructor(
-        cmp: Comparator<T>,
-        src: Iterator<T>
-    ) : this(cmp, CollectionOf<T>(src))
+    ) : this(cmp, CollectionOf<T>(src.asIterable()))
 
     /**
      * @param src The underlying collection

@@ -53,7 +53,7 @@ class AndWithIndexFunc<X : Any>(
     constructor(
         func: BiFunc<X, Int, Boolean>,
         vararg src: X
-    ) : this(func, IterableOf<X>(src.iterator()))
+    ) : this(func, IterableOf<X>(src.asIterable()))
 
     /**
      * @param src The iterable

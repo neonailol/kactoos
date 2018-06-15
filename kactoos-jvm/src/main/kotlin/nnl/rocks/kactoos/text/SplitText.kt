@@ -63,7 +63,7 @@ class SplitText(
         return Mapped(
             FuncOf<String, Text> { TextOf(it) },
             IterableOf(
-                this.origin.asString().split(this.regex.asString().toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().iterator()
+                this.origin.asString().split(this.regex.asString().toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().asIterable()
             )
         ).iterator()
     }

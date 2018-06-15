@@ -28,7 +28,7 @@ class OrFunc<X : Any>(
     constructor(
         proc: Proc<X>,
         vararg src: X
-    ) : this(FuncOf<X, Boolean>(proc, false), src.iterator())
+    ) : this(FuncOf<X, Boolean>(proc, false), src.asIterable())
 
     /**
      * @param func Func to map
@@ -38,18 +38,7 @@ class OrFunc<X : Any>(
     constructor(
         func: Func<X, Boolean>,
         vararg src: X
-    ) : this(func, IterableOf<X>(src.iterator()))
-
-    /**
-     * @param src The iterable
-     * @param proc Proc to use
-     * @param X Type of items in the iterable
-     * @since 0.24
-     */
-    constructor(
-        proc: Proc<X>,
-        src: Iterator<X>
-    ) : this(proc, IterableOf<X>(src))
+    ) : this(func, IterableOf<X>(src.asIterable()))
 
     /**
      * @param src The iterable
@@ -61,17 +50,6 @@ class OrFunc<X : Any>(
         proc: Proc<X>,
         src: Iterable<X>
     ) : this(FuncOf<X, Boolean>(proc, false), src)
-
-    /**
-     * @param src The iterable
-     * @param func Func to map
-     * @param X Type of items in the iterable
-     * @since 0.24
-     */
-    constructor(
-        func: Func<X, Boolean>,
-        src: Iterator<X>
-    ) : this(func, IterableOf<X>(src))
 
     /**
      * @param src The iterable

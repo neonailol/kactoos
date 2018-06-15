@@ -11,4 +11,4 @@ import nnl.rocks.kactoos.iterator.Endless
  * @param item Item to repeat
  * @since 0.4
  */
-class Endless<out T : Any>(item: T) : IterableEnvelope<T>(IterableOf(Endless(item)))
+class Endless<out T : Any>(item: T) : IterableEnvelope<T>(IterableOf { Endless(item) })

@@ -28,17 +28,12 @@ import nnl.rocks.kactoos.iterator.Filtered
 class Filtered<X : Any>(
     fnc: KFunc<X, Boolean>,
     src: Iterable<X>
-) : IterableEnvelope<X>(IterableOf(Filtered(fnc, src.iterator()))) {
+) : IterableEnvelope<X>(IterableOf { Filtered(fnc, src.iterator()) }) {
 
     constructor(
         fnc: KFunc<X, Boolean>,
         vararg src: X
-    ) : this(fnc, IterableOf(src.iterator()))
-
-    constructor(
-        fnc: KFunc<X, Boolean>,
-        src: Iterator<X>
-    ) : this(fnc, IterableOf(src))
+    ) : this(fnc, src.asIterable())
 
     constructor(
         fnc: Func<X, Boolean>,

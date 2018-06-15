@@ -1,22 +1,18 @@
 package nnl.rocks.kactoos.iterable
 
-import kotlin.test.*
+import nnl.rocks.kactoos.test.BehavesAsIterable
+import kotlin.test.Test
 
 class MappedTest {
 
     @Test
     fun mapsVarargs() {
-        val mapped = Mapped(
-            { x: Int -> x.toString() },
-            1, 2, 3
-        ).iterator()
-        assertTrue(mapped.hasNext())
-        assertEquals("1", mapped.next())
-        assertTrue(mapped.hasNext())
-        assertEquals("2", mapped.next())
-        assertTrue(mapped.hasNext())
-        assertEquals("3", mapped.next())
-        assertFalse(mapped.hasNext())
-        assertFailsWith(NoSuchElementException::class) { mapped.next() }
+        BehavesAsIterable(
+            Mapped(
+                { x: Int -> x.toString() },
+                1, 2, 3
+            ),
+            arrayOf("1", "2", "3")
+        )
     }
 }

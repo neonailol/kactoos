@@ -17,7 +17,7 @@ class Shuffled<T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Collection<T>) : super({ src.shuffled() })
 
-    constructor(vararg src: T) : this(CollectionOf<T>(src.iterator()))
+    constructor(vararg src: T) : this(CollectionOf<T>(src.asIterable()))
 
     constructor(src: Iterable<T>) : this(CollectionOf<T>(src))
 }

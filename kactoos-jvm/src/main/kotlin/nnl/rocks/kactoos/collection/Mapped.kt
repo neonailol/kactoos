@@ -34,17 +34,6 @@ class Mapped<X : Any, Y : Any>(
      * Ctor.
      * @param src Source collection
      * @param fnc Func
-     * @since 0.23
-     */
-    constructor(
-        fnc: Func<X, Y>,
-        src: Iterator<X>
-    ) : this(fnc, IterableOf<X>(src))
-
-    /**
-     * Ctor.
-     * @param src Source collection
-     * @param fnc Func
      */
     constructor(
         fnc: Func<X, Y>,

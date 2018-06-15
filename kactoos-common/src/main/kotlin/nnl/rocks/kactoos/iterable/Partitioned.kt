@@ -13,7 +13,7 @@ class Partitioned<T : Any> : IterableEnvelope<List<T>> {
     constructor(
         size: Int,
         iterable: Iterable<T>
-    ) : super({ IterableOf(Partitioned(size, iterable.iterator())) })
+    ) : super({ IterableOf { Partitioned(size, iterable.iterator()) } })
 
     constructor(
         size: Int,

@@ -27,11 +27,9 @@ import nnl.rocks.kactoos.iterable.IterableOf
  */
 class And(private val iterable: Iterable<KScalar<Boolean>>) : Scalar<Boolean> {
 
-    constructor(vararg src: KScalar<Boolean>) : this(IterableOf(src.iterator()))
+    constructor(vararg src: KScalar<Boolean>) : this(IterableOf(src.asIterable()))
 
-    constructor(vararg src: Scalar<Boolean>) : this(IterableOf(src.map { { it() } }.iterator()))
-
-    constructor(src: Iterator<KScalar<Boolean>>) : this(IterableOf(src))
+    constructor(vararg src: Scalar<Boolean>) : this(IterableOf(src.map { { it() } }.asIterable()))
 
     override fun invoke(): Boolean = iterable.all { it() }
 
@@ -42,16 +40,7 @@ class And(private val iterable: Iterable<KScalar<Boolean>>) : Scalar<Boolean> {
             vararg src: X
         ): And {
             return And(
-                AndFunc(func, src.iterator())
-            )
-        }
-
-        operator fun <X : Any> invoke(
-            func: Func<X, Boolean>,
-            src: Iterator<X>
-        ): And {
-            return And(
-                AndFunc(func, src)
+                AndFunc(func, src.asIterable())
             )
         }
 
@@ -69,16 +58,7 @@ class And(private val iterable: Iterable<KScalar<Boolean>>) : Scalar<Boolean> {
             vararg src: X
         ): And {
             return And(
-                AndFunc(proc, src.iterator())
-            )
-        }
-
-        operator fun <X : Any> invoke(
-            proc: Proc<X>,
-            src: Iterator<X>
-        ): And {
-            return And(
-                AndFunc(proc, src)
+                AndFunc(proc, src.asIterable())
             )
         }
 

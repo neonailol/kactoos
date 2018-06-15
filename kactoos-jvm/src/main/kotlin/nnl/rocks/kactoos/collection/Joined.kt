@@ -20,5 +20,5 @@ class Joined<X : Any> : CollectionEnvelope<X> {
      * @param list Items to concatenate
      */
     @SafeVarargs
-    constructor(vararg list: Iterable<X>) : this(CollectionOf<Iterable<X>>(list.iterator()))
+    constructor(vararg list: Iterable<X>) : this(CollectionOf<Iterable<X>>(list.asIterable()))
 }

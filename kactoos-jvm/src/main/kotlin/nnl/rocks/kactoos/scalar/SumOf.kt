@@ -26,25 +26,25 @@ class SumOf : NumberEnvelope {
      * @param src Integers
      * @since 0.3
      */
-    constructor(vararg src: Int) : this(IterableOf(src.iterator()))
+    constructor(vararg src: Int) : this(IterableOf(src.asIterable()))
 
     /**
      * @param src Longs
      * @since 0.3
      */
-    constructor(vararg src: Long) : this(IterableOf(src.iterator()))
+    constructor(vararg src: Long) : this(IterableOf(src.asIterable()))
 
     /**
      * @param src Doubles
      * @since 0.3
      */
-    constructor(vararg src: Double) : this(IterableOf(src.iterator()))
+    constructor(vararg src: Double) : this(IterableOf(src.asIterable()))
 
     /**
      * @param src Floats
      * @since 0.3
      */
-    constructor(vararg src: Float) : this(IterableOf(src.iterator()))
+    constructor(vararg src: Float) : this(IterableOf(src.asIterable()))
 
     /**
      * @param src Iterable of numbers

@@ -6,8 +6,8 @@ import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class BehavesAsIterator<T : Any>(
-    private val origin: Iterator<T>,
-    private val expected: Array<T>
+    origin: Iterator<T>,
+    expected: Array<T>
 ) {
 
     init {

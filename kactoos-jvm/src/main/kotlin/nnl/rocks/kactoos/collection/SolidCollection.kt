@@ -22,12 +22,7 @@ class SolidCollection<T : Any> : CollectionEnvelope<T> {
      * @param array An array of some elements
      */
     @SafeVarargs
-    constructor(vararg array: T) : this(IterableOf<T>(array.iterator()))
-
-    /**
-     * @param src An [Iterator]
-     */
-    constructor(src: Iterator<T>) : this(IterableOf<T>(src))
+    constructor(vararg array: T) : this(IterableOf<T>(array.asIterable()))
 
     /**
      * @param src An [Iterator]

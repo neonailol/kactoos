@@ -1,60 +1,37 @@
 package nnl.rocks.kactoos.iterable
 
+import nnl.rocks.kactoos.test.BehavesAsIterable
 import kotlin.test.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertTrue
 
 class IterableOfTest {
 
     @Test
     fun canIterateOverItems() {
-        assertEquals(
-            3,
-            LengthOf(
-                IterableOf(
-                    'a', 'b', 'c'
-                )
-            ).toInt(),
-            "Can't iterate over items"
+        BehavesAsIterable(
+            IterableOf(
+                'a', 'b', 'c'
+            ),
+            arrayOf('a', 'b', 'c')
         )
     }
 
     @Test
     fun canIterateOverList() {
-        assertEquals(
-            3,
-            LengthOf(
-                IterableOf(
-                    listOf('a', 'b', 'c')
-                )
-            ).toInt(),
-            "Can't iterate over list of items"
+        BehavesAsIterable(
+            IterableOf(
+                listOf('a', 'b', 'c')
+            ),
+            arrayOf('a', 'b', 'c')
         )
     }
 
     @Test
     fun canIterateOverSet() {
-        assertEquals(
-            3,
-            LengthOf(
-                IterableOf(
-                    setOf('a', 'b', 'c')
-                )
-            ).toInt(),
-            "Can't iterate over set of items"
-        )
-    }
-
-    @Test
-    fun canIterateOverIterator() {
-        assertEquals(
-            3,
-            LengthOf(
-                IterableOf(
-                    listOf('a', 'b', 'c').iterator()
-                )
-            ).toInt(),
-            "Can't iterate over iterator of items"
+        BehavesAsIterable(
+            IterableOf(
+                setOf('a', 'b', 'c')
+            ),
+            arrayOf('a', 'b', 'c')
         )
     }
 

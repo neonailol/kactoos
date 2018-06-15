@@ -23,11 +23,11 @@ class LowestOf<T : Comparable<T>> private constructor(private val result: KScala
     constructor(vararg items: T) : this(
         Mapped(
             FuncOf { item: T -> { item } },
-            items.iterator()
+            items.asIterable()
         )
     )
 
-    constructor(vararg scalars: KScalar<T>) : this(IterableOf(scalars.iterator()))
+    constructor(vararg scalars: KScalar<T>) : this(IterableOf(scalars.asIterable()))
 
     override fun invoke(): T = result()
 }

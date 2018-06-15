@@ -13,4 +13,4 @@ class RangeOf<T : Comparable<T>>(
     min: T,
     max: T,
     incrementer: KFunc<T, T>
-) : IterableEnvelope<T>({ IterableOf(RangeOf(min, max, incrementer)) })
+) : IterableEnvelope<T>({ IterableOf { RangeOf(min, max, incrementer) } })

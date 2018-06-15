@@ -26,19 +26,6 @@ class Mapped<X : Any, Y : Any>(
     ) : this(fnc, src.asIterable())
 
     constructor(
-        fnc: KFunc<X, Y>,
-        src: Iterator<X>
-    ) : this(fnc, IterableOf(src))
-
-    constructor(
-        fnc: Func<X, Y>,
-        src: Iterator<X>
-    ) : this(
-        { x -> fnc.apply(x) },
-        src
-    )
-
-    constructor(
         fnc: Func<X, Y>,
         vararg src: X
     ) : this(

@@ -18,14 +18,4 @@ a type casting exception in runtime.
 
 `src` - The underlying collection
 
-`cmp` - The comparator`Sorted(cmp: `[`Comparator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparator/index.html)`<`[`T`](index.md#T)`>, src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)`
-
-### Parameters
-
-`src` - The underlying collection
-
 `cmp` - The comparator
-
-**Since**
-0.23
-

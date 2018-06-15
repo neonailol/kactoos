@@ -17,11 +17,7 @@ class StickyList<X : Any> : ListEnvelope<X> {
 
     constructor(collection: Collection<X>) : super(StickyScalar { collection.toList() })
 
-    constructor(vararg items: X) : this(IterableOf(items.iterator()))
+    constructor(vararg items: X) : this(IterableOf(items.asIterable()))
 
     constructor(items: Iterable<X>) : this(ListOf(items))
-
-    constructor(items: Iterator<X>) : this(ListOf(items))
-
-
 }

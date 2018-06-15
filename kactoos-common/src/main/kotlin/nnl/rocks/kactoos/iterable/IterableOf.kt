@@ -8,20 +8,21 @@ import nnl.rocks.kactoos.Scalar
  *
  * There is no thread-safety guarantee.
  *
- * @param X Type of item
+ * @param T Type of item
  * @since 0.4
  */
-class IterableOf<X : Any> : IterableEnvelope<X> {
+class IterableOf<out T : Any> : IterableEnvelope<T> {
 
-    constructor(scalar: KScalar<Iterator<X>>) : super(Iterable { scalar() })
+    constructor(scalar: KScalar<Iterator<T>>) : super(Iterable { scalar() })
 
-    constructor(scalar: Scalar<Iterator<X>>) : this({ scalar() })
+    constructor(vararg items: T) : super(items.asIterable())
 
-    constructor(vararg items: X) : this({ items.iterator() })
+    constructor(scalar: Scalar<Iterator<T>>) : this({ scalar() })
 
-    constructor(list: List<X>) : this({ list.iterator() })
+    constructor(list: List<T>) : this({ list.iterator() })
 
-    constructor(set: Set<X>) : this({ set.iterator() })
+    constructor(set: Set<T>) : this({ set.iterator() })
 
-    constructor(iterator: Iterator<X>) : this({ iterator })
+    constructor(iterable: Iterable<T>) : super(iterable)
+
 }

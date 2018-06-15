@@ -35,13 +35,7 @@ class AndWithIndex(
     /**
      * @param src The iterable
      */
-    constructor(vararg src: Func<Int, Boolean>) : this(IterableOf<Func<Int, Boolean>>(src.iterator()))
-
-    /**
-     * @param src The iterator
-     * @since 0.24
-     */
-    constructor(src: Iterator<Func<Int, Boolean>>) : this(IterableOf<Func<Int, Boolean>>(src))
+    constructor(vararg src: Func<Int, Boolean>) : this(IterableOf<Func<Int, Boolean>>(src.asIterable()))
 
     override fun invoke(): Boolean {
         var result = true
@@ -79,7 +73,7 @@ class AndWithIndex(
             func: BiFunc<X, Int, Boolean>,
             vararg src: X
         ): AndWithIndex {
-            return AndWithIndex(AndWithIndexFunc(func, IterableOf(src.iterator())).iterable())
+            return AndWithIndex(AndWithIndexFunc(func, IterableOf(src.asIterable())).iterable())
         }
 
         /**

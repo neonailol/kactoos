@@ -74,28 +74,8 @@ class AndInThreadsFunc<X : Any>(
      */
     constructor(
         proc: Proc<X>,
-        src: Iterator<X>
-    ) : this(FuncOf<X, Boolean>(proc, true), src)
-
-    /**
-     * @param src The iterable
-     * @param proc Proc to use
-     * @param X Type of items in the iterable
-     */
-    constructor(
-        proc: Proc<X>,
         src: Iterable<X>
     ) : this(FuncOf<X, Boolean>(proc, true), src)
-
-    /**
-     * @param src The iterable
-     * @param func Func to map
-     * @param X Type of items in the iterable
-     */
-    constructor(
-        func: Func<X, Boolean>,
-        src: Iterator<X>
-    ) : this(func, IterableOf<X>(src))
 
     /**
      * @param src The iterable
@@ -136,18 +116,6 @@ class AndInThreadsFunc<X : Any>(
     ) : this(svc, func, IterableOf<X>(*src))
 
     /**
-     * @param svc Executable service to run thread in
-     * @param src The iterable
-     * @param proc Proc to use
-     * @param X Type of items in the iterable
-     */
-    constructor(
-        svc: ExecutorService,
-        proc: Proc<X>,
-        src: Iterator<X>
-    ) : this(svc, FuncOf<X, Boolean>(proc, true), src)
-
-    /**
      * Ctor.
      * @param svc Executable service to run thread in
      * @param src The iterable
@@ -159,19 +127,6 @@ class AndInThreadsFunc<X : Any>(
         proc: Proc<X>,
         src: Iterable<X>
     ) : this(svc, FuncOf<X, Boolean>(proc, true), src)
-
-    /**
-     * Ctor.
-     * @param svc Executable service to run thread in
-     * @param src The iterable
-     * @param func Func to map
-     * @param X Type of items in the iterable
-     */
-    constructor(
-        svc: ExecutorService,
-        func: Func<X, Boolean>,
-        src: Iterator<X>
-    ) : this(svc, func, IterableOf<X>(src))
 
     /**
      * Ctor.

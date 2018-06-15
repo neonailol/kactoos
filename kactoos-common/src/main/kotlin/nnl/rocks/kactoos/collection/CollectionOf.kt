@@ -1,7 +1,5 @@
 package nnl.rocks.kactoos.collection
 
-import nnl.rocks.kactoos.iterable.IterableOf
-
 /**
  * Iterable as [Collection].
  *
@@ -22,7 +20,6 @@ class CollectionOf<T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Iterable<T>) : super({ src.toList() })
 
-    constructor(vararg array: T) : this(IterableOf(array.iterator()))
+    constructor(vararg array: T) : this(array.asIterable())
 
-    constructor(src: Iterator<T>) : this(IterableOf(src))
 }

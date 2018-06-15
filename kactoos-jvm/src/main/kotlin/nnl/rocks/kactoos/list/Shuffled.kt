@@ -21,9 +21,7 @@ class Shuffled<T : Any> : ListEnvelope<T> {
 
     constructor(src: Collection<T>) : super({ src.shuffled().toList() })
 
-    constructor(vararg src: T) : this(ListOf(src.iterator()))
-
-    constructor(src: Iterator<T>) : this(IterableOf(src))
+    constructor(vararg src: T) : this(ListOf(src.asIterable()))
 
     constructor(src: Iterable<T>) : this(ListOf(src))
 }

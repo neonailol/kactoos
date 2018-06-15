@@ -1,19 +1,15 @@
 package nnl.rocks.kactoos.iterable
 
-import kotlin.test.*
+import nnl.rocks.kactoos.test.BehavesAsIterable
+import kotlin.test.Test
 
 class RangeOfTest {
 
     @Test
     fun range() {
-        val rangeOf = RangeOf(0, 2, { v -> v + 1 }).iterator()
-        assertTrue(rangeOf.hasNext())
-        assertEquals(0, rangeOf.next())
-        assertTrue(rangeOf.hasNext())
-        assertEquals(1, rangeOf.next())
-        assertTrue(rangeOf.hasNext())
-        assertEquals(2, rangeOf.next())
-        assertFalse(rangeOf.hasNext())
-        assertFailsWith(NoSuchElementException::class, { rangeOf.next() })
+        BehavesAsIterable(
+            RangeOf(0, 2) { v -> v + 1 },
+            arrayOf(0, 1, 2)
+        )
     }
 }

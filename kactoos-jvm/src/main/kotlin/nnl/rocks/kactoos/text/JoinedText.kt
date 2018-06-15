@@ -37,7 +37,7 @@ class JoinedText private constructor(origin: KScalar<String>) : TextEnvelope(ori
     constructor(
         delimit: String,
         vararg strs: String
-    ) : this(delimit, IterableOf<String>(strs.iterator()))
+    ) : this(delimit, IterableOf<String>(strs.asIterable()))
 
     /**
      * @param delimit Delimit among strings
@@ -58,5 +58,5 @@ class JoinedText private constructor(origin: KScalar<String>) : TextEnvelope(ori
     constructor(
         delimit: Text,
         vararg txts: Text
-    ) : this(delimit, IterableOf<Text>(txts.iterator()))
+    ) : this(delimit, IterableOf<Text>(txts.asIterable()))
 }
