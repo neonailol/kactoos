@@ -1,36 +1,27 @@
 package nnl.rocks.kactoos.iterator
 
-import kotlin.test.*
+import nnl.rocks.kactoos.test.BehavesAsIterator
+import kotlin.test.Test
 
 class SortedTest {
 
     @Test
     fun sortedNumbers() {
-        val sorted = Sorted(IteratorOf(3, 2, 1))
-        assertTrue(sorted.hasNext())
-        assertEquals(1, sorted.next())
-        assertTrue(sorted.hasNext())
-        assertEquals(2, sorted.next())
-        assertTrue(sorted.hasNext())
-        assertEquals(3, sorted.next())
-        assertFalse(sorted.hasNext())
-        assertFailsWith(NoSuchElementException::class, { sorted.next() })
+        BehavesAsIterator(
+            Sorted(IteratorOf(3, 2, 1)),
+            arrayOf(1, 2, 3)
+        )
     }
 
     @Test
     fun sortsUsingComparator() {
-        val sorted = Sorted(
-            Comparator { a, b -> a.first().compareTo(b.first()) },
-            IteratorOf("the", "red", "fox")
+        BehavesAsIterator(
+            Sorted(
+                Comparator { a, b -> a.first().compareTo(b.first()) },
+                IteratorOf("the", "red", "fox")
+            ),
+            arrayOf("fox", "red", "the")
         )
-        assertTrue(sorted.hasNext())
-        assertEquals("fox", sorted.next())
-        assertTrue(sorted.hasNext())
-        assertEquals("red", sorted.next())
-        assertTrue(sorted.hasNext())
-        assertEquals("the", sorted.next())
-        assertFalse(sorted.hasNext())
-        assertFailsWith(NoSuchElementException::class, { sorted.next() })
     }
 
 }

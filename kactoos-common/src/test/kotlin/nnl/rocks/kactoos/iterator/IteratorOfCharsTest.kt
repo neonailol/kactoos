@@ -1,17 +1,15 @@
 package nnl.rocks.kactoos.iterator
 
-import kotlin.test.*
+import nnl.rocks.kactoos.test.BehavesAsIterator
+import kotlin.test.Test
 
 class IteratorOfCharsTest {
 
     @Test
     fun iterates() {
-        val iterator = IteratorOfChars('a', 'c')
-        assertTrue(iterator.hasNext())
-        assertEquals('a', iterator.next())
-        assertTrue(iterator.hasNext())
-        assertEquals('c', iterator.next())
-        assertFalse(iterator.hasNext())
-        assertFailsWith(NoSuchElementException::class, { iterator.next() })
+        BehavesAsIterator(
+            IteratorOfChars('a', 'c'),
+            arrayOf('a', 'c')
+        )
     }
 }

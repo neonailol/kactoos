@@ -1,17 +1,15 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.test.BehavesAsIterator
 import kotlin.test.*
 
 class IteratorOfBytesTest {
 
     @Test
     fun iterates() {
-        val iterator = IteratorOfBytes(1, 2)
-        assertTrue(iterator.hasNext())
-        assertEquals(1, iterator.next())
-        assertTrue(iterator.hasNext())
-        assertEquals(2, iterator.next())
-        assertFalse(iterator.hasNext())
-        assertFailsWith(NoSuchElementException::class, { iterator.next() })
+        BehavesAsIterator(
+            IteratorOfBytes(1, 2),
+            arrayOf(1.toByte(), 2.toByte())
+        )
     }
 }

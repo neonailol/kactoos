@@ -1,17 +1,15 @@
 package nnl.rocks.kactoos.iterator
 
-import kotlin.test.*
+import nnl.rocks.kactoos.test.BehavesAsIterator
+import kotlin.test.Test
 
 class IteratorOfShortsTest {
 
     @Test
     fun iterates() {
-        val iterator = IteratorOfShorts(1, 2)
-        assertTrue(iterator.hasNext())
-        assertEquals(1, iterator.next())
-        assertTrue(iterator.hasNext())
-        assertEquals(2, iterator.next())
-        assertFalse(iterator.hasNext())
-        assertFailsWith(NoSuchElementException::class, { iterator.next() })
+        BehavesAsIterator(
+            IteratorOfShorts(1, 2),
+            arrayOf(1.toShort(), 2.toShort())
+        )
     }
 }
