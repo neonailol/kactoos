@@ -114,7 +114,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterator.IteratorOfInts](../nnl.rocks.kactoos.iterator/-iterator-of-ints/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) over [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)s. |
 | [nnl.rocks.kactoos.iterator.IteratorOfLongs](../nnl.rocks.kactoos.iterator/-iterator-of-longs/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) over [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)s. |
 | [nnl.rocks.kactoos.iterator.IteratorOfShorts](../nnl.rocks.kactoos.iterator/-iterator-of-shorts/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) over [Short](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html)s. |
-| [nnl.rocks.kactoos.collection.Joined](../nnl.rocks.kactoos.collection/-joined/index.md) | Joined collection. |
+| [nnl.rocks.kactoos.collection.Joined](../nnl.rocks.kactoos.collection/-joined/index.md) | A few Collections joined together. |
 | [nnl.rocks.kactoos.iterable.Joined](../nnl.rocks.kactoos.iterable/-joined/index.md) | A few Iterables joined together. |
 | [nnl.rocks.kactoos.iterator.Joined](../nnl.rocks.kactoos.iterator/-joined/index.md) | A few Iterators joined together. |
 | [nnl.rocks.kactoos.list.Joined](../nnl.rocks.kactoos.list/-joined/index.md) | Joined list. |
