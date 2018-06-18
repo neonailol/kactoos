@@ -9,4 +9,4 @@ package nnl.rocks.kactoos.iterator
  * @param iterator Encapsulated iterator.
  * @since 0.3
  */
-class IteratorNoNulls<out T : Any>(private val iterator: Iterator<T>) : Iterator<T> by iterator
+class IteratorNoNulls<out T : Any>(private val iterator: Iterator<T>) : Iterator<T> by Immutable(iterator)

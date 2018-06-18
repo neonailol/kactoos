@@ -1,7 +1,5 @@
 package nnl.rocks.kactoos.collection
 
-import nnl.rocks.kactoos.iterable.IterableOf
-
 /**
  * Reversed collection.
  *

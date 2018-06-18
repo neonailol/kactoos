@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.collection
 
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.iterator.Immutable
 
 /**
  * Base read-only collection.
@@ -19,4 +20,6 @@ open class CollectionEnvelope<X : Any>(
     constructor(collection: Collection<X>) : this({ collection })
 
     constructor(collection: Scalar<Collection<X>>) : this({ collection() })
+
+    override fun iterator(): Iterator<X> = Immutable(collection().iterator())
 }

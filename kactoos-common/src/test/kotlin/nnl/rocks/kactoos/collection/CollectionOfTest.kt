@@ -1,25 +1,23 @@
 package nnl.rocks.kactoos.collection
 
+import nnl.rocks.kactoos.test.BehavesAsCollection
 import kotlin.test.Test
-import kotlin.test.assertTrue
 
 class CollectionOfTest {
 
     @Test
     fun collectionFromList() {
-        val listOf = listOf("one", "two", "three")
-        assertTrue(
-            CollectionOf(listOf).containsAll(listOf),
-            "CollectionOf does not contain all values from original list"
+        BehavesAsCollection(
+            CollectionOf(listOf("one", "two", "three")),
+            arrayOf("one", "two", "three")
         )
     }
 
     @Test
-    fun collectionFromIterable() {
-        val listOf = listOf("one", "two", "three")
-        assertTrue(
-            CollectionOf(listOf.asIterable()).containsAll(listOf),
-            "CollectionOf does not contain all values from original list"
+    fun collectionFromArray() {
+        BehavesAsCollection(
+            CollectionOf("one", "two", "three"),
+            arrayOf("one", "two", "three")
         )
     }
 
