@@ -18,5 +18,5 @@ There is no thread-safety guarantee.
 `src` - Source collection
 
 **Since**
-0.5
+0.4
 
