@@ -48,7 +48,7 @@ configurations {
 
 tasks {
 
-    "cleanDocs"(Task::class) {
+    "cleanDocs"(Delete::class) {
         delete("$rootDir/docs/alltypes")
         delete("$rootDir/docs/nnl.rocks.kactoos")
         delete("$rootDir/docs/nnl.rocks.kactoos.bytes")
