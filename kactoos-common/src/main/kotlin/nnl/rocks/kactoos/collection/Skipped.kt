@@ -11,33 +11,20 @@ import nnl.rocks.kactoos.iterable.Skipped
  * @param T Type of source item
  * @param skip How many to skip
  * @param src Source collection
- * @since 0.29
+ * @since 0.4
  */
 class Skipped<T : Any>(
     skip: Int,
     src: Collection<T>
-) : CollectionEnvelope<T>(
-    (CollectionOf<T>(Skipped<T>(skip, src)))
-) {
+) : CollectionEnvelope<T>((CollectionOf(Skipped(skip, src)))) {
 
-    /**
-     * Ctor.
-     * @param skip How many to skip
-     * @param src Source elements
-     */
-    @SafeVarargs
     constructor(
         skip: Int,
         vararg src: T
-    ) : this(skip, IterableOf<T>(*src))
+    ) : this(skip, IterableOf(src.asIterable()))
 
-    /**
-     * Ctor.
-     * @param skip How many to skip
-     * @param src Source iterable
-     */
     constructor(
         skip: Int,
         src: Iterable<T>
-    ) : this(skip, CollectionOf<T>(src))
+    ) : this(skip, CollectionOf(src))
 }
