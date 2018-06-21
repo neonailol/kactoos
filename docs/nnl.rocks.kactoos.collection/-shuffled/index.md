@@ -6,11 +6,6 @@
 
 Shuffled collection.
 
-Pay attention that shuffling will happen on each operation
-with the collection. Every time you touch it, it will fetch the
-entire collection from the encapsulated object and shuffle it. If you
-want to avoid that behaviour, decorate it with [StickyCollection](../-sticky-collection/index.md).
-
 There is no thread-safety guarantee.
 
 ### Parameters
@@ -18,7 +13,7 @@ There is no thread-safety guarantee.
 `T` - Element type
 
 **Since**
-0.3
+0.4
 
 ### Constructors
 
