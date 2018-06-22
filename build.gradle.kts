@@ -12,7 +12,7 @@ buildscript {
     }
 
     dependencies {
-        classpath(kotlin("gradle-plugin", "1.2.41"))
+        classpath(kotlin("gradle-plugin", "1.2.50"))
         classpath(kotlin("native-gradle-plugin", "0.7"))
     }
 }
@@ -56,5 +56,5 @@ allprojects {
 
 tasks.withType<Wrapper> {
     distributionType = Wrapper.DistributionType.ALL
-    gradleVersion = "4.7"
+    gradleVersion = "4.8.1"
 }
