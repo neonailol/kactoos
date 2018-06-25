@@ -2,12 +2,6 @@
 
 # &lt;init&gt;
 
-`SolidCollection(src: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`T`](index.md#T)`>)``SolidCollection(vararg array: `[`T`](index.md#T)`)`
-
-### Parameters
-
-`array` - An array of some elements`SolidCollection(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
-
-### Parameters
-
-`src` - An [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)
+`SolidCollection(source: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`T`](index.md#T)`>)`
+`SolidCollection(vararg args: `[`T`](index.md#T)`)`
+`SolidCollection(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`

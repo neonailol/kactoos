@@ -13,13 +13,13 @@ There is no thread-safety guarantee.
 `E` - Type of item
 
 **Since**
-0.3
+0.4
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `StickyCollection(list: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`E`](index.md#E)`>)`<br>`StickyCollection(vararg items: `[`E`](index.md#E)`)`<br>`StickyCollection(items: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`E`](index.md#E)`>)` |
+| [&lt;init&gt;](-init-.md) | `StickyCollection(source: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`E`](index.md#E)`>)`<br>`StickyCollection(vararg args: `[`E`](index.md#E)`)`<br>`StickyCollection(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`E`](index.md#E)`>)` |
 
 ### Inherited Functions
 

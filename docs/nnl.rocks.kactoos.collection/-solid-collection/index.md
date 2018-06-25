@@ -17,13 +17,13 @@ Objects of this class are thread-safe.
 [StickyCollection](../-sticky-collection/index.md)
 
 **Since**
-0.24
+0.4
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `SolidCollection(src: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`T`](index.md#T)`>)`<br>`SolidCollection(vararg array: `[`T`](index.md#T)`)`<br>`SolidCollection(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)` |
+| [&lt;init&gt;](-init-.md) | `SolidCollection(source: `[`Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html)`<`[`T`](index.md#T)`>)`<br>`SolidCollection(vararg args: `[`T`](index.md#T)`)`<br>`SolidCollection(iterable: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)` |
 
 ### Inherited Functions
 

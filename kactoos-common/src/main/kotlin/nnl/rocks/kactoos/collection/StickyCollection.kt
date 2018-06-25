@@ -9,13 +9,13 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  * There is no thread-safety guarantee.
  *
  * @param E Type of item
- * @since 0.3
+ * @since 0.4
  */
 class StickyCollection<E : Any> : CollectionEnvelope<E> {
 
-    constructor(list: Collection<E>) : super(StickyScalar<Collection<E>>({ list.toList() }))
+    constructor(source: Collection<E>) : super(StickyScalar<Collection<E>> { source })
 
-    constructor(vararg items: E) : this(IterableOf<E>(items.asIterable()))
+    constructor(vararg args: E) : this(IterableOf(args.asIterable()))
 
-    constructor(items: Iterable<E>) : this(CollectionOf<E>(items))
+    constructor(iterable: Iterable<E>) : this(CollectionOf(iterable))
 }
