@@ -11,8 +11,8 @@ plugins {
 dependencies {
     expectedBy(project(":kactoos-common"))
     implementation(kotlin("stdlib-js"))
-    implementation(`atomicfu-jvm`())
-    implementation(`coroutines-jvm`())
+    implementation(`atomicfu-js`())
+    implementation(`coroutines-js`())
     testCompile(kotlin("test-js"))
 }
 
