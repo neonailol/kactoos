@@ -3,7 +3,7 @@ import org.gradle.kotlin.dsl.kotlin
 plugins {
     base
     maven
-    id("com.github.ben-manes.versions") version "0.17.0"
+    id("com.github.ben-manes.versions") version "0.20.0"
 }
 
 buildscript {

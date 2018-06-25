@@ -10,15 +10,17 @@ plugins {
     id("kotlin-platform-jvm")
     id("org.jetbrains.dokka") version "0.9.17"
     id("io.gitlab.arturbosch.detekt") version "1.0.0.RC7-2"
-    id("org.jlleitschuh.gradle.ktlint") version "4.0.0"
+    id("org.jlleitschuh.gradle.ktlint") version "4.1.0"
 }
 
 dependencies {
-    "expectedBy"(project(":kactoos-common"))
-    "implementation"(kotlin("stdlib-jdk8"))
-    "testCompile"(kotlin("test-testng"))
+    expectedBy(project(":kactoos-common"))
+    implementation(kotlin("stdlib-jdk8"))
+    implementation(`atomicfu-jvm`())
+    implementation(`coroutines-jvm`())
+    testCompile(kotlin("test-testng"))
     testCompile(testng())
-    "testCompile"(assertj())
+    testCompile(assertj())
 }
 
 configurations {
@@ -34,7 +36,7 @@ configurations {
     }
 
     ktlint {
-        version = "0.23.1"
+        version = "0.24.0"
         debug = true
         verbose = true
         android = false

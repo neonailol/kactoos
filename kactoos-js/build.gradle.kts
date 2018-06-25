@@ -5,19 +5,21 @@ import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
 
 plugins {
     id("kotlin-platform-js")
-    id("com.liferay.node") version "4.3.5"
+    id("com.liferay.node") version "4.4.0"
 }
 
 dependencies {
     expectedBy(project(":kactoos-common"))
     implementation(kotlin("stdlib-js"))
+    implementation(`atomicfu-jvm`())
+    implementation(`coroutines-jvm`())
     testCompile(kotlin("test-js"))
 }
 
 configurations {
     node {
         isDownload = true
-        setNodeVersion("10.4.1")
+        setNodeVersion("10.5.0")
     }
 }
 
