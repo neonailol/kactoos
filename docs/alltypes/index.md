@@ -146,7 +146,7 @@ Kactoos.
 | [nnl.rocks.kactoos.map.MapEntry](../nnl.rocks.kactoos.map/-map-entry/index.md) | MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html). |
 | [nnl.rocks.kactoos.map.MapEnvelope](../nnl.rocks.kactoos.map/-map-envelope/index.md) | Map envelope. |
 | [nnl.rocks.kactoos.map.MapNoNulls](../nnl.rocks.kactoos.map/-map-no-nulls/index.md) | A decorator of [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) that tolerates no NULLs. |
-| [nnl.rocks.kactoos.map.MapOf](../nnl.rocks.kactoos.map/-map-of/index.md) | Iterable as [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html). |
+| [nnl.rocks.kactoos.map.MapOf](../nnl.rocks.kactoos.map/-map-of/index.md) | Constructs Map from various inputs. |
 | [nnl.rocks.kactoos.collection.Mapped](../nnl.rocks.kactoos.collection/-mapped/index.md) | Mapped collection. |
 | [nnl.rocks.kactoos.iterable.Mapped](../nnl.rocks.kactoos.iterable/-mapped/index.md) | Mapped iterable. |
 | [nnl.rocks.kactoos.iterator.Mapped](../nnl.rocks.kactoos.iterator/-mapped/index.md) | Mapped iterator. |
@@ -223,7 +223,7 @@ Kactoos.
 | [nnl.rocks.kactoos.io.StickyInput](../nnl.rocks.kactoos.io/-sticky-input/index.md) | Input that reads only once. |
 | [nnl.rocks.kactoos.iterable.StickyIterable](../nnl.rocks.kactoos.iterable/-sticky-iterable/index.md) | Iterable that returns the same set of elements, always. |
 | [nnl.rocks.kactoos.list.StickyList](../nnl.rocks.kactoos.list/-sticky-list/index.md) | List decorator that goes through the list only once. |
-| [nnl.rocks.kactoos.map.StickyMap](../nnl.rocks.kactoos.map/-sticky-map/index.md) | Read-only [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) decorator that goes through the map only once. |
+| [nnl.rocks.kactoos.map.StickyMap](../nnl.rocks.kactoos.map/-sticky-map/index.md) | Map decorator that goes through the map only once. |
 | [nnl.rocks.kactoos.scalar.StickyScalar](../nnl.rocks.kactoos.scalar/-sticky-scalar/index.md) | Cached version of a KScalar. |
 | [nnl.rocks.kactoos.text.SubText](../nnl.rocks.kactoos.text/-sub-text/index.md) | Extract a substring from a Text. |
 | [nnl.rocks.kactoos.scalar.SumOf](../nnl.rocks.kactoos.scalar/-sum-of/index.md) | Represents total sum of given numbers. |

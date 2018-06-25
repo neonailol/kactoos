@@ -5,61 +5,29 @@ import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
 import nnl.rocks.kactoos.scalar.StickyScalar
-import java.util.Collections
-import java.util.HashMap
 
 /**
- * Read-only [Map] decorator that goes through the map only once.
+ * Map decorator that goes through the map only once.
  *
  * There is no thread-safety guarantee.
  *
  * @param X Type of key
  * @param Y Type of value
- * @since 0.3
+ * @since 0.4
  */
 class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
 
-    constructor(map: Map<X, Y>) : super(
-        StickyScalar<Map<X, Y>>(
-             {
-                val temp = HashMap<X, Y>(0)
-                temp.putAll(map)
-                Collections.unmodifiableMap<X, Y>(temp)
-            }
-        )
-    )
+    constructor(map: Map<X, Y>) : super(StickyScalar<Map<X, Y>> { map })
 
-    /**
-     * @param list List of entries
-     */
     constructor(vararg list: Map.Entry<X, Y>) : this(IterableOf<Map.Entry<X, Y>>(list.asIterable()))
 
-    /**
-     * @param map The map to extend
-     * @param list List of entries
-     * @since 0.12
-     */
     constructor(
         map: Map<X, Y>,
         vararg list: Map.Entry<X, Y>
     ) : this(map, IterableOf<Map.Entry<X, Y>>(list.asIterable()))
 
-    /**
-     * @param list Entries for the entries
-     */
-    constructor(list: Iterable<Map.Entry<X, Y>>) : this(MapOf<X, Y>(list))
+    constructor(list: Iterable<Map.Entry<X, Y>>) : this(MapOf(list))
 
-    /**
-     * @param list Entries for the entries
-     * @since 0.21
-     */
-    constructor(list: Iterator<Map.Entry<X, Y>>) : this(Iterable { list })
-
-    /**
-     * @param map Pre-existing map we want to extend
-     * @param list Entries for the entries
-     * @since 0.12
-     */
     constructor(
         map: Map<X, Y>,
         list: Iterable<Map.Entry<X, Y>>
@@ -67,14 +35,6 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
 
     companion object {
 
-        /**
-         * @param map The map to extend
-         * @param list List of items
-         * @param key Func to create key
-         * @param value Func to create value
-         * @param Z Type of items in the list
-         *
-         */
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             key: Func<Z, X>,
             value: Func<Z, Y>,
@@ -88,28 +48,22 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
             )
         }
 
-        /**
-         * @param list List of items
-         * @param key Func to create key
-         * @param value Func to create value
-         * @param Z Type of items in the list
-         */
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             list: Iterable<Z>,
             key: Func<Z, X>,
             value: Func<Z, Y>
         ): StickyMap<X, Y> {
             return StickyMap(
-                entry = FuncOf<Z, MapEntry<X, Y>> { item -> MapEntry(key.apply(item), value.apply(item)) },
+                entry = FuncOf<Z, MapEntry<X, Y>> { item ->
+                    MapEntry(
+                        key.apply(item),
+                        value.apply(item)
+                    )
+                },
                 list = list
             )
         }
 
-        /**
-         * @param list List of items
-         * @param entry Func to create entry
-         * @param Z Type of items in the list
-         */
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             entry: Func<Z, Map.Entry<X, Y>>,
             vararg args: Z
@@ -117,11 +71,6 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
             return StickyMap(Mapped(entry, IterableOf(*args)))
         }
 
-        /**
-         * @param list List of items
-         * @param entry Func to create entry
-         * @param Z Type of items in the list
-         */
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             entry: Func<Z, Map.Entry<X, Y>>,
             list: Iterable<Z>
@@ -129,12 +78,6 @@ class StickyMap<X : Any, Y : Any> : MapEnvelope<X, Y> {
             return StickyMap(Mapped(entry, list))
         }
 
-        /**
-         * @param map The map to extend
-         * @param list List of items
-         * @param entry Func to create entry
-         * @param Z Type of items in the list
-         */
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             entry: Func<Z, Map.Entry<X, Y>>,
             map: Map<X, Y>,
