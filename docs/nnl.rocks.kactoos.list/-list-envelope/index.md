@@ -23,6 +23,13 @@ There is no thread-safety guarantee.
 |---|---|
 | [&lt;init&gt;](-init-.md) | `ListEnvelope(list: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>)`<br>`ListEnvelope(list: `[`Scalar`](../../nnl.rocks.kactoos/-scalar/index.md)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>>)``ListEnvelope(list: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.md#T)`>>)`<br>List envelope. |
 
+### Functions
+
+| Name | Summary |
+|---|---|
+| [iterator](iterator.md) | `open fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>` |
+| [listIterator](list-iterator.md) | `open fun listIterator(): `[`ListIterator`](../-list-iterator/index.md)`<`[`T`](index.md#T)`>`<br>`open fun listIterator(index: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`ListIterator`](../-list-iterator/index.md)`<`[`T`](index.md#T)`>` |
+
 ### Inheritors
 
 | Name | Summary |
@@ -33,7 +40,7 @@ There is no thread-safety guarantee.
 | [Mapped](../-mapped/index.md) | `class Mapped<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`, Y : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`Y`](../-mapped/index.md#Y)`>`<br>Mapped list. |
 | [Reversed](../-reversed/index.md) | `class Reversed<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`T`](../-reversed/index.md#T)`>`<br>Reversed list. |
 | [Shuffled](../-shuffled/index.md) | `class Shuffled<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`T`](../-shuffled/index.md#T)`>`<br>Shuffled list. |
-| [SolidList](../-solid-list/index.md) | `class SolidList<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`X`](../-solid-list/index.md#X)`>`<br>A [java.util.List](http://docs.oracle.com/javase/8/docs/api/java/util/List.html) that is both synchronized and sticky. |
-| [Sorted](../-sorted/index.md) | `class Sorted<T : `[`Comparable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html)`<`[`T`](../-sorted/index.md#T)`>> : `[`ListEnvelope`](./index.md)`<`[`T`](../-sorted/index.md#T)`>`<br>Sorted list. |
+| [SolidList](../-solid-list/index.md) | `class SolidList<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`X`](../-solid-list/index.md#X)`>`<br>A List that is both synchronized and sticky. |
+| [Sorted](../-sorted/index.md) | `class Sorted<T : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`T`](../-sorted/index.md#T)`>`<br>Sorted list. |
 | [StickyList](../-sticky-list/index.md) | `class StickyList<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`X`](../-sticky-list/index.md#X)`>`<br>List decorator that goes through the list only once. |
 | [SyncList](../-sync-list/index.md) | `class SyncList<X : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`ListEnvelope`](./index.md)`<`[`X`](../-sync-list/index.md#X)`>`<br>Synchronized list. |

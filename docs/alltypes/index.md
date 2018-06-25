@@ -206,7 +206,7 @@ Kactoos.
 | [nnl.rocks.kactoos.collection.SolidCollection](../nnl.rocks.kactoos.collection/-solid-collection/index.md) | A [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that is both synchronized and sticky. |
 | [nnl.rocks.kactoos.func.SolidFunc](../nnl.rocks.kactoos.func/-solid-func/index.md) | Func that is thread-safe and sticky. |
 | [nnl.rocks.kactoos.iterable.SolidIterable](../nnl.rocks.kactoos.iterable/-solid-iterable/index.md) | An [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) that is both synchronized and sticky. |
-| [nnl.rocks.kactoos.list.SolidList](../nnl.rocks.kactoos.list/-solid-list/index.md) | A [java.util.List](http://docs.oracle.com/javase/8/docs/api/java/util/List.html) that is both synchronized and sticky. |
+| [nnl.rocks.kactoos.list.SolidList](../nnl.rocks.kactoos.list/-solid-list/index.md) | A List that is both synchronized and sticky. |
 | [nnl.rocks.kactoos.map.SolidMap](../nnl.rocks.kactoos.map/-solid-map/index.md) | A [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) that is both synchronized and sticky. |
 | [nnl.rocks.kactoos.scalar.SolidScalar](../nnl.rocks.kactoos.scalar/-solid-scalar/index.md) | Cached and synchronized version of a KScalar. |
 | [nnl.rocks.kactoos.collection.Sorted](../nnl.rocks.kactoos.collection/-sorted/index.md) | Sorted collection. |

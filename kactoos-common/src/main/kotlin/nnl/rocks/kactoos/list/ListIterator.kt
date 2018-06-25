@@ -1,8 +1,8 @@
 package nnl.rocks.kactoos.list
 
 import nnl.rocks.kactoos.KScalar
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.scalar.StickyScalar
-import nnl.rocks.kactoos.scalar.UncheckedScalar
 
 /**
  * Iterator of the list.
@@ -14,15 +14,15 @@ import nnl.rocks.kactoos.scalar.UncheckedScalar
  * @since 0.4
  */
 class ListIterator<T : Any>(
-    private val origin: UncheckedScalar<kotlin.collections.ListIterator<T>>
+    private val origin: Scalar<kotlin.collections.ListIterator<T>>
 ) : kotlin.collections.ListIterator<T> by origin() {
 
-    constructor(orig: KScalar<kotlin.collections.ListIterator<T>>) : this(UncheckedScalar(StickyScalar(orig)))
+    constructor(origin: KScalar<kotlin.collections.ListIterator<T>>) : this(StickyScalar { origin() })
 
     constructor(list: List<T>) : this({ list.listIterator() })
 
     constructor(list: List<T>, index: Int) : this({ list.listIterator(index) })
 
-    constructor(iter: kotlin.collections.ListIterator<T>) : this({ iter })
+    constructor(iterator: kotlin.collections.ListIterator<T>) : this({ iterator })
 
 }

@@ -16,7 +16,7 @@ class SortedTest {
     @Test
     fun sortsUsingComparator() {
         val sorted = Sorted(
-            Comparator { a, b -> a.first().compareTo(b.first()) },
+            Comparator { a: String, b: String -> a.first().compareTo(b.first()) },
             listOf("the", "red", "fox")
         )
         assertEquals("fox", sorted[0])

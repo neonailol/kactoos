@@ -1,12 +1,9 @@
 package nnl.rocks.kactoos.list
 
+import nnl.rocks.kactoos.iterable.IterableOf
+
 /**
  * Sorted list.
- *
- * Pay attention that sorting will happen on each operation
- * with the collection. Every time you touch it, it will fetch the
- * entire list from the encapsulated object and sort it. If you
- * want to avoid that "side-effect", decorate it with [StickyList].
  *
  * There is no thread-safety guarantee.
  *
@@ -14,15 +11,19 @@ package nnl.rocks.kactoos.list
  * @see StickyList
  * @since 0.4
  */
-class Sorted<T : Comparable<T>> : ListEnvelope<T> {
+class Sorted<T : Any> : ListEnvelope<T> {
 
     constructor(cmp: Comparator<T>, src: Collection<T>) : super({ src.sortedWith(cmp) })
 
-    constructor(vararg src: T) : this(src.iterator())
-
-    constructor(src: Iterator<T>) : this(Iterable { src })
-
-    constructor(src: Iterable<T>) : this(naturalOrder(), ListOf(src))
-
     constructor(cmp: Comparator<T>, vararg src: T) : this(cmp, ListOf(src.asIterable()))
+
+    companion object {
+        operator fun <T : Comparable<T>> invoke(src: Iterable<T>): Sorted<T> {
+            return Sorted(naturalOrder<T>(), ListOf(src))
+        }
+
+        operator fun <T : Comparable<T>> invoke(vararg src: T): Sorted<T> {
+            return Sorted(IterableOf(src.asIterable()))
+        }
+    }
 }
