@@ -9,5 +9,5 @@ class EmptyIterator<out T : Any> : Iterator<T> {
 
     override fun hasNext(): Boolean = false
 
-    override fun next(): T = throw NoSuchElementException()
+    override fun next(): T = throw NoSuchElementException("This iterator is always empty")
 }

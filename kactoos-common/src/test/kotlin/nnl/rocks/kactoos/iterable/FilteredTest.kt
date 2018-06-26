@@ -1,7 +1,6 @@
 package nnl.rocks.kactoos.iterable
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.iterator.IteratorOf
 import nnl.rocks.kactoos.test.BehavesAsIterable
 import kotlin.test.Test
 

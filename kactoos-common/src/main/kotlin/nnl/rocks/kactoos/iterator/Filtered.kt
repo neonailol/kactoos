@@ -26,25 +26,25 @@ import nnl.rocks.kactoos.internal.isEmpty
  */
 class Filtered<out X : Any> private constructor(
     private val iterator: Iterator<X>,
-    private val func: KFunc<X, Boolean>,
+    private val predicate: KFunc<X, Boolean>,
     private val buffer: Temporary<X>
 ) : Iterator<X> {
 
     constructor(
-        func: KFunc<X, Boolean>,
+        predicate: KFunc<X, Boolean>,
         iterator: Iterator<X>
-    ) : this(iterator, func, Temporary())
+    ) : this(iterator, predicate, Temporary())
 
     constructor(
-        func: Func<X, Boolean>,
+        predicate: Func<X, Boolean>,
         iterator: Iterator<X>
-    ) : this(iterator, { x -> func.apply(x) }, Temporary())
+    ) : this(iterator, { x -> predicate.apply(x) }, Temporary())
 
     override fun hasNext(): Boolean {
         if (buffer.isEmpty()) {
             while (iterator.hasNext()) {
                 val obj = iterator.next()
-                if (func(obj)) {
+                if (predicate(obj)) {
                     buffer.put(obj)
                     break
                 }

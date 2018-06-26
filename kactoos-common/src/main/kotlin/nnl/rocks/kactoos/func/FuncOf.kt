@@ -33,6 +33,6 @@ class FuncOf<in X : Any, out Y : Any>(
     companion object {
         operator fun <Y : Any> invoke(
             result: Y
-        ) = FuncOf({ _: Any -> result })
+        ) = FuncOf { _: Any -> result }
     }
 }
