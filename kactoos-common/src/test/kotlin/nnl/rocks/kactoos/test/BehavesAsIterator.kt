@@ -18,7 +18,7 @@ class BehavesAsIterator<T : Any>(
         assertFalse(origin.hasNext(), "Expected end of iterator")
         assertFailsWith(
             NoSuchElementException::class,
-            "Iterator does not throws NoSuchElementException on end"
+            "Iterator does not throws NoSuchElementException at end"
         ) {
             origin.next()
         }
