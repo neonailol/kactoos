@@ -44,4 +44,4 @@ Text envelope that provides equals and hashCode methods.
 | [SwappedCaseText](../-swapped-case-text/index.md) | `class SwappedCaseText : `[`TextEnvelope`](./index.md)<br>Swaps the case of a Text changing upper and title case to lower case, and lower case to upper case. |
 | [TextBase64](../-text-base64/index.md) | `class TextBase64 : `[`TextEnvelope`](./index.md)<br>Encodes the origin text using the Base64 encoding scheme. |
 | [TextOf](../-text-of/index.md) | `class TextOf : `[`TextEnvelope`](./index.md)<br>TextOf |
-| [TrimmedText](../-trimmed-text/index.md) | `class TrimmedText : `[`TextEnvelope`](./index.md)<br>Text without control characters (char &lt;= 32) from both ends. |
+| [TrimmedText](../-trimmed-text/index.md) | `class TrimmedText : `[`TextEnvelope`](./index.md)<br>Text without whitespace characters from both ends. |

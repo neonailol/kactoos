@@ -4,7 +4,7 @@
 
 `TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``TrimmedText(origin: `[`KText`](../../nnl.rocks.kactoos/-k-text.md)`)`
 
-Text without control characters (char &lt;= 32) from both ends.
+Text without whitespace characters from both ends.
 
 There is no thread-safety guarantee.
 

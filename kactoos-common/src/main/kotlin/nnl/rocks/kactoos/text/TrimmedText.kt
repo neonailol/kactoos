@@ -4,13 +4,13 @@ import nnl.rocks.kactoos.KText
 import nnl.rocks.kactoos.Text
 
 /**
- * Text without control characters (char <= 32) from both ends.
+ * Text without whitespace characters from both ends.
  *
  * There is no thread-safety guarantee.
  *
  * @since 0.1
  */
-class TrimmedText(origin: KText) : TextEnvelope({ origin().trim { it <= ' ' } }) {
+class TrimmedText(origin: KText) : TextEnvelope({ origin().trim() }) {
 
     constructor(origin: Text) : this({ origin.asString() })
 }

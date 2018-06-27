@@ -261,7 +261,7 @@ Kactoos.
 | [nnl.rocks.kactoos.func.TimedFunc](../nnl.rocks.kactoos.func/-timed-func/index.md) | Function that gets interrupted after a certain time has passed. |
 | [nnl.rocks.kactoos.text.TrimmedLeftText](../nnl.rocks.kactoos.text/-trimmed-left-text/index.md) | Text without control characters (char &amp;lt;= 32) only from left. |
 | [nnl.rocks.kactoos.text.TrimmedRightText](../nnl.rocks.kactoos.text/-trimmed-right-text/index.md) | Text without control characters (char &amp;lt;= 32) only from right. |
-| [nnl.rocks.kactoos.text.TrimmedText](../nnl.rocks.kactoos.text/-trimmed-text/index.md) | Text without control characters (char &lt;= 32) from both ends. |
+| [nnl.rocks.kactoos.text.TrimmedText](../nnl.rocks.kactoos.text/-trimmed-text/index.md) | Text without whitespace characters from both ends. |
 | [nnl.rocks.kactoos.scalar.True](../nnl.rocks.kactoos.scalar/-true/index.md) | Logical truth. |
 | [nnl.rocks.kactoos.func.UncheckedBiFunc](../nnl.rocks.kactoos.func/-unchecked-bi-func/index.md) | BiFunc that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [nnl.rocks.kactoos.func.UncheckedBiProc](../nnl.rocks.kactoos.func/-unchecked-bi-proc/index.md) | BiProc that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |

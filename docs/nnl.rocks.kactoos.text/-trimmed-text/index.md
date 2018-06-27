@@ -4,7 +4,7 @@
 
 `class TrimmedText : `[`TextEnvelope`](../-text-envelope/index.md)
 
-Text without control characters (char &lt;= 32) from both ends.
+Text without whitespace characters from both ends.
 
 There is no thread-safety guarantee.
 
@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``TrimmedText(origin: `[`KText`](../../nnl.rocks.kactoos/-k-text.md)`)`<br>Text without control characters (char &lt;= 32) from both ends. |
+| [&lt;init&gt;](-init-.md) | `TrimmedText(origin: `[`Text`](../../nnl.rocks.kactoos/-text/index.md)`)``TrimmedText(origin: `[`KText`](../../nnl.rocks.kactoos/-k-text.md)`)`<br>Text without whitespace characters from both ends. |
 
 ### Inherited Functions
 

@@ -32,6 +32,6 @@ Text.
 | [TextOf](-text-of/index.md) | `class TextOf : `[`TextEnvelope`](-text-envelope/index.md)<br>TextOf |
 | [TrimmedLeftText](-trimmed-left-text/index.md) | `class TrimmedLeftText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Text without control characters (char &amp;lt;= 32) only from left. |
 | [TrimmedRightText](-trimmed-right-text/index.md) | `class TrimmedRightText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Text without control characters (char &amp;lt;= 32) only from right. |
-| [TrimmedText](-trimmed-text/index.md) | `class TrimmedText : `[`TextEnvelope`](-text-envelope/index.md)<br>Text without control characters (char &lt;= 32) from both ends. |
+| [TrimmedText](-trimmed-text/index.md) | `class TrimmedText : `[`TextEnvelope`](-text-envelope/index.md)<br>Text without whitespace characters from both ends. |
 | [UncheckedText](-unchecked-text/index.md) | `class UncheckedText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Text that doesn't throw checked [Exception](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html). |
 | [UpperText](-upper-text/index.md) | `class UpperText : `[`Text`](../nnl.rocks.kactoos/-text/index.md)<br>Text in upper case. |
