@@ -17,7 +17,7 @@ class Reversed<X : Any> : CollectionEnvelope<X> {
 
     constructor(src: Collection<X>) : super({ src.reversed() })
 
-    constructor(vararg src: X) : this(src.asIterable())
-
     constructor(src: Iterable<X>) : this(CollectionOf(src))
+
+    constructor(vararg src: X) : this(src.asIterable())
 }

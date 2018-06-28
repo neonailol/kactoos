@@ -20,11 +20,12 @@ class Skipped<T : Any>(
 
     constructor(
         skip: Int,
-        vararg src: T
-    ) : this(skip, IterableOf(src.asIterable()))
+        src: Iterable<T>
+    ) : this(skip, CollectionOf(src))
 
     constructor(
         skip: Int,
-        src: Iterable<T>
-    ) : this(skip, CollectionOf(src))
+        vararg src: T
+    ) : this(skip, IterableOf(src.asIterable()))
+
 }

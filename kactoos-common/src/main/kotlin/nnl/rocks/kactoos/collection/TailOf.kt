@@ -18,7 +18,7 @@ class TailOf<T : Any>(
     src: Collection<T>
 ) : CollectionEnvelope<T>({ CollectionOf(TailOf(num, src)) }) {
 
-    constructor(num: Int, vararg src: T) : this(num, IterableOf(src.asIterable()))
-
     constructor(num: Int, src: Iterable<T>) : this(num, CollectionOf(src))
+
+    constructor(num: Int, vararg src: T) : this(num, IterableOf(src.asIterable()))
 }
