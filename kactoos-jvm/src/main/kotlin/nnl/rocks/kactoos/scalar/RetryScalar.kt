@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.func.RetryFunc
  * @param T Type of output
  * @param origin Func original
  * @param func Exit condition, returns TRUE if there is no reason to try
- * @since 0.5
+ * @since 0.4
  */
 class RetryScalar<T : Any>(
     private val origin: KScalar<T>,

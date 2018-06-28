@@ -11,7 +11,7 @@ import java.io.InputStream
  * @param E Exception's type.
  * @param origin Origin input.
  * @param func Function that wraps exceptions.
- * @since 0.5
+ * @since 0.4
  */
 class CheckedInput<E : Exception>(
     private val origin: Input,

@@ -9,7 +9,7 @@ Join a Text.
 There is no thread-safety guarantee.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

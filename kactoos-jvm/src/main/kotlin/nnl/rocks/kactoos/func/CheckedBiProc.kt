@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.scalar.CheckedScalar
  * @param E Exception's type
  * @param origin Original BiProc
  * @param func Function that wraps exceptions.
- * @since 0.5
+ * @since 0.4
  */
 class CheckedBiProc<X : Any, Y : Any, E : Exception>(
     private val origin: KBiProc<X, Y>,

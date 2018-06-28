@@ -9,7 +9,7 @@ Repeat an text count times.
 There is no thread-safety guarantee.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

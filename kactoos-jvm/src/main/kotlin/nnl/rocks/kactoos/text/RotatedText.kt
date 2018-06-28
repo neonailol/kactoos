@@ -6,7 +6,7 @@ import nnl.rocks.kactoos.Text
 /**
  * Rotate (circular shift) a String of shift characters.
  *
- * @since 0.5
+ * @since 0.4
  */
 class RotatedText private constructor(origin: KScalar<String>) : TextEnvelope(origin) {
 

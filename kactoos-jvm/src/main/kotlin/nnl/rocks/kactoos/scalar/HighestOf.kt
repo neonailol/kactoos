@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.iterable.Mapped
  * There is no thread-safety guarantee.
  *
  * @param T Scalar type
- * @since 0.5
+ * @since 0.4
  */
 class HighestOf<T : Comparable<T>> private constructor(private val result: KScalar<T>) : Scalar<T> {
 

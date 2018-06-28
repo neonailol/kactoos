@@ -17,7 +17,7 @@ BiFunc that throws exception of specified type.
 `E` - Exception's type
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

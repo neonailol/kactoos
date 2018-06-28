@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `func` - Exit condition, returns TRUE if there is no reason to try
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

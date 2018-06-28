@@ -6,7 +6,7 @@ import nnl.rocks.kactoos.Text
 /**
  * Normalize (replace sequences of whitespace characters by a single space) a Text.
  *
- * @since 0.5
+ * @since 0.4
  */
 class NormalizedText private constructor(origin: KScalar<String>): TextEnvelope(origin) {
 

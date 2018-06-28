@@ -11,7 +11,7 @@ import java.io.UncheckedIOException
 /**
  * Decodes origin [Text] using the hexadecimal encoding scheme.
  *
- * @since 0.5
+ * @since 0.4
  */
 class HexBytes(
     private val origin: Text

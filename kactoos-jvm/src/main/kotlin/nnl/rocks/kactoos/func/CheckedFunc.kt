@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.scalar.CheckedScalar
  * @param E Exception's type
  * @param origin Original func
  * @param func Function that wraps exceptions.
- * @since 0.5
+ * @since 0.4
  */
 class CheckedFunc<X : Any, Y : Any, E : Exception>(
     private val origin: KFunc<X, Y>,

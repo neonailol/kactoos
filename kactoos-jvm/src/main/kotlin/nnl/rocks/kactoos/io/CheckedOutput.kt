@@ -11,7 +11,7 @@ import java.io.OutputStream
  * @param E Exception's type.
  * @param origin Origin output.
  * @param func Function that wraps exceptions.
- * @since 0.5
+ * @since 0.4
  */
 class CheckedOutput<E : Exception>(
     private val origin: Output,

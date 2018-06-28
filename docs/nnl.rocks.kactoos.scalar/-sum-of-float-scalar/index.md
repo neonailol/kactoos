@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `scalars` - Scalars to sum up values from
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

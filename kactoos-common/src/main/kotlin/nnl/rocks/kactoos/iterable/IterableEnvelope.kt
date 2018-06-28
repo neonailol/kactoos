@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.iterator.Immutable
  * There is no thread-safety guarantee.
  *
  * @param T Type of item
- * @since 0.5
+ * @since 0.4
  */
 open class IterableEnvelope<out T : Any>(
     private val iterable: KScalar<Iterable<T>>

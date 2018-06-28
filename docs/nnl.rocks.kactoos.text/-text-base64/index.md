@@ -7,7 +7,7 @@
 Encodes the origin text using the Base64 encoding scheme.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

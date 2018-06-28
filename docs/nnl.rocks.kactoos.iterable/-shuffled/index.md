@@ -19,7 +19,7 @@ There is no thread-safety guarantee.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Shuffled(vararg src: `[`T`](index.md#T)`)`<br>`Shuffled(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)``Shuffled(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`<br>Shuffled iterable. |
+| [&lt;init&gt;](-init-.md) | `Shuffled(vararg src: `[`T`](index.md#T)`)``Shuffled(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`<br>Shuffled iterable. |
 
 ### Inherited Functions
 

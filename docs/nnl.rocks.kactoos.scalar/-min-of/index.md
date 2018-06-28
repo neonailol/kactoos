@@ -17,7 +17,7 @@ val min = MinOf(listOf(1, 2, 3)).toInt()
 There is no thread-safety guarantee.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

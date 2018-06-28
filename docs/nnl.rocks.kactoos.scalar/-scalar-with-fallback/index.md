@@ -19,7 +19,7 @@ There is no thread-safety guarantee.
 `follow` - Follow up function
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

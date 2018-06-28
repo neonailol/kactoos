@@ -26,7 +26,7 @@ import nnl.rocks.kactoos.iterable.Mapped
  * There is no thread-safety guarantee.
  *
  * @param iterable The iterable
- * @since 0.5
+ * @since 0.4
  */
 class AndWithIndex(
     private val iterable: Iterable<Func<Int, Boolean>>

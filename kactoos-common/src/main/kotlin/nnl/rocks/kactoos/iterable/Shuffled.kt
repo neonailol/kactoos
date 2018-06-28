@@ -16,5 +16,4 @@ class Shuffled<T : Any>(
 
     constructor(vararg src: T) : this(IterableOf { src.iterator() })
 
-    constructor(src: Iterator<T>) : this(IterableOf { src })
 }

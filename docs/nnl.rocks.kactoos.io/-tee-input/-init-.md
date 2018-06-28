@@ -78,7 +78,7 @@
 `path` - The output file
 
 **Since**
-0.5
+0.4
 
 `TeeInput(input: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
 `TeeInput(input: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, file: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`)`
@@ -94,7 +94,7 @@
 `file` - The output file
 
 **Since**
-0.5
+0.4
 
 `TeeInput(input: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
 `TeeInput(input: `[`File`](http://docs.oracle.com/javase/8/docs/api/java/io/File.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
@@ -137,7 +137,7 @@
 `output` - The target
 
 **Since**
-0.5
+0.4
 
 `TeeInput(input: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
 `TeeInput(input: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`
@@ -250,7 +250,7 @@
 `path` - The output path
 
 **Since**
-0.5
+0.4
 
 `TeeInput(input: `[`ByteArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
 `TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, output: `[`Output`](../../nnl.rocks.kactoos/-output/index.md)`)`
@@ -262,7 +262,7 @@
 `output` - The output file
 
 **Since**
-0.5
+0.4
 
 `TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, charset: `[`Charset`](http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html)`)`
 `TeeInput(input: `[`CharArray`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-array/index.html)`, path: `[`Path`](http://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)`, charset: `[`CharSequence`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html)`)`

@@ -16,7 +16,7 @@ val avg = AvgOf(1L, 2L, 3L).toLong()
 There is no thread-safety guarantee.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

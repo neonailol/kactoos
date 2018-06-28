@@ -17,7 +17,7 @@ There is thread safe.
 `symbol` - The padding symbol
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

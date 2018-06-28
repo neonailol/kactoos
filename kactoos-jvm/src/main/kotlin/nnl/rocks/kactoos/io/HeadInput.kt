@@ -8,7 +8,7 @@ import java.io.InputStream
  *
  * @param origin The original input.
  * @param length Limit of bytes that can be read from the beginning.
- * @since 0.5
+ * @since 0.4
  */
 class HeadInput(
     private val origin: Input,

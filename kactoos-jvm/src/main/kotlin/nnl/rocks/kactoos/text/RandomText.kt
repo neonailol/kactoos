@@ -14,7 +14,7 @@ import java.util.Random
  * @param characters List of characters allowed for generating.
  * @param length Length of generated text.
  * @param random Characters index randomizer.
- * @since 0.5
+ * @since 0.4
  */
 class RandomText(
     private val characters: List<Char>,

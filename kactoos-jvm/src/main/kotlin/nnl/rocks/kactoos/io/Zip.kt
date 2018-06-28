@@ -14,7 +14,7 @@ import java.util.zip.ZipOutputStream
  * There is no thread-safety guarantee.
  *
  * @param origin Origin directory.
- * @since 0.5
+ * @since 0.4
  */
 class Zip(
     private val origin: Directory

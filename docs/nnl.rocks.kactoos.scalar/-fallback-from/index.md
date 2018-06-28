@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `func` - Function that converts exceptions to the required type.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

@@ -17,7 +17,7 @@ import java.io.InputStream
  *
  * There is no thread-safety guarantee.
  *
- * @since 0.5
+ * @since 0.4
  */
 class StickyInput private constructor(
     private val cache: KScalar<ByteArray>

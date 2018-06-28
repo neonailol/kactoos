@@ -7,7 +7,7 @@
 Iterable of integer values.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

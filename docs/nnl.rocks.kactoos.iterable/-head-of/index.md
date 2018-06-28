@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `iterable` - Decorated iterable
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

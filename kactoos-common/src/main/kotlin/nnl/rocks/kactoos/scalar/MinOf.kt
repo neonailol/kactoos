@@ -13,7 +13,7 @@ package nnl.rocks.kactoos.scalar
  *
  * There is no thread-safety guarantee.
  *
- * @since 0.5
+ * @since 0.4
  */
 class MinOf : NumberEnvelope {
 

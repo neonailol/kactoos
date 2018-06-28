@@ -12,7 +12,7 @@ Formats the date using the provided formatter.
 `formatted` - The formatted date.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

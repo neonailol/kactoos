@@ -13,7 +13,7 @@ There is no thread-safety guarantee.
 `origin` - The scalar
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

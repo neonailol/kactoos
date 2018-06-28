@@ -15,5 +15,5 @@ There is no thread-safety guarantee.
 `V` - Type of value
 
 **Since**
-0.5
+0.4
 

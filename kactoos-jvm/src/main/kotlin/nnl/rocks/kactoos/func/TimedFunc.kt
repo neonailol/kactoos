@@ -13,7 +13,7 @@ import java.util.concurrent.TimeoutException
  * @param Y Type of output
  * @param func Async function
  * @param time Milliseconds
- * @since 0.5
+ * @since 0.4
  */
 class TimedFunc<X : Any, Y : Any>(
     private val time: Long,

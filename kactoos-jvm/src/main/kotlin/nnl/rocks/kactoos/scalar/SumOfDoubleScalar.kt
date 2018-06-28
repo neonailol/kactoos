@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.Scalar
  * There is no thread-safety guarantee.
  *
  * @param scalars Scalars to sum up values from
- * @since 0.5
+ * @since 0.4
  */
 class SumOfDoubleScalar(private val scalars: Iterable<KScalar<Double>>) : Scalar<Double> {
 

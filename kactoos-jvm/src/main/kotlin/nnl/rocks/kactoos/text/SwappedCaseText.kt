@@ -6,7 +6,7 @@ import nnl.rocks.kactoos.Text
 /**
  * Swaps the case of a Text changing upper and title case to lower case, and lower case to upper case.
  *
- * @since 0.5
+ * @since 0.4
  */
 class SwappedCaseText private constructor(origin: KScalar<String>): TextEnvelope(origin) {
 

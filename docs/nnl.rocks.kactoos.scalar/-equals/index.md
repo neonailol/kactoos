@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `T` - Type of object to compare
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

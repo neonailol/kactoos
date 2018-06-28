@@ -7,5 +7,5 @@
 Decodes origin [Text](../../nnl.rocks.kactoos/-text/index.md) using the hexadecimal encoding scheme.
 
 **Since**
-0.5
+0.4
 

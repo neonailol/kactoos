@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.iterator.HeadOf
  * @param T Element type
  * @param num Number of head elements
  * @param iterable Decorated iterable
- * @since 0.5
+ * @since 0.4
  */
 class HeadOf<T : Any>(
     num: Int,

@@ -9,5 +9,5 @@ Logical false.
 This class is thread-safe.
 
 **Since**
-0.5
+0.4
 

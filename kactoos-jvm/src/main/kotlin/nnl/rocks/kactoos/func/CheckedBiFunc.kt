@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.scalar.CheckedScalar
  * @param Y Type of input
  * @param Z Type of output
  * @param E Exception's type
- * @since 0.5
+ * @since 0.4
  */
 class CheckedBiFunc<X : Any, Y : Any, Z : Any, E : Exception>(
     private val origin: KBiFunc<X, Y, Z>,

@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.iterable.Mapped
  * @param T Type of result
  * @param exceptions The list of exceptions supported by this instance.
  * @param func Function that converts exceptions to the required type.
- * @since 0.5
+ * @since 0.4
  */
 class FallbackFrom<T : Any>(
     private val exceptions: Iterable<Class<out Throwable>>,

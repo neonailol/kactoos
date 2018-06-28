@@ -19,7 +19,7 @@ There is no thread-safety guarantee.
 `alternative` - The alternative
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

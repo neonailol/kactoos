@@ -13,5 +13,5 @@ There is no thread-safety guarantee.
 `bytes` - The bytes
 
 **Since**
-0.5
+0.4
 

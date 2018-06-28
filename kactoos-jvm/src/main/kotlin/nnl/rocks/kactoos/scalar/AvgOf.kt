@@ -20,7 +20,7 @@ import java.math.MathContext
  *
  * There is no thread-safety guarantee.
  *
- * @since 0.5
+ * @since 0.4
  */
 class AvgOf private constructor(value: KScalar<Double>) : NumberEnvelope(value) {
 

@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.Scalar
  * @param condition The condition
  * @param consequent The consequent
  * @param alternative The alternative
- * @since 0.5
+ * @since 0.4
  */
 class Ternary<T : Any>(
     private val condition: KScalar<Boolean>,
@@ -25,7 +25,7 @@ class Ternary<T : Any>(
      * @param cnd The condition
      * @param cons The consequent
      * @param alter The alternative
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         cnd: Boolean,
@@ -37,7 +37,7 @@ class Ternary<T : Any>(
      * @param cnd The condition
      * @param cons The consequent
      * @param alter The alternative
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         cnd: KScalar<Boolean>,
@@ -61,7 +61,7 @@ class Ternary<T : Any>(
          * @param cons The consequent
          * @param alter The alternative
          * @param X Type of input
-         * @since 0.5
+         * @since 0.4
          */
         operator fun <T : Any, X : Any> invoke(
             input: X,

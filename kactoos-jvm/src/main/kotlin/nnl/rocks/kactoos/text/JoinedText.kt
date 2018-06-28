@@ -12,7 +12,7 @@ import java.util.StringJoiner
  *
  * There is no thread-safety guarantee.
  *
- * @since 0.5
+ * @since 0.4
  */
 class JoinedText private constructor(origin: KScalar<String>) : TextEnvelope(origin) {
 

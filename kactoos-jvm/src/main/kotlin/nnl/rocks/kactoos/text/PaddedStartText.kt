@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.Text
  * @param text The text
  * @param length The minimum length of the resulting string
  * @param symbol The padding symbol
- * @since 0.5
+ * @since 0.4
  */
 class PaddedStartText(
     text: Text, length: Int, symbol: Char

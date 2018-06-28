@@ -10,7 +10,7 @@ import java.io.InputStream
  *
  * @param origin The original input stream.
  * @param len A number of bytes that can be read from the beginning.
- * @since 0.5
+ * @since 0.4
  */
 class HeadInputStream(
     private val origin: InputStream,

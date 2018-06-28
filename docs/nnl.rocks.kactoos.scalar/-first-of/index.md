@@ -19,7 +19,7 @@ There is no thread-safety guarantee.
 `fallback` - Fallback used if no value matches
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

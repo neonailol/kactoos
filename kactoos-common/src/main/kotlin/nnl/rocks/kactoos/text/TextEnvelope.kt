@@ -8,7 +8,7 @@ import nnl.rocks.kactoos.Text
  * Text envelope that provides equals and hashCode methods.
  *
  * @param origin String value of the envelope.
- * @since 0.5
+ * @since 0.4
  */
 abstract class TextEnvelope(
     private val origin: KScalar<String>

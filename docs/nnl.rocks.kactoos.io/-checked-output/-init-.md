@@ -15,5 +15,5 @@ Output that throws exception of specified type.
 `func` - Function that wraps exceptions.
 
 **Since**
-0.5
+0.4
 

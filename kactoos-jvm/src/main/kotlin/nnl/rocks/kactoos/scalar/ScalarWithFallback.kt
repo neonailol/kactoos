@@ -17,7 +17,7 @@ import nnl.rocks.kactoos.map.MapOf
  * @param origin Original scalar
  * @param fallbacks Fallbacks
  * @param follow Follow up function
- * @since 0.5
+ * @since 0.4
  */
 class ScalarWithFallback<T : Any>(
     private val origin: KScalar<T>,

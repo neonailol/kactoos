@@ -7,7 +7,7 @@
 Iterable of short values.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

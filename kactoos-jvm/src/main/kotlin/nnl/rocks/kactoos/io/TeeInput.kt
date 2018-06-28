@@ -92,7 +92,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param path The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: Path,
@@ -102,7 +102,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param file The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: Path,
@@ -122,7 +122,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param file The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: File,
@@ -132,7 +132,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param path The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: File,
@@ -152,7 +152,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param file The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: CharSequence,
@@ -186,7 +186,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param file The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: CharSequence,
@@ -220,7 +220,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param output The target
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: CharSequence,
@@ -482,7 +482,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param path The output path
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: ByteArray,
@@ -492,7 +492,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param file The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: ByteArray,
@@ -502,7 +502,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param output The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: ByteArray,
@@ -512,7 +512,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param path The output path
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: CharArray,
@@ -546,7 +546,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param file The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: CharArray,
@@ -580,7 +580,7 @@ class TeeInput(
     /**
      * @param input The source
      * @param output The output file
-     * @since 0.5
+     * @since 0.4
      */
     constructor(
         input: CharArray,

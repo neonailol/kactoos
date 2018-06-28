@@ -17,7 +17,7 @@ Function that gets interrupted after a certain time has passed.
 `time` - Milliseconds
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

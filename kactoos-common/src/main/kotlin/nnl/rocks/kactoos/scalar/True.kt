@@ -7,7 +7,7 @@ import nnl.rocks.kactoos.Scalar
  *
  * This class is thread-safe.
  *
- * @since 0.5
+ * @since 0.4
  */
 class True : Scalar<Boolean> {
 

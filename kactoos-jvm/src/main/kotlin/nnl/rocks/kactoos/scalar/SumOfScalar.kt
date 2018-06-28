@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.Scalar
  *
  * Note this class is for internal usage only
  *
- * @since 0.5
+ * @since 0.4
  */
 internal class SumOfScalar<T : Number>(private val scalars: Iterable<KScalar<T>>) : Scalar<SumOf> {
 

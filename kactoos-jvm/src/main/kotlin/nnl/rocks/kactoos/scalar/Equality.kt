@@ -17,7 +17,7 @@ import kotlin.math.sign
  * @param T Type of input
  * @param left Left
  * @param right Right
- * @since 0.5
+ * @since 0.4
  */
 class Equality<T : Bytes>(
     private val left: T,

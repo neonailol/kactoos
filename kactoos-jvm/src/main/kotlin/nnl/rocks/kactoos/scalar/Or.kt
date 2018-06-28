@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.iterable.Mapped
  * There is no thread-safety guarantee.
  *
  * @param origin The iterable.
- * @since 0.5
+ * @since 0.4
  */
 class Or(
     private val origin: Iterable<KScalar<Boolean>>

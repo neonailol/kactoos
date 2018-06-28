@@ -15,7 +15,7 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * @param condition Condition for getting the element
  * @param source Source iterable
  * @param fallback Fallback used if no value matches
- * @since 0.5
+ * @since 0.4
  */
 class FirstOf<T : Any>(
     private val condition: Func<T, Boolean>,

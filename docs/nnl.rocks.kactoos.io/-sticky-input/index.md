@@ -12,7 +12,7 @@ recommended to always decorate it with [SyncInput](../-sync-input/index.md).
 There is no thread-safety guarantee.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

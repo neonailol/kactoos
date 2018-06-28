@@ -7,5 +7,5 @@
 Iterable of float values.
 
 **Since**
-0.5
+0.4
 

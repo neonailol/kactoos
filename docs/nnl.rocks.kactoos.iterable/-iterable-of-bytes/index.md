@@ -7,7 +7,7 @@
 Iterable of bytes.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

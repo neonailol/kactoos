@@ -13,5 +13,5 @@ Text envelope that provides equals and hashCode methods.
 `origin` - String value of the envelope.
 
 **Since**
-0.5
+0.4
 

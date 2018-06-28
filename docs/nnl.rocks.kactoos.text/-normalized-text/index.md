@@ -7,7 +7,7 @@
 Normalize (replace sequences of whitespace characters by a single space) a Text.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

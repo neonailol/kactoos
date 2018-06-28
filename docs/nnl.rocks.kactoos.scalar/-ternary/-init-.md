@@ -14,7 +14,7 @@
 `alter` - The alternative
 
 **Since**
-0.5
+0.4
 
 `Ternary(condition: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`>, consequent: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>, alternative: `[`KScalar`](../../nnl.rocks.kactoos/-k-scalar.md)`<`[`T`](index.md#T)`>)`
 
@@ -33,5 +33,5 @@ There is no thread-safety guarantee.
 `alternative` - The alternative
 
 **Since**
-0.5
+0.4
 

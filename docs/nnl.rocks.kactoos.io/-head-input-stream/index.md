@@ -15,7 +15,7 @@ There is no thread-safety guarantee.
 `len` - A number of bytes that can be read from the beginning.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

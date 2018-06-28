@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `random` - Characters index randomizer.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

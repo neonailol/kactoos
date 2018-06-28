@@ -7,6 +7,6 @@ package nnl.rocks.kactoos.map
  *
  * @param K Type of key
  * @param V Type of value
- * @since 0.5
+ * @since 0.4
  */
 class MapNoNulls<K : Any, V : Any>(map: Map<K, V>) : MapEnvelope<K, V>(map)

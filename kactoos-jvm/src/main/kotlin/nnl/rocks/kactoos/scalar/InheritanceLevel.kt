@@ -16,7 +16,7 @@ import nnl.rocks.kactoos.Scalar
  *
  * @param derived Derived class
  * @param base Base class
- * @since 0.5
+ * @since 0.4
  */
 class InheritanceLevel(
     private val derived: Class<*>,

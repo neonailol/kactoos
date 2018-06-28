@@ -7,7 +7,7 @@
 Iterable of boolean values.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

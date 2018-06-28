@@ -2,8 +2,7 @@
 
 # &lt;init&gt;
 
-`Shuffled(vararg src: `[`T`](index.md#T)`)`
-`Shuffled(src: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>)``Shuffled(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
+`Shuffled(vararg src: `[`T`](index.md#T)`)``Shuffled(src: `[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](index.md#T)`>)`
 
 Shuffled iterable.
 

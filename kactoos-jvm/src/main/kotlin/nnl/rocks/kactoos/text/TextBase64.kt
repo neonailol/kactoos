@@ -7,7 +7,7 @@ import nnl.rocks.kactoos.io.BytesOf
 /**
  * Encodes the origin text using the Base64 encoding scheme.
  *
- * @since 0.5
+ * @since 0.4
  */
 class TextBase64 private constructor(origin: Text) : TextEnvelope(origin) {
 

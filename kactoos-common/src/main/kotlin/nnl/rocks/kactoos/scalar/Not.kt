@@ -9,7 +9,7 @@ import nnl.rocks.kactoos.Scalar
  * There is no thread-safety guarantee.
  *
  * @param origin The scalar
- * @since 0.5
+ * @since 0.4
  */
 class Not(private val origin: KScalar<Boolean>) : Scalar<Boolean> {
 

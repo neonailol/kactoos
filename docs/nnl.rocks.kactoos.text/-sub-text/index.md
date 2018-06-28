@@ -9,7 +9,7 @@ Extract a substring from a Text.
 There is no thread-safety guarantee.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

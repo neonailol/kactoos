@@ -17,7 +17,7 @@ import nnl.rocks.kactoos.text.UncheckedText
  * @param E Type of exception.
  * @param origin Original scalar.
  * @param func Function that wraps exception.
- * @since 0.5
+ * @since 0.4
  */
 class CheckedScalar<T : Any, E : Exception>(
     private val origin: KScalar<T>,

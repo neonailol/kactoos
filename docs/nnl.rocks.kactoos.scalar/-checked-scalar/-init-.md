@@ -19,5 +19,5 @@ There is no thread-safety guarantee.
 `func` - Function that wraps exception.
 
 **Since**
-0.5
+0.4
 

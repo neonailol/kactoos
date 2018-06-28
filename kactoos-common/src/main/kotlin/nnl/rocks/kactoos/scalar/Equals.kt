@@ -11,7 +11,7 @@ import nnl.rocks.kactoos.Scalar
  * @param left The left scalar to compare.
  * @param right The right scalar to compare.
  * @param T Type of object to compare
- * @since 0.5
+ * @since 0.4
  */
 class Equals<in T : Comparable<T>>(
     private val left: KScalar<T>,

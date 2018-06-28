@@ -17,7 +17,7 @@ There is no thread-safety guarantee.
 `max` - Maximum number of bytes to read at once
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

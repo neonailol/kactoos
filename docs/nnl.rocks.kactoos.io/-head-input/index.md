@@ -13,7 +13,7 @@ Input that only shows the first N bytes of the original input.
 `length` - Limit of bytes that can be read from the beginning.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 

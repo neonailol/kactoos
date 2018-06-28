@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.text.FormattedText
  * @param input Input to decorate
  * @param count Number of last bytes to show from input
  * @param max Maximum number of bytes to read at once
- * @since 0.5
+ * @since 0.4
  */
 class TailInput(
     private val input: Input,

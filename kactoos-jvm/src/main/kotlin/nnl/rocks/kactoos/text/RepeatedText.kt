@@ -8,7 +8,7 @@ import nnl.rocks.kactoos.Text
  *
  * There is no thread-safety guarantee.
  *
- * @since 0.5
+ * @since 0.4
  */
 class RepeatedText private constructor(text: KScalar<String>) : TextEnvelope(text) {
 

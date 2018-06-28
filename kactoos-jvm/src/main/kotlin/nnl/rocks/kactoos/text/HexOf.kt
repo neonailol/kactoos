@@ -9,7 +9,7 @@ import nnl.rocks.kactoos.Text
  * There is no thread-safety guarantee.
  *
  * @param bytes The bytes
- * @since 0.5
+ * @since 0.4
  */
 class HexOf(private val bytes: Bytes) : Text {
 

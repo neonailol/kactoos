@@ -22,5 +22,5 @@ Result interpretation:
 `base` - Base class
 
 **Since**
-0.5
+0.4
 

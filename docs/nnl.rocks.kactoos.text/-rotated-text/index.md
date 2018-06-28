@@ -7,7 +7,7 @@
 Rotate (circular shift) a String of shift characters.
 
 **Since**
-0.5
+0.4
 
 ### Constructors
 
