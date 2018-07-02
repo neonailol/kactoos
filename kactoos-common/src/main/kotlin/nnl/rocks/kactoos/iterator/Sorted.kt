@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  * @param T Element type
  * @since 0.3
  */
-class Sorted<T : Any> private constructor(
+class Sorted<out T : Any> private constructor(
     private val scalar: KScalar<Iterator<T>>
 ) : Iterator<T> by scalar() {
 

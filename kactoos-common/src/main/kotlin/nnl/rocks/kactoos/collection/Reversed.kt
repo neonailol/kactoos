@@ -13,7 +13,7 @@ package nnl.rocks.kactoos.collection
  * @param X Type of source item
  * @since 0.4
  */
-class Reversed<X : Any> : CollectionEnvelope<X> {
+class Reversed<out X : Any> : CollectionEnvelope<X> {
 
     constructor(src: Collection<X>) : super({ src.reversed() })
 

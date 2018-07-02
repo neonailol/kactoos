@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.iterator.TailOf
  * @param iterable Decorated iterable
  * @since 0.4
  */
-class TailOf<T : Any>(
+class TailOf<out T : Any>(
     num: Int,
     iterable: Iterable<T>
 ) : IterableEnvelope<T>({ IterableOf { TailOf(num, iterable.iterator()) } }) {

@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.Scalar
  * @param element Element to repeat.
  * @since 0.3
  */
-class Endless<T : Any>(private val element: KScalar<T>) : Iterator<T> {
+class Endless<out T : Any>(private val element: KScalar<T>) : Iterator<T> {
 
     constructor(element: T) : this({ element })
 

@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.iterator.Skipped
  * @param T Element type
  * @since 0.4
  */
-class Skipped<T : Any>(
+class Skipped<out T : Any>(
     skip: Int,
     iterable: Iterable<T>
 ) : IterableEnvelope<T>({ IterableOf { Skipped(skip, iterable.iterator()) } }) {

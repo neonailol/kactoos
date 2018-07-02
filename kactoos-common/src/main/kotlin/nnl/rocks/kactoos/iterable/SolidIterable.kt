@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.scalar.SolidScalar
  * @param X Type of item
  * @since 0.4
  */
-class SolidIterable<X : Any>(
+class SolidIterable<out X : Any>(
     iterable: Iterable<X>
 ) : IterableEnvelope<X>(SolidScalar<Iterable<X>> { SyncIterable(StickyIterable(iterable)) }) {
 

@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.internal.isEmpty
  * @param origin Decorated iterator.
  * @since 0.4
  */
-class HeadOf<T>(
+class HeadOf<out T>(
     private val head: Int,
     private val origin: Iterator<T>
 ) : Iterator<T> {

@@ -8,7 +8,7 @@ package nnl.rocks.kactoos.collection
  * @param T Element type
  * @since 0.4
  */
-class Shuffled<T : Any> : CollectionEnvelope<T> {
+class Shuffled<out T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Collection<T>) : super({ src.shuffled() })
 

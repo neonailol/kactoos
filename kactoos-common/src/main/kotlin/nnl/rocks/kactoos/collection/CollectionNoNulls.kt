@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.iterator.IteratorNoNulls
  * @param collection Encapsulated collection.
  * @since 0.3
  */
-class CollectionNoNulls<X : Any>(
+class CollectionNoNulls<out X : Any>(
     private val collection: KScalar<Collection<X>>
 ) : Collection<X> by collection() {
 

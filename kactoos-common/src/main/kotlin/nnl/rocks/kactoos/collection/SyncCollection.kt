@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.scalar.SyncScalar
  * @see StickyCollection
  * @since 0.4
  */
-class SyncCollection<T : Any> : CollectionEnvelope<T> {
+class SyncCollection<out T : Any> : CollectionEnvelope<T> {
 
     constructor(source: Collection<T>) : super(SyncScalar<Collection<T>> { source })
 

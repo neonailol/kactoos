@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.iterator.Joined
  * @param T Type of item
  * @since 0.1
  */
-class Joined<T : Any> : IterableEnvelope<T> {
+class Joined<out T : Any> : IterableEnvelope<T> {
 
     constructor(items: Iterable<Iterable<T>>) : super(IterableOf { Joined(items.map { it.iterator() }) })
 

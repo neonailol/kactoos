@@ -16,7 +16,7 @@ package nnl.rocks.kactoos.collection
  * @see StickyCollection
  * @since 0.1
  */
-class CollectionOf<T : Any> : CollectionEnvelope<T> {
+class CollectionOf<out T : Any> : CollectionEnvelope<T> {
 
     constructor(src: Iterable<T>) : super({ src.toList() })
 

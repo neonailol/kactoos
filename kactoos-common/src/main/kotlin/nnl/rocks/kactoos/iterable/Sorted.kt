@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.iterator.Sorted
  * @param T Element type
  * @since 0.4
  */
-class Sorted<T : Any>(
+class Sorted<out T : Any>(
     cmp: Comparator<T>,
     src: Iterable<T>
 ) : IterableEnvelope<T>({ IterableOf { Sorted(cmp, src.iterator()) } }) {

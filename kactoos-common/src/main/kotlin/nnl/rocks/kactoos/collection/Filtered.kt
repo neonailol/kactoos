@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * @param X Type of source item.
  * @since 0.4
  */
-class Filtered<X : Any>(
+class Filtered<out X : Any>(
     func: KFunc<X, Boolean>,
     src: Iterable<X>
 ) : CollectionEnvelope<X>({ CollectionOf(Filtered(func, src)) }) {

@@ -11,7 +11,7 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  * @param E Type of item
  * @since 0.4
  */
-class StickyCollection<E : Any> : CollectionEnvelope<E> {
+class StickyCollection<out E : Any> : CollectionEnvelope<E> {
 
     constructor(source: Collection<E>) : super(StickyScalar<Collection<E>> { source })
 

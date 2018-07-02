@@ -2,7 +2,7 @@
 
 # HeadOf
 
-`class HeadOf<T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>`
+`class HeadOf<out T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.md#T)`>`
 
 Head portion of the iterator.
 

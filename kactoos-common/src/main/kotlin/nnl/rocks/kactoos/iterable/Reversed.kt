@@ -8,7 +8,7 @@ package nnl.rocks.kactoos.iterable
  * @param X Type of item
  * @since 0.4
  */
-class Reversed<X : Any>(
+class Reversed<out X : Any>(
     src: Iterable<X>
 ) : IterableEnvelope<X>({ src.reversed() }) {
 

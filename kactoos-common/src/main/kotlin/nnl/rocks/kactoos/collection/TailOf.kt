@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.iterable.TailOf
  * @param src Source collection
  * @since 0.4
  */
-class TailOf<T : Any>(
+class TailOf<out T : Any>(
     num: Int,
     src: Collection<T>
 ) : CollectionEnvelope<T>({ CollectionOf(TailOf(num, src)) }) {

@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.internal.isEmpty
  * @param element Element to repeat
  * @since 0.3
  */
-class Repeated<T : Any>(
+class Repeated<out T : Any>(
     private var repeat: Int,
     private val element: KScalar<T>
 ) : Iterator<T> {

@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  * @param X Type of item
  * @since 0.1
  */
-class StickyIterable<X : Any>(
+class StickyIterable<out X : Any>(
     iterable: Iterable<X>
 ) : IterableEnvelope<X>(StickyScalar<Iterable<X>>{ iterable.asIterable() }) {
 

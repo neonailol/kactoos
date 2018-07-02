@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * @param src Source collection
  * @since 0.4
  */
-class HeadOf<T : Any>(
+class HeadOf<out T : Any>(
     num: Int,
     src: Collection<T>
 ) : CollectionEnvelope<T>({ CollectionOf<T>(HeadOf<T>(num, src)) }) {

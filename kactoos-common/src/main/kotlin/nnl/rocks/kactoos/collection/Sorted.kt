@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.iterable.IterableOf
  * @param T Element type
  * @since 0.4
  */
-class Sorted<T : Any> : CollectionEnvelope<T> {
+class Sorted<out T : Any> : CollectionEnvelope<T> {
 
     constructor(cmp: Comparator<T>, src: Collection<T>) : super({ src.sortedWith(cmp) })
 

@@ -10,7 +10,7 @@ package nnl.rocks.kactoos.iterator
  * @param num Number of tail elements
  * @since 0.4
  */
-class TailOf<T : Any>(num: Int, iterator: Iterator<T>) : Iterator<T> {
+class TailOf<out T : Any>(num: Int, iterator: Iterator<T>) : Iterator<T> {
 
     private val origin: Iterator<T> = Immutable(iterator.asSequence().toList().takeLast(num).iterator())
 

@@ -15,7 +15,7 @@ import nnl.rocks.kactoos.iterator.Mapped
  * @param src Source iterable
  * @since 0.4
  */
-class Mapped<X : Any, Y : Any>(
+class Mapped<out X : Any, out Y : Any>(
     fnc: KFunc<X, Y>,
     src: Iterable<X>
 ) : IterableEnvelope<Y>({ IterableOf { Mapped(fnc, src.iterator()) } }) {

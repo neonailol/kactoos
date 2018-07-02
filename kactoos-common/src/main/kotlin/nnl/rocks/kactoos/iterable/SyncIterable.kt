@@ -12,7 +12,7 @@ package nnl.rocks.kactoos.iterable
  * @see StickyIterable
  * @see SolidIterable
  */
-class SyncIterable<X : Any>(
+class SyncIterable<out X : Any>(
     private val origin: Iterable<X>,
     private val lock: Any
 ) : Iterable<X> {

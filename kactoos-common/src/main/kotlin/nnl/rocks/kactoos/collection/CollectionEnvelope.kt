@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.iterator.Immutable
  * @param collection Encapsulated collection.
  * @since 0.3
  */
-open class CollectionEnvelope<X : Any>(
+open class CollectionEnvelope<out X : Any>(
     private val collection: KScalar<Collection<X>>
 ) : Collection<X> by collection() {
 

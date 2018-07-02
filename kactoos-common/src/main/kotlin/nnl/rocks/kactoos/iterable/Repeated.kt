@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.iterator.Repeated
  * @param total The total number of repetitions
  * @param item The element to repeat
  */
-class Repeated<T : Any>(
+class Repeated<out T : Any>(
     total: Int,
     item: KScalar<T>
 ) : IterableEnvelope<T>({ IterableOf { Repeated(total, item) } }) {

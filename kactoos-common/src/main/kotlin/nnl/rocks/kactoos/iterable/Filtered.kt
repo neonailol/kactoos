@@ -25,7 +25,7 @@ import nnl.rocks.kactoos.iterator.Filtered
  * @param src Source
  * @since 0.1
  */
-class Filtered<X : Any>(
+class Filtered<out X : Any>(
     fnc: KFunc<X, Boolean>,
     src: Iterable<X>
 ) : IterableEnvelope<X>(IterableOf { Filtered(fnc, src.iterator()) }) {

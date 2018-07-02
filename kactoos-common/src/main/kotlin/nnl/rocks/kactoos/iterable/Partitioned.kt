@@ -8,7 +8,7 @@ import nnl.rocks.kactoos.iterator.Partitioned
  * @param T Partitions value type
  * @since 0.4
  */
-class Partitioned<T : Any> : IterableEnvelope<List<T>> {
+class Partitioned<out T : Any> : IterableEnvelope<List<T>> {
 
     constructor(
         size: Int,

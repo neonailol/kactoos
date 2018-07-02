@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.iterable.Mapped
  * @param Y Type of target item
  * @since 0.3
  */
-class Mapped<X : Any, Y : Any>(
+class Mapped<out X : Any, out Y : Any>(
     fnc: KFunc<X, Y>,
     src: Collection<X>
 ) : CollectionEnvelope<Y>({ CollectionOf(Mapped(fnc, src)) }) {

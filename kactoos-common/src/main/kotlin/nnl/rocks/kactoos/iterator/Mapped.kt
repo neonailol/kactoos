@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.KFunc
  * @param origin Decorated iterator
  * @since 0.4
  */
-class Mapped<X : Any, out Y : Any>(
+class Mapped<out X : Any, out Y : Any>(
     private val func: KFunc<X, Y>,
     private val origin: Iterator<X>
 ) : Iterator<Y> {

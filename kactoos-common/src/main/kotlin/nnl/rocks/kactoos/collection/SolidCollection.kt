@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.scalar.SolidScalar
  * @see StickyCollection
  * @since 0.4
  */
-class SolidCollection<T : Any> : CollectionEnvelope<T> {
+class SolidCollection<out T : Any> : CollectionEnvelope<T> {
 
     constructor(source: Collection<T>) : super(SolidScalar<Collection<T>> { SyncCollection(StickyCollection(source)) })
 

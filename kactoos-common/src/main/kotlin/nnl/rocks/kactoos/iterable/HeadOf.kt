@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.iterator.HeadOf
  * @param iterable Decorated iterable
  * @since 0.4
  */
-class HeadOf<T : Any>(
+class HeadOf<out T : Any>(
     num: Int,
     iterable: Iterable<T>
 ) : IterableEnvelope<T>(IterableOf { HeadOf(num, iterable.iterator()) }) {

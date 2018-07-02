@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.iterable.Skipped
  * @param src Source collection
  * @since 0.4
  */
-class Skipped<T : Any>(
+class Skipped<out T : Any>(
     skip: Int,
     src: Collection<T>
 ) : CollectionEnvelope<T>((CollectionOf(Skipped(skip, src)))) {

@@ -2,7 +2,7 @@
 
 # StickyCollection
 
-`class StickyCollection<E : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](../-collection-envelope/index.md)`<`[`E`](index.md#E)`>`
+`class StickyCollection<out E : `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`> : `[`CollectionEnvelope`](../-collection-envelope/index.md)`<`[`E`](index.md#E)`>`
 
 Collection decorator that goes through the list only once.
 
