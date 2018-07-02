@@ -9,7 +9,7 @@ plugins {
     maven
     id("kotlin-platform-jvm")
     id("org.jetbrains.dokka") version "0.9.17"
-    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC7-2"
+    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC7-3"
     id("org.jlleitschuh.gradle.ktlint") version "4.1.0"
 }
 
@@ -25,7 +25,7 @@ dependencies {
 
 configurations {
     detekt {
-        version = "1.0.0.RC7-2"
+        version = "1.0.0.RC7-3"
         defaultProfile(
             Action {
                 input = "$projectDir/src/main/kotlin"
