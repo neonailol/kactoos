@@ -34,12 +34,6 @@ There is no thread-safety guarantee.
 **Since**
 0.1
 
-### Types
-
-| Name | Summary |
-|---|---|
-| [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Output`](./index.md) |
-
 ### Functions
 
 | Name | Summary |
@@ -54,7 +48,6 @@ There is no thread-safety guarantee.
 | [DeadOutput](../../nnl.rocks.kactoos.io/-dead-output/index.md) | `class DeadOutput : `[`Output`](./index.md)<br>Output that accepts anything. |
 | [GzipOutput](../../nnl.rocks.kactoos.io/-gzip-output/index.md) | `class GzipOutput : `[`Output`](./index.md)<br>Output that writes compressed data in the GZIP file format. |
 | [LoggingOutput](../../nnl.rocks.kactoos.io/-logging-output/index.md) | `class LoggingOutput : `[`Output`](./index.md)<br>Logged output. |
-| [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Output`](./index.md) |
 | [OutputTo](../../nnl.rocks.kactoos.io/-output-to/index.md) | `class OutputTo : `[`Output`](./index.md)<br>An [Output](./index.md) that encapsulates other destination for the data. |
 | [StderrOutput](../../nnl.rocks.kactoos.io/-stderr-output/index.md) | `class StderrOutput : `[`Output`](./index.md)<br>Output that writes to `stderr`. |
 | [StdoutOutput](../../nnl.rocks.kactoos.io/-stdout-output/index.md) | `class StdoutOutput : `[`Output`](./index.md)<br>Output that writes to `stdout`. |

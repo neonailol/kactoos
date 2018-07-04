@@ -34,12 +34,6 @@ interface Input {
      * @throws IOException If something goes wrong
      */
     fun stream(): InputStream
-
-    class NoNulls(private val origin: Input) : Input {
-
-        @Suppress("USELESS_ELVIS")
-        override fun stream(): InputStream = origin.stream() ?: throw IOException("NULL instead of a valid result")
-    }
 }
 
 internal typealias KInput = () -> InputStream

@@ -29,12 +29,6 @@ There is no thread-safety guarantee.
 **Since**
 0.1
 
-### Types
-
-| Name | Summary |
-|---|---|
-| [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Input`](./index.md) |
-
 ### Functions
 
 | Name | Summary |
@@ -53,7 +47,6 @@ There is no thread-safety guarantee.
 | [InputWithFallback](../../nnl.rocks.kactoos.io/-input-with-fallback/index.md) | `class InputWithFallback : `[`Input`](./index.md)<br>Input that returns an alternative input if the main one throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html). |
 | [Joined](../../nnl.rocks.kactoos.io/-joined/index.md) | `class Joined : `[`Input`](./index.md)<br>Concatenation of several inputs. |
 | [LoggingInput](../../nnl.rocks.kactoos.io/-logging-input/index.md) | `class LoggingInput : `[`Input`](./index.md)<br>Logged input. |
-| [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Input`](./index.md) |
 | [ResourceOf](../../nnl.rocks.kactoos.io/-resource-of/index.md) | `class ResourceOf : `[`Input`](./index.md)<br>Classpath resource. |
 | [StdinInput](../../nnl.rocks.kactoos.io/-stdin-input/index.md) | `class StdinInput : `[`Input`](./index.md)<br>Input that reads from `stdin`. |
 | [StickyInput](../../nnl.rocks.kactoos.io/-sticky-input/index.md) | `class StickyInput : `[`Input`](./index.md)<br>Input that reads only once. |

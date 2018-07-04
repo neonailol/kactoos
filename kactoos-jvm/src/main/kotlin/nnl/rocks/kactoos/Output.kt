@@ -42,12 +42,6 @@ interface Output {
      * @throws IOException If something goes wrong
      */
     fun stream(): OutputStream
-
-    class NoNulls(private val origin: Output) : Output {
-
-        @Suppress("USELESS_ELVIS")
-        override fun stream(): OutputStream = this.origin.stream() ?: throw IOException("NULL instead of a valid result")
-    }
 }
 
 internal typealias KOutput = () -> OutputStream

@@ -36,7 +36,6 @@ Kactoos.
 | [nnl.rocks.kactoos.func.CheckedProc](../nnl.rocks.kactoos.func/-checked-proc/index.md) | Proc that throws exception of specified type. |
 | [nnl.rocks.kactoos.scalar.CheckedScalar](../nnl.rocks.kactoos.scalar/-checked-scalar/index.md) | Scalar that wraps an original checked exception thrown by the origin using the given wrapping function. |
 | [nnl.rocks.kactoos.collection.CollectionEnvelope](../nnl.rocks.kactoos.collection/-collection-envelope/index.md) | Base read-only collection. |
-| [nnl.rocks.kactoos.collection.CollectionNoNulls](../nnl.rocks.kactoos.collection/-collection-no-nulls/index.md) | A decorator of [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html) that tolerates no NULLs. |
 | [nnl.rocks.kactoos.collection.CollectionOf](../nnl.rocks.kactoos.collection/-collection-of/index.md) | Iterable as [Collection](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html). |
 | [nnl.rocks.kactoos.text.ComparableText](../nnl.rocks.kactoos.text/-comparable-text/index.md) | Text implementing Comparable. |
 | [nnl.rocks.kactoos.scalar.Constant](../nnl.rocks.kactoos.scalar/-constant/index.md) | Constant value that never changes. |
@@ -94,7 +93,6 @@ Kactoos.
 | [nnl.rocks.kactoos.time.Iso](../nnl.rocks.kactoos.time/-iso/index.md) | Default formatter |
 | [nnl.rocks.kactoos.scalar.ItemAt](../nnl.rocks.kactoos.scalar/-item-at/index.md) | Element from position in [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) or fallback value if iterator hasn't this position. |
 | [nnl.rocks.kactoos.iterable.IterableEnvelope](../nnl.rocks.kactoos.iterable/-iterable-envelope/index.md) | Iterable envelope. |
-| [nnl.rocks.kactoos.iterable.IterableNoNulls](../nnl.rocks.kactoos.iterable/-iterable-no-nulls/index.md) | A decorator for [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html) that doesn't allow any NULL. |
 | [nnl.rocks.kactoos.iterable.IterableOf](../nnl.rocks.kactoos.iterable/-iterable-of/index.md) | Array as iterable. |
 | [nnl.rocks.kactoos.iterable.IterableOfBooleans](../nnl.rocks.kactoos.iterable/-iterable-of-booleans/index.md) | Iterable of boolean values. |
 | [nnl.rocks.kactoos.iterable.IterableOfBytes](../nnl.rocks.kactoos.iterable/-iterable-of-bytes/index.md) | Iterable of bytes. |
@@ -104,7 +102,6 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.IterableOfInts](../nnl.rocks.kactoos.iterable/-iterable-of-ints/index.md) | Iterable of integer values. |
 | [nnl.rocks.kactoos.iterable.IterableOfLongs](../nnl.rocks.kactoos.iterable/-iterable-of-longs/index.md) | Iterable of long values. |
 | [nnl.rocks.kactoos.iterable.IterableOfShorts](../nnl.rocks.kactoos.iterable/-iterable-of-shorts/index.md) | Iterable of short values. |
-| [nnl.rocks.kactoos.iterator.IteratorNoNulls](../nnl.rocks.kactoos.iterator/-iterator-no-nulls/index.md) | A decorator of an [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) that returns no NULL. |
 | [nnl.rocks.kactoos.iterator.IteratorOf](../nnl.rocks.kactoos.iterator/-iterator-of/index.md) | Iterator that returns the set of elements. |
 | [nnl.rocks.kactoos.iterator.IteratorOfBooleans](../nnl.rocks.kactoos.iterator/-iterator-of-booleans/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) over [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)s. |
 | [nnl.rocks.kactoos.iterator.IteratorOfBytes](../nnl.rocks.kactoos.iterator/-iterator-of-bytes/index.md) | [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html) over [Byte](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html)s. |
@@ -133,7 +130,6 @@ Kactoos.
 | [nnl.rocks.kactoos.io.LengthOf](../nnl.rocks.kactoos.io/-length-of/index.md) | Length of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [nnl.rocks.kactoos.list.ListEnvelope](../nnl.rocks.kactoos.list/-list-envelope/index.md) | List envelope. |
 | [nnl.rocks.kactoos.list.ListIterator](../nnl.rocks.kactoos.list/-list-iterator/index.md) | Iterator of the list. |
-| [nnl.rocks.kactoos.list.ListNoNulls](../nnl.rocks.kactoos.list/-list-no-nulls/index.md) | A decorator of [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) that tolerates no NULLs. |
 | [nnl.rocks.kactoos.list.ListOf](../nnl.rocks.kactoos.list/-list-of/index.md) | Iterable as [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html). |
 | [nnl.rocks.kactoos.time.LocalDateAsText](../nnl.rocks.kactoos.time/-local-date-as-text/index.md) | Formatter for [LocalDate](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) instances. |
 | [nnl.rocks.kactoos.time.LocalDateTimeAsText](../nnl.rocks.kactoos.time/-local-date-time-as-text/index.md) | Formatter for [LocalDateTime](http://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) instances. |
@@ -146,7 +142,6 @@ Kactoos.
 | [nnl.rocks.kactoos.scalar.LowestOf](../nnl.rocks.kactoos.scalar/-lowest-of/index.md) | Find the lowest item. |
 | [nnl.rocks.kactoos.map.MapEntry](../nnl.rocks.kactoos.map/-map-entry/index.md) | MapEntry as [kotlin.collections.Map.Entry](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/-entry/index.html). |
 | [nnl.rocks.kactoos.map.MapEnvelope](../nnl.rocks.kactoos.map/-map-envelope/index.md) | Map envelope. |
-| [nnl.rocks.kactoos.map.MapNoNulls](../nnl.rocks.kactoos.map/-map-no-nulls/index.md) | A decorator of [Map](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) that tolerates no NULLs. |
 | [nnl.rocks.kactoos.map.MapOf](../nnl.rocks.kactoos.map/-map-of/index.md) | Constructs Map from various inputs. |
 | [nnl.rocks.kactoos.collection.Mapped](../nnl.rocks.kactoos.collection/-mapped/index.md) | Mapped collection. |
 | [nnl.rocks.kactoos.iterable.Mapped](../nnl.rocks.kactoos.iterable/-mapped/index.md) | Mapped iterable. |

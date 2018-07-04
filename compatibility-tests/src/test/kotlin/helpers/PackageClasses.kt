@@ -5,6 +5,7 @@ import nnl.rocks.kactoos.collection.Filtered
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.list.Mapped
 import nnl.rocks.kactoos.list.Sorted
+import nnl.rocks.kactoos.scalar.And
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 
@@ -18,7 +19,7 @@ open class PackageClasses(
     ) : this(
         Sorted(
             Mapped(
-                FuncOf({ it: String -> it.replace("$pkg.", "") }),
+                FuncOf { it: String -> it.replace("$pkg.", "") },
                 Filtered(
                     filter,
                     Reflections(
@@ -31,5 +32,17 @@ open class PackageClasses(
     )
 }
 
-class CactoosClasses : PackageClasses("org.cactoos", FuncOf({ it: String -> it.contains('$').not() }))
-class KactoosClasses : PackageClasses("nnl.rocks.kactoos", FuncOf({ it: String -> it.endsWith("Kt").not() }))
+class CactoosClasses : PackageClasses(
+    "org.cactoos",
+    FuncOf { it: String ->
+        And(
+            { it.contains('$').not() },
+            { it.contains("NoNulls").not() }
+        ).invoke()
+    }
+)
+
+class KactoosClasses : PackageClasses(
+    "nnl.rocks.kactoos",
+    FuncOf { it: String -> it.endsWith("Kt").not() }
+)
