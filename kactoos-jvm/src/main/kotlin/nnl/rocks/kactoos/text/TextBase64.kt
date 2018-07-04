@@ -15,5 +15,4 @@ class TextBase64 private constructor(origin: Text) : TextEnvelope(origin) {
      * @param input The String
      */
     constructor(input: String) : this(TextOf(BytesBase64(BytesOf(input))))
-
 }

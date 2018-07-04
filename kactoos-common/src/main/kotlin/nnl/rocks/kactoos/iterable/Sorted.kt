@@ -21,7 +21,7 @@ class Sorted<out T : Any>(
     ) : this(cmp, args.asIterable())
 
     companion object {
-        
+
         operator fun <T : Comparable<T>> invoke(
             origin: Iterable<T>
         ) = Sorted(naturalOrder<T>(), origin)

@@ -48,7 +48,7 @@ class WriterTo(
         output: Output,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(
-         { OutputStreamWriter(output.stream(), charset) }
+        { OutputStreamWriter(output.stream(), charset) }
     )
 
     /**

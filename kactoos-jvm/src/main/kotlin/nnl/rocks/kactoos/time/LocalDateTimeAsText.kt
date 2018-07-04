@@ -24,7 +24,7 @@ class LocalDateTimeAsText(
         date: LocalDateTime,
         formatter: DateTimeFormatter = Iso().invoke()
     ) : this(
-         { formatter.format(date.atZone(ZoneId.systemDefault())) }
+        { formatter.format(date.atZone(ZoneId.systemDefault())) }
     )
 
     /**

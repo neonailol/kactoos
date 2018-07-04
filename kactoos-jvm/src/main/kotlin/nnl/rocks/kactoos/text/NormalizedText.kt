@@ -8,7 +8,7 @@ import nnl.rocks.kactoos.Text
  *
  * @since 0.4
  */
-class NormalizedText private constructor(origin: KScalar<String>): TextEnvelope(origin) {
+class NormalizedText private constructor(origin: KScalar<String>) : TextEnvelope(origin) {
 
     constructor(origin: Text) : this(
         {
@@ -17,5 +17,4 @@ class NormalizedText private constructor(origin: KScalar<String>): TextEnvelope(
     )
 
     constructor(text: String) : this(TextOf(text))
-
 }

@@ -24,8 +24,7 @@ import java.nio.charset.StandardCharsets
  *
  * @since 0.13
  */
-class WriterAsOutputStream
-(
+class WriterAsOutputStream(
     private val writer: Writer,
     private val decoder: CharsetDecoder,
     size: Int,

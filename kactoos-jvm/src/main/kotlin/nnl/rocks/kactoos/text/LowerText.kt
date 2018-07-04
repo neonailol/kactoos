@@ -24,5 +24,4 @@ class LowerText private constructor(origin: KScalar<String>) : TextEnvelope(orig
     )
 
     constructor(origin: Text) : this(origin, Locale.ENGLISH)
-
 }

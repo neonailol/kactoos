@@ -25,5 +25,5 @@ open class ListEnvelope<T : Any>(
 
     override fun listIterator(): ListIterator<T> = ListIterator(list())
 
-    override fun listIterator(index: Int): ListIterator<T>  = ListIterator(list(), index)
+    override fun listIterator(index: Int): ListIterator<T> = ListIterator(list(), index)
 }

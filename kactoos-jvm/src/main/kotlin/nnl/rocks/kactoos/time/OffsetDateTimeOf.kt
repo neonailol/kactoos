@@ -21,12 +21,12 @@ class OffsetDateTimeOf(
 
     constructor(
         date: CharSequence
-    ) : this( { ZonedDateTime.from(Iso().invoke().parse(date)).toOffsetDateTime() })
+    ) : this({ ZonedDateTime.from(Iso().invoke().parse(date)).toOffsetDateTime() })
 
     constructor(
         date: CharSequence,
         formatter: DateTimeFormatter
-    ) : this( { ZonedDateTime.from(formatter.parse(date)).toOffsetDateTime() })
+    ) : this({ ZonedDateTime.from(formatter.parse(date)).toOffsetDateTime() })
 
     /**
      * Parses date using the provided format to create

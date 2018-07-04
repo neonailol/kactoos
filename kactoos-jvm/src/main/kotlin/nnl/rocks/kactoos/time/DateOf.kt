@@ -22,7 +22,7 @@ class DateOf(
         date: CharSequence,
         formatter: DateTimeFormatter
     ) : this(
-         { Date.from(LocalDateTime.from(formatter.parse(date)).toInstant(ZoneOffset.UTC)) }
+        { Date.from(LocalDateTime.from(formatter.parse(date)).toInstant(ZoneOffset.UTC)) }
     )
 
     constructor (

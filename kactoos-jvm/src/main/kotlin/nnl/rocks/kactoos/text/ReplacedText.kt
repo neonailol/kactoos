@@ -32,7 +32,7 @@ import java.util.regex.PatternSyntaxException
  *
  * @since 0.2
  */
-class ReplacedText private constructor(text: KScalar<String>): TextEnvelope(text) {
+class ReplacedText private constructor(text: KScalar<String>) : TextEnvelope(text) {
 
     /**
      * @param origin The text
@@ -68,5 +68,5 @@ class ReplacedText private constructor(text: KScalar<String>): TextEnvelope(text
         text: Text,
         find: String,
         replace: String
-    ) : this(text,  { Pattern.compile(find) }, FuncOf { replace })
+    ) : this(text, { Pattern.compile(find) }, FuncOf { replace })
 }

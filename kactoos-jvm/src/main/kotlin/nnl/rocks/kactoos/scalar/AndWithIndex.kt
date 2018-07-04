@@ -1,6 +1,10 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.*
+import nnl.rocks.kactoos.BiFunc
+import nnl.rocks.kactoos.BiProc
+import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.Proc
+import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.BiFuncOf
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf

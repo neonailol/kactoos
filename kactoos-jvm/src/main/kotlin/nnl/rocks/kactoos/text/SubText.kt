@@ -10,7 +10,7 @@ import nnl.rocks.kactoos.Text
  *
  * @since 0.4
  */
-class SubText private constructor(text: KScalar<String>): TextEnvelope(text) {
+class SubText private constructor(text: KScalar<String>) : TextEnvelope(text) {
 
     /**
      * @param origin The Text
@@ -59,7 +59,7 @@ class SubText private constructor(text: KScalar<String>): TextEnvelope(text) {
     constructor(
         text: Text,
         strt: Int
-    ) : this(text,  { strt },  { text.asString().length })
+    ) : this(text, { strt }, { text.asString().length })
 
     /**
      * @param text The Text
@@ -70,6 +70,5 @@ class SubText private constructor(text: KScalar<String>): TextEnvelope(text) {
         text: Text,
         strt: Int,
         finish: Int
-    ) : this(text,  { strt },  { finish })
-
+    ) : this(text, { strt }, { finish })
 }

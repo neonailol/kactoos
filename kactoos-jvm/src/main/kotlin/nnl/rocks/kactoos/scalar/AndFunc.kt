@@ -73,7 +73,7 @@ class AndFunc<X : Any>(private val iterable: Iterable<KScalar<Boolean>>) : Scala
         src: Iterable<X>
     ) : this(
         Mapped<X, KScalar<Boolean>>(
-            FuncOf { item ->  { func.apply(item) } }, src
+            FuncOf { item -> { func.apply(item) } }, src
         )
     )
 

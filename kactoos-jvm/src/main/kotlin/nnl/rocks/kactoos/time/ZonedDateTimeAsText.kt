@@ -20,7 +20,7 @@ class ZonedDateTimeAsText constructor(
         date: ZonedDateTime,
         formatter: DateTimeFormatter = Iso().invoke()
     ) : this(
-         { formatter.format(date) }
+        { formatter.format(date) }
     )
 
     /**

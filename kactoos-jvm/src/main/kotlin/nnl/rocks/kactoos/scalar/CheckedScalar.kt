@@ -1,6 +1,5 @@
 package nnl.rocks.kactoos.scalar
 
-import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
@@ -52,13 +51,13 @@ class CheckedScalar<T : Any, E : Exception>(
             exp.javaClass, wrapped.javaClass
         ).invoke()
         val message = wrapped.message?.replaceFirst(
-                UncheckedText(
-                    FormattedText(
-                        "%s: ",
-                        exp.javaClass.name
-                    )
-                ).asString().toRegex(), ""
-            )
+            UncheckedText(
+                FormattedText(
+                    "%s: ",
+                    exp.javaClass.name
+                )
+            ).asString().toRegex(), ""
+        )
         if (level >= 0 && message == exp.message) {
             wrapped = exp as E
         }

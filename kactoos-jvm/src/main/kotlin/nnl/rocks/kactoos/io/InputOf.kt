@@ -5,7 +5,11 @@ import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
-import java.io.*
+import java.io.ByteArrayInputStream
+import java.io.File
+import java.io.FileInputStream
+import java.io.InputStream
+import java.io.Reader
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
@@ -34,12 +38,12 @@ class InputOf(private val origin: Input) : Input {
     /**
      * @param uri The URI
      */
-    constructor(uri: URI) : this( { uri.toURL() })
+    constructor(uri: URI) : this({ uri.toURL() })
 
     /**
      * @param url The URL
      */
-    constructor(url: URL) : this( { url })
+    constructor(url: URL) : this({ url })
 
     /**
      * @param scalar The url

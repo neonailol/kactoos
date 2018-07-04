@@ -35,5 +35,4 @@ class RepeatedText private constructor(text: KScalar<String>) : TextEnvelope(tex
         text: String,
         count: Int
     ) : this(TextOf(text), count)
-
 }

@@ -4,7 +4,11 @@ import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import java.io.*
+import java.io.File
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.io.Reader
+import java.io.UnsupportedEncodingException
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
@@ -152,7 +156,7 @@ class ReaderOf(
         input: Input,
         charset: Charset = StandardCharsets.UTF_8
     ) : this(
-         { InputStreamReader(input.stream(), charset) }
+        { InputStreamReader(input.stream(), charset) }
     )
 
     /**
@@ -172,7 +176,7 @@ class ReaderOf(
     constructor(
         input: Input,
         decoder: CharsetDecoder
-    ) : this( { InputStreamReader(input.stream(), decoder) })
+    ) : this({ InputStreamReader(input.stream(), decoder) })
 
     /**
      * @param stream The stream
@@ -210,7 +214,7 @@ class ReaderOf(
     /**
      * @param rdr The reader
      */
-    private constructor(rdr: Reader) : this( { rdr })
+    private constructor(rdr: Reader) : this({ rdr })
 
     override fun read(
         cbuf: CharArray,

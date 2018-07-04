@@ -8,7 +8,7 @@ import nnl.rocks.kactoos.Text
  *
  * @since 0.4
  */
-class SwappedCaseText private constructor(origin: KScalar<String>): TextEnvelope(origin) {
+class SwappedCaseText private constructor(origin: KScalar<String>) : TextEnvelope(origin) {
 
     constructor(origin: Text) : this(
         {

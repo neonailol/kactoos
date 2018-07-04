@@ -1,6 +1,10 @@
 package nnl.rocks.kactoos.func
 
-import nnl.rocks.kactoos.*
+import nnl.rocks.kactoos.BiFunc
+import nnl.rocks.kactoos.BiProc
+import nnl.rocks.kactoos.Func
+import nnl.rocks.kactoos.KBiFunc
+import nnl.rocks.kactoos.Proc
 
 /**
  * Represents many possible inputs as [BiFunc].

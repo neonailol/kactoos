@@ -87,7 +87,7 @@ class AndInThreadsFunc<X : Any>(
         src: Iterable<X>
     ) : this(
         Mapped<X, KScalar<Boolean>>(
-            FuncOf { item -> {func.apply(item)} }, src
+            FuncOf { item -> { func.apply(item) } }, src
         )
     )
 
@@ -142,7 +142,7 @@ class AndInThreadsFunc<X : Any>(
     ) : this(
         svc,
         Mapped<X, KScalar<Boolean>>(
-            FuncOf { item ->  { func.apply(item) } }, src
+            FuncOf { item -> { func.apply(item) } }, src
         )
     )
 

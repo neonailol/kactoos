@@ -24,11 +24,11 @@ class DateAsText private constructor(
     constructor(
         date: TemporalAccessor,
         formatter: DateTimeFormatter
-    ) : this( { formatter.format(date) })
+    ) : this({ formatter.format(date) })
 
     constructor(
         date: TemporalAccessor
-    ) : this( { Iso().invoke().format(date) })
+    ) : this({ Iso().invoke().format(date) })
 
     /**
      * Formats the milliseconds using the ISO format.

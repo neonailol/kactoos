@@ -19,12 +19,12 @@ class LocalDateTimeOf(
 
     constructor(
         date: CharSequence
-    ) : this( { LocalDateTime.from(Iso().invoke().parse(date)) })
+    ) : this({ LocalDateTime.from(Iso().invoke().parse(date)) })
 
     constructor(
         date: CharSequence,
         formatter: DateTimeFormatter
-    ) : this( { LocalDateTime.from(formatter.parse(date)) })
+    ) : this({ LocalDateTime.from(formatter.parse(date)) })
 
     /**
      * Parses date using the provided format to create

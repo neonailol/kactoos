@@ -1,10 +1,10 @@
 package nnl.rocks.kactoos.io
 
-import java.io.ByteArrayInputStream
-import java.io.InputStream
 import nnl.rocks.kactoos.Input
 import nnl.rocks.kactoos.scalar.MinOf
 import nnl.rocks.kactoos.text.FormattedText
+import java.io.ByteArrayInputStream
+import java.io.InputStream
 
 /**
  * Input showing only last N bytes of the stream.
@@ -55,7 +55,8 @@ class TailInput(
      * @return Number of bytes in the response buffer
      */
     private fun copy(
-        buffer: ByteArray, response: ByteArray,
+        buffer: ByteArray,
+        response: ByteArray,
         read: Int
     ): Int {
         System.arraycopy(
@@ -74,8 +75,10 @@ class TailInput(
      * @checkstyle ParameterNumberCheck (3 lines)
      */
     private fun copyPartial(
-        buffer: ByteArray, response: ByteArray,
-        num: Int, read: Int
+        buffer: ByteArray,
+        response: ByteArray,
+        num: Int,
+        read: Int
     ): Int {
         return if (num > 0) {
             System.arraycopy(

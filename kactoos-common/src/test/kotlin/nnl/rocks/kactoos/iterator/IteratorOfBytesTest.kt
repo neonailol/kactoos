@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.iterator
 
 import nnl.rocks.kactoos.test.BehavesAsIterator
-import kotlin.test.*
+import kotlin.test.Test
 
 class IteratorOfBytesTest {
 

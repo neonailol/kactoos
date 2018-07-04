@@ -17,7 +17,7 @@ class LengthOf(
     input: Input,
     max: Int
 ) : NumberEnvelope(
-     {
+    {
         input.stream().use { stream ->
             val buf = ByteArray(max)
             var length = 0L

@@ -26,7 +26,7 @@ class ZonedDateTimeOf(
         date: CharSequence,
         formatter: DateTimeFormatter
     ) : this(
-         {
+        {
             ZonedDateTime.from(formatter.parse(date))
         }
     )
@@ -35,7 +35,7 @@ class ZonedDateTimeOf(
      * @param date The date to parse.
      * */
     constructor(date: CharSequence) : this(
-         {
+        {
             ZonedDateTime.from(Iso().invoke().parse(date))
         }
     )

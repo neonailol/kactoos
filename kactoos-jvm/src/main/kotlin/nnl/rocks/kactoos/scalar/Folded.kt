@@ -2,7 +2,6 @@ package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.BiFunc
 import nnl.rocks.kactoos.KBiFunc
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 
 /**

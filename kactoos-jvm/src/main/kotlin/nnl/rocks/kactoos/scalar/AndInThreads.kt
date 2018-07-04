@@ -215,7 +215,7 @@ class AndInThreads(
                 AndInThreadsFunc<X>(
                     svc,
                     Mapped<X, KScalar<Boolean>>(
-                        FuncOf { item ->  { func.apply(item) } },
+                        FuncOf { item -> { func.apply(item) } },
                         src
                     )
                 )

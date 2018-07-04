@@ -13,14 +13,18 @@ import nnl.rocks.kactoos.Text
  * @since 0.4
  */
 class PaddedStartText(
-    text: Text, length: Int, symbol: Char
-) : TextEnvelope({
-                     val original = text.asString()
-                     JoinedText(
-                         TextOf(""),
-                         RepeatedText(
-                             TextOf(symbol), length - original.length
-                         ),
-                         text
-                     ).asString()
-                 })
+    text: Text,
+    length: Int,
+    symbol: Char
+) : TextEnvelope(
+    {
+        val original = text.asString()
+        JoinedText(
+            TextOf(""),
+            RepeatedText(
+                TextOf(symbol), length - original.length
+            ),
+            text
+        ).asString()
+    }
+)

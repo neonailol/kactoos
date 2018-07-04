@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  */
 class StickyIterable<out X : Any>(
     iterable: Iterable<X>
-) : IterableEnvelope<X>(StickyScalar<Iterable<X>>{ iterable.asIterable() }) {
+) : IterableEnvelope<X>(StickyScalar<Iterable<X>> { iterable.asIterable() }) {
 
     constructor(vararg src: X) : this(src.asIterable())
 }
