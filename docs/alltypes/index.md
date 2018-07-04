@@ -118,6 +118,7 @@ Kactoos.
 | [nnl.rocks.kactoos.iterable.Joined](../nnl.rocks.kactoos.iterable/-joined/index.md) | A few Iterables joined together. |
 | [nnl.rocks.kactoos.iterator.Joined](../nnl.rocks.kactoos.iterator/-joined/index.md) | A few Iterators joined together. |
 | [nnl.rocks.kactoos.list.Joined](../nnl.rocks.kactoos.list/-joined/index.md) | Joined list. |
+| [nnl.rocks.kactoos.io.Joined](../nnl.rocks.kactoos.io/-joined/index.md) | Concatenation of several inputs. |
 | [nnl.rocks.kactoos.text.JoinedText](../nnl.rocks.kactoos.text/-joined-text/index.md) | Join a Text. |
 | [nnl.rocks.kactoos.KBiFunc](../nnl.rocks.kactoos/-k-bi-func.md) | Alias for [BiFunc](../nnl.rocks.kactoos/-bi-func/index.md) |
 | [nnl.rocks.kactoos.KBiProc](../nnl.rocks.kactoos/-k-bi-proc.md) | Alias for [BiProc](../nnl.rocks.kactoos/-bi-proc/index.md) |

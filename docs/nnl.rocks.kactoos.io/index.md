@@ -26,6 +26,7 @@ Input/Output.
 | [InputOf](-input-of/index.md) | `class InputOf : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>An [Input](../nnl.rocks.kactoos/-input/index.md) that encapsulates other sources of data. |
 | [InputStreamOf](-input-stream-of/index.md) | `class InputStreamOf : `[`InputStream`](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)<br>An [InputStream](http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) that encapsulates other sources of data. |
 | [InputWithFallback](-input-with-fallback/index.md) | `class InputWithFallback : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Input that returns an alternative input if the main one throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html). |
+| [Joined](-joined/index.md) | `class Joined : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Concatenation of several inputs. |
 | [LSInputOf](-l-s-input-of/index.md) | `class LSInputOf : `[`LSInput`](http://docs.oracle.com/javase/8/docs/api/org/w3c/dom/ls/LSInput.html)<br>Input as LSInput. |
 | [LengthOf](-length-of/index.md) | `class LengthOf : `[`NumberEnvelope`](../nnl.rocks.kactoos.scalar/-number-envelope/index.md)<br>Length of [Input](../nnl.rocks.kactoos/-input/index.md). |
 | [LoggingInput](-logging-input/index.md) | `class LoggingInput : `[`Input`](../nnl.rocks.kactoos/-input/index.md)<br>Logged input. |

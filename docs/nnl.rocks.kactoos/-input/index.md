@@ -51,6 +51,7 @@ There is no thread-safety guarantee.
 | [HeadInput](../../nnl.rocks.kactoos.io/-head-input/index.md) | `class HeadInput : `[`Input`](./index.md)<br>Input that only shows the first N bytes of the original input. |
 | [InputOf](../../nnl.rocks.kactoos.io/-input-of/index.md) | `class InputOf : `[`Input`](./index.md)<br>An [Input](./index.md) that encapsulates other sources of data. |
 | [InputWithFallback](../../nnl.rocks.kactoos.io/-input-with-fallback/index.md) | `class InputWithFallback : `[`Input`](./index.md)<br>Input that returns an alternative input if the main one throws [IOException](http://docs.oracle.com/javase/8/docs/api/java/io/IOException.html). |
+| [Joined](../../nnl.rocks.kactoos.io/-joined/index.md) | `class Joined : `[`Input`](./index.md)<br>Concatenation of several inputs. |
 | [LoggingInput](../../nnl.rocks.kactoos.io/-logging-input/index.md) | `class LoggingInput : `[`Input`](./index.md)<br>Logged input. |
 | [NoNulls](-no-nulls/index.md) | `class NoNulls : `[`Input`](./index.md) |
 | [ResourceOf](../../nnl.rocks.kactoos.io/-resource-of/index.md) | `class ResourceOf : `[`Input`](./index.md)<br>Classpath resource. |
