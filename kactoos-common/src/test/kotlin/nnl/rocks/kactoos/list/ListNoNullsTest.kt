@@ -3,13 +3,13 @@ package nnl.rocks.kactoos.list
 import nnl.rocks.kactoos.test.BehavesAsList
 import kotlin.test.Test
 
-class ReversedTest {
+class ListNoNullsTest {
 
     @Test
-    fun reversesNumbers() {
+    fun behaves() {
         BehavesAsList(
-            Reversed(ListOf(1, 2, 3)),
-            arrayOf(3, 2, 1)
+            ListNoNulls(ListOf(1, 2, 3)),
+            arrayOf(1, 2, 3)
         )
     }
 }
