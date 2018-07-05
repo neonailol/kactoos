@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.map
 
 import nnl.rocks.kactoos.Func
-import nnl.rocks.kactoos.func.FuncOf
+import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Joined
 import nnl.rocks.kactoos.iterable.Mapped
@@ -26,9 +26,45 @@ class MapOf<X : Any, Y : Any>(
 
     constructor(src: Map<X, Y>, list: Iterable<Map.Entry<X, Y>>) : this(Joined(src.entries, list))
 
-    constructor(entries: Iterator<Map.Entry<X, Y>>) : this(Iterable { entries })
-
     companion object {
+
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            key: KFunc<Z, X>,
+            value: KFunc<Z, Y>,
+            list: Iterable<Z>
+        ): MapOf<X, Y> {
+            return MapOf(
+                { item -> MapEntry(key.invoke(item), value.invoke(item)) }, list
+            )
+        }
+
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            key: KFunc<Z, X>,
+            value: KFunc<Z, Y>,
+            src: Map<X, Y>,
+            list: Iterable<Z>
+        ): MapOf<X, Y> {
+            return MapOf(
+                { item -> MapEntry(key.invoke(item), value.invoke(item)) },
+                src,
+                list
+            )
+        }
+
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            entry: KFunc<Z, Map.Entry<X, Y>>,
+            list: Iterable<Z>
+        ): MapOf<X, Y> {
+            return MapOf(Mapped(entry, list))
+        }
+
+        operator fun <X : Any, Y : Any, Z : Any> invoke(
+            entry: KFunc<Z, Map.Entry<X, Y>>,
+            src: Map<X, Y>,
+            list: Iterable<Z>
+        ): MapOf<X, Y> {
+            return MapOf(src, Mapped(entry, list))
+        }
 
         operator fun <X : Any, Y : Any, Z : Any> invoke(
             key: Func<Z, X>,
@@ -36,7 +72,7 @@ class MapOf<X : Any, Y : Any>(
             list: Iterable<Z>
         ): MapOf<X, Y> {
             return MapOf(
-                FuncOf { item -> MapEntry(key.apply(item), value.apply(item)) }, list
+                { item -> MapEntry(key.apply(item), value.apply(item)) }, list
             )
         }
 
@@ -47,7 +83,7 @@ class MapOf<X : Any, Y : Any>(
             list: Iterable<Z>
         ): MapOf<X, Y> {
             return MapOf(
-                FuncOf { item -> MapEntry(key.apply(item), value.apply(item)) },
+                { item -> MapEntry(key.apply(item), value.apply(item)) },
                 src,
                 list
             )

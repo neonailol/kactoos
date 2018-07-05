@@ -27,8 +27,6 @@ class SyncMap<X : Any, Y : Any>(
 
     constructor(list: Iterable<Map.Entry<X, Y>>) : this(MapOf(list))
 
-    constructor(list: Iterator<Map.Entry<X, Y>>) : this(MapOf(list))
-
     constructor(
         map: Map<X, Y>,
         list: Iterable<Map.Entry<X, Y>>
