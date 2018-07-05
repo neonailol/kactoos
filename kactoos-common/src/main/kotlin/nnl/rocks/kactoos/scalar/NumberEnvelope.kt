@@ -11,7 +11,7 @@ import nnl.rocks.kactoos.Scalar
  * @param value Double scalar
  * @since 0.4
  */
-open class NumberEnvelope(private val value: KScalar<Double>) : Scalar<Double> {
+abstract class NumberEnvelope(private val value: KScalar<Double>) : Scalar<Double> {
 // TODO: This class should extend number but blocked by KT-17345
 
     constructor(value: Scalar<Double>) : this({ value() })

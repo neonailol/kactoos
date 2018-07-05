@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.iterator.Immutable
  * @param T Type of item
  * @since 0.4
  */
-open class IterableEnvelope<out T : Any>(
+abstract class IterableEnvelope<out T : Any>(
     private val iterable: KScalar<Iterable<T>>
 ) : Iterable<T> by iterable() {
 

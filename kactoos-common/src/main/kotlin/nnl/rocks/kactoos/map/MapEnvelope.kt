@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.Scalar
  * @param V Type of value
  * @since 0.3
  */
-open class MapEnvelope<K, out V>(private val map: KScalar<Map<K, V>>) : Map<K, V> by map() {
+abstract class MapEnvelope<K, out V>(private val map: KScalar<Map<K, V>>) : Map<K, V> by map() {
 
     constructor(map: Map<K, V>) : this({ map })
 

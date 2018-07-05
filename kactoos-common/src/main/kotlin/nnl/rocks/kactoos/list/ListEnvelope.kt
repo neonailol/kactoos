@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.iterator.Immutable
  * @param list Encapsulated list.
  * @since 0.3
  */
-open class ListEnvelope<T : Any>(
+abstract class ListEnvelope<T : Any>(
     private val list: KScalar<List<T>>
 ) : List<T> by list() {
 
