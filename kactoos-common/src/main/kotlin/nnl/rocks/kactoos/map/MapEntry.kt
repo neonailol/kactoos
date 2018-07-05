@@ -16,18 +16,22 @@ class MapEntry<out K : Any, out V : Any>(
     override val value: V
 ) : Map.Entry<K, V> {
 
-    override fun toString(): String = "$key=$value"
+    override fun toString(): String = "MapEntry(key=$key, value=$value)"
 
     override fun equals(other: Any?): Boolean {
-        return when (other) {
-            is Map.Entry<*, *> -> other.key == key && other.value == other.value
-            else -> false
+        return when {
+            this === other -> true
+            other !is MapEntry<*, *> -> false
+            key != other.key -> false
+            value != other.value -> false
+            else -> true
         }
     }
 
     override fun hashCode(): Int {
-        var hash: Int = key.hashCode()
-        hash = hash xor value.hashCode()
-        return hash
+        var result = key.hashCode()
+        result = 31 * result + value.hashCode()
+        return result
     }
+
 }
