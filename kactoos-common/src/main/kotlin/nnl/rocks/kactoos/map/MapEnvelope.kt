@@ -12,9 +12,18 @@ import nnl.rocks.kactoos.Scalar
  * @param V Type of value
  * @since 0.3
  */
-abstract class MapEnvelope<K, out V>(private val map: KScalar<Map<K, V>>) : Map<K, V> by map() {
-
-    constructor(map: Map<K, V>) : this({ map })
+abstract class MapEnvelope<K : Any, out V : Any>(private val map: KScalar<Map<K, V>>) : Map<K, V> by map() {
 
     constructor(map: Scalar<Map<K, V>>) : this({ map() })
+
+    /**
+     * Returns the value corresponding to the given [key], or throws [NullPointerException] if such a key is not present in the map.
+     *
+     * @param key [K] Key.
+     * @return [V] Value.
+     * @throws [NullPointerException] if [key] is not present in the map.
+     * @see get
+     * @since 0.5
+     */
+    fun unsafeGet(key: K): V = get(key) ?: throw NullPointerException("Map does not contain value for key $key")
 }
