@@ -17,7 +17,7 @@ class MapEnvelopeTest {
         assertFalse(mapOf.containsKey("invalid"), "Map should not contain key `invalid`")
         assertNull(mapOf["invalid"], "Value for key `invalid` should be null")
         assertNotNull(mapOf.unsafeGet("key"), "Map should have not null value for specified key")
-        assertFailsWith(NullPointerException::class, "Should throw NPE for invalid key") {
+        assertFailsWith(NoSuchElementException::class, "Should throw NPE for invalid key") {
             mapOf.unsafeGet("invalid")
         }
     }
