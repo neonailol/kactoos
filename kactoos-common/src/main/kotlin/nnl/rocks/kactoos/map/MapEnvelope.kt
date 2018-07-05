@@ -17,13 +17,13 @@ abstract class MapEnvelope<K : Any, out V : Any>(private val map: KScalar<Map<K,
     constructor(map: Scalar<Map<K, V>>) : this({ map() })
 
     /**
-     * Returns the value corresponding to the given [key], or throws [NullPointerException] if such a key is not present in the map.
+     * Returns the value corresponding to the given [key], or throws [NoSuchElementException] if such a key is not present in the map.
      *
      * @param key [K] Key.
      * @return [V] Value.
-     * @throws [NullPointerException] if [key] is not present in the map.
-     * @see get
+     * @throws [NoSuchElementException] if [key] is not present in the map.
+     * @see [Map.getValue]
      * @since 0.5
      */
-    fun unsafeGet(key: K): V = get(key) ?: throw NullPointerException("Map does not contain value for key $key")
+    fun unsafeGet(key: K): V = get(key) ?: throw NoSuchElementException("Map does not contain value for key $key")
 }
