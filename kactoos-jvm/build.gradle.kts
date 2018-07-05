@@ -98,6 +98,5 @@ tasks {
     }
 }
 
-tasks["assemble"].dependsOn("dokka")
 tasks["assemble"].dependsOn("detektCheck")
 tasks["check"].dependsOn("ktlintCheck")
