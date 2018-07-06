@@ -1,7 +1,7 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Bytes
-import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.KBytes
 
 /**
  * Hexadecimal representation of Bytes.
@@ -11,10 +11,11 @@ import nnl.rocks.kactoos.Text
  * @param bytes The bytes
  * @since 0.4
  */
-class HexOf(private val bytes: Bytes) : Text {
-
-    override fun asString(): String {
-        val bts = bytes.asBytes()
+class HexOf(
+    bytes: KBytes
+) : TextEnvelope(
+    {
+        val bts = bytes()
         val hex = CharArray(bts.size * 2)
         var chr = - 1
         for (idx in bts.indices) {
@@ -22,8 +23,11 @@ class HexOf(private val bytes: Bytes) : Text {
             hex[++ chr] = HEX_CHARS[value ushr 4]
             hex[++ chr] = HEX_CHARS[value and 0x0f]
         }
-        return String(hex)
+        String(hex)
     }
+) {
+
+    constructor(bytes: Bytes) : this({ bytes.asBytes() })
 
     companion object {
 
