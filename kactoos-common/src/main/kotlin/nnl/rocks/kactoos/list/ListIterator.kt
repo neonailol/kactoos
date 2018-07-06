@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.scalar.StickyScalar
  * @param origin Original list iterator.
  * @since 0.4
  */
-class ListIterator<T : Any>(
+class ListIterator<out T : Any>(
     private val origin: Scalar<kotlin.collections.ListIterator<T>>
 ) : kotlin.collections.ListIterator<T> by origin() {
 
