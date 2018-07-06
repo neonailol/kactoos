@@ -10,6 +10,6 @@ class AssertTextsEquals(
 ) {
 
     init {
-        assertEquals(expected, actual, message)
+        assertEquals(expected.asString(), actual.asString(), message)
     }
 }

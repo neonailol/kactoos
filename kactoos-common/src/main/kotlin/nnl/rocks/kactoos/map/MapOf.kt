@@ -35,6 +35,7 @@ class MapOf<X : Any, Y : Any>(
      */
     constructor(source: Map<X, Y>, entries: Iterable<Map.Entry<X, Y>>) : this(Joined(source.entries, entries))
 
+    @Suppress("NOTHING_TO_INLINE")
     companion object {
 
         inline operator fun <X : Any, Y : Any, Z : Any> invoke(
