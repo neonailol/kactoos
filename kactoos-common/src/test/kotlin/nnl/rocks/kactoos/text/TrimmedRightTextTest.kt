@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.test.AssertTextsEquals
+import nnl.rocks.kactoos.test.TextOf
 import kotlin.test.Test
 
 class TrimmedRightTextTest {
