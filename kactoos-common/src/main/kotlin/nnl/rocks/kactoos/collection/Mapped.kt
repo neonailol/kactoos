@@ -41,6 +41,6 @@ class Mapped<out X : Any, out Y : Any>(
 
     constructor(
         fnc: Func<X, Y>,
-        src: CollectionOf<X>
+        src: Collection<X>
     ) : this({ x -> fnc.apply(x) }, IterableOf(src))
 }

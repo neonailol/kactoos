@@ -16,7 +16,9 @@ class HaveSameConstructorsTest {
             "collection.SolidCollection(java.util.Iterator)",
             "collection.Sorted(java.util.Comparator,java.util.Iterator)",
             "collection.StickyCollection(java.util.Iterator)",
-            "collection.SyncCollection(java.util.Iterator)"
+            "collection.SyncCollection(java.util.Iterator)",
+            "collection.Sorted(java.lang.Iterable)",
+            "collection.Sorted(java.lang.Object[])"
         )
 
         cactoosCtors
