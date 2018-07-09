@@ -32,10 +32,15 @@ class Mapped<out X : Any, out Y : Any>(
     constructor(
         fnc: Func<X, Y>,
         src: Iterable<X>
-    ) : this({ x -> fnc.apply(x) }, CollectionOf(src))
+    ) : this({ x -> fnc.apply(x) }, IterableOf(src))
 
     constructor(
         fnc: Func<X, Y>,
         vararg src: X
     ) : this({ x -> fnc.apply(x) }, IterableOf(src.asIterable()))
+
+    constructor(
+        fnc: Func<X, Y>,
+        src: CollectionOf<X>
+    ) : this({ x -> fnc.apply(x) }, IterableOf(src))
 }

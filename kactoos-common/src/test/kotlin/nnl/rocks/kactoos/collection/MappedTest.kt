@@ -50,4 +50,15 @@ class MappedTest {
             arrayOf("1", "2", "3")
         )
     }
+
+    @Test
+    fun mappedFuncCollection() {
+        BehavesAsCollection(
+            Mapped(
+                FuncOf { x: Int -> x.toString() },
+                CollectionOf(1, 2, 3)
+            ),
+            arrayOf("1", "2", "3")
+        )
+    }
 }
