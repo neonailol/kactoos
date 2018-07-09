@@ -17,13 +17,13 @@ class PackageConstructors(
     constructor(pkg: String) : this(
         Sorted(
             Filtered(
-                FuncOf({ it: String -> it.contains("\$").not() }),
+                FuncOf { it: String -> it.contains("\$").not() && it.contains("NoNulls").not() },
                 Mapped(
-                    FuncOf({ it: Constructor<*> -> it.toString().replace("$pkg.", "") }),
+                    FuncOf { it: Constructor<*> -> it.toString().replace("$pkg.", "") },
                     Joined(
                         IterableOf(
                             Mapped(
-                                FuncOf({ it: Class<*> -> it.constructors.asList() }),
+                                FuncOf { it: Class<*> -> it.constructors.asList() },
                                 Reflections(
                                     pkg,
                                     SubTypesScanner(false)

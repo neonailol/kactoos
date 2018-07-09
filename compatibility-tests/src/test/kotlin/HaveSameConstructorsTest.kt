@@ -10,19 +10,13 @@ class HaveSameConstructorsTest {
         val kactoosCtors = PackageConstructors("nnl.rocks.kactoos")
 
         val skip = listOf(
-            "scalar.And",
-            "scalar.Or",
-            "scalar.SumOf",
-            "scalar.MinOf",
-            "scalar.MaxOf",
-            "scalar.AvgOf",
-            "collection.Sorted(java.lang.Object[])",
-            "collection.Sorted(java.util.Comparator,java.lang.Object[])",
-            "iterable.Sorted(java.lang.Object[])",
-            "iterable.Sorted(java.util.Comparator,java.lang.Object[])",
-            "list.Sorted(java.lang.Object[])",
-            "list.Sorted(java.util.Comparator,java.lang.Object[])",
-            "scalar.NumberEnvelope(KScalar,KScalar,KScalar,KScalar)"
+            "collection.CollectionOf(java.util.Iterator)",
+            "collection.Filtered(Func,java.util.Iterator)",
+            "collection.Mapped(Func,java.util.Iterator)",
+            "collection.SolidCollection(java.util.Iterator)",
+            "collection.Sorted(java.util.Comparator,java.util.Iterator)",
+            "collection.StickyCollection(java.util.Iterator)",
+            "collection.SyncCollection(java.util.Iterator)"
         )
 
         cactoosCtors
