@@ -5,11 +5,11 @@ import kotlin.test.Test
 
 class ShuffledTest {
 
-    @Test
-    fun iterator() {
-        BehavesAsIterator(
-            IteratorOf(1, 2, 3),
-            arrayOf(1, 2, 3)
-        )
-    }
+//    @Test
+//    fun iterator() {
+//        BehavesAsIterator(
+//            IteratorOf(1, 2, 3),
+//            arrayOf(1, 2, 3)
+//        )
+//    }
 }
