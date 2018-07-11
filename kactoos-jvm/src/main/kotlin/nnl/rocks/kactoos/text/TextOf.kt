@@ -1,8 +1,9 @@
+@file:Suppress("FunctionName")
+
 package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.BytesOf
 import nnl.rocks.kactoos.io.InputOf
@@ -17,268 +18,255 @@ import java.nio.charset.Charset
 import java.nio.file.Path
 
 /**
- * TextOf
+ * Ctor.
  *
- * There is no thread-safety guarantee.
- *
- * @param origin The KScalar of String
- * @since 0.3
+ * @param input The Input
  */
-class TextOf private constructor(origin: KScalar<String>) : TextEnvelope(origin) {
+fun TextOf(input: Input) = TextOf(BytesOf(input))
 
-    /**
-     * Ctor.
-     *
-     * @param input The Input
-     */
-    constructor(input: Input) : this(BytesOf(input))
+/**
+ * Ctor.
+ * @param url The URL
+ * @since 0.16
+ */
+fun TextOf(url: URL) = TextOf(InputOf(url))
 
-    /**
-     * Ctor.
-     * @param url The URL
-     * @since 0.16
-     */
-    constructor(url: URL) : this(InputOf(url))
+/**
+ * Ctor.
+ * @param uri The URI
+ * @since 0.16
+ */
+fun TextOf(uri: URI) = TextOf(InputOf(uri))
 
-    /**
-     * Ctor.
-     * @param uri The URI
-     * @since 0.16
-     */
-    constructor(uri: URI) : this(InputOf(uri))
+/**
+ * Ctor.
+ * @param path The Input
+ * @since 0.13
+ */
+fun TextOf(path: Path) = TextOf(InputOf(path))
 
-    /**
-     * Ctor.
-     * @param path The Input
-     * @since 0.13
-     */
-    constructor(path: Path) : this(InputOf(path))
+/**
+ * Ctor.
+ * @param file The Input
+ * @since 0.13
+ */
+fun TextOf(file: File) = TextOf(InputOf(file))
 
-    /**
-     * Ctor.
-     * @param file The Input
-     * @since 0.13
-     */
-    constructor(file: File) : this(InputOf(file))
+/**
+ * Ctor.
+ *
+ * @param input The Input
+ * @param cset The Charset
+ */
+fun TextOf(
+    input: Input,
+    cset: Charset
+) = TextOf(BytesOf(input), cset)
 
-    /**
-     * Ctor.
-     *
-     * @param input The Input
-     * @param cset The Charset
-     */
-    constructor(
-        input: Input,
-        cset: Charset
-    ) : this(BytesOf(input), cset)
+/**
+ * Ctor.
+ *
+ * @param input The Input
+ * @param cset The Charset
+ */
+fun TextOf(
+    input: Input,
+    cset: String
+) = TextOf(BytesOf(input), cset)
 
-    /**
-     * Ctor.
-     *
-     * @param input The Input
-     * @param cset The Charset
-     */
-    constructor(
-        input: Input,
-        cset: String
-    ) : this(BytesOf(input), cset)
+/**
+ * Ctor.
+ *
+ * @param input The input
+ * @param max Max length of the buffer for reading
+ * @param cset The Charset
+ */
+fun TextOf(
+    input: Input,
+    max: Int,
+    cset: Charset = Charsets.UTF_8
+) = TextOf(BytesOf(input, max), cset)
 
-    /**
-     * Ctor.
-     *
-     * @param input The input
-     * @param max Max length of the buffer for reading
-     * @param cset The Charset
-     */
-    constructor(
-        input: Input,
-        max: Int,
-        cset: Charset = Charsets.UTF_8
-    ) : this(BytesOf(input, max), cset)
+/**
+ * Ctor.
+ *
+ * @param rdr Reader
+ */
+fun TextOf(rdr: Reader) = TextOf(BytesOf(rdr))
 
-    /**
-     * Ctor.
-     *
-     * @param rdr Reader
-     */
-    constructor(rdr: Reader) : this(BytesOf(rdr))
+/**
+ * Ctor.
+ * @param rdr Reader
+ * @param cset Charset
+ */
+fun TextOf(
+    rdr: Reader,
+    cset: Charset
+) = TextOf(BytesOf(rdr, cset))
 
-    /**
-     * Ctor.
-     * @param rdr Reader
-     * @param cset Charset
-     */
-    constructor(
-        rdr: Reader,
-        cset: Charset
-    ) : this(BytesOf(rdr, cset))
+/**
+ * Ctor.
+ * @param rdr Reader
+ * @param cset Charset
+ * @param max Buffer size
+ */
+fun TextOf(
+    rdr: Reader,
+    cset: Charset,
+    max: Int
+) = TextOf(BytesOf(rdr, cset, max))
 
-    /**
-     * Ctor.
-     * @param rdr Reader
-     * @param cset Charset
-     * @param max Buffer size
-     */
-    constructor(
-        rdr: Reader,
-        cset: Charset,
-        max: Int
-    ) : this(BytesOf(rdr, cset, max))
+/**
+ * Ctor.
+ *
+ * @param builder The String builder
+ */
+fun TextOf(builder: CharSequence) = TextOf(BytesOf(builder))
 
-    /**
-     * Ctor.
-     *
-     * @param builder The String builder
-     */
-    constructor(builder: CharSequence) : this(BytesOf(builder))
+/**
+ * Ctor.
+ *
+ * @param builder The String builder
+ * @param cset The Charset
+ */
+fun TextOf(
+    builder: CharSequence,
+    cset: Charset
+) = TextOf(BytesOf(builder, cset), cset)
 
-    /**
-     * Ctor.
-     *
-     * @param builder The String builder
-     * @param cset The Charset
-     */
-    constructor(
-        builder: CharSequence,
-        cset: Charset
-    ) : this(BytesOf(builder, cset), cset)
+/**
+ * Ctor.
+ *
+ * @param chars The chars
+ */
+fun TextOf(vararg chars: Char) = TextOf(BytesOf(*chars))
 
-    /**
-     * Ctor.
-     *
-     * @param chars The chars
-     */
-    constructor(vararg chars: Char) : this(BytesOf(*chars))
+/**
+ * Ctor.
+ *
+ * @param chars The chars
+ * @param cset The charset
+ */
+fun TextOf(
+    chars: CharArray,
+    cset: Charset
+) = TextOf(BytesOf(chars, cset))
 
-    /**
-     * Ctor.
-     *
-     * @param chars The chars
-     * @param cset The charset
-     */
-    constructor(
-        chars: CharArray,
-        cset: Charset
-    ) : this(BytesOf(chars, cset))
+/**
+ * Ctor.
+ * @param error The exception to serialize
+ */
+fun TextOf(error: Throwable) = TextOf(BytesOf(error))
 
-    /**
-     * Ctor.
-     * @param error The exception to serialize
-     */
-    constructor(error: Throwable) : this(BytesOf(error))
+/**
+ * Ctor.
+ * @param error The exception to serialize
+ * @param charset Charset
+ * @since 0.29
+ */
+fun TextOf(
+    error: Throwable,
+    charset: Charset
+) = TextOf(BytesOf(error, charset))
 
-    /**
-     * Ctor.
-     * @param error The exception to serialize
-     * @param charset Charset
-     * @since 0.29
-     */
-    constructor(
-        error: Throwable,
-        charset: Charset
-    ) : this(BytesOf(error, charset))
+/**
+ * Ctor.
+ * @param error The exception to serialize
+ * @param charset Charset
+ * @since 0.29
+ */
+fun TextOf(
+    error: Throwable,
+    charset: CharSequence
+) = TextOf(BytesOf(error, charset))
 
-    /**
-     * Ctor.
-     * @param error The exception to serialize
-     * @param charset Charset
-     * @since 0.29
-     */
-    constructor(
-        error: Throwable,
-        charset: CharSequence
-    ) : this(BytesOf(error, charset))
+/**
+ * Ctor.
+ * @param strace The stacktrace to serialize
+ * @since 0.29
+ */
+fun TextOf(vararg strace: StackTraceElement) = TextOf(BytesOf(*strace))
 
-    /**
-     * Ctor.
-     * @param strace The stacktrace to serialize
-     * @since 0.29
-     */
-    constructor(vararg strace: StackTraceElement) : this(BytesOf(*strace))
+/**
+ * Ctor.
+ * @param strace The stacktrace to serialize
+ * @param charset Charset
+ * @since 0.29
+ */
+fun TextOf(
+    strace: Array<StackTraceElement>,
+    charset: Charset
+) = TextOf(BytesOf(strace, charset))
 
-    /**
-     * Ctor.
-     * @param strace The stacktrace to serialize
-     * @param charset Charset
-     * @since 0.29
-     */
-    constructor(
-        strace: Array<StackTraceElement>,
-        charset: Charset
-    ) : this(BytesOf(strace, charset))
+/**
+ * Ctor.
+ * @param strace The stacktrace to serialize
+ * @param charset Charset
+ * @since 0.29
+ */
+fun TextOf(
+    strace: Array<StackTraceElement>,
+    charset: CharSequence
+) = TextOf(BytesOf(strace, charset))
 
-    /**
-     * Ctor.
-     * @param strace The stacktrace to serialize
-     * @param charset Charset
-     * @since 0.29
-     */
-    constructor(
-        strace: Array<StackTraceElement>,
-        charset: CharSequence
-    ) : this(BytesOf(strace, charset))
+/**
+ * Ctor.
+ *
+ * @param bytes The array of bytes
+ */
+fun TextOf(vararg bytes: Byte) = TextOf(BytesOf(*bytes))
 
-    /**
-     * Ctor.
-     *
-     * @param bytes The array of bytes
-     */
-    constructor(vararg bytes: Byte) : this(BytesOf(*bytes))
+/**
+ * Ctor.
+ *
+ * @param bytes The Bytes
+ * @param cset The Charset
+ */
+fun TextOf(
+    bytes: Bytes,
+    cset: Charset = Charsets.UTF_8
+) = TextOf { String(bytes.asBytes(), cset) }
 
-    /**
-     * Ctor.
-     *
-     * @param bytes The Bytes
-     * @param cset The Charset
-     */
-    constructor(
-        bytes: Bytes,
-        cset: Charset = Charsets.UTF_8
-    ) : this({ String(bytes.asBytes(), cset) })
+/**
+ * Ctor.
+ *
+ * @param bytes The Bytes
+ * @param cset The Charset
+ */
+fun TextOf(
+    bytes: Bytes,
+    cset: String
+) = TextOf { String(bytes.asBytes(), Charset.forName(cset)) }
 
-    /**
-     * Ctor.
-     *
-     * @param bytes The Bytes
-     * @param cset The Charset
-     */
-    constructor(
-        bytes: Bytes,
-        cset: String
-    ) : this({ String(bytes.asBytes(), Charset.forName(cset)) })
+/**
+ * Ctor.
+ *
+ * @param input The String
+ * @param cset The Charset
+ */
+fun TextOf(
+    input: String,
+    cset: Charset = Charsets.UTF_8
+) = TextOf { String(input.toByteArray(cset), cset) }
 
-    /**
-     * Ctor.
-     *
-     * @param input The String
-     * @param cset The Charset
-     */
-    constructor(
-        input: String,
-        cset: Charset = Charsets.UTF_8
-    ) : this({ String(input.toByteArray(cset), cset) })
-
-    /**
-     * Ctor.
-     * @param iterable The iterable to convert to string
-     * @since 0.21
-     */
-    constructor(iterable: Iterable<Any>) : this(
-        {
-            JoinedText(
-                ", ",
-                Mapped<Any, String>(
-                    fnc = FuncOf { it.toString() },
-                    iterable = iterable
-                )
-            ).asString()
-        }
-    )
-
-    /**
-     * Ctor.
-     * @param input The InputStream where the text is read from
-     * @since 0.21
-     */
-    constructor(input: InputStream) : this(InputOf(InputStreamReader(input)))
+/**
+ * Ctor.
+ * @param iterable The iterable to convert to string
+ * @since 0.21
+ */
+fun TextOf(iterable: Iterable<Any>) = TextOf {
+    JoinedText(
+        ", ",
+        Mapped(
+            fnc = FuncOf { it.toString() },
+            iterable = iterable
+        )
+    ).asString()
 }
+
+/**
+ * Ctor.
+ * @param input The InputStream where the text is read from
+ * @since 0.21
+ */
+fun TextOf(input: InputStream) = TextOf(InputOf(InputStreamReader(input)))

@@ -1,15 +1,15 @@
 package nnl.rocks.kactoos.test
 
-import nnl.rocks.kactoos.text.TextEnvelope
+import nnl.rocks.kactoos.Text
 import kotlin.test.assertEquals
 
 class AssertTextsEquals(
-    expected: TextEnvelope,
-    actual: TextEnvelope,
+    expected: Text,
+    actual: Text,
     message: String
 ) {
 
     init {
-        assertEquals(expected.asString(), actual.asString(), message)
+        assertEquals(expected, actual, message)
     }
 }

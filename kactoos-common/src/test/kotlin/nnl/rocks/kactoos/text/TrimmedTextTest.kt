@@ -1,24 +1,24 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.test.AssertTextsEquals
 import kotlin.test.Test
-import kotlin.test.assertEquals
 
 class TrimmedTextTest {
 
     @Test
     fun convertsText() {
-        assertEquals(
-            TrimmedText { "  Hello!   \t " }.asString(),
-            "Hello!",
+        AssertTextsEquals(
+            TrimmedText { "  Hello!   \t " },
+            TextOf { "Hello!" },
             "Can't trim a text"
         )
     }
 
     @Test
     fun trimmedBlankTextIsEmptyText() {
-        assertEquals(
-            TrimmedText { "  \t " }.asString(),
-            "",
+        AssertTextsEquals(
+            TrimmedText { "  \t " },
+            TextOf { "" },
             "Can't trim a blank text"
         )
     }

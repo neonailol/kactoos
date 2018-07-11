@@ -26,5 +26,12 @@ abstract class TextEnvelope(
 
     override fun hashCode(): Int = origin().hashCode()
 
-    override fun equals(other: Any?): Boolean = origin() == other
+    override fun equals(other: Any?): Boolean {
+        return when {
+            this === other -> true
+            other is String -> asString() == other
+            other !is Text -> false
+            else -> asString() == other.asString()
+        }
+    }
 }
