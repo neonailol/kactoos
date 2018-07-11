@@ -4,10 +4,8 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.Bytes
 import nnl.rocks.kactoos.Input
-import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.io.BytesOf
 import nnl.rocks.kactoos.io.InputOf
-import nnl.rocks.kactoos.iterable.Mapped
 import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
