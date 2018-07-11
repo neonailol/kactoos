@@ -31,6 +31,8 @@ class StickyBiFunc<in X : Any, in Y : Any, out Z : Any>(
 
     private val cache: MutableMap<Map.Entry<X, Y>, Z> = mutableMapOf()
 
+    constructor(func: KBiFunc<X, Y, Z>) : this({ first, second -> func(first, second) }, Int.MAX_VALUE)
+
     constructor(func: BiFunc<X, Y, Z>) : this({ first, second -> func.apply(first, second) }, Int.MAX_VALUE)
 
     constructor(func: BiFunc<X, Y, Z>, size: Int) : this({ first, second -> func.apply(first, second) }, size)
