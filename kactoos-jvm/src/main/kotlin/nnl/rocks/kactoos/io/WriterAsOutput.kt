@@ -6,7 +6,6 @@ import java.io.OutputStream
 import java.io.Writer
 import java.nio.charset.Charset
 import java.nio.charset.CharsetDecoder
-import java.nio.charset.StandardCharsets
 
 /**
  * Writer as [Output].
@@ -34,7 +33,7 @@ internal class WriterAsOutput(
      */
     constructor(
         wtr: Writer,
-        cset: Charset = StandardCharsets.UTF_8,
+        cset: Charset = Charsets.UTF_8,
         max: Int = 16 shl 10
     ) : this(wtr, cset.newDecoder(), max)
 

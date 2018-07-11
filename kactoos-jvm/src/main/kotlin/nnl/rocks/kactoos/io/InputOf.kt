@@ -13,7 +13,6 @@ import java.io.Reader
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 
 /**
@@ -108,7 +107,7 @@ class InputOf(private val origin: Input) : Input {
     /**
      * @param chars The chars
      */
-    constructor(vararg chars: Char) : this(BytesOf(chars, StandardCharsets.UTF_8))
+    constructor(vararg chars: Char) : this(BytesOf(chars, Charsets.UTF_8))
 
     /**
      * @param chars The chars

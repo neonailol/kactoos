@@ -14,7 +14,6 @@ import java.io.Reader
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 
 /**
@@ -94,7 +93,7 @@ class TextOf private constructor(origin: KScalar<String>) : TextEnvelope(origin)
     constructor(
         input: Input,
         max: Int,
-        cset: Charset = StandardCharsets.UTF_8
+        cset: Charset = Charsets.UTF_8
     ) : this(BytesOf(input, max), cset)
 
     /**
@@ -234,7 +233,7 @@ class TextOf private constructor(origin: KScalar<String>) : TextEnvelope(origin)
      */
     constructor(
         bytes: Bytes,
-        cset: Charset = StandardCharsets.UTF_8
+        cset: Charset = Charsets.UTF_8
     ) : this({ String(bytes.asBytes(), cset) })
 
     /**
@@ -256,7 +255,7 @@ class TextOf private constructor(origin: KScalar<String>) : TextEnvelope(origin)
      */
     constructor(
         input: String,
-        cset: Charset = StandardCharsets.UTF_8
+        cset: Charset = Charsets.UTF_8
     ) : this({ String(input.toByteArray(cset), cset) })
 
     /**

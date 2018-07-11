@@ -10,7 +10,6 @@ import java.io.Reader
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 
 /**
@@ -67,7 +66,7 @@ class InputStreamOf(
      */
     constructor(
         text: Text,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this(InputOf(text, charset))
 
     /**
@@ -114,7 +113,7 @@ class InputStreamOf(
      */
     constructor(
         rdr: Reader,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this(InputOf(rdr, charset))
 
     /**
@@ -150,7 +149,7 @@ class InputStreamOf(
     constructor(
         rdr: Reader,
         max: Int
-    ) : this(InputOf(rdr, StandardCharsets.UTF_8, max))
+    ) : this(InputOf(rdr, Charsets.UTF_8, max))
 
     /**
      * Ctor.

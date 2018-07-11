@@ -11,7 +11,6 @@ import java.io.Writer
 import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 
 /**
@@ -517,7 +516,7 @@ class TeeInput(
     constructor(
         input: CharArray,
         path: Path
-    ) : this(InputOf(input, StandardCharsets.UTF_8), OutputTo(path))
+    ) : this(InputOf(input, Charsets.UTF_8), OutputTo(path))
 
     /**
      * @param input The source
@@ -551,7 +550,7 @@ class TeeInput(
     constructor(
         input: CharArray,
         file: File
-    ) : this(InputOf(input, StandardCharsets.UTF_8), OutputTo(file))
+    ) : this(InputOf(input, Charsets.UTF_8), OutputTo(file))
 
     /**
      * @param input The source
@@ -585,7 +584,7 @@ class TeeInput(
     constructor(
         input: CharArray,
         output: Output
-    ) : this(InputOf(input, StandardCharsets.UTF_8), output)
+    ) : this(InputOf(input, Charsets.UTF_8), output)
 
     /**
      * @param input The source

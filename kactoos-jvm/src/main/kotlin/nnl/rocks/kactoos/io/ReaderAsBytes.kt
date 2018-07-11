@@ -3,7 +3,6 @@ package nnl.rocks.kactoos.io
 import nnl.rocks.kactoos.Bytes
 import java.io.Reader
 import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
 
 /**
  * Reader as [Bytes].
@@ -32,7 +31,7 @@ class ReaderAsBytes constructor(
      */
     constructor(
         rdr: Reader,
-        cset: Charset = StandardCharsets.UTF_8,
+        cset: Charset = Charsets.UTF_8,
         max: Int = 16 shl 10
     ) : this(rdr, cset.name(), max)
 
@@ -45,7 +44,7 @@ class ReaderAsBytes constructor(
     constructor(
         rdr: Reader,
         max: Int
-    ) : this(rdr, StandardCharsets.UTF_8, max)
+    ) : this(rdr, Charsets.UTF_8, max)
 
     override fun asBytes(): ByteArray {
         val buffer = CharArray(this.size)

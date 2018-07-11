@@ -8,7 +8,6 @@ import java.nio.CharBuffer
 import java.nio.charset.Charset
 import java.nio.charset.CharsetDecoder
 import java.nio.charset.CodingErrorAction
-import java.nio.charset.StandardCharsets
 
 /**
  * Writer as [OutputStream].
@@ -38,7 +37,7 @@ class WriterAsOutputStream(
      */
     constructor(
         wtr: Writer,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this(
         wtr, charset.name()
     )
@@ -62,7 +61,7 @@ class WriterAsOutputStream(
     constructor(
         wtr: Writer,
         size: Int
-    ) : this(wtr, StandardCharsets.UTF_8, size)
+    ) : this(wtr, Charsets.UTF_8, size)
 
     /**
      * @param wtr Reader

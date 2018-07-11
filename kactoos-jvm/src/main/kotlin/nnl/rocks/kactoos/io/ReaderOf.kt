@@ -13,7 +13,6 @@ import java.net.URI
 import java.net.URL
 import java.nio.charset.Charset
 import java.nio.charset.CharsetDecoder
-import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 
 /**
@@ -33,7 +32,7 @@ class ReaderOf(
     /**
      * @param chars Chars
      */
-    constructor(vararg chars: Char) : this(InputOf(chars, StandardCharsets.UTF_8))
+    constructor(vararg chars: Char) : this(InputOf(chars, Charsets.UTF_8))
 
     /**
      * @param chars Chars
@@ -154,7 +153,7 @@ class ReaderOf(
      */
     constructor(
         input: Input,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this(
         { InputStreamReader(input.stream(), charset) }
     )
@@ -184,12 +183,12 @@ class ReaderOf(
      */
     constructor(
         stream: InputStream,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this(InputStreamReader(stream, charset))
 
     constructor(
         stream: InputStream
-    ) : this(InputStreamReader(stream, StandardCharsets.UTF_8))
+    ) : this(InputStreamReader(stream, Charsets.UTF_8))
 
     /**
      * @param stream The stream

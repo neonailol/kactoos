@@ -7,7 +7,6 @@ import org.w3c.dom.ls.LSInput
 
 import java.io.InputStream
 import java.io.Reader
-import java.nio.charset.StandardCharsets
 
 /**
  * Input as LSInput.
@@ -98,7 +97,7 @@ class LSInputOf(
     }
 
     override fun getEncoding(): String {
-        return StandardCharsets.UTF_8.displayName()
+        return Charsets.UTF_8.displayName()
     }
 
     override fun setEncoding(encoding: String) {

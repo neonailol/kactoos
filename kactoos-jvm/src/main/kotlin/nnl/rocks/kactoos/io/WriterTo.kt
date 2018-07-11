@@ -8,7 +8,6 @@ import java.io.OutputStreamWriter
 import java.io.Writer
 import java.nio.charset.Charset
 import java.nio.charset.CharsetEncoder
-import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 
 /**
@@ -46,7 +45,7 @@ class WriterTo(
      */
     constructor(
         output: Output,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this(
         { OutputStreamWriter(output.stream(), charset) }
     )

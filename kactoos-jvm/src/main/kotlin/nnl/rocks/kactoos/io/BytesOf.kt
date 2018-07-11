@@ -9,7 +9,6 @@ import java.io.File
 import java.io.PrintStream
 import java.io.Reader
 import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
 import java.nio.file.Path
 
 /**
@@ -122,7 +121,7 @@ class BytesOf(private val origin: KBytes) : Bytes {
      */
     constructor(
         input: CharSequence,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this({ input.toString().toByteArray(charset) })
 
     /**
@@ -141,7 +140,7 @@ class BytesOf(private val origin: KBytes) : Bytes {
      *
      * @param chars The chars
      */
-    constructor(vararg chars: Char) : this(chars, StandardCharsets.UTF_8)
+    constructor(vararg chars: Char) : this(chars, Charsets.UTF_8)
 
     /**
      * Ctor.
@@ -172,7 +171,7 @@ class BytesOf(private val origin: KBytes) : Bytes {
      */
     constructor(
         text: Text,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this({ text.asString().toByteArray(charset) })
 
     /**
@@ -192,7 +191,7 @@ class BytesOf(private val origin: KBytes) : Bytes {
      */
     constructor(
         error: Throwable,
-        charset: Charset = StandardCharsets.UTF_8
+        charset: Charset = Charsets.UTF_8
     ) : this(error, charset.name())
 
     /**
@@ -219,7 +218,7 @@ class BytesOf(private val origin: KBytes) : Bytes {
      * @param strace The stack trace
      * @since 0.29
      */
-    constructor(vararg strace: StackTraceElement) : this(arrayOf(*strace), StandardCharsets.UTF_8)
+    constructor(vararg strace: StackTraceElement) : this(arrayOf(*strace), Charsets.UTF_8)
 
     /**
      * Ctor.
