@@ -2,10 +2,8 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Text
-import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
-import java.util.StringJoiner
 
 /**
  * Join a Text.
@@ -17,46 +15,47 @@ import java.util.StringJoiner
 class JoinedText private constructor(origin: KScalar<String>) : TextEnvelope(origin) {
 
     /**
-     * @param delimiter Delimit among texts
+     * @param separator Separator among texts
      * @param texts Texts to be joined
      */
-    constructor(delimiter: Text, texts: Iterable<Text>) : this(
-        {
-            val joint = StringJoiner(delimiter.asString())
-            for (text in texts) {
-                joint.add(text.asString())
-            }
-            joint.toString()
-        }
-    )
+    constructor(
+        separator: Text,
+        texts: Iterable<Text>
+    ) : this({ texts.joinToString(separator.asString()) { it.asString() } })
 
     /**
-     * @param delimit Delimit among strings
-     * @param strs Strings to be joined
+     * @param separator Separator among strings
+     * @param strings Strings to be joined
      */
     constructor(
-        delimit: String,
-        vararg strs: String
-    ) : this(delimit, IterableOf<String>(strs.asIterable()))
-
-    /**
-     * @param delimit Delimit among strings
-     * @param strs Strings to be joined
-     */
-    constructor(
-        delimit: String,
-        strs: Iterable<String>
+        separator: String,
+        vararg strings: String
     ) : this(
-        TextOf(delimit),
-        Mapped<String, Text>(FuncOf { text -> TextOf(text) }, strs)
+        separator,
+        IterableOf(strings.asIterable())
     )
 
     /**
-     * @param delimit Delimit among texts
-     * @param txts Texts to be joined
+     * @param separator Separator among strings
+     * @param strings Strings to be joined
      */
     constructor(
-        delimit: Text,
-        vararg txts: Text
-    ) : this(delimit, IterableOf<Text>(txts.asIterable()))
+        separator: String,
+        strings: Iterable<String>
+    ) : this(
+        TextOf(separator),
+        Mapped({ string: String -> TextOf(string) }, strings)
+    )
+
+    /**
+     * @param separator Separator among texts
+     * @param texts Texts to be joined
+     */
+    constructor(
+        separator: Text,
+        vararg texts: Text
+    ) : this(
+        separator,
+        IterableOf(texts.asIterable())
+    )
 }
