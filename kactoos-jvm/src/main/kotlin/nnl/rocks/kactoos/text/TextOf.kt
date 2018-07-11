@@ -251,21 +251,6 @@ fun TextOf(
 
 /**
  * Ctor.
- * @param iterable The iterable to convert to string
- * @since 0.21
- */
-fun TextOf(iterable: Iterable<Any>) = TextOf {
-    JoinedText(
-        ", ",
-        Mapped(
-            fnc = FuncOf { it.toString() },
-            iterable = iterable
-        )
-    ).asString()
-}
-
-/**
- * Ctor.
  * @param input The InputStream where the text is read from
  * @since 0.21
  */

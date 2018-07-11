@@ -43,8 +43,8 @@ class JoinedText private constructor(origin: KScalar<String>) : TextEnvelope(ori
         separator: String,
         strings: Iterable<String>
     ) : this(
-        TextOf(separator),
-        Mapped({ string: String -> TextOf(string) }, strings)
+        TextOf { separator },
+        Mapped({ string: String -> TextOf { string } }, strings)
     )
 
     /**
