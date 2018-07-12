@@ -18,8 +18,14 @@ class SubText(
 ) : TextEnvelope(
     {
         val text = origin()
-        val begin = if (start < 0) 0 else start
-        val finish = if (text.length < end) text.length else end
+        val begin = when {
+            start < 0 -> 0
+            else -> start
+        }
+        val finish = when {
+            text.length < end -> text.length
+            else -> end
+        }
         text.substring(begin, finish)
     }
 ) {

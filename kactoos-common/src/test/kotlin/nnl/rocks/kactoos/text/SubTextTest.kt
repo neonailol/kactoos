@@ -22,4 +22,13 @@ class SubTextTest {
             "Can't cut a text with start"
         )
     }
+
+    @Test
+    fun cutsTextWithStartAndEnd() {
+        AssertTextsEquals(
+            SubText(TextOf { "Hello, World!" }, 0, 5),
+            TextOf { "Hello" },
+            "Can't cut a text with start and end"
+        )
+    }
 }
