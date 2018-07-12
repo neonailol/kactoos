@@ -8,8 +8,8 @@ class HexOfTest {
     @Test
     fun emptyBytes() {
         AssertTextsEquals(
-            TrimmedText { "" },
             HexOf { byteArrayOf() },
+            TextOf { "" },
             "Can't represent empty string as hex string"
         )
     }
@@ -17,8 +17,8 @@ class HexOfTest {
     @Test
     fun bytes() {
         AssertTextsEquals(
-            TrimmedText { "010203" },
             HexOf { byteArrayOf(1, 2, 3) },
+            TextOf { "010203" },
             "Can't represent byte array as hex string"
         )
     }
