@@ -41,7 +41,7 @@ class AbbreviatedText constructor(
                 SubText(
                     this.origin,
                     0,
-                    this.width - AbbreviatedText.ELLIPSES_WIDTH
+                    this.width - ELLIPSES_WIDTH
                 ).asString()
             )
         }
