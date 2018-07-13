@@ -1,5 +1,6 @@
 package nnl.rocks.kactoos.text
 
+import nnl.rocks.kactoos.KText
 import nnl.rocks.kactoos.Text
 
 /**
@@ -13,18 +14,22 @@ import nnl.rocks.kactoos.Text
  * @since 0.4
  */
 class PaddedStartText(
-    text: Text,
+    text: KText,
     length: Int,
     symbol: Char
 ) : TextEnvelope(
     {
-        val original = text.asString()
-        JoinedText(
-            JDKTextOf(""),
-            RepeatedText(
-                JDKTextOf(symbol), length - original.length
-            ),
-            text
-        ).asString()
+        text().padStart(if (length < 0) 0 else length, symbol)
     }
-)
+) {
+
+    constructor(
+        text: Text,
+        length: Int,
+        symbol: Char
+    ) : this(
+        { text.asString() },
+        length,
+        symbol
+    )
+}
