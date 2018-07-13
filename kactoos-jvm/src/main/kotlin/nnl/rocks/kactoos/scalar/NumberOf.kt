@@ -3,6 +3,7 @@ package nnl.rocks.kactoos.scalar
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.text.JDKTextOf
 import nnl.rocks.kactoos.text.TextOf
 
 /**
@@ -19,7 +20,7 @@ class NumberOf(dnum: KScalar<Double>) : NumberEnvelope(dnum), Scalar<Double> {
     /**
      * @param txt Number-string
      */
-    constructor(txt: String) : this(TextOf(txt))
+    constructor(txt: String) : this(JDKTextOf(txt))
 
     /**
      * @param txt Number-string

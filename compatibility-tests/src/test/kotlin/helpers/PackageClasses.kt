@@ -37,7 +37,8 @@ class CactoosClasses : PackageClasses(
     FuncOf { it: String ->
         And(
             { it.contains('$').not() },
-            { it.contains("NoNulls").not() }
+            { it.contains("NoNulls").not() },
+            { it.contains("text.ComparableText").not() }
         ).invoke()
     }
 )

@@ -16,7 +16,7 @@ class Base64Text(private val origin: Text) : Text {
     /**
      * @param input The String
      */
-    constructor(input: String) : this(TextOf(input))
+    constructor(input: String) : this(JDKTextOf(input))
 
-    override fun asString(): String = TextOf(Base64Bytes(BytesOf(this.origin))).asString()
+    override fun asString(): String = JDKTextOf(Base64Bytes(BytesOf(this.origin))).asString()
 }

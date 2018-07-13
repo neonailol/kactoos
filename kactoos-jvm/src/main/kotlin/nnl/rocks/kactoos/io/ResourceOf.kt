@@ -6,6 +6,7 @@ import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.func.FuncOf
 import nnl.rocks.kactoos.func.IoCheckedFunc
 import nnl.rocks.kactoos.text.FormattedText
+import nnl.rocks.kactoos.text.JDKTextOf
 import nnl.rocks.kactoos.text.TextOf
 import java.io.IOException
 import java.io.InputStream
@@ -39,7 +40,7 @@ constructor(
     constructor(
         res: CharSequence,
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
-    ) : this(TextOf(res), ldr)
+    ) : this(JDKTextOf(res), ldr)
 
     /**
      * New resource input with specified [ClassLoader].
@@ -51,7 +52,7 @@ constructor(
         res: CharSequence,
         fbk: Func<CharSequence, Input>,
         ldr: ClassLoader = Thread.currentThread().contextClassLoader
-    ) : this(TextOf(res), FuncOf { input -> fbk.apply(input.asString()) }, ldr)
+    ) : this(JDKTextOf(res), FuncOf { input -> fbk.apply(input.asString()) }, ldr)
 
     /**
      * New resource input with current context [ClassLoader].

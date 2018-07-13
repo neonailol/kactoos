@@ -11,33 +11,33 @@ import nnl.rocks.kactoos.iterator.Mapped
  *
  * @param X Type of source item
  * @param Y Type of target item
- * @param fnc Func
- * @param src Source iterable
+ * @param func Func
+ * @param iterable Source iterable
  * @since 0.4
  */
 class Mapped<out X : Any, out Y : Any>(
-    fnc: KFunc<X, Y>,
-    src: Iterable<X>
-) : IterableEnvelope<Y>({ IterableOf { Mapped(fnc, src.iterator()) } }) {
+    func: KFunc<X, Y>,
+    iterable: Iterable<X>
+) : IterableEnvelope<Y>({ IterableOf { Mapped(func, iterable.iterator()) } }) {
 
     constructor(
-        fnc: KFunc<X, Y>,
-        vararg src: X
-    ) : this(fnc, src.asIterable())
+        func: KFunc<X, Y>,
+        vararg args: X
+    ) : this(func, args.asIterable())
 
     constructor(
-        fnc: Func<X, Y>,
-        vararg src: X
+        func: Func<X, Y>,
+        vararg args: X
     ) : this(
-        { x -> fnc.apply(x) },
-        src.asIterable()
+        { x -> func.apply(x) },
+        args.asIterable()
     )
 
     constructor(
-        fnc: Func<X, Y>,
+        func: Func<X, Y>,
         iterable: Iterable<X>
     ) : this(
-        { x -> fnc.apply(x) },
+        { x -> func.apply(x) },
         iterable
     )
 }

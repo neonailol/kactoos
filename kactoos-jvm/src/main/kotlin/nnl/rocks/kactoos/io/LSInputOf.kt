@@ -1,6 +1,7 @@
 package nnl.rocks.kactoos.io
 
 import nnl.rocks.kactoos.Input
+import nnl.rocks.kactoos.text.JDKTextOf
 import nnl.rocks.kactoos.text.TextOf
 import nnl.rocks.kactoos.text.UncheckedText
 import org.w3c.dom.ls.LSInput
@@ -56,7 +57,7 @@ class LSInputOf(
 
     override fun getStringData(): String {
         return UncheckedText(
-            TextOf(this.input)
+            JDKTextOf(this.input)
         ).asString()
     }
 

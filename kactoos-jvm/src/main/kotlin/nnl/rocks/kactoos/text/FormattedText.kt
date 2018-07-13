@@ -113,7 +113,7 @@ class FormattedText(
         ptn: String,
         locale: Locale,
         arguments: Collection<Any>
-    ) : this(TextOf(ptn), locale, arguments)
+    ) : this(JDKTextOf(ptn), locale, arguments)
 
     @Suppress("SpreadOperator")
     override fun asString(): String {

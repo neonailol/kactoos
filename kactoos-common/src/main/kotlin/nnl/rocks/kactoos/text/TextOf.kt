@@ -20,7 +20,7 @@ class TextOf(origin: KText) : TextEnvelope(origin) {
         JoinedText(
             ", ",
             Mapped(
-                fnc = FuncOf { it.toString() },
+                func = FuncOf { it.toString() },
                 iterable = iterable
             )
         )

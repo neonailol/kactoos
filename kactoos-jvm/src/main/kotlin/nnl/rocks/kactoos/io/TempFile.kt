@@ -5,6 +5,7 @@ import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
 import nnl.rocks.kactoos.scalar.IoCheckedScalar
 import nnl.rocks.kactoos.scalar.StickyScalar
+import nnl.rocks.kactoos.text.JDKTextOf
 import nnl.rocks.kactoos.text.TextOf
 import java.io.Closeable
 import java.nio.file.Files
@@ -61,8 +62,8 @@ class TempFile private constructor(
         suffix: String
     ) : this(
         dir,
-        TextOf(prefix),
-        TextOf(suffix)
+        JDKTextOf(prefix),
+        JDKTextOf(suffix)
     )
 
     /**

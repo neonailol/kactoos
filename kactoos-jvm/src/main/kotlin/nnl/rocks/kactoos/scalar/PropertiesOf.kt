@@ -10,6 +10,7 @@ import nnl.rocks.kactoos.iterable.IterableOf
 import nnl.rocks.kactoos.iterable.Mapped
 import nnl.rocks.kactoos.map.MapEntry
 import nnl.rocks.kactoos.map.MapOf
+import nnl.rocks.kactoos.text.JDKTextOf
 import nnl.rocks.kactoos.text.TextOf
 import java.util.Properties
 
@@ -29,7 +30,7 @@ class PropertiesOf(
     /**
      * @param content String
      */
-    constructor(content: String) : this(TextOf(content))
+    constructor(content: String) : this(JDKTextOf(content))
 
     /**
      * @param text Text

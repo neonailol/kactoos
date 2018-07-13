@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.text.JDKTextOf
 import nnl.rocks.kactoos.text.TextOf
 
 /**
@@ -17,7 +18,7 @@ class BoolOf(private val origin: Text) : Scalar<Boolean> {
     /**
      * @param txt True or false string
      */
-    constructor(txt: String) : this(TextOf(txt))
+    constructor(txt: String) : this(JDKTextOf(txt))
 
     override fun invoke(): Boolean = this.origin.asString().toBoolean()
 }

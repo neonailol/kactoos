@@ -2,7 +2,7 @@ package nnl.rocks.kactoos.bytes
 
 import nnl.rocks.kactoos.io.BytesOf
 import nnl.rocks.kactoos.text.HexOf
-import nnl.rocks.kactoos.text.TextOf
+import nnl.rocks.kactoos.text.JDKTextOf
 import java.io.IOException
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -12,7 +12,7 @@ class HexBytesTest {
     @Test
     fun emptyText() {
         assertEquals(
-            HexBytes(TextOf("")).asBytes(),
+            HexBytes(JDKTextOf("")).asBytes(),
             byteArrayOf(),
             "Can't represent an empty hexadecimal text"
         )
@@ -34,11 +34,11 @@ class HexBytesTest {
 
     @Test(expectedExceptions = [IOException::class])
     fun invalidLength() {
-        HexBytes(TextOf("ABF")).asBytes()
+        HexBytes(JDKTextOf("ABF")).asBytes()
     }
 
     @Test(expectedExceptions = [IOException::class])
     fun invalidHexValue() {
-        HexBytes(TextOf("ABG!")).asBytes()
+        HexBytes(JDKTextOf("ABG!")).asBytes()
     }
 }

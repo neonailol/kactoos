@@ -29,7 +29,7 @@ class UncheckedText(
      * @param txt Encapsulated text
      * @since 0.9
      */
-    constructor(txt: String) : this(TextOf(txt))
+    constructor(txt: String) : this(JDKTextOf(txt))
 
     override fun asString(): String = try {
         text.asString()

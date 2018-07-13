@@ -20,9 +20,9 @@ class PaddedStartText(
     {
         val original = text.asString()
         JoinedText(
-            TextOf(""),
+            JDKTextOf(""),
             RepeatedText(
-                TextOf(symbol), length - original.length
+                JDKTextOf(symbol), length - original.length
             ),
             text
         ).asString()
