@@ -12,7 +12,7 @@ import nnl.rocks.kactoos.Text
  */
 abstract class TextEnvelope(
     private val origin: KScalar<String>
-) : Text {
+) : Text, Comparable<Text> {
 
     constructor(text: Text) : this({ text.asString() })
 
@@ -23,6 +23,8 @@ abstract class TextEnvelope(
     override fun asString(): String = origin()
 
     override fun toString(): String = origin()
+
+    override fun compareTo(other: Text): Int = asString().compareTo(other.asString())
 
     override fun hashCode(): Int = origin().hashCode()
 
