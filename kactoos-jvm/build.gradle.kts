@@ -9,8 +9,8 @@ plugins {
     maven
     id("kotlin-platform-jvm")
     id("org.jetbrains.dokka") version "0.9.17"
-    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC7-3"
-    id("org.jlleitschuh.gradle.ktlint") version "4.1.0"
+    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC8"
+    id("org.jlleitschuh.gradle.ktlint") version "5.0.0"
 }
 
 dependencies {
@@ -25,7 +25,7 @@ dependencies {
 
 configurations {
     detekt {
-        version = "1.0.0.RC7-3"
+        version = "1.0.0.RC8"
         defaultProfile(
             Action {
                 input = "$projectDir/src/main/kotlin"
@@ -36,7 +36,7 @@ configurations {
     }
 
     ktlint {
-        version = "0.24.0"
+        version = "0.27.0"
         debug = true
         verbose = true
         android = false

@@ -19,7 +19,7 @@ dependencies {
 configurations {
     node {
         isDownload = true
-        setNodeVersion("10.5.0")
+        setNodeVersion("10.8.0")
     }
 }
 
