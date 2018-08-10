@@ -10,17 +10,25 @@ import java.math.MathContext
  * Here is how you can use it to summarize numbers:
  *
  * ```
- * int sum = new SumOf(1, 2, 3, 4).intValue();
- * long sum = new SumOf(1L, 2L, 3L).longValue();
- * int sum = new SumOf(numbers.toArray(new Integer[numbers.size()])).intValue();
+ * val sum = SumOf(1, 2, 3, 4).toInt()
+ * val sum = SumOf(1, 2, 3, 4).toLong()
  * ```
- *
  *
  * There is no thread-safety guarantee.
  *
  * @since 0.3
  */
-class SumOf : NumberEnvelope {
+class SumOf(
+    numbers: Iterable<Number>
+) : NumberEnvelope(
+    {
+        numbers.fold(
+            BigDecimal.ZERO
+        ) { acc, number ->
+            acc.add(BigDecimal.valueOf(number.toDouble()), MathContext.UNLIMITED)
+        }.toDouble()
+    }
+) {
 
     /**
      * @param src Integers
@@ -45,17 +53,4 @@ class SumOf : NumberEnvelope {
      * @since 0.3
      */
     constructor(vararg src: Float) : this(IterableOf(src.asIterable()))
-
-    /**
-     * @param src Iterable of numbers
-     * @since 0.3
-     */
-    constructor(src: Iterable<Number>) : super(
-        {
-            src.fold(
-                BigDecimal.ZERO,
-                { acc, number -> acc.add(BigDecimal.valueOf(number.toDouble()), MathContext.UNLIMITED) }
-            ).toDouble()
-        }
-    )
 }
