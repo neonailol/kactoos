@@ -36,7 +36,9 @@ class SumOf(
      */
     constructor(
         vararg src: Int
-    ) : this(IterableOf(src.asIterable()))
+    ) : this(
+        IterableOf(src.asIterable())
+    )
 
     /**
      * @param src Longs
@@ -44,7 +46,9 @@ class SumOf(
      */
     constructor(
         vararg src: Long
-    ) : this(IterableOf(src.asIterable()))
+    ) : this(
+        IterableOf(src.asIterable())
+    )
 
     /**
      * @param src Doubles
@@ -52,7 +56,9 @@ class SumOf(
      */
     constructor(
         vararg src: Double
-    ) : this(IterableOf(src.asIterable()))
+    ) : this(
+        IterableOf(src.asIterable())
+    )
 
     /**
      * @param src Floats
@@ -60,5 +66,7 @@ class SumOf(
      */
     constructor(
         vararg src: Float
-    ) : this(IterableOf(src.asIterable()))
+    ) : this(
+        IterableOf(src.asIterable())
+    )
 }
