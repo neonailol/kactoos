@@ -44,17 +44,6 @@ val identical = Equals(
 
 Target platforms other than jvm, specifically [kotlin-js](https://kotlinlang.org/docs/reference/js-overview.html) and [kotlin-native](https://kotlinlang.org/docs/reference/native-overview.html)
 
-## Changes to Java interoperability
-
-Unfortunately Kotlin does not support additional generic parameters on secondary constructors.<br />
-So some classes have been split into two parts with and without generic parameter.<br />
-For Kotlin no changes in necessary, as library uses workaround to overcome this issue.<br />  
-
-* Move generic parts of [And](kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/And.kt) to [AndFunc](kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/AndFunc.kt)
-* Move generic parts of [AndInThreads](kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/AndInThreads.kt) to [AndInThreadsFunc](kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/AndInThreadsFunc.kt)
-* Move generic parts of [AndWithIndex](kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/AndWithIndex.kt) to [AndWithIndexFunc](kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/AndWithIndexFunc.kt)
-* Move generic parts of [Or](kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/Or.kt) to [OrFunc](kactoos-jvm/src/main/kotlin/nnl/rocks/kactoos/scalar/OrFunc.kt)
-
 ## Some implementation notes
 
 * Do no use [@JvmOverloads](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/) and default arguments in functions and constructors as it's not portable
