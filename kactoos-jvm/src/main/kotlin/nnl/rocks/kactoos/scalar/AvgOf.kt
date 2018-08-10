@@ -38,9 +38,9 @@ class AvgOf private constructor(value: KScalar<Double>) : NumberEnvelope(value) 
                     .fold(
                         BigDecimal.ZERO
                     ) { accumulator, element ->
-                        accumulator.add(BigDecimal.valueOf(element().toDouble()), MathContext.UNLIMITED)
+                        accumulator.add(BigDecimal.valueOf(element().toDouble()), MathContext.DECIMAL128)
                     }
-                    .divide(BigDecimal.valueOf(len), MathContext.UNLIMITED)
+                    .divide(BigDecimal.valueOf(len), MathContext.DECIMAL128)
                     .toDouble()
             },
             FuncOf { 0.0 }
