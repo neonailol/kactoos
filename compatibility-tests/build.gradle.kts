@@ -14,7 +14,7 @@ dependencies {
     testCompile("org.reflections:reflections:0.9.11")
     testCompile(testng())
     testCompile(assertj())
-    testCompile("org.apache.commons:commons-lang3:3.7")
+    testCompile("org.apache.commons:commons-lang3:3.8")
 }
 
 tasks {

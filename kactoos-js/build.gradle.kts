@@ -19,7 +19,7 @@ dependencies {
 configurations {
     node {
         isDownload = true
-        setNodeVersion("10.8.0")
+        setNodeVersion("10.9.0")
     }
 }
 
@@ -41,7 +41,7 @@ tasks {
         }
     }
 
-    "populateNodeModules"(Copy::class) {
+    val populateNodeModules by creating(Copy::class) {
         dependsOn("compileKotlin2Js")
         val kotlin2JsCompile = tasks["compileKotlin2Js"] as Kotlin2JsCompile
         from(kotlin2JsCompile.destinationDir)
@@ -51,13 +51,13 @@ tasks {
         into("$buildDir/node_modules")
     }
 
-    "installQunit"(ExecuteNpmTask::class) {
-        inputs.property("qunitVersion", "2.6.1")
+    val installQunit by creating(ExecuteNpmTask::class) {
+        inputs.property("qunitVersion", "2.6.2")
         outputs.dir(file("node_modules/qunit"))
-        setArgs(listOf("install", "qunit@2.6.1"))
+        setArgs(listOf("install", "qunit@2.6.2"))
     }
 
-    "runQunit"(ExecuteNodeScriptTask::class) {
+    val runQunit by creating(ExecuteNodeScriptTask::class) {
         dependsOn("compileTestKotlin2Js", "populateNodeModules", "installQunit")
         setScriptFile(file("node_modules/qunit/bin/qunit"))
         val kotlin2JsCompile = tasks["compileTestKotlin2Js"] as Kotlin2JsCompile

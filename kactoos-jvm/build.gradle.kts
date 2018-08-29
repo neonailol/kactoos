@@ -48,7 +48,7 @@ configurations {
 
 tasks {
 
-    "cleanDocs"(Delete::class) {
+    val cleanDocs by creating(Delete::class) {
         delete("$rootDir/docs/alltypes")
         delete("$rootDir/docs/nnl.rocks.kactoos")
         delete("$rootDir/docs/nnl.rocks.kactoos.bytes")
@@ -64,7 +64,7 @@ tasks {
         delete("$rootDir/docs/nnl.rocks.kactoos.time")
     }
 
-    "moveDocs"(Copy::class) {
+    val moveDocs by creating(Copy::class) {
         dependsOn("cleanDocs")
         from("build/dokka/kactoos-jvm")
         into("../docs")

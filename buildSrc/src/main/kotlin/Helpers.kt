@@ -1,11 +1,11 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 private object Versions {
-    const val kotlin = "1.2.60"
+    const val kotlin = "1.2.61"
     const val testng = "6.14.3"
-    const val assertj = "3.10.0"
-    const val atomicfu = "0.11.0"
-    const val coroutines = "0.24.0"
+    const val assertj = "3.11.1"
+    const val atomicfu = "0.11.3"
+    const val coroutines = "0.25.0"
 }
 
 fun kotlinVersion(): Any = Versions.kotlin
