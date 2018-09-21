@@ -9,8 +9,8 @@ plugins {
     maven
     id("kotlin-platform-jvm")
     id("org.jetbrains.dokka") version "0.9.17"
-    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC8"
-    id("org.jlleitschuh.gradle.ktlint") version "5.0.0"
+    id("io.gitlab.arturbosch.detekt") version "1.0.0.RC9"
+    id("org.jlleitschuh.gradle.ktlint") version "6.0.0"
 }
 
 dependencies {
@@ -23,27 +23,21 @@ dependencies {
     testCompile(assertj())
 }
 
-configurations {
-    detekt {
-        version = "1.0.0.RC8"
-        defaultProfile(
-            Action {
-                input = "$projectDir/src/main/kotlin"
-                config = "$projectDir/detekt.yml"
-                filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
-            }
-        )
-    }
+detekt {
+    toolVersion = "1.0.0.RC9"
+    input = files("$projectDir/src/main/kotlin")
+    config = files("$projectDir/detekt.yml")
+    filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+}
 
-    ktlint {
-        version = "0.27.0"
-        debug = true
-        verbose = true
-        android = false
-        outputToConsole = true
-        reporters = arrayOf(ReporterType.PLAIN_GROUP_BY_FILE, ReporterType.CHECKSTYLE)
-        ignoreFailures = true
-    }
+ktlint {
+    version.set("0.28.0")
+    debug.set(true)
+    verbose.set(true)
+    android.set(false)
+    outputToConsole.set(true)
+    reporters.set(setOf(ReporterType.PLAIN_GROUP_BY_FILE, ReporterType.CHECKSTYLE))
+    ignoreFailures.set(true)
 }
 
 tasks {
@@ -98,5 +92,5 @@ tasks {
     }
 }
 
-tasks["assemble"].dependsOn("detektCheck")
+tasks["assemble"].dependsOn("detekt")
 tasks["check"].dependsOn("ktlintCheck")
