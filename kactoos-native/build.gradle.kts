@@ -1,6 +1,6 @@
 
 plugins {
-    id("org.jetbrains.kotlin.platform.native") version "0.8.2"
+    id("org.jetbrains.kotlin.platform.native") version "0.9.2"
 }
 
 dependencies {

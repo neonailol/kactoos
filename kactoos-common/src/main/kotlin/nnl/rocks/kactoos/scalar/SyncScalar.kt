@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.scalar
 
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
+import nnl.rocks.kactoos.internal.kSynchronized
 
 /**
  * Scalar that is thread-safe.
@@ -22,5 +23,6 @@ class SyncScalar<T : Any>(
 
     constructor(src: Scalar<T>, mutex: Any) : this({ src() }, mutex)
 
-    override fun invoke(): T = synchronized(mutex) { origin() }
+    override fun invoke(): T = kSynchronized(mutex) { origin() }
+
 }

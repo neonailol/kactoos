@@ -1,5 +1,7 @@
 package nnl.rocks.kactoos.iterator
 
+import nnl.rocks.kactoos.internal.kSynchronized
+
 /**
  * Synchronized [Iterator].
  *
@@ -17,7 +19,7 @@ class SyncIterator<out T>(
 
     constructor(iterator: Iterator<T>) : this(iterator, Any(), Any())
 
-    override fun hasNext(): Boolean = synchronized(readLock) { iterator.hasNext() }
+    override fun hasNext(): Boolean = kSynchronized(readLock) { iterator.hasNext() }
 
-    override fun next(): T = synchronized(writeLock) { iterator.next() }
+    override fun next(): T = kSynchronized(writeLock) { iterator.next() }
 }

@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.func
 
 import nnl.rocks.kactoos.BiFunc
 import nnl.rocks.kactoos.KBiFunc
+import nnl.rocks.kactoos.internal.kSynchronized
 
 /**
  * BiFunc that is thread-safe.
@@ -24,5 +25,5 @@ class SyncBiFunc<in X : Any, in Y : Any, out Z : Any>(
 
     constructor(func: BiFunc<X, Y, Z>, lock: Any) : this({ x: X, y: Y -> func.apply(x, y) }, lock)
 
-    override fun apply(first: X, second: Y): Z = synchronized(lock) { func(first, second) }
+    override fun apply(first: X, second: Y): Z = kSynchronized(lock) { func(first, second) }
 }

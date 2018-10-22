@@ -3,6 +3,7 @@ package nnl.rocks.kactoos.func
 import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KFunc
 import nnl.rocks.kactoos.Proc
+import nnl.rocks.kactoos.internal.kSynchronized
 
 /**
  * Func that is thread-safe.
@@ -34,7 +35,7 @@ class SyncFunc<X : Any, Y : Any>(
         }
     )
 
-    override fun apply(input: X): Y = synchronized(lock) {
+    override fun apply(input: X): Y = kSynchronized(lock) {
         func(input)
     }
 }

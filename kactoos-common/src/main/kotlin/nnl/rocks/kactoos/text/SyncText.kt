@@ -2,6 +2,7 @@ package nnl.rocks.kactoos.text
 
 import nnl.rocks.kactoos.KText
 import nnl.rocks.kactoos.Text
+import nnl.rocks.kactoos.internal.kSynchronized
 
 /**
  * Text that is thread-safe.
@@ -15,7 +16,7 @@ class SyncText(
     lock: Any
 ) : TextEnvelope(
     {
-        synchronized(lock) {
+        kSynchronized(lock) {
             origin()
         }
     }
