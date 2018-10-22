@@ -10,10 +10,10 @@ import java.util.concurrent.ThreadFactory
 /**
  * Func that runs in the background.
  *
- * If you want your piece of code to be executed in the background, use [AsyncFunc] as following:
+ * If you want your piece of code to be executed in the background, use [Async] as following:
  *
  * ```
- * int length = new AsyncFunc(
+ * int length = new Async(
  *   input -> input.length()
  * ).invoke("Hello, world!").get();
  * ```
@@ -26,7 +26,7 @@ import java.util.concurrent.ThreadFactory
  * @param executor Executor Service
  * @since 0.10
  */
-class AsyncFunc<X : Any, Y : Any> constructor(
+class Async<X : Any, Y : Any> constructor(
     private val func: Func<X, Y>,
     private val executor: ExecutorService
 ) : Func<X, Future<Y>>, Proc<X> {

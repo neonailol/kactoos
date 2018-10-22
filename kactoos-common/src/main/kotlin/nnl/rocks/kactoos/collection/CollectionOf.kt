@@ -8,12 +8,12 @@ package nnl.rocks.kactoos.collection
  * method call. It doesn't cache the data anyhow.
  * If you don't need this [Collection] to re-fresh
  * its content on every call, by doing round-trips to
- * the encapsulated iterable, use [StickyCollection].
+ * the encapsulated iterable, use [Sticky].
  *
  * There is no thread-safety guarantee.
  *
  * @param T List type
- * @see StickyCollection
+ * @see Sticky
  * @since 0.1
  */
 class CollectionOf<out T : Any> : CollectionEnvelope<T> {

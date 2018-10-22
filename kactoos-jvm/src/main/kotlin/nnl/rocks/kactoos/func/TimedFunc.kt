@@ -20,7 +20,7 @@ class TimedFunc<X : Any, Y : Any>(
     private val func: Func<X, Future<Y>>
 ) : Func<X, Y> {
 
-    constructor(function: Func<X, Y>, milliseconds: Long) : this(milliseconds, AsyncFunc<X, Y>(function))
+    constructor(function: Func<X, Y>, milliseconds: Long) : this(milliseconds, Async<X, Y>(function))
 
     override fun apply(input: X): Y {
         val future = func.apply(input)

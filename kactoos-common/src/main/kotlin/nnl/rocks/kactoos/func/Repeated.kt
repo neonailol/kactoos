@@ -5,7 +5,7 @@ import nnl.rocks.kactoos.Proc
 
 /**
  * Func that repeats its calculation a few times before returning the last result.
- * If [times] is equal or less than zero [RepeatedFunc.apply] will return an exception.
+ * If [times] is equal or less than zero [Repeated.apply] will return an exception.
  *
  * @param func Func original
  * @param times How many times.
@@ -13,7 +13,7 @@ import nnl.rocks.kactoos.Proc
  * @param Y Type of output
  * @since 0.4
  */
-class RepeatedFunc<X : Any, Y : Any>(
+class Repeated<X : Any, Y : Any>(
     private val func: Func<X, Y>,
     private val times: Int
 ) : Func<X, Y> {

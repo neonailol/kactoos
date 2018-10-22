@@ -17,7 +17,7 @@ import nnl.rocks.kactoos.Proc
  * @param Y Type of output
  * @since 0.4
  */
-class RetryFunc<X : Any, Y : Any>(
+class Retry<X : Any, Y : Any>(
     private val func: Func<X, Y>,
     private val exit: Func<Int, Boolean>
 ) : Func<X, Y> {

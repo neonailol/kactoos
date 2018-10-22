@@ -14,7 +14,7 @@ import nnl.rocks.kactoos.KFunc
  * @param Z Type of output.
  * @since 0.4
  */
-class ChainedFunc<X : Any, Y : Any, Z : Any>(
+class Chained<X : Any, Y : Any, Z : Any>(
     private val before: KFunc<X, Y>,
     private val functions: Iterable<KFunc<Y, Y>>,
     private val after: KFunc<Y, Z>

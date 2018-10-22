@@ -6,7 +6,7 @@ package nnl.rocks.kactoos.collection
  * Pay attention that sorting will happen on each operation
  * with the collection. Every time you touch it, it will fetch the
  * entire collection from the encapsulated object and reverse it. If you
- * want to avoid that behaviour, decorate it with [StickyCollection].
+ * want to avoid that behaviour, decorate it with [Sticky].
  *
  * There is no thread-safety guarantee.
  *

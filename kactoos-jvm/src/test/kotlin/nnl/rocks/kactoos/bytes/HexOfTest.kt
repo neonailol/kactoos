@@ -7,12 +7,12 @@ import java.io.IOException
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class HexBytesTest {
+class HexOfTest {
 
     @Test
     fun emptyText() {
         assertEquals(
-            HexBytes(JDKTextOf("")).asBytes(),
+            HexOf(JDKTextOf("")).asBytes(),
             byteArrayOf(),
             "Can't represent an empty hexadecimal text"
         )
@@ -26,7 +26,7 @@ class HexBytesTest {
             }
         }
         assertEquals(
-            HexBytes(HexOf(BytesOf(*bytes))).asBytes(),
+            HexOf(HexOf(BytesOf(*bytes))).asBytes(),
             bytes,
             "Can't convert hexadecimal text to bytes"
         )
@@ -34,11 +34,11 @@ class HexBytesTest {
 
     @Test(expectedExceptions = [IOException::class])
     fun invalidLength() {
-        HexBytes(JDKTextOf("ABF")).asBytes()
+        HexOf(JDKTextOf("ABF")).asBytes()
     }
 
     @Test(expectedExceptions = [IOException::class])
     fun invalidHexValue() {
-        HexBytes(JDKTextOf("ABG!")).asBytes()
+        HexOf(JDKTextOf("ABG!")).asBytes()
     }
 }

@@ -4,7 +4,7 @@ import nnl.rocks.kactoos.Func
 import nnl.rocks.kactoos.KScalar
 import nnl.rocks.kactoos.Scalar
 import nnl.rocks.kactoos.func.FuncOf
-import nnl.rocks.kactoos.func.RetryFunc
+import nnl.rocks.kactoos.func.Retry
 
 /**
  * Func that will try a few times before throwing an exception.
@@ -33,7 +33,7 @@ class RetryScalar<T : Any>(
     constructor(scalar: KScalar<T>) : this(scalar, 3)
 
     override fun invoke(): T {
-        return RetryFunc(
+        return Retry(
             FuncOf<Boolean, T> { _ -> this.origin() },
             this.func
         ).apply(true)

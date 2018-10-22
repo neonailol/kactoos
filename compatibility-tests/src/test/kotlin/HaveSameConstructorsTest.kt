@@ -13,10 +13,10 @@ class HaveSameConstructorsTest {
             "collection.CollectionOf(java.util.Iterator)",
             "collection.Filtered(Func,java.util.Iterator)",
             "collection.Mapped(Func,java.util.Iterator)",
-            "collection.SolidCollection(java.util.Iterator)",
+            "collection.Solid(java.util.Iterator)",
             "collection.Sorted(java.util.Comparator,java.util.Iterator)",
-            "collection.StickyCollection(java.util.Iterator)",
-            "collection.SyncCollection(java.util.Iterator)",
+            "collection.Sticky(java.util.Iterator)",
+            "collection.Synced(java.util.Iterator)",
             "collection.Sorted(java.lang.Iterable)",
             "collection.Sorted(java.lang.Object[])"
         )

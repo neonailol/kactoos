@@ -9,12 +9,12 @@ import nnl.rocks.kactoos.scalar.SolidScalar
  * Objects of this class are thread-safe.
  *
  * @param T List type
- * @see StickyCollection
+ * @see Sticky
  * @since 0.4
  */
-class SolidCollection<out T : Any> : CollectionEnvelope<T> {
+class Solid<out T : Any> : CollectionEnvelope<T> {
 
-    constructor(source: Collection<T>) : super(SolidScalar<Collection<T>> { SyncCollection(StickyCollection(source)) })
+    constructor(source: Collection<T>) : super(SolidScalar<Collection<T>> { Synced(Sticky(source)) })
 
     constructor(vararg args: T) : this(IterableOf(args.asIterable()))
 

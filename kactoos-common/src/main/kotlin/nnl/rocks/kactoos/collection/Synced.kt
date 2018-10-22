@@ -9,10 +9,10 @@ import nnl.rocks.kactoos.scalar.SyncScalar
  * Objects of this class are thread-safe.
  *
  * @param T List type
- * @see StickyCollection
+ * @see Sticky
  * @since 0.4
  */
-class SyncCollection<out T : Any> : CollectionEnvelope<T> {
+class Synced<out T : Any> : CollectionEnvelope<T> {
 
     constructor(source: Collection<T>) : super(SyncScalar<Collection<T>> { source })
 

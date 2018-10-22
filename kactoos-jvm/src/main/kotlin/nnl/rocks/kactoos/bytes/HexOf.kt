@@ -11,7 +11,7 @@ import java.io.IOException
  *
  * @since 0.4
  */
-class HexBytes(
+class HexOf(
     private val origin: KText
 ) : Bytes {
 
