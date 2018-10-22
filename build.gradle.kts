@@ -1,4 +1,5 @@
 import org.gradle.kotlin.dsl.kotlin
+import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
     base
@@ -12,7 +13,7 @@ buildscript {
     }
 
     dependencies {
-        classpath(kotlin("gradle-plugin", "1.2.70"))
+        classpath(kotlin("gradle-plugin", "1.2.71"))
     }
 }
 
@@ -38,7 +39,7 @@ allprojects {
     }
 
     tasks {
-        withType<Test> {
+        withType(Test::class.java) {
             testLogging {
                 showStandardStreams = true
                 events("passed", "failed")
@@ -53,7 +54,22 @@ allprojects {
     }
 }
 
-tasks.withType<Wrapper> {
+tasks.withType(Wrapper::class.java) {
     distributionType = Wrapper.DistributionType.ALL
     gradleVersion = "4.10.2"
+}
+
+tasks.withType(DependencyUpdatesTask::class.java) {
+    resolutionStrategy {
+        componentSelection {
+            all {
+                val rejected = listOf("alpha", "beta", "rc", "cr", "m", "preview")
+                    .map { qualifier -> Regex("(?i).*[.-]$qualifier[.\\d-]*") }
+                    .any { it.matches(candidate.version) }
+                if (rejected) {
+                    reject("RC")
+                }
+            }
+        }
+    }
 }

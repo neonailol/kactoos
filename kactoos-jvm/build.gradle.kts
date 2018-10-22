@@ -36,7 +36,7 @@ ktlint {
     verbose.set(true)
     android.set(false)
     outputToConsole.set(true)
-    reporters.set(setOf(ReporterType.PLAIN_GROUP_BY_FILE, ReporterType.CHECKSTYLE))
+    reporters.set(setOf(ReporterType.PLAIN_GROUP_BY_FILE, ReporterType.JSON))
     ignoreFailures.set(true)
 }
 

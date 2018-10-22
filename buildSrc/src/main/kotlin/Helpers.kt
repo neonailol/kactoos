@@ -1,7 +1,7 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 private object Versions {
-    const val kotlin = "1.2.70"
+    const val kotlin = "1.2.71"
     const val testng = "6.14.3"
     const val assertj = "3.11.1"
     const val atomicfu = "0.11.7"
